@@ -25,13 +25,14 @@ def callback(train_eval_pipeline: BaseTrainEvalPipeline) -> None:
             ``train_eval_pipelines.TrainEvalPipeline`` will be passed to this function.
     """
     train_sampler = train_eval_pipeline.train_sampler
-    train_eval_pipeline.training_engine.run(train_sampler=train_sampler)
+    train_eval_pipeline.training_engine.run(train_sampler=train_sampler)  # 分两步，先init了training_engine,然后调用default_trainer.py里面的run
 
 
 def main_worker(args: Optional[List[str]] = None):
     opts = get_training_arguments(args=args)
-    pipeline_name = getattr(opts, "train_eval_pipeline.name")
+    pipeline_name = getattr(opts, "train_eval_pipeline.name")  # default
     train_eval_pipeline = TRAIN_EVAL_PIPELINE_REGISTRY[pipeline_name](opts=opts)
+    train_eval_pipeline._prepare_model()  #->corenet/train_eval_pipelines/default_train_eval.py
     launcher = train_eval_pipeline.launcher
     launcher(callback)
 

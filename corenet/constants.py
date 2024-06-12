@@ -30,7 +30,7 @@ TMP_CACHE_LOC = "/tmp/corenet"
 
 Path(TMP_CACHE_LOC).mkdir(parents=True, exist_ok=True)
 
-DATA_CACHE_DIR = ".corenet_data_cache"
+DATA_CACHE_DIR = "/media/fast_data/catlip_data/cache"
 
 Path(DATA_CACHE_DIR).mkdir(parents=True, exist_ok=True)
 

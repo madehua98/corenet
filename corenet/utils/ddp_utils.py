@@ -25,7 +25,7 @@ def dist_barrier():
 def dist_monitored_barrier(
     timeout: Optional[float] = None,
     wait_all_ranks: Optional[bool] = False,
-    group: Optional = None,
+    group: Optional[str] = None,
 ):
     dist.monitored_barrier(group=group, timeout=timeout, wait_all_ranks=wait_all_ranks)
 

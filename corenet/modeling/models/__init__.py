@@ -49,10 +49,10 @@ def get_model(
     """
 
     if category is None:
-        category = getattr(opts, "dataset.category")
+        category = getattr(opts, "dataset.category")  # classification
 
     if model_name is None:
-        model_name = getattr(opts, f"model.{category}.name")
+        model_name = getattr(opts, f"model.{category}.name")  # vit
 
     if model_name == "__base__":
         # __base__ is used to register the task-specific base classes. These classes often
@@ -62,8 +62,8 @@ def get_model(
             f"For {category} task, model name can't be __base__. Please check."
         )
 
-    model = MODEL_REGISTRY[model_name, category].build_model(opts, *args, **kwargs)
-
+    model = MODEL_REGISTRY[model_name, category].build_model(opts, *args, **kwargs)  # build_model在modeling/models/classification/base_image_encoder.py中
+ 
     if use_lora is None:
         use_lora = getattr(opts, "model.lora.use_lora")
     if use_lora:

@@ -474,6 +474,9 @@ class RandomResizedCrop(BaseTransformation, T.RandomResizedCrop):
         return parser
 
     def get_rrc_params(self, image: Image.Image) -> Tuple[int, int, int, int]:
+        """
+        对图片进行裁剪
+        """
         return T.RandomResizedCrop.get_params(
             img=image, scale=self.scale, ratio=self.ratio
         )

@@ -142,7 +142,7 @@ class DefaultTrainEvalPipeline(BaseTrainEvalPipeline):
         Returns a model optionally with a module whose activation needs to be checkpointed.
         """
         # set-up the model
-        model = get_model(self.opts)
+        model = get_model(self.opts) # modeling/init/get_model.py   
 
         # print model information on master node
         if self.is_master_node:
@@ -255,12 +255,12 @@ class DefaultTrainEvalPipeline(BaseTrainEvalPipeline):
         opts = self.opts
         opts = device_setup(opts)
         is_master_node = self.is_master_node
-
         # create the directory for saving results
         save_dir = getattr(opts, "common.results_loc")
         run_label = getattr(opts, "common.run_label")
         exp_dir = "{}/{}".format(save_dir, run_label)
         setattr(opts, "common.exp_loc", exp_dir)
+
         create_directories(dir_path=exp_dir, is_master_node=is_master_node)
 
         num_gpus = getattr(opts, "dev.num_gpus")
@@ -273,10 +273,10 @@ class DefaultTrainEvalPipeline(BaseTrainEvalPipeline):
             assert torch.cuda.is_available(), "We need CUDA for training on GPUs."
 
         # No of data workers = no of CPUs (if not specified or -1)
-        n_cpus = resources.cpu_count()
-        dataset_workers = getattr(opts, "dataset.workers")
+        n_cpus = resources.cpu_count()  # 112
+        dataset_workers = getattr(opts, "dataset.workers")  # -1
 
-        num_gpus_ge_1 = max(1, num_gpus)
+        num_gpus_ge_1 = max(1, num_gpus)  
 
         if not use_distributed:
             if dataset_workers == -1:
@@ -345,14 +345,14 @@ class DefaultTrainEvalPipeline(BaseTrainEvalPipeline):
         model_ema = self.model_ema
         best_metric = (
             -math.inf if getattr(opts, "stats.checkpoint_metric_max") else math.inf
-        )
+        )  # inf
 
         start_epoch = 0
         start_iteration = 0
         resume_loc = getattr(opts, "common.resume")
         finetune_loc = getattr(opts, "common.finetune")
         auto_resume = getattr(opts, "common.auto_resume")
-        if resume_loc is not None or auto_resume:
+        if resume_loc is not None or auto_resume:  # 恢复训练
             (
                 model,
                 optimizer,

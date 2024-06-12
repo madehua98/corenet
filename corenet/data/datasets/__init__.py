@@ -71,12 +71,12 @@ def build_dataset_from_registry(
         object classification).
     """
 
-    dataset_category = getattr(opts, "dataset.category")
+    dataset_category = getattr(opts, "dataset.category")  # 'classification'
 
     if dataset_category is None:
         logger.error("Please specify dataset category using --dataset.category")
 
-    dataset_name = getattr(opts, f"dataset.name")
+    dataset_name = getattr(opts, f"dataset.name")  # 'wordnet_tagged_classification'
     if dataset_name is None:
         logger.error("Please specify dataset name using --dataset.name")
 
@@ -119,7 +119,7 @@ def get_train_val_datasets(
         Training and (optionally) validation datasets.
     """
 
-    disable_val = getattr(opts, "dataset.disable_val")
+    disable_val = getattr(opts, "dataset.disable_val")  
     is_master_node = is_master(opts)
     train_dataset = build_dataset_from_registry(
         opts, is_training=True, is_evaluation=False, *args, **kwargs

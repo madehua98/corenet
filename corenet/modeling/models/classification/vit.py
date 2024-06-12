@@ -58,17 +58,17 @@ class VisionTransformer(BaseImageEncoder):
 
         # Typically, in the ImageNet dataset, we use 224x224 as a resolution.
         # For our ViT implementation, we use stride of 16. Therefore, total number of patch embeddings are (224 / 16)^2
-        num_patch_embeddings = (224 // 16) ** 2
+        num_patch_embeddings = (224 // 16) ** 2  # 图像分辨率设置为224x224，分割步长为16，所以总patch数为196
 
-        embed_dim = vit_config["embed_dim"]
-        ffn_dim = vit_config["ffn_dim"]
-        pos_emb_drop_p = vit_config["pos_emb_drop_p"]
-        n_transformer_layers = vit_config["n_transformer_layers"]
-        num_heads = vit_config["n_attn_heads"]
-        attn_dropout = vit_config["attn_dropout"]
-        dropout = vit_config["dropout"]
-        ffn_dropout = vit_config["ffn_dropout"]
-        norm_layer = vit_config["norm_layer"]
+        embed_dim = vit_config["embed_dim"]  # 768
+        ffn_dim = vit_config["ffn_dim"]  # 3072
+        pos_emb_drop_p = vit_config["pos_emb_drop_p"]  # 0
+        n_transformer_layers = vit_config["n_transformer_layers"]  # 12
+        num_heads = vit_config["n_attn_heads"]  # 12 
+        attn_dropout = vit_config["attn_dropout"]  # 0
+        dropout = vit_config["dropout"]  # 0
+        ffn_dropout = vit_config["ffn_dropout"]  # 0
+        norm_layer = vit_config["norm_layer"]  #layer_norm_fp32
 
         self.patch_emb = self._build_patch_embedding_layer(
             opts, image_channels=image_channels, embedding_dimension=embed_dim

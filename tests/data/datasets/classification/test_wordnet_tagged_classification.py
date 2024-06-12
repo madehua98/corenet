@@ -3,10 +3,15 @@
 # Copyright (C) 2024 Apple Inc. All Rights Reserved.
 #
 
+
 import sys
 
 import pytest
 import torch
+import os
+os.environ['PYTHONPATH'] = '/home/data_llm/madehua/corenet'
+import sys
+sys.path.append(os.environ['PYTHONPATH'])
 
 from tests.configs import get_config
 from tests.data.datasets.classification.mock_wordnet_tagged_classification import (
@@ -25,7 +30,7 @@ def test_wordnet_tagged_classification_dataset(image_size: int) -> None:
         dataset = MockWordnetTaggedClassificationDataset(
             opts, is_training=True, is_evaluation=False
         )
-
+        labels = dataset._convert_caption_to_labels('dog, cat, car, apple')
         sample_index = 0
         data_item = dataset.__getitem__((image_size, image_size, sample_index))
         assert "samples" in data_item
@@ -40,3 +45,4 @@ def test_wordnet_tagged_classification_dataset(image_size: int) -> None:
                 dtype=data_item["targets"].dtype, device=data_item["targets"].device
             )
         )
+test_wordnet_tagged_classification_dataset(20)

@@ -265,7 +265,7 @@ class DefaultTrainer(object):
             logger.double_dash_line()
             logger.info(f"Training epoch {epoch}")
 
-        train_stats = Statistics(
+        train_stats = Statistics(  # 用于训练统计信息
             opts=self.opts,
             metric_names=self.train_metric_names,
             is_master_node=self.is_master_node,
@@ -275,8 +275,8 @@ class DefaultTrainer(object):
 
         self._set_training_mode()
 
-        accum_freq = self.accum_freq if epoch >= self.accum_after_epoch else 1
-        max_norm = getattr(self.opts, "common.grad_clip", None)
+        accum_freq = self.accum_freq if epoch >= self.accum_after_epoch else 1  # 设定梯度累积的频率
+        max_norm = getattr(self.opts, "common.grad_clip", None)  # 1.0
 
         # set the gradient to zero or None
         self._zero_grad()
@@ -284,15 +284,15 @@ class DefaultTrainer(object):
         epoch_start_time = time.time()
         batch_load_start = time.time()
         grad_norm = torch.tensor([0.0], dtype=torch.float, device=self.device)
-        for batch_id, batch in enumerate(self.train_loader):
+        for batch_id, batch in enumerate(self.train_loader):  # 使用enumerate遍历self.train_loader,会调用wordnet_tagged_classification.py/_getitem_()
             if self.train_iterations > self.max_iterations:
                 self.max_iterations_reached = True
                 break
 
             # move to device
-            batch = move_to_device(opts=self.opts, x=batch, device=self.device)
+            batch = move_to_device(opts=self.opts, x=batch, device=self.device)   
             # apply mix-up transforms if any
-            batch = apply_mixing_transforms(opts=self.opts, data=batch)
+            batch = apply_mixing_transforms(opts=self.opts, data=batch)  # 数据增强变换
 
             batch_load_toc = time.time() - batch_load_start
 
@@ -303,14 +303,14 @@ class DefaultTrainer(object):
             # update the learning rate
             self.optimizer = self.scheduler.update_lr(
                 optimizer=self.optimizer, epoch=epoch, curr_iter=self.train_iterations
-            )
+            )  # 考虑到当前epoch和迭代次数进行更新
 
             with autocast_fn(
                 enabled=self.mixed_precision_training,
                 amp_precision=self.mixed_precision_dtype,
             ):
                 # prediction
-                pred_label = self.model(samples)
+                pred_label = self.model(samples)  # 看它是怎么prediction的
                 # compute loss
                 loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
                     input_sample=samples,
@@ -320,7 +320,7 @@ class DefaultTrainer(object):
                     iterations=self.train_iterations,
                 )
 
-                if isinstance(loss_dict_or_tensor, Dict):
+                if isinstance(loss_dict_or_tensor, Dict):  # 分别对是Dict类型还是tensor类型进行判断
                     if "total_loss" not in loss_dict_or_tensor.keys():
                         logger.error(
                             "total_loss key is required for loss functions that return outputs as dictionary."
@@ -331,7 +331,7 @@ class DefaultTrainer(object):
                 else:
                     logger.error("Loss value should be an instance of Tensor or Dict")
 
-                if isinstance(loss, torch.Tensor) and torch.isnan(loss):
+                if isinstance(loss, torch.Tensor) and torch.isnan(loss):  # 如果loss值为Nan，说明数值不稳定，存在问题
                     logger.error("Nan encountered in the loss.")
 
             # perform the backward pass with gradient accumulation [Optional]
@@ -508,9 +508,9 @@ class DefaultTrainer(object):
 
         train_start_time = time.time()
 
-        cfg_file = getattr(self.opts, "common.config_file", None)
+        cfg_file = getattr(self.opts, "common.config_file", None)  # 'projects/catlip/pretraining/vit_base.yaml'
         if cfg_file is not None and self.is_master_node:
-            dst_cfg_file = "{}/config.yaml".format(self.save_location)
+            dst_cfg_file = "{}/config.yaml".format(self.save_location)  # 保存路径为：'results_catlip/train/config.yaml'
             shutil.copy(src=cfg_file, dst=dst_cfg_file)
             logger.info(
                 "Configuration file is stored here: {}".format(
@@ -518,29 +518,29 @@ class DefaultTrainer(object):
                 )
             )
 
-        keep_k_best_ckpts = getattr(self.opts, "common.k_best_checkpoints", 5)
+        keep_k_best_ckpts = getattr(self.opts, "common.k_best_checkpoints", 5)  # 5
         ema_best_metric = self.best_metric
         is_ema_best = False
 
         try:
-            max_epochs = getattr(self.opts, "scheduler.max_epochs", DEFAULT_EPOCHS)
+            max_epochs = getattr(self.opts, "scheduler.max_epochs", DEFAULT_EPOCHS)  # 10000000
             max_checkpoint_metric = getattr(self.opts, "stats.checkpoint_metric_max")
             for epoch in range(self.start_epoch, max_epochs):
                 if train_sampler is not None:
                     # Note that we are using our owm implementations of data samplers
                     # and we have defined this function for both distributed and non-distributed cases
-                    train_sampler.set_epoch(epoch)
+                    train_sampler.set_epoch(epoch)  # 获得当前epoch
                     train_sampler.update_scales(
                         epoch=epoch, is_master_node=self.is_master_node
                     )
 
-                train_loss, train_ckpt_metric = self.train_epoch(epoch)
+                train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
 
                 val_loss, val_ckpt_metric = self.val_epoch(
                     epoch=epoch, model=self.model
-                )
+                )  # 评估入口
 
-                if max_checkpoint_metric:
+                if max_checkpoint_metric:  # 更新最佳metric
                     is_best = val_ckpt_metric >= self.best_metric
                     self.best_metric = max(val_ckpt_metric, self.best_metric)
                 else:
@@ -560,7 +560,7 @@ class DefaultTrainer(object):
                         is_ema_best = val_ema_ckpt_metric <= ema_best_metric
                         ema_best_metric = min(val_ema_ckpt_metric, ema_best_metric)
 
-                gc.collect()
+                gc.collect()  # 垃圾回收
 
                 save_checkpoint(
                     iterations=self.train_iterations,
@@ -611,7 +611,7 @@ class DefaultTrainer(object):
                 logger.log("Keyboard interruption. Exiting from early training")
                 raise e
         except Exception as e:
-            if "out of memory" in str(e):
+            if "out of memory" in str(e):  # 是否是内存不足的原因
                 logger.log("OOM exception occured")
                 n_gpus = getattr(self.opts, "dev.num_gpus", 1)
                 for dev_id in range(n_gpus):
@@ -626,11 +626,11 @@ class DefaultTrainer(object):
             )
             raise e
         finally:
-            use_distributed = getattr(self.opts, "ddp.use_distributed", False)
+            use_distributed = getattr(self.opts, "ddp.use_distributed", False)  # 清理DDP
             if use_distributed:
                 torch.distributed.destroy_process_group()
 
-            torch.cuda.empty_cache()
+            torch.cuda.empty_cache()  # 清空GPU缓存
 
             for log_writer in self.log_writers:
                 log_writer.close()

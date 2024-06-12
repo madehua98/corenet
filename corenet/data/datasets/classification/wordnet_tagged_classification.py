@@ -212,6 +212,7 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
             )
         return metadata
 
+    
     def _download_and_extract_tar_file(self, sample_index: int) -> int:
         """Downloads and extracts the tar file.
 
@@ -230,10 +231,10 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         """
         # Retrieve the folder index that may contain the sample.
         folder_idx = sample_index // self.max_files_per_tar
-
+        
         metadata_file_path = self._metadata_file_path()
         remote_directory = os.path.dirname(metadata_file_path)
-        remote_file_path = f"{remote_directory}/{folder_idx}.{TAR_FILE_EXTN}"
+        local_tar_file_path = f"{remote_directory}/{folder_idx}.{TAR_FILE_EXTN}"
 
         with open(
             f"{self.cache_loc}/{folder_idx}.{TAR_FILE_EXTN}.lock", "a"
@@ -243,19 +244,11 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
                 if os.path.isdir(f"{self.cache_loc}/{folder_idx}"):
                     return folder_idx
 
-                transfer_client = self._get_transfer_client(
-                    file_path=metadata_file_path
-                )
-
-                local_tar_file_path = transfer_client.download(
-                    remote_file_paths=remote_file_path, dst_dir=self.cache_loc
-                )
-
                 # extract the tar file in the same location where tar file is downloaded
                 tar_file_basename = os.path.basename(local_tar_file_path)
                 with tarfile.open(local_tar_file_path, TAR_FILE_EXTRACTION_CODE) as tar:
                     tar.extractall(
-                        path=local_tar_file_path.replace(tar_file_basename, "")
+                        path=local_tar_file_path.replace(f".{TAR_FILE_EXTN}", "")
                     )
 
                 # move extracted tar file to @self.cache_loc
@@ -264,12 +257,13 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
                 )
 
                 # Delete the tar file
-                if os.path.exists(local_tar_file_path):
-                    os.remove(local_tar_file_path)
+                # if os.path.exists(local_tar_file_path):
+                #     os.remove(local_tar_file_path)
             finally:
                 fcntl.flock(lock_file, fcntl.LOCK_UN)
 
         return folder_idx
+
 
     def _convert_caption_to_labels(self, captions_str: str) -> List[int]:
         """Converts the caption into multi-class labels.
@@ -280,17 +274,16 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
 
         Args:
             captions_str: Input caption as a string.
-
         Returns:
             A list of integers, where each integer corresponds to the index of the matching synset in the vocabulary.
             In case there are no matching synsets, an empty list is returned.
         """
-        captions_str = caption_preprocessing(captions_str)
+        captions_str = caption_preprocessing(captions_str)  # 清洗caption的格式
         # process caption and find synsets
 
-        tagged_words = nltk.pos_tag(nltk.word_tokenize(captions_str))
+        tagged_words = nltk.pos_tag(nltk.word_tokenize(captions_str))  # [('flavored', 'VBN'), ('snail', 'NN'), ('meat', 'NN')]
         lemmatzr = WordNetLemmatizer()
-        labels = []
+        labels = []  # 存储的是名词label的索引
         for word, pos in tagged_words:
             # use lemmatizer to reduce text ambiguity.
             # words like bicycle and bicycles are converted to bicycle
@@ -307,10 +300,10 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
             noun_synset = extract_pos_offset_info_from_synset(noun_synset)
             if noun_synset in self.vocab:
                 # add the indices of the labels
-                labels.append(self.vocab.index(noun_synset))
-        return labels
+                labels.append(self.vocab.index(noun_synset))                        #label为noun_synset在vocab中的索引，例如'n14334306'在vocab中的索引为210
+        return labels  
 
-    def _read_sample_with_wordnet_label_mining(
+    def _read_sample_with_wordnet_label_mining(  # 将caption转换为基于wordnet的多分类标签
         self, sample_index: int
     ) -> Tuple[Image.Image, List[str]]:
         """Reads the sample with WordNet derived labels.
@@ -326,9 +319,9 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         """
 
         # Check if this folder exists. If not, then download the tar file and extract it.
-        folder_idx = self._download_and_extract_tar_file(sample_index=sample_index)
+        folder_idx = self._download_and_extract_tar_file(sample_index=sample_index)  # 0
 
-        file_name = f"{self.cache_loc}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}"
+        file_name = f"{self.cache_loc}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}"   # '路径：/media/fast_data/catlip_data/cache/0/691.pkl'（文件名称超出范围，目录中最多有10000.pkl，而sample_index大于10000，需要查看文件保存格式）
         if not Path(file_name).exists():
             # Each tar file is supposed to have certain number of samples, but
             # it may not have all samples (because some samples may be corrupted and are filtered).
@@ -343,16 +336,20 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
 
         with open(file_name, "rb") as handle:
             data = pickle.load(handle)
-        img_bytes = pybase64.b64decode(data["image"], validate=True)
-        image = Image.open(io.BytesIO(img_bytes)).convert("RGBA").convert("RGB")
-        if "texts" in data:
+        # 此时data['image']不是Base64编码格式，发生报错20240605
+        # data来源是什么，data在/media/fast_data/catlip_data/cache/中
+        # img_bytes = pybase64.b64decode(data["image"], validate=True)  
+        # image = Image.open(io.BytesIO(img_bytes)).convert("RGBA").convert("RGB")
+        
+        image = Image.open(io.BytesIO(data["image"])).convert("RGBA").convert("RGB")   #待确认时间复杂度
+        if "texts" in data: 
             caption_str = data["texts"]
         elif "text" in data:
-            caption_str = data["text"]
+            caption_str = data["text"]  # 'Flavored snail meat'
         else:
             raise NotImplementedError("Text key not found.")
 
-        labels = self._convert_caption_to_labels(captions_str=caption_str)
+        labels = self._convert_caption_to_labels(captions_str=caption_str)  # 处理caption入口
         return image, labels
 
     def _training_transforms(self, *args, **kwargs) -> BaseTransformation:
@@ -444,15 +441,15 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         crop_size_h, crop_size_w, sample_index = sample_size_and_index
         transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
 
-        image, labels = self._read_sample_with_wordnet_label_mining(sample_index)
+        image, labels = self._read_sample_with_wordnet_label_mining(sample_index)  # labels值：[2082,1289]
 
         # convert labels to one hot vector
-        targets = torch.zeros((self.vocab_size), dtype=torch.long)
+        targets = torch.zeros((self.vocab_size), dtype=torch.long) # shape:[24320]
         if labels is not None and len(labels) > 0:
-            targets[labels] = 1
+            targets[labels] = 1  # 对应label位置全赋值为1
 
         output_data = {
-            "samples": transform_fn({"image": image})["image"],
+            "samples": transform_fn({"image": image})["image"], 
             "targets": targets,
             "sample_id": sample_index,
         }
@@ -464,6 +461,7 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
     @property
     def cache_loc(self) -> str:
         return DATA_CACHE_DIR
+
 
     @property
     def vocab_size(self):

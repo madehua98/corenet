@@ -94,9 +94,9 @@ def create_train_val_loader(
         A tuple containing training data loader, (optional) validation data loader, and training data sampler.
     """
     is_master_node = is_master(opts)
-    train_dataset, valid_dataset = get_train_val_datasets(opts)
+    train_dataset, valid_dataset = get_train_val_datasets(opts)  # WordnetTaggedClassificationDataset 样本数1040000, 类别数24,320
 
-    if isinstance(train_dataset, IterableDataset):
+    if isinstance(train_dataset, IterableDataset):  # False
         train_sampler = None
         train_batch_size = getattr(opts, "dataset.train_batch_size0")
         assert train_batch_size > 0, (
@@ -104,7 +104,7 @@ def create_train_val_loader(
             f"Please specify batch size using 'dataset.train_batch_size0' argument in the config file."
         )
     else:
-        n_train_samples = get_num_data_samples_as_int_or_mapping(train_dataset)
+        n_train_samples = get_num_data_samples_as_int_or_mapping(train_dataset)  # 1040000
         train_sampler = build_sampler(
             opts=opts,
             n_data_samples=n_train_samples,
@@ -112,7 +112,7 @@ def create_train_val_loader(
             get_item_metadata=train_dataset.get_item_metadata,
         )
         # for non-iterable dataset, batch size is handled inside the sampler.
-        train_batch_size = 1
+        train_batch_size = 1  # 不意味着每次只处理一个样本，而是说批处理大小的逻辑已经交给了采样器去管理
 
     if valid_dataset is None:
         # Validation is disabled.

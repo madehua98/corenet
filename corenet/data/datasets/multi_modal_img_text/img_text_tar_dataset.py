@@ -132,6 +132,7 @@ class ImgTextTarDataset(BaseMultiModalImgText):
                 f"Metadata file in {self.__class__.__name__} should have following keys: \
                     total_tar_files, max_files_per_tar, tar_file_names"
             )
+
         return metadata
 
     @property

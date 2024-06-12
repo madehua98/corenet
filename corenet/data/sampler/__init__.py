@@ -40,8 +40,8 @@ def build_sampler(
     Returns:
         Data sampler over which we can iterate.
     """
-    sampler_name = getattr(opts, "sampler.name")
-    is_distributed = getattr(opts, "ddp.use_distributed")
+    sampler_name = getattr(opts, "sampler.name")  # 'variable_batch_sampler'
+    is_distributed = getattr(opts, "ddp.use_distributed")  # True
 
     if (
         is_distributed
