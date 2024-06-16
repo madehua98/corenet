@@ -195,7 +195,7 @@ class BaseNeuralAugmentor(nn.Module):
         batch_size, in_channels, in_height, in_width = x.shape
 
         # Randomly apply augmentation to 50% of the samples
-        n_aug_samples = max(1, (batch_size // 2))
+        n_aug_samples = max(1, (batch_size // 2))  # 128
 
         # shuffle the order of augmentations
         random.shuffle(self.aug_fns)

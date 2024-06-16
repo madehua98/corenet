@@ -285,20 +285,20 @@ class DefaultTrainer(object):
         batch_load_start = time.time()
         grad_norm = torch.tensor([0.0], dtype=torch.float, device=self.device)
         for batch_id, batch in enumerate(self.train_loader):  # 使用enumerate遍历self.train_loader,会调用wordnet_tagged_classification.py/_getitem_()
-            if self.train_iterations > self.max_iterations:
+            if self.train_iterations > self.max_iterations:  # batch_id是0-255
                 self.max_iterations_reached = True
                 break
 
             # move to device
-            batch = move_to_device(opts=self.opts, x=batch, device=self.device)   
+            batch = move_to_device(opts=self.opts, x=batch, device=self.device)  # batch是dict, key: samples([256,3,224,224]), targets([256,24320]), sample_id([256])是从0-255
             # apply mix-up transforms if any
             batch = apply_mixing_transforms(opts=self.opts, data=batch)  # 数据增强变换
 
             batch_load_toc = time.time() - batch_load_start
 
-            samples, targets = batch["samples"], batch["targets"]
+            samples, targets = batch["samples"], batch["targets"]  # samples是[256,3,224,224], targets是[256,24320]
 
-            batch_size = get_batch_size(samples)
+            batch_size = get_batch_size(samples)  # 256
 
             # update the learning rate
             self.optimizer = self.scheduler.update_lr(
@@ -309,8 +309,8 @@ class DefaultTrainer(object):
                 enabled=self.mixed_precision_training,
                 amp_precision=self.mixed_precision_dtype,
             ):
-                # prediction
-                pred_label = self.model(samples)  # 看它是怎么prediction的
+                # prediction  pred_label是一个dict, 'augmented_tensor' 是[256,3,224,224], 'logits'是[256,24320]， 和targets同纬度
+                pred_label = self.model(samples)  # 看它是怎么prediction的, model是vit，此时进行forward计算
                 # compute loss
                 loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
                     input_sample=samples,
@@ -318,7 +318,7 @@ class DefaultTrainer(object):
                     target=targets,
                     epoch=epoch,
                     iterations=self.train_iterations,
-                )
+                )  # dict类型
 
                 if isinstance(loss_dict_or_tensor, Dict):  # 分别对是Dict类型还是tensor类型进行判断
                     if "total_loss" not in loss_dict_or_tensor.keys():
