@@ -20,7 +20,7 @@ dataset:
   root_train: ""
   disable_val: true
   # effective batch size is 65k (1024 images per GPU * 8 A100 40 GB GPUs * 8 Nodes)
-  train_batch_size0: 512
+  train_batch_size0: 256
   workers: 0 # use all CPUs  
   persistent_workers: true
   pin_memory: true

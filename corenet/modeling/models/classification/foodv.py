@@ -442,6 +442,9 @@ class ViTamin(BaseImageEncoder):
         ViTamin_config = get_configuration(opts)
         self.global_pool = ViTamin_config["global_pool"]  # 'token'
         self.class_token = ViTamin_config["class_token"]  # True
+        self.num_prefix_tokens = 1 if self.class_token else 0
+        self.reg_tokens = ViTamin_config["reg_tokens"]  # 0
+        self.num_prefix_tokens += self.reg_tokens
         self.fc_norm = ViTamin_config["fc_norm"]  # None
         self.norm_layer = ViTamin_config["norm_layer"]  # Optional[LayerType]
         self.act_layer = ViTamin_config["act_layer"]  # Optional[LayerType]
@@ -451,20 +454,20 @@ class ViTamin(BaseImageEncoder):
         self.norm_layer = get_norm_layer(self.norm_layer) or partial(nn.LayerNorm, eps=1e-6)   # None
         self.act_layer = get_act_layer(self.act_layer) or nn.GELU  # None
 
-
-        self.img_size = ViTamin_config["img_size"]  # 224
+        self.use_flash_attn = ViTamin_config["use_flash_attn"] # False
+        self.grad_checkpointing = ViTamin_config["grad_checkpointing"] # False
+        self.img_size = ViTamin_config["img_size"]  # 256
         self.patch_size = ViTamin_config["patch_size"]  # 16
         self.in_chans = ViTamin_config["in_chans"]  # 3
         self.num_classes = ViTamin_config["num_classes"]  # 1000
         self.embed_dim = ViTamin_config["embed_dim"]  # 768
         self.depth = ViTamin_config["depth"]  # 12
-        self.num_heads = ViTamin_config["num_heads"]  # 12
+        self.num_heads = ViTamin_config["num_heads"]  # 16
         self.mlp_ratio = ViTamin_config["mlp_ratio"]  # 4.0
         self.qkv_bias = ViTamin_config["qkv_bias"]  # True
         self.qk_norm = ViTamin_config["qk_norm"]  # False
         self.init_values = ViTamin_config["init_values"]  # None
         self.no_embed_class = ViTamin_config["no_embed_class"]  # False
-        self.reg_tokens = ViTamin_config["reg_tokens"]  # 0
         self.pre_norm = ViTamin_config["pre_norm"]  # False
         self.dynamic_img_size = ViTamin_config["dynamic_img_size"]  # False
         self.dynamic_img_pad = ViTamin_config["dynamic_img_pad"]  # False
@@ -480,7 +483,7 @@ class ViTamin(BaseImageEncoder):
         self.block_fn = ViTamin_config["block_fn"]  # Type[nn.Module]
         self.mlp_layer = ViTamin_config["mlp_layer"]  # Type[nn.Module]
         self.is_pos_embed = ViTamin_config["is_pos_embed"]  # True
-        self.MbConv_embed_dim = ViTamin_config["ViTamin_config"] # [64, 128, 384]
+        self.MbConv_embed_dim = ViTamin_config["MbConv_embed_dim"] # [64, 128, 384]
         self.MbConv_depths = ViTamin_config["MbConv_depths"] # [2,4,1]
         self.MbConv_stem_width = ViTamin_config["MbConv_stem_width"] # 64
         
@@ -502,7 +505,7 @@ class ViTamin(BaseImageEncoder):
         )
         self.patch_embed = HybridEmbed(
             stage_1_2,
-            img_size=self.image_size,
+            img_size=self.img_size,
             patch_size=self.patch_size,
             in_chans=self.in_chans,
             embed_dim=self.embed_dim,
@@ -577,7 +580,74 @@ class ViTamin(BaseImageEncoder):
         if self.fix_init:
             self.fix_init_weight()
 
+    @classmethod
+    def add_arguments(cls, parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
+        if cls == ViTamin:
+            group = parser.add_argument_group(cls.__name__)
+            group.add_argument(
+                "--model.classification.foodv.mode",
+                type=str,
+                default="small",
+                choices=["small", "base", "large", "huge"],
+                help="vitamin mode. Default is base.",
+            )
+            group.add_argument(
+                "--model.classification.foodv.dropout",
+                type=float,
+                default=0.0,
+                help="Dropout in Transformer layers. Defaults to 0.0.",
+            )
+
+            group.add_argument(
+                "--model.classification.foodv.stochastic-dropout",
+                type=float,
+                default=0.0,
+                help="Stochastic Dropout in Transformer layers. Defaults to 0.0.",
+            )
+
+            group.add_argument(
+                "--model.classification.foodv.norm-layer",
+                type=str,
+                default="layer_norm",
+                help="Normalization layer to be used in Transformer layer. Defaults to LayerNorm.",
+            )
+
+            group.add_argument(
+                "--model.classification.foodv.sinusoidal-pos-emb",
+                action="store_true",
+                default=False,
+                help="Use sinusoidal instead of learnable positional embedding. Defaults to False.",
+            )
+            group.add_argument(
+                "--model.classification.foodv.no-cls-token",
+                action="store_true",
+                default=False,
+                help="Do not use classification token. Defaults to False.",
+            )
+
+            group.add_argument(
+                "--model.classification.foodv.use-simple-fpn",
+                action="store_true",
+                default=False,
+                help="Add simple FPN for down-stream tasks (e.g., detection). Defaults to False.",
+            )
+            group.add_argument(
+                "--model.classification.foodv.use-flash-attention",
+                action="store_true",
+                default=False,
+                help="Use Transformer layers with flash attention for efficiently computing scaled dot-product attention. Defauls to False.",
+            )
+
+        return parser
         
+    
+    def get_activation_checkpoint_submodule_class(self) -> Callable:
+        """Returns the activation checkpoint module class.
+
+        For ViT, the activation checkpoint module class is TransformerEncoder or FlashTransformerEncoder.
+        """
+        return FlashTransformerEncoder if self.use_flash_attn else TransformerEncoder
+    
     def init_weights(self, mode=''):
         assert mode in ('jax', 'jax_nlhb', 'moco', '')
         head_bias = -math.log(self.num_classes) if 'nlhb' in mode else 0.
