@@ -310,7 +310,7 @@ class DefaultTrainer(object):
                 amp_precision=self.mixed_precision_dtype,
             ):
                 # prediction  pred_label是一个dict, 'augmented_tensor' 是[256,3,224,224], 'logits'是[256,24320]， 和targets同纬度
-                pred_label = self.model(samples)  # 看它是怎么prediction的, model是vit，此时进行forward计算
+                pred_label = self.model(samples)  # 看它是怎么prediction的, model是vit，此时进行forward计算,samples为[256,3,224,224],但选择的图片大小为256
                 # compute loss
                 loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
                     input_sample=samples,

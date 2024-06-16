@@ -359,7 +359,7 @@ class HybridEmbed(nn.Module):
         self.proj = nn.Identity()
 
     def forward(self, x):
-        x = self.backbone(x)
+        x = self.backbone(x) #经过backbone为变为 [256,384,14,14]
         if isinstance(x, (list, tuple)):
             x = x[-1]  # last feature if backbone outputs list/tuple of features
         x = self.proj(x)
@@ -712,7 +712,7 @@ class ViTamin(BaseImageEncoder):
         return self.pos_drop(x)
         
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.patch_embed(x)
+        x = self.patch_embed(x)       # 变为[256, 196, 384]
         if self.is_pos_embed:
             x = self._pos_embed(x)
         x = self.patch_drop(x)
@@ -735,10 +735,20 @@ class ViTamin(BaseImageEncoder):
         x = self.head_drop(x)
         return x if pre_logits else self.head(x)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.forward_features(x)
-        x = self.forward_head(x)
-        return x
+    def forward(self, x: torch.Tensor) -> torch.Tensor:         
+        if self.neural_augmentor is not None:
+            out_dict = {"augmented_tensor": None}
+            if self.training and self.neural_augmentor is not None:
+                # neural augmentor is applied during training  only
+                x = self.neural_augmentor(x)
+                out_dict.update({"augmented_tensor": x})
+            x = self.forward_features(x)     
+            logits = self.forward_head(x)
+            out_dict.update({"logits": logits})
+            return out_dict
+        else:
+            logits, _ = self.forward_classifier(x)
+            return logits
 
 def _create_vision_transformer(variant, pretrained=False, **kwargs):
     if kwargs.get('features_only', None):

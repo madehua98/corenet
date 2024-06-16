@@ -21,7 +21,7 @@ dataset:
   disable_val: true
   # effective batch size is 65k (1024 images per GPU * 8 A100 40 GB GPUs * 8 Nodes)
   train_batch_size0: 512
-  workers: -1 # use all CPUs  
+  workers: 0 # use all CPUs  
   persistent_workers: true
   pin_memory: true
   name: "wordnet_tagged_classification"
