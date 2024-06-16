@@ -96,10 +96,10 @@ scheduler:
 model:
   activation_checkpointing: true
   classification:
-    name: "vit"
+    name: "foodv"
     n_classes: *_anchor_vocab_size
-    vit:
-      mode: "base"
+    foodv:
+      mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
   # use rangeaugment

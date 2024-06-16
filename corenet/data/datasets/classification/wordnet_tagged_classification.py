@@ -25,6 +25,21 @@ try:
     from nltk.corpus import wordnet as wn
     from nltk.corpus.reader.wordnet import Synset
     from nltk.stem import WordNetLemmatizer
+    nltk_data_path='/ML-A800/home/guoshuyue/anaconda3/envs/corenet/nltk_data'
+    nltk.data.path.append(nltk_data_path)
+
+    # 下载常用数据包
+    packages = ['punkt', 'averaged_perceptron_tagger', 'wordnet', 'stopwords']
+
+    # 检查并下载缺失的数据包
+    # for package in packages:
+    #     if not os.path.exists(os.path.join(nltk_data_path, 'tokenizers', package)) and \
+    #     not os.path.exists(os.path.join(nltk_data_path, 'corpora', package)):
+    #         try:
+    #             nltk.download(package, download_dir=nltk_data_path)
+    #             print(f"Successfully downloaded {package}")
+    #         except Exception as e:
+    #             print(f"Failed to download {package}: {e}")
 
     NLTK_INSTALLED = True
 except ModuleNotFoundError:
