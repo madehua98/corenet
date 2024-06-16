@@ -310,7 +310,7 @@ class DefaultTrainer(object):
                 amp_precision=self.mixed_precision_dtype,
             ):
                 # prediction
-                pred_label = self.model(samples)  # 看它是怎么prediction的
+                pred_label = self.model(samples)  # 看它是怎么prediction的， 通过ViT的forward获取logits和image_embeddings
                 # compute loss
                 loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
                     input_sample=samples,

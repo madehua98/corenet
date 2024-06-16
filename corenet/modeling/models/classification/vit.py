@@ -494,6 +494,7 @@ class VisionTransformer(BaseImageEncoder):
         Returns:
             A module dictionary containing convolutional layers for building SimpleFPN.
         """
+        # ViT中使用了特征金字塔网络，可以对多尺度特征进行建模
         layer_l2 = nn.Sequential(
             TransposeConvLayer2d(
                 opts,

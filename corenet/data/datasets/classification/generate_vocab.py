@@ -53,18 +53,19 @@ def get_vocab(captions_str: str, vocab_dict) -> List[int]:
             vocab_dict[noun_synset] += 1
     return vocab_dict
 
-captions_str_list = []
-captions_filaname = '/media/fast_data/Food2k_complete/food2k_label2name_en.txt'
-captions = read_txt(captions_filaname)
-for caption in captions:
-    _, captions_str = caption.strip().split('--')
-    captions_str_list.append(captions_str)
+# captions_str_list = []
+# captions_filaname = '/media/fast_data/Food2k_complete/food2k_label2name_en.txt'
+# captions = read_txt(captions_filaname)
+# for caption in captions:
+#     _, captions_str = caption.strip().split('--')
+#     captions_str_list.append(captions_str)
 
-for captions_str in captions_str_list:
-    vocab_dict = get_vocab(captions_str, vocab_dict)
+# for captions_str in captions_str_list:
+#     vocab_dict = get_vocab(captions_str, vocab_dict)
 
-vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
-print(len(vocab_dict_sorted))
+# vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
+# print(len(vocab_dict_sorted))
+
 # file_path = 'corenet/data/datasets/classification/food2k_vocab.pkl'
 # with open(file_path, 'wb') as file:
 #     pickle.dump(vocab_dict_sorted, file)
