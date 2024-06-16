@@ -26,12 +26,12 @@ DEFAULT_MAX_ITERATIONS = DEFAULT_MAX_EPOCHS = 10000000
 
 TMP_RES_FOLDER = "results_tmp"
 
-TMP_CACHE_LOC = "/ML-A100/team/mm/models/tmp/corenet"
+TMP_CACHE_LOC = "/home/data_llm/madehua/tmp/corenet"
 
 Path(TMP_CACHE_LOC).mkdir(parents=True, exist_ok=True)
 
 #DATA_CACHE_DIR = "/media/fast_data/catlip_data/cache"
-DATA_CACHE_DIR = "/ML-A100/team/mm/models/catlip_data/cache"
+DATA_CACHE_DIR = "/media/fast_data/catlip_data/cache"
 
 Path(DATA_CACHE_DIR).mkdir(parents=True, exist_ok=True)
 

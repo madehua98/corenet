@@ -25,7 +25,7 @@ try:
     from nltk.corpus import wordnet as wn
     from nltk.corpus.reader.wordnet import Synset
     from nltk.stem import WordNetLemmatizer
-    nltk_data_path='/ML-A800/home/guoshuyue/anaconda3/envs/corenet/nltk_data'
+    nltk_data_path='/home/data_llm/anaconda3/envs/corenet/nltk_data'
     nltk.data.path.append(nltk_data_path)
 
     # 下载常用数据包
