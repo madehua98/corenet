@@ -629,20 +629,20 @@ class VisionTransformer(BaseImageEncoder):
             A tensor containing patch embeddings. The size of the tensor is [batch, number of patches, embedding dim].
         """
         # input is of shape [batch, image channels, height, width]. image channels is mostly 3 (for RGB images)
-        batch_size = x.shape[0]
+        batch_size = x.shape[0]  # 256
 
         # [batch, image channels, height, width] --> [batch, embedding dim, number of patches along height, number of patches along width]
-        patch_emb = self.patch_emb(x)
-        num_patches_height, num_patches_width = patch_emb.shape[-2:]
+        patch_emb = self.patch_emb(x)  # [256,768,14,14]
+        num_patches_height, num_patches_width = patch_emb.shape[-2:]  # 14  14
 
         # [batch, embedding dim, number of patches along height, number of patches along width] --> [batch, embedding dim, number of patches]
-        patch_emb = patch_emb.flatten(2)
+        patch_emb = patch_emb.flatten(2)  # [256,768,196]
         # [batch, embedding dim, number of patches] --> [batch, number of patches, embedding dim]
-        patch_emb = patch_emb.transpose(1, 2).contiguous()
+        patch_emb = patch_emb.transpose(1, 2).contiguous()  # [256,196,768]
 
-        num_patches = patch_emb.shape[1]
+        num_patches = patch_emb.shape[1]  # 196
         # we resize the positional encodings dynamically.
-        pos_emb = self.pos_embed(num_patches).to(patch_emb.dtype)
+        pos_emb = self.pos_embed(num_patches).to(patch_emb.dtype)  # [1,196,768]
 
         # add positional encodings
         patch_emb = pos_emb + patch_emb
@@ -650,12 +650,12 @@ class VisionTransformer(BaseImageEncoder):
         # add classification token
         if self.cls_token is not None:
             # [1, 1, embedding dim] --> [batch, 1, embedding dim]
-            cls_tokens = self.cls_token.expand(batch_size, -1, -1)
+            cls_tokens = self.cls_token.expand(batch_size, -1, -1)  # [256,1,768]
             # Concat([batch, 1, embedding dim], [batch, number of patches, embedding dim]) --> [batch, number of patches + 1, embedding dim]
-            patch_emb = torch.cat((cls_tokens, patch_emb), dim=1)
+            patch_emb = torch.cat((cls_tokens, patch_emb), dim=1)  # [256,197,768]
 
         # dropout
-        patch_emb = self.emb_dropout(patch_emb)
+        patch_emb = self.emb_dropout(patch_emb)  # [256,197,768]
         return patch_emb, (num_patches_height, num_patches_width)
 
     def _features_from_transformer(self, x: Tensor) -> Tuple[Tensor, Tuple[int, int]]:
@@ -668,9 +668,9 @@ class VisionTransformer(BaseImageEncoder):
             A tensor containing contextualized patch embeddings.The size of the tensor is [batch, number of patches, embedding dimension]. It also
             returns a tuple containing the number of patches along height and width dimensions.
         """
-        x, (n_h, n_w) = self.extract_patch_embeddings(x)
-        x = self.transformer(x)
-        x = self.post_transformer_norm(x)
+        x, (n_h, n_w) = self.extract_patch_embeddings(x)  # [256,3,224,224]->[256,197,768]
+        x = self.transformer(x)  # [256,197,768]
+        x = self.post_transformer_norm(x)  # [256,197,768]
 
         return x, (n_h, n_w)
 
@@ -692,14 +692,14 @@ class VisionTransformer(BaseImageEncoder):
         """
 
         # [Batch, image channels, height, Width] --> [batch, CLS_TOKEN + number of patches, embedding dim]
-        x, (n_h, n_w) = self._features_from_transformer(x)
+        x, (n_h, n_w) = self._features_from_transformer(x)  # [256,197,768]
 
         if self.cls_token is not None:
             # [batch, CLS_TOKEN + num. patches, embedding dim] --> [batch, embedding dim], [batch, number of patches, embedding dim]
             cls_embedding, image_embedding = torch.split(
                 x, split_size_or_sections=[1, x.shape[1] - 1], dim=1
-            )
-            cls_embedding = cls_embedding.squeeze(1)
+            )  # [256,1,768]  [256,196,768]
+            cls_embedding = cls_embedding.squeeze(1)  # [256,768]
         else:
             # [batch, number of patches, embedding dim] -> [batch, embedding dim]
             cls_embedding = torch.mean(x, dim=1)
@@ -737,9 +737,9 @@ class VisionTransformer(BaseImageEncoder):
         """
         cls_embedding, image_embedding = self.extract_features(
             x, return_image_embeddings
-        )
+        )  # [256,768] None
         # classify based on CLS token
-        logits = self.classifier(cls_embedding)
+        logits = self.classifier(cls_embedding)  # [256,24320]
         return logits, image_embedding
 
     def forward(
@@ -750,7 +750,7 @@ class VisionTransformer(BaseImageEncoder):
         Args:
             x: Input image tensor of shape [Batch, 3, Height, Width].
             return_image_embeddings: When enabled, image embeddings are also returned.
-
+ 
         Returns:
             The output of ViT model can be one of the following:
             1. If range augmentation is enabled, then a dictionary is returned with following keys
@@ -761,7 +761,7 @@ class VisionTransformer(BaseImageEncoder):
                dictionary is returned with 'logits' and 'image_embeddings' keys.
             3. A logit tensor is returned.
         """
-
+        # forward 计算forward_classifier(计算extract_features(计算_features_from_transformer(计算extract_patch_embeddings(计算patch_emb))))，返回logits
         if return_image_embeddings or self.neural_augmentor is not None:
             out_dict = {"augmented_tensor": None}
             if self.training and self.neural_augmentor is not None:
@@ -770,7 +770,7 @@ class VisionTransformer(BaseImageEncoder):
                 out_dict.update({"augmented_tensor": x})
             logits, image_embedding = self.forward_classifier(
                 x, return_image_embeddings
-            )
+            )  # [256,24320]
             out_dict.update({"logits": logits})
             if image_embedding is not None:
                 out_dict.update({"image_embeddings": image_embedding})

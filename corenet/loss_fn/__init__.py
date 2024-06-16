@@ -58,7 +58,7 @@ def build_loss_fn(
     if loss_fn_name == "__base__":
         logger.error("__base__ can't be used as a loss function name. Please check.")
 
-    loss_fn = LOSS_REGISTRY[loss_fn_name, category](opts, *args, **kwargs)
+    loss_fn = LOSS_REGISTRY[loss_fn_name, category](opts, *args, **kwargs)  # 损失函数入口
     return loss_fn
 
 
