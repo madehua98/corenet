@@ -364,6 +364,8 @@ class HybridEmbed(nn.Module):
             x = x[-1]  # last feature if backbone outputs list/tuple of features
         x = self.proj(x)
         x = x.flatten(2).transpose(1, 2)
+
+
         return x
 
 def _trunc_normal_(tensor, mean, std, a, b):
@@ -460,9 +462,11 @@ class ViTamin(BaseImageEncoder):
         self.patch_size = ViTamin_config["patch_size"]  # 16
         self.in_chans = ViTamin_config["in_chans"]  # 3
         self.num_classes = ViTamin_config["num_classes"]  # 1000
-        self.embed_dim = ViTamin_config["embed_dim"]  # 768
+        self.embed_dim = ViTamin_config["embed_dim"]  # 6C
+        self.block1_embed_dim = ViTamin_config["block1_embed_dim"]  # 8C
         self.depth = ViTamin_config["depth"]  # 12
-        self.num_heads = ViTamin_config["num_heads"]  # 16
+        self.num_heads = ViTamin_config["num_heads"]  # 384/32
+        self.block1_num_heads = ViTamin_config["block1_num_heads"] # 
         self.mlp_ratio = ViTamin_config["mlp_ratio"]  # 4.0
         self.qkv_bias = ViTamin_config["qkv_bias"]  # True
         self.qk_norm = ViTamin_config["qk_norm"]  # False
@@ -558,12 +562,35 @@ class ViTamin(BaseImageEncoder):
                 mlp_layer=self.mlp_layer,
             )
             for i in range(self.depth)])
-        self.norm = self.norm_layer(self.embed_dim) if not self.use_fc_norm else nn.Identity()
+        
+        self.pool = StridedConv(
+                        stride=2,
+                        in_chans=self.embed_dim,
+                        embed_dim=self.block1_embed_dim
+                    )
+        self.blocks1 = nn.Sequential(*[
+            self.block_fn(
+                dim=self.block1_embed_dim,
+                num_heads=self.block1_num_heads,
+                mlp_ratio=self.mlp_ratio,
+                qkv_bias=self.qkv_bias,
+                qk_norm=self.qk_norm,
+                init_values=self.init_values,
+                proj_drop=self.proj_drop_rate,
+                attn_drop=self.attn_drop_rate,
+                drop_path=self.dpr[i],
+                norm_layer=self.norm_layer,
+                act_layer=self.act_layer,
+                mlp_layer=self.mlp_layer,
+            )
+            for i in range(self.depth)])
+        
+        self.norm = self.norm_layer(self.block1_embed_dim) if not self.use_fc_norm else nn.Identity()
 
         # Classifier Head
         if self.global_pool == 'map':
             self.attn_pool = AttentionPoolLatent(
-                self.embed_dim,
+                self.block1_embed_dim,
                 num_heads=self.num_heads,
                 mlp_ratio=self.mlp_ratio,
                 norm_layer=self.norm_layer,
@@ -571,9 +598,9 @@ class ViTamin(BaseImageEncoder):
         else:
             self.attn_pool = None
 
-        self.fc_norm = self.norm_layer(self.embed_dim) if self.use_fc_norm else nn.Identity()
+        self.fc_norm = self.norm_layer(self.block1_embed_dim) if self.use_fc_norm else nn.Identity()
         self.head_drop = nn.Dropout(self.drop_rate)
-        self.head = nn.Linear(self.embed_dim, self.num_classes) if self.num_classes > 0 else nn.Identity()
+        self.head = nn.Linear(self.block1_embed_dim, self.num_classes) if self.num_classes > 0 else nn.Identity()
 
         if self.weight_init != 'skip':
             self.init_weights(self.weight_init)
@@ -721,6 +748,13 @@ class ViTamin(BaseImageEncoder):
             x = checkpoint_seq(self.blocks, x)
         else:
             x = self.blocks(x)
+            x = x.transpose(1,2)
+            n, c, h_w = x.shape
+            h = w = int(h_w ** 0.5)
+            x = x.view(n,c,h,w)
+            x = self.pool(x)
+            x = x.flatten(2).transpose(1, 2)
+            x = self.blocks1(x)
         x = self.norm(x)
         return x
 
@@ -738,7 +772,7 @@ class ViTamin(BaseImageEncoder):
     def forward(self, x: torch.Tensor) -> torch.Tensor:         
         if self.neural_augmentor is not None:
             out_dict = {"augmented_tensor": None}
-            if self.training and self.neural_augmentor is not None:
+            if self.training and self.neural_augmentor is not None:   
                 # neural augmentor is applied during training  only
                 x = self.neural_augmentor(x)
                 out_dict.update({"augmented_tensor": x})
