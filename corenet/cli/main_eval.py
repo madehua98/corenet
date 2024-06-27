@@ -27,6 +27,7 @@ def main(train_eval_pipeline: BaseTrainEvalPipeline):
 def main_worker(args: Optional[List[str]] = None):
     opts = get_training_arguments(args=args)
     pipeline_name = getattr(opts, "train_eval_pipeline.name")
+    print(pipeline_name)
     train_eval_pipeline = TRAIN_EVAL_PIPELINE_REGISTRY[pipeline_name](opts=opts)
     launcher = train_eval_pipeline.launcher
     launcher(main)
@@ -47,3 +48,7 @@ def main_worker_detection(args: Optional[List[str]] = None, **kwargs):
 
 if __name__ == "__main__":
     main_worker()
+
+"""
+
+"""
