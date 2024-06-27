@@ -74,6 +74,12 @@ loss:
         perceptual_metric: "psnr"
         target_value: [ 40, 20 ]
         curriculum_method: "cosine"
+    # - loss_category: "distribution"
+    #   loss_weight: 1.0
+    #   distribution:
+    #     name: "kl"
+    #     kl:
+    #       reduction: "batch_mean"
 
 optim:
   no_decay_bn_filter_bias: true

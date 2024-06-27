@@ -608,6 +608,7 @@ class ViTamin(BaseImageEncoder):
         self.MbConv_stem_width = ViTamin_config["MbConv_stem_width"] # 64
         self.mm_dense_connector_type = ViTamin_config["mm_dense_connector_type"]
         
+        self.use_kl = False
         
         embed_args = {}
         if self.dynamic_img_size:
@@ -935,13 +936,22 @@ class ViTamin(BaseImageEncoder):
                 image_features_dc = self.dense_connnector.dense_connector_sti(x, all_hidden_states)
                 image_features_dc = self.block_to_block1(image_features_dc)
                 x = self.dense_connnector.dense_connector(x, image_features_dc, mm_dense_connector_type=self.mm_dense_connector_type)
+                if self.use_kl:
+                    stage3_tensor = image_features_dc
+                    stage4_tensor = x
             elif self.mm_dense_connector_type == 'dci':
                 image_features_dc1,  image_features_dc2= self.dense_connnector.dense_connector_dci(x, all_hidden_states)
                 image_features_dc1 = self.block_to_block1(image_features_dc1)
                 x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
+                if self.use_kl:
+                    stage3_tensor = image_features_dc1
+                    stage4_tensor = image_features_dc2
             x = self.mlp(x)
             logits = self.forward_head(x)
             out_dict.update({"logits": logits})
+            out_dict.update({"stage3_tensor": stage3_tensor})
+            if self.use_kl:
+                out_dict.update({"stage4_tensor": stage4_tensor})
             return out_dict
         else:
             logits, _ = self.forward_classifier(x)
