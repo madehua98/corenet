@@ -70,8 +70,8 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
     foodv = dict()
     if mode == "small":
         ViTamin_config = {
-            "img_size": 256,
-            "patch_size": 16,
+            "img_size": 224,
+            "patch_size": 14,
             "in_chans": 3,
             "num_classes": 587,
             "global_pool": 'avg',
@@ -109,7 +109,8 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
             "is_pos_embed": True,
             "MbConv_embed_dim": [64, 128, 384],
             "MbConv_depths": [2, 4, 1],
-            "MbConv_stem_width": 64
+            "MbConv_stem_width": 64,
+            "mm_dense_connector_type": 'dci'
         }
     elif mode == "base":
         foodv = {
