@@ -29,7 +29,7 @@ import torch.nn.functional as F
 import timm
 from torch.utils.checkpoint import checkpoint
 from timm.models.layers import create_attn, get_norm_layer, get_norm_act_layer, create_conv2d, make_divisible, trunc_normal_tf_
-
+from dataclasses import dataclass, field
 
 from timm.layers import to_2tuple, DropPath, Format # , trunc_normal_
 from timm.layers.norm_act import _create_act
@@ -105,7 +105,7 @@ class VitCfg:
     embed_dim: Tuple[Union[int, Tuple[int, ...]], ...] = (96, 192, 384, 768)
     depths: Tuple[Union[int, Tuple[int, ...]], ...] = (2, 3, 5, 2)
     stem_width: int = 64
-    conv_cfg: VitConvCfg = VitConvCfg()
+    conv_cfg: VitConvCfg = field(default_factory=VitConvCfg)
     weight_init: str = 'vit_eff'
     head_type: str = ""
     stem_type: str = "stem"

@@ -9,7 +9,10 @@ from typing import Dict
 from corenet.utils import logger
 from typing import Callable, Optional, Union, Tuple, List, Sequence
 from timm.models.vision_transformer import Mlp, Block, PatchEmbed, VisionTransformer
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, replace, field
+
+from dataclasses import dataclass, field
+from typing import Optional, Tuple, Union
 
 @dataclass
 class VitConvCfg:
@@ -47,11 +50,12 @@ class VitCfg:
     embed_dim: Tuple[Union[int, Tuple[int, ...]], ...] = (96, 192, 384, 768)
     depths: Tuple[Union[int, Tuple[int, ...]], ...] = (2, 3, 5, 2)
     stem_width: int = 64
-    conv_cfg: VitConvCfg = VitConvCfg()
+    conv_cfg: VitConvCfg = field(default_factory=VitConvCfg)
     weight_init: str = 'vit_eff'
     head_type: str = ""
     stem_type: str = "stem"
     ln2d_permute: bool = True
+
 
 def get_configuration(opts: argparse.Namespace) -> Dict:
 
