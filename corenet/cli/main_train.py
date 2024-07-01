@@ -6,7 +6,7 @@
 from typing import List, Optional
 
 from torch.distributed.elastic.multiprocessing import errors
-
+import os
 from corenet.options.opts import get_training_arguments
 from corenet.train_eval_pipelines import (
     TRAIN_EVAL_PIPELINE_REGISTRY,
@@ -38,4 +38,5 @@ def main_worker(args: Optional[List[str]] = None):
 
 
 if __name__ == "__main__":
+    os.environ['TMPDIR'] = '/ML-A800/home/guoshuyue/madehua/tmp'
     main_worker()

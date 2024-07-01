@@ -32,7 +32,8 @@ TMP_CACHE_LOC = "/ML-A100/team/mm/models/tmp/corenet"
 Path(TMP_CACHE_LOC).mkdir(parents=True, exist_ok=True)
 
 DATA_CACHE_DIR = "/ML-A100/team/mm/models/catlip_data/cache"
-
+LAION_CACHE_DIR = "/ML-A100/team/mm/models/catlip_data/laion2b"
+RECIPE_CACHE_DIR = "/ML-A100/team/mm/models/catlip_data/recipe1M+"
 #DATA_CACHE_DIR = "/media/fast_data/catlip_data/cache"
 
 

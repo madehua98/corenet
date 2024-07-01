@@ -334,7 +334,8 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         """
 
         # Check if this folder exists. If not, then download the tar file and extract it.
-        folder_idx = self._download_and_extract_tar_file(sample_index=sample_index)  # 0
+        folder_idx = sample_index // self.max_files_per_tar
+        #folder_idx = self._download_and_extract_tar_file(sample_index=sample_index)  # 0
 
         file_name = f"{self.cache_loc}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}"   # '路径：/media/fast_data/catlip_data/cache/0/691.pkl'（文件名称超出范围，目录中最多有10000.pkl，而sample_index大于10000，需要查看文件保存格式）
         if not Path(file_name).exists():
@@ -356,7 +357,7 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         # img_bytes = pybase64.b64decode(data["image"], validate=True)  
         # image = Image.open(io.BytesIO(img_bytes)).convert("RGBA").convert("RGB")
         
-        image = Image.open(io.BytesIO(data["image"])).convert("RGBA").convert("RGB")   #待确认时间复杂度
+        image = Image.open(io.BytesIO(data["image"])).convert("RGBA").convert("RGB")
         if "texts" in data: 
             caption_str = data["texts"]
         elif "text" in data:
@@ -431,6 +432,45 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
             )
         return self._transfer_client
 
+    # def __getitem__(
+    #     self, sample_size_and_index: Tuple[int, int, int]
+    # ) -> Mapping[str, Any]:
+    #     """Returns the sample corresponding to the input sample index.
+
+    #     Returned sample is transformed into the size specified by the input.
+
+    #     Args:
+    #         sample_size_and_index: Tuple of the form (crop_size_h, crop_size_w, sample_index).
+
+    #     Returns:
+    #         A dictionary with 'samples', 'targets', and 'sample_id' as keys corresponding to input,
+    #          label, and index of a sample, respectively.
+
+    #     Shapes:
+    #         The shape of values in output dictionary, output_data, are as follows:
+
+    #         output_data["samples"]: Shape is [Channels, Height, Width]
+    #         output_data["targets"]: Shape is [vocab_size]
+    #         output_data["sample_id"]: Shape is [1]
+    #     """
+
+    #     crop_size_h, crop_size_w, sample_index = sample_size_and_index
+    #     transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
+
+    #     image, labels = self._read_sample_with_wordnet_label_mining(sample_index)  # labels值：[2082,1289]
+
+    #     # convert labels to one hot vector
+    #     targets = torch.zeros((self.vocab_size), dtype=torch.long) # shape:[24320]
+    #     if labels is not None and len(labels) > 0:
+    #         targets[labels] = 1  # 对应label位置全赋值为1
+
+    #     output_data = {
+    #         "samples": transform_fn({"image": image})["image"], 
+    #         "targets": targets,
+    #         "sample_id": sample_index,
+    #     }
+    #     return output_data
+    
     def __getitem__(
         self, sample_size_and_index: Tuple[int, int, int]
     ) -> Mapping[str, Any]:
@@ -443,7 +483,7 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
 
         Returns:
             A dictionary with 'samples', 'targets', and 'sample_id' as keys corresponding to input,
-             label, and index of a sample, respectively.
+            label, and index of a sample, respectively.
 
         Shapes:
             The shape of values in output dictionary, output_data, are as follows:
@@ -456,7 +496,12 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         crop_size_h, crop_size_w, sample_index = sample_size_and_index
         transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
 
-        image, labels = self._read_sample_with_wordnet_label_mining(sample_index)  # labels值：[2082,1289]
+        try:
+            image, labels = self._read_sample_with_wordnet_label_mining(sample_index)  # labels值：[2082,1289]
+        except (EOFError, pickle.UnpicklingError, KeyError, IOError) as e:
+            print(f"Error reading sample {sample_index}: {e}")
+            # 返回一个空的或默认的数据结构
+            return self.__getitem__((crop_size_h, crop_size_w, (sample_index + 1) % len(self)))  # 读取下一个样本，防止越界
 
         # convert labels to one hot vector
         targets = torch.zeros((self.vocab_size), dtype=torch.long) # shape:[24320]

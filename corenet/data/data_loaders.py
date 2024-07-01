@@ -95,7 +95,7 @@ def create_train_val_loader(
     """
     is_master_node = is_master(opts)
     train_dataset, valid_dataset = get_train_val_datasets(opts)  # WordnetTaggedClassificationDataset 样本数1040000, 类别数24,320
-
+    
     if isinstance(train_dataset, IterableDataset):  # False
         train_sampler = None
         train_batch_size = getattr(opts, "dataset.train_batch_size0")
