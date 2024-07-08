@@ -1,0 +1,152 @@
+[33mcommit e78135e85d12a017a52377b80519175b164df3d1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Mon Jul 1 12:38:17 2024 +0000
+
+    1
+
+[33mcommit 66028ea3f8adcb6e3cac6ef9ec2324876c39f63d[m
+Merge: 6ff985b 6159e9b
+Author: GuoShuy <1345269336@qq.com>
+Date:   Thu Jun 27 11:03:15 2024 +0000
+
+    Merge branch 'main' of https://github.com/madehua98/corenet
+
+[33mcommit 6ff985bf30737740b8894c6513bac4776a854f93[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Thu Jun 27 11:03:10 2024 +0000
+
+    1
+
+[33mcommit 6159e9b7db0388950f54f7c24b4782659783a306[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: db59767 c74c494
+Author: madehua <1253113229@qq.com>
+Date:   Thu Jun 27 18:59:57 2024 +0800
+
+    Merge branch 'main' of https://github.com/madehua98/corenet into main
+
+[33mcommit db597677338f5f37d099a31aafe75f35e81bf408[m
+Author: madehua <1253113229@qq.com>
+Date:   Thu Jun 27 18:59:16 2024 +0800
+
+    1
+
+[33mcommit c74c494edc0bf48bee16ad564072d19ecc942598[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Tue Jun 25 06:50:09 2024 +0000
+
+    1
+
+[33mcommit 57cd5bd8bfb2a14762a79d91eb7dec1832e21505[m
+Author: madehua <1253113229@qq.com>
+Date:   Wed Jun 19 00:20:52 2024 +0800
+
+    1
+
+[33mcommit e53437a549ad14c4d3d933e53781b1dbedf23aac[m
+Author: madehua <1253113229@qq.com>
+Date:   Wed Jun 19 00:01:20 2024 +0800
+
+    1
+
+[33mcommit 818c2c02a9c133eea4bef9de7f384b42e98059e0[m
+Merge: fdf72d1 a3c42a6
+Author: madehua <1253113229@qq.com>
+Date:   Tue Jun 18 23:59:45 2024 +0800
+
+    1
+
+[33mcommit a3c42a603bbca9f85ea3153cc280dd4ae6f0b469[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Tue Jun 18 12:35:25 2024 +0000
+
+    add stage4 transformer block  in vitamin with 8C dimension
+
+[33mcommit fdf72d11e8e3eb76957af1442ffffce58a768347[m
+Merge: f44f16e a193f32
+Author: madehua <1253113229@qq.com>
+Date:   Sun Jun 16 20:23:42 2024 +0800
+
+    1
+
+[33mcommit f44f16ec82ab850efe8761ab52d9aab0e5b7733a[m
+Author: madehua <1253113229@qq.com>
+Date:   Sun Jun 16 20:23:02 2024 +0800
+
+    1
+
+[33mcommit a193f328c25ccb449477f6b60af296ab397c1355[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Sun Jun 16 12:18:05 2024 +0000
+
+    add model ViTamin into catlip codebase
+
+[33mcommit bd396280ae5d170272f2df7243a9df6a3e75ce69[m
+Merge: 40b4ba9 2279386
+Author: GuoShuy <1345269336@qq.com>
+Date:   Sun Jun 16 09:57:24 2024 +0000
+
+    Merge branch 'main' of https://github.com/madehua98/corenet
+    Merge branch 'main' of https://github.com/madehua98/corenet
+    
+    This merge is necessary to integrate the latest changes from the remote repository into the local branch.
+
+[33mcommit 40b4ba94fea19b52fca482b9937558ad24cfe1e1[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Sun Jun 16 09:47:13 2024 +0000
+
+    1
+
+[33mcommit 227938674d5af0c9b6a0c3dcd9f8e434d1ed70c0[m
+Merge: 60d0599 9ad93ff
+Author: madehua <1253113229@qq.com>
+Date:   Sun Jun 16 13:55:02 2024 +0800
+
+    1
+
+[33mcommit 60d05995f0c63d02fda6edb07c2462eae72bfe1e[m
+Author: madehua <1253113229@qq.com>
+Date:   Sun Jun 16 13:52:11 2024 +0800
+
+    1
+
+[33mcommit 9ad93fff66b51e53db697abab959f0728e26a271[m
+Author: GuoShuy <1345269336@qq.com>
+Date:   Sun Jun 16 05:48:01 2024 +0000
+
+    1
+
+[33mcommit 533be154d9fa78bd40813f6524538330a69bd433[m
+Author: madehua <1253113229@qq.com>
+Date:   Wed Jun 12 23:22:56 2024 +0800
+
+    1
+
+[33mcommit 0333b1fbb29c31809663c4e6de2654b9ff2d27de[m
+Author: sachinmehta <sachin_mehta@apple.com>
+Date:   Thu Apr 25 10:08:47 2024 -0700
+
+    Added CatLIP paper links
+    
+    Done on 2024-04-25 based on 8db2c173f3d8af69eed7c85b94ed2655f8931fa1
+
+[33mcommit 343b6bd9278da5c39938acd037b0bb3cfec83178[m
+Author: sachinmehta <sachin_mehta@apple.com>
+Date:   Wed Apr 24 09:59:58 2024 -0700
+
+    Fixed MLX links
+    
+    Done on 2024-04-24 based on 6f0371d734e78cdbafae90050adc3002d929402f
+
+[33mcommit 5b50eca42bc97f6146b812a3e3469959da5da0ec[m
+Author: sachinmehta <sachin_mehta@apple.com>
+Date:   Tue Apr 23 18:34:14 2024 -0700
+
+    OpenELM arxiv link added
+    
+    Done on 2024-04-23 based on f7c9720698cd3e5959f39f7fa03310d38729aa3d
+
+[33mcommit 9effa1d5fd677801fc326360657c65a6ef0c1810[m
+Author: sachinmehta <sachin_mehta@apple.com>
+Date:   Tue Apr 23 16:07:17 2024 -0700
+
+    CoreNet v0.1.0

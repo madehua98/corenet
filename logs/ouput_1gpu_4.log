@@ -1,0 +1,943 @@
+nohup: 忽略输入
+2024-06-08 00:26:15 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+2024-06-08 00:26:16 - [32m[1mINFO   [0m - Trainable parameters: ['cls_token', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_emb.0.block.conv.weight', 'patch_emb.0.block.norm.weight', 'patch_emb.0.block.norm.bias', 'patch_emb.1.block.conv.weight', 'patch_emb.1.block.norm.weight', 'patch_emb.1.block.norm.bias', 'patch_emb.2.block.conv.weight', 'patch_emb.2.block.conv.bias', 'post_transformer_norm.weight', 'post_transformer_norm.bias', 'transformer.0.pre_norm_mha.0.weight', 'transformer.0.pre_norm_mha.0.bias', 'transformer.0.pre_norm_mha.1.qkv_proj.weight', 'transformer.0.pre_norm_mha.1.qkv_proj.bias', 'transformer.0.pre_norm_mha.1.out_proj_attn.weight', 'transformer.0.pre_norm_mha.1.out_proj_attn.bias', 'transformer.0.pre_norm_ffn.0.weight', 'transformer.0.pre_norm_ffn.0.bias', 'transformer.0.pre_norm_ffn.1.weight', 'transformer.0.pre_norm_ffn.1.bias', 'transformer.0.pre_norm_ffn.4.weight', 'transformer.0.pre_norm_ffn.4.bias', 'transformer.1.pre_norm_mha.0.weight', 'transformer.1.pre_norm_mha.0.bias', 'transformer.1.pre_norm_mha.1.qkv_proj.weight', 'transformer.1.pre_norm_mha.1.qkv_proj.bias', 'transformer.1.pre_norm_mha.1.out_proj_attn.weight', 'transformer.1.pre_norm_mha.1.out_proj_attn.bias', 'transformer.1.pre_norm_ffn.0.weight', 'transformer.1.pre_norm_ffn.0.bias', 'transformer.1.pre_norm_ffn.1.weight', 'transformer.1.pre_norm_ffn.1.bias', 'transformer.1.pre_norm_ffn.4.weight', 'transformer.1.pre_norm_ffn.4.bias', 'transformer.2.pre_norm_mha.0.weight', 'transformer.2.pre_norm_mha.0.bias', 'transformer.2.pre_norm_mha.1.qkv_proj.weight', 'transformer.2.pre_norm_mha.1.qkv_proj.bias', 'transformer.2.pre_norm_mha.1.out_proj_attn.weight', 'transformer.2.pre_norm_mha.1.out_proj_attn.bias', 'transformer.2.pre_norm_ffn.0.weight', 'transformer.2.pre_norm_ffn.0.bias', 'transformer.2.pre_norm_ffn.1.weight', 'transformer.2.pre_norm_ffn.1.bias', 'transformer.2.pre_norm_ffn.4.weight', 'transformer.2.pre_norm_ffn.4.bias', 'transformer.3.pre_norm_mha.0.weight', 'transformer.3.pre_norm_mha.0.bias', 'transformer.3.pre_norm_mha.1.qkv_proj.weight', 'transformer.3.pre_norm_mha.1.qkv_proj.bias', 'transformer.3.pre_norm_mha.1.out_proj_attn.weight', 'transformer.3.pre_norm_mha.1.out_proj_attn.bias', 'transformer.3.pre_norm_ffn.0.weight', 'transformer.3.pre_norm_ffn.0.bias', 'transformer.3.pre_norm_ffn.1.weight', 'transformer.3.pre_norm_ffn.1.bias', 'transformer.3.pre_norm_ffn.4.weight', 'transformer.3.pre_norm_ffn.4.bias', 'transformer.4.pre_norm_mha.0.weight', 'transformer.4.pre_norm_mha.0.bias', 'transformer.4.pre_norm_mha.1.qkv_proj.weight', 'transformer.4.pre_norm_mha.1.qkv_proj.bias', 'transformer.4.pre_norm_mha.1.out_proj_attn.weight', 'transformer.4.pre_norm_mha.1.out_proj_attn.bias', 'transformer.4.pre_norm_ffn.0.weight', 'transformer.4.pre_norm_ffn.0.bias', 'transformer.4.pre_norm_ffn.1.weight', 'transformer.4.pre_norm_ffn.1.bias', 'transformer.4.pre_norm_ffn.4.weight', 'transformer.4.pre_norm_ffn.4.bias', 'transformer.5.pre_norm_mha.0.weight', 'transformer.5.pre_norm_mha.0.bias', 'transformer.5.pre_norm_mha.1.qkv_proj.weight', 'transformer.5.pre_norm_mha.1.qkv_proj.bias', 'transformer.5.pre_norm_mha.1.out_proj_attn.weight', 'transformer.5.pre_norm_mha.1.out_proj_attn.bias', 'transformer.5.pre_norm_ffn.0.weight', 'transformer.5.pre_norm_ffn.0.bias', 'transformer.5.pre_norm_ffn.1.weight', 'transformer.5.pre_norm_ffn.1.bias', 'transformer.5.pre_norm_ffn.4.weight', 'transformer.5.pre_norm_ffn.4.bias', 'transformer.6.pre_norm_mha.0.weight', 'transformer.6.pre_norm_mha.0.bias', 'transformer.6.pre_norm_mha.1.qkv_proj.weight', 'transformer.6.pre_norm_mha.1.qkv_proj.bias', 'transformer.6.pre_norm_mha.1.out_proj_attn.weight', 'transformer.6.pre_norm_mha.1.out_proj_attn.bias', 'transformer.6.pre_norm_ffn.0.weight', 'transformer.6.pre_norm_ffn.0.bias', 'transformer.6.pre_norm_ffn.1.weight', 'transformer.6.pre_norm_ffn.1.bias', 'transformer.6.pre_norm_ffn.4.weight', 'transformer.6.pre_norm_ffn.4.bias', 'transformer.7.pre_norm_mha.0.weight', 'transformer.7.pre_norm_mha.0.bias', 'transformer.7.pre_norm_mha.1.qkv_proj.weight', 'transformer.7.pre_norm_mha.1.qkv_proj.bias', 'transformer.7.pre_norm_mha.1.out_proj_attn.weight', 'transformer.7.pre_norm_mha.1.out_proj_attn.bias', 'transformer.7.pre_norm_ffn.0.weight', 'transformer.7.pre_norm_ffn.0.bias', 'transformer.7.pre_norm_ffn.1.weight', 'transformer.7.pre_norm_ffn.1.bias', 'transformer.7.pre_norm_ffn.4.weight', 'transformer.7.pre_norm_ffn.4.bias', 'transformer.8.pre_norm_mha.0.weight', 'transformer.8.pre_norm_mha.0.bias', 'transformer.8.pre_norm_mha.1.qkv_proj.weight', 'transformer.8.pre_norm_mha.1.qkv_proj.bias', 'transformer.8.pre_norm_mha.1.out_proj_attn.weight', 'transformer.8.pre_norm_mha.1.out_proj_attn.bias', 'transformer.8.pre_norm_ffn.0.weight', 'transformer.8.pre_norm_ffn.0.bias', 'transformer.8.pre_norm_ffn.1.weight', 'transformer.8.pre_norm_ffn.1.bias', 'transformer.8.pre_norm_ffn.4.weight', 'transformer.8.pre_norm_ffn.4.bias', 'transformer.9.pre_norm_mha.0.weight', 'transformer.9.pre_norm_mha.0.bias', 'transformer.9.pre_norm_mha.1.qkv_proj.weight', 'transformer.9.pre_norm_mha.1.qkv_proj.bias', 'transformer.9.pre_norm_mha.1.out_proj_attn.weight', 'transformer.9.pre_norm_mha.1.out_proj_attn.bias', 'transformer.9.pre_norm_ffn.0.weight', 'transformer.9.pre_norm_ffn.0.bias', 'transformer.9.pre_norm_ffn.1.weight', 'transformer.9.pre_norm_ffn.1.bias', 'transformer.9.pre_norm_ffn.4.weight', 'transformer.9.pre_norm_ffn.4.bias', 'transformer.10.pre_norm_mha.0.weight', 'transformer.10.pre_norm_mha.0.bias', 'transformer.10.pre_norm_mha.1.qkv_proj.weight', 'transformer.10.pre_norm_mha.1.qkv_proj.bias', 'transformer.10.pre_norm_mha.1.out_proj_attn.weight', 'transformer.10.pre_norm_mha.1.out_proj_attn.bias', 'transformer.10.pre_norm_ffn.0.weight', 'transformer.10.pre_norm_ffn.0.bias', 'transformer.10.pre_norm_ffn.1.weight', 'transformer.10.pre_norm_ffn.1.bias', 'transformer.10.pre_norm_ffn.4.weight', 'transformer.10.pre_norm_ffn.4.bias', 'transformer.11.pre_norm_mha.0.weight', 'transformer.11.pre_norm_mha.0.bias', 'transformer.11.pre_norm_mha.1.qkv_proj.weight', 'transformer.11.pre_norm_mha.1.qkv_proj.bias', 'transformer.11.pre_norm_mha.1.out_proj_attn.weight', 'transformer.11.pre_norm_mha.1.out_proj_attn.bias', 'transformer.11.pre_norm_ffn.0.weight', 'transformer.11.pre_norm_ffn.0.bias', 'transformer.11.pre_norm_ffn.1.weight', 'transformer.11.pre_norm_ffn.1.bias', 'transformer.11.pre_norm_ffn.4.weight', 'transformer.11.pre_norm_ffn.4.bias', 'classifier.weight', 'classifier.bias', 'pos_embed.pos_embed.pos_embed']
+2024-06-08 00:26:16 - [34m[1mLOGS   [0m - [36mModel[0m
+VisionTransformer(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_emb): Sequential(
+    (0): Conv2d(3, 192, kernel_size=(4, 4), stride=(4, 4), padding=(1, 1), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (1): Conv2d(192, 192, kernel_size=(2, 2), stride=(2, 2), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (2): Conv2d(192, 768, kernel_size=(2, 2), stride=(2, 2))
+  )
+  (post_transformer_norm): LayerNormFP32((768,), eps=1e-06, elementwise_affine=True)
+  (transformer): Sequential(
+    (0): FlashTransformerEncoder
+    (1): FlashTransformerEncoder
+    (2): FlashTransformerEncoder
+    (3): FlashTransformerEncoder
+    (4): FlashTransformerEncoder
+    (5): FlashTransformerEncoder
+    (6): FlashTransformerEncoder
+    (7): FlashTransformerEncoder
+    (8): FlashTransformerEncoder
+    (9): FlashTransformerEncoder
+    (10): FlashTransformerEncoder
+    (11): FlashTransformerEncoder
+  )
+  (classifier): LinearLayer(in_features=768, out_features=24320, bias=True, channel_first=False)
+  (pos_embed): LearnablePositionalEmbedding(num_embeddings=196, embedding_dim=768, padding_idx=None, sequence_first=False)
+  (emb_dropout): Dropout(p=0.0, inplace=False)
+)
+[31m=================================================================[0m
+                  VisionTransformer Summary
+[31m=================================================================[0m
+Total parameters     =  104.657 M
+Total trainable parameters =  104.657 M
+
+2024-06-08 00:26:16 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-06-08 00:26:16 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.105G                 | 17.031G    |
+|  cls_token                           |  (1, 1, 768)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_emb                           |  0.748M                |  0.262G    |
+|   patch_emb.0.block                  |   9.6K                 |   30.106M  |
+|    patch_emb.0.block.conv            |    9.216K              |    28.901M |
+|    patch_emb.0.block.norm            |    0.384K              |    1.204M  |
+|   patch_emb.1.block                  |   0.148M               |   0.116G   |
+|    patch_emb.1.block.conv            |    0.147M              |    0.116G  |
+|    patch_emb.1.block.norm            |    0.384K              |    0.301M  |
+|   patch_emb.2.block.conv             |   0.591M               |   0.116G   |
+|    patch_emb.2.block.conv.weight     |    (768, 192, 2, 2)    |            |
+|    patch_emb.2.block.conv.bias       |    (768,)              |            |
+|  post_transformer_norm               |  1.536K                |  0.756M    |
+|   post_transformer_norm.weight       |   (768,)               |            |
+|   post_transformer_norm.bias         |   (768,)               |            |
+|  transformer                         |  85.054M               |  16.75G    |
+|   transformer.0                      |   7.088M               |   1.396G   |
+|    transformer.0.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.0.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.1                      |   7.088M               |   1.396G   |
+|    transformer.1.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.1.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.2                      |   7.088M               |   1.396G   |
+|    transformer.2.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.2.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.3                      |   7.088M               |   1.396G   |
+|    transformer.3.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.3.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.4                      |   7.088M               |   1.396G   |
+|    transformer.4.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.4.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.5                      |   7.088M               |   1.396G   |
+|    transformer.5.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.5.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.6                      |   7.088M               |   1.396G   |
+|    transformer.6.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.6.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.7                      |   7.088M               |   1.396G   |
+|    transformer.7.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.7.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.8                      |   7.088M               |   1.396G   |
+|    transformer.8.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.8.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.9                      |   7.088M               |   1.396G   |
+|    transformer.9.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.9.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.10                     |   7.088M               |   1.396G   |
+|    transformer.10.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.10.pre_norm_ffn       |    4.724M              |    0.93G   |
+|   transformer.11                     |   7.088M               |   1.396G   |
+|    transformer.11.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.11.pre_norm_ffn       |    4.724M              |    0.93G   |
+|  classifier                          |  18.702M               |  18.678M   |
+|   classifier.weight                  |   (24320, 768)         |            |
+|   classifier.bias                    |   (24320,)             |            |
+|  pos_embed.pos_embed                 |  0.151M                |  0         |
+|   pos_embed.pos_embed.pos_embed      |   (1, 1, 196, 768)     |            |
+2024-06-08 00:26:16 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-06-08 00:26:16 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.brightness', 'transformer.1.drop_path', 'transformer.3.drop_path', 'transformer.8.drop_path', 'neural_augmentor', 'neural_augmentor.brightness.max_fn', 'neural_augmentor.contrast.max_fn', 'transformer.0.drop_path', 'neural_augmentor.contrast.min_fn', 'transformer.11.drop_path', 'transformer.10.drop_path', 'transformer.2.drop_path', 'transformer.9.drop_path', 'transformer.6.drop_path', 'neural_augmentor.noise.min_fn', 'transformer.5.drop_path', 'neural_augmentor.brightness.min_fn', 'neural_augmentor.noise.max_fn', 'neural_augmentor.contrast', 'transformer.7.drop_path', 'transformer.4.drop_path', 'neural_augmentor.noise'}
+2024-06-08 00:26:16 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 25, 'aten::gelu': 14, 'aten::scaled_dot_product_attention': 12, 'aten::sub': 1})
+[31m=================================================================[0m
+2024-06-08 00:26:16 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-06-08 00:26:16 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-06-08 00:26:17 - [34m[1mLOGS   [0m - Available GPUs: 1
+2024-06-08 00:26:17 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-06-08 00:26:17 - [34m[1mLOGS   [0m - Directory exists at: results_catlip/train
+2024-06-08 00:26:17 - [34m[1mLOGS   [0m - Setting dataset.workers to 112.
+2024-06-08 00:26:20 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://127.0.0.1:2345
+2024-06-08 00:26:21 - [34m[1mLOGS   [0m - Training dataset details are given below
+WordnetTaggedClassificationDataset(
+	root= 
+	is_training=True 
+	num_samples=1040000
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	total_tar_files=104
+	max_files_per_tar=10000
+	num_synsets=24320
+)
+2024-06-08 00:26:21 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=True
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=4
+	 scales=[(128, 128, 12), (144, 144, 9), (160, 160, 7), (176, 176, 6), (192, 192, 5), (208, 208, 4), (224, 224, 4), (240, 240, 3), (256, 256, 3), (272, 272, 2), (288, 288, 2), (304, 304, 2), (320, 320, 1)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-06-08 00:26:21 - [34m[1mLOGS   [0m - Number of data workers: 112
+2024-06-08 00:26:22 - [32m[1mINFO   [0m - Trainable parameters: ['cls_token', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_emb.0.block.conv.weight', 'patch_emb.0.block.norm.weight', 'patch_emb.0.block.norm.bias', 'patch_emb.1.block.conv.weight', 'patch_emb.1.block.norm.weight', 'patch_emb.1.block.norm.bias', 'patch_emb.2.block.conv.weight', 'patch_emb.2.block.conv.bias', 'post_transformer_norm.weight', 'post_transformer_norm.bias', 'transformer.0.pre_norm_mha.0.weight', 'transformer.0.pre_norm_mha.0.bias', 'transformer.0.pre_norm_mha.1.qkv_proj.weight', 'transformer.0.pre_norm_mha.1.qkv_proj.bias', 'transformer.0.pre_norm_mha.1.out_proj_attn.weight', 'transformer.0.pre_norm_mha.1.out_proj_attn.bias', 'transformer.0.pre_norm_ffn.0.weight', 'transformer.0.pre_norm_ffn.0.bias', 'transformer.0.pre_norm_ffn.1.weight', 'transformer.0.pre_norm_ffn.1.bias', 'transformer.0.pre_norm_ffn.4.weight', 'transformer.0.pre_norm_ffn.4.bias', 'transformer.1.pre_norm_mha.0.weight', 'transformer.1.pre_norm_mha.0.bias', 'transformer.1.pre_norm_mha.1.qkv_proj.weight', 'transformer.1.pre_norm_mha.1.qkv_proj.bias', 'transformer.1.pre_norm_mha.1.out_proj_attn.weight', 'transformer.1.pre_norm_mha.1.out_proj_attn.bias', 'transformer.1.pre_norm_ffn.0.weight', 'transformer.1.pre_norm_ffn.0.bias', 'transformer.1.pre_norm_ffn.1.weight', 'transformer.1.pre_norm_ffn.1.bias', 'transformer.1.pre_norm_ffn.4.weight', 'transformer.1.pre_norm_ffn.4.bias', 'transformer.2.pre_norm_mha.0.weight', 'transformer.2.pre_norm_mha.0.bias', 'transformer.2.pre_norm_mha.1.qkv_proj.weight', 'transformer.2.pre_norm_mha.1.qkv_proj.bias', 'transformer.2.pre_norm_mha.1.out_proj_attn.weight', 'transformer.2.pre_norm_mha.1.out_proj_attn.bias', 'transformer.2.pre_norm_ffn.0.weight', 'transformer.2.pre_norm_ffn.0.bias', 'transformer.2.pre_norm_ffn.1.weight', 'transformer.2.pre_norm_ffn.1.bias', 'transformer.2.pre_norm_ffn.4.weight', 'transformer.2.pre_norm_ffn.4.bias', 'transformer.3.pre_norm_mha.0.weight', 'transformer.3.pre_norm_mha.0.bias', 'transformer.3.pre_norm_mha.1.qkv_proj.weight', 'transformer.3.pre_norm_mha.1.qkv_proj.bias', 'transformer.3.pre_norm_mha.1.out_proj_attn.weight', 'transformer.3.pre_norm_mha.1.out_proj_attn.bias', 'transformer.3.pre_norm_ffn.0.weight', 'transformer.3.pre_norm_ffn.0.bias', 'transformer.3.pre_norm_ffn.1.weight', 'transformer.3.pre_norm_ffn.1.bias', 'transformer.3.pre_norm_ffn.4.weight', 'transformer.3.pre_norm_ffn.4.bias', 'transformer.4.pre_norm_mha.0.weight', 'transformer.4.pre_norm_mha.0.bias', 'transformer.4.pre_norm_mha.1.qkv_proj.weight', 'transformer.4.pre_norm_mha.1.qkv_proj.bias', 'transformer.4.pre_norm_mha.1.out_proj_attn.weight', 'transformer.4.pre_norm_mha.1.out_proj_attn.bias', 'transformer.4.pre_norm_ffn.0.weight', 'transformer.4.pre_norm_ffn.0.bias', 'transformer.4.pre_norm_ffn.1.weight', 'transformer.4.pre_norm_ffn.1.bias', 'transformer.4.pre_norm_ffn.4.weight', 'transformer.4.pre_norm_ffn.4.bias', 'transformer.5.pre_norm_mha.0.weight', 'transformer.5.pre_norm_mha.0.bias', 'transformer.5.pre_norm_mha.1.qkv_proj.weight', 'transformer.5.pre_norm_mha.1.qkv_proj.bias', 'transformer.5.pre_norm_mha.1.out_proj_attn.weight', 'transformer.5.pre_norm_mha.1.out_proj_attn.bias', 'transformer.5.pre_norm_ffn.0.weight', 'transformer.5.pre_norm_ffn.0.bias', 'transformer.5.pre_norm_ffn.1.weight', 'transformer.5.pre_norm_ffn.1.bias', 'transformer.5.pre_norm_ffn.4.weight', 'transformer.5.pre_norm_ffn.4.bias', 'transformer.6.pre_norm_mha.0.weight', 'transformer.6.pre_norm_mha.0.bias', 'transformer.6.pre_norm_mha.1.qkv_proj.weight', 'transformer.6.pre_norm_mha.1.qkv_proj.bias', 'transformer.6.pre_norm_mha.1.out_proj_attn.weight', 'transformer.6.pre_norm_mha.1.out_proj_attn.bias', 'transformer.6.pre_norm_ffn.0.weight', 'transformer.6.pre_norm_ffn.0.bias', 'transformer.6.pre_norm_ffn.1.weight', 'transformer.6.pre_norm_ffn.1.bias', 'transformer.6.pre_norm_ffn.4.weight', 'transformer.6.pre_norm_ffn.4.bias', 'transformer.7.pre_norm_mha.0.weight', 'transformer.7.pre_norm_mha.0.bias', 'transformer.7.pre_norm_mha.1.qkv_proj.weight', 'transformer.7.pre_norm_mha.1.qkv_proj.bias', 'transformer.7.pre_norm_mha.1.out_proj_attn.weight', 'transformer.7.pre_norm_mha.1.out_proj_attn.bias', 'transformer.7.pre_norm_ffn.0.weight', 'transformer.7.pre_norm_ffn.0.bias', 'transformer.7.pre_norm_ffn.1.weight', 'transformer.7.pre_norm_ffn.1.bias', 'transformer.7.pre_norm_ffn.4.weight', 'transformer.7.pre_norm_ffn.4.bias', 'transformer.8.pre_norm_mha.0.weight', 'transformer.8.pre_norm_mha.0.bias', 'transformer.8.pre_norm_mha.1.qkv_proj.weight', 'transformer.8.pre_norm_mha.1.qkv_proj.bias', 'transformer.8.pre_norm_mha.1.out_proj_attn.weight', 'transformer.8.pre_norm_mha.1.out_proj_attn.bias', 'transformer.8.pre_norm_ffn.0.weight', 'transformer.8.pre_norm_ffn.0.bias', 'transformer.8.pre_norm_ffn.1.weight', 'transformer.8.pre_norm_ffn.1.bias', 'transformer.8.pre_norm_ffn.4.weight', 'transformer.8.pre_norm_ffn.4.bias', 'transformer.9.pre_norm_mha.0.weight', 'transformer.9.pre_norm_mha.0.bias', 'transformer.9.pre_norm_mha.1.qkv_proj.weight', 'transformer.9.pre_norm_mha.1.qkv_proj.bias', 'transformer.9.pre_norm_mha.1.out_proj_attn.weight', 'transformer.9.pre_norm_mha.1.out_proj_attn.bias', 'transformer.9.pre_norm_ffn.0.weight', 'transformer.9.pre_norm_ffn.0.bias', 'transformer.9.pre_norm_ffn.1.weight', 'transformer.9.pre_norm_ffn.1.bias', 'transformer.9.pre_norm_ffn.4.weight', 'transformer.9.pre_norm_ffn.4.bias', 'transformer.10.pre_norm_mha.0.weight', 'transformer.10.pre_norm_mha.0.bias', 'transformer.10.pre_norm_mha.1.qkv_proj.weight', 'transformer.10.pre_norm_mha.1.qkv_proj.bias', 'transformer.10.pre_norm_mha.1.out_proj_attn.weight', 'transformer.10.pre_norm_mha.1.out_proj_attn.bias', 'transformer.10.pre_norm_ffn.0.weight', 'transformer.10.pre_norm_ffn.0.bias', 'transformer.10.pre_norm_ffn.1.weight', 'transformer.10.pre_norm_ffn.1.bias', 'transformer.10.pre_norm_ffn.4.weight', 'transformer.10.pre_norm_ffn.4.bias', 'transformer.11.pre_norm_mha.0.weight', 'transformer.11.pre_norm_mha.0.bias', 'transformer.11.pre_norm_mha.1.qkv_proj.weight', 'transformer.11.pre_norm_mha.1.qkv_proj.bias', 'transformer.11.pre_norm_mha.1.out_proj_attn.weight', 'transformer.11.pre_norm_mha.1.out_proj_attn.bias', 'transformer.11.pre_norm_ffn.0.weight', 'transformer.11.pre_norm_ffn.0.bias', 'transformer.11.pre_norm_ffn.1.weight', 'transformer.11.pre_norm_ffn.1.bias', 'transformer.11.pre_norm_ffn.4.weight', 'transformer.11.pre_norm_ffn.4.bias', 'classifier.weight', 'classifier.bias', 'pos_embed.pos_embed.pos_embed']
+2024-06-08 00:26:22 - [34m[1mLOGS   [0m - [36mModel[0m
+VisionTransformer(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_emb): Sequential(
+    (0): Conv2d(3, 192, kernel_size=(4, 4), stride=(4, 4), padding=(1, 1), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (1): Conv2d(192, 192, kernel_size=(2, 2), stride=(2, 2), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (2): Conv2d(192, 768, kernel_size=(2, 2), stride=(2, 2))
+  )
+  (post_transformer_norm): LayerNormFP32((768,), eps=1e-06, elementwise_affine=True)
+  (transformer): Sequential(
+    (0): FlashTransformerEncoder
+    (1): FlashTransformerEncoder
+    (2): FlashTransformerEncoder
+    (3): FlashTransformerEncoder
+    (4): FlashTransformerEncoder
+    (5): FlashTransformerEncoder
+    (6): FlashTransformerEncoder
+    (7): FlashTransformerEncoder
+    (8): FlashTransformerEncoder
+    (9): FlashTransformerEncoder
+    (10): FlashTransformerEncoder
+    (11): FlashTransformerEncoder
+  )
+  (classifier): LinearLayer(in_features=768, out_features=24320, bias=True, channel_first=False)
+  (pos_embed): LearnablePositionalEmbedding(num_embeddings=196, embedding_dim=768, padding_idx=None, sequence_first=False)
+  (emb_dropout): Dropout(p=0.0, inplace=False)
+)
+[31m=================================================================[0m
+                  VisionTransformer Summary
+[31m=================================================================[0m
+Total parameters     =  104.657 M
+Total trainable parameters =  104.657 M
+
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.105G                 | 17.031G    |
+|  cls_token                           |  (1, 1, 768)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_emb                           |  0.748M                |  0.262G    |
+|   patch_emb.0.block                  |   9.6K                 |   30.106M  |
+|    patch_emb.0.block.conv            |    9.216K              |    28.901M |
+|    patch_emb.0.block.norm            |    0.384K              |    1.204M  |
+|   patch_emb.1.block                  |   0.148M               |   0.116G   |
+|    patch_emb.1.block.conv            |    0.147M              |    0.116G  |
+|    patch_emb.1.block.norm            |    0.384K              |    0.301M  |
+|   patch_emb.2.block.conv             |   0.591M               |   0.116G   |
+|    patch_emb.2.block.conv.weight     |    (768, 192, 2, 2)    |            |
+|    patch_emb.2.block.conv.bias       |    (768,)              |            |
+|  post_transformer_norm               |  1.536K                |  0.756M    |
+|   post_transformer_norm.weight       |   (768,)               |            |
+|   post_transformer_norm.bias         |   (768,)               |            |
+|  transformer                         |  85.054M               |  16.75G    |
+|   transformer.0                      |   7.088M               |   1.396G   |
+|    transformer.0.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.0.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.1                      |   7.088M               |   1.396G   |
+|    transformer.1.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.1.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.2                      |   7.088M               |   1.396G   |
+|    transformer.2.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.2.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.3                      |   7.088M               |   1.396G   |
+|    transformer.3.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.3.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.4                      |   7.088M               |   1.396G   |
+|    transformer.4.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.4.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.5                      |   7.088M               |   1.396G   |
+|    transformer.5.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.5.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.6                      |   7.088M               |   1.396G   |
+|    transformer.6.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.6.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.7                      |   7.088M               |   1.396G   |
+|    transformer.7.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.7.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.8                      |   7.088M               |   1.396G   |
+|    transformer.8.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.8.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.9                      |   7.088M               |   1.396G   |
+|    transformer.9.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.9.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.10                     |   7.088M               |   1.396G   |
+|    transformer.10.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.10.pre_norm_ffn       |    4.724M              |    0.93G   |
+|   transformer.11                     |   7.088M               |   1.396G   |
+|    transformer.11.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.11.pre_norm_ffn       |    4.724M              |    0.93G   |
+|  classifier                          |  18.702M               |  18.678M   |
+|   classifier.weight                  |   (24320, 768)         |            |
+|   classifier.bias                    |   (24320,)             |            |
+|  pos_embed.pos_embed                 |  0.151M                |  0         |
+|   pos_embed.pos_embed.pos_embed      |   (1, 1, 196, 768)     |            |
+2024-06-08 00:26:23 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-06-08 00:26:23 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.brightness', 'transformer.7.drop_path', 'neural_augmentor.noise', 'transformer.1.drop_path', 'neural_augmentor.brightness.min_fn', 'neural_augmentor.contrast', 'transformer.9.drop_path', 'neural_augmentor', 'transformer.8.drop_path', 'neural_augmentor.noise.max_fn', 'neural_augmentor.noise.min_fn', 'transformer.0.drop_path', 'transformer.4.drop_path', 'transformer.2.drop_path', 'neural_augmentor.contrast.max_fn', 'transformer.11.drop_path', 'transformer.3.drop_path', 'transformer.6.drop_path', 'transformer.5.drop_path', 'neural_augmentor.brightness.max_fn', 'neural_augmentor.contrast.min_fn', 'transformer.10.drop_path'}
+2024-06-08 00:26:23 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 25, 'aten::gelu': 14, 'aten::scaled_dot_product_attention': 12, 'aten::sub': 1})
+[31m=================================================================[0m
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	BinaryCrossEntropy(  reduction=batch_mean loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+AdamWOptimizer (
+	 amsgrad: [False, False]
+	 betas: [(0.9, 0.999), (0.9, 0.999)]
+	 capturable: [False, False]
+	 differentiable: [False, False]
+	 eps: [1e-08, 1e-08]
+	 foreach: [None, None]
+	 fused: [None, None]
+	 lr: [0.1, 0.1]
+	 maximize: [False, False]
+	 weight_decay: [0.2, 0.0]
+)
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - Max. iteration for training: 200000
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=1e-05
+ 	 max_lr=0.001
+ 	 period=190001
+ 	 warmup_init_lr=1e-06
+ 	 warmup_iters=10000
+ )
+2024-06-08 00:26:23 - [34m[1mLOGS   [0m - Using EMA
+2024-06-08 00:26:25 - [34m[1mLOGS   [0m - Loaded checkpoint from results_catlip/train/training_checkpoint_last.pt
+2024-06-08 00:26:25 - [34m[1mLOGS   [0m - Resuming training for epoch 21
+2024-06-08 00:26:25 - [32m[1mINFO   [0m - Configuration file is stored here: [36mresults_catlip/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-06-08 00:26:27 - [32m[1mINFO   [0m - Training epoch 21
+2024-06-08 00:33:13 - [34m[1mLOGS   [0m - Epoch:  21 [   27923/  200000], loss: {'classification': 3.9499, 'neural_augmentation': 0.2025, 'total_loss': 4.1524}, LR: [0.000978, 0.000978], Avg. batch load time: 404.736, Elapsed time: 406.19
+/home/data_llm/madehua/corenet/venv/lib/python3.11/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1, 1, 768], strides() = [307968, 768, 1]
+bucket_view.sizes() = [1, 1, 768], strides() = [768, 768, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-06-08 00:34:08 - [34m[1mLOGS   [0m - Epoch:  21 [   28423/  200000], loss: {'classification': 10.9758, 'neural_augmentation': 0.2116, 'total_loss': 11.1873}, LR: [0.000977, 0.000977], Avg. batch load time: 0.808, Elapsed time: 461.17
+2024-06-08 00:35:01 - [34m[1mLOGS   [0m - Epoch:  21 [   28923/  200000], loss: {'classification': 10.9885, 'neural_augmentation': 0.2266, 'total_loss': 11.2151}, LR: [0.000976, 0.000976], Avg. batch load time: 0.405, Elapsed time: 514.60
+2024-06-08 00:35:52 - [34m[1mLOGS   [0m - Epoch:  21 [   29423/  200000], loss: {'classification': 11.0331, 'neural_augmentation': 0.231, 'total_loss': 11.2641}, LR: [0.000975, 0.000975], Avg. batch load time: 0.270, Elapsed time: 565.80
+2024-06-08 00:36:44 - [34m[1mLOGS   [0m - Epoch:  21 [   29923/  200000], loss: {'classification': 10.9762, 'neural_augmentation': 0.2393, 'total_loss': 11.2155}, LR: [0.000973, 0.000973], Avg. batch load time: 0.203, Elapsed time: 617.53
+2024-06-08 00:36:55 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 00:36:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 00:36:58 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 29999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_29999.pt
+2024-06-08 00:36:58 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 29999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_29999.pt
+2024-06-08 00:36:59 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 00:36:59 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 29999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_29999.pt
+2024-06-08 00:36:59 - [32m[1mINFO   [0m - Checkpoints saved after 29999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 00:37:42 - [34m[1mLOGS   [0m - Epoch:  21 [   30423/  200000], loss: {'classification': 59.5512, 'neural_augmentation': 0.246, 'total_loss': 59.7972}, LR: [0.000972, 0.000972], Avg. batch load time: 0.162, Elapsed time: 675.84
+2024-06-08 00:38:35 - [34m[1mLOGS   [0m - Epoch:  21 [   30923/  200000], loss: {'classification': 51.6416, 'neural_augmentation': 0.2518, 'total_loss': 51.8934}, LR: [0.000971, 0.000971], Avg. batch load time: 0.135, Elapsed time: 727.89
+2024-06-08 00:39:27 - [34m[1mLOGS   [0m - Epoch:  21 [   31423/  200000], loss: {'classification': 46.1223, 'neural_augmentation': 0.2552, 'total_loss': 46.3774}, LR: [0.000969, 0.000969], Avg. batch load time: 0.116, Elapsed time: 780.43
+2024-06-08 00:40:18 - [34m[1mLOGS   [0m - Epoch:  21 [   31923/  200000], loss: {'classification': 41.6178, 'neural_augmentation': 0.2624, 'total_loss': 41.8802}, LR: [0.000968, 0.000968], Avg. batch load time: 0.102, Elapsed time: 831.82
+2024-06-08 00:41:11 - [34m[1mLOGS   [0m - Epoch:  21 [   32423/  200000], loss: {'classification': 38.0991, 'neural_augmentation': 0.269, 'total_loss': 38.368}, LR: [0.000966, 0.000966], Avg. batch load time: 0.090, Elapsed time: 883.91
+2024-06-08 00:42:01 - [34m[1mLOGS   [0m - Epoch:  21 [   32923/  200000], loss: {'classification': 35.364, 'neural_augmentation': 0.2745, 'total_loss': 35.6385}, LR: [0.000965, 0.000965], Avg. batch load time: 0.081, Elapsed time: 934.79
+2024-06-08 00:42:52 - [34m[1mLOGS   [0m - Epoch:  21 [   33423/  200000], loss: {'classification': 33.1198, 'neural_augmentation': 0.2803, 'total_loss': 33.4001}, LR: [0.000963, 0.000963], Avg. batch load time: 0.074, Elapsed time: 985.33
+2024-06-08 00:43:44 - [34m[1mLOGS   [0m - Epoch:  21 [   33923/  200000], loss: {'classification': 31.2509, 'neural_augmentation': 0.2863, 'total_loss': 31.5372}, LR: [0.000962, 0.000962], Avg. batch load time: 0.068, Elapsed time: 1037.63
+2024-06-08 00:44:35 - [34m[1mLOGS   [0m - Epoch:  21 [   34423/  200000], loss: {'classification': 29.7099, 'neural_augmentation': 0.2911, 'total_loss': 30.001}, LR: [0.00096, 0.00096], Avg. batch load time: 0.063, Elapsed time: 1088.56
+2024-06-08 00:45:25 - [34m[1mLOGS   [0m - Epoch:  21 [   34923/  200000], loss: {'classification': 28.4145, 'neural_augmentation': 0.2976, 'total_loss': 28.7122}, LR: [0.000959, 0.000959], Avg. batch load time: 0.058, Elapsed time: 1138.25
+2024-06-08 00:45:36 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 00:45:37 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 00:45:39 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 34999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_34999.pt
+2024-06-08 00:45:40 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 34999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_34999.pt
+2024-06-08 00:45:40 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 00:45:41 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 34999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_34999.pt
+2024-06-08 00:45:41 - [32m[1mINFO   [0m - Checkpoints saved after 34999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 00:46:24 - [34m[1mLOGS   [0m - Epoch:  21 [   35423/  200000], loss: {'classification': 27.3154, 'neural_augmentation': 0.304, 'total_loss': 27.6194}, LR: [0.000957, 0.000957], Avg. batch load time: 0.054, Elapsed time: 1197.57
+2024-06-08 00:47:15 - [34m[1mLOGS   [0m - Epoch:  21 [   35923/  200000], loss: {'classification': 26.284, 'neural_augmentation': 0.3092, 'total_loss': 26.5933}, LR: [0.000955, 0.000955], Avg. batch load time: 0.051, Elapsed time: 1248.70
+2024-06-08 00:48:06 - [34m[1mLOGS   [0m - Epoch:  21 [   36423/  200000], loss: {'classification': 25.3733, 'neural_augmentation': 0.3143, 'total_loss': 25.6876}, LR: [0.000954, 0.000954], Avg. batch load time: 0.048, Elapsed time: 1299.73
+2024-06-08 00:48:58 - [34m[1mLOGS   [0m - Epoch:  21 [   36923/  200000], loss: {'classification': 24.6153, 'neural_augmentation': 0.3194, 'total_loss': 24.9346}, LR: [0.000952, 0.000952], Avg. batch load time: 0.045, Elapsed time: 1351.82
+2024-06-08 00:49:50 - [34m[1mLOGS   [0m - Epoch:  21 [   37423/  200000], loss: {'classification': 23.8838, 'neural_augmentation': 0.3248, 'total_loss': 24.2086}, LR: [0.00095, 0.00095], Avg. batch load time: 0.043, Elapsed time: 1403.04
+2024-06-08 00:50:41 - [34m[1mLOGS   [0m - Epoch:  21 [   37923/  200000], loss: {'classification': 70.6193, 'neural_augmentation': 0.3302, 'total_loss': 70.9495}, LR: [0.000948, 0.000948], Avg. batch load time: 0.041, Elapsed time: 1454.58
+2024-06-08 00:51:32 - [34m[1mLOGS   [0m - Epoch:  21 [   38423/  200000], loss: {'classification': 67.815, 'neural_augmentation': 0.3345, 'total_loss': 68.1495}, LR: [0.000946, 0.000946], Avg. batch load time: 0.039, Elapsed time: 1505.65
+2024-06-08 00:52:25 - [34m[1mLOGS   [0m - Epoch:  21 [   38923/  200000], loss: {'classification': 65.2343, 'neural_augmentation': 0.338, 'total_loss': 65.5722}, LR: [0.000944, 0.000944], Avg. batch load time: 0.037, Elapsed time: 1558.49
+2024-06-08 00:53:16 - [34m[1mLOGS   [0m - Epoch:  21 [   39423/  200000], loss: {'classification': 62.8958, 'neural_augmentation': 0.3414, 'total_loss': 63.2371}, LR: [0.000943, 0.000943], Avg. batch load time: 0.036, Elapsed time: 1609.19
+2024-06-08 00:54:06 - [34m[1mLOGS   [0m - Epoch:  21 [   39923/  200000], loss: {'classification': 60.7008, 'neural_augmentation': 0.3454, 'total_loss': 61.0462}, LR: [0.000941, 0.000941], Avg. batch load time: 0.034, Elapsed time: 1659.50
+2024-06-08 00:54:17 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 00:54:17 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 00:54:20 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 39999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_39999.pt
+2024-06-08 00:54:20 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 39999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_39999.pt
+2024-06-08 00:54:21 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 00:54:22 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 39999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_39999.pt
+2024-06-08 00:54:22 - [32m[1mINFO   [0m - Checkpoints saved after 39999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 00:55:03 - [34m[1mLOGS   [0m - Epoch:  21 [   40423/  200000], loss: {'classification': 58.7335, 'neural_augmentation': 0.3494, 'total_loss': 59.0829}, LR: [0.000939, 0.000939], Avg. batch load time: 0.033, Elapsed time: 1716.00
+2024-06-08 00:55:49 - [34m[1mLOGS   [0m - Epoch:  21 [   40923/  200000], loss: {'classification': 56.9222, 'neural_augmentation': 0.354, 'total_loss': 57.2762}, LR: [0.000937, 0.000937], Avg. batch load time: 0.032, Elapsed time: 1762.86
+2024-06-08 00:56:37 - [34m[1mLOGS   [0m - Epoch:  21 [   41423/  200000], loss: {'classification': 55.2671, 'neural_augmentation': 0.3584, 'total_loss': 55.6255}, LR: [0.000935, 0.000935], Avg. batch load time: 0.030, Elapsed time: 1810.38
+2024-06-08 00:57:24 - [34m[1mLOGS   [0m - Epoch:  21 [   41923/  200000], loss: {'classification': 53.7757, 'neural_augmentation': 0.3627, 'total_loss': 54.1384}, LR: [0.000933, 0.000933], Avg. batch load time: 0.029, Elapsed time: 1857.29
+2024-06-08 00:58:11 - [34m[1mLOGS   [0m - Epoch:  21 [   42423/  200000], loss: {'classification': 52.3839, 'neural_augmentation': 0.3671, 'total_loss': 52.751}, LR: [0.000931, 0.000931], Avg. batch load time: 0.028, Elapsed time: 1903.97
+2024-06-08 00:58:57 - [34m[1mLOGS   [0m - Epoch:  21 [   42923/  200000], loss: {'classification': 51.1025, 'neural_augmentation': 0.3708, 'total_loss': 51.4733}, LR: [0.000928, 0.000928], Avg. batch load time: 0.027, Elapsed time: 1950.18
+2024-06-08 00:59:44 - [34m[1mLOGS   [0m - Epoch:  21 [   43423/  200000], loss: {'classification': 49.8832, 'neural_augmentation': 0.3758, 'total_loss': 50.259}, LR: [0.000926, 0.000926], Avg. batch load time: 0.026, Elapsed time: 1997.33
+2024-06-08 01:00:30 - [34m[1mLOGS   [0m - Epoch:  21 [   43923/  200000], loss: {'classification': 48.6724, 'neural_augmentation': 0.3808, 'total_loss': 49.0531}, LR: [0.000924, 0.000924], Avg. batch load time: 0.026, Elapsed time: 2043.68
+2024-06-08 01:01:17 - [34m[1mLOGS   [0m - Epoch:  21 [   44423/  200000], loss: {'classification': 47.5021, 'neural_augmentation': 0.3859, 'total_loss': 47.888}, LR: [0.000922, 0.000922], Avg. batch load time: 0.025, Elapsed time: 2090.54
+2024-06-08 01:02:03 - [34m[1mLOGS   [0m - Epoch:  21 [   44923/  200000], loss: {'classification': 46.4657, 'neural_augmentation': 0.3909, 'total_loss': 46.8566}, LR: [0.00092, 0.00092], Avg. batch load time: 0.024, Elapsed time: 2136.62
+2024-06-08 01:02:14 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:02:14 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:02:16 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 44999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_44999.pt
+2024-06-08 01:02:17 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 44999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_44999.pt
+2024-06-08 01:02:18 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:02:18 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 44999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_44999.pt
+2024-06-08 01:02:18 - [32m[1mINFO   [0m - Checkpoints saved after 44999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:03:01 - [34m[1mLOGS   [0m - Epoch:  21 [   45423/  200000], loss: {'classification': 45.4904, 'neural_augmentation': 0.3959, 'total_loss': 45.8863}, LR: [0.000918, 0.000918], Avg. batch load time: 0.024, Elapsed time: 2194.29
+2024-06-08 01:03:52 - [34m[1mLOGS   [0m - Epoch:  21 [   45923/  200000], loss: {'classification': 44.5086, 'neural_augmentation': 0.4015, 'total_loss': 44.9102}, LR: [0.000915, 0.000915], Avg. batch load time: 0.023, Elapsed time: 2245.50
+2024-06-08 01:04:44 - [34m[1mLOGS   [0m - Epoch:  21 [   46423/  200000], loss: {'classification': 43.6167, 'neural_augmentation': 0.4062, 'total_loss': 44.0229}, LR: [0.000913, 0.000913], Avg. batch load time: 0.022, Elapsed time: 2297.23
+2024-06-08 01:05:35 - [34m[1mLOGS   [0m - Epoch:  21 [   46923/  200000], loss: {'classification': 42.7741, 'neural_augmentation': 0.4101, 'total_loss': 43.1842}, LR: [0.000911, 0.000911], Avg. batch load time: 0.022, Elapsed time: 2348.60
+2024-06-08 01:06:27 - [34m[1mLOGS   [0m - Epoch:  21 [   47423/  200000], loss: {'classification': 41.977, 'neural_augmentation': 0.4145, 'total_loss': 42.3915}, LR: [0.000908, 0.000908], Avg. batch load time: 0.021, Elapsed time: 2400.41
+2024-06-08 01:07:18 - [34m[1mLOGS   [0m - Epoch:  21 [   47923/  200000], loss: {'classification': 41.2413, 'neural_augmentation': 0.4182, 'total_loss': 41.6595}, LR: [0.000906, 0.000906], Avg. batch load time: 0.021, Elapsed time: 2451.85
+2024-06-08 01:08:10 - [34m[1mLOGS   [0m - Epoch:  21 [   48423/  200000], loss: {'classification': 40.5535, 'neural_augmentation': 0.4216, 'total_loss': 40.9751}, LR: [0.000903, 0.000903], Avg. batch load time: 0.020, Elapsed time: 2503.87
+2024-06-08 01:09:02 - [34m[1mLOGS   [0m - Epoch:  21 [   48923/  200000], loss: {'classification': 39.844, 'neural_augmentation': 0.4262, 'total_loss': 40.2702}, LR: [0.000901, 0.000901], Avg. batch load time: 0.020, Elapsed time: 2555.72
+2024-06-08 01:09:53 - [34m[1mLOGS   [0m - Epoch:  21 [   49423/  200000], loss: {'classification': 39.1421, 'neural_augmentation': 0.43, 'total_loss': 39.5721}, LR: [0.000899, 0.000899], Avg. batch load time: 0.019, Elapsed time: 2606.61
+2024-06-08 01:10:43 - [34m[1mLOGS   [0m - Epoch:  21 [   49923/  200000], loss: {'classification': 38.5394, 'neural_augmentation': 0.434, 'total_loss': 38.9734}, LR: [0.000896, 0.000896], Avg. batch load time: 0.019, Elapsed time: 2656.23
+2024-06-08 01:10:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:10:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:10:57 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 49999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_49999.pt
+2024-06-08 01:10:58 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 49999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_49999.pt
+2024-06-08 01:10:59 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:10:59 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 49999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_49999.pt
+2024-06-08 01:10:59 - [32m[1mINFO   [0m - Checkpoints saved after 49999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:11:43 - [34m[1mLOGS   [0m - Epoch:  21 [   50423/  200000], loss: {'classification': 37.9391, 'neural_augmentation': 0.4383, 'total_loss': 38.3774}, LR: [0.000893, 0.000893], Avg. batch load time: 0.018, Elapsed time: 2716.34
+2024-06-08 01:12:35 - [34m[1mLOGS   [0m - Epoch:  21 [   50923/  200000], loss: {'classification': 37.3516, 'neural_augmentation': 0.442, 'total_loss': 37.7936}, LR: [0.000891, 0.000891], Avg. batch load time: 0.018, Elapsed time: 2767.97
+2024-06-08 01:13:25 - [34m[1mLOGS   [0m - Epoch:  21 [   51423/  200000], loss: {'classification': 36.8035, 'neural_augmentation': 0.4456, 'total_loss': 37.2491}, LR: [0.000888, 0.000888], Avg. batch load time: 0.018, Elapsed time: 2818.62
+2024-06-08 01:14:17 - [34m[1mLOGS   [0m - Epoch:  21 [   51923/  200000], loss: {'classification': 36.2812, 'neural_augmentation': 0.4487, 'total_loss': 36.73}, LR: [0.000886, 0.000886], Avg. batch load time: 0.017, Elapsed time: 2870.67
+2024-06-08 01:15:08 - [34m[1mLOGS   [0m - Epoch:  21 [   52423/  200000], loss: {'classification': 35.7724, 'neural_augmentation': 0.4526, 'total_loss': 36.225}, LR: [0.000883, 0.000883], Avg. batch load time: 0.017, Elapsed time: 2921.84
+2024-06-08 01:16:00 - [34m[1mLOGS   [0m - Epoch:  21 [   52923/  200000], loss: {'classification': 35.2725, 'neural_augmentation': 0.4558, 'total_loss': 35.7282}, LR: [0.00088, 0.00088], Avg. batch load time: 0.017, Elapsed time: 2973.08
+2024-06-08 01:16:51 - [34m[1mLOGS   [0m - Epoch:  21 [   53423/  200000], loss: {'classification': 34.8328, 'neural_augmentation': 0.4595, 'total_loss': 35.2924}, LR: [0.000878, 0.000878], Avg. batch load time: 0.016, Elapsed time: 3023.92
+2024-06-08 01:17:41 - [34m[1mLOGS   [0m - Epoch:  21 [   53923/  200000], loss: {'classification': 34.3909, 'neural_augmentation': 0.4631, 'total_loss': 34.854}, LR: [0.000875, 0.000875], Avg. batch load time: 0.016, Elapsed time: 3074.73
+2024-06-08 01:18:32 - [34m[1mLOGS   [0m - Epoch:  21 [   54423/  200000], loss: {'classification': 33.9279, 'neural_augmentation': 0.4669, 'total_loss': 34.3948}, LR: [0.000872, 0.000872], Avg. batch load time: 0.016, Elapsed time: 3125.36
+2024-06-08 01:19:22 - [34m[1mLOGS   [0m - Epoch:  21 [   54923/  200000], loss: {'classification': 33.5196, 'neural_augmentation': 0.4699, 'total_loss': 33.9895}, LR: [0.00087, 0.00087], Avg. batch load time: 0.015, Elapsed time: 3175.24
+2024-06-08 01:19:33 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:19:33 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:19:36 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 54999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_54999.pt
+2024-06-08 01:19:36 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 54999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_54999.pt
+2024-06-08 01:19:37 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:19:37 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 54999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_54999.pt
+2024-06-08 01:19:37 - [32m[1mINFO   [0m - Checkpoints saved after 54999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:20:20 - [34m[1mLOGS   [0m - Epoch:  21 [   55423/  200000], loss: {'classification': 33.12, 'neural_augmentation': 0.473, 'total_loss': 33.5931}, LR: [0.000867, 0.000867], Avg. batch load time: 0.015, Elapsed time: 3233.67
+2024-06-08 01:21:11 - [34m[1mLOGS   [0m - Epoch:  21 [   55923/  200000], loss: {'classification': 32.7303, 'neural_augmentation': 0.4758, 'total_loss': 33.2061}, LR: [0.000864, 0.000864], Avg. batch load time: 0.015, Elapsed time: 3284.32
+2024-06-08 01:22:02 - [34m[1mLOGS   [0m - Epoch:  21 [   56423/  200000], loss: {'classification': 32.3804, 'neural_augmentation': 0.4788, 'total_loss': 32.8592}, LR: [0.000861, 0.000861], Avg. batch load time: 0.015, Elapsed time: 3335.08
+2024-06-08 01:22:52 - [34m[1mLOGS   [0m - Epoch:  21 [   56923/  200000], loss: {'classification': 32.0199, 'neural_augmentation': 0.4812, 'total_loss': 32.5011}, LR: [0.000858, 0.000858], Avg. batch load time: 0.014, Elapsed time: 3385.66
+2024-06-08 01:23:42 - [34m[1mLOGS   [0m - Epoch:  21 [   57423/  200000], loss: {'classification': 31.6713, 'neural_augmentation': 0.4839, 'total_loss': 32.1552}, LR: [0.000855, 0.000855], Avg. batch load time: 0.014, Elapsed time: 3435.81
+2024-06-08 01:24:33 - [34m[1mLOGS   [0m - Epoch:  21 [   57923/  200000], loss: {'classification': 31.345, 'neural_augmentation': 0.4865, 'total_loss': 31.8315}, LR: [0.000853, 0.000853], Avg. batch load time: 0.014, Elapsed time: 3485.92
+2024-06-08 01:25:24 - [34m[1mLOGS   [0m - Epoch:  21 [   58423/  200000], loss: {'classification': 31.0238, 'neural_augmentation': 0.489, 'total_loss': 31.5128}, LR: [0.00085, 0.00085], Avg. batch load time: 0.014, Elapsed time: 3537.55
+2024-06-08 01:26:15 - [34m[1mLOGS   [0m - Epoch:  21 [   58923/  200000], loss: {'classification': 30.7009, 'neural_augmentation': 0.492, 'total_loss': 31.1928}, LR: [0.000847, 0.000847], Avg. batch load time: 0.013, Elapsed time: 3588.32
+2024-06-08 01:27:04 - [34m[1mLOGS   [0m - Epoch:  21 [   59423/  200000], loss: {'classification': 30.3905, 'neural_augmentation': 0.4944, 'total_loss': 30.8849}, LR: [0.000844, 0.000844], Avg. batch load time: 0.013, Elapsed time: 3637.62
+2024-06-08 01:27:53 - [34m[1mLOGS   [0m - Epoch:  21 [   59923/  200000], loss: {'classification': 30.0831, 'neural_augmentation': 0.4971, 'total_loss': 30.5802}, LR: [0.000841, 0.000841], Avg. batch load time: 0.013, Elapsed time: 3686.63
+2024-06-08 01:28:04 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:28:05 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:28:07 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 59999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_59999.pt
+2024-06-08 01:28:08 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 59999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_59999.pt
+2024-06-08 01:28:08 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:28:09 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 59999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_59999.pt
+2024-06-08 01:28:09 - [32m[1mINFO   [0m - Checkpoints saved after 59999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:28:53 - [34m[1mLOGS   [0m - Epoch:  21 [   60423/  200000], loss: {'classification': 29.7898, 'neural_augmentation': 0.499, 'total_loss': 30.2889}, LR: [0.000838, 0.000838], Avg. batch load time: 0.013, Elapsed time: 3746.62
+2024-06-08 01:29:44 - [34m[1mLOGS   [0m - Epoch:  21 [   60923/  200000], loss: {'classification': 29.5185, 'neural_augmentation': 0.501, 'total_loss': 30.0195}, LR: [0.000835, 0.000835], Avg. batch load time: 0.013, Elapsed time: 3797.50
+2024-06-08 01:30:35 - [34m[1mLOGS   [0m - Epoch:  21 [   61423/  200000], loss: {'classification': 29.2472, 'neural_augmentation': 0.5032, 'total_loss': 29.7504}, LR: [0.000832, 0.000832], Avg. batch load time: 0.012, Elapsed time: 3848.21
+2024-06-08 01:31:25 - [34m[1mLOGS   [0m - Epoch:  21 [   61923/  200000], loss: {'classification': 28.9935, 'neural_augmentation': 0.5052, 'total_loss': 29.4987}, LR: [0.000829, 0.000829], Avg. batch load time: 0.012, Elapsed time: 3897.96
+2024-06-08 01:32:16 - [34m[1mLOGS   [0m - Epoch:  21 [   62423/  200000], loss: {'classification': 28.7362, 'neural_augmentation': 0.5072, 'total_loss': 29.2434}, LR: [0.000825, 0.000825], Avg. batch load time: 0.012, Elapsed time: 3949.12
+2024-06-08 01:33:07 - [34m[1mLOGS   [0m - Epoch:  21 [   62923/  200000], loss: {'classification': 28.4738, 'neural_augmentation': 0.5096, 'total_loss': 28.9833}, LR: [0.000822, 0.000822], Avg. batch load time: 0.012, Elapsed time: 3999.98
+2024-06-08 01:33:57 - [34m[1mLOGS   [0m - Epoch:  21 [   63423/  200000], loss: {'classification': 28.234, 'neural_augmentation': 0.5113, 'total_loss': 28.7453}, LR: [0.000819, 0.000819], Avg. batch load time: 0.012, Elapsed time: 4050.44
+2024-06-08 01:34:48 - [34m[1mLOGS   [0m - Epoch:  21 [   63923/  200000], loss: {'classification': 28.0373, 'neural_augmentation': 0.5134, 'total_loss': 28.5507}, LR: [0.000816, 0.000816], Avg. batch load time: 0.012, Elapsed time: 4101.21
+2024-06-08 01:35:37 - [34m[1mLOGS   [0m - Epoch:  21 [   64423/  200000], loss: {'classification': 27.8148, 'neural_augmentation': 0.5153, 'total_loss': 28.33}, LR: [0.000813, 0.000813], Avg. batch load time: 0.011, Elapsed time: 4150.57
+2024-06-08 01:36:28 - [34m[1mLOGS   [0m - Epoch:  21 [   64923/  200000], loss: {'classification': 27.5852, 'neural_augmentation': 0.5173, 'total_loss': 28.1025}, LR: [0.00081, 0.00081], Avg. batch load time: 0.011, Elapsed time: 4201.85
+2024-06-08 01:36:39 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:36:40 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:36:42 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 64999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_64999.pt
+2024-06-08 01:36:43 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 64999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_64999.pt
+2024-06-08 01:36:44 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:36:44 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 64999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_64999.pt
+2024-06-08 01:36:44 - [32m[1mINFO   [0m - Checkpoints saved after 64999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:37:28 - [34m[1mLOGS   [0m - Epoch:  21 [   65423/  200000], loss: {'classification': 27.3713, 'neural_augmentation': 0.5193, 'total_loss': 27.8906}, LR: [0.000806, 0.000806], Avg. batch load time: 0.011, Elapsed time: 4261.06
+2024-06-08 01:38:18 - [34m[1mLOGS   [0m - Epoch:  21 [   65923/  200000], loss: {'classification': 27.169, 'neural_augmentation': 0.5209, 'total_loss': 27.6899}, LR: [0.000803, 0.000803], Avg. batch load time: 0.011, Elapsed time: 4311.62
+2024-06-08 01:39:09 - [34m[1mLOGS   [0m - Epoch:  21 [   66423/  200000], loss: {'classification': 26.9757, 'neural_augmentation': 0.5222, 'total_loss': 27.4979}, LR: [0.0008, 0.0008], Avg. batch load time: 0.011, Elapsed time: 4362.09
+2024-06-08 01:40:00 - [34m[1mLOGS   [0m - Epoch:  21 [   66923/  200000], loss: {'classification': 26.7722, 'neural_augmentation': 0.5237, 'total_loss': 27.2959}, LR: [0.000796, 0.000796], Avg. batch load time: 0.011, Elapsed time: 4413.03
+2024-06-08 01:40:50 - [34m[1mLOGS   [0m - Epoch:  21 [   67423/  200000], loss: {'classification': 26.5709, 'neural_augmentation': 0.5254, 'total_loss': 27.0963}, LR: [0.000793, 0.000793], Avg. batch load time: 0.011, Elapsed time: 4463.83
+2024-06-08 01:41:40 - [34m[1mLOGS   [0m - Epoch:  21 [   67923/  200000], loss: {'classification': 26.3852, 'neural_augmentation': 0.5268, 'total_loss': 26.9121}, LR: [0.00079, 0.00079], Avg. batch load time: 0.010, Elapsed time: 4513.68
+2024-06-08 01:42:31 - [34m[1mLOGS   [0m - Epoch:  21 [   68423/  200000], loss: {'classification': 26.1905, 'neural_augmentation': 0.5283, 'total_loss': 26.7189}, LR: [0.000786, 0.000786], Avg. batch load time: 0.010, Elapsed time: 4564.25
+2024-06-08 01:43:20 - [34m[1mLOGS   [0m - Epoch:  21 [   68923/  200000], loss: {'classification': 26.0115, 'neural_augmentation': 0.5295, 'total_loss': 26.541}, LR: [0.000783, 0.000783], Avg. batch load time: 0.010, Elapsed time: 4613.83
+2024-06-08 01:44:12 - [34m[1mLOGS   [0m - Epoch:  21 [   69423/  200000], loss: {'classification': 25.8376, 'neural_augmentation': 0.5307, 'total_loss': 26.3682}, LR: [0.00078, 0.00078], Avg. batch load time: 0.010, Elapsed time: 4665.35
+2024-06-08 01:45:02 - [34m[1mLOGS   [0m - Epoch:  21 [   69923/  200000], loss: {'classification': 25.6663, 'neural_augmentation': 0.532, 'total_loss': 26.1983}, LR: [0.000776, 0.000776], Avg. batch load time: 0.010, Elapsed time: 4715.72
+2024-06-08 01:45:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:45:14 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:45:16 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 69999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_69999.pt
+2024-06-08 01:45:17 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 69999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_69999.pt
+2024-06-08 01:45:17 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:45:18 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 69999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_69999.pt
+2024-06-08 01:45:18 - [32m[1mINFO   [0m - Checkpoints saved after 69999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:46:01 - [34m[1mLOGS   [0m - Epoch:  21 [   70423/  200000], loss: {'classification': 25.5001, 'neural_augmentation': 0.5335, 'total_loss': 26.0336}, LR: [0.000773, 0.000773], Avg. batch load time: 0.010, Elapsed time: 4774.16
+2024-06-08 01:46:51 - [34m[1mLOGS   [0m - Epoch:  21 [   70923/  200000], loss: {'classification': 25.3382, 'neural_augmentation': 0.5349, 'total_loss': 25.8731}, LR: [0.000769, 0.000769], Avg. batch load time: 0.010, Elapsed time: 4824.41
+2024-06-08 01:47:41 - [34m[1mLOGS   [0m - Epoch:  21 [   71423/  200000], loss: {'classification': 25.1667, 'neural_augmentation': 0.5363, 'total_loss': 25.703}, LR: [0.000766, 0.000766], Avg. batch load time: 0.010, Elapsed time: 4874.33
+2024-06-08 01:48:32 - [34m[1mLOGS   [0m - Epoch:  21 [   71923/  200000], loss: {'classification': 25.0117, 'neural_augmentation': 0.5373, 'total_loss': 25.5489}, LR: [0.000762, 0.000762], Avg. batch load time: 0.010, Elapsed time: 4925.63
+2024-06-08 01:49:22 - [34m[1mLOGS   [0m - Epoch:  21 [   72423/  200000], loss: {'classification': 24.8567, 'neural_augmentation': 0.5381, 'total_loss': 25.3949}, LR: [0.000759, 0.000759], Avg. batch load time: 0.009, Elapsed time: 4975.40
+2024-06-08 01:50:12 - [34m[1mLOGS   [0m - Epoch:  21 [   72923/  200000], loss: {'classification': 24.7009, 'neural_augmentation': 0.5391, 'total_loss': 25.2399}, LR: [0.000755, 0.000755], Avg. batch load time: 0.009, Elapsed time: 5025.66
+2024-06-08 01:51:03 - [34m[1mLOGS   [0m - Epoch:  21 [   73423/  200000], loss: {'classification': 24.5575, 'neural_augmentation': 0.5402, 'total_loss': 25.0977}, LR: [0.000752, 0.000752], Avg. batch load time: 0.009, Elapsed time: 5076.57
+2024-06-08 01:51:53 - [34m[1mLOGS   [0m - Epoch:  21 [   73923/  200000], loss: {'classification': 24.4011, 'neural_augmentation': 0.5411, 'total_loss': 24.9422}, LR: [0.000748, 0.000748], Avg. batch load time: 0.009, Elapsed time: 5126.14
+2024-06-08 01:52:42 - [34m[1mLOGS   [0m - Epoch:  21 [   74423/  200000], loss: {'classification': 24.269, 'neural_augmentation': 0.5421, 'total_loss': 24.8111}, LR: [0.000745, 0.000745], Avg. batch load time: 0.009, Elapsed time: 5175.24
+2024-06-08 01:53:29 - [34m[1mLOGS   [0m - Epoch:  21 [   74923/  200000], loss: {'classification': 24.1243, 'neural_augmentation': 0.5431, 'total_loss': 24.6674}, LR: [0.000741, 0.000741], Avg. batch load time: 0.009, Elapsed time: 5222.36
+2024-06-08 01:53:39 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 01:53:40 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 01:53:42 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 74999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_74999.pt
+2024-06-08 01:53:42 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 74999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_74999.pt
+2024-06-08 01:53:43 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 01:53:44 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 74999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_74999.pt
+2024-06-08 01:53:44 - [32m[1mINFO   [0m - Checkpoints saved after 74999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 01:54:24 - [34m[1mLOGS   [0m - Epoch:  21 [   75423/  200000], loss: {'classification': 23.983, 'neural_augmentation': 0.5441, 'total_loss': 24.5271}, LR: [0.000738, 0.000738], Avg. batch load time: 0.009, Elapsed time: 5276.97
+2024-06-08 01:55:10 - [34m[1mLOGS   [0m - Epoch:  21 [   75923/  200000], loss: {'classification': 23.848, 'neural_augmentation': 0.5451, 'total_loss': 24.393}, LR: [0.000734, 0.000734], Avg. batch load time: 0.009, Elapsed time: 5323.83
+2024-06-08 01:55:58 - [34m[1mLOGS   [0m - Epoch:  21 [   76423/  200000], loss: {'classification': 23.7133, 'neural_augmentation': 0.5461, 'total_loss': 24.2594}, LR: [0.00073, 0.00073], Avg. batch load time: 0.009, Elapsed time: 5371.31
+2024-06-08 01:56:45 - [34m[1mLOGS   [0m - Epoch:  21 [   76923/  200000], loss: {'classification': 23.5812, 'neural_augmentation': 0.5468, 'total_loss': 24.128}, LR: [0.000727, 0.000727], Avg. batch load time: 0.009, Elapsed time: 5418.63
+2024-06-08 01:57:33 - [34m[1mLOGS   [0m - Epoch:  21 [   77423/  200000], loss: {'classification': 23.4562, 'neural_augmentation': 0.5476, 'total_loss': 24.0038}, LR: [0.000723, 0.000723], Avg. batch load time: 0.009, Elapsed time: 5465.96
+2024-06-08 01:58:19 - [34m[1mLOGS   [0m - Epoch:  21 [   77923/  200000], loss: {'classification': 23.3327, 'neural_augmentation': 0.5486, 'total_loss': 23.8814}, LR: [0.000719, 0.000719], Avg. batch load time: 0.008, Elapsed time: 5512.55
+2024-06-08 01:59:07 - [34m[1mLOGS   [0m - Epoch:  21 [   78423/  200000], loss: {'classification': 23.2098, 'neural_augmentation': 0.5497, 'total_loss': 23.7594}, LR: [0.000716, 0.000716], Avg. batch load time: 0.008, Elapsed time: 5560.50
+2024-06-08 01:59:54 - [34m[1mLOGS   [0m - Epoch:  21 [   78923/  200000], loss: {'classification': 23.0871, 'neural_augmentation': 0.5506, 'total_loss': 23.6377}, LR: [0.000712, 0.000712], Avg. batch load time: 0.008, Elapsed time: 5607.25
+2024-06-08 02:00:41 - [34m[1mLOGS   [0m - Epoch:  21 [   79423/  200000], loss: {'classification': 22.9714, 'neural_augmentation': 0.5517, 'total_loss': 23.5232}, LR: [0.000708, 0.000708], Avg. batch load time: 0.008, Elapsed time: 5654.37
+2024-06-08 02:01:29 - [34m[1mLOGS   [0m - Epoch:  21 [   79923/  200000], loss: {'classification': 22.8542, 'neural_augmentation': 0.5527, 'total_loss': 23.4069}, LR: [0.000704, 0.000704], Avg. batch load time: 0.008, Elapsed time: 5702.39
+2024-06-08 02:01:39 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:01:40 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:01:42 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 79999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_79999.pt
+2024-06-08 02:01:43 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 79999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_79999.pt
+2024-06-08 02:01:44 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:01:44 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 79999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_79999.pt
+2024-06-08 02:01:44 - [32m[1mINFO   [0m - Checkpoints saved after 79999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:02:27 - [34m[1mLOGS   [0m - Epoch:  21 [   80423/  200000], loss: {'classification': 22.7418, 'neural_augmentation': 0.5536, 'total_loss': 23.2954}, LR: [0.000701, 0.000701], Avg. batch load time: 0.008, Elapsed time: 5760.83
+2024-06-08 02:03:17 - [34m[1mLOGS   [0m - Epoch:  21 [   80923/  200000], loss: {'classification': 22.6333, 'neural_augmentation': 0.5544, 'total_loss': 23.1877}, LR: [0.000697, 0.000697], Avg. batch load time: 0.008, Elapsed time: 5810.79
+2024-06-08 02:04:08 - [34m[1mLOGS   [0m - Epoch:  21 [   81423/  200000], loss: {'classification': 22.5203, 'neural_augmentation': 0.5555, 'total_loss': 23.0759}, LR: [0.000693, 0.000693], Avg. batch load time: 0.008, Elapsed time: 5861.34
+2024-06-08 02:04:58 - [34m[1mLOGS   [0m - Epoch:  21 [   81923/  200000], loss: {'classification': 22.4191, 'neural_augmentation': 0.5566, 'total_loss': 22.9758}, LR: [0.000689, 0.000689], Avg. batch load time: 0.008, Elapsed time: 5911.17
+2024-06-08 02:05:48 - [34m[1mLOGS   [0m - Epoch:  21 [   82423/  200000], loss: {'classification': 22.3123, 'neural_augmentation': 0.5577, 'total_loss': 22.8699}, LR: [0.000686, 0.000686], Avg. batch load time: 0.008, Elapsed time: 5961.56
+2024-06-08 02:06:38 - [34m[1mLOGS   [0m - Epoch:  21 [   82923/  200000], loss: {'classification': 22.214, 'neural_augmentation': 0.5587, 'total_loss': 22.7727}, LR: [0.000682, 0.000682], Avg. batch load time: 0.008, Elapsed time: 6011.33
+2024-06-08 02:07:28 - [34m[1mLOGS   [0m - Epoch:  21 [   83423/  200000], loss: {'classification': 22.1122, 'neural_augmentation': 0.5598, 'total_loss': 22.672}, LR: [0.000678, 0.000678], Avg. batch load time: 0.008, Elapsed time: 6061.48
+2024-06-08 02:08:18 - [34m[1mLOGS   [0m - Epoch:  21 [   83923/  200000], loss: {'classification': 22.0233, 'neural_augmentation': 0.561, 'total_loss': 22.5843}, LR: [0.000674, 0.000674], Avg. batch load time: 0.008, Elapsed time: 6110.89
+2024-06-08 02:09:08 - [34m[1mLOGS   [0m - Epoch:  21 [   84423/  200000], loss: {'classification': 21.9278, 'neural_augmentation': 0.5621, 'total_loss': 22.4898}, LR: [0.00067, 0.00067], Avg. batch load time: 0.008, Elapsed time: 6161.18
+2024-06-08 02:09:56 - [34m[1mLOGS   [0m - Epoch:  21 [   84923/  200000], loss: {'classification': 21.8331, 'neural_augmentation': 0.5632, 'total_loss': 22.3963}, LR: [0.000666, 0.000666], Avg. batch load time: 0.007, Elapsed time: 6209.87
+2024-06-08 02:10:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:10:08 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:10:10 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 84999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_84999.pt
+2024-06-08 02:10:10 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 84999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_84999.pt
+2024-06-08 02:10:11 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:10:12 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 84999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_84999.pt
+2024-06-08 02:10:12 - [32m[1mINFO   [0m - Checkpoints saved after 84999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:10:55 - [34m[1mLOGS   [0m - Epoch:  21 [   85423/  200000], loss: {'classification': 21.7381, 'neural_augmentation': 0.5643, 'total_loss': 22.3025}, LR: [0.000662, 0.000662], Avg. batch load time: 0.007, Elapsed time: 6268.74
+2024-06-08 02:11:46 - [34m[1mLOGS   [0m - Epoch:  21 [   85923/  200000], loss: {'classification': 21.6455, 'neural_augmentation': 0.5654, 'total_loss': 22.2109}, LR: [0.000659, 0.000659], Avg. batch load time: 0.007, Elapsed time: 6319.17
+2024-06-08 02:12:36 - [34m[1mLOGS   [0m - Epoch:  21 [   86423/  200000], loss: {'classification': 21.5477, 'neural_augmentation': 0.5664, 'total_loss': 22.1141}, LR: [0.000655, 0.000655], Avg. batch load time: 0.007, Elapsed time: 6369.17
+2024-06-08 02:13:25 - [34m[1mLOGS   [0m - Epoch:  21 [   86923/  200000], loss: {'classification': 21.4591, 'neural_augmentation': 0.5675, 'total_loss': 22.0266}, LR: [0.000651, 0.000651], Avg. batch load time: 0.007, Elapsed time: 6418.80
+2024-06-08 02:14:16 - [34m[1mLOGS   [0m - Epoch:  21 [   87423/  200000], loss: {'classification': 21.3698, 'neural_augmentation': 0.5683, 'total_loss': 21.9381}, LR: [0.000647, 0.000647], Avg. batch load time: 0.007, Elapsed time: 6469.33
+2024-06-08 02:15:07 - [34m[1mLOGS   [0m - Epoch:  21 [   87923/  200000], loss: {'classification': 21.2854, 'neural_augmentation': 0.5693, 'total_loss': 21.8546}, LR: [0.000643, 0.000643], Avg. batch load time: 0.007, Elapsed time: 6519.95
+2024-06-08 02:15:58 - [34m[1mLOGS   [0m - Epoch:  21 [   88423/  200000], loss: {'classification': 21.2021, 'neural_augmentation': 0.5702, 'total_loss': 21.7723}, LR: [0.000639, 0.000639], Avg. batch load time: 0.007, Elapsed time: 6570.91
+2024-06-08 02:16:48 - [34m[1mLOGS   [0m - Epoch:  21 [   88923/  200000], loss: {'classification': 21.1189, 'neural_augmentation': 0.5713, 'total_loss': 21.6902}, LR: [0.000635, 0.000635], Avg. batch load time: 0.007, Elapsed time: 6621.01
+2024-06-08 02:17:38 - [34m[1mLOGS   [0m - Epoch:  21 [   89423/  200000], loss: {'classification': 21.0399, 'neural_augmentation': 0.572, 'total_loss': 21.6119}, LR: [0.000631, 0.000631], Avg. batch load time: 0.007, Elapsed time: 6671.00
+2024-06-08 02:18:28 - [34m[1mLOGS   [0m - Epoch:  21 [   89923/  200000], loss: {'classification': 20.9611, 'neural_augmentation': 0.5728, 'total_loss': 21.5338}, LR: [0.000627, 0.000627], Avg. batch load time: 0.007, Elapsed time: 6721.39
+2024-06-08 02:18:38 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:18:39 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:18:41 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 89999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_89999.pt
+2024-06-08 02:18:42 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 89999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_89999.pt
+2024-06-08 02:18:43 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:18:43 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 89999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_89999.pt
+2024-06-08 02:18:43 - [32m[1mINFO   [0m - Checkpoints saved after 89999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:19:25 - [34m[1mLOGS   [0m - Epoch:  21 [   90423/  200000], loss: {'classification': 20.8779, 'neural_augmentation': 0.5739, 'total_loss': 21.4518}, LR: [0.000623, 0.000623], Avg. batch load time: 0.007, Elapsed time: 6778.37
+2024-06-08 02:20:15 - [34m[1mLOGS   [0m - Epoch:  21 [   90923/  200000], loss: {'classification': 20.7976, 'neural_augmentation': 0.575, 'total_loss': 21.3726}, LR: [0.000619, 0.000619], Avg. batch load time: 0.007, Elapsed time: 6828.87
+2024-06-08 02:21:05 - [34m[1mLOGS   [0m - Epoch:  21 [   91423/  200000], loss: {'classification': 20.7176, 'neural_augmentation': 0.5759, 'total_loss': 21.2935}, LR: [0.000615, 0.000615], Avg. batch load time: 0.007, Elapsed time: 6878.34
+2024-06-08 02:21:55 - [34m[1mLOGS   [0m - Epoch:  21 [   91923/  200000], loss: {'classification': 20.6386, 'neural_augmentation': 0.5769, 'total_loss': 21.2155}, LR: [0.000611, 0.000611], Avg. batch load time: 0.007, Elapsed time: 6928.47
+2024-06-08 02:22:45 - [34m[1mLOGS   [0m - Epoch:  21 [   92423/  200000], loss: {'classification': 20.5627, 'neural_augmentation': 0.578, 'total_loss': 21.1407}, LR: [0.000607, 0.000607], Avg. batch load time: 0.007, Elapsed time: 6978.53
+2024-06-08 02:23:36 - [34m[1mLOGS   [0m - Epoch:  21 [   92923/  200000], loss: {'classification': 20.4859, 'neural_augmentation': 0.5788, 'total_loss': 21.0647}, LR: [0.000603, 0.000603], Avg. batch load time: 0.007, Elapsed time: 7029.54
+2024-06-08 02:24:27 - [34m[1mLOGS   [0m - Epoch:  21 [   93423/  200000], loss: {'classification': 20.4079, 'neural_augmentation': 0.5798, 'total_loss': 20.9877}, LR: [0.000599, 0.000599], Avg. batch load time: 0.007, Elapsed time: 7080.84
+2024-06-08 02:25:17 - [34m[1mLOGS   [0m - Epoch:  21 [   93923/  200000], loss: {'classification': 20.3363, 'neural_augmentation': 0.5808, 'total_loss': 20.9171}, LR: [0.000595, 0.000595], Avg. batch load time: 0.007, Elapsed time: 7130.31
+2024-06-08 02:26:06 - [34m[1mLOGS   [0m - Epoch:  21 [   94423/  200000], loss: {'classification': 20.265, 'neural_augmentation': 0.5817, 'total_loss': 20.8467}, LR: [0.000591, 0.000591], Avg. batch load time: 0.006, Elapsed time: 7179.24
+2024-06-08 02:26:57 - [34m[1mLOGS   [0m - Epoch:  21 [   94923/  200000], loss: {'classification': 20.1995, 'neural_augmentation': 0.5825, 'total_loss': 20.782}, LR: [0.000587, 0.000587], Avg. batch load time: 0.006, Elapsed time: 7230.14
+2024-06-08 02:27:08 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:27:08 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:27:11 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 94999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_94999.pt
+2024-06-08 02:27:11 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 94999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_94999.pt
+2024-06-08 02:27:12 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:27:12 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 94999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_94999.pt
+2024-06-08 02:27:12 - [32m[1mINFO   [0m - Checkpoints saved after 94999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:27:55 - [34m[1mLOGS   [0m - Epoch:  21 [   95423/  200000], loss: {'classification': 20.1306, 'neural_augmentation': 0.5834, 'total_loss': 20.714}, LR: [0.000583, 0.000583], Avg. batch load time: 0.006, Elapsed time: 7288.86
+2024-06-08 02:28:47 - [34m[1mLOGS   [0m - Epoch:  21 [   95923/  200000], loss: {'classification': 20.0625, 'neural_augmentation': 0.5843, 'total_loss': 20.6468}, LR: [0.000579, 0.000579], Avg. batch load time: 0.006, Elapsed time: 7340.23
+2024-06-08 02:29:38 - [34m[1mLOGS   [0m - Epoch:  21 [   96423/  200000], loss: {'classification': 19.9959, 'neural_augmentation': 0.5853, 'total_loss': 20.5812}, LR: [0.000575, 0.000575], Avg. batch load time: 0.006, Elapsed time: 7390.96
+2024-06-08 02:30:28 - [34m[1mLOGS   [0m - Epoch:  21 [   96923/  200000], loss: {'classification': 19.929, 'neural_augmentation': 0.586, 'total_loss': 20.5151}, LR: [0.000571, 0.000571], Avg. batch load time: 0.006, Elapsed time: 7441.48
+2024-06-08 02:31:19 - [34m[1mLOGS   [0m - Epoch:  21 [   97423/  200000], loss: {'classification': 19.8643, 'neural_augmentation': 0.5868, 'total_loss': 20.451}, LR: [0.000567, 0.000567], Avg. batch load time: 0.006, Elapsed time: 7492.76
+2024-06-08 02:32:10 - [34m[1mLOGS   [0m - Epoch:  21 [   97923/  200000], loss: {'classification': 19.8004, 'neural_augmentation': 0.5877, 'total_loss': 20.3881}, LR: [0.000563, 0.000563], Avg. batch load time: 0.006, Elapsed time: 7543.36
+2024-06-08 02:33:00 - [34m[1mLOGS   [0m - Epoch:  21 [   98423/  200000], loss: {'classification': 19.7353, 'neural_augmentation': 0.5884, 'total_loss': 20.3237}, LR: [0.000559, 0.000559], Avg. batch load time: 0.006, Elapsed time: 7593.88
+2024-06-08 02:33:51 - [34m[1mLOGS   [0m - Epoch:  21 [   98923/  200000], loss: {'classification': 19.6718, 'neural_augmentation': 0.5893, 'total_loss': 20.2612}, LR: [0.000555, 0.000555], Avg. batch load time: 0.006, Elapsed time: 7643.95
+2024-06-08 02:34:40 - [34m[1mLOGS   [0m - Epoch:  21 [   99423/  200000], loss: {'classification': 19.6074, 'neural_augmentation': 0.5902, 'total_loss': 20.1976}, LR: [0.000551, 0.000551], Avg. batch load time: 0.006, Elapsed time: 7693.83
+2024-06-08 02:35:31 - [34m[1mLOGS   [0m - Epoch:  21 [   99923/  200000], loss: {'classification': 19.5475, 'neural_augmentation': 0.5909, 'total_loss': 20.1385}, LR: [0.000547, 0.000547], Avg. batch load time: 0.006, Elapsed time: 7744.40
+2024-06-08 02:35:42 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:35:42 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:35:45 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 99999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_99999.pt
+2024-06-08 02:35:45 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 99999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_99999.pt
+2024-06-08 02:35:46 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:35:46 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 99999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_99999.pt
+2024-06-08 02:35:46 - [32m[1mINFO   [0m - Checkpoints saved after 99999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:36:29 - [34m[1mLOGS   [0m - Epoch:  21 [  100423/  200000], loss: {'classification': 19.4875, 'neural_augmentation': 0.5919, 'total_loss': 20.0795}, LR: [0.000542, 0.000542], Avg. batch load time: 0.006, Elapsed time: 7802.23
+2024-06-08 02:37:19 - [34m[1mLOGS   [0m - Epoch:  21 [  100923/  200000], loss: {'classification': 19.4292, 'neural_augmentation': 0.5928, 'total_loss': 20.022}, LR: [0.000538, 0.000538], Avg. batch load time: 0.006, Elapsed time: 7852.27
+2024-06-08 02:38:10 - [34m[1mLOGS   [0m - Epoch:  21 [  101423/  200000], loss: {'classification': 19.3687, 'neural_augmentation': 0.5936, 'total_loss': 19.9623}, LR: [0.000534, 0.000534], Avg. batch load time: 0.006, Elapsed time: 7903.14
+2024-06-08 02:39:00 - [34m[1mLOGS   [0m - Epoch:  21 [  101923/  200000], loss: {'classification': 19.3121, 'neural_augmentation': 0.5945, 'total_loss': 19.9066}, LR: [0.00053, 0.00053], Avg. batch load time: 0.006, Elapsed time: 7953.13
+2024-06-08 02:39:49 - [34m[1mLOGS   [0m - Epoch:  21 [  102423/  200000], loss: {'classification': 19.2522, 'neural_augmentation': 0.5953, 'total_loss': 19.8476}, LR: [0.000526, 0.000526], Avg. batch load time: 0.006, Elapsed time: 8002.59
+2024-06-08 02:40:39 - [34m[1mLOGS   [0m - Epoch:  21 [  102923/  200000], loss: {'classification': 19.1969, 'neural_augmentation': 0.5961, 'total_loss': 19.793}, LR: [0.000522, 0.000522], Avg. batch load time: 0.006, Elapsed time: 8052.25
+2024-06-08 02:41:29 - [34m[1mLOGS   [0m - Epoch:  21 [  103423/  200000], loss: {'classification': 19.1401, 'neural_augmentation': 0.5971, 'total_loss': 19.7372}, LR: [0.000518, 0.000518], Avg. batch load time: 0.006, Elapsed time: 8102.65
+2024-06-08 02:42:19 - [34m[1mLOGS   [0m - Epoch:  21 [  103923/  200000], loss: {'classification': 19.0849, 'neural_augmentation': 0.598, 'total_loss': 19.6829}, LR: [0.000514, 0.000514], Avg. batch load time: 0.006, Elapsed time: 8152.44
+2024-06-08 02:43:09 - [34m[1mLOGS   [0m - Epoch:  21 [  104423/  200000], loss: {'classification': 19.0287, 'neural_augmentation': 0.599, 'total_loss': 19.6277}, LR: [0.00051, 0.00051], Avg. batch load time: 0.006, Elapsed time: 8202.83
+2024-06-08 02:44:00 - [34m[1mLOGS   [0m - Epoch:  21 [  104923/  200000], loss: {'classification': 18.9744, 'neural_augmentation': 0.5998, 'total_loss': 19.5742}, LR: [0.000506, 0.000506], Avg. batch load time: 0.006, Elapsed time: 8253.79
+2024-06-08 02:44:11 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:44:12 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:44:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 104999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_104999.pt
+2024-06-08 02:44:15 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 104999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_104999.pt
+2024-06-08 02:44:15 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:44:16 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 104999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_104999.pt
+2024-06-08 02:44:16 - [32m[1mINFO   [0m - Checkpoints saved after 104999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:44:59 - [34m[1mLOGS   [0m - Epoch:  21 [  105423/  200000], loss: {'classification': 18.9212, 'neural_augmentation': 0.6005, 'total_loss': 19.5217}, LR: [0.000502, 0.000502], Avg. batch load time: 0.006, Elapsed time: 8312.15
+2024-06-08 02:45:49 - [34m[1mLOGS   [0m - Epoch:  21 [  105923/  200000], loss: {'classification': 18.8688, 'neural_augmentation': 0.6013, 'total_loss': 19.4702}, LR: [0.000497, 0.000497], Avg. batch load time: 0.006, Elapsed time: 8362.33
+2024-06-08 02:46:39 - [34m[1mLOGS   [0m - Epoch:  21 [  106423/  200000], loss: {'classification': 18.8187, 'neural_augmentation': 0.6022, 'total_loss': 19.4209}, LR: [0.000493, 0.000493], Avg. batch load time: 0.006, Elapsed time: 8412.54
+2024-06-08 02:47:29 - [34m[1mLOGS   [0m - Epoch:  21 [  106923/  200000], loss: {'classification': 18.7694, 'neural_augmentation': 0.6029, 'total_loss': 19.3723}, LR: [0.000489, 0.000489], Avg. batch load time: 0.005, Elapsed time: 8462.36
+2024-06-08 02:48:18 - [34m[1mLOGS   [0m - Epoch:  21 [  107423/  200000], loss: {'classification': 18.7188, 'neural_augmentation': 0.6038, 'total_loss': 19.3226}, LR: [0.000485, 0.000485], Avg. batch load time: 0.005, Elapsed time: 8511.82
+2024-06-08 02:49:09 - [34m[1mLOGS   [0m - Epoch:  21 [  107923/  200000], loss: {'classification': 18.6694, 'neural_augmentation': 0.6045, 'total_loss': 19.2739}, LR: [0.000481, 0.000481], Avg. batch load time: 0.005, Elapsed time: 8562.27
+2024-06-08 02:49:59 - [34m[1mLOGS   [0m - Epoch:  21 [  108423/  200000], loss: {'classification': 18.619, 'neural_augmentation': 0.6055, 'total_loss': 19.2245}, LR: [0.000477, 0.000477], Avg. batch load time: 0.005, Elapsed time: 8611.89
+2024-06-08 02:50:47 - [34m[1mLOGS   [0m - Epoch:  21 [  108923/  200000], loss: {'classification': 18.5716, 'neural_augmentation': 0.6062, 'total_loss': 19.1778}, LR: [0.000473, 0.000473], Avg. batch load time: 0.005, Elapsed time: 8660.29
+2024-06-08 02:51:35 - [34m[1mLOGS   [0m - Epoch:  21 [  109423/  200000], loss: {'classification': 18.5233, 'neural_augmentation': 0.6072, 'total_loss': 19.1305}, LR: [0.000469, 0.000469], Avg. batch load time: 0.005, Elapsed time: 8708.34
+2024-06-08 02:52:21 - [34m[1mLOGS   [0m - Epoch:  21 [  109923/  200000], loss: {'classification': 18.478, 'neural_augmentation': 0.608, 'total_loss': 19.086}, LR: [0.000465, 0.000465], Avg. batch load time: 0.005, Elapsed time: 8754.51
+2024-06-08 02:52:31 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 02:52:32 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 02:52:34 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 109999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_109999.pt
+2024-06-08 02:52:34 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 109999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_109999.pt
+2024-06-08 02:52:35 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 02:52:36 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 109999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_109999.pt
+2024-06-08 02:52:36 - [32m[1mINFO   [0m - Checkpoints saved after 109999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 02:53:15 - [34m[1mLOGS   [0m - Epoch:  21 [  110423/  200000], loss: {'classification': 18.4299, 'neural_augmentation': 0.609, 'total_loss': 19.0389}, LR: [0.000461, 0.000461], Avg. batch load time: 0.005, Elapsed time: 8808.80
+2024-06-08 02:54:02 - [34m[1mLOGS   [0m - Epoch:  21 [  110923/  200000], loss: {'classification': 18.3827, 'neural_augmentation': 0.6098, 'total_loss': 18.9925}, LR: [0.000457, 0.000457], Avg. batch load time: 0.005, Elapsed time: 8855.44
+2024-06-08 02:54:49 - [34m[1mLOGS   [0m - Epoch:  21 [  111423/  200000], loss: {'classification': 18.3349, 'neural_augmentation': 0.6105, 'total_loss': 18.9454}, LR: [0.000453, 0.000453], Avg. batch load time: 0.005, Elapsed time: 8902.21
+2024-06-08 02:55:36 - [34m[1mLOGS   [0m - Epoch:  21 [  111923/  200000], loss: {'classification': 18.2902, 'neural_augmentation': 0.6113, 'total_loss': 18.9015}, LR: [0.000448, 0.000448], Avg. batch load time: 0.005, Elapsed time: 8948.98
+2024-06-08 02:56:22 - [34m[1mLOGS   [0m - Epoch:  21 [  112423/  200000], loss: {'classification': 18.2453, 'neural_augmentation': 0.6121, 'total_loss': 18.8574}, LR: [0.000444, 0.000444], Avg. batch load time: 0.005, Elapsed time: 8995.09
+2024-06-08 02:57:09 - [34m[1mLOGS   [0m - Epoch:  21 [  112923/  200000], loss: {'classification': 18.2004, 'neural_augmentation': 0.6131, 'total_loss': 18.8135}, LR: [0.00044, 0.00044], Avg. batch load time: 0.005, Elapsed time: 9041.91
+2024-06-08 02:57:55 - [34m[1mLOGS   [0m - Epoch:  21 [  113423/  200000], loss: {'classification': 18.1586, 'neural_augmentation': 0.6139, 'total_loss': 18.7725}, LR: [0.000436, 0.000436], Avg. batch load time: 0.005, Elapsed time: 9088.76
+2024-06-08 02:58:42 - [34m[1mLOGS   [0m - Epoch:  21 [  113923/  200000], loss: {'classification': 18.1132, 'neural_augmentation': 0.6148, 'total_loss': 18.7281}, LR: [0.000432, 0.000432], Avg. batch load time: 0.005, Elapsed time: 9135.58
+2024-06-08 02:59:29 - [34m[1mLOGS   [0m - Epoch:  21 [  114423/  200000], loss: {'classification': 18.0671, 'neural_augmentation': 0.6158, 'total_loss': 18.6829}, LR: [0.000428, 0.000428], Avg. batch load time: 0.005, Elapsed time: 9182.32
+2024-06-08 03:00:17 - [34m[1mLOGS   [0m - Epoch:  21 [  114923/  200000], loss: {'classification': 18.0264, 'neural_augmentation': 0.6168, 'total_loss': 18.6432}, LR: [0.000424, 0.000424], Avg. batch load time: 0.005, Elapsed time: 9229.95
+2024-06-08 03:00:27 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:00:28 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:00:30 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 114999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_114999.pt
+2024-06-08 03:00:31 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 114999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_114999.pt
+2024-06-08 03:00:31 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:00:32 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 114999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_114999.pt
+2024-06-08 03:00:32 - [32m[1mINFO   [0m - Checkpoints saved after 114999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:01:14 - [34m[1mLOGS   [0m - Epoch:  21 [  115423/  200000], loss: {'classification': 17.9846, 'neural_augmentation': 0.6178, 'total_loss': 18.6024}, LR: [0.00042, 0.00042], Avg. batch load time: 0.005, Elapsed time: 9287.24
+2024-06-08 03:02:04 - [34m[1mLOGS   [0m - Epoch:  21 [  115923/  200000], loss: {'classification': 17.944, 'neural_augmentation': 0.6188, 'total_loss': 18.5628}, LR: [0.000416, 0.000416], Avg. batch load time: 0.005, Elapsed time: 9336.89
+2024-06-08 03:02:53 - [34m[1mLOGS   [0m - Epoch:  21 [  116423/  200000], loss: {'classification': 17.9048, 'neural_augmentation': 0.6197, 'total_loss': 18.5244}, LR: [0.000412, 0.000412], Avg. batch load time: 0.005, Elapsed time: 9386.68
+2024-06-08 03:03:43 - [34m[1mLOGS   [0m - Epoch:  21 [  116923/  200000], loss: {'classification': 17.8645, 'neural_augmentation': 0.6207, 'total_loss': 18.4852}, LR: [0.000408, 0.000408], Avg. batch load time: 0.005, Elapsed time: 9436.44
+2024-06-08 03:04:34 - [34m[1mLOGS   [0m - Epoch:  21 [  117423/  200000], loss: {'classification': 17.8243, 'neural_augmentation': 0.6217, 'total_loss': 18.4459}, LR: [0.000404, 0.000404], Avg. batch load time: 0.005, Elapsed time: 9487.05
+2024-06-08 03:05:23 - [34m[1mLOGS   [0m - Epoch:  21 [  117923/  200000], loss: {'classification': 17.7829, 'neural_augmentation': 0.6226, 'total_loss': 18.4055}, LR: [0.0004, 0.0004], Avg. batch load time: 0.005, Elapsed time: 9536.67
+2024-06-08 03:06:13 - [34m[1mLOGS   [0m - Epoch:  21 [  118423/  200000], loss: {'classification': 17.7429, 'neural_augmentation': 0.6236, 'total_loss': 18.3665}, LR: [0.000396, 0.000396], Avg. batch load time: 0.005, Elapsed time: 9586.67
+2024-06-08 03:07:03 - [34m[1mLOGS   [0m - Epoch:  21 [  118923/  200000], loss: {'classification': 17.7037, 'neural_augmentation': 0.6244, 'total_loss': 18.3281}, LR: [0.000392, 0.000392], Avg. batch load time: 0.005, Elapsed time: 9636.37
+2024-06-08 03:07:53 - [34m[1mLOGS   [0m - Epoch:  21 [  119423/  200000], loss: {'classification': 17.6655, 'neural_augmentation': 0.6255, 'total_loss': 18.2909}, LR: [0.000388, 0.000388], Avg. batch load time: 0.005, Elapsed time: 9686.53
+2024-06-08 03:08:44 - [34m[1mLOGS   [0m - Epoch:  21 [  119923/  200000], loss: {'classification': 17.627, 'neural_augmentation': 0.6263, 'total_loss': 18.2533}, LR: [0.000384, 0.000384], Avg. batch load time: 0.005, Elapsed time: 9736.93
+2024-06-08 03:08:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:08:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:08:57 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 119999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_119999.pt
+2024-06-08 03:08:58 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 119999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_119999.pt
+2024-06-08 03:08:58 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:08:59 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 119999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_119999.pt
+2024-06-08 03:08:59 - [32m[1mINFO   [0m - Checkpoints saved after 119999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:09:42 - [34m[1mLOGS   [0m - Epoch:  21 [  120423/  200000], loss: {'classification': 17.5884, 'neural_augmentation': 0.6272, 'total_loss': 18.2156}, LR: [0.00038, 0.00038], Avg. batch load time: 0.005, Elapsed time: 9794.93
+2024-06-08 03:10:32 - [34m[1mLOGS   [0m - Epoch:  21 [  120923/  200000], loss: {'classification': 17.5486, 'neural_augmentation': 0.6282, 'total_loss': 18.1769}, LR: [0.000376, 0.000376], Avg. batch load time: 0.005, Elapsed time: 9845.16
+2024-06-08 03:11:22 - [34m[1mLOGS   [0m - Epoch:  21 [  121423/  200000], loss: {'classification': 17.5133, 'neural_augmentation': 0.6291, 'total_loss': 18.1424}, LR: [0.000372, 0.000372], Avg. batch load time: 0.005, Elapsed time: 9895.09
+2024-06-08 03:12:12 - [34m[1mLOGS   [0m - Epoch:  21 [  121923/  200000], loss: {'classification': 17.4764, 'neural_augmentation': 0.6301, 'total_loss': 18.1066}, LR: [0.000368, 0.000368], Avg. batch load time: 0.005, Elapsed time: 9945.32
+2024-06-08 03:13:02 - [34m[1mLOGS   [0m - Epoch:  21 [  122423/  200000], loss: {'classification': 17.4401, 'neural_augmentation': 0.631, 'total_loss': 18.0711}, LR: [0.000364, 0.000364], Avg. batch load time: 0.005, Elapsed time: 9995.48
+2024-06-08 03:13:53 - [34m[1mLOGS   [0m - Epoch:  21 [  122923/  200000], loss: {'classification': 17.4024, 'neural_augmentation': 0.6319, 'total_loss': 18.0343}, LR: [0.00036, 0.00036], Avg. batch load time: 0.005, Elapsed time: 10046.02
+2024-06-08 03:14:42 - [34m[1mLOGS   [0m - Epoch:  21 [  123423/  200000], loss: {'classification': 17.3659, 'neural_augmentation': 0.633, 'total_loss': 17.9989}, LR: [0.000357, 0.000357], Avg. batch load time: 0.005, Elapsed time: 10095.46
+2024-06-08 03:15:32 - [34m[1mLOGS   [0m - Epoch:  21 [  123923/  200000], loss: {'classification': 17.3286, 'neural_augmentation': 0.634, 'total_loss': 17.9626}, LR: [0.000353, 0.000353], Avg. batch load time: 0.005, Elapsed time: 10144.95
+2024-06-08 03:16:20 - [34m[1mLOGS   [0m - Epoch:  21 [  124423/  200000], loss: {'classification': 17.2926, 'neural_augmentation': 0.6348, 'total_loss': 17.9273}, LR: [0.000349, 0.000349], Avg. batch load time: 0.005, Elapsed time: 10193.30
+2024-06-08 03:17:10 - [34m[1mLOGS   [0m - Epoch:  21 [  124923/  200000], loss: {'classification': 17.2589, 'neural_augmentation': 0.6357, 'total_loss': 17.8946}, LR: [0.000345, 0.000345], Avg. batch load time: 0.005, Elapsed time: 10243.78
+2024-06-08 03:17:21 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:17:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:17:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 124999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_124999.pt
+2024-06-08 03:17:24 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 124999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_124999.pt
+2024-06-08 03:17:25 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:17:26 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 124999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_124999.pt
+2024-06-08 03:17:26 - [32m[1mINFO   [0m - Checkpoints saved after 124999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:18:09 - [34m[1mLOGS   [0m - Epoch:  21 [  125423/  200000], loss: {'classification': 17.2233, 'neural_augmentation': 0.6365, 'total_loss': 17.8598}, LR: [0.000341, 0.000341], Avg. batch load time: 0.005, Elapsed time: 10302.12
+2024-06-08 03:18:59 - [34m[1mLOGS   [0m - Epoch:  21 [  125923/  200000], loss: {'classification': 17.1879, 'neural_augmentation': 0.6373, 'total_loss': 17.8252}, LR: [0.000337, 0.000337], Avg. batch load time: 0.004, Elapsed time: 10352.57
+2024-06-08 03:19:49 - [34m[1mLOGS   [0m - Epoch:  21 [  126423/  200000], loss: {'classification': 17.1541, 'neural_augmentation': 0.6381, 'total_loss': 17.7923}, LR: [0.000333, 0.000333], Avg. batch load time: 0.004, Elapsed time: 10402.75
+2024-06-08 03:20:39 - [34m[1mLOGS   [0m - Epoch:  21 [  126923/  200000], loss: {'classification': 17.1224, 'neural_augmentation': 0.639, 'total_loss': 17.7614}, LR: [0.000329, 0.000329], Avg. batch load time: 0.004, Elapsed time: 10452.82
+2024-06-08 03:21:30 - [34m[1mLOGS   [0m - Epoch:  21 [  127423/  200000], loss: {'classification': 17.0911, 'neural_augmentation': 0.6398, 'total_loss': 17.7309}, LR: [0.000326, 0.000326], Avg. batch load time: 0.004, Elapsed time: 10503.43
+2024-06-08 03:22:21 - [34m[1mLOGS   [0m - Epoch:  21 [  127923/  200000], loss: {'classification': 17.0581, 'neural_augmentation': 0.6407, 'total_loss': 17.6988}, LR: [0.000322, 0.000322], Avg. batch load time: 0.004, Elapsed time: 10554.08
+2024-06-08 03:23:12 - [34m[1mLOGS   [0m - Epoch:  21 [  128423/  200000], loss: {'classification': 17.0256, 'neural_augmentation': 0.6414, 'total_loss': 17.667}, LR: [0.000318, 0.000318], Avg. batch load time: 0.004, Elapsed time: 10604.92
+2024-06-08 03:24:02 - [34m[1mLOGS   [0m - Epoch:  21 [  128923/  200000], loss: {'classification': 16.9946, 'neural_augmentation': 0.6422, 'total_loss': 17.6368}, LR: [0.000314, 0.000314], Avg. batch load time: 0.004, Elapsed time: 10655.74
+2024-06-08 03:24:51 - [34m[1mLOGS   [0m - Epoch:  21 [  129423/  200000], loss: {'classification': 16.9622, 'neural_augmentation': 0.6432, 'total_loss': 17.6054}, LR: [0.000311, 0.000311], Avg. batch load time: 0.004, Elapsed time: 10704.66
+2024-06-08 03:25:42 - [34m[1mLOGS   [0m - Epoch:  21 [  129923/  200000], loss: {'classification': 16.9308, 'neural_augmentation': 0.6439, 'total_loss': 17.5747}, LR: [0.000307, 0.000307], Avg. batch load time: 0.004, Elapsed time: 10755.74
+2024-06-08 03:25:53 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:25:54 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:25:56 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 129999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_129999.pt
+2024-06-08 03:25:57 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 129999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_129999.pt
+2024-06-08 03:25:57 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:25:58 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 129999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_129999.pt
+2024-06-08 03:25:58 - [32m[1mINFO   [0m - Checkpoints saved after 129999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:26:41 - [34m[1mLOGS   [0m - Epoch:  21 [  130423/  200000], loss: {'classification': 16.8999, 'neural_augmentation': 0.6447, 'total_loss': 17.5446}, LR: [0.000303, 0.000303], Avg. batch load time: 0.004, Elapsed time: 10814.35
+2024-06-08 03:27:31 - [34m[1mLOGS   [0m - Epoch:  21 [  130923/  200000], loss: {'classification': 16.8668, 'neural_augmentation': 0.6456, 'total_loss': 17.5123}, LR: [0.000299, 0.000299], Avg. batch load time: 0.004, Elapsed time: 10864.24
+2024-06-08 03:28:21 - [34m[1mLOGS   [0m - Epoch:  21 [  131423/  200000], loss: {'classification': 16.8353, 'neural_augmentation': 0.6464, 'total_loss': 17.4817}, LR: [0.000296, 0.000296], Avg. batch load time: 0.004, Elapsed time: 10914.79
+2024-06-08 03:29:12 - [34m[1mLOGS   [0m - Epoch:  21 [  131923/  200000], loss: {'classification': 16.8053, 'neural_augmentation': 0.6473, 'total_loss': 17.4527}, LR: [0.000292, 0.000292], Avg. batch load time: 0.004, Elapsed time: 10965.19
+2024-06-08 03:30:02 - [34m[1mLOGS   [0m - Epoch:  21 [  132423/  200000], loss: {'classification': 16.7773, 'neural_augmentation': 0.6481, 'total_loss': 17.4254}, LR: [0.000288, 0.000288], Avg. batch load time: 0.004, Elapsed time: 11015.85
+2024-06-08 03:30:52 - [34m[1mLOGS   [0m - Epoch:  21 [  132923/  200000], loss: {'classification': 16.7467, 'neural_augmentation': 0.6489, 'total_loss': 17.3956}, LR: [0.000284, 0.000284], Avg. batch load time: 0.004, Elapsed time: 11065.58
+2024-06-08 03:31:42 - [34m[1mLOGS   [0m - Epoch:  21 [  133423/  200000], loss: {'classification': 16.7155, 'neural_augmentation': 0.6497, 'total_loss': 17.3652}, LR: [0.000281, 0.000281], Avg. batch load time: 0.004, Elapsed time: 11115.66
+2024-06-08 03:32:31 - [34m[1mLOGS   [0m - Epoch:  21 [  133923/  200000], loss: {'classification': 16.6841, 'neural_augmentation': 0.6505, 'total_loss': 17.3346}, LR: [0.000277, 0.000277], Avg. batch load time: 0.004, Elapsed time: 11164.66
+2024-06-08 03:33:22 - [34m[1mLOGS   [0m - Epoch:  21 [  134423/  200000], loss: {'classification': 16.6555, 'neural_augmentation': 0.6513, 'total_loss': 17.3068}, LR: [0.000274, 0.000274], Avg. batch load time: 0.004, Elapsed time: 11215.13
+2024-06-08 03:34:12 - [34m[1mLOGS   [0m - Epoch:  21 [  134923/  200000], loss: {'classification': 16.6243, 'neural_augmentation': 0.6522, 'total_loss': 17.2765}, LR: [0.00027, 0.00027], Avg. batch load time: 0.004, Elapsed time: 11264.97
+2024-06-08 03:34:22 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:34:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:34:25 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 134999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_134999.pt
+2024-06-08 03:34:25 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 134999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_134999.pt
+2024-06-08 03:34:26 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:34:27 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 134999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_134999.pt
+2024-06-08 03:34:27 - [32m[1mINFO   [0m - Checkpoints saved after 134999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:35:09 - [34m[1mLOGS   [0m - Epoch:  21 [  135423/  200000], loss: {'classification': 16.5953, 'neural_augmentation': 0.653, 'total_loss': 17.2483}, LR: [0.000266, 0.000266], Avg. batch load time: 0.004, Elapsed time: 11322.73
+2024-06-08 03:36:00 - [34m[1mLOGS   [0m - Epoch:  21 [  135923/  200000], loss: {'classification': 16.5649, 'neural_augmentation': 0.6538, 'total_loss': 17.2187}, LR: [0.000263, 0.000263], Avg. batch load time: 0.004, Elapsed time: 11373.04
+2024-06-08 03:36:50 - [34m[1mLOGS   [0m - Epoch:  21 [  136423/  200000], loss: {'classification': 16.5375, 'neural_augmentation': 0.6546, 'total_loss': 17.1921}, LR: [0.000259, 0.000259], Avg. batch load time: 0.004, Elapsed time: 11423.35
+2024-06-08 03:37:40 - [34m[1mLOGS   [0m - Epoch:  21 [  136923/  200000], loss: {'classification': 16.511, 'neural_augmentation': 0.6554, 'total_loss': 17.1663}, LR: [0.000256, 0.000256], Avg. batch load time: 0.004, Elapsed time: 11473.56
+2024-06-08 03:38:30 - [34m[1mLOGS   [0m - Epoch:  21 [  137423/  200000], loss: {'classification': 16.4823, 'neural_augmentation': 0.6563, 'total_loss': 17.1386}, LR: [0.000252, 0.000252], Avg. batch load time: 0.004, Elapsed time: 11523.74
+2024-06-08 03:39:20 - [34m[1mLOGS   [0m - Epoch:  21 [  137923/  200000], loss: {'classification': 16.4546, 'neural_augmentation': 0.6571, 'total_loss': 17.1117}, LR: [0.000249, 0.000249], Avg. batch load time: 0.004, Elapsed time: 11573.40
+2024-06-08 03:40:10 - [34m[1mLOGS   [0m - Epoch:  21 [  138423/  200000], loss: {'classification': 16.4261, 'neural_augmentation': 0.6578, 'total_loss': 17.0839}, LR: [0.000245, 0.000245], Avg. batch load time: 0.004, Elapsed time: 11623.39
+2024-06-08 03:40:59 - [34m[1mLOGS   [0m - Epoch:  21 [  138923/  200000], loss: {'classification': 16.3982, 'neural_augmentation': 0.6586, 'total_loss': 17.0568}, LR: [0.000242, 0.000242], Avg. batch load time: 0.004, Elapsed time: 11672.15
+2024-06-08 03:41:49 - [34m[1mLOGS   [0m - Epoch:  21 [  139423/  200000], loss: {'classification': 16.3702, 'neural_augmentation': 0.6594, 'total_loss': 17.0295}, LR: [0.000238, 0.000238], Avg. batch load time: 0.004, Elapsed time: 11722.27
+2024-06-08 03:42:40 - [34m[1mLOGS   [0m - Epoch:  21 [  139923/  200000], loss: {'classification': 16.3429, 'neural_augmentation': 0.6601, 'total_loss': 17.0031}, LR: [0.000235, 0.000235], Avg. batch load time: 0.004, Elapsed time: 11773.24
+2024-06-08 03:42:50 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:42:51 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:42:53 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 139999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_139999.pt
+2024-06-08 03:42:54 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 139999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_139999.pt
+2024-06-08 03:42:55 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:42:55 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 139999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_139999.pt
+2024-06-08 03:42:55 - [32m[1mINFO   [0m - Checkpoints saved after 139999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:43:38 - [34m[1mLOGS   [0m - Epoch:  21 [  140423/  200000], loss: {'classification': 16.3145, 'neural_augmentation': 0.661, 'total_loss': 16.9755}, LR: [0.000231, 0.000231], Avg. batch load time: 0.004, Elapsed time: 11831.68
+2024-06-08 03:44:28 - [34m[1mLOGS   [0m - Epoch:  21 [  140923/  200000], loss: {'classification': 16.2868, 'neural_augmentation': 0.6618, 'total_loss': 16.9486}, LR: [0.000228, 0.000228], Avg. batch load time: 0.004, Elapsed time: 11881.78
+2024-06-08 03:45:19 - [34m[1mLOGS   [0m - Epoch:  21 [  141423/  200000], loss: {'classification': 16.2611, 'neural_augmentation': 0.6626, 'total_loss': 16.9237}, LR: [0.000225, 0.000225], Avg. batch load time: 0.004, Elapsed time: 11932.24
+2024-06-08 03:46:10 - [34m[1mLOGS   [0m - Epoch:  21 [  141923/  200000], loss: {'classification': 16.2329, 'neural_augmentation': 0.6633, 'total_loss': 16.8962}, LR: [0.000221, 0.000221], Avg. batch load time: 0.004, Elapsed time: 11982.98
+2024-06-08 03:47:00 - [34m[1mLOGS   [0m - Epoch:  21 [  142423/  200000], loss: {'classification': 16.2059, 'neural_augmentation': 0.6641, 'total_loss': 16.87}, LR: [0.000218, 0.000218], Avg. batch load time: 0.004, Elapsed time: 12033.65
+2024-06-08 03:47:50 - [34m[1mLOGS   [0m - Epoch:  21 [  142923/  200000], loss: {'classification': 16.5311, 'neural_augmentation': 0.6649, 'total_loss': 17.196}, LR: [0.000215, 0.000215], Avg. batch load time: 0.004, Elapsed time: 12083.76
+2024-06-08 03:48:39 - [34m[1mLOGS   [0m - Epoch:  21 [  143423/  200000], loss: {'classification': 16.5106, 'neural_augmentation': 0.6657, 'total_loss': 17.1763}, LR: [0.000211, 0.000211], Avg. batch load time: 0.004, Elapsed time: 12132.71
+2024-06-08 03:49:29 - [34m[1mLOGS   [0m - Epoch:  21 [  143923/  200000], loss: {'classification': 16.4847, 'neural_augmentation': 0.6665, 'total_loss': 17.1512}, LR: [0.000208, 0.000208], Avg. batch load time: 0.004, Elapsed time: 12182.13
+2024-06-08 03:50:17 - [34m[1mLOGS   [0m - Epoch:  21 [  144423/  200000], loss: {'classification': 16.459, 'neural_augmentation': 0.6673, 'total_loss': 17.1263}, LR: [0.000205, 0.000205], Avg. batch load time: 0.004, Elapsed time: 12230.06
+2024-06-08 03:51:03 - [34m[1mLOGS   [0m - Epoch:  21 [  144923/  200000], loss: {'classification': 16.433, 'neural_augmentation': 0.6683, 'total_loss': 17.1013}, LR: [0.000201, 0.000201], Avg. batch load time: 0.004, Elapsed time: 12276.60
+2024-06-08 03:51:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:51:14 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:51:16 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 144999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_144999.pt
+2024-06-08 03:51:17 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 144999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_144999.pt
+2024-06-08 03:51:17 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:51:18 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 144999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_144999.pt
+2024-06-08 03:51:18 - [32m[1mINFO   [0m - Checkpoints saved after 144999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 03:51:57 - [34m[1mLOGS   [0m - Epoch:  21 [  145423/  200000], loss: {'classification': 16.4069, 'neural_augmentation': 0.6688, 'total_loss': 17.0758}, LR: [0.000198, 0.000198], Avg. batch load time: 0.004, Elapsed time: 12330.49
+2024-06-08 03:52:43 - [34m[1mLOGS   [0m - Epoch:  21 [  145923/  200000], loss: {'classification': 16.3816, 'neural_augmentation': 0.6696, 'total_loss': 17.0512}, LR: [0.000195, 0.000195], Avg. batch load time: 0.004, Elapsed time: 12376.66
+2024-06-08 03:53:30 - [34m[1mLOGS   [0m - Epoch:  21 [  146423/  200000], loss: {'classification': 16.3564, 'neural_augmentation': 0.6705, 'total_loss': 17.0269}, LR: [0.000192, 0.000192], Avg. batch load time: 0.004, Elapsed time: 12423.25
+2024-06-08 03:54:16 - [34m[1mLOGS   [0m - Epoch:  21 [  146923/  200000], loss: {'classification': 16.3303, 'neural_augmentation': 0.6712, 'total_loss': 17.0015}, LR: [0.000189, 0.000189], Avg. batch load time: 0.004, Elapsed time: 12469.44
+2024-06-08 03:55:03 - [34m[1mLOGS   [0m - Epoch:  21 [  147423/  200000], loss: {'classification': 16.3059, 'neural_augmentation': 0.672, 'total_loss': 16.9778}, LR: [0.000186, 0.000186], Avg. batch load time: 0.004, Elapsed time: 12515.89
+2024-06-08 03:55:49 - [34m[1mLOGS   [0m - Epoch:  21 [  147923/  200000], loss: {'classification': 16.2802, 'neural_augmentation': 0.6728, 'total_loss': 16.953}, LR: [0.000182, 0.000182], Avg. batch load time: 0.004, Elapsed time: 12562.49
+2024-06-08 03:56:36 - [34m[1mLOGS   [0m - Epoch:  21 [  148423/  200000], loss: {'classification': 16.254, 'neural_augmentation': 0.6735, 'total_loss': 16.9276}, LR: [0.000179, 0.000179], Avg. batch load time: 0.004, Elapsed time: 12609.20
+2024-06-08 03:57:22 - [34m[1mLOGS   [0m - Epoch:  21 [  148923/  200000], loss: {'classification': 16.2272, 'neural_augmentation': 0.6743, 'total_loss': 16.9016}, LR: [0.000176, 0.000176], Avg. batch load time: 0.004, Elapsed time: 12655.84
+2024-06-08 03:58:13 - [34m[1mLOGS   [0m - Epoch:  21 [  149423/  200000], loss: {'classification': 16.2026, 'neural_augmentation': 0.675, 'total_loss': 16.8777}, LR: [0.000173, 0.000173], Avg. batch load time: 0.004, Elapsed time: 12706.18
+2024-06-08 03:59:05 - [34m[1mLOGS   [0m - Epoch:  21 [  149923/  200000], loss: {'classification': 16.1776, 'neural_augmentation': 0.6758, 'total_loss': 16.8534}, LR: [0.00017, 0.00017], Avg. batch load time: 0.004, Elapsed time: 12758.23
+2024-06-08 03:59:16 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 03:59:16 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 03:59:19 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 149999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_149999.pt
+2024-06-08 03:59:19 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 149999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_149999.pt
+2024-06-08 03:59:20 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 03:59:21 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 149999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_149999.pt
+2024-06-08 03:59:21 - [32m[1mINFO   [0m - Checkpoints saved after 149999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:00:04 - [34m[1mLOGS   [0m - Epoch:  21 [  150423/  200000], loss: {'classification': 16.1515, 'neural_augmentation': 0.6767, 'total_loss': 16.8282}, LR: [0.000167, 0.000167], Avg. batch load time: 0.004, Elapsed time: 12817.09
+2024-06-08 04:00:55 - [34m[1mLOGS   [0m - Epoch:  21 [  150923/  200000], loss: {'classification': 16.1292, 'neural_augmentation': 0.6773, 'total_loss': 16.8065}, LR: [0.000164, 0.000164], Avg. batch load time: 0.004, Elapsed time: 12867.91
+2024-06-08 04:01:46 - [34m[1mLOGS   [0m - Epoch:  21 [  151423/  200000], loss: {'classification': 16.1048, 'neural_augmentation': 0.678, 'total_loss': 16.7828}, LR: [0.000161, 0.000161], Avg. batch load time: 0.004, Elapsed time: 12919.30
+2024-06-08 04:02:37 - [34m[1mLOGS   [0m - Epoch:  21 [  151923/  200000], loss: {'classification': 16.0797, 'neural_augmentation': 0.6788, 'total_loss': 16.7585}, LR: [0.000158, 0.000158], Avg. batch load time: 0.004, Elapsed time: 12970.58
+2024-06-08 04:03:28 - [34m[1mLOGS   [0m - Epoch:  21 [  152423/  200000], loss: {'classification': 16.0563, 'neural_augmentation': 0.6796, 'total_loss': 16.7359}, LR: [0.000155, 0.000155], Avg. batch load time: 0.004, Elapsed time: 13021.13
+2024-06-08 04:04:18 - [34m[1mLOGS   [0m - Epoch:  21 [  152923/  200000], loss: {'classification': 16.0327, 'neural_augmentation': 0.6803, 'total_loss': 16.7131}, LR: [0.000153, 0.000153], Avg. batch load time: 0.004, Elapsed time: 13071.36
+2024-06-08 04:05:08 - [34m[1mLOGS   [0m - Epoch:  21 [  153423/  200000], loss: {'classification': 16.0093, 'neural_augmentation': 0.681, 'total_loss': 16.6903}, LR: [0.00015, 0.00015], Avg. batch load time: 0.004, Elapsed time: 13121.80
+2024-06-08 04:05:58 - [34m[1mLOGS   [0m - Epoch:  21 [  153923/  200000], loss: {'classification': 15.9853, 'neural_augmentation': 0.6817, 'total_loss': 16.6669}, LR: [0.000147, 0.000147], Avg. batch load time: 0.004, Elapsed time: 13171.53
+2024-06-08 04:06:49 - [34m[1mLOGS   [0m - Epoch:  21 [  154423/  200000], loss: {'classification': 15.9617, 'neural_augmentation': 0.6824, 'total_loss': 16.6442}, LR: [0.000144, 0.000144], Avg. batch load time: 0.004, Elapsed time: 13222.01
+2024-06-08 04:07:38 - [34m[1mLOGS   [0m - Epoch:  21 [  154923/  200000], loss: {'classification': 15.9378, 'neural_augmentation': 0.6832, 'total_loss': 16.6211}, LR: [0.000141, 0.000141], Avg. batch load time: 0.004, Elapsed time: 13271.66
+2024-06-08 04:07:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:07:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:07:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 154999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_154999.pt
+2024-06-08 04:07:53 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 154999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_154999.pt
+2024-06-08 04:07:54 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:07:54 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 154999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_154999.pt
+2024-06-08 04:07:54 - [32m[1mINFO   [0m - Checkpoints saved after 154999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:08:37 - [34m[1mLOGS   [0m - Epoch:  21 [  155423/  200000], loss: {'classification': 15.9139, 'neural_augmentation': 0.6839, 'total_loss': 16.5978}, LR: [0.000138, 0.000138], Avg. batch load time: 0.004, Elapsed time: 13329.98
+2024-06-08 04:09:27 - [34m[1mLOGS   [0m - Epoch:  21 [  155923/  200000], loss: {'classification': 15.892, 'neural_augmentation': 0.6845, 'total_loss': 16.5765}, LR: [0.000136, 0.000136], Avg. batch load time: 0.004, Elapsed time: 13380.57
+2024-06-08 04:10:17 - [34m[1mLOGS   [0m - Epoch:  21 [  156423/  200000], loss: {'classification': 15.8693, 'neural_augmentation': 0.6853, 'total_loss': 16.5546}, LR: [0.000133, 0.000133], Avg. batch load time: 0.004, Elapsed time: 13430.39
+2024-06-08 04:11:07 - [34m[1mLOGS   [0m - Epoch:  21 [  156923/  200000], loss: {'classification': 15.8465, 'neural_augmentation': 0.686, 'total_loss': 16.5325}, LR: [0.00013, 0.00013], Avg. batch load time: 0.003, Elapsed time: 13480.84
+2024-06-08 04:11:59 - [34m[1mLOGS   [0m - Epoch:  21 [  157423/  200000], loss: {'classification': 15.8239, 'neural_augmentation': 0.6868, 'total_loss': 16.5107}, LR: [0.000128, 0.000128], Avg. batch load time: 0.003, Elapsed time: 13532.07
+2024-06-08 04:12:49 - [34m[1mLOGS   [0m - Epoch:  21 [  157923/  200000], loss: {'classification': 15.8007, 'neural_augmentation': 0.6875, 'total_loss': 16.4882}, LR: [0.000125, 0.000125], Avg. batch load time: 0.003, Elapsed time: 13582.75
+2024-06-08 04:13:39 - [34m[1mLOGS   [0m - Epoch:  21 [  158423/  200000], loss: {'classification': 15.7776, 'neural_augmentation': 0.6883, 'total_loss': 16.4659}, LR: [0.000122, 0.000122], Avg. batch load time: 0.003, Elapsed time: 13632.55
+2024-06-08 04:14:30 - [34m[1mLOGS   [0m - Epoch:  21 [  158923/  200000], loss: {'classification': 15.7546, 'neural_augmentation': 0.6891, 'total_loss': 16.4437}, LR: [0.00012, 0.00012], Avg. batch load time: 0.003, Elapsed time: 13683.52
+2024-06-08 04:15:20 - [34m[1mLOGS   [0m - Epoch:  21 [  159423/  200000], loss: {'classification': 15.7335, 'neural_augmentation': 0.6896, 'total_loss': 16.4231}, LR: [0.000117, 0.000117], Avg. batch load time: 0.003, Elapsed time: 13733.71
+2024-06-08 04:16:11 - [34m[1mLOGS   [0m - Epoch:  21 [  159923/  200000], loss: {'classification': 15.711, 'neural_augmentation': 0.6904, 'total_loss': 16.4014}, LR: [0.000115, 0.000115], Avg. batch load time: 0.003, Elapsed time: 13784.14
+2024-06-08 04:16:21 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:16:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:16:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 159999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_159999.pt
+2024-06-08 04:16:25 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 159999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_159999.pt
+2024-06-08 04:16:26 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:16:26 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 159999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_159999.pt
+2024-06-08 04:16:26 - [32m[1mINFO   [0m - Checkpoints saved after 159999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:17:08 - [34m[1mLOGS   [0m - Epoch:  21 [  160423/  200000], loss: {'classification': 15.6884, 'neural_augmentation': 0.6911, 'total_loss': 16.3796}, LR: [0.000112, 0.000112], Avg. batch load time: 0.003, Elapsed time: 13841.71
+2024-06-08 04:17:59 - [34m[1mLOGS   [0m - Epoch:  21 [  160923/  200000], loss: {'classification': 15.6671, 'neural_augmentation': 0.6918, 'total_loss': 16.359}, LR: [0.00011, 0.00011], Avg. batch load time: 0.003, Elapsed time: 13892.21
+2024-06-08 04:18:49 - [34m[1mLOGS   [0m - Epoch:  21 [  161423/  200000], loss: {'classification': 15.6461, 'neural_augmentation': 0.6926, 'total_loss': 16.3387}, LR: [0.000107, 0.000107], Avg. batch load time: 0.003, Elapsed time: 13942.56
+2024-06-08 04:19:40 - [34m[1mLOGS   [0m - Epoch:  21 [  161923/  200000], loss: {'classification': 15.6262, 'neural_augmentation': 0.6932, 'total_loss': 16.3194}, LR: [0.000105, 0.000105], Avg. batch load time: 0.003, Elapsed time: 13993.31
+2024-06-08 04:20:30 - [34m[1mLOGS   [0m - Epoch:  21 [  162423/  200000], loss: {'classification': 15.6051, 'neural_augmentation': 0.6939, 'total_loss': 16.299}, LR: [0.000103, 0.000103], Avg. batch load time: 0.003, Elapsed time: 14043.69
+2024-06-08 04:21:21 - [34m[1mLOGS   [0m - Epoch:  21 [  162923/  200000], loss: {'classification': 15.5835, 'neural_augmentation': 0.6946, 'total_loss': 16.2781}, LR: [0.0001, 0.0001], Avg. batch load time: 0.003, Elapsed time: 14093.95
+2024-06-08 04:22:10 - [34m[1mLOGS   [0m - Epoch:  21 [  163423/  200000], loss: {'classification': 15.5616, 'neural_augmentation': 0.6953, 'total_loss': 16.2568}, LR: [9.8e-05, 9.8e-05], Avg. batch load time: 0.003, Elapsed time: 14143.25
+2024-06-08 04:23:01 - [34m[1mLOGS   [0m - Epoch:  21 [  163923/  200000], loss: {'classification': 15.5403, 'neural_augmentation': 0.6961, 'total_loss': 16.2364}, LR: [9.6e-05, 9.6e-05], Avg. batch load time: 0.003, Elapsed time: 14194.00
+2024-06-08 04:23:52 - [34m[1mLOGS   [0m - Epoch:  21 [  164423/  200000], loss: {'classification': 15.5208, 'neural_augmentation': 0.6967, 'total_loss': 16.2175}, LR: [9.3e-05, 9.3e-05], Avg. batch load time: 0.003, Elapsed time: 14244.92
+2024-06-08 04:24:42 - [34m[1mLOGS   [0m - Epoch:  21 [  164923/  200000], loss: {'classification': 15.4992, 'neural_augmentation': 0.6975, 'total_loss': 16.1967}, LR: [9.1e-05, 9.1e-05], Avg. batch load time: 0.003, Elapsed time: 14295.26
+2024-06-08 04:24:53 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:24:53 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:24:56 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 164999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_164999.pt
+2024-06-08 04:24:56 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 164999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_164999.pt
+2024-06-08 04:24:57 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:24:58 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 164999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_164999.pt
+2024-06-08 04:24:58 - [32m[1mINFO   [0m - Checkpoints saved after 164999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:25:40 - [34m[1mLOGS   [0m - Epoch:  21 [  165423/  200000], loss: {'classification': 15.4795, 'neural_augmentation': 0.6981, 'total_loss': 16.1776}, LR: [8.9e-05, 8.9e-05], Avg. batch load time: 0.003, Elapsed time: 14353.50
+2024-06-08 04:26:30 - [34m[1mLOGS   [0m - Epoch:  21 [  165923/  200000], loss: {'classification': 15.4586, 'neural_augmentation': 0.6988, 'total_loss': 16.1574}, LR: [8.7e-05, 8.7e-05], Avg. batch load time: 0.003, Elapsed time: 14403.54
+2024-06-08 04:27:22 - [34m[1mLOGS   [0m - Epoch:  21 [  166423/  200000], loss: {'classification': 15.4387, 'neural_augmentation': 0.6996, 'total_loss': 16.1383}, LR: [8.4e-05, 8.4e-05], Avg. batch load time: 0.003, Elapsed time: 14455.09
+2024-06-08 04:28:12 - [34m[1mLOGS   [0m - Epoch:  21 [  166923/  200000], loss: {'classification': 15.4187, 'neural_augmentation': 0.7004, 'total_loss': 16.1191}, LR: [8.2e-05, 8.2e-05], Avg. batch load time: 0.003, Elapsed time: 14505.17
+2024-06-08 04:29:02 - [34m[1mLOGS   [0m - Epoch:  21 [  167423/  200000], loss: {'classification': 15.3973, 'neural_augmentation': 0.7011, 'total_loss': 16.0984}, LR: [8e-05, 8e-05], Avg. batch load time: 0.003, Elapsed time: 14555.14
+2024-06-08 04:29:52 - [34m[1mLOGS   [0m - Epoch:  21 [  167923/  200000], loss: {'classification': 15.3767, 'neural_augmentation': 0.702, 'total_loss': 16.0786}, LR: [7.8e-05, 7.8e-05], Avg. batch load time: 0.003, Elapsed time: 14604.94
+2024-06-08 04:30:41 - [34m[1mLOGS   [0m - Epoch:  21 [  168423/  200000], loss: {'classification': 15.3556, 'neural_augmentation': 0.7026, 'total_loss': 16.0582}, LR: [7.6e-05, 7.6e-05], Avg. batch load time: 0.003, Elapsed time: 14654.83
+2024-06-08 04:31:31 - [34m[1mLOGS   [0m - Epoch:  21 [  168923/  200000], loss: {'classification': 15.3352, 'neural_augmentation': 0.7032, 'total_loss': 16.0384}, LR: [7.4e-05, 7.4e-05], Avg. batch load time: 0.003, Elapsed time: 14704.36
+2024-06-08 04:32:20 - [34m[1mLOGS   [0m - Epoch:  21 [  169423/  200000], loss: {'classification': 15.3154, 'neural_augmentation': 0.7039, 'total_loss': 16.0193}, LR: [7.2e-05, 7.2e-05], Avg. batch load time: 0.003, Elapsed time: 14753.75
+2024-06-08 04:33:10 - [34m[1mLOGS   [0m - Epoch:  21 [  169923/  200000], loss: {'classification': 15.2959, 'neural_augmentation': 0.7046, 'total_loss': 16.0005}, LR: [7e-05, 7e-05], Avg. batch load time: 0.003, Elapsed time: 14803.59
+2024-06-08 04:33:21 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:33:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:33:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 169999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_169999.pt
+2024-06-08 04:33:25 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 169999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_169999.pt
+2024-06-08 04:33:26 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:33:26 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 169999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_169999.pt
+2024-06-08 04:33:26 - [32m[1mINFO   [0m - Checkpoints saved after 169999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:34:09 - [34m[1mLOGS   [0m - Epoch:  21 [  170423/  200000], loss: {'classification': 15.2773, 'neural_augmentation': 0.7051, 'total_loss': 15.9825}, LR: [6.8e-05, 6.8e-05], Avg. batch load time: 0.003, Elapsed time: 14862.64
+2024-06-08 04:34:59 - [34m[1mLOGS   [0m - Epoch:  21 [  170923/  200000], loss: {'classification': 15.2577, 'neural_augmentation': 0.7059, 'total_loss': 15.9635}, LR: [6.6e-05, 6.6e-05], Avg. batch load time: 0.003, Elapsed time: 14912.47
+2024-06-08 04:35:49 - [34m[1mLOGS   [0m - Epoch:  21 [  171423/  200000], loss: {'classification': 15.2394, 'neural_augmentation': 0.7065, 'total_loss': 15.9459}, LR: [6.4e-05, 6.4e-05], Avg. batch load time: 0.003, Elapsed time: 14962.19
+2024-06-08 04:36:38 - [34m[1mLOGS   [0m - Epoch:  21 [  171923/  200000], loss: {'classification': 15.2203, 'neural_augmentation': 0.7071, 'total_loss': 15.9274}, LR: [6.2e-05, 6.2e-05], Avg. batch load time: 0.003, Elapsed time: 15011.72
+2024-06-08 04:37:28 - [34m[1mLOGS   [0m - Epoch:  21 [  172423/  200000], loss: {'classification': 15.2015, 'neural_augmentation': 0.7078, 'total_loss': 15.9093}, LR: [6.1e-05, 6.1e-05], Avg. batch load time: 0.003, Elapsed time: 15060.91
+2024-06-08 04:38:16 - [34m[1mLOGS   [0m - Epoch:  21 [  172923/  200000], loss: {'classification': 15.1835, 'neural_augmentation': 0.7084, 'total_loss': 15.8918}, LR: [5.9e-05, 5.9e-05], Avg. batch load time: 0.003, Elapsed time: 15109.55
+2024-06-08 04:39:07 - [34m[1mLOGS   [0m - Epoch:  21 [  173423/  200000], loss: {'classification': 15.1644, 'neural_augmentation': 0.7091, 'total_loss': 15.8735}, LR: [5.7e-05, 5.7e-05], Avg. batch load time: 0.003, Elapsed time: 15160.17
+2024-06-08 04:39:57 - [34m[1mLOGS   [0m - Epoch:  21 [  173923/  200000], loss: {'classification': 15.1461, 'neural_augmentation': 0.7098, 'total_loss': 15.8559}, LR: [5.5e-05, 5.5e-05], Avg. batch load time: 0.003, Elapsed time: 15210.05
+2024-06-08 04:40:47 - [34m[1mLOGS   [0m - Epoch:  21 [  174423/  200000], loss: {'classification': 15.1279, 'neural_augmentation': 0.7104, 'total_loss': 15.8383}, LR: [5.4e-05, 5.4e-05], Avg. batch load time: 0.003, Elapsed time: 15260.30
+2024-06-08 04:41:37 - [34m[1mLOGS   [0m - Epoch:  21 [  174923/  200000], loss: {'classification': 15.1094, 'neural_augmentation': 0.7112, 'total_loss': 15.8206}, LR: [5.2e-05, 5.2e-05], Avg. batch load time: 0.003, Elapsed time: 15310.44
+2024-06-08 04:41:48 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:41:48 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:41:51 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 174999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_174999.pt
+2024-06-08 04:41:51 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 174999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_174999.pt
+2024-06-08 04:41:52 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:41:53 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 174999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_174999.pt
+2024-06-08 04:41:53 - [32m[1mINFO   [0m - Checkpoints saved after 174999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:42:35 - [34m[1mLOGS   [0m - Epoch:  21 [  175423/  200000], loss: {'classification': 15.0904, 'neural_augmentation': 0.7118, 'total_loss': 15.8022}, LR: [5e-05, 5e-05], Avg. batch load time: 0.003, Elapsed time: 15368.69
+2024-06-08 04:43:25 - [34m[1mLOGS   [0m - Epoch:  21 [  175923/  200000], loss: {'classification': 15.0715, 'neural_augmentation': 0.7124, 'total_loss': 15.7839}, LR: [4.9e-05, 4.9e-05], Avg. batch load time: 0.003, Elapsed time: 15418.70
+2024-06-08 04:44:15 - [34m[1mLOGS   [0m - Epoch:  21 [  176423/  200000], loss: {'classification': 15.0537, 'neural_augmentation': 0.7131, 'total_loss': 15.7668}, LR: [4.7e-05, 4.7e-05], Avg. batch load time: 0.003, Elapsed time: 15467.96
+2024-06-08 04:45:05 - [34m[1mLOGS   [0m - Epoch:  21 [  176923/  200000], loss: {'classification': 15.0358, 'neural_augmentation': 0.7137, 'total_loss': 15.7495}, LR: [4.6e-05, 4.6e-05], Avg. batch load time: 0.003, Elapsed time: 15517.97
+2024-06-08 04:45:54 - [34m[1mLOGS   [0m - Epoch:  21 [  177423/  200000], loss: {'classification': 15.0176, 'neural_augmentation': 0.7143, 'total_loss': 15.7319}, LR: [4.4e-05, 4.4e-05], Avg. batch load time: 0.003, Elapsed time: 15567.46
+2024-06-08 04:46:42 - [34m[1mLOGS   [0m - Epoch:  21 [  177923/  200000], loss: {'classification': 14.9991, 'neural_augmentation': 0.7149, 'total_loss': 15.714}, LR: [4.3e-05, 4.3e-05], Avg. batch load time: 0.003, Elapsed time: 15615.84
+2024-06-08 04:47:31 - [34m[1mLOGS   [0m - Epoch:  21 [  178423/  200000], loss: {'classification': 14.9813, 'neural_augmentation': 0.7156, 'total_loss': 15.6969}, LR: [4.1e-05, 4.1e-05], Avg. batch load time: 0.003, Elapsed time: 15664.74
+2024-06-08 04:48:18 - [34m[1mLOGS   [0m - Epoch:  21 [  178923/  200000], loss: {'classification': 14.9643, 'neural_augmentation': 0.7163, 'total_loss': 15.6806}, LR: [4e-05, 4e-05], Avg. batch load time: 0.003, Elapsed time: 15711.28
+2024-06-08 04:49:05 - [34m[1mLOGS   [0m - Epoch:  21 [  179423/  200000], loss: {'classification': 14.9471, 'neural_augmentation': 0.7169, 'total_loss': 15.664}, LR: [3.8e-05, 3.8e-05], Avg. batch load time: 0.003, Elapsed time: 15758.19
+2024-06-08 04:49:52 - [34m[1mLOGS   [0m - Epoch:  21 [  179923/  200000], loss: {'classification': 14.9296, 'neural_augmentation': 0.7176, 'total_loss': 15.6472}, LR: [3.7e-05, 3.7e-05], Avg. batch load time: 0.003, Elapsed time: 15804.89
+2024-06-08 04:50:02 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:50:02 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:50:05 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 179999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_179999.pt
+2024-06-08 04:50:05 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 179999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_179999.pt
+2024-06-08 04:50:06 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:50:06 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 179999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_179999.pt
+2024-06-08 04:50:06 - [32m[1mINFO   [0m - Checkpoints saved after 179999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:50:46 - [34m[1mLOGS   [0m - Epoch:  21 [  180423/  200000], loss: {'classification': 14.911, 'neural_augmentation': 0.7183, 'total_loss': 15.6293}, LR: [3.6e-05, 3.6e-05], Avg. batch load time: 0.003, Elapsed time: 15859.61
+2024-06-08 04:51:33 - [34m[1mLOGS   [0m - Epoch:  21 [  180923/  200000], loss: {'classification': 14.8945, 'neural_augmentation': 0.7189, 'total_loss': 15.6134}, LR: [3.4e-05, 3.4e-05], Avg. batch load time: 0.003, Elapsed time: 15906.79
+2024-06-08 04:52:20 - [34m[1mLOGS   [0m - Epoch:  21 [  181423/  200000], loss: {'classification': 14.8767, 'neural_augmentation': 0.7195, 'total_loss': 15.5962}, LR: [3.3e-05, 3.3e-05], Avg. batch load time: 0.003, Elapsed time: 15953.65
+2024-06-08 04:53:07 - [34m[1mLOGS   [0m - Epoch:  21 [  181923/  200000], loss: {'classification': 14.8598, 'neural_augmentation': 0.7202, 'total_loss': 15.58}, LR: [3.2e-05, 3.2e-05], Avg. batch load time: 0.003, Elapsed time: 16000.73
+2024-06-08 04:53:54 - [34m[1mLOGS   [0m - Epoch:  21 [  182423/  200000], loss: {'classification': 14.8426, 'neural_augmentation': 0.7208, 'total_loss': 15.5634}, LR: [3.1e-05, 3.1e-05], Avg. batch load time: 0.003, Elapsed time: 16047.23
+2024-06-08 04:54:40 - [34m[1mLOGS   [0m - Epoch:  21 [  182923/  200000], loss: {'classification': 14.8259, 'neural_augmentation': 0.7214, 'total_loss': 15.5473}, LR: [3e-05, 3e-05], Avg. batch load time: 0.003, Elapsed time: 16093.81
+2024-06-08 04:55:27 - [34m[1mLOGS   [0m - Epoch:  21 [  183423/  200000], loss: {'classification': 14.8084, 'neural_augmentation': 0.722, 'total_loss': 15.5304}, LR: [2.8e-05, 2.8e-05], Avg. batch load time: 0.003, Elapsed time: 16140.86
+2024-06-08 04:56:15 - [34m[1mLOGS   [0m - Epoch:  21 [  183923/  200000], loss: {'classification': 14.7923, 'neural_augmentation': 0.7227, 'total_loss': 15.515}, LR: [2.7e-05, 2.7e-05], Avg. batch load time: 0.003, Elapsed time: 16188.09
+2024-06-08 04:57:01 - [34m[1mLOGS   [0m - Epoch:  21 [  184423/  200000], loss: {'classification': 14.7753, 'neural_augmentation': 0.7234, 'total_loss': 15.4986}, LR: [2.6e-05, 2.6e-05], Avg. batch load time: 0.003, Elapsed time: 16234.75
+2024-06-08 04:57:47 - [34m[1mLOGS   [0m - Epoch:  21 [  184923/  200000], loss: {'classification': 14.7579, 'neural_augmentation': 0.724, 'total_loss': 15.482}, LR: [2.5e-05, 2.5e-05], Avg. batch load time: 0.003, Elapsed time: 16280.84
+2024-06-08 04:57:58 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 04:57:58 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 04:58:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 184999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_184999.pt
+2024-06-08 04:58:01 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 184999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_184999.pt
+2024-06-08 04:58:02 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 04:58:02 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 184999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_184999.pt
+2024-06-08 04:58:02 - [32m[1mINFO   [0m - Checkpoints saved after 184999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 04:58:43 - [34m[1mLOGS   [0m - Epoch:  21 [  185423/  200000], loss: {'classification': 14.7407, 'neural_augmentation': 0.7246, 'total_loss': 15.4653}, LR: [2.4e-05, 2.4e-05], Avg. batch load time: 0.003, Elapsed time: 16335.89
+2024-06-08 04:59:29 - [34m[1mLOGS   [0m - Epoch:  21 [  185923/  200000], loss: {'classification': 14.7247, 'neural_augmentation': 0.7252, 'total_loss': 15.4499}, LR: [2.3e-05, 2.3e-05], Avg. batch load time: 0.003, Elapsed time: 16382.65
+2024-06-08 05:00:16 - [34m[1mLOGS   [0m - Epoch:  21 [  186423/  200000], loss: {'classification': 14.709, 'neural_augmentation': 0.7258, 'total_loss': 15.4348}, LR: [2.2e-05, 2.2e-05], Avg. batch load time: 0.003, Elapsed time: 16429.72
+2024-06-08 05:01:04 - [34m[1mLOGS   [0m - Epoch:  21 [  186923/  200000], loss: {'classification': 14.6924, 'neural_augmentation': 0.7265, 'total_loss': 15.4189}, LR: [2.2e-05, 2.2e-05], Avg. batch load time: 0.003, Elapsed time: 16477.02
+2024-06-08 05:01:51 - [34m[1mLOGS   [0m - Epoch:  21 [  187423/  200000], loss: {'classification': 14.6756, 'neural_augmentation': 0.7272, 'total_loss': 15.4028}, LR: [2.1e-05, 2.1e-05], Avg. batch load time: 0.003, Elapsed time: 16524.05
+2024-06-08 05:02:37 - [34m[1mLOGS   [0m - Epoch:  21 [  187923/  200000], loss: {'classification': 14.6606, 'neural_augmentation': 0.7277, 'total_loss': 15.3882}, LR: [2e-05, 2e-05], Avg. batch load time: 0.003, Elapsed time: 16570.61
+2024-06-08 05:03:24 - [34m[1mLOGS   [0m - Epoch:  21 [  188423/  200000], loss: {'classification': 14.6439, 'neural_augmentation': 0.7282, 'total_loss': 15.3722}, LR: [1.9e-05, 1.9e-05], Avg. batch load time: 0.003, Elapsed time: 16617.70
+2024-06-08 05:04:11 - [34m[1mLOGS   [0m - Epoch:  21 [  188923/  200000], loss: {'classification': 14.6286, 'neural_augmentation': 0.7288, 'total_loss': 15.3574}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 0.003, Elapsed time: 16663.98
+2024-06-08 05:04:57 - [34m[1mLOGS   [0m - Epoch:  21 [  189423/  200000], loss: {'classification': 14.6131, 'neural_augmentation': 0.7294, 'total_loss': 15.3425}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 0.003, Elapsed time: 16710.35
+2024-06-08 05:05:43 - [34m[1mLOGS   [0m - Epoch:  21 [  189923/  200000], loss: {'classification': 14.5964, 'neural_augmentation': 0.7301, 'total_loss': 15.3264}, LR: [1.7e-05, 1.7e-05], Avg. batch load time: 0.003, Elapsed time: 16756.80
+2024-06-08 05:05:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 05:05:54 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 05:05:56 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 189999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_189999.pt
+2024-06-08 05:05:57 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 189999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_189999.pt
+2024-06-08 05:05:58 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 05:05:58 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 189999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_189999.pt
+2024-06-08 05:05:58 - [32m[1mINFO   [0m - Checkpoints saved after 189999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 05:06:38 - [34m[1mLOGS   [0m - Epoch:  21 [  190423/  200000], loss: {'classification': 14.58, 'neural_augmentation': 0.7306, 'total_loss': 15.3106}, LR: [1.6e-05, 1.6e-05], Avg. batch load time: 0.003, Elapsed time: 16811.22
+2024-06-08 05:07:25 - [34m[1mLOGS   [0m - Epoch:  21 [  190923/  200000], loss: {'classification': 14.5639, 'neural_augmentation': 0.7312, 'total_loss': 15.2951}, LR: [1.6e-05, 1.6e-05], Avg. batch load time: 0.003, Elapsed time: 16858.23
+2024-06-08 05:08:12 - [34m[1mLOGS   [0m - Epoch:  21 [  191423/  200000], loss: {'classification': 14.5492, 'neural_augmentation': 0.7317, 'total_loss': 15.2809}, LR: [1.5e-05, 1.5e-05], Avg. batch load time: 0.003, Elapsed time: 16904.91
+2024-06-08 05:08:58 - [34m[1mLOGS   [0m - Epoch:  21 [  191923/  200000], loss: {'classification': 14.5333, 'neural_augmentation': 0.7323, 'total_loss': 15.2656}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 0.003, Elapsed time: 16951.75
+2024-06-08 05:09:45 - [34m[1mLOGS   [0m - Epoch:  21 [  192423/  200000], loss: {'classification': 14.5184, 'neural_augmentation': 0.7329, 'total_loss': 15.2514}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 0.003, Elapsed time: 16998.29
+2024-06-08 05:10:32 - [34m[1mLOGS   [0m - Epoch:  21 [  192923/  200000], loss: {'classification': 14.5028, 'neural_augmentation': 0.7336, 'total_loss': 15.2363}, LR: [1.3e-05, 1.3e-05], Avg. batch load time: 0.003, Elapsed time: 17044.95
+2024-06-08 05:11:19 - [34m[1mLOGS   [0m - Epoch:  21 [  193423/  200000], loss: {'classification': 14.488, 'neural_augmentation': 0.7341, 'total_loss': 15.2221}, LR: [1.3e-05, 1.3e-05], Avg. batch load time: 0.003, Elapsed time: 17091.99
+2024-06-08 05:12:06 - [34m[1mLOGS   [0m - Epoch:  21 [  193923/  200000], loss: {'classification': 14.4735, 'neural_augmentation': 0.7347, 'total_loss': 15.2082}, LR: [1.3e-05, 1.3e-05], Avg. batch load time: 0.003, Elapsed time: 17138.89
+2024-06-08 05:12:52 - [34m[1mLOGS   [0m - Epoch:  21 [  194423/  200000], loss: {'classification': 14.458, 'neural_augmentation': 0.7353, 'total_loss': 15.1933}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 0.003, Elapsed time: 17185.53
+2024-06-08 05:13:39 - [34m[1mLOGS   [0m - Epoch:  21 [  194923/  200000], loss: {'classification': 14.4428, 'neural_augmentation': 0.7359, 'total_loss': 15.1787}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 0.003, Elapsed time: 17232.62
+2024-06-08 05:13:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 05:13:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 05:13:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 194999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_194999.pt
+2024-06-08 05:13:53 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 194999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_194999.pt
+2024-06-08 05:13:53 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 05:13:54 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 194999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_194999.pt
+2024-06-08 05:13:54 - [32m[1mINFO   [0m - Checkpoints saved after 194999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 05:14:34 - [34m[1mLOGS   [0m - Epoch:  21 [  195423/  200000], loss: {'classification': 14.4278, 'neural_augmentation': 0.7364, 'total_loss': 15.1642}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 0.003, Elapsed time: 17287.32
+2024-06-08 05:15:21 - [34m[1mLOGS   [0m - Epoch:  21 [  195923/  200000], loss: {'classification': 14.4129, 'neural_augmentation': 0.737, 'total_loss': 15.1499}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 0.003, Elapsed time: 17333.96
+2024-06-08 05:16:07 - [34m[1mLOGS   [0m - Epoch:  21 [  196423/  200000], loss: {'classification': 14.3974, 'neural_augmentation': 0.7376, 'total_loss': 15.135}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 0.003, Elapsed time: 17380.19
+2024-06-08 05:16:54 - [34m[1mLOGS   [0m - Epoch:  21 [  196923/  200000], loss: {'classification': 14.3818, 'neural_augmentation': 0.7382, 'total_loss': 15.12}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 0.003, Elapsed time: 17427.01
+2024-06-08 05:17:39 - [34m[1mLOGS   [0m - Epoch:  21 [  197423/  200000], loss: {'classification': 14.3676, 'neural_augmentation': 0.7387, 'total_loss': 15.1063}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17472.76
+2024-06-08 05:18:26 - [34m[1mLOGS   [0m - Epoch:  21 [  197923/  200000], loss: {'classification': 14.3522, 'neural_augmentation': 0.7393, 'total_loss': 15.0915}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17519.65
+2024-06-08 05:19:13 - [34m[1mLOGS   [0m - Epoch:  21 [  198423/  200000], loss: {'classification': 14.3383, 'neural_augmentation': 0.7398, 'total_loss': 15.0781}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17565.91
+2024-06-08 05:19:59 - [34m[1mLOGS   [0m - Epoch:  21 [  198923/  200000], loss: {'classification': 14.3248, 'neural_augmentation': 0.7404, 'total_loss': 15.0652}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17612.10
+2024-06-08 05:20:45 - [34m[1mLOGS   [0m - Epoch:  21 [  199423/  200000], loss: {'classification': 14.3099, 'neural_augmentation': 0.7409, 'total_loss': 15.0509}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17658.62
+2024-06-08 05:21:31 - [34m[1mLOGS   [0m - Epoch:  21 [  199923/  200000], loss: {'classification': 14.2956, 'neural_augmentation': 0.7416, 'total_loss': 15.0372}, LR: [1e-05, 1e-05], Avg. batch load time: 0.003, Elapsed time: 17704.69
+2024-06-08 05:21:41 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 05:21:42 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 05:21:44 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 199999 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_199999.pt
+2024-06-08 05:21:45 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 199999 is saved at: results_catlip/train/checkpoint_epoch_21_iter_199999.pt
+2024-06-08 05:21:45 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 05:21:46 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 199999 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_199999.pt
+2024-06-08 05:21:46 - [32m[1mINFO   [0m - Checkpoints saved after 199999 updates at: results_catlip/train
+[31m======================================================================================================================================================[0m
+2024-06-08 05:21:46 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
+	 loss={'classification': 14.2934, 'neural_augmentation': 0.7416, 'total_loss': 15.035}
+2024-06-08 05:21:47 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at results_catlip/train/checkpoint_best.pt
+2024-06-08 05:21:50 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: results_catlip/train/training_checkpoint_last.pt
+2024-06-08 05:21:51 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: results_catlip/train/checkpoint_last.pt
+2024-06-08 05:21:53 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 200001 is saved at: results_catlip/train/training_checkpoint_epoch_21_iter_200001.pt
+2024-06-08 05:21:54 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 200001 is saved at: results_catlip/train/checkpoint_epoch_21_iter_200001.pt
+2024-06-08 05:21:54 - [34m[1mLOGS   [0m - Last EMA model state is saved at: results_catlip/train/checkpoint_ema_last.pt
+2024-06-08 05:21:55 - [34m[1mLOGS   [0m - Best EMA checkpoint with score 0.00 is saved at results_catlip/train/checkpoint_ema_best.pt
+2024-06-08 05:21:56 - [34m[1mLOGS   [0m - EMA model state for epoch 21/iteration 200001 is saved at: results_catlip/train/checkpoint_ema_epoch_21_iter_200001.pt
+2024-06-08 05:21:56 - [32m[1mINFO   [0m - Max. iterations for training reached
+2024-06-08 05:21:56 - [34m[1mLOGS   [0m - Training took 04:55:31.38
