@@ -334,6 +334,7 @@ class DefaultTrainer(object):
                 if isinstance(loss, torch.Tensor) and torch.isnan(loss):  # 如果loss值为Nan，说明数值不稳定，存在问题
                     logger.error("Nan encountered in the loss.")
 
+
             # perform the backward pass with gradient accumulation [Optional]
             self.gradient_scaler.scale(loss).backward()
 
@@ -353,7 +354,14 @@ class DefaultTrainer(object):
                 # optimizer step
                 self.gradient_scaler.step(optimizer=self.optimizer)
                 # update the scale for next batch
+                # initial_params = {name: param.clone() for name, param in self.model.named_parameters()}
                 self.gradient_scaler.update()
+                # updated_params = {name: param.clone() for name, param in self.model.named_parameters()}
+                # for name in initial_params:
+                #     if torch.equal(initial_params[name], updated_params[name]):
+                #         print(f"Parameter '{name}' did not change.")
+                #     else:
+                #         print(f"Parameter '{name}' has changed.")
                 # set the gradient to zero or None
                 self._zero_grad()
 
