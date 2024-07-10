@@ -49,7 +49,7 @@ except ModuleNotFoundError:
 
     NLTK_INSTALLED = False
 
-from corenet.constants import DATA_CACHE_DIR
+from corenet.constants import DATA_CACHE_DIR, LAION_CACHE_DIR, RECIPE_CACHE_DIR, CC12M_CACHE_DIR, DATACOMP_COUNT, LAION_COUNT, RECIPE_COUNT, CC12M_COUNT
 from corenet.data.datasets import DATASET_REGISTRY
 from corenet.data.datasets.classification.base_image_classification_dataset import (
     BaseImageClassificationDataset,
@@ -318,6 +318,22 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
                 labels.append(self.vocab.index(noun_synset))                        #label为noun_synset在vocab中的索引，例如'n14334306'在vocab中的索引为210
         return labels  
 
+    def _get_cache_and_idx(self, folder_idx):
+        if folder_idx < DATACOMP_COUNT:
+            cache = self.cache_loc
+            idx = folder_idx
+        elif folder_idx < DATACOMP_COUNT + LAION_COUNT:
+            cache = self.laion_cache_loc
+            idx = folder_idx - DATACOMP_COUNT
+        elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT:
+            cache = self.recipe_cache_loc
+            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT
+        elif folder_idx < TOTAL_COUNT:
+            cache = self.cc12m_cache_loc
+            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT - RECIPE_COUNT
+
+        return cache, idx
+
     def _read_sample_with_wordnet_label_mining(  # 将caption转换为基于wordnet的多分类标签
         self, sample_index: int
     ) -> Tuple[Image.Image, List[str]]:
@@ -334,10 +350,13 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         """
 
         # Check if this folder exists. If not, then download the tar file and extract it.
-        folder_idx = sample_index // self.max_files_per_tar
+        folder_idx1 = sample_index // self.max_files_per_tar
         #folder_idx = self._download_and_extract_tar_file(sample_index=sample_index)  # 0
 
-        file_name = f"{self.cache_loc}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}"   # '路径：/media/fast_data/catlip_data/cache/0/691.pkl'（文件名称超出范围，目录中最多有10000.pkl，而sample_index大于10000，需要查看文件保存格式）
+        cache, folder_idx = self._get_cache_and_idx(folder_idx1)
+        file_name = f"{cache}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}" 
+        #file_name = f"{self.cache_loc}/{folder_idx}/{sample_index}.{SAMPLE_FILE_EXTN}"   # '路径：/media/fast_data/catlip_data/cache/0/691.pkl'（文件名称超出范围，目录中最多有10000.pkl，而sample_index大于10000，需要查看文件保存格式）
+
         if not Path(file_name).exists():
             # Each tar file is supposed to have certain number of samples, but
             # it may not have all samples (because some samples may be corrupted and are filtered).
@@ -345,9 +364,12 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
             # This helps in avoiding errors related to tensor mismatch shapes (usually arises when each GPU has different batch size)
             # when gathering the image and text embeddings from all GPUs in contrastive loss.
             files_in_folder = glob.glob(
-                f"{self.cache_loc}/{folder_idx}/*.{SAMPLE_FILE_EXTN}"
+                f"{cache}/{folder_idx}/*.{SAMPLE_FILE_EXTN}"
             )
-            assert len(files_in_folder) > 0
+            try:
+                assert len(files_in_folder) > 0
+            except:
+                print(folder_idx1, cache, folder_idx)
             file_name = random.choice(files_in_folder)
 
         with open(file_name, "rb") as handle:
@@ -521,7 +543,18 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
     @property
     def cache_loc(self) -> str:
         return DATA_CACHE_DIR
+    
+    @property
+    def laion_cache_loc(self) -> str:
+        return LAION_CACHE_DIR
+    
+    @property
+    def recipe_cache_loc(self) -> str:
+        return RECIPE_CACHE_DIR
 
+    @property
+    def CC12M_cache_loc(self) -> str:
+        return CC12M_CACHE_DIR
 
     @property
     def vocab_size(self):

@@ -323,14 +323,14 @@ def check_files(directory, backup_directory):
 """
 # import pickle
 
-# metadata = {
-#     "total_tar_files": 2905,
-#     "max_files_per_tar": 10000,
-#     "tar_file_names": [f"{i}.tar.gz" for i in range(2906)]
-# }
-# # # 使用二进制模式打开文件
-# with open('/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl', mode='wb') as file:
-#     pickle.dump(metadata, file)
+metadata = {
+    "total_tar_files": 6429,
+    "max_files_per_tar": 10000,
+    "tar_file_names": [f"{i}.tar.gz" for i in range(6429)]
+}
+# # 使用二进制模式打开文件
+with open('/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl', mode='wb') as file:
+    pickle.dump(metadata, file)
 
 
 # # 使用二进制模式打开文件
@@ -343,35 +343,35 @@ def check_files(directory, backup_directory):
 合并词表
 """
 
-import pickle
+# import pickle
 
-# 读取所有词表
-with open('./corenet/data/datasets/classification/laion2b_vocab.pkl', mode='rb') as file:
-    laion2b_vocab = pickle.load(file)
-with open('./corenet/data/datasets/classification/datacomp_vocab.pkl', mode='rb') as file:
-    datacomp_vocab = pickle.load(file)
-with open('./corenet/data/datasets/classification/cc12m_vocab.pkl', mode='rb') as file:
-    cc12m_vocab = pickle.load(file)
-with open('./corenet/data/datasets/classification/recipe1M+_vocab.pkl', mode='rb') as file:
-    recipe1M_vocab = pickle.load(file)
+# # 读取所有词表
+# with open('./corenet/data/datasets/classification/laion2b_vocab.pkl', mode='rb') as file:
+#     laion2b_vocab = pickle.load(file)
+# with open('./corenet/data/datasets/classification/datacomp_vocab.pkl', mode='rb') as file:
+#     datacomp_vocab = pickle.load(file)
+# with open('./corenet/data/datasets/classification/cc12m_vocab.pkl', mode='rb') as file:
+#     cc12m_vocab = pickle.load(file)
+# with open('./corenet/data/datasets/classification/recipe1M+_vocab.pkl', mode='rb') as file:
+#     recipe1M_vocab = pickle.load(file)
 
-# 合并词表
-final_vocab = {}
+# # 合并词表
+# final_vocab = {}
 
-def merge_vocab(final_vocab, vocab):
-    for key, value in vocab.items():
-        if key in final_vocab:
-            final_vocab[key] += value
-        else:
-            final_vocab[key] = value
+# def merge_vocab(final_vocab, vocab):
+#     for key, value in vocab.items():
+#         if key in final_vocab:
+#             final_vocab[key] += value
+#         else:
+#             final_vocab[key] = value
 
-merge_vocab(final_vocab, laion2b_vocab)
-merge_vocab(final_vocab, datacomp_vocab)
-merge_vocab(final_vocab, cc12m_vocab)
-merge_vocab(final_vocab, recipe1M_vocab)
+# merge_vocab(final_vocab, laion2b_vocab)
+# merge_vocab(final_vocab, datacomp_vocab)
+# merge_vocab(final_vocab, cc12m_vocab)
+# merge_vocab(final_vocab, recipe1M_vocab)
 
-# 将合并后的词表写入文件
-with open('./corenet/data/datasets/classification/all_vocab.pkl', mode='wb') as file:
-    pickle.dump(final_vocab, file)
+# # 将合并后的词表写入文件
+# with open('./corenet/data/datasets/classification/all_vocab.pkl', mode='wb') as file:
+#     pickle.dump(final_vocab, file)
 
 

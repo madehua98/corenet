@@ -863,41 +863,37 @@ class ViTamin(BaseImageEncoder):
 
     def _pos_embed(self, x):
         if self.no_embed_class:
-            # deit-3, updated JAX (big vision)
-            # position embedding does not overlap with class token, add then concat
             x = x + self.pos_embed
             if self.cls_token is not None:
                 x = torch.cat((self.cls_token.expand(x.shape[0], -1, -1), x), dim=1)
         else:
-            # original timm, JAX, and deit vit impl
-            # pos_embed has entry for class token, concat then add
             if self.cls_token is not None:
                 x = torch.cat((self.cls_token.expand(x.shape[0], -1, -1), x), dim=1)
             x = x + self.pos_embed
         return self.pos_drop(x)
-        
+
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.patch_embed(x).contiguous()  # Ensure contiguous memory
+        x = self.patch_embed(x)
         if self.is_pos_embed:
-            x = self._pos_embed(x).contiguous()  # Ensure contiguous memory
-        x = self.patch_drop(x).contiguous()  # Ensure contiguous memory
-        x = self.norm_pre(x).contiguous()  # Ensure contiguous memory
+            x = self._pos_embed(x)
+        x = self.patch_drop(x)
+        x = self.norm_pre(x)
         if self.grad_checkpointing and not torch.jit.is_scripting():
-            x = checkpoint_seq(self.blocks, x).contiguous()  # Ensure contiguous memory
+            x = checkpoint_seq(self.blocks, x)
         else:
-            x = self.blocks(x).contiguous()  # Ensure contiguous memory
-            x = x.transpose(1, 2).contiguous()  # Ensure contiguous memory
+            x = self.blocks(x)
+            x = x.transpose(1, 2)
             n, c, h_w = x.shape
             h = w = int(h_w ** 0.5)
-            x = x.view(n, c, h, w).contiguous()  # Ensure contiguous memory
-            x = self.pool(x).contiguous()  # Ensure contiguous memory
-            x = x.flatten(2).transpose(1, 2).contiguous()  # Ensure contiguous memory
-            x = self.blocks1(x).contiguous()  # Ensure contiguous memory
-        x = self.norm(x).contiguous()  # Ensure contiguous memory
+            x = x.view(n, c, h, w)
+            x = self.pool(x)
+            x = x.flatten(2).transpose(1, 2)
+            x = self.blocks1(x)
+        x = self.norm(x)
         return x
-    
+
     def forward_features_dense_connector(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.patch_embed(x)  # 变为[256, 196, 384]
+        x = self.patch_embed(x)
         if self.is_pos_embed:
             x = self._pos_embed(x)
         x = self.patch_drop(x)
@@ -907,21 +903,20 @@ class ViTamin(BaseImageEncoder):
             x = checkpoint_seq(self.blocks, x)
         else:
             for block in self.blocks:
-                x = block(x).contiguous()  # Ensure contiguous memory
+                x = block(x)
                 all_hidden_states.append(x)
-            x = x.transpose(1, 2).contiguous()  # Ensure contiguous memory
+            x = x.transpose(1, 2)
             n, c, h_w = x.shape
             h = w = int(h_w ** 0.5)
-            x = x.view(n, c, h, w).contiguous()  # Ensure contiguous memory
-            x = self.pool(x).contiguous()  # Ensure contiguous memory
-            x = x.flatten(2).transpose(1, 2).contiguous()  # Ensure contiguous memory
+            x = x.view(n, c, h, w)
+            x = self.pool(x)
+            x = x.flatten(2).transpose(1, 2)
             all_hidden_states.append(x)
             for block1 in self.blocks1:
-                x = block1(x).contiguous()  # Ensure contiguous memory
+                x = block1(x)
                 all_hidden_states.append(x)
-        x = self.norm(x).contiguous()  # Ensure contiguous memory
+        x = self.norm(x)
         return x, all_hidden_states
-
 
     def forward_head(self, x: torch.Tensor, pre_logits: bool = False) -> torch.Tensor:
         if self.attn_pool is not None:
@@ -934,38 +929,32 @@ class ViTamin(BaseImageEncoder):
         x = self.head_drop(x)
         return x if pre_logits else self.head(x)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:         
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         if self.neural_augmentor is not None:
             out_dict = {"augmented_tensor": None}
-            if self.training and self.neural_augmentor is not None:   
-                # neural augmentor is applied during training only
+            if self.training and self.neural_augmentor is not None:
                 x = self.neural_augmentor(x)
                 out_dict.update({"augmented_tensor": x})
             x, all_hidden_states = self.forward_features_dense_connector(x)
             if self.mm_dense_connector_type == 'sci':
                 image_features_dc = self.dense_connnector.dense_connector_sti(x, all_hidden_states)
-                image_features_dc = self.block_to_block1(image_features_dc).contiguous()  # Ensure contiguous memory
+                image_features_dc = self.block_to_block1(image_features_dc)
                 x = self.dense_connnector.dense_connector(x, image_features_dc, mm_dense_connector_type=self.mm_dense_connector_type)
                 if self.use_kl:
                     stage3_tensor = image_features_dc
                     stage4_tensor = x
             elif self.mm_dense_connector_type == 'dci':
                 image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
-                image_features_dc1 = self.block_to_block1(image_features_dc1).contiguous()  # Ensure contiguous memory
-                x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2.contiguous(), mm_dense_connector_type=self.mm_dense_connector_type)  # Ensure contiguous memory
-                # if self.use_kl:
-                #     stage3_tensor = image_features_dc1
-                #     stage4_tensor = image_features_dc2
+                image_features_dc1 = self.block_to_block1(image_features_dc1)
+                x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
             x = self.mlp(x)
             logits = self.forward_head(x)
             out_dict.update({"logits": logits})
-            # out_dict.update({"stage3_tensor": stage3_tensor})
-            # if self.use_kl:
-            #     out_dict.update({"stage4_tensor": stage4_tensor})
             return out_dict
         else:
             logits, _ = self.forward_classifier(x)
             return logits
+
 
 
 def _create_vision_transformer(variant, pretrained=False, **kwargs):
