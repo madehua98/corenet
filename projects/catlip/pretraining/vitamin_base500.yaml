@@ -1,8 +1,8 @@
 # pytest: disable
 
-taskname: '+ CatLIP ViT-B/16 [DataComp]'
+taskname: '+ CatLIP vitamin small [DataComp]'
 
-_anchor_vocab_size: &_anchor_vocab_size 5000
+_anchor_vocab_size: &_anchor_vocab_size 6743
 
 common:
   run_label: "train"
@@ -12,7 +12,7 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
-  save_interval_freq: 1000000
+  save_interval_freq: 120000
 
 dataset:
   # root_train does not matter for img_text_tar dataset because dataset information is expected
@@ -20,7 +20,7 @@ dataset:
   root_train: ""
   disable_val: true
   # effective batch size is 65k (1024 images per GPU * 8 A100 40 GB GPUs * 8 Nodes)
-  train_batch_size0: 512
+  train_batch_size0: 300
   workers: 64 # use all CPUs  
   persistent_workers: true
   pin_memory: true
@@ -91,7 +91,7 @@ optim:
 
 scheduler:
   is_iteration_based: true
-  max_iterations: 200000
+  max_iterations: 1000000
   name: cosine
   warmup_init_lr: 1.e-06
   warmup_iterations: 10000
@@ -105,7 +105,7 @@ model:
     name: "foodv"
     n_classes: *_anchor_vocab_size
     foodv:
-      mode: "small"
+      mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
   # use rangeaugment
@@ -120,27 +120,6 @@ model:
     conv_init: "kaiming_normal"
     linear_init: "trunc_normal"
     linear_init_std_dev: 0.02
-# model:
-#   activation_checkpointing: true
-#   classification:
-#     name: "vit"
-#     n_classes: *_anchor_vocab_size
-#     vit:
-#       mode: "base"
-#       norm_layer: "layer_norm_fp32"
-#       use_flash_attention: true
-#   # use rangeaugment
-#   learn_augmentation: 
-#     brightness: true
-#     contrast: true
-#     noise: true
-#     mode: "distribution"
-#   activation:
-#     name: "gelu"
-#   layer:
-#     conv_init: "kaiming_normal"
-#     linear_init: "trunc_normal"
-#     linear_init_std_dev: 0.02
   
 ema:
   enable: false

@@ -53,7 +53,6 @@ def load_pretrained_model(
 
     exclude_scopes = getattr(opts, "model.resume_exclude_scopes", "")
     exclude_scopes: List[str] = clean_strip(exclude_scopes)
-
     missing_scopes = getattr(opts, "model.ignore_missing_scopes", "")
     missing_scopes: List[str] = clean_strip(missing_scopes)
 
@@ -85,7 +84,6 @@ def load_pretrained_model(
     try:
         module = unwrap_model_fn(model)
         missing_keys, unexpected_keys = module.load_state_dict(wts, strict=strict)
-
         if unexpected_keys:
             raise Exception(
                 "Found unexpected keys: {}."

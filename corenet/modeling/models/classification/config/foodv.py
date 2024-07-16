@@ -64,6 +64,7 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
         logger.error("Please specify mode")
 
     mode = mode.lower()
+    print(mode)
     dropout = getattr(opts, "model.classification.foodv.dropout", 0.0)
     norm_layer = getattr(opts, "model.classification.foodv.norm_layer", "layer_norm")
 
@@ -101,7 +102,6 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
             "img_size": 224,
             "patch_size": 14,
             "in_chans": 3,
-            "num_classes": 5000,
             "global_pool": 'avg',
             "embed_dim": 384,
             "block1_embed_dim": 512,
@@ -118,7 +118,6 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
             "img_size": 224,
             "patch_size": 14,
             "in_chans": 3,
-            "num_classes": 5000,
             "global_pool": 'avg',
             "embed_dim": 768,
             "block1_embed_dim": 1024,

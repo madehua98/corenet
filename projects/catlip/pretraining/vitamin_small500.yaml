@@ -1,8 +1,8 @@
 # pytest: disable
 
-taskname: '+ CatLIP ViT-B/16 [DataComp]'
+taskname: '+ CatLIP vitamin small [DataComp]'
 
-_anchor_vocab_size: &_anchor_vocab_size 5000
+_anchor_vocab_size: &_anchor_vocab_size 6743
 
 common:
   run_label: "train"
@@ -12,7 +12,7 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
-  save_interval_freq: 5000
+  save_interval_freq: 1000000
 
 dataset:
   # root_train does not matter for img_text_tar dataset because dataset information is expected
@@ -31,7 +31,7 @@ dataset:
     vocab_file: "corenet/data/datasets/classification/all_vocab.pkl"
     # Uncomment these lines and replace with the path to metadata file containing dataset information
     # and vocabulary file containing synset information.
-    metadata_file: "/ML-A100/team/mm/models/catlip_data/cache/metadata2.pkl"
+    metadata_file: "/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl"
    
 
 image_augmentation:
@@ -74,6 +74,12 @@ loss:
         perceptual_metric: "psnr"
         target_value: [ 40, 20 ]
         curriculum_method: "cosine"
+    # - loss_category: "distribution"
+    #   loss_weight: 1.0
+    #   distribution:
+    #     name: "kl"
+    #     kl:
+    #       reduction: "batch_mean"
 
 optim:
   no_decay_bn_filter_bias: true
@@ -85,7 +91,7 @@ optim:
 
 scheduler:
   is_iteration_based: true
-  max_iterations: 200000
+  max_iterations: 1000000
   name: cosine
   warmup_init_lr: 1.e-06
   warmup_iterations: 10000
@@ -96,10 +102,10 @@ scheduler:
 model:
   activation_checkpointing: true
   classification:
-    name: "vit"
+    name: "foodv"
     n_classes: *_anchor_vocab_size
-    vit:
-      mode: "base"
+    foodv:
+      mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
   # use rangeaugment
@@ -116,7 +122,7 @@ model:
     linear_init_std_dev: 0.02
   
 ema:
-  enable: true
+  enable: false
   momentum: 0.0005
 
 stats:

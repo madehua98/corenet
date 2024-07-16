@@ -41,7 +41,7 @@ def plot_histogram(data, thresholds, save_path):
     # Sorting thresholds and their counts for plotting
     sorted_thresholds = sorted(threshold_counts.keys())
     counts = [threshold_counts[threshold] for threshold in sorted_thresholds]
-    
+    print(counts)
     plt.figure(figsize=(12, 8))
     plt.bar(range(len(sorted_thresholds)), counts, color='blue', width=0.4)  # Adjust the width of the bars
     plt.xlabel('Threshold')
@@ -55,7 +55,7 @@ def plot_histogram(data, thresholds, save_path):
     plt.close()
 
 if __name__ == '__main__':
-    filename = 'corenet/data/datasets/classification/datacomp_vocab.pkl'
+    filename = 'corenet/data/datasets/classification/all_vocab.pkl'
     datacomp_vocab = load_pickle(filename)
 
     thresholds = [10, 50, 100, 200, 500]  # 设定多个阈值

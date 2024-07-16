@@ -1,6 +1,6 @@
 from typing import Any, List, Mapping, Tuple
 from corenet.data.datasets.utils.text import caption_preprocessing
-from corenet.data.datasets.classification.wordnet_tagged_classification import check_valid_noun_synset, extract_pos_offset_info_from_synset
+#from corenet.data.datasets.classification.wordnet_tagged_classification import check_valid_noun_synset, extract_pos_offset_info_from_synset
 import pickle
 import sys
 try:

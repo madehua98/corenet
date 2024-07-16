@@ -206,16 +206,16 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         opts = self.opts
         metadata_file_path = self._metadata_file_path()
 
-        # download the metadata file
-        metadata_file_local_path = get_local_path(
-            opts,
-            path=metadata_file_path,
-            force_delete=False,
-            use_start_rank=True,
-            sync_ranks=False,
-        )
+        # # download the metadata file
+        # metadata_file_local_path = get_local_path(
+        #     opts,
+        #     path=metadata_file_path,
+        #     force_delete=False,
+        #     use_start_rank=True,
+        #     sync_ranks=False,
+        # )
 
-        with open(metadata_file_local_path, "rb") as handle:
+        with open(metadata_file_path, "rb") as handle:
             metadata = pickle.load(handle)
 
         if not {"total_tar_files", "max_files_per_tar", "tar_file_names"}.issubset(
@@ -318,6 +318,22 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
                 labels.append(self.vocab.index(noun_synset))                        #label为noun_synset在vocab中的索引，例如'n14334306'在vocab中的索引为210
         return labels  
 
+    # def _get_cache_and_idx(self, folder_idx):
+    #     if folder_idx < DATACOMP_COUNT:
+    #         cache = self.cache_loc
+    #         idx = folder_idx
+    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT:
+    #         cache = self.laion_cache_loc
+    #         idx = folder_idx - DATACOMP_COUNT
+    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT:
+    #         cache = self.recipe_cache_loc
+    #         idx = folder_idx - DATACOMP_COUNT - LAION_COUNT
+    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT + CC12M_COUNT:
+    #         cache = self.cc12m_cache_loc
+    #         idx = folder_idx - DATACOMP_COUNT - LAION_COUNT - RECIPE_COUNT
+
+    #     return cache, idx
+
     def _get_cache_and_idx(self, folder_idx):
         if folder_idx < DATACOMP_COUNT:
             cache = self.cache_loc
@@ -325,13 +341,15 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         elif folder_idx < DATACOMP_COUNT + LAION_COUNT:
             cache = self.laion_cache_loc
             idx = folder_idx - DATACOMP_COUNT
-        elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT:
-            cache = self.recipe_cache_loc
-            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT
-        elif folder_idx < TOTAL_COUNT:
+        elif folder_idx < DATACOMP_COUNT + LAION_COUNT + CC12M_COUNT:
             cache = self.cc12m_cache_loc
-            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT - RECIPE_COUNT
-
+            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT
+        elif folder_idx < DATACOMP_COUNT + LAION_COUNT + CC12M_COUNT + RECIPE_COUNT:
+            cache = self.recipe_cache_loc
+            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT -CC12M_COUNT
+        else:
+            cache = self.recipe_cache_loc
+            idx = folder_idx - DATACOMP_COUNT - LAION_COUNT -CC12M_COUNT - RECIPE_COUNT
         return cache, idx
 
     def _read_sample_with_wordnet_label_mining(  # 将caption转换为基于wordnet的多分类标签
@@ -520,22 +538,21 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
 
         try:
             image, labels = self._read_sample_with_wordnet_label_mining(sample_index)  # labels值：[2082,1289]
+            targets = torch.zeros((self.vocab_size), dtype=torch.long) # shape:[24320]
+            if labels is not None and len(labels) > 0:
+                targets[labels] = 1  # 对应label位置全赋值为1
+
+            output_data = {
+                "samples": transform_fn({"image": image})["image"], 
+                "targets": targets,
+                "sample_id": sample_index,
+            }
+            return output_data
         except (EOFError, pickle.UnpicklingError, KeyError, IOError) as e:
             print(f"Error reading sample {sample_index}: {e}")
             # 返回一个空的或默认的数据结构
-            return self.__getitem__((crop_size_h, crop_size_w, (sample_index + 1) % len(self)))  # 读取下一个样本，防止越界
-
-        # convert labels to one hot vector
-        targets = torch.zeros((self.vocab_size), dtype=torch.long) # shape:[24320]
-        if labels is not None and len(labels) > 0:
-            targets[labels] = 1  # 对应label位置全赋值为1
-
-        output_data = {
-            "samples": transform_fn({"image": image})["image"], 
-            "targets": targets,
-            "sample_id": sample_index,
-        }
-        return output_data
+            #return self.__getitem__((crop_size_h, crop_size_w, (sample_index + 1) % len(self)))  # 读取下一个样本，防止越界
+            return self.__getitem__((crop_size_h, crop_size_w, sample_index + 1))  # 读取下一个样本，防止越界
 
     def __len__(self) -> int:
         return self.total_tar_files * self.max_files_per_tar
@@ -553,7 +570,7 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         return RECIPE_CACHE_DIR
 
     @property
-    def CC12M_cache_loc(self) -> str:
+    def cc12m_cache_loc(self) -> str:
         return CC12M_CACHE_DIR
 
     @property

@@ -18,6 +18,15 @@ def load_jsonl(filename):
                 print(f"Unexpected error on line {line_number}: {e}")
     return objects
 
+def save_jsonl(filename, objects):
+    with open(filename, "a+") as file:
+        for object in tqdm(objects, total=len(objects), desc="save jsonl ..."):
+            object = json.dumps(object)
+            file.write(object)
+            file.write('\n')
+
+        
+
 def get_origin_data(filename, threshold):
     objects = load_jsonl(filename)
     new_objects = []
@@ -57,9 +66,9 @@ def write_image_text_pickle(task):
     try:
         with open(image_path, 'rb') as img_file:
             image_data = img_file.read()
-        with open(text_path, 'r') as txt_file:
-            text_data = txt_file.read()
-        #text_data =   text_path
+        # with open(text_path, 'r') as txt_file:
+        #     text_data = txt_file.read()
+        text_data =   text_path
         # 创建pickle文件内容
         data = {
             'image': image_data,
@@ -124,11 +133,21 @@ def process_tasks_in_parallel(tasks, num_workers):
 #         fw.write('\n')
 
 # filename = '/ML-A100/team/mm/models/recipe1M+/image2ingredients_new.jsonl'
-# images, texts = recipe_get_data(filename)
+# filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2ingredients_new.jsonl'
+# image2ingredients_new_1 = []
+# image2ingredients_new = load_jsonl(filename)
+# for object in tqdm(image2ingredients_new, total=len(image2ingredients_new)):
+#     object["image"] = object["image"].replace("recipe1M+", "recipe1M+_1")
+#     image2ingredients_new_1.append(object)
+
+#save_jsonl(filename_1, image2ingredients_new_1)
+
+# filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2ingredients_new.jsonl'
+# images, texts = recipe_get_data(filename_1)
 # tasks = get_tasks(
 #     images=images,
 #     texts=texts,
-#     root_dir='/ML-A100/team/mm/models/catlip_data/cc12m'
+#     root_dir='/ML-A100/team/mm/models/catlip_data/recipe1M+_1'
 # )
 
 # # 设置工作进程数量
@@ -296,7 +315,7 @@ def check_files(directory, backup_directory):
                 target_path = os.path.join(directory, missing_file)
                 
                 if os.path.isfile(source_path):
-                    shutil.copyfile(source_path, target_path)
+                    #shutil.copyfile(source_path, target_path)
                     print(f"已从{source_path}复制到{target_path}")
                     
                 backup_index += 1
@@ -305,11 +324,11 @@ def check_files(directory, backup_directory):
                 break
 
 # 示例使用
-# directorys = "/ML-A100/team/mm/models/catlip_data/laion2b/"
-# backup_directory = os.path.join(directorys, '2116')
+# directorys = "/ML-A100/team/mm/models/catlip_data/recipe1M+_1/"
+# backup_directory = os.path.join(directorys, '1373')
 
 # for directory in os.listdir(directorys):
-#     if directory == '2116':
+#     if directory == '1373':
 #         continue
 #     check_files(directorys + directory, backup_directory)
 
@@ -323,16 +342,18 @@ def check_files(directory, backup_directory):
 """
 # import pickle
 
-metadata = {
-    "total_tar_files": 6429,
-    "max_files_per_tar": 10000,
-    "tar_file_names": [f"{i}.tar.gz" for i in range(6429)]
-}
-# # 使用二进制模式打开文件
-with open('/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl', mode='wb') as file:
-    pickle.dump(metadata, file)
+# metadata = {
+#     "total_tar_files": 1000,
+#     "max_files_per_tar": 10000,
+#     "tar_file_names": [f"{i}.tar.gz" for i in range(1000)]
+# }
+# # # 使用二进制模式打开文件
+# with open('/ML-A100/team/mm/models/catlip_data/cache/metadata3.pkl', mode='wb') as file:
+#     pickle.dump(metadata, file, protocol=pickle.HIGHEST_PROTOCOL)
 
-
+with open('/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl', mode='rb') as file:
+    data = pickle.load(file)
+print(data['total_tar_files'])
 # # 使用二进制模式打开文件
 # with open('/ML-A100/team/mm/models/catlip_data/cache/108/1086988.pkl', mode='rb') as file:
 #     metadata = pickle.load(file)
@@ -373,5 +394,61 @@ with open('/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl', mode='wb') a
 # # 将合并后的词表写入文件
 # with open('./corenet/data/datasets/classification/all_vocab.pkl', mode='wb') as file:
 #     pickle.dump(final_vocab, file)
+
+
+
+
+"""
+将recipe中的图像resize，缩小图片的大小
+
+"""
+
+# import os
+# import multiprocessing
+# from tqdm import tqdm
+# from PIL import Image
+
+# # 定义源目录和目标目录
+# current_directory = '/ML-A100/team/mm/models/recipe1M+'
+# output_directory = '/ML-A100/team/mm/models/recipe1M+_1'
+# size = (256, 256)
+
+# # 确保输出目录存在
+# os.makedirs(output_directory, exist_ok=True)
+
+# def resize_image(task):
+#     input_path, output_path = task
+    
+#     try:
+#         with Image.open(input_path) as img:
+#             img = img.resize(size, Image.LANCZOS)  # 使用LANCZOS替代ANTIALIAS
+#             # 如果图像模式不是RGB，将其转换为RGB模式
+#             if img.mode != 'RGB':
+#                 img = img.convert('RGB')
+#             os.makedirs(os.path.dirname(output_path), exist_ok=True)
+#             img.save(output_path)
+#     except Exception as e:
+#         print(f"Error processing {input_path}: {e}")
+
+# def get_image_tasks():
+#     tasks = []
+#     for root, _, files in tqdm(os.walk(current_directory), desc="Creating tasks", unit="dir"):
+#         for file in files:
+#             if file.lower().endswith('.jpg'):
+#                 input_path = os.path.join(root, file)
+#                 output_path = os.path.join(output_directory, os.path.relpath(root, current_directory), file)
+#                 tasks.append((input_path, output_path))
+#     return tasks
+
+# def process_tasks_in_parallel(tasks, num_workers=128):
+#     with multiprocessing.Pool(num_workers) as pool:
+#         for _ in tqdm(pool.imap_unordered(resize_image, tasks), total=len(tasks), desc=f"Processing {len(tasks)} tasks"):
+#             pass
+
+# if __name__ == "__main__":
+#     tasks = get_image_tasks()
+#     print(f"Total number of tasks: {len(tasks)}")
+#     process_tasks_in_parallel(tasks)
+
 
 

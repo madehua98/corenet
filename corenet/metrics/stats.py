@@ -18,7 +18,7 @@ from corenet.metrics import METRICS_REGISTRY
 from corenet.metrics.metric_base import BaseMetric
 from corenet.utils import logger
 from corenet.utils.object_utils import apply_recursively
-
+import json
 
 class Statistics(object):
     def __init__(
@@ -202,6 +202,13 @@ class Statistics(object):
             print("\t {}".format(metric_stats_str))
             sys.stdout.flush()
 
+            # with open("metrics_summary.jsonl", "a+") as jsonl_file:
+            #     json_record = {
+            #         "epoch": epoch,
+            #         "stage": stage,
+            #         "metrics": metrics
+            #     }
+            #     jsonl_file.write(json.dumps(json_record) + "\n")
             # TODO: this step is only here for backward-compatibility. We can remove it as well
             shortened_stage_map = {
                 "training": "Train",

@@ -182,7 +182,7 @@ class DenseConnector:
         if mm_dense_connector_type == 'sti':
             image_features = torch.cat((image_features, image_features_dc), dim=-2)
         elif mm_dense_connector_type == 'sci':
-            image_features = torch.cat((image_features, image_features_dc), dim=-1)
+            image_features = torch.cat((image_features, image_features_dc), dim=-2)
         elif mm_dense_connector_type == 'dci':
             image_features = torch.cat((image_features, image_features_dc), dim=-2)
         else:
@@ -567,6 +567,10 @@ class ViTamin(BaseImageEncoder):
         """
         super().__init__(opts, *args, **kwargs)
         ViTamin_config = get_configuration(opts)
+        n_class = getattr(
+            self.opts, "model.classification.n_classes"
+        )
+        self.num_classes = n_class
         self.global_pool = ViTamin_config["global_pool"]  # 'token'
         self.class_token = ViTamin_config["class_token"]  # True
         self.num_prefix_tokens = 1 if self.class_token else 0
@@ -586,7 +590,6 @@ class ViTamin(BaseImageEncoder):
         self.img_size = ViTamin_config["img_size"]  # 256
         self.patch_size = ViTamin_config["patch_size"]  # 16
         self.in_chans = ViTamin_config["in_chans"]  # 3
-        self.num_classes = ViTamin_config["num_classes"]  # 1000
         self.embed_dim = ViTamin_config["embed_dim"]  # 6C
         self.block1_embed_dim = ViTamin_config["block1_embed_dim"]  # 8C
         self.depth = ViTamin_config["depth"]  # 12
@@ -716,14 +719,14 @@ class ViTamin(BaseImageEncoder):
         self.norm = self.norm_layer(self.block1_embed_dim) if not self.use_fc_norm else nn.Identity()
 
         # connecter
-        self.block_to_block1 = nn.Linear(self.embed_dim, self.block1_embed_dim)
+        self.block_to_block1 = LinearLayer(self.embed_dim, self.block1_embed_dim)
 
         self.dense_connnector = DenseConnector(layer_indices_sti=(self.depth-1,2 * self.depth - 1), 
                                               layer_indices_sci=(self.depth-1, 2 * self.depth - 1),
                                               layer_indices_dci=(0, self.depth, 2 * self.depth),
                                               )
         
-        self.mlp = mlp_layer(mlp_depth = 2,input_size= self.block1_embed_dim, hidden_size=self.block1_embed_dim)
+        self.mlp = mlp_layer(mlp_depth = 2, input_size= self.block1_embed_dim, hidden_size=self.block1_embed_dim)
 
         # Classifier Head
         if self.global_pool == 'map':
@@ -737,13 +740,13 @@ class ViTamin(BaseImageEncoder):
             self.attn_pool = None
 
         self.fc_norm = self.norm_layer(self.block1_embed_dim) if self.use_fc_norm else nn.Identity()
-        self.head_drop = nn.Dropout(self.drop_rate)
-        self.head = nn.Linear(self.block1_embed_dim, self.num_classes) if self.num_classes > 0 else nn.Identity()
+        self.classifier_drop = nn.Dropout(self.drop_rate)
+        self.classifier = LinearLayer(self.block1_embed_dim, self.num_classes)
 
-        if self.weight_init != 'skip':
-            self.init_weights(self.weight_init)
-        if self.fix_init:
-            self.fix_init_weight()
+        # if self.weight_init != 'skip':
+        #     self.init_weights(self.weight_init)
+        # if self.fix_init:
+        #     self.fix_init_weight()
 
     @classmethod
     def add_arguments(cls, parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
@@ -852,14 +855,14 @@ class ViTamin(BaseImageEncoder):
 
     @torch.jit.ignore
     def get_classifier(self):
-        return self.head
+        return self.classifier
 
     def reset_classifier(self, num_classes: int, global_pool=None):
         self.num_classes = num_classes
         if global_pool is not None:
             assert global_pool in ('', 'avg', 'token')
             self.global_pool = global_pool
-        self.head = nn.Linear(self.embed_dim, num_classes) if num_classes > 0 else nn.Identity()
+        self.classifier = nn.Linear(self.embed_dim, num_classes)
 
     def _pos_embed(self, x):
         if self.no_embed_class:
@@ -918,7 +921,7 @@ class ViTamin(BaseImageEncoder):
         x = self.norm(x)
         return x, all_hidden_states
 
-    def forward_head(self, x: torch.Tensor, pre_logits: bool = False) -> torch.Tensor:
+    def forward_classifier(self, x: torch.Tensor, pre_logits: bool = False) -> torch.Tensor:
         if self.attn_pool is not None:
             x = self.attn_pool(x)
         elif self.global_pool == 'avg':
@@ -926,8 +929,8 @@ class ViTamin(BaseImageEncoder):
         elif self.global_pool:
             x = x[:, 0]  # class token
         x = self.fc_norm(x)
-        x = self.head_drop(x)
-        return x if pre_logits else self.head(x)
+        x = self.classifier_drop(x)
+        return x if pre_logits else self.classifier(x)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         if self.neural_augmentor is not None:
@@ -940,15 +943,13 @@ class ViTamin(BaseImageEncoder):
                 image_features_dc = self.dense_connnector.dense_connector_sti(x, all_hidden_states)
                 image_features_dc = self.block_to_block1(image_features_dc)
                 x = self.dense_connnector.dense_connector(x, image_features_dc, mm_dense_connector_type=self.mm_dense_connector_type)
-                if self.use_kl:
-                    stage3_tensor = image_features_dc
-                    stage4_tensor = x
+
             elif self.mm_dense_connector_type == 'dci':
                 image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
                 image_features_dc1 = self.block_to_block1(image_features_dc1)
                 x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
             x = self.mlp(x)
-            logits = self.forward_head(x)
+            logits = self.forward_classifier(x)
             out_dict.update({"logits": logits})
             return out_dict
         else:

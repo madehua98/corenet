@@ -1,0 +1,1753 @@
+nohup: ignoring input
+2024-07-16 02:44:20 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+base
+2024-07-16 02:44:21 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.fc1.weight', 'blocks.0.mlp.fc1.bias', 'blocks.0.mlp.fc2.weight', 'blocks.0.mlp.fc2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.fc1.weight', 'blocks.1.mlp.fc1.bias', 'blocks.1.mlp.fc2.weight', 'blocks.1.mlp.fc2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.fc1.weight', 'blocks.2.mlp.fc1.bias', 'blocks.2.mlp.fc2.weight', 'blocks.2.mlp.fc2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.fc1.weight', 'blocks.3.mlp.fc1.bias', 'blocks.3.mlp.fc2.weight', 'blocks.3.mlp.fc2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.fc1.weight', 'blocks.4.mlp.fc1.bias', 'blocks.4.mlp.fc2.weight', 'blocks.4.mlp.fc2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.fc1.weight', 'blocks.5.mlp.fc1.bias', 'blocks.5.mlp.fc2.weight', 'blocks.5.mlp.fc2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.fc1.weight', 'blocks.6.mlp.fc1.bias', 'blocks.6.mlp.fc2.weight', 'blocks.6.mlp.fc2.bias', 'blocks.7.norm1.weight', 'blocks.7.norm1.bias', 'blocks.7.attn.qkv.weight', 'blocks.7.attn.qkv.bias', 'blocks.7.attn.proj.weight', 'blocks.7.attn.proj.bias', 'blocks.7.norm2.weight', 'blocks.7.norm2.bias', 'blocks.7.mlp.fc1.weight', 'blocks.7.mlp.fc1.bias', 'blocks.7.mlp.fc2.weight', 'blocks.7.mlp.fc2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.fc1.weight', 'blocks1.0.mlp.fc1.bias', 'blocks1.0.mlp.fc2.weight', 'blocks1.0.mlp.fc2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.fc1.weight', 'blocks1.1.mlp.fc1.bias', 'blocks1.1.mlp.fc2.weight', 'blocks1.1.mlp.fc2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.fc1.weight', 'blocks1.2.mlp.fc1.bias', 'blocks1.2.mlp.fc2.weight', 'blocks1.2.mlp.fc2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.fc1.weight', 'blocks1.3.mlp.fc1.bias', 'blocks1.3.mlp.fc2.weight', 'blocks1.3.mlp.fc2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.fc1.weight', 'blocks1.4.mlp.fc1.bias', 'blocks1.4.mlp.fc2.weight', 'blocks1.4.mlp.fc2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.fc1.weight', 'blocks1.5.mlp.fc1.bias', 'blocks1.5.mlp.fc2.weight', 'blocks1.5.mlp.fc2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.fc1.weight', 'blocks1.6.mlp.fc1.bias', 'blocks1.6.mlp.fc2.weight', 'blocks1.6.mlp.fc2.bias', 'blocks1.7.norm1.weight', 'blocks1.7.norm1.bias', 'blocks1.7.attn.qkv.weight', 'blocks1.7.attn.qkv.bias', 'blocks1.7.attn.proj.weight', 'blocks1.7.attn.proj.bias', 'blocks1.7.norm2.weight', 'blocks1.7.norm2.bias', 'blocks1.7.mlp.fc1.weight', 'blocks1.7.mlp.fc1.bias', 'blocks1.7.mlp.fc2.weight', 'blocks1.7.mlp.fc2.bias', 'block_to_block1.weight', 'block_to_block1.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-07-16 02:44:21 - [34m[1mLOGS   [0m - [36mModel[0m
+ViTamin(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 768, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(768, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((768,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (block_to_block1): LinearLayer(in_features=768, out_features=1024, bias=True, channel_first=False)
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=6743, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                            ViTamin Summary
+[31m=================================================================[0m
+Total parameters     =  178.598 M
+Total trainable parameters =  178.598 M
+
+2024-07-16 02:44:21 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-16 02:44:21 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 256, 256]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.179G                 | 29.653G    |
+|  pos_embed                           |  (1, 1, 768)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  4.243M                |  7.361G    |
+|   patch_embed.backbone.stem          |   0.151M               |   2.483G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    56.623M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    10.486M |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    2.416G  |
+|   patch_embed.backbone.stages        |   2.321M               |   4.424G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.93G   |
+|    patch_embed.backbone.stages.1     |    2.047M              |    2.494G  |
+|   patch_embed.backbone.pool          |   1.771M               |   0.454G   |
+|    patch_embed.backbone.pool.proj    |    1.77M               |    0.453G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.311M  |
+|  blocks                              |  56.703M               |  14.511G   |
+|   blocks.0                           |   7.088M               |   1.814G   |
+|    blocks.0.norm1                    |    1.536K              |    0.983M  |
+|    blocks.0.attn                     |    2.362M              |    0.604G  |
+|    blocks.0.norm2                    |    1.536K              |    0.983M  |
+|    blocks.0.mlp                      |    4.722M              |    1.208G  |
+|   blocks.1                           |   7.088M               |   1.814G   |
+|    blocks.1.norm1                    |    1.536K              |    0.983M  |
+|    blocks.1.attn                     |    2.362M              |    0.604G  |
+|    blocks.1.norm2                    |    1.536K              |    0.983M  |
+|    blocks.1.mlp                      |    4.722M              |    1.208G  |
+|   blocks.2                           |   7.088M               |   1.814G   |
+|    blocks.2.norm1                    |    1.536K              |    0.983M  |
+|    blocks.2.attn                     |    2.362M              |    0.604G  |
+|    blocks.2.norm2                    |    1.536K              |    0.983M  |
+|    blocks.2.mlp                      |    4.722M              |    1.208G  |
+|   blocks.3                           |   7.088M               |   1.814G   |
+|    blocks.3.norm1                    |    1.536K              |    0.983M  |
+|    blocks.3.attn                     |    2.362M              |    0.604G  |
+|    blocks.3.norm2                    |    1.536K              |    0.983M  |
+|    blocks.3.mlp                      |    4.722M              |    1.208G  |
+|   blocks.4                           |   7.088M               |   1.814G   |
+|    blocks.4.norm1                    |    1.536K              |    0.983M  |
+|    blocks.4.attn                     |    2.362M              |    0.604G  |
+|    blocks.4.norm2                    |    1.536K              |    0.983M  |
+|    blocks.4.mlp                      |    4.722M              |    1.208G  |
+|   blocks.5                           |   7.088M               |   1.814G   |
+|    blocks.5.norm1                    |    1.536K              |    0.983M  |
+|    blocks.5.attn                     |    2.362M              |    0.604G  |
+|    blocks.5.norm2                    |    1.536K              |    0.983M  |
+|    blocks.5.mlp                      |    4.722M              |    1.208G  |
+|   blocks.6                           |   7.088M               |   1.814G   |
+|    blocks.6.norm1                    |    1.536K              |    0.983M  |
+|    blocks.6.attn                     |    2.362M              |    0.604G  |
+|    blocks.6.norm2                    |    1.536K              |    0.983M  |
+|    blocks.6.mlp                      |    4.722M              |    1.208G  |
+|   blocks.7                           |   7.088M               |   1.814G   |
+|    blocks.7.norm1                    |    1.536K              |    0.983M  |
+|    blocks.7.attn                     |    2.362M              |    0.604G  |
+|    blocks.7.norm2                    |    1.536K              |    0.983M  |
+|    blocks.7.mlp                      |    4.722M              |    1.208G  |
+|  pool                                |  7.08M                 |  0.454G    |
+|   pool.proj                          |   7.079M               |   0.453G   |
+|    pool.proj.weight                  |    (1024, 768, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.536K               |   0.983M   |
+|    pool.norm.weight                  |    (768,)              |            |
+|    pool.norm.bias                    |    (768,)              |            |
+|  blocks1                             |  0.101G                |  6.448G    |
+|   blocks1.0                          |   12.596M              |   0.806G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.0.attn                    |    4.198M              |    0.268G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.0.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.1                          |   12.596M              |   0.806G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.1.attn                    |    4.198M              |    0.268G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.1.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.2                          |   12.596M              |   0.806G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.2.attn                    |    4.198M              |    0.268G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.2.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.3                          |   12.596M              |   0.806G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.3.attn                    |    4.198M              |    0.268G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.3.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.4                          |   12.596M              |   0.806G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.4.attn                    |    4.198M              |    0.268G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.4.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.5                          |   12.596M              |   0.806G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.5.attn                    |    4.198M              |    0.268G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.5.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.6                          |   12.596M              |   0.806G   |
+|    blocks1.6.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.6.attn                    |    4.198M              |    0.268G  |
+|    blocks1.6.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.6.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.7                          |   12.596M              |   0.806G   |
+|    blocks1.7.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.7.attn                    |    4.198M              |    0.268G  |
+|    blocks1.7.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.7.mlp                     |    8.394M              |    0.537G  |
+|  block_to_block1                     |  0.787M                |  0.201G    |
+|   block_to_block1.weight             |   (1024, 768)          |            |
+|   block_to_block1.bias               |   (1024,)              |            |
+|  mlp                                 |  2.099M                |  0.671G    |
+|   mlp.0                              |   1.05M                |   0.336G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.336G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  6.912M                |  6.905M    |
+|   classifier.weight                  |   (6743, 1024)         |            |
+|   classifier.bias                    |   (6743,)              |            |
+2024-07-16 02:44:22 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-16 02:44:22 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks.3.drop_path1', 'blocks1.0.drop_path1', 'blocks1.2.attn.k_norm', 'blocks1.3.mlp.norm', 'patch_embed.backbone.stages.1.3.down', 'blocks.0.ls1', 'blocks1.5.attn.q_norm', 'blocks.1.drop_path1', 'blocks.3.attn.k_norm', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'neural_augmentor.brightness.min_fn', 'blocks1.7.ls1', 'blocks1.2.attn.attn_drop', 'blocks.2.attn.k_norm', 'patch_embed.backbone.stages.0.0.drop_path', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.1.attn.attn_drop', 'blocks.7.mlp.norm', 'neural_augmentor.noise.min_fn', 'blocks1.0.mlp.norm', 'blocks1.0.attn.attn_drop', 'neural_augmentor.noise.max_fn', 'blocks1.2.ls1', 'blocks1.5.ls1', 'blocks.7.drop_path2', 'patch_embed.backbone.stages.0.1.down', 'patch_embed.backbone.stem.norm1.drop', 'patch_embed.proj', 'blocks1.1.attn.attn_drop', 'blocks1.3.attn.q_norm', 'blocks1.1.mlp.norm', 'neural_augmentor.contrast', 'norm_pre', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks1.6.drop_path1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks.3.mlp.norm', 'blocks.2.mlp.norm', 'blocks.3.drop_path2', 'blocks.0.attn.attn_drop', 'blocks1.1.ls2', 'blocks1.5.drop_path2', 'blocks1.4.mlp.norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.0.ls1', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks1.2.ls2', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.5.mlp.norm', 'blocks.5.ls1', 'blocks.7.ls1', 'blocks.1.ls1', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks1.1.ls1', 'blocks1.6.drop_path2', 'blocks1.7.drop_path1', 'patch_embed.backbone.stages.1.1.down', 'blocks.0.attn.q_norm', 'blocks.6.attn.k_norm', 'blocks.5.ls2', 'neural_augmentor.brightness.max_fn', 'blocks.4.drop_path1', 'blocks.1.attn.k_norm', 'blocks1.6.ls2', 'blocks.3.attn.attn_drop', 'blocks1.6.mlp.norm', 'blocks1.0.ls2', 'blocks.0.attn.k_norm', 'blocks.2.attn.q_norm', 'blocks1.7.ls2', 'patch_embed.backbone.stages.1.2.down', 'blocks.0.drop_path2', 'blocks.7.ls2', 'blocks1.3.drop_path1', 'blocks1.0.drop_path2', 'blocks1.2.attn.q_norm', 'blocks.6.attn.q_norm', 'blocks.1.ls2', 'blocks.6.attn.attn_drop', 'blocks1.0.attn.k_norm', 'blocks1.5.ls2', 'blocks.4.mlp.norm', 'blocks.7.attn.q_norm', 'blocks1.6.attn.attn_drop', 'blocks1.4.attn.attn_drop', 'neural_augmentor.noise', 'blocks.5.attn.attn_drop', 'blocks.7.attn.attn_drop', 'blocks.3.ls1', 'blocks1.1.attn.q_norm', 'blocks.4.ls1', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks.3.attn.q_norm', 'blocks1.1.drop_path1', 'blocks.5.attn.q_norm', 'blocks1.7.mlp.norm', 'blocks.5.drop_path2', 'blocks.2.drop_path1', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks1.4.attn.k_norm', 'neural_augmentor.contrast.min_fn', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks1.5.attn.attn_drop', 'blocks.6.drop_path1', 'blocks.3.ls2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks.2.ls2', 'blocks1.1.attn.k_norm', 'patch_drop', 'blocks1.3.attn.attn_drop', 'blocks.7.attn.k_norm', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks.6.ls2', 'blocks1.2.drop_path2', 'blocks.6.mlp.norm', 'patch_embed.backbone.stages.1.0.down', 'blocks1.0.attn.q_norm', 'blocks1.2.drop_path1', 'blocks.5.drop_path1', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.3.attn.k_norm', 'blocks1.1.drop_path2', 'blocks.0.mlp.norm', 'blocks1.5.attn.k_norm', 'blocks.1.attn.q_norm', 'blocks.4.ls2', 'blocks1.6.ls1', 'blocks.0.ls2', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks.1.drop_path2', 'blocks.2.attn.attn_drop', 'blocks1.5.mlp.norm', 'blocks1.4.attn.q_norm', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.2.ls1', 'blocks.5.attn.k_norm', 'blocks1.7.attn.k_norm', 'blocks1.3.ls2', 'blocks1.6.attn.q_norm', 'blocks1.6.attn.k_norm', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'neural_augmentor', 'blocks.7.drop_path1', 'blocks1.3.drop_path2', 'blocks.6.drop_path2', 'blocks.1.mlp.norm', 'blocks.4.drop_path2', 'blocks1.4.drop_path2', 'blocks.6.ls1', 'blocks1.5.drop_path1', 'blocks1.4.drop_path1', 'blocks.4.attn.attn_drop', 'blocks1.4.ls1', 'blocks.2.drop_path2', 'neural_augmentor.brightness', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'patch_embed.backbone.stages.0.0.down', 'neural_augmentor.contrast.max_fn', 'norm', 'blocks1.3.ls1', 'blocks1.7.drop_path2', 'blocks1.2.mlp.norm', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks1.7.attn.attn_drop', 'blocks.0.drop_path1', 'blocks1.7.attn.q_norm', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.4.attn.q_norm', 'patch_embed.backbone.stages.1.0.pre_norm.act'}
+2024-07-16 02:44:22 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 39, 'aten::gelu': 30, 'aten::scaled_dot_product_attention': 16, 'aten::avg_pool2d': 2, 'aten::sum': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-07-16 02:44:22 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-07-16 02:44:22 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-07-16 02:44:22 - [34m[1mLOGS   [0m - Available GPUs: 6
+2024-07-16 02:44:22 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-07-16 02:44:22 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_base500_dci/train
+2024-07-16 02:44:26 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:40001
+base
+2024-07-16 02:44:26 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:40001
+base
+2024-07-16 02:44:26 - [32m[1mINFO   [0m - distributed init (rank 5): tcp://localhost:40001
+base
+2024-07-16 02:44:25 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:40001
+2024-07-16 02:44:29 - [34m[1mLOGS   [0m - Training dataset details are given below
+WordnetTaggedClassificationDataset(
+	root= 
+	is_training=True 
+	num_samples=64290000
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	total_tar_files=6429
+	max_files_per_tar=10000
+	num_synsets=6743
+)
+2024-07-16 02:44:31 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=True
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=300
+	 scales=[(128, 128, 918), (144, 144, 725), (160, 160, 588), (176, 176, 485), (192, 192, 408), (208, 208, 347), (224, 224, 300), (240, 240, 261), (256, 256, 229), (272, 272, 203), (288, 288, 181), (304, 304, 162), (320, 320, 147)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-07-16 02:44:31 - [34m[1mLOGS   [0m - Number of data workers: 64
+base
+2024-07-16 02:44:33 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.fc1.weight', 'blocks.0.mlp.fc1.bias', 'blocks.0.mlp.fc2.weight', 'blocks.0.mlp.fc2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.fc1.weight', 'blocks.1.mlp.fc1.bias', 'blocks.1.mlp.fc2.weight', 'blocks.1.mlp.fc2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.fc1.weight', 'blocks.2.mlp.fc1.bias', 'blocks.2.mlp.fc2.weight', 'blocks.2.mlp.fc2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.fc1.weight', 'blocks.3.mlp.fc1.bias', 'blocks.3.mlp.fc2.weight', 'blocks.3.mlp.fc2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.fc1.weight', 'blocks.4.mlp.fc1.bias', 'blocks.4.mlp.fc2.weight', 'blocks.4.mlp.fc2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.fc1.weight', 'blocks.5.mlp.fc1.bias', 'blocks.5.mlp.fc2.weight', 'blocks.5.mlp.fc2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.fc1.weight', 'blocks.6.mlp.fc1.bias', 'blocks.6.mlp.fc2.weight', 'blocks.6.mlp.fc2.bias', 'blocks.7.norm1.weight', 'blocks.7.norm1.bias', 'blocks.7.attn.qkv.weight', 'blocks.7.attn.qkv.bias', 'blocks.7.attn.proj.weight', 'blocks.7.attn.proj.bias', 'blocks.7.norm2.weight', 'blocks.7.norm2.bias', 'blocks.7.mlp.fc1.weight', 'blocks.7.mlp.fc1.bias', 'blocks.7.mlp.fc2.weight', 'blocks.7.mlp.fc2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.fc1.weight', 'blocks1.0.mlp.fc1.bias', 'blocks1.0.mlp.fc2.weight', 'blocks1.0.mlp.fc2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.fc1.weight', 'blocks1.1.mlp.fc1.bias', 'blocks1.1.mlp.fc2.weight', 'blocks1.1.mlp.fc2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.fc1.weight', 'blocks1.2.mlp.fc1.bias', 'blocks1.2.mlp.fc2.weight', 'blocks1.2.mlp.fc2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.fc1.weight', 'blocks1.3.mlp.fc1.bias', 'blocks1.3.mlp.fc2.weight', 'blocks1.3.mlp.fc2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.fc1.weight', 'blocks1.4.mlp.fc1.bias', 'blocks1.4.mlp.fc2.weight', 'blocks1.4.mlp.fc2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.fc1.weight', 'blocks1.5.mlp.fc1.bias', 'blocks1.5.mlp.fc2.weight', 'blocks1.5.mlp.fc2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.fc1.weight', 'blocks1.6.mlp.fc1.bias', 'blocks1.6.mlp.fc2.weight', 'blocks1.6.mlp.fc2.bias', 'blocks1.7.norm1.weight', 'blocks1.7.norm1.bias', 'blocks1.7.attn.qkv.weight', 'blocks1.7.attn.qkv.bias', 'blocks1.7.attn.proj.weight', 'blocks1.7.attn.proj.bias', 'blocks1.7.norm2.weight', 'blocks1.7.norm2.bias', 'blocks1.7.mlp.fc1.weight', 'blocks1.7.mlp.fc1.bias', 'blocks1.7.mlp.fc2.weight', 'blocks1.7.mlp.fc2.bias', 'block_to_block1.weight', 'block_to_block1.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-07-16 02:44:33 - [34m[1mLOGS   [0m - [36mModel[0m
+ViTamin(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 768, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=768, out_features=2304, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=768, out_features=768, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(768, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((768,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (block_to_block1): LinearLayer(in_features=768, out_features=1024, bias=True, channel_first=False)
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=6743, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                            ViTamin Summary
+[31m=================================================================[0m
+Total parameters     =  178.598 M
+Total trainable parameters =  178.598 M
+
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 256, 256]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.179G                 | 29.653G    |
+|  pos_embed                           |  (1, 1, 768)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  4.243M                |  7.361G    |
+|   patch_embed.backbone.stem          |   0.151M               |   2.483G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    56.623M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    10.486M |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    2.416G  |
+|   patch_embed.backbone.stages        |   2.321M               |   4.424G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.93G   |
+|    patch_embed.backbone.stages.1     |    2.047M              |    2.494G  |
+|   patch_embed.backbone.pool          |   1.771M               |   0.454G   |
+|    patch_embed.backbone.pool.proj    |    1.77M               |    0.453G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.311M  |
+|  blocks                              |  56.703M               |  14.511G   |
+|   blocks.0                           |   7.088M               |   1.814G   |
+|    blocks.0.norm1                    |    1.536K              |    0.983M  |
+|    blocks.0.attn                     |    2.362M              |    0.604G  |
+|    blocks.0.norm2                    |    1.536K              |    0.983M  |
+|    blocks.0.mlp                      |    4.722M              |    1.208G  |
+|   blocks.1                           |   7.088M               |   1.814G   |
+|    blocks.1.norm1                    |    1.536K              |    0.983M  |
+|    blocks.1.attn                     |    2.362M              |    0.604G  |
+|    blocks.1.norm2                    |    1.536K              |    0.983M  |
+|    blocks.1.mlp                      |    4.722M              |    1.208G  |
+|   blocks.2                           |   7.088M               |   1.814G   |
+|    blocks.2.norm1                    |    1.536K              |    0.983M  |
+|    blocks.2.attn                     |    2.362M              |    0.604G  |
+|    blocks.2.norm2                    |    1.536K              |    0.983M  |
+|    blocks.2.mlp                      |    4.722M              |    1.208G  |
+|   blocks.3                           |   7.088M               |   1.814G   |
+|    blocks.3.norm1                    |    1.536K              |    0.983M  |
+|    blocks.3.attn                     |    2.362M              |    0.604G  |
+|    blocks.3.norm2                    |    1.536K              |    0.983M  |
+|    blocks.3.mlp                      |    4.722M              |    1.208G  |
+|   blocks.4                           |   7.088M               |   1.814G   |
+|    blocks.4.norm1                    |    1.536K              |    0.983M  |
+|    blocks.4.attn                     |    2.362M              |    0.604G  |
+|    blocks.4.norm2                    |    1.536K              |    0.983M  |
+|    blocks.4.mlp                      |    4.722M              |    1.208G  |
+|   blocks.5                           |   7.088M               |   1.814G   |
+|    blocks.5.norm1                    |    1.536K              |    0.983M  |
+|    blocks.5.attn                     |    2.362M              |    0.604G  |
+|    blocks.5.norm2                    |    1.536K              |    0.983M  |
+|    blocks.5.mlp                      |    4.722M              |    1.208G  |
+|   blocks.6                           |   7.088M               |   1.814G   |
+|    blocks.6.norm1                    |    1.536K              |    0.983M  |
+|    blocks.6.attn                     |    2.362M              |    0.604G  |
+|    blocks.6.norm2                    |    1.536K              |    0.983M  |
+|    blocks.6.mlp                      |    4.722M              |    1.208G  |
+|   blocks.7                           |   7.088M               |   1.814G   |
+|    blocks.7.norm1                    |    1.536K              |    0.983M  |
+|    blocks.7.attn                     |    2.362M              |    0.604G  |
+|    blocks.7.norm2                    |    1.536K              |    0.983M  |
+|    blocks.7.mlp                      |    4.722M              |    1.208G  |
+|  pool                                |  7.08M                 |  0.454G    |
+|   pool.proj                          |   7.079M               |   0.453G   |
+|    pool.proj.weight                  |    (1024, 768, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.536K               |   0.983M   |
+|    pool.norm.weight                  |    (768,)              |            |
+|    pool.norm.bias                    |    (768,)              |            |
+|  blocks1                             |  0.101G                |  6.448G    |
+|   blocks1.0                          |   12.596M              |   0.806G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.0.attn                    |    4.198M              |    0.268G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.0.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.1                          |   12.596M              |   0.806G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.1.attn                    |    4.198M              |    0.268G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.1.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.2                          |   12.596M              |   0.806G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.2.attn                    |    4.198M              |    0.268G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.2.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.3                          |   12.596M              |   0.806G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.3.attn                    |    4.198M              |    0.268G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.3.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.4                          |   12.596M              |   0.806G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.4.attn                    |    4.198M              |    0.268G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.4.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.5                          |   12.596M              |   0.806G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.5.attn                    |    4.198M              |    0.268G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.5.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.6                          |   12.596M              |   0.806G   |
+|    blocks1.6.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.6.attn                    |    4.198M              |    0.268G  |
+|    blocks1.6.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.6.mlp                     |    8.394M              |    0.537G  |
+|   blocks1.7                          |   12.596M              |   0.806G   |
+|    blocks1.7.norm1                   |    2.048K              |    0.328M  |
+|    blocks1.7.attn                    |    4.198M              |    0.268G  |
+|    blocks1.7.norm2                   |    2.048K              |    0.328M  |
+|    blocks1.7.mlp                     |    8.394M              |    0.537G  |
+|  block_to_block1                     |  0.787M                |  0.201G    |
+|   block_to_block1.weight             |   (1024, 768)          |            |
+|   block_to_block1.bias               |   (1024,)              |            |
+|  mlp                                 |  2.099M                |  0.671G    |
+|   mlp.0                              |   1.05M                |   0.336G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.336G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  6.912M                |  6.905M    |
+|   classifier.weight                  |   (6743, 1024)         |            |
+|   classifier.bias                    |   (6743,)              |            |
+2024-07-16 02:44:34 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-16 02:44:34 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.1.attn.attn_drop', 'blocks1.5.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks1.4.ls1', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks.4.drop_path1', 'blocks1.2.ls2', 'blocks.1.drop_path2', 'blocks.4.ls1', 'blocks.3.ls1', 'neural_augmentor.noise.min_fn', 'blocks.4.mlp.norm', 'blocks.3.attn.q_norm', 'blocks1.4.drop_path1', 'blocks.7.ls1', 'blocks.1.drop_path1', 'blocks1.2.ls1', 'blocks.5.drop_path1', 'blocks.6.ls2', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks1.7.mlp.norm', 'blocks1.7.attn.attn_drop', 'blocks1.1.mlp.norm', 'blocks.1.mlp.norm', 'patch_embed.backbone.stages.1.2.drop_path', 'neural_augmentor.noise', 'blocks1.4.mlp.norm', 'blocks.5.ls1', 'blocks.5.attn.attn_drop', 'blocks1.1.attn.q_norm', 'blocks.6.ls1', 'blocks.1.attn.q_norm', 'blocks1.4.drop_path2', 'blocks1.0.drop_path1', 'blocks1.6.ls2', 'patch_embed.backbone.stages.1.2.down', 'neural_augmentor.brightness.min_fn', 'blocks1.0.drop_path2', 'patch_embed.backbone.stages.1.3.down', 'blocks.3.mlp.norm', 'neural_augmentor', 'blocks.2.ls2', 'blocks1.5.mlp.norm', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.5.ls2', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks1.2.attn.q_norm', 'blocks1.3.ls1', 'blocks.5.drop_path2', 'patch_embed.proj', 'blocks.7.mlp.norm', 'patch_embed.backbone.stages.0.0.down', 'blocks1.6.attn.attn_drop', 'blocks.3.ls2', 'blocks.6.attn.k_norm', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks1.7.attn.q_norm', 'blocks1.1.drop_path1', 'blocks.4.attn.q_norm', 'blocks1.5.attn.k_norm', 'blocks1.3.attn.q_norm', 'blocks1.5.attn.q_norm', 'blocks.1.attn.k_norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.0.drop_path2', 'blocks1.2.drop_path2', 'blocks1.0.mlp.norm', 'blocks.4.attn.k_norm', 'blocks1.5.drop_path2', 'blocks.7.drop_path1', 'blocks.7.attn.attn_drop', 'blocks.1.ls1', 'blocks.7.drop_path2', 'patch_embed.backbone.stages.1.3.shortcut', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks.0.drop_path1', 'blocks.1.attn.attn_drop', 'blocks.2.attn.k_norm', 'blocks.6.attn.attn_drop', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks1.6.drop_path1', 'norm_pre', 'blocks.0.attn.k_norm', 'blocks.4.drop_path2', 'norm', 'blocks1.6.mlp.norm', 'blocks1.1.ls2', 'blocks.0.attn.attn_drop', 'blocks1.2.drop_path1', 'patch_embed.backbone.stages.0.1.shortcut', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks1.3.attn.k_norm', 'blocks.7.ls2', 'blocks1.5.ls2', 'blocks.2.mlp.norm', 'blocks.3.drop_path2', 'blocks1.3.mlp.norm', 'blocks1.6.attn.k_norm', 'blocks1.4.ls2', 'blocks1.7.ls2', 'blocks1.3.drop_path2', 'blocks1.2.mlp.norm', 'blocks.2.drop_path1', 'blocks1.0.attn.k_norm', 'neural_augmentor.contrast.max_fn', 'neural_augmentor.brightness.max_fn', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks.6.drop_path2', 'blocks.0.attn.q_norm', 'blocks.2.drop_path2', 'blocks.6.drop_path1', 'blocks.5.mlp.norm', 'blocks1.7.drop_path2', 'blocks.5.attn.k_norm', 'blocks1.4.attn.q_norm', 'blocks.2.ls1', 'blocks.3.attn.k_norm', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks1.1.attn.k_norm', 'blocks1.7.ls1', 'neural_augmentor.noise.max_fn', 'neural_augmentor.contrast.min_fn', 'patch_embed.backbone.stages.1.1.drop_path', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.7.attn.k_norm', 'blocks1.6.drop_path2', 'blocks1.2.attn.k_norm', 'neural_augmentor.brightness', 'blocks1.4.attn.k_norm', 'blocks.4.ls2', 'blocks1.7.drop_path1', 'patch_embed.backbone.stem.norm1.drop', 'blocks.3.drop_path1', 'blocks1.1.ls1', 'blocks.0.ls1', 'blocks.6.attn.q_norm', 'patch_embed.backbone.stages.0.1.down', 'blocks.1.ls2', 'blocks1.1.drop_path2', 'blocks1.3.attn.attn_drop', 'blocks1.3.drop_path1', 'blocks1.4.attn.attn_drop', 'patch_embed.backbone.stages.1.0.down', 'blocks1.0.ls1', 'blocks.7.attn.q_norm', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.0.ls2', 'blocks1.3.ls2', 'blocks.0.mlp.norm', 'neural_augmentor.contrast', 'blocks1.7.attn.k_norm', 'patch_embed.backbone.stages.1.1.down', 'blocks1.0.ls2', 'blocks.2.attn.q_norm', 'blocks.3.attn.attn_drop', 'blocks1.0.attn.q_norm', 'blocks.2.attn.attn_drop', 'patch_drop', 'blocks.4.attn.attn_drop', 'blocks1.6.ls1', 'blocks.5.attn.q_norm', 'blocks1.5.ls1', 'blocks1.5.drop_path1', 'blocks1.0.attn.attn_drop', 'blocks1.6.attn.q_norm', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks.6.mlp.norm', 'blocks1.2.attn.attn_drop'}
+2024-07-16 02:44:34 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 39, 'aten::gelu': 30, 'aten::scaled_dot_product_attention': 16, 'aten::avg_pool2d': 2, 'aten::sum': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	BinaryCrossEntropy(  reduction=batch_mean loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - Max. iteration for training: 1000000
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=1e-05
+ 	 max_lr=0.001
+ 	 period=990001
+ 	 warmup_init_lr=1e-06
+ 	 warmup_iters=10000
+ )
+2024-07-16 02:44:34 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/results_base500_dci/train/training_checkpoint_last.pt'
+2024-07-16 02:44:34 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_base500_dci/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-07-16 02:44:36 - [32m[1mINFO   [0m - Training epoch 0
+2024-07-16 02:44:26 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:40001
+base
+2024-07-16 02:44:26 - [32m[1mINFO   [0m - distributed init (rank 4): tcp://localhost:40001
+base
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-07-16 02:48:45 - [34m[1mLOGS   [0m - Epoch:   0 [       1/ 1000000], loss: {'classification': 4887.9461, 'neural_augmentation': 8.4207, 'total_loss': 4896.3667}, LR: [1e-06, 1e-06], Avg. batch load time: 242.243, Elapsed time: 248.37
+2024-07-16 02:55:08 - [34m[1mLOGS   [0m - Epoch:   0 [     501/ 1000000], loss: {'classification': 1056.399, 'neural_augmentation': 9.2423, 'total_loss': 1065.6413}, LR: [5.1e-05, 5.1e-05], Avg. batch load time: 0.501, Elapsed time: 631.49
+2024-07-16 03:01:14 - [34m[1mLOGS   [0m - Epoch:   0 [    1001/ 1000000], loss: {'classification': 542.0148, 'neural_augmentation': 9.2691, 'total_loss': 551.2839}, LR: [0.000101, 0.000101], Avg. batch load time: 0.251, Elapsed time: 997.79
+2024-07-16 03:07:25 - [34m[1mLOGS   [0m - Epoch:   0 [    1501/ 1000000], loss: {'classification': 370.6315, 'neural_augmentation': 9.2484, 'total_loss': 379.8799}, LR: [0.000151, 0.000151], Avg. batch load time: 0.168, Elapsed time: 1368.18
+2024-07-16 03:13:32 - [34m[1mLOGS   [0m - Epoch:   0 [    2001/ 1000000], loss: {'classification': 284.23, 'neural_augmentation': 9.2074, 'total_loss': 293.4374}, LR: [0.000201, 0.000201], Avg. batch load time: 0.126, Elapsed time: 1735.53
+2024-07-16 03:19:39 - [34m[1mLOGS   [0m - Epoch:   0 [    2501/ 1000000], loss: {'classification': 233.4984, 'neural_augmentation': 9.1449, 'total_loss': 242.6432}, LR: [0.000251, 0.000251], Avg. batch load time: 0.101, Elapsed time: 2102.89
+2024-07-16 03:25:49 - [34m[1mLOGS   [0m - Epoch:   0 [    3001/ 1000000], loss: {'classification': 198.9989, 'neural_augmentation': 9.0664, 'total_loss': 208.0654}, LR: [0.000301, 0.000301], Avg. batch load time: 0.084, Elapsed time: 2472.69
+2024-07-16 03:31:57 - [34m[1mLOGS   [0m - Epoch:   0 [    3501/ 1000000], loss: {'classification': 174.1637, 'neural_augmentation': 8.9692, 'total_loss': 183.1329}, LR: [0.000351, 0.000351], Avg. batch load time: 0.072, Elapsed time: 2840.23
+2024-07-16 03:38:05 - [34m[1mLOGS   [0m - Epoch:   0 [    4001/ 1000000], loss: {'classification': 155.757, 'neural_augmentation': 8.8501, 'total_loss': 164.6071}, LR: [0.000401, 0.000401], Avg. batch load time: 0.063, Elapsed time: 3208.18
+2024-07-16 03:44:14 - [34m[1mLOGS   [0m - Epoch:   0 [    4501/ 1000000], loss: {'classification': 140.8255, 'neural_augmentation': 8.7027, 'total_loss': 149.5282}, LR: [0.000451, 0.000451], Avg. batch load time: 0.056, Elapsed time: 3577.88
+2024-07-16 03:50:22 - [34m[1mLOGS   [0m - Epoch:   0 [    5001/ 1000000], loss: {'classification': 129.1173, 'neural_augmentation': 8.5339, 'total_loss': 137.6512}, LR: [0.0005, 0.0005], Avg. batch load time: 0.051, Elapsed time: 3945.26
+2024-07-16 03:56:32 - [34m[1mLOGS   [0m - Epoch:   0 [    5501/ 1000000], loss: {'classification': 119.2239, 'neural_augmentation': 8.3286, 'total_loss': 127.5525}, LR: [0.00055, 0.00055], Avg. batch load time: 0.046, Elapsed time: 4315.48
+2024-07-16 04:02:39 - [34m[1mLOGS   [0m - Epoch:   0 [    6001/ 1000000], loss: {'classification': 111.1593, 'neural_augmentation': 8.1013, 'total_loss': 119.2606}, LR: [0.0006, 0.0006], Avg. batch load time: 0.042, Elapsed time: 4682.88
+2024-07-16 04:08:47 - [34m[1mLOGS   [0m - Epoch:   0 [    6501/ 1000000], loss: {'classification': 104.2306, 'neural_augmentation': 7.8452, 'total_loss': 112.0758}, LR: [0.00065, 0.00065], Avg. batch load time: 0.039, Elapsed time: 5050.58
+2024-07-16 04:14:57 - [34m[1mLOGS   [0m - Epoch:   0 [    7001/ 1000000], loss: {'classification': 98.3796, 'neural_augmentation': 7.5759, 'total_loss': 105.9555}, LR: [0.0007, 0.0007], Avg. batch load time: 0.037, Elapsed time: 5420.77
+2024-07-16 04:21:05 - [34m[1mLOGS   [0m - Epoch:   0 [    7501/ 1000000], loss: {'classification': 93.1483, 'neural_augmentation': 7.2864, 'total_loss': 100.4346}, LR: [0.00075, 0.00075], Avg. batch load time: 0.034, Elapsed time: 5788.51
+2024-07-16 04:27:15 - [34m[1mLOGS   [0m - Epoch:   0 [    8001/ 1000000], loss: {'classification': 88.7654, 'neural_augmentation': 7.0072, 'total_loss': 95.7726}, LR: [0.0008, 0.0008], Avg. batch load time: 0.032, Elapsed time: 6158.07
+2024-07-16 04:33:22 - [34m[1mLOGS   [0m - Epoch:   0 [    8501/ 1000000], loss: {'classification': 84.8945, 'neural_augmentation': 6.7347, 'total_loss': 91.6292}, LR: [0.00085, 0.00085], Avg. batch load time: 0.030, Elapsed time: 6525.32
+2024-07-16 04:39:29 - [34m[1mLOGS   [0m - Epoch:   0 [    9001/ 1000000], loss: {'classification': 81.3802, 'neural_augmentation': 6.4644, 'total_loss': 87.8446}, LR: [0.0009, 0.0009], Avg. batch load time: 0.029, Elapsed time: 6892.52
+2024-07-16 04:45:39 - [34m[1mLOGS   [0m - Epoch:   0 [    9501/ 1000000], loss: {'classification': 78.2445, 'neural_augmentation': 6.201, 'total_loss': 84.4454}, LR: [0.00095, 0.00095], Avg. batch load time: 0.027, Elapsed time: 7262.51
+2024-07-16 04:51:46 - [34m[1mLOGS   [0m - Epoch:   0 [   10001/ 1000000], loss: {'classification': 75.4989, 'neural_augmentation': 5.9597, 'total_loss': 81.4585}, LR: [0.001, 0.001], Avg. batch load time: 0.026, Elapsed time: 7629.61
+2024-07-16 04:57:53 - [34m[1mLOGS   [0m - Epoch:   0 [   10501/ 1000000], loss: {'classification': 73.0757, 'neural_augmentation': 5.7383, 'total_loss': 78.814}, LR: [0.001, 0.001], Avg. batch load time: 0.025, Elapsed time: 7996.86
+2024-07-16 05:04:04 - [34m[1mLOGS   [0m - Epoch:   0 [   11001/ 1000000], loss: {'classification': 70.8599, 'neural_augmentation': 5.5294, 'total_loss': 76.3893}, LR: [0.001, 0.001], Avg. batch load time: 0.023, Elapsed time: 8367.19
+2024-07-16 05:10:10 - [34m[1mLOGS   [0m - Epoch:   0 [   11501/ 1000000], loss: {'classification': 68.7691, 'neural_augmentation': 5.3268, 'total_loss': 74.0959}, LR: [0.001, 0.001], Avg. batch load time: 0.022, Elapsed time: 8733.92
+2024-07-16 05:16:20 - [34m[1mLOGS   [0m - Epoch:   0 [   12001/ 1000000], loss: {'classification': 66.8643, 'neural_augmentation': 5.1395, 'total_loss': 72.0038}, LR: [0.001, 0.001], Avg. batch load time: 0.022, Elapsed time: 9103.72
+2024-07-16 05:22:27 - [34m[1mLOGS   [0m - Epoch:   0 [   12501/ 1000000], loss: {'classification': 65.1963, 'neural_augmentation': 4.9729, 'total_loss': 70.1692}, LR: [0.001, 0.001], Avg. batch load time: 0.021, Elapsed time: 9470.40
+2024-07-16 05:29:55 - [34m[1mLOGS   [0m - Epoch:   0 [   13001/ 1000000], loss: {'classification': 63.5476, 'neural_augmentation': 4.8056, 'total_loss': 68.3531}, LR: [0.001, 0.001], Avg. batch load time: 0.026, Elapsed time: 9918.51
+2024-07-16 05:38:10 - [34m[1mLOGS   [0m - Epoch:   0 [   13501/ 1000000], loss: {'classification': 62.0243, 'neural_augmentation': 4.6496, 'total_loss': 66.6739}, LR: [0.001, 0.001], Avg. batch load time: 0.033, Elapsed time: 10413.90
+2024-07-16 05:46:11 - [34m[1mLOGS   [0m - Epoch:   0 [   14001/ 1000000], loss: {'classification': 60.6007, 'neural_augmentation': 4.5039, 'total_loss': 65.1046}, LR: [0.001, 0.001], Avg. batch load time: 0.039, Elapsed time: 10894.18
+2024-07-16 05:54:19 - [34m[1mLOGS   [0m - Epoch:   0 [   14501/ 1000000], loss: {'classification': 59.3316, 'neural_augmentation': 4.3735, 'total_loss': 63.7052}, LR: [0.001, 0.001], Avg. batch load time: 0.045, Elapsed time: 11382.75
+2024-07-16 06:02:55 - [34m[1mLOGS   [0m - Epoch:   0 [   15001/ 1000000], loss: {'classification': 58.0771, 'neural_augmentation': 4.2392, 'total_loss': 62.3163}, LR: [0.001, 0.001], Avg. batch load time: 0.053, Elapsed time: 11898.58
+2024-07-16 06:11:12 - [34m[1mLOGS   [0m - Epoch:   0 [   15501/ 1000000], loss: {'classification': 56.9607, 'neural_augmentation': 4.1193, 'total_loss': 61.0799}, LR: [0.001, 0.001], Avg. batch load time: 0.059, Elapsed time: 12395.11
+2024-07-16 06:19:44 - [34m[1mLOGS   [0m - Epoch:   0 [   16001/ 1000000], loss: {'classification': 55.8535, 'neural_augmentation': 3.9996, 'total_loss': 59.8531}, LR: [0.001, 0.001], Avg. batch load time: 0.064, Elapsed time: 12907.76
+2024-07-16 06:28:20 - [34m[1mLOGS   [0m - Epoch:   0 [   16501/ 1000000], loss: {'classification': 54.7936, 'neural_augmentation': 3.8843, 'total_loss': 58.6779}, LR: [0.001, 0.001], Avg. batch load time: 0.071, Elapsed time: 13423.56
+2024-07-16 06:36:49 - [34m[1mLOGS   [0m - Epoch:   0 [   17001/ 1000000], loss: {'classification': 53.8519, 'neural_augmentation': 3.7816, 'total_loss': 57.6336}, LR: [0.001, 0.001], Avg. batch load time: 0.076, Elapsed time: 13932.89
+2024-07-16 06:44:49 - [34m[1mLOGS   [0m - Epoch:   0 [   17501/ 1000000], loss: {'classification': 52.9614, 'neural_augmentation': 3.6842, 'total_loss': 56.6456}, LR: [0.001, 0.001], Avg. batch load time: 0.080, Elapsed time: 14412.81
+2024-07-16 06:53:01 - [34m[1mLOGS   [0m - Epoch:   0 [   18001/ 1000000], loss: {'classification': 52.1353, 'neural_augmentation': 3.593, 'total_loss': 55.7283}, LR: [0.001, 0.001], Avg. batch load time: 0.084, Elapsed time: 14904.88
+2024-07-16 07:01:21 - [34m[1mLOGS   [0m - Epoch:   0 [   18501/ 1000000], loss: {'classification': 51.3588, 'neural_augmentation': 3.5066, 'total_loss': 54.8654}, LR: [0.001, 0.001], Avg. batch load time: 0.087, Elapsed time: 15404.37
+2024-07-16 07:09:56 - [34m[1mLOGS   [0m - Epoch:   0 [   19001/ 1000000], loss: {'classification': 50.5981, 'neural_augmentation': 3.4222, 'total_loss': 54.0204}, LR: [0.001, 0.001], Avg. batch load time: 0.092, Elapsed time: 15919.74
+2024-07-16 07:18:12 - [34m[1mLOGS   [0m - Epoch:   0 [   19501/ 1000000], loss: {'classification': 49.8645, 'neural_augmentation': 3.3407, 'total_loss': 53.2052}, LR: [0.001, 0.001], Avg. batch load time: 0.096, Elapsed time: 16415.90
+2024-07-16 07:26:10 - [34m[1mLOGS   [0m - Epoch:   0 [   20001/ 1000000], loss: {'classification': 49.2286, 'neural_augmentation': 3.2694, 'total_loss': 52.498}, LR: [0.001, 0.001], Avg. batch load time: 0.098, Elapsed time: 16893.37
+2024-07-16 07:34:49 - [34m[1mLOGS   [0m - Epoch:   0 [   20501/ 1000000], loss: {'classification': 48.5447, 'neural_augmentation': 3.1931, 'total_loss': 51.7379}, LR: [0.001, 0.001], Avg. batch load time: 0.103, Elapsed time: 17412.56
+2024-07-16 07:43:27 - [34m[1mLOGS   [0m - Epoch:   0 [   21001/ 1000000], loss: {'classification': 47.9063, 'neural_augmentation': 3.1216, 'total_loss': 51.0279}, LR: [0.001, 0.001], Avg. batch load time: 0.107, Elapsed time: 17930.24
+2024-07-16 07:51:42 - [34m[1mLOGS   [0m - Epoch:   0 [   21501/ 1000000], loss: {'classification': 47.3205, 'neural_augmentation': 3.0557, 'total_loss': 50.3761}, LR: [0.001, 0.001], Avg. batch load time: 0.110, Elapsed time: 18425.66
+2024-07-16 08:00:21 - [34m[1mLOGS   [0m - Epoch:   0 [   22001/ 1000000], loss: {'classification': 46.8027, 'neural_augmentation': 2.9919, 'total_loss': 49.7946}, LR: [0.001, 0.001], Avg. batch load time: 0.114, Elapsed time: 18944.64
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+2024-07-16 08:14:55 - [34m[1mLOGS   [0m - Epoch:   0 [   22501/ 1000000], loss: {'classification': 46.7721, 'neural_augmentation': 2.9304, 'total_loss': 49.7025}, LR: [0.001, 0.001], Avg. batch load time: 0.131, Elapsed time: 19818.29
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+2024-07-16 08:28:45 - [34m[1mLOGS   [0m - Epoch:   0 [   23001/ 1000000], loss: {'classification': 46.7626, 'neural_augmentation': 2.8723, 'total_loss': 49.6349}, LR: [0.001, 0.001], Avg. batch load time: 0.145, Elapsed time: 20648.17
+2024-07-16 08:42:25 - [34m[1mLOGS   [0m - Epoch:   0 [   23501/ 1000000], loss: {'classification': 46.7505, 'neural_augmentation': 2.8173, 'total_loss': 49.5678}, LR: [0.001, 0.001], Avg. batch load time: 0.158, Elapsed time: 21468.47
+2024-07-16 08:55:38 - [34m[1mLOGS   [0m - Epoch:   0 [   24001/ 1000000], loss: {'classification': 46.736, 'neural_augmentation': 2.7641, 'total_loss': 49.5001}, LR: [0.001, 0.001], Avg. batch load time: 0.170, Elapsed time: 22261.06
+2024-07-16 09:10:20 - [34m[1mLOGS   [0m - Epoch:   0 [   24501/ 1000000], loss: {'classification': 46.7256, 'neural_augmentation': 2.7125, 'total_loss': 49.438}, LR: [0.000999, 0.000999], Avg. batch load time: 0.185, Elapsed time: 23143.11
+2024-07-16 09:23:21 - [34m[1mLOGS   [0m - Epoch:   0 [   25001/ 1000000], loss: {'classification': 46.7122, 'neural_augmentation': 2.6647, 'total_loss': 49.3769}, LR: [0.000999, 0.000999], Avg. batch load time: 0.195, Elapsed time: 23924.32
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/JpegImagePlugin.py:853: UserWarning: Image appears to be a malformed MPO file, it will be interpreted as a base JPEG file
+  warnings.warn(
+Process SpawnProcess-5:
+Process SpawnProcess-2:
+Process SpawnProcess-3:
+Process SpawnProcess-4:
+Process SpawnProcess-6:
+pretrain_base.sh: line 4: 756392 Killed                  CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 WORLD_SIZE=6 python corenet/cli/main_train.py --common.config-file $CONFIG_FILE --common.results-loc $RESULTS_FILE --ddp.rank 0 --ddp.world-size 6 --ddp.dist-url 'tcp://localhost:40001'
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 317, in _bootstrap
+    util._exit_function()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 334, in _exit_function
+    _run_finalizers(0)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 209, in _finalize_close
+    notempty.notify()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 375, in notify
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 317, in _bootstrap
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 317, in _bootstrap
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 317, in _bootstrap
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 317, in _bootstrap
+    waiter.release()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    util._exit_function()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 334, in _exit_function
+    _run_finalizers(0)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 300, in _run_finalizers
+    util._exit_function()
+    util._exit_function()
+    finalizer()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 334, in _exit_function
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 334, in _exit_function
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/synchronize.py", line 88, in _cleanup
+    unregister(name, "semaphore")
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 159, in unregister
+    _run_finalizers(0)
+    _run_finalizers(0)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 300, in _run_finalizers
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    finalizer()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/synchronize.py", line 88, in _cleanup
+    res = self._callback(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/synchronize.py", line 88, in _cleanup
+    unregister(name, "semaphore")
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 159, in unregister
+    unregister(name, "semaphore")
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 159, in unregister
+    self._send('UNREGISTER', name, rtype)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 162, in _send
+    self.ensure_running()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 86, in ensure_running
+    if self._check_alive():
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 147, in _check_alive
+    os.write(self._fd, b'PROBE:0:noop\n')
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    self._send('UNREGISTER', name, rtype)
+    util._exit_function()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 162, in _send
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 334, in _exit_function
+    _run_finalizers(0)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 300, in _run_finalizers
+    self._send('UNREGISTER', name, rtype)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 162, in _send
+    finalizer()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    self.ensure_running()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 86, in ensure_running
+    self.ensure_running()
+    res = self._callback(*self._args, **self._kwargs)
+    if self._check_alive():
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 86, in ensure_running
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/synchronize.py", line 88, in _cleanup
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 147, in _check_alive
+    unregister(name, "semaphore")
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 159, in unregister
+    os.write(self._fd, b'PROBE:0:noop\n')
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    if self._check_alive():
+  File "<string>", line 1, in <module>
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 147, in _check_alive
+    os.write(self._fd, b'PROBE:0:noop\n')
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    self._send('UNREGISTER', name, rtype)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 162, in _send
+    self.ensure_running()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 86, in ensure_running
+    if self._check_alive():
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py", line 147, in _check_alive
+    os.write(self._fd, b'PROBE:0:noop\n')
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 330, in _bootstrap
+    traceback.print_exc()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 179, in print_exc
+    exitcode = _main(fd, parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 330, in _bootstrap
+    traceback.print_exc()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 179, in print_exc
+    exitcode = _main(fd, parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 330, in _bootstrap
+    traceback.print_exc()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 179, in print_exc
+    exitcode = _main(fd, parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 330, in _bootstrap
+    traceback.print_exc()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 179, in print_exc
+    exitcode = _main(fd, parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/process.py", line 330, in _bootstrap
+    traceback.print_exc()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 179, in print_exc
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 119, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 502, in __init__
+    self.stack = StackSummary.extract(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 383, in extract
+    f.line
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 306, in line
+    self._line = linecache.getline(self.filename, self.lineno)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 30, in getline
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 119, in print_exception
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 119, in print_exception
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 119, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 502, in __init__
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 502, in __init__
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 502, in __init__
+    self.stack = StackSummary.extract(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 383, in extract
+    self.stack = StackSummary.extract(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 383, in extract
+    self.stack = StackSummary.extract(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 383, in extract
+    f.line
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 306, in line
+    f.line
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 306, in line
+    f.line
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 306, in line
+    self._line = linecache.getline(self.filename, self.lineno)
+    self._line = linecache.getline(self.filename, self.lineno)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 30, in getline
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 30, in getline
+    self._line = linecache.getline(self.filename, self.lineno)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 30, in getline
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 119, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 502, in __init__
+    self.stack = StackSummary.extract(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 383, in extract
+    f.line
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/traceback.py", line 306, in line
+    self._line = linecache.getline(self.filename, self.lineno)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 30, in getline
+    lines = getlines(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 46, in getlines
+    return updatecache(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 93, in updatecache
+    lines = getlines(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 46, in getlines
+    lines = getlines(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 46, in getlines
+    stat = os.stat(fullname)
+KeyboardInterrupt
+    return updatecache(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 93, in updatecache
+    return updatecache(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 93, in updatecache
+    stat = os.stat(fullname)
+KeyboardInterrupt
+    stat = os.stat(fullname)
+KeyboardInterrupt
+    lines = getlines(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 46, in getlines
+    return updatecache(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 93, in updatecache
+    stat = os.stat(fullname)
+KeyboardInterrupt
+    lines = getlines(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 46, in getlines
+    return updatecache(filename, module_globals)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/linecache.py", line 93, in updatecache
+    stat = os.stat(fullname)
+KeyboardInterrupt
+2024-07-16 09:37:01 - [34m[1mLOGS   [0m - Keyboard interruption. Exiting from early training

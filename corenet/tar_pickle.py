@@ -4,8 +4,8 @@ import multiprocessing
 from tqdm import tqdm
 
 # 获取当前目录和目标目录
-current_directory = '/ML-A100/team/mm/models/catlip_data/laion2b'
-output_directory = '/ML-A100/team/mm/models/catlip_data/laion2b_tar'
+current_directory = '/ML-A100/team/mm/models/catlip_data/recipe1M+_1'
+output_directory = '/ML-A100/team/mm/models/catlip_data/recipe1M+_1_tar'
 
 # 确保输出目录存在
 os.makedirs(output_directory, exist_ok=True)

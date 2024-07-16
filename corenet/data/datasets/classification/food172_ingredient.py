@@ -30,21 +30,22 @@ class food172ingredient_lassification(BaseImageDataset):
 
     def __init__(self, opts: argparse.Namespace, *args, **kwargs) -> None:
         super().__init__(opts=opts, *args, **kwargs)
-        split = "train" if self.is_training else "text"
+        split = "train" if self.is_training else "test"
+        #split = "train"
         ann_file = os.path.join(
-            self.root, "SplitAndIngreLabel/{}_IngreLabel.json".format(split)
+            self.root, "recognition/{}_IngreLabel.jsonl".format(split)
         )
-        self.image_ingredient = []
+        self.image_ingredient = {}
         with open(ann_file, mode='r') as file:
             lines = file.readlines()
             for line in lines:
                 line = json.loads(line)
-                self.image_ingredient.append(line)
+                self.image_ingredient.update(line)
                 
-        self.img_dir = os.path.join(self.root, "ready_chinese_food")
+        self.img_dir = os.path.join(self.root, "images")
         self.images = list(self.image_ingredient.keys())
         self.class_names_filename = os.path.join(
-            self.root, "SplitAndIngreLabel/IngredientList.txt"
+            self.root, "recognition/ingredientlist.txt"
         )
         with open(self.class_names_filename, mode='r') as file:
             lines = file.readlines()
@@ -109,9 +110,8 @@ class food172ingredient_lassification(BaseImageDataset):
         target = torch.zeros(self.n_classes, dtype=torch.long)
         for ingredient in self.image_ingredient[img_path]:
             target[ingredient] = 1
-
-        img_path = os.path.join(self.img_dir, img_path)
-        input_img = self.read_image_pil(img_path)
+        img_path1 = self.img_dir + img_path
+        input_img = self.read_image_pil(img_path1)
 
         transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
 

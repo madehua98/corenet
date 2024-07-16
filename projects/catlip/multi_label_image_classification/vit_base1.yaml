@@ -1,6 +1,5 @@
 # pytest: disable
-
-taskname: '+ ViT-B/16 [FT-IN1k]'
+taskname: '+ ViT-B/16 [COCO-CLS]'
 
 common:
   run_label: "train"
@@ -12,45 +11,45 @@ common:
   save_all_checkpoints: true
 
 dataset:
-  root_train: "/ML-A100/team/mm/models/food101/food101/train_images"
-  root_val: "/ML-A100/team/mm/models/food101/food101/test_images"
-  # effective batch size is 512 (512 * 1 A100 80 GB GPU)
-  train_batch_size0: 128
+  root_train: "/ML-A100/team/mm/models/food172/food_172"
+  root_val: "/ML-A100/team/mm/models/food172/food_172"
+  # effective batch size is 128 (32 * 4 A100 80 GB GPU)
+  train_batch_size0: 16
   val_batch_size0: 50
   eval_batch_size0: 50
-  workers: 64 # use all CPUs
+  workers: -1 # use all CPUs
   persistent_workers: true
-  pin_memory: true 
-  name: "imagenet"
+  pin_memory: true
+  name: "food172_ingredient"
   category: "classification"
 
 image_augmentation:
-  # training related augmentation
+  # training related augmentations
   random_resized_crop:
     enable: true
     interpolation: "bilinear"
   random_horizontal_flip:
     enable: true
-  # validation related augmentation
+  # evaluation related augmentations
   resize:
     enable: true
-    size: 232
+    size: 512
     interpolation: "bilinear"
   center_crop:
     enable: true
-    size: 224
+    size: 512
 
 sampler:
   name: "variable_batch_sampler"
   vbs:
-    crop_size_width: 224
-    crop_size_height: 224
+    crop_size_width: 512
+    crop_size_height: 512
     max_n_scales: 25
-    min_crop_size_width: 128
-    max_crop_size_width: 320
-    min_crop_size_height: 128
-    max_crop_size_height: 320
-    check_scale: 32
+    min_crop_size_width: 256
+    max_crop_size_width: 768
+    min_crop_size_height: 256
+    max_crop_size_height: 768
+    check_scale: 16
 
 loss:
   category: "composite_loss"
@@ -58,9 +57,9 @@ loss:
     - loss_category: "classification"
       loss_weight: 1.0
       classification:
-        name: "cross_entropy"
-        cross_entropy:
-          label_smoothing: 0.1
+        name: "binary_cross_entropy"
+        binary_cross_entropy:
+          reduction: "batch_mean"
     - loss_category: "neural_augmentation"
       loss_weight: 1.0
       neural_augmentation:
@@ -78,35 +77,24 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 120
+  max_epochs: 10
   warmup_iterations: 500
-  # warmup_init_lr: 1.e-3
-  # cosine:
-  #   max_lr: 0.03
-  #   min_lr: 0.001
   warmup_init_lr: 1.e-6
   cosine:
-    max_lr: 0.00003
-    min_lr: 0.000003
+    max_lr: 0.00001
+    min_lr: 0.000001
 
 model:
   activation_checkpointing: true
-  # during finetuning, we need to skip loading the classifier from a pre-trained model
-  # because the number of classes in down-stream task and pre-training are different.
-  #resume_exclude_scopes: [ "head" ]
+  # The number of classes in pre-trained model are 24320 while COCO has 80 classes.
+  # so, we exclude the classifier while loading the pre-trained weights
   resume_exclude_scopes: [ "classifier" ]
-  ft: true
   classification:
-    name: "foodv"
-    #name: "vit"
-    n_classes: 101
-    # Initalize the model with a pre-trained model and finetune it.
-    # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
-    # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results500_dci/train/checkpoint_last.pt"
-    #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
+    name: "vit"
+    n_classes: 353
+    pretrained: /ML-A100/team/mm/models/catlip_data/results_catlip5k_vit/train/checkpoint_epoch_2_iter_336.pt
     vit:
-      mode: "small"
+      mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
   # use rangeaugment
@@ -127,7 +115,10 @@ ema:
   momentum: 0.0005
 
 stats:
-  train: ["loss"]
-  val: [ "loss", "top1", "top5", "multiclass_classification_pr(pred=logits)" ]
-  checkpoint_metric: "top1.logits"
+  train: [ "loss" ]
+  val: [ "loss" , "multiclass_classification_pr(pred=logits)"]
+  checkpoint_metric: "multiclass_classification_pr(pred=logits).macro"
   checkpoint_metric_max: true
+  metrics:
+    multiclass_classification_pr:
+      suppress_warnings: true
