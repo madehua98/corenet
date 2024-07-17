@@ -109,6 +109,7 @@ model:
       mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
+      connector_type: "sci"
   # use rangeaugment
   learn_augmentation: 
     brightness: true

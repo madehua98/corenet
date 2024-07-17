@@ -760,6 +760,13 @@ class ViTamin(BaseImageEncoder):
                 help="vitamin mode. Default is base.",
             )
             group.add_argument(
+                "--model.classification.foodv.connector_type",
+                type=str,
+                default="dci",
+                choices=["sci", "dci"],
+                help="vitamin connector_type",
+            )
+            group.add_argument(
                 "--model.classification.foodv.dropout",
                 type=float,
                 default=0.0,

@@ -109,6 +109,7 @@ model:
       mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
+      connector_type: "sci"
   # use rangeaugment
   learn_augmentation: 
     brightness: true
@@ -128,6 +129,6 @@ ema:
 
 stats:
   train: ["loss"]
-  val: [ "loss", "top1", "top5", "multiclass_classification_pr(pred=logits)" ]
+  val: [ "loss", "top1", "top5" ]
   checkpoint_metric: "top1.logits"
   checkpoint_metric_max: true

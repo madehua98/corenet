@@ -64,10 +64,11 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
         logger.error("Please specify mode")
 
     mode = mode.lower()
-    print(mode)
     dropout = getattr(opts, "model.classification.foodv.dropout", 0.0)
     norm_layer = getattr(opts, "model.classification.foodv.norm_layer", "layer_norm")
-
+    connector_type = getattr(opts, "model.classification.foodv.connector_type", "dci")
+    print(mode)
+    print(connector_type)
     ViTamin_config = {
         "qkv_bias": True,
         "qk_norm": False,
@@ -95,7 +96,7 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
         "block_fn": Block,
         "mlp_layer": Mlp,
         "is_pos_embed": True,
-        "mm_dense_connector_type": 'dci'
+        "mm_dense_connector_type": connector_type
     }
     if mode == "small":
         ViTamin_config.update({

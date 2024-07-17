@@ -14,7 +14,7 @@ common:
 dataset:
   root: "/ML-A100/team/mm/models/food101/food101"
   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
-  train_batch_size0: 2
+  train_batch_size0: 64
   val_batch_size0: 50
   eval_batch_size0: 50
   workers: 64 # use all CPUs
@@ -104,6 +104,8 @@ model:
       mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
+      connector_type: "sci"
+
   # use rangeaugment
   learn_augmentation: 
     brightness: true
