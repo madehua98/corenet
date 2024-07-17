@@ -106,6 +106,13 @@ class BaseDataset(data.Dataset, ABC):
             help="Root location of valid dataset",
         )
         group.add_argument(
+            "--dataset.root",
+            type=str,
+            default="",
+            help="Root location",
+        )
+
+        group.add_argument(
             "--dataset.root-test",
             type=str,
             default="",

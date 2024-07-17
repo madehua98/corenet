@@ -129,6 +129,39 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
             "MbConv_depths": [2, 4, 1],
             "MbConv_stem_width": 128,
         })
+    
+    # if mode == "small":
+    #     ViTamin_config.update({
+    #         "img_size": 224,
+    #         "patch_size": 14,
+    #         "in_chans": 3,
+    #         "global_pool": 'avg',
+    #         "embed_dim": 256,
+    #         "block1_embed_dim": 512,
+    #         "depth": 7,
+    #         "num_heads": 8,
+    #         "block1_num_heads": 8,
+    #         "mlp_ratio": 4.0,
+    #         "MbConv_embed_dim": [64, 128, 256],
+    #         "MbConv_depths": [2, 4, 1],
+    #         "MbConv_stem_width": 64,
+    #     })
+    # elif mode == "base":
+    #     ViTamin_config.update({
+    #         "img_size": 224,
+    #         "patch_size": 14,
+    #         "in_chans": 3,
+    #         "global_pool": 'avg',
+    #         "embed_dim": 512,
+    #         "block1_embed_dim": 1024,
+    #         "depth": 7,
+    #         "num_heads": 12,
+    #         "block1_num_heads": 16,
+    #         "mlp_ratio": 4.0,
+    #         "MbConv_embed_dim": [128, 256, 512],
+    #         "MbConv_depths": [2, 4, 1],
+    #         "MbConv_stem_width": 128,
+    #     })
     elif mode == "large":
         foodv = {
             "embed_dim": 1024,

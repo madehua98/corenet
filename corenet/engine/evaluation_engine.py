@@ -86,7 +86,7 @@ class Evaluator:
             for batch_id, batch in enumerate(self.test_loader):
                 batch = move_to_device(opts=self.opts, x=batch, device=self.device)
 
-                samples, targets = batch["samples"], batch["targets"]
+                img_paths, samples, targets = batch["img_paths"], batch["samples"], batch["targets"]
 
                 batch_size = get_batch_size(samples)
 
@@ -99,7 +99,27 @@ class Evaluator:
                     loss_dict_or_tensor = criteria(
                         input_sample=samples, prediction=pred_label, target=targets
                     )
+                    pred_label = pred_label["logits"]
+                    max_indices = torch.argmax(pred_label, dim=1)
+                    mismatch_mask = max_indices != targets
+                    mismatch_indices = torch.nonzero(mismatch_mask).flatten()
+                    import json
+                    # 创建字典列表
+                    data_list = []
+                    for idx in mismatch_indices:
+                        data = {
+                            "img_path": img_paths[idx],
+                            "pred_label": max_indices[idx].item(),
+                            "targets": targets[idx].item()
+                        }
+                        data_list.append(data)
 
+                    # 将字典列表写入jsonl文件
+                    with open('/ML-A100/team/mm/models/catlip_data/single_base_500/output.jsonl', 'a+') as f:
+                        for entry in data_list:
+                            f.write(json.dumps(entry) + '\n')
+
+                    print("数据已成功写入 output.jsonl 文件中。")
                 processed_samples += batch_size
 
                 evaluation_stats.update(

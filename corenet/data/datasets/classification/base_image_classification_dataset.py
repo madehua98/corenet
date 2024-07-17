@@ -246,6 +246,7 @@ class BaseImageClassificationDataset(BaseImageDataset, ImageFolder):
             data = {"image": input_img}
             data = transform_fn(data)
 
+        data["img_paths"] = img_path
         data["samples"] = data.pop("image")
         data["targets"] = target
         data["sample_id"] = sample_index
