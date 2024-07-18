@@ -58,7 +58,7 @@ if __name__ == '__main__':
     filename = 'corenet/data/datasets/classification/all_vocab.pkl'
     datacomp_vocab = load_pickle(filename)
 
-    thresholds = [10, 50, 100, 200, 500]  # 设定多个阈值
+    thresholds = [10, 50, 100, 200, 500, 700, 1000]  # 设定多个阈值
     save_path = '/ML-A800/home/guoshuyue/madehua/code/corenet/word_frequencies_histogram.png'  # 保存图像的路径
     
     plot_histogram(datacomp_vocab, thresholds, save_path)

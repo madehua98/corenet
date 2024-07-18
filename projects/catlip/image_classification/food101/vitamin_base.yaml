@@ -103,7 +103,7 @@ model:
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base500/train/checkpoint_last.pt"
+    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base500/train/checkpoint_epoch_2_iter_63231.pt"
     #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
     foodv:
       mode: "base"

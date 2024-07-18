@@ -1,0 +1,5 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/text2vocab.py", line 43, in <module>
+    for line in tqdm(lines_generator, total=len(lines_generator)):  # 总条目数
+TypeError: object of type 'generator' has no len()

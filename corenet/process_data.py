@@ -51,7 +51,7 @@ def recipe_get_data(filename):
     for data in tqdm(lines, total=len(lines)):
         data = json.loads(data)
         images.append(data["image"])
-        texts.append(data["ingredients"])
+        texts.append(data["texts"])
     return images, texts
     
 
@@ -113,19 +113,22 @@ def process_tasks_in_parallel(tasks, num_workers):
 # # 多线程处理任务并显示进度条
 # process_tasks_in_parallel(tasks, num_workers)
 
-#filename = '/ML-A100/team/mm/models/recipe1M+/image2ingredients.jsonl'
+# filename = '/ML-A100/team/mm/models/recipe1M+_1/image2texts.jsonl'
 
 # with open(filename, mode='r') as file:
 #     lines_new = []
 #     lines = file.readlines()
 #     for line in tqdm(lines, total=len(lines)):
 #         line_new = {}
-#         line = json.loads(line)
-#         line_new = line
-#         line_new['image'] = line_new['image'].replace('/media/fast_data/recipe1M+/image/', '/ML-A100/team/mm/models/recipe1M+/')
-#         lines_new.append(line_new)
+#         try:
+#             line = json.loads(line)
+#             line_new = line
+#             line_new['image'] = line_new['image'].replace('/media/fast_data/recipe1M+/image/', '/ML-A100/team/mm/models/recipe1M+_1/')
+#             lines_new.append(line_new)
+#         except:
+#             print('error')
 
-# filename_new = '/ML-A100/team/mm/models/recipe1M+/image2ingredients_new.jsonl'
+# filename_new = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
 # with open(filename_new, mode='a+') as fw:
 #     for line in tqdm(lines_new, total=len(lines_new)):
 #         line = json.dumps(line)
@@ -133,7 +136,7 @@ def process_tasks_in_parallel(tasks, num_workers):
 #         fw.write('\n')
 
 # filename = '/ML-A100/team/mm/models/recipe1M+/image2ingredients_new.jsonl'
-# filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2ingredients_new.jsonl'
+filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
 # image2ingredients_new_1 = []
 # image2ingredients_new = load_jsonl(filename)
 # for object in tqdm(image2ingredients_new, total=len(image2ingredients_new)):
@@ -147,7 +150,7 @@ def process_tasks_in_parallel(tasks, num_workers):
 # tasks = get_tasks(
 #     images=images,
 #     texts=texts,
-#     root_dir='/ML-A100/team/mm/models/catlip_data/recipe1M+_1'
+#     root_dir='/ML-A100/team/mm/models/catlip_data/recipe1M+_2'
 # )
 
 # # 设置工作进程数量
@@ -204,27 +207,27 @@ def process_files(text_paths, output_file, num_threads=multiprocessing.cpu_count
             if result:
                 texts.append(result)
     save_to_jsonl(output_file, texts)
-output_file = '/ML-A100/team/mm/models/catlip_data/cc12m/captions.jsonl'
+# output_file = '/ML-A100/team/mm/models/catlip_data/cc12m/captions.jsonl'
 # process_files(text_paths, output_file)
 
 
-# output_file = '/ML-A100/team/mm/models/recipe1M+/image2ingredients_new.jsonl'
-# vocab_dict = {}
-# lines = load_jsonl(output_file)
-# texts = []
-# for line in lines:
-#     text = line["ingredients"]
-#     texts.append(text)
-# for text in tqdm(texts, total=len(texts)):
-#     vocab_dict = get_vocab(text, vocab_dict)
+output_file = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
+vocab_dict = {}
+lines = load_jsonl(output_file)
+texts = []
+for line in lines:
+    text = line["texts"]
+    texts.append(text)
+for text in tqdm(texts, total=len(texts)):
+    vocab_dict = get_vocab(text, vocab_dict)
 
-# vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
-# print(len(vocab_dict_sorted))
+vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
+print(len(vocab_dict_sorted))
 
-# file_path = 'corenet/data/datasets/classification/recipe1M+_vocab.pkl'
-# with open(file_path, 'wb') as file:
-#     pickle.dump(vocab_dict_sorted, file)
-# print(vocab_dict_sorted)
+file_path = 'corenet/data/datasets/classification/recipe1M+_new_vocab.pkl'
+with open(file_path, 'wb') as file:
+    pickle.dump(vocab_dict_sorted, file)
+print(vocab_dict_sorted)
 
 
 # output_file = '/ML-A100/team/mm/models/catlip_data/cc12m/captions.jsonl'
@@ -452,3 +455,21 @@ print(data['total_tar_files'])
 
 
 
+
+# """
+# 读取pickle文件，输出数据条数
+# """
+# filename = '/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/data/datasets/classification/all_vocab.pkl'
+# #filename = '/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/data/datasets/classification/datacomp_1_2B_vocab.pkl'
+# with open(filename, mode='rb') as file:
+#     data = pickle.load(file)
+# all_count = 0
+# delete_count = 0
+# for k,v in data.items():
+#     all_count += v
+#     if v < 50:
+#         delete_count += v
+# print(len(data))
+# print(all_count)
+# print(delete_count)
+# print(delete_count/all_count)

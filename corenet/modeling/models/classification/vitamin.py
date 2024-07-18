@@ -75,57 +75,6 @@ import torch
 import torch.nn as nn
 from typing import List, Tuple
 
-class DenseConnector:
-    def __init__(self, 
-                 layer_indices_sti: Tuple[int, int] = (7, 15), 
-                 layer_indices_sci: Tuple[int, int] = (7, 15), 
-                 layer_indices_dci: Tuple[int, int, int] = (0, 12, 24), 
-                 mlp_depth: int = 2):
-        self.layer_indices_sti = layer_indices_sti
-        self.layer_indices_sci = layer_indices_sci
-        self.layer_indices_dci = layer_indices_dci
-        self.mlp_depth = mlp_depth
-
-    def dense_connector_sti(self, image_features: torch.Tensor, image_forward_outs: List[torch.Tensor]) -> torch.Tensor:
-        image_features_1 = image_forward_outs[self.layer_indices_sti[0]].to(image_features.dtype).contiguous()
-        return image_features_1
-
-    def dense_connector_sci(self, image_features: torch.Tensor, image_forward_outs: List[torch.Tensor]) -> torch.Tensor:
-        image_features_1 = image_forward_outs[self.layer_indices_sci[0]].to(image_features.dtype).contiguous()
-        return image_features_1
-
-    def dense_connector_dci(self, image_features: torch.Tensor, image_forward_outs: List[torch.Tensor]) -> Tuple[torch.Tensor, torch.Tensor]:
-        image_features_1 = []
-        image_features_2 = []
-        for i in range(self.layer_indices_dci[0], self.layer_indices_dci[1]):
-            image_features_1.append(image_forward_outs[i].to(image_features.dtype).contiguous())
-        image_features_1 = torch.stack(image_features_1, dim=0)
-        image_features_1 = torch.sum(image_features_1, dim=0) / (self.layer_indices_dci[1] - self.layer_indices_dci[0])
-        for i in range(self.layer_indices_dci[1], self.layer_indices_dci[2] + 1):
-            image_features_2.append(image_forward_outs[i].to(image_features.dtype).contiguous())
-        image_features_2 = torch.stack(image_features_2, dim=0)
-        image_features_2 = torch.sum(image_features_2, dim=0) / (self.layer_indices_dci[2] - self.layer_indices_dci[1] + 1)
-        return image_features_1, image_features_2
-
-    def dense_connector(self, image_features: torch.Tensor, image_features_dc: torch.Tensor, mm_dense_connector_type: str = 'sti') -> torch.Tensor:
-        if mm_dense_connector_type == 'sti':
-            image_features = torch.cat((image_features, image_features_dc), dim=-2)
-        elif mm_dense_connector_type == 'sci':
-            image_features = torch.cat((image_features, image_features_dc), dim=-2)
-        elif mm_dense_connector_type == 'dci':
-            image_features = torch.cat((image_features, image_features_dc), dim=-2)
-        else:
-            raise NotImplementedError()
-        return image_features
-
-
-def mlp_layer(mlp_depth, input_size, hidden_size):
-    modules = [nn.Linear(input_size, hidden_size)]
-    for _ in range(1, mlp_depth):
-        modules.append(nn.GELU())
-        modules.append(nn.Linear(hidden_size, hidden_size))
-    return nn.Sequential(*modules)
-
 
 @dataclass
 class VitConvCfg:
@@ -455,7 +404,7 @@ def trunc_normal_(tensor, mean=0., std=1., a=-2., b=2.):
     with torch.no_grad():
         return _trunc_normal_(tensor, mean, std, a, b)
 
-@MODEL_REGISTRY.register(name="foodv", type="classification")
+@MODEL_REGISTRY.register(name="vitamin", type="classification")
 class ViTamin(BaseImageEncoder):
     dynamic_img_size: Final[bool]
 
@@ -518,10 +467,8 @@ class ViTamin(BaseImageEncoder):
         self.patch_size = ViTamin_config["patch_size"]  # 16
         self.in_chans = ViTamin_config["in_chans"]  # 3
         self.embed_dim = ViTamin_config["embed_dim"]  # 6C
-        self.block1_embed_dim = ViTamin_config["block1_embed_dim"]  # 8C
         self.depth = ViTamin_config["depth"]  # 12
         self.num_heads = ViTamin_config["num_heads"]  # 384/32
-        self.block1_num_heads = ViTamin_config["block1_num_heads"] # 
         self.mlp_ratio = ViTamin_config["mlp_ratio"]  # 4.0
         self.qkv_bias = ViTamin_config["qkv_bias"]  # True
         self.qk_norm = ViTamin_config["qk_norm"]  # False
@@ -574,13 +521,6 @@ class ViTamin(BaseImageEncoder):
             bias=not self.pre_norm,
             dynamic_img_pad=self.dynamic_img_pad,
             **embed_args,)
-        # self.patch_embed = embed_layer(
-        #     img_size=img_size,
-        #     patch_size=patch_size,
-        #     in_chans=in_chans,
-        #     embed_dim=embed_dim,
-        #     bias=not pre_norm,  # disable bias if pre-norm is used (e.g. CLIP)
-        # )
         
         num_patches = self.patch_embed.num_patches
 
@@ -621,44 +561,12 @@ class ViTamin(BaseImageEncoder):
             )
             for i in range(self.depth)])
         
-        self.pool = StridedConv(
-                        stride=2,
-                        in_chans=self.embed_dim,
-                        embed_dim=self.block1_embed_dim
-                    )
-        self.blocks1 = nn.Sequential(*[
-            self.block_fn(
-                dim=self.block1_embed_dim,
-                num_heads=self.block1_num_heads,
-                mlp_ratio=self.mlp_ratio,
-                qkv_bias=self.qkv_bias,
-                qk_norm=self.qk_norm,
-                init_values=self.init_values,
-                proj_drop=self.proj_drop_rate,
-                attn_drop=self.attn_drop_rate,
-                drop_path=self.dpr[i],
-                norm_layer=self.norm_layer,
-                act_layer=self.act_layer,
-                mlp_layer=self.mlp_layer,
-            )
-            for i in range(self.depth)])
+        self.norm = self.norm_layer(self.embed_dim) if not self.use_fc_norm else nn.Identity()
         
-        self.norm = self.norm_layer(self.block1_embed_dim) if not self.use_fc_norm else nn.Identity()
-
-        # connecter
-        self.block_to_block1 = LinearLayer(self.embed_dim, self.block1_embed_dim)
-
-        self.dense_connnector = DenseConnector(layer_indices_sti=(self.depth-1,2 * self.depth - 1), 
-                                              layer_indices_sci=(self.depth-1, 2 * self.depth - 1),
-                                              layer_indices_dci=(0, self.depth, 2 * self.depth),
-                                              )
-        
-        self.mlp = mlp_layer(mlp_depth = 2, input_size= self.block1_embed_dim, hidden_size=self.block1_embed_dim)
-
         # Classifier Head
         if self.global_pool == 'map':
             self.attn_pool = AttentionPoolLatent(
-                self.block1_embed_dim,
+                self.embed_dim,
                 num_heads=self.num_heads,
                 mlp_ratio=self.mlp_ratio,
                 norm_layer=self.norm_layer,
@@ -666,9 +574,9 @@ class ViTamin(BaseImageEncoder):
         else:
             self.attn_pool = None
 
-        self.fc_norm = self.norm_layer(self.block1_embed_dim) if self.use_fc_norm else nn.Identity()
+        self.fc_norm = self.norm_layer(self.embed_dim) if self.use_fc_norm else nn.Identity()
         self.classifier_drop = nn.Dropout(self.drop_rate)
-        self.classifier = LinearLayer(self.block1_embed_dim, self.num_classes)
+        self.classifier = LinearLayer(self.embed_dim, self.num_classes)
 
         # if self.weight_init != 'skip':
         #     self.init_weights(self.weight_init)
@@ -680,61 +588,61 @@ class ViTamin(BaseImageEncoder):
         if cls == ViTamin:
             group = parser.add_argument_group(cls.__name__)
             group.add_argument(
-                "--model.classification.foodv.mode",
+                "--model.classification.vitamin.mode",
                 type=str,
                 default="small",
                 choices=["small", "base", "large", "huge"],
                 help="vitamin mode. Default is base.",
             )
             group.add_argument(
-                "--model.classification.foodv.connector_type",
+                "--model.classification.vitamin.connector_type",
                 type=str,
                 default="dci",
                 choices=["sci", "dci"],
                 help="vitamin connector_type",
             )
             group.add_argument(
-                "--model.classification.foodv.dropout",
+                "--model.classification.vitamin.dropout",
                 type=float,
                 default=0.0,
                 help="Dropout in Transformer layers. Defaults to 0.0.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.stochastic-dropout",
+                "--model.classification.vitamin.stochastic-dropout",
                 type=float,
                 default=0.0,
                 help="Stochastic Dropout in Transformer layers. Defaults to 0.0.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.norm-layer",
+                "--model.classification.vitamin.norm-layer",
                 type=str,
                 default="layer_norm",
                 help="Normalization layer to be used in Transformer layer. Defaults to LayerNorm.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.sinusoidal-pos-emb",
+                "--model.classification.vitamin.sinusoidal-pos-emb",
                 action="store_true",
                 default=False,
                 help="Use sinusoidal instead of learnable positional embedding. Defaults to False.",
             )
             group.add_argument(
-                "--model.classification.foodv.no-cls-token",
+                "--model.classification.vitamin.no-cls-token",
                 action="store_true",
                 default=False,
                 help="Do not use classification token. Defaults to False.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.use-simple-fpn",
+                "--model.classification.vitamin.use-simple-fpn",
                 action="store_true",
                 default=False,
                 help="Add simple FPN for down-stream tasks (e.g., detection). Defaults to False.",
             )
             group.add_argument(
-                "--model.classification.foodv.use-flash-attention",
+                "--model.classification.vitamin.use-flash-attention",
                 action="store_true",
                 default=False,
                 help="Use Transformer layers with flash attention for efficiently computing scaled dot-product attention. Defauls to False.",
@@ -819,41 +727,8 @@ class ViTamin(BaseImageEncoder):
             x = checkpoint_seq(self.blocks, x)
         else:
             x = self.blocks(x)
-            x = x.transpose(1, 2)
-            n, c, h_w = x.shape
-            h = w = int(h_w ** 0.5)
-            x = x.view(n, c, h, w)
-            x = self.pool(x)
-            x = x.flatten(2).transpose(1, 2)
-            x = self.blocks1(x)
         x = self.norm(x)
         return x
-
-    def forward_features_dense_connector(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.patch_embed(x)
-        if self.is_pos_embed:
-            x = self._pos_embed(x)
-        x = self.patch_drop(x)
-        x = self.norm_pre(x)
-        all_hidden_states = []
-        if self.grad_checkpointing and not torch.jit.is_scripting():
-            x = checkpoint_seq(self.blocks, x)
-        else:
-            for block in self.blocks:
-                x = block(x)
-                all_hidden_states.append(x)
-            x = x.transpose(1, 2)
-            n, c, h_w = x.shape
-            h = w = int(h_w ** 0.5)
-            x = x.view(n, c, h, w)
-            x = self.pool(x)
-            x = x.flatten(2).transpose(1, 2)
-            all_hidden_states.append(x)
-            for block1 in self.blocks1:
-                x = block1(x)
-                all_hidden_states.append(x)
-        x = self.norm(x)
-        return x, all_hidden_states
 
     def forward_classifier(self, x: torch.Tensor, pre_logits: bool = False) -> torch.Tensor:
         if self.attn_pool is not None:
@@ -872,210 +747,10 @@ class ViTamin(BaseImageEncoder):
             if self.training and self.neural_augmentor is not None:
                 x = self.neural_augmentor(x)
                 out_dict.update({"augmented_tensor": x})
-            x, all_hidden_states = self.forward_features_dense_connector(x)
-            if self.mm_dense_connector_type == 'sci':
-                image_features_dc = self.dense_connnector.dense_connector_sti(x, all_hidden_states)
-                image_features_dc = self.block_to_block1(image_features_dc)
-                x = self.dense_connnector.dense_connector(x, image_features_dc, mm_dense_connector_type=self.mm_dense_connector_type)
-
-            elif self.mm_dense_connector_type == 'dci':
-                image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
-                image_features_dc1 = self.block_to_block1(image_features_dc1)
-                x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
-            x = self.mlp(x)
+            x= self.forward_features(x)
             logits = self.forward_classifier(x)
             out_dict.update({"logits": logits})
             return out_dict
         else:
             logits, _ = self.forward_classifier(x)
             return logits
-
-
-
-def _create_vision_transformer(variant, pretrained=False, **kwargs):
-    if kwargs.get('features_only', None):
-        raise RuntimeError('features_only not implemented for Vision Transformer models.')
-
-    return build_model_with_cfg(
-        ViTamin, # ViTamin
-        variant,
-        pretrained,
-        pretrained_filter_fn=checkpoint_filter_fn,
-        **kwargs,
-    )
-
-
-def _create_vision_transformer_hybrid(variant, backbone, pretrained=False, **kwargs):
-    embed_layer = partial(HybridEmbed, backbone=backbone)
-    kwargs.setdefault('patch_size', 1)  # default patch size for hybrid models if not set
-    return _create_vision_transformer(variant, pretrained=pretrained, embed_layer=embed_layer, **kwargs)
-
-
-@register_model
-def vitamin_small(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-            embed_dim=(64, 128, 384),
-            depths=(2, 4, 1),
-            stem_width=64,
-            conv_cfg = VitConvCfg(
-                norm_layer='layernorm2d',
-                norm_eps=1e-6,
-            ),
-            head_type='1d',
-        ),
-    )
-    stage3_args = dict(embed_dim=384, depth=14, num_heads=6, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid('vitamin_small', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_base(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-            embed_dim=(128, 256, 768),
-            depths=(2, 4, 1),
-            stem_width=128,
-            conv_cfg = VitConvCfg(
-                norm_layer='layernorm2d',
-                norm_eps=1e-6,
-            ),
-            head_type='1d',
-        ),
-    )
-    stage3_args = dict(embed_dim=768, depth=14, num_heads=12, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid('vitamin_base', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    stage3_args = dict(embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_256(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=256, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_256', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_336(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=336, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_336', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_384(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=384, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_384', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_xlarge_256(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(192, 384, 1152),
-        depths=(2, 4, 1),
-        stem_width=192,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=256, embed_dim=1152, depth=32, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_xlarge_256', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_xlarge_384(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(192, 384, 1152),
-        depths=(2, 4, 1),
-        stem_width=192,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=384, embed_dim=1152, depth=32, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_xlarge_384', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-def count_params(model: nn.Module):
-    return sum([m.numel() for m in model.parameters()])
-
-
-def count_stage_params(model: nn.Module, prefix='none'):
-    collections = []
-    for name, m in model.named_parameters():
-        print(name)
-        if name.startswith(prefix):
-            collections.append(m.numel())
-    return sum(collections)
-
-
-if __name__ == "__main__":
-    model = timm.create_model('vitamin_large', num_classes=10).cuda()
-    # x = torch.rand([2,3,224,224]).cuda()
-    check_keys(model)
-

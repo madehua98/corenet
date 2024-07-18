@@ -11,16 +11,29 @@ common:
   grad_clip: 1.0
   save_all_checkpoints: true
 
+# dataset:
+#   root: "/ML-A100/team/mm/models/food101/food101"
+#   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
+#   train_batch_size0: 64
+#   val_batch_size0: 50
+#   eval_batch_size0: 50
+#   workers: 64 # use all CPUs
+#   persistent_workers: true
+#   pin_memory: true 
+#   name: "food101"
+#   category: "classification"
+
 dataset:
-  root: "/ML-A100/team/mm/models/food101/food101"
+  root_train: "/ML-A100/team/mm/models/food101/food101/train_images"
+  root_val: "/ML-A100/team/mm/models/food101/food101/test_images"
   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
-  train_batch_size0: 64
-  val_batch_size0: 50
-  eval_batch_size0: 50
+  train_batch_size0: 128
+  val_batch_size0: 100
+  eval_batch_size0: 100
   workers: 64 # use all CPUs
   persistent_workers: true
-  pin_memory: true 
-  name: "food101"
+  pin_memory: true
+  name: "imagenet"
   category: "classification"
 
 image_augmentation:
@@ -38,6 +51,10 @@ image_augmentation:
   center_crop:
     enable: true
     size: 224
+  # mixup:
+  #   alpha: 0.2
+  #   enable: true
+  #   p: 1.0
 
 sampler:
   name: "variable_batch_sampler"
@@ -98,13 +115,13 @@ model:
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results500_dci/train/checkpoint_last.pt"
+    pretrained: "/ML-A100/team/mm/models/catlip_data/results50_small_dci/train/checkpoint_last.pt"
     #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
     foodv:
       mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
-      connector_type: "sci"
+      connector_type: "dci"
 
   # use rangeaugment
   learn_augmentation: 

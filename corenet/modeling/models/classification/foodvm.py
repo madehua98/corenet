@@ -67,7 +67,7 @@ from corenet.modeling.misc.common import parameter_list
 from corenet.modeling.misc.init_utils import initialize_conv_layer
 from corenet.modeling.models import MODEL_REGISTRY
 from corenet.modeling.models.classification.base_image_encoder import BaseImageEncoder
-from corenet.modeling.models.classification.config.foodv import get_configuration
+from corenet.modeling.models.classification.config.foodvm import get_configuration
 from corenet.modeling.modules import FlashTransformerEncoder, TransformerEncoder
 from corenet.utils import logger
 
@@ -455,7 +455,93 @@ def trunc_normal_(tensor, mean=0., std=1., a=-2., b=2.):
     with torch.no_grad():
         return _trunc_normal_(tensor, mean, std, a, b)
 
-@MODEL_REGISTRY.register(name="foodv", type="classification")
+
+
+class MRConv4d(nn.Module):
+    """
+    Max-Relative Graph Convolution (Paper: https://arxiv.org/abs/1904.03751) for dense data type
+    
+    K is the number of superpatches, therefore hops equals res // K.
+    """
+    def __init__(self, in_channels, out_channels, K=2):
+        super(MRConv4d, self).__init__()
+        self.nn = nn.Sequential(
+            nn.Conv2d(in_channels * 2, out_channels, 1),
+            nn.BatchNorm2d(in_channels * 2),
+            nn.GELU()
+            )
+        self.K = K
+
+    def forward(self, x):
+        B, C, H, W = x.shape
+            
+        x_j = x - x
+        for i in range(self.K, H, self.K):
+            x_c = x - torch.cat([x[:, :, -i:, :], x[:, :, :-i, :]], dim=2)
+            x_j = torch.max(x_j, x_c)
+        for i in range(self.K, W, self.K):
+            x_r = x - torch.cat([x[:, :, :, -i:], x[:, :, :, :-i]], dim=3)
+            x_j = torch.max(x_j, x_r)
+
+        x = torch.cat([x, x_j], dim=1)
+        return self.nn(x)
+
+class Grapher(nn.Module):
+    """
+    Grapher module with graph convolution and fc layers
+    """
+    def __init__(self, in_channels, drop_path=0.0, K=2):
+        super(Grapher, self).__init__()
+        self.channels = in_channels
+        self.K = K
+
+        self.fc1 = nn.Sequential(
+            nn.Conv2d(in_channels, in_channels, 1, stride=1, padding=0),
+            nn.BatchNorm2d(in_channels),
+        )
+        self.graph_conv = MRConv4d(in_channels, in_channels * 2, K=self.K)
+        self.fc2 = nn.Sequential(
+            nn.Conv2d(in_channels * 2, in_channels, 1, stride=1, padding=0),
+            nn.BatchNorm2d(in_channels),
+        )  # out_channels back to 1x}
+        self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
+
+       
+    def forward(self, x):
+        _tmp = x
+        x = self.fc1(x)
+        x = self.graph_conv(x)
+        x = self.fc2(x)
+        x = self.drop_path(x) + _tmp
+
+        return x
+
+class FFN(nn.Module):
+    def __init__(self, in_features, hidden_features=None, out_features=None, drop_path=0.0):
+        super().__init__()
+        out_features = out_features or in_features # same as input
+        hidden_features = hidden_features or in_features # x4
+        self.fc1 = nn.Sequential(
+            nn.Conv2d(in_features, hidden_features, 1, stride=1, padding=0),
+            nn.BatchNorm2d(hidden_features),
+        )
+        self.act = nn.GELU()
+        self.fc2 = nn.Sequential(
+            nn.Conv2d(hidden_features, out_features, 1, stride=1, padding=0),
+            nn.BatchNorm2d(out_features),
+        )
+        self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
+
+    def forward(self, x):
+        shortcut = x
+        x = self.fc1(x)
+        x = self.act(x)
+        x = self.fc2(x)
+        x = self.drop_path(x) + shortcut
+        return x
+    
+
+@MODEL_REGISTRY.register(name="foodvm", type="classification")
 class ViTamin(BaseImageEncoder):
     dynamic_img_size: Final[bool]
 
@@ -547,6 +633,8 @@ class ViTamin(BaseImageEncoder):
         self.MbConv_stem_width = ViTamin_config["MbConv_stem_width"] # 64
         self.mm_dense_connector_type = ViTamin_config["mm_dense_connector_type"]
         
+        self.global_blocks = ViTamin_config["global_blocks"]
+        self.global_channels = ViTamin_config["global_channels"]
         self.use_kl = False
         
         embed_args = {}
@@ -653,6 +741,15 @@ class ViTamin(BaseImageEncoder):
                                               layer_indices_dci=(0, self.depth, 2 * self.depth),
                                               )
         
+        self.backbone = nn.ModuleList([])
+        for i in range(len(self.global_blocks)):
+            for j in range(self.global_blocks[i]):
+                self.backbone += [nn.Sequential(
+                                    Grapher(self.global_channels[i], drop_path=0, K=2),
+                                    FFN(self.global_channels[i], self.global_channels[i] * 4, drop_path=0))
+                                    ]
+
+
         self.mlp = mlp_layer(mlp_depth = 2, input_size= self.block1_embed_dim, hidden_size=self.block1_embed_dim)
 
         # Classifier Head
@@ -680,61 +777,61 @@ class ViTamin(BaseImageEncoder):
         if cls == ViTamin:
             group = parser.add_argument_group(cls.__name__)
             group.add_argument(
-                "--model.classification.foodv.mode",
+                "--model.classification.foodvm.mode",
                 type=str,
                 default="small",
                 choices=["small", "base", "large", "huge"],
                 help="vitamin mode. Default is base.",
             )
             group.add_argument(
-                "--model.classification.foodv.connector_type",
+                "--model.classification.foodvm.connector_type",
                 type=str,
                 default="dci",
                 choices=["sci", "dci"],
                 help="vitamin connector_type",
             )
             group.add_argument(
-                "--model.classification.foodv.dropout",
+                "--model.classification.foodvm.dropout",
                 type=float,
                 default=0.0,
                 help="Dropout in Transformer layers. Defaults to 0.0.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.stochastic-dropout",
+                "--model.classification.foodvm.stochastic-dropout",
                 type=float,
                 default=0.0,
                 help="Stochastic Dropout in Transformer layers. Defaults to 0.0.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.norm-layer",
+                "--model.classification.foodvm.norm-layer",
                 type=str,
                 default="layer_norm",
                 help="Normalization layer to be used in Transformer layer. Defaults to LayerNorm.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.sinusoidal-pos-emb",
+                "--model.classification.foodvm.sinusoidal-pos-emb",
                 action="store_true",
                 default=False,
                 help="Use sinusoidal instead of learnable positional embedding. Defaults to False.",
             )
             group.add_argument(
-                "--model.classification.foodv.no-cls-token",
+                "--model.classification.foodvm.no-cls-token",
                 action="store_true",
                 default=False,
                 help="Do not use classification token. Defaults to False.",
             )
 
             group.add_argument(
-                "--model.classification.foodv.use-simple-fpn",
+                "--model.classification.foodvm.use-simple-fpn",
                 action="store_true",
                 default=False,
                 help="Add simple FPN for down-stream tasks (e.g., detection). Defaults to False.",
             )
             group.add_argument(
-                "--model.classification.foodv.use-flash-attention",
+                "--model.classification.foodvm.use-flash-attention",
                 action="store_true",
                 default=False,
                 help="Use Transformer layers with flash attention for efficiently computing scaled dot-product attention. Defauls to False.",
@@ -851,6 +948,8 @@ class ViTamin(BaseImageEncoder):
             all_hidden_states.append(x)
             for block1 in self.blocks1:
                 x = block1(x)
+            for i in range(len(self.backbone)):
+                x = self.backbone[i](x)
                 all_hidden_states.append(x)
         x = self.norm(x)
         return x, all_hidden_states
@@ -889,193 +988,3 @@ class ViTamin(BaseImageEncoder):
         else:
             logits, _ = self.forward_classifier(x)
             return logits
-
-
-
-def _create_vision_transformer(variant, pretrained=False, **kwargs):
-    if kwargs.get('features_only', None):
-        raise RuntimeError('features_only not implemented for Vision Transformer models.')
-
-    return build_model_with_cfg(
-        ViTamin, # ViTamin
-        variant,
-        pretrained,
-        pretrained_filter_fn=checkpoint_filter_fn,
-        **kwargs,
-    )
-
-
-def _create_vision_transformer_hybrid(variant, backbone, pretrained=False, **kwargs):
-    embed_layer = partial(HybridEmbed, backbone=backbone)
-    kwargs.setdefault('patch_size', 1)  # default patch size for hybrid models if not set
-    return _create_vision_transformer(variant, pretrained=pretrained, embed_layer=embed_layer, **kwargs)
-
-
-@register_model
-def vitamin_small(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-            embed_dim=(64, 128, 384),
-            depths=(2, 4, 1),
-            stem_width=64,
-            conv_cfg = VitConvCfg(
-                norm_layer='layernorm2d',
-                norm_eps=1e-6,
-            ),
-            head_type='1d',
-        ),
-    )
-    stage3_args = dict(embed_dim=384, depth=14, num_heads=6, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid('vitamin_small', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_base(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-            embed_dim=(128, 256, 768),
-            depths=(2, 4, 1),
-            stem_width=128,
-            conv_cfg = VitConvCfg(
-                norm_layer='layernorm2d',
-                norm_eps=1e-6,
-            ),
-            head_type='1d',
-        ),
-    )
-    stage3_args = dict(embed_dim=768, depth=14, num_heads=12, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid('vitamin_base', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large(pretrained=False, **kwargs) -> VisionTransformer:
-    stage_1_2 = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    stage3_args = dict(embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large', backbone=stage_1_2, pretrained=pretrained, **dict(stage3_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_256(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=256, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_256', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_336(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=336, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_336', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_large_384(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(160, 320, 1024),
-        depths=(2, 4, 1),
-        stem_width=160,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=384, embed_dim=1024, depth=31, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_large_384', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_xlarge_256(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(192, 384, 1152),
-        depths=(2, 4, 1),
-        stem_width=192,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=256, embed_dim=1152, depth=32, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_xlarge_256', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-@register_model
-def vitamin_xlarge_384(pretrained=False, **kwargs) -> VisionTransformer:
-    backbone = MbConvStages(cfg=VitCfg(
-        embed_dim=(192, 384, 1152),
-        depths=(2, 4, 1),
-        stem_width=192,
-        conv_cfg = VitConvCfg(
-            norm_layer='layernorm2d',
-            norm_eps=1e-6,
-        ),
-        head_type='1d',
-    ), 
-    )
-    model_args = dict(img_size=384, embed_dim=1152, depth=32, num_heads=16, mlp_layer=GeGluMlp, mlp_ratio=2., class_token=False, is_pos_embed=False, global_pool='avg')
-    model = _create_vision_transformer_hybrid(
-        'vitamin_xlarge_384', backbone=backbone, pretrained=pretrained, **dict(model_args, **kwargs))
-    return model
-
-
-def count_params(model: nn.Module):
-    return sum([m.numel() for m in model.parameters()])
-
-
-def count_stage_params(model: nn.Module, prefix='none'):
-    collections = []
-    for name, m in model.named_parameters():
-        print(name)
-        if name.startswith(prefix):
-            collections.append(m.numel())
-    return sum(collections)
-
-
-if __name__ == "__main__":
-    model = timm.create_model('vitamin_large', num_classes=10).cuda()
-    # x = torch.rand([2,3,224,224]).cuda()
-    check_keys(model)
-
