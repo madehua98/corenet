@@ -92,20 +92,29 @@ class DenseConnector:
 
     def dense_connector_sci(self, image_features: torch.Tensor, image_forward_outs: List[torch.Tensor]) -> torch.Tensor:
         image_features_1 = image_forward_outs[self.layer_indices_sci[0]].to(image_features.dtype).contiguous()
-        return image_features_1
+        image_features_2 = image_forward_outs[self.layer_indices_sci[1]].to(image_features.dtype).contiguous()
+        return image_features_1, image_features_2
 
     def dense_connector_dci(self, image_features: torch.Tensor, image_forward_outs: List[torch.Tensor]) -> Tuple[torch.Tensor, torch.Tensor]:
         image_features_1 = []
         image_features_2 = []
+        image_features_3 = []
         for i in range(self.layer_indices_dci[0], self.layer_indices_dci[1]):
             image_features_1.append(image_forward_outs[i].to(image_features.dtype).contiguous())
         image_features_1 = torch.stack(image_features_1, dim=0)
         image_features_1 = torch.sum(image_features_1, dim=0) / (self.layer_indices_dci[1] - self.layer_indices_dci[0])
-        for i in range(self.layer_indices_dci[1], self.layer_indices_dci[2] + 1):
+
+        for i in range(self.layer_indices_dci[1], self.layer_indices_dci[2]):
             image_features_2.append(image_forward_outs[i].to(image_features.dtype).contiguous())
         image_features_2 = torch.stack(image_features_2, dim=0)
-        image_features_2 = torch.sum(image_features_2, dim=0) / (self.layer_indices_dci[2] - self.layer_indices_dci[1] + 1)
-        return image_features_1, image_features_2
+        image_features_2 = torch.sum(image_features_2, dim=0) / (self.layer_indices_dci[2] - self.layer_indices_dci[1])
+
+        for i in range(self.layer_indices_dci[2], self.layer_indices_dci[3]):
+            image_features_3.append(image_forward_outs[i].to(image_features.dtype).contiguous())
+        image_features_3 = torch.stack(image_features_3, dim=0)
+        image_features_3 = torch.sum(image_features_3, dim=0) / (self.layer_indices_dci[3] - self.layer_indices_dci[2])
+
+        return image_features_1, image_features_2, image_features_3
 
     def dense_connector(self, image_features: torch.Tensor, image_features_dc: torch.Tensor, mm_dense_connector_type: str = 'sti') -> torch.Tensor:
         if mm_dense_connector_type == 'sti':
@@ -400,6 +409,7 @@ class HybridEmbed(nn.Module):
         self.backbone = backbone
         if feature_size is None:
             feature_size = img_size[0] // 16
+        feature_size=16
         feature_size = to_2tuple(feature_size)
         if hasattr(self.backbone, 'feature_info'):
             feature_dim = self.backbone.feature_info.channels()[-1]
@@ -626,7 +636,7 @@ class ViTamin(BaseImageEncoder):
         self.fix_init = ViTamin_config["fix_init"]  # False
         #self.embed_layer = ViTamin_config["embed_layer"]  # PatchEmbed          #使用PatchEmbed和ViTamin提出的MbConv进行对比
         self.block_fn = ViTamin_config["block_fn"]  # Type[nn.Module]
-        self.mlp_layer = ViTamin_config["mlp_layer"]  # Type[nn.Module]
+        self.mlp_layer = GeGluMlp  # Type[nn.Module]
         self.is_pos_embed = ViTamin_config["is_pos_embed"]  # True
         self.MbConv_embed_dim = ViTamin_config["MbConv_embed_dim"] # [64, 128, 384]
         self.MbConv_depths = ViTamin_config["MbConv_depths"] # [2,4,1]
@@ -733,12 +743,10 @@ class ViTamin(BaseImageEncoder):
         
         self.norm = self.norm_layer(self.block1_embed_dim) if not self.use_fc_norm else nn.Identity()
 
-        # connecter
-        self.block_to_block1 = LinearLayer(self.embed_dim, self.block1_embed_dim)
 
         self.dense_connnector = DenseConnector(layer_indices_sti=(self.depth-1,2 * self.depth - 1), 
                                               layer_indices_sci=(self.depth-1, 2 * self.depth - 1),
-                                              layer_indices_dci=(0, self.depth, 2 * self.depth),
+                                              layer_indices_dci=(0, self.depth, 2 * self.depth, 2 * self.depth + self.global_blocks[0]),
                                               )
         
         self.backbone = nn.ModuleList([])
@@ -746,7 +754,7 @@ class ViTamin(BaseImageEncoder):
             for j in range(self.global_blocks[i]):
                 self.backbone += [nn.Sequential(
                                     Grapher(self.global_channels[i], drop_path=0, K=2),
-                                    FFN(self.global_channels[i], self.global_channels[i] * 4, drop_path=0))
+                                    FFN(self.global_channels[i], self.global_channels[i] * 2, drop_path=0))
                                     ]
 
 
@@ -906,6 +914,15 @@ class ViTamin(BaseImageEncoder):
             x = x + self.pos_embed
         return self.pos_drop(x)
 
+    def pool_stage3_stage4(self, x):
+        x = x.transpose(1, 2)
+        n, c, h_w = x.shape
+        h = w = int(h_w ** 0.5)
+        x = x.view(n, c, h, w)
+        x = self.pool(x)
+        x = x.flatten(2).transpose(1, 2)
+        return x
+
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
         x = self.patch_embed(x)
         if self.is_pos_embed:
@@ -939,18 +956,18 @@ class ViTamin(BaseImageEncoder):
             for block in self.blocks:
                 x = block(x)
                 all_hidden_states.append(x)
+            x = self.pool_stage3_stage4(x)
+            for block1 in self.blocks1:
+                x = block1(x)
+                all_hidden_states.append(x)
             x = x.transpose(1, 2)
             n, c, h_w = x.shape
             h = w = int(h_w ** 0.5)
             x = x.view(n, c, h, w)
-            x = self.pool(x)
-            x = x.flatten(2).transpose(1, 2)
-            all_hidden_states.append(x)
-            for block1 in self.blocks1:
-                x = block1(x)
             for i in range(len(self.backbone)):
                 x = self.backbone[i](x)
                 all_hidden_states.append(x)
+            x = x.flatten(2).transpose(1, 2)
         x = self.norm(x)
         return x, all_hidden_states
 
@@ -973,14 +990,14 @@ class ViTamin(BaseImageEncoder):
                 out_dict.update({"augmented_tensor": x})
             x, all_hidden_states = self.forward_features_dense_connector(x)
             if self.mm_dense_connector_type == 'sci':
-                image_features_dc = self.dense_connnector.dense_connector_sti(x, all_hidden_states)
-                image_features_dc = self.block_to_block1(image_features_dc)
-                x = self.dense_connnector.dense_connector(x, image_features_dc, mm_dense_connector_type=self.mm_dense_connector_type)
-
+                image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_sci(x, all_hidden_states)
+                image_features_dc1 = self.pool_stage3_stage4(image_features_dc1)
+                x = torch.cat((x, image_features_dc1, image_features_dc2), dim=-2)
             elif self.mm_dense_connector_type == 'dci':
-                image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
-                image_features_dc1 = self.block_to_block1(image_features_dc1)
-                x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
+                image_features_dc1, image_features_dc2, image_features_dc3 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
+                image_features_dc1 = self.pool_stage3_stage4(image_features_dc1)
+                image_features_dc3 = image_features_dc3.flatten(2).transpose(1, 2)
+                x = torch.cat((image_features_dc1, image_features_dc2, image_features_dc3), dim=-2)
             x = self.mlp(x)
             logits = self.forward_classifier(x)
             out_dict.update({"logits": logits})

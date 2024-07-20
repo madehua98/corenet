@@ -59,16 +59,14 @@ class VitCfg:
 
 def get_configuration(opts: argparse.Namespace) -> Dict:
 
-    mode = getattr(opts, "model.classification.foodv.mode", "tiny")
+    mode = getattr(opts, "model.classification.vitamin.mode", "tiny")
     if not mode:
         logger.error("Please specify mode")
 
     mode = mode.lower()
-    dropout = getattr(opts, "model.classification.foodv.dropout", 0.0)
-    norm_layer = getattr(opts, "model.classification.foodv.norm_layer", "layer_norm")
-    connector_type = getattr(opts, "model.classification.foodv.connector_type", "dci")
+    dropout = getattr(opts, "model.classification.vitamin.dropout", 0.0)
+    norm_layer = getattr(opts, "model.classification.vitamin.norm_layer", "layer_norm")
     print(mode)
-    print(connector_type)
     ViTamin_config = {
         "qkv_bias": True,
         "qk_norm": False,
@@ -96,18 +94,17 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
         "block_fn": Block,
         "mlp_layer": Mlp,
         "is_pos_embed": True,
-        "mm_dense_connector_type": connector_type
     }
     if mode == "small":
         ViTamin_config.update({
             "img_size": 224,
-            "patch_size": 14,
+            "patch_size": 16,
             "in_chans": 3,
             "global_pool": 'avg',
             "embed_dim": 384,
             "depth": 14,
             "num_heads": 6,
-            "mlp_ratio": 4.0,
+            "mlp_ratio": 2.0,
             "MbConv_embed_dim": [64, 128, 384],
             "MbConv_depths": [2, 4, 1],
             "MbConv_stem_width": 64,
@@ -115,15 +112,13 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
     elif mode == "base":
         ViTamin_config.update({
             "img_size": 224,
-            "patch_size": 14,
+            "patch_size": 16,
             "in_chans": 3,
             "global_pool": 'avg',
             "embed_dim": 768,
-            "block1_embed_dim": 1024,
-            "depth": 8,
+            "depth": 14,
             "num_heads": 12,
-            "block1_num_heads": 16,
-            "mlp_ratio": 4.0,
+            "mlp_ratio": 2.0,
             "MbConv_embed_dim": [128, 256, 768],
             "MbConv_depths": [2, 4, 1],
             "MbConv_stem_width": 128,

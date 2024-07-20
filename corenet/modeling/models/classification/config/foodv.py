@@ -98,52 +98,19 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
         "is_pos_embed": True,
         "mm_dense_connector_type": connector_type
     }
-    if mode == "small":
-        ViTamin_config.update({
-            "img_size": 224,
-            "patch_size": 14,
-            "in_chans": 3,
-            "global_pool": 'avg',
-            "embed_dim": 384,
-            "block1_embed_dim": 512,
-            "depth": 8,
-            "num_heads": 6,
-            "block1_num_heads": 8,
-            "mlp_ratio": 4.0,
-            "MbConv_embed_dim": [64, 128, 384],
-            "MbConv_depths": [2, 4, 1],
-            "MbConv_stem_width": 64,
-        })
-    elif mode == "base":
-        ViTamin_config.update({
-            "img_size": 224,
-            "patch_size": 14,
-            "in_chans": 3,
-            "global_pool": 'avg',
-            "embed_dim": 768,
-            "block1_embed_dim": 1024,
-            "depth": 8,
-            "num_heads": 12,
-            "block1_num_heads": 16,
-            "mlp_ratio": 4.0,
-            "MbConv_embed_dim": [128, 256, 768],
-            "MbConv_depths": [2, 4, 1],
-            "MbConv_stem_width": 128,
-        })
-    
     # if mode == "small":
     #     ViTamin_config.update({
     #         "img_size": 224,
     #         "patch_size": 14,
     #         "in_chans": 3,
     #         "global_pool": 'avg',
-    #         "embed_dim": 256,
+    #         "embed_dim": 384,
     #         "block1_embed_dim": 512,
-    #         "depth": 7,
-    #         "num_heads": 8,
+    #         "depth": 8,
+    #         "num_heads": 6,
     #         "block1_num_heads": 8,
-    #         "mlp_ratio": 4.0,
-    #         "MbConv_embed_dim": [64, 128, 256],
+    #         "mlp_ratio": 2.0,
+    #         "MbConv_embed_dim": [64, 128, 384],
     #         "MbConv_depths": [2, 4, 1],
     #         "MbConv_stem_width": 64,
     #     })
@@ -153,16 +120,49 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
     #         "patch_size": 14,
     #         "in_chans": 3,
     #         "global_pool": 'avg',
-    #         "embed_dim": 512,
+    #         "embed_dim": 768,
     #         "block1_embed_dim": 1024,
-    #         "depth": 7,
+    #         "depth": 8,
     #         "num_heads": 12,
     #         "block1_num_heads": 16,
-    #         "mlp_ratio": 4.0,
-    #         "MbConv_embed_dim": [128, 256, 512],
+    #         "mlp_ratio": 2.0,
+    #         "MbConv_embed_dim": [128, 256, 768],
     #         "MbConv_depths": [2, 4, 1],
     #         "MbConv_stem_width": 128,
     #     })
+    
+    if mode == "small":
+        ViTamin_config.update({
+            "img_size": 224,
+            "patch_size": 16,
+            "in_chans": 3,
+            "global_pool": 'avg',
+            "embed_dim": 256,
+            "block1_embed_dim": 512,
+            "depth": 7,
+            "num_heads": 8,
+            "block1_num_heads": 8,
+            "mlp_ratio": 2.0,
+            "MbConv_embed_dim": [64, 128, 256],
+            "MbConv_depths": [2, 4, 1],
+            "MbConv_stem_width": 64,
+        })
+    elif mode == "base":
+        ViTamin_config.update({
+            "img_size": 224,
+            "patch_size": 16,
+            "in_chans": 3,
+            "global_pool": 'avg',
+            "embed_dim": 512,
+            "block1_embed_dim": 1024,
+            "depth": 7,
+            "num_heads": 16,
+            "block1_num_heads": 16,
+            "mlp_ratio": 2.0,
+            "MbConv_embed_dim": [128, 256, 512],
+            "MbConv_depths": [2, 4, 1],
+            "MbConv_stem_width": 128,
+        })
     elif mode == "large":
         foodv = {
             "embed_dim": 1024,

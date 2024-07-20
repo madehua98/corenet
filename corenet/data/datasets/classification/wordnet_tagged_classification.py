@@ -279,7 +279,6 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
 
         return folder_idx
 
-
     def _convert_caption_to_labels(self, captions_str: str) -> List[int]:
         """Converts the caption into multi-class labels.
 
@@ -318,21 +317,6 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
                 labels.append(self.vocab.index(noun_synset))                        #label为noun_synset在vocab中的索引，例如'n14334306'在vocab中的索引为210
         return labels  
 
-    # def _get_cache_and_idx(self, folder_idx):
-    #     if folder_idx < DATACOMP_COUNT:
-    #         cache = self.cache_loc
-    #         idx = folder_idx
-    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT:
-    #         cache = self.laion_cache_loc
-    #         idx = folder_idx - DATACOMP_COUNT
-    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT:
-    #         cache = self.recipe_cache_loc
-    #         idx = folder_idx - DATACOMP_COUNT - LAION_COUNT
-    #     elif folder_idx < DATACOMP_COUNT + LAION_COUNT + RECIPE_COUNT + CC12M_COUNT:
-    #         cache = self.cc12m_cache_loc
-    #         idx = folder_idx - DATACOMP_COUNT - LAION_COUNT - RECIPE_COUNT
-
-    #     return cache, idx
 
     def _get_cache_and_idx(self, folder_idx):
         if folder_idx < DATACOMP_COUNT:
@@ -405,7 +389,13 @@ class WordnetTaggedClassificationDataset(BaseImageDataset):
         else:
             raise NotImplementedError("Text key not found.")
 
-        labels = self._convert_caption_to_labels(captions_str=caption_str)  # 处理caption入口
+        #labels = self._convert_caption_to_labels(captions_str=caption_str)  # 处理caption入口
+        labels = []
+        for noun_synset in caption_str:
+            if noun_synset in self.vocab:
+                # add the indices of the labels
+                labels.append(self.vocab.index(noun_synset)) 
+
         return image, labels
 
     def _training_transforms(self, *args, **kwargs) -> BaseTransformation:

@@ -14,6 +14,7 @@ from dataclasses import dataclass, replace, field
 from dataclasses import dataclass, field
 from typing import Optional, Tuple, Union
 
+
 @dataclass
 class VitConvCfg:
     expand_ratio: float = 4.0
@@ -101,36 +102,38 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
     if mode == "small":
         ViTamin_config.update({
             "img_size": 224,
-            "patch_size": 14,
+            "patch_size": 16,
             "in_chans": 3,
             "global_pool": 'avg',
-            "embed_dim": 384,
+            "embed_dim": 256,
             "block1_embed_dim": 512,
-            "depth": 8,
-            "num_heads": 6,
+            "depth": 7,
+            "num_heads": 8,
             "block1_num_heads": 8,
-            "mlp_ratio": 4.0,
-            "MbConv_embed_dim": [64, 128, 384],
+            "mlp_ratio": 2.0,
+            "MbConv_embed_dim": [64, 128, 256],
             "MbConv_depths": [2, 4, 1],
             "MbConv_stem_width": 64,
             "global_blocks": [3],
-            "global_channels": [256]
+            "global_channels": [512]
         })
     elif mode == "base":
         ViTamin_config.update({
             "img_size": 224,
-            "patch_size": 14,
+            "patch_size": 16,
             "in_chans": 3,
             "global_pool": 'avg',
-            "embed_dim": 768,
+            "embed_dim": 512,
             "block1_embed_dim": 1024,
-            "depth": 8,
-            "num_heads": 12,
+            "depth": 7,
+            "num_heads": 16,
             "block1_num_heads": 16,
-            "mlp_ratio": 4.0,
-            "MbConv_embed_dim": [128, 256, 768],
+            "mlp_ratio": 2.0,
+            "MbConv_embed_dim": [128, 256, 512],
             "MbConv_depths": [2, 4, 1],
             "MbConv_stem_width": 128,
+            "global_blocks": [3],
+            "global_channels": [1024]
         })
     
     # if mode == "small":

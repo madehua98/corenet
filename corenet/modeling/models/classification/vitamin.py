@@ -67,7 +67,7 @@ from corenet.modeling.misc.common import parameter_list
 from corenet.modeling.misc.init_utils import initialize_conv_layer
 from corenet.modeling.models import MODEL_REGISTRY
 from corenet.modeling.models.classification.base_image_encoder import BaseImageEncoder
-from corenet.modeling.models.classification.config.foodv import get_configuration
+from corenet.modeling.models.classification.config.vitamin import get_configuration
 from corenet.modeling.modules import FlashTransformerEncoder, TransformerEncoder
 from corenet.utils import logger
 
@@ -349,6 +349,7 @@ class HybridEmbed(nn.Module):
         self.backbone = backbone
         if feature_size is None:
             feature_size = img_size[0] // 16
+        feature_size = 16
         feature_size = to_2tuple(feature_size)
         if hasattr(self.backbone, 'feature_info'):
             feature_dim = self.backbone.feature_info.channels()[-1]
@@ -487,12 +488,11 @@ class ViTamin(BaseImageEncoder):
         self.fix_init = ViTamin_config["fix_init"]  # False
         #self.embed_layer = ViTamin_config["embed_layer"]  # PatchEmbed          #使用PatchEmbed和ViTamin提出的MbConv进行对比
         self.block_fn = ViTamin_config["block_fn"]  # Type[nn.Module]
-        self.mlp_layer = ViTamin_config["mlp_layer"]  # Type[nn.Module]
+        self.mlp_layer = GeGluMlp  # Type[nn.Module]
         self.is_pos_embed = ViTamin_config["is_pos_embed"]  # True
         self.MbConv_embed_dim = ViTamin_config["MbConv_embed_dim"] # [64, 128, 384]
         self.MbConv_depths = ViTamin_config["MbConv_depths"] # [2,4,1]
         self.MbConv_stem_width = ViTamin_config["MbConv_stem_width"] # 64
-        self.mm_dense_connector_type = ViTamin_config["mm_dense_connector_type"]
         
         self.use_kl = False
         
@@ -593,13 +593,6 @@ class ViTamin(BaseImageEncoder):
                 default="small",
                 choices=["small", "base", "large", "huge"],
                 help="vitamin mode. Default is base.",
-            )
-            group.add_argument(
-                "--model.classification.vitamin.connector_type",
-                type=str,
-                default="dci",
-                choices=["sci", "dci"],
-                help="vitamin connector_type",
             )
             group.add_argument(
                 "--model.classification.vitamin.dropout",

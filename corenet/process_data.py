@@ -51,7 +51,7 @@ def recipe_get_data(filename):
     for data in tqdm(lines, total=len(lines)):
         data = json.loads(data)
         images.append(data["image"])
-        texts.append(data["texts"])
+        texts.append(data["labels"])
     return images, texts
     
 
@@ -136,7 +136,8 @@ def process_tasks_in_parallel(tasks, num_workers):
 #         fw.write('\n')
 
 # filename = '/ML-A100/team/mm/models/recipe1M+/image2ingredients_new.jsonl'
-filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
+#filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
+
 # image2ingredients_new_1 = []
 # image2ingredients_new = load_jsonl(filename)
 # for object in tqdm(image2ingredients_new, total=len(image2ingredients_new)):
@@ -145,20 +146,33 @@ filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
 
 #save_jsonl(filename_1, image2ingredients_new_1)
 
-# filename_1 = '/ML-A100/team/mm/models/recipe1M+_1/image2ingredients_new.jsonl'
-# images, texts = recipe_get_data(filename_1)
-# tasks = get_tasks(
-#     images=images,
-#     texts=texts,
-#     root_dir='/ML-A100/team/mm/models/catlip_data/recipe1M+_2'
-# )
+def main(input_path, output_path):
+    images, texts = recipe_get_data(input_path)
+    tasks = get_tasks(
+        images=images,
+        texts=texts,
+        root_dir=output_path
+    )
 
-# # 设置工作进程数量
-# num_workers = 64
+    # 设置工作进程数量
+    num_workers = 64
 
-# # 多线程处理任务并显示进度条
-# process_tasks_in_parallel(tasks, num_workers)
+    # 多线程处理任务并显示进度条
+    process_tasks_in_parallel(tasks, num_workers)
 
+# input_path = '/ML-A100/team/mm/models/datacomp_1b/image2labels_new.jsonl'
+# output_path = '/ML-A100/team/mm/models/catlip_data/datacomp_1b_label'
+# main(input_path, output_path)
+# input_path = '/ML-A100/team/mm/models/laion2b/image2labels_new.jsonl'
+# output_path = '/ML-A100/team/mm/models/catlip_data/laion2b_label'
+# main(input_path, output_path)
+# input_path = '/ML-A100/team/mm/models/cc12m/image2labels_new.jsonl'
+# output_path = '/ML-A100/team/mm/models/catlip_data/cc12m_label'
+# main(input_path, output_path)
+
+# input_path = '/ML-A100/team/mm/models/recipe1M+_1/image2labels_new.jsonl'
+# output_path = '/ML-A100/team/mm/models/catlip_data/recipe1M+_label'
+# main(input_path, output_path)
 
 """
 根据文本生成词表
@@ -211,23 +225,23 @@ def process_files(text_paths, output_file, num_threads=multiprocessing.cpu_count
 # process_files(text_paths, output_file)
 
 
-output_file = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
-vocab_dict = {}
-lines = load_jsonl(output_file)
-texts = []
-for line in lines:
-    text = line["texts"]
-    texts.append(text)
-for text in tqdm(texts, total=len(texts)):
-    vocab_dict = get_vocab(text, vocab_dict)
+# output_file = '/ML-A100/team/mm/models/recipe1M+_1/image2texts_new.jsonl'
+# vocab_dict = {}
+# lines = load_jsonl(output_file)
+# texts = []
+# for line in lines:
+#     text = line["texts"]
+#     texts.append(text)
+# for text in tqdm(texts, total=len(texts)):
+#     vocab_dict = get_vocab(text, vocab_dict)
 
-vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
-print(len(vocab_dict_sorted))
+# vocab_dict_sorted = dict(sorted(vocab_dict.items(), key=lambda item: item[1], reverse=True))
+# print(len(vocab_dict_sorted))
 
-file_path = 'corenet/data/datasets/classification/recipe1M+_new_vocab.pkl'
-with open(file_path, 'wb') as file:
-    pickle.dump(vocab_dict_sorted, file)
-print(vocab_dict_sorted)
+# file_path = 'corenet/data/datasets/classification/recipe1M+_new_vocab.pkl'
+# with open(file_path, 'wb') as file:
+#     pickle.dump(vocab_dict_sorted, file)
+# print(vocab_dict_sorted)
 
 
 # output_file = '/ML-A100/team/mm/models/catlip_data/cc12m/captions.jsonl'
@@ -300,7 +314,6 @@ def check_files(directory, backup_directory):
         expected_files = {f"{i}.pkl" for i in range(10000)}
     # 找出缺失的文件
     missing_files = expected_files - existing_files
-    
     # 输出缺失文件的完整路径
     if missing_files:
         print(1)
@@ -327,13 +340,13 @@ def check_files(directory, backup_directory):
                 break
 
 # 示例使用
-# directorys = "/ML-A100/team/mm/models/catlip_data/recipe1M+_1/"
-# backup_directory = os.path.join(directorys, '1373')
+directorys = "/ML-A100/team/mm/models/catlip_data/cc12m_label/"
+backup_directory = os.path.join(directorys, '33')
 
-# for directory in os.listdir(directorys):
-#     if directory == '1373':
-#         continue
-#     check_files(directorys + directory, backup_directory)
+for directory in os.listdir(directorys):
+    if directory == '33':
+        continue
+    check_files(directorys + directory, backup_directory)
 
 
 
@@ -376,7 +389,7 @@ print(data['total_tar_files'])
 #     datacomp_vocab = pickle.load(file)
 # with open('./corenet/data/datasets/classification/cc12m_vocab.pkl', mode='rb') as file:
 #     cc12m_vocab = pickle.load(file)
-# with open('./corenet/data/datasets/classification/recipe1M+_vocab.pkl', mode='rb') as file:
+# with open('./corenet/data/datasets/classification/recipe1M+_new_vocab.pkl', mode='rb') as file:
 #     recipe1M_vocab = pickle.load(file)
 
 # # 合并词表
@@ -395,12 +408,32 @@ print(data['total_tar_files'])
 # merge_vocab(final_vocab, recipe1M_vocab)
 
 # # 将合并后的词表写入文件
-# with open('./corenet/data/datasets/classification/all_vocab.pkl', mode='wb') as file:
+# with open('./corenet/data/datasets/classification/all_new_vocab.pkl', mode='wb') as file:
 #     pickle.dump(final_vocab, file)
 
 
+# with open('./corenet/data/datasets/classification/all_new_vocab.pkl', mode='rb') as file:
+#     object1 = pickle.load(file)
+
+# with open('./corenet/data/datasets/classification/all_vocab.pkl', mode='rb') as file:
+#     object2 = pickle.load(file)
 
 
+# with open('corenet/data/datasets/classification/datacomp_1_2B_vocab.pkl', mode='rb') as file:
+#     object2 = pickle.load(file)
+
+# print(list(object2.values())[0])
+# count = 0
+# for k, v in object1.items():
+#     if count < 5:
+#         print(k, v)
+#         count += 1
+# count = 0
+# print("*"* 100)
+# for k, v in object2.items():
+#     if count < 5:
+#         print(k, v)
+#         count += 1
 """
 将recipe中的图像resize，缩小图片的大小
 

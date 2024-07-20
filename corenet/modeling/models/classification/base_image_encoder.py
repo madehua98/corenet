@@ -355,12 +355,12 @@ class BaseImageEncoder(BaseAnyNNModel):
             width = 32
         else:
             # this is the typical resolution used in ImageNet datasets
-            # height = 224
-            # width = 224
+            height = 224
+            width = 224
             
             # 源文件中为224×224，将其修改为256×256
-            height = 256
-            width = 256
+            # height = 256
+            # width = 256
         n_labels = 10
         img_tensor = torch.randn(
             batch_size, img_channels, height, width, dtype=torch.float
