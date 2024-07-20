@@ -15,6 +15,7 @@ from corenet.modeling.models.segmentation.base_seg import (
     set_model_specific_opts_before_model_building,
     unset_model_specific_opts_after_model_building,
 )
+from corenet.modeling.modules import FlashTransformerEncoder, TransformerEncoder
 
 
 @MODEL_REGISTRY.register(name="encoder_decoder", type="segmentation")
@@ -116,6 +117,14 @@ class SegEncoderDecoder(BaseSegmentation):
         """
         if hasattr(self.seg_head, "update_classifier"):
             self.seg_head.update_classifier(opts, n_classes)
+
+
+    def get_activation_checkpoint_submodule_class(self):
+        """Returns the activation checkpoint module class."""
+
+        #return FlashTransformerEncoder if self.use_flash_attn else TransformerEncoder
+        return FlashTransformerEncoder
+
 
     @classmethod
     def build_model(cls, opts: argparse.Namespace, *args, **kwargs) -> BaseAnyNNModel:

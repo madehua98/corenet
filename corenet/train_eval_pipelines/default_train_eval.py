@@ -145,11 +145,6 @@ class DefaultTrainEvalPipeline(BaseTrainEvalPipeline):
         # set-up the model
         model = get_model(self.opts) # modeling/init/get_model.py   
         model_name = getattr(self.opts, "model.classification.name")
-        # if model_name == 'foodv':
-        #     finetune = getattr(self.opts, "model.ft")
-        #     if finetune:
-        #         n_classes = getattr(self.opts, "model.classification.n_classes")
-        #         model.head = nn.Linear(model.block1_embed_dim, n_classes)
         
         # print model information on master node
         if self.is_master_node:
