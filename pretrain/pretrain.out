@@ -1425,3 +1425,584 @@ bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered in
 2024-07-20 17:19:05 - [34m[1mLOGS   [0m - Epoch:   2 [   19793/  100000], loss: {'classification': 39.4303, 'neural_augmentation': 0.4959, 'total_loss': 39.9262}, LR: [0.000971, 0.000971], Avg. batch load time: 0.112, Elapsed time: 6404.24
 2024-07-20 17:22:37 - [34m[1mLOGS   [0m - Epoch:   2 [   19918/  100000], loss: {'classification': 39.4016, 'neural_augmentation': 0.4916, 'total_loss': 39.8932}, LR: [0.000971, 0.000971], Avg. batch load time: 0.113, Elapsed time: 6615.77
 2024-07-20 17:25:59 - [34m[1mLOGS   [0m - Epoch:   2 [   20043/  100000], loss: {'classification': 39.374, 'neural_augmentation': 0.4875, 'total_loss': 39.8616}, LR: [0.00097, 0.00097], Avg. batch load time: 0.114, Elapsed time: 6818.27
+2024-07-20 17:29:20 - [34m[1mLOGS   [0m - Epoch:   2 [   20168/  100000], loss: {'classification': 39.3475, 'neural_augmentation': 0.4837, 'total_loss': 39.8312}, LR: [0.000969, 0.000969], Avg. batch load time: 0.114, Elapsed time: 7018.72
+2024-07-20 17:32:45 - [34m[1mLOGS   [0m - Epoch:   2 [   20293/  100000], loss: {'classification': 39.3199, 'neural_augmentation': 0.4799, 'total_loss': 39.7998}, LR: [0.000968, 0.000968], Avg. batch load time: 0.114, Elapsed time: 7224.52
+2024-07-20 17:35:54 - [34m[1mLOGS   [0m - Epoch:   2 [   20418/  100000], loss: {'classification': 39.2922, 'neural_augmentation': 0.4762, 'total_loss': 39.7684}, LR: [0.000968, 0.000968], Avg. batch load time: 0.113, Elapsed time: 7412.88
+2024-07-20 17:39:29 - [34m[1mLOGS   [0m - Epoch:   2 [   20543/  100000], loss: {'classification': 39.2658, 'neural_augmentation': 0.4724, 'total_loss': 39.7382}, LR: [0.000967, 0.000967], Avg. batch load time: 0.113, Elapsed time: 7627.97
+2024-07-20 17:43:05 - [34m[1mLOGS   [0m - Epoch:   2 [   20668/  100000], loss: {'classification': 39.2414, 'neural_augmentation': 0.4688, 'total_loss': 39.7102}, LR: [0.000966, 0.000966], Avg. batch load time: 0.114, Elapsed time: 7844.39
+2024-07-20 17:46:12 - [34m[1mLOGS   [0m - Epoch:   2 [   20793/  100000], loss: {'classification': 39.2157, 'neural_augmentation': 0.4653, 'total_loss': 39.6809}, LR: [0.000965, 0.000965], Avg. batch load time: 0.113, Elapsed time: 8030.75
+2024-07-20 17:49:36 - [34m[1mLOGS   [0m - Epoch:   2 [   20918/  100000], loss: {'classification': 39.1934, 'neural_augmentation': 0.4617, 'total_loss': 39.6551}, LR: [0.000964, 0.000964], Avg. batch load time: 0.113, Elapsed time: 8235.53
+2024-07-20 17:53:12 - [34m[1mLOGS   [0m - Epoch:   2 [   21043/  100000], loss: {'classification': 39.1694, 'neural_augmentation': 0.4584, 'total_loss': 39.6278}, LR: [0.000964, 0.000964], Avg. batch load time: 0.114, Elapsed time: 8450.98
+2024-07-20 17:56:39 - [34m[1mLOGS   [0m - Epoch:   2 [   21168/  100000], loss: {'classification': 39.1455, 'neural_augmentation': 0.4551, 'total_loss': 39.6006}, LR: [0.000963, 0.000963], Avg. batch load time: 0.114, Elapsed time: 8658.12
+2024-07-20 17:59:57 - [34m[1mLOGS   [0m - Epoch:   2 [   21293/  100000], loss: {'classification': 39.1226, 'neural_augmentation': 0.4519, 'total_loss': 39.5745}, LR: [0.000962, 0.000962], Avg. batch load time: 0.114, Elapsed time: 8855.92
+2024-07-20 18:03:17 - [34m[1mLOGS   [0m - Epoch:   2 [   21418/  100000], loss: {'classification': 39.1, 'neural_augmentation': 0.4487, 'total_loss': 39.5487}, LR: [0.000961, 0.000961], Avg. batch load time: 0.114, Elapsed time: 9055.81
+2024-07-20 18:06:36 - [34m[1mLOGS   [0m - Epoch:   2 [   21543/  100000], loss: {'classification': 39.0784, 'neural_augmentation': 0.4456, 'total_loss': 39.524}, LR: [0.00096, 0.00096], Avg. batch load time: 0.113, Elapsed time: 9255.64
+2024-07-20 18:09:54 - [34m[1mLOGS   [0m - Epoch:   2 [   21668/  100000], loss: {'classification': 39.0565, 'neural_augmentation': 0.4426, 'total_loss': 39.4991}, LR: [0.00096, 0.00096], Avg. batch load time: 0.114, Elapsed time: 9452.88
+2024-07-20 18:13:19 - [34m[1mLOGS   [0m - Epoch:   2 [   21793/  100000], loss: {'classification': 39.0335, 'neural_augmentation': 0.4396, 'total_loss': 39.4731}, LR: [0.000959, 0.000959], Avg. batch load time: 0.114, Elapsed time: 9658.00
+2024-07-20 18:16:46 - [34m[1mLOGS   [0m - Epoch:   2 [   21918/  100000], loss: {'classification': 39.0119, 'neural_augmentation': 0.4365, 'total_loss': 39.4484}, LR: [0.000958, 0.000958], Avg. batch load time: 0.114, Elapsed time: 9865.39
+2024-07-20 18:20:00 - [34m[1mLOGS   [0m - Epoch:   2 [   22043/  100000], loss: {'classification': 38.9913, 'neural_augmentation': 0.4337, 'total_loss': 39.425}, LR: [0.000957, 0.000957], Avg. batch load time: 0.114, Elapsed time: 10059.44
+2024-07-20 18:23:21 - [34m[1mLOGS   [0m - Epoch:   2 [   22168/  100000], loss: {'classification': 38.9691, 'neural_augmentation': 0.4309, 'total_loss': 39.4}, LR: [0.000956, 0.000956], Avg. batch load time: 0.113, Elapsed time: 10259.86
+2024-07-20 18:26:46 - [34m[1mLOGS   [0m - Epoch:   2 [   22293/  100000], loss: {'classification': 38.9508, 'neural_augmentation': 0.428, 'total_loss': 39.3788}, LR: [0.000955, 0.000955], Avg. batch load time: 0.114, Elapsed time: 10465.48
+2024-07-20 18:30:16 - [34m[1mLOGS   [0m - Epoch:   2 [   22418/  100000], loss: {'classification': 38.9288, 'neural_augmentation': 0.4252, 'total_loss': 39.354}, LR: [0.000954, 0.000954], Avg. batch load time: 0.114, Elapsed time: 10675.10
+2024-07-20 18:33:40 - [34m[1mLOGS   [0m - Epoch:   2 [   22543/  100000], loss: {'classification': 38.9079, 'neural_augmentation': 0.4226, 'total_loss': 39.3305}, LR: [0.000953, 0.000953], Avg. batch load time: 0.114, Elapsed time: 10878.91
+2024-07-20 18:36:58 - [34m[1mLOGS   [0m - Epoch:   2 [   22668/  100000], loss: {'classification': 38.8874, 'neural_augmentation': 0.4199, 'total_loss': 39.3074}, LR: [0.000952, 0.000952], Avg. batch load time: 0.114, Elapsed time: 11077.48
+2024-07-20 18:40:28 - [34m[1mLOGS   [0m - Epoch:   2 [   22793/  100000], loss: {'classification': 38.8661, 'neural_augmentation': 0.4172, 'total_loss': 39.2833}, LR: [0.000951, 0.000951], Avg. batch load time: 0.114, Elapsed time: 11287.43
+2024-07-20 18:44:00 - [34m[1mLOGS   [0m - Epoch:   2 [   22918/  100000], loss: {'classification': 38.8478, 'neural_augmentation': 0.4145, 'total_loss': 39.2624}, LR: [0.000951, 0.000951], Avg. batch load time: 0.114, Elapsed time: 11498.79
+2024-07-20 18:47:22 - [34m[1mLOGS   [0m - Epoch:   2 [   23043/  100000], loss: {'classification': 38.8293, 'neural_augmentation': 0.412, 'total_loss': 39.2413}, LR: [0.00095, 0.00095], Avg. batch load time: 0.115, Elapsed time: 11701.59
+2024-07-20 18:50:28 - [34m[1mLOGS   [0m - Epoch:   2 [   23168/  100000], loss: {'classification': 38.8088, 'neural_augmentation': 0.4095, 'total_loss': 39.2183}, LR: [0.000949, 0.000949], Avg. batch load time: 0.114, Elapsed time: 11886.85
+2024-07-20 18:53:53 - [34m[1mLOGS   [0m - Epoch:   2 [   23293/  100000], loss: {'classification': 38.7901, 'neural_augmentation': 0.4072, 'total_loss': 39.1973}, LR: [0.000948, 0.000948], Avg. batch load time: 0.114, Elapsed time: 12092.31
+2024-07-20 18:56:56 - [34m[1mLOGS   [0m - Epoch:   2 [   23418/  100000], loss: {'classification': 38.7709, 'neural_augmentation': 0.4048, 'total_loss': 39.1757}, LR: [0.000947, 0.000947], Avg. batch load time: 0.114, Elapsed time: 12274.87
+2024-07-20 19:00:18 - [34m[1mLOGS   [0m - Epoch:   2 [   23543/  100000], loss: {'classification': 38.753, 'neural_augmentation': 0.4025, 'total_loss': 39.1555}, LR: [0.000946, 0.000946], Avg. batch load time: 0.113, Elapsed time: 12477.08
+2024-07-20 19:03:36 - [34m[1mLOGS   [0m - Epoch:   2 [   23668/  100000], loss: {'classification': 38.7363, 'neural_augmentation': 0.4003, 'total_loss': 39.1366}, LR: [0.000945, 0.000945], Avg. batch load time: 0.113, Elapsed time: 12675.19
+2024-07-20 19:04:29 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
+	 loss={'classification': 38.7301, 'neural_augmentation': 0.3995, 'total_loss': 39.1296}
+2024-07-20 19:04:31 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-20 19:04:32 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-20 19:04:32 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-20 19:04:33 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 23708 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_2_iter_23708.pt
+2024-07-20 19:04:33 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 23708 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_2_iter_23708.pt
+[31m===========================================================================[0m
+2024-07-20 19:04:35 - [32m[1mINFO   [0m - Training epoch 3
+2024-07-20 19:05:53 - [34m[1mLOGS   [0m - Epoch:   3 [   23708/  100000], loss: {'classification': 36.8835, 'neural_augmentation': 0.2646, 'total_loss': 37.1481}, LR: [0.000944, 0.000944], Avg. batch load time: 74.749, Elapsed time: 78.60
+2024-07-20 19:09:08 - [34m[1mLOGS   [0m - Epoch:   3 [   23833/  100000], loss: {'classification': 37.5422, 'neural_augmentation': 0.2576, 'total_loss': 37.7998}, LR: [0.000943, 0.000943], Avg. batch load time: 0.252, Elapsed time: 272.79
+2024-07-20 19:12:24 - [34m[1mLOGS   [0m - Epoch:   3 [   23958/  100000], loss: {'classification': 37.5861, 'neural_augmentation': 0.257, 'total_loss': 37.8431}, LR: [0.000942, 0.000942], Avg. batch load time: 0.187, Elapsed time: 469.36
+2024-07-20 19:15:29 - [34m[1mLOGS   [0m - Epoch:   3 [   24083/  100000], loss: {'classification': 37.5771, 'neural_augmentation': 0.2564, 'total_loss': 37.8335}, LR: [0.000941, 0.000941], Avg. batch load time: 0.154, Elapsed time: 653.82
+2024-07-20 19:18:48 - [34m[1mLOGS   [0m - Epoch:   3 [   24208/  100000], loss: {'classification': 37.5871, 'neural_augmentation': 0.2556, 'total_loss': 37.8427}, LR: [0.00094, 0.00094], Avg. batch load time: 0.145, Elapsed time: 853.73
+2024-07-20 19:21:59 - [34m[1mLOGS   [0m - Epoch:   3 [   24333/  100000], loss: {'classification': 37.5602, 'neural_augmentation': 0.2549, 'total_loss': 37.8151}, LR: [0.000939, 0.000939], Avg. batch load time: 0.133, Elapsed time: 1044.32
+2024-07-20 19:25:00 - [34m[1mLOGS   [0m - Epoch:   3 [   24458/  100000], loss: {'classification': 37.5446, 'neural_augmentation': 0.2542, 'total_loss': 37.7988}, LR: [0.000938, 0.000938], Avg. batch load time: 0.128, Elapsed time: 1225.64
+2024-07-20 19:28:20 - [34m[1mLOGS   [0m - Epoch:   3 [   24583/  100000], loss: {'classification': 37.5437, 'neural_augmentation': 0.2535, 'total_loss': 37.7972}, LR: [0.000937, 0.000937], Avg. batch load time: 0.126, Elapsed time: 1425.35
+2024-07-20 19:31:36 - [34m[1mLOGS   [0m - Epoch:   3 [   24708/  100000], loss: {'classification': 37.5306, 'neural_augmentation': 0.2528, 'total_loss': 37.7834}, LR: [0.000936, 0.000936], Avg. batch load time: 0.119, Elapsed time: 1621.41
+2024-07-20 19:34:49 - [34m[1mLOGS   [0m - Epoch:   3 [   24833/  100000], loss: {'classification': 37.5113, 'neural_augmentation': 0.252, 'total_loss': 37.7633}, LR: [0.000935, 0.000935], Avg. batch load time: 0.118, Elapsed time: 1814.61
+2024-07-20 19:37:56 - [34m[1mLOGS   [0m - Epoch:   3 [   24958/  100000], loss: {'classification': 37.5049, 'neural_augmentation': 0.2513, 'total_loss': 37.7562}, LR: [0.000934, 0.000934], Avg. batch load time: 0.115, Elapsed time: 2001.12
+2024-07-20 19:41:12 - [34m[1mLOGS   [0m - Epoch:   3 [   25083/  100000], loss: {'classification': 37.4945, 'neural_augmentation': 0.2506, 'total_loss': 37.7451}, LR: [0.000933, 0.000933], Avg. batch load time: 0.113, Elapsed time: 2197.48
+2024-07-20 19:44:31 - [34m[1mLOGS   [0m - Epoch:   3 [   25208/  100000], loss: {'classification': 37.4852, 'neural_augmentation': 0.2499, 'total_loss': 37.7351}, LR: [0.000932, 0.000932], Avg. batch load time: 0.112, Elapsed time: 2395.82
+2024-07-20 19:47:47 - [34m[1mLOGS   [0m - Epoch:   3 [   25333/  100000], loss: {'classification': 37.476, 'neural_augmentation': 0.2492, 'total_loss': 37.7252}, LR: [0.000931, 0.000931], Avg. batch load time: 0.113, Elapsed time: 2592.51
+2024-07-20 19:50:49 - [34m[1mLOGS   [0m - Epoch:   3 [   25458/  100000], loss: {'classification': 37.4664, 'neural_augmentation': 0.2486, 'total_loss': 37.715}, LR: [0.00093, 0.00093], Avg. batch load time: 0.111, Elapsed time: 2774.75
+2024-07-20 19:54:12 - [34m[1mLOGS   [0m - Epoch:   3 [   25583/  100000], loss: {'classification': 37.4531, 'neural_augmentation': 0.2479, 'total_loss': 37.701}, LR: [0.000929, 0.000929], Avg. batch load time: 0.109, Elapsed time: 2977.15
+2024-07-20 19:57:31 - [34m[1mLOGS   [0m - Epoch:   3 [   25708/  100000], loss: {'classification': 37.4467, 'neural_augmentation': 0.2473, 'total_loss': 37.6941}, LR: [0.000927, 0.000927], Avg. batch load time: 0.107, Elapsed time: 3176.08
+2024-07-20 20:00:56 - [34m[1mLOGS   [0m - Epoch:   3 [   25833/  100000], loss: {'classification': 37.4378, 'neural_augmentation': 0.2468, 'total_loss': 37.6845}, LR: [0.000926, 0.000926], Avg. batch load time: 0.107, Elapsed time: 3380.87
+2024-07-20 20:03:58 - [34m[1mLOGS   [0m - Epoch:   3 [   25958/  100000], loss: {'classification': 37.4297, 'neural_augmentation': 0.2462, 'total_loss': 37.676}, LR: [0.000925, 0.000925], Avg. batch load time: 0.106, Elapsed time: 3562.98
+2024-07-20 20:07:09 - [34m[1mLOGS   [0m - Epoch:   3 [   26083/  100000], loss: {'classification': 37.4221, 'neural_augmentation': 0.2457, 'total_loss': 37.6679}, LR: [0.000924, 0.000924], Avg. batch load time: 0.105, Elapsed time: 3754.57
+2024-07-20 20:10:22 - [34m[1mLOGS   [0m - Epoch:   3 [   26208/  100000], loss: {'classification': 37.4142, 'neural_augmentation': 0.2452, 'total_loss': 37.6593}, LR: [0.000923, 0.000923], Avg. batch load time: 0.104, Elapsed time: 3947.60
+2024-07-20 20:13:53 - [34m[1mLOGS   [0m - Epoch:   3 [   26333/  100000], loss: {'classification': 37.4062, 'neural_augmentation': 0.2447, 'total_loss': 37.6509}, LR: [0.000922, 0.000922], Avg. batch load time: 0.105, Elapsed time: 4158.24
+2024-07-20 20:16:59 - [34m[1mLOGS   [0m - Epoch:   3 [   26458/  100000], loss: {'classification': 37.3954, 'neural_augmentation': 0.2442, 'total_loss': 37.6396}, LR: [0.000921, 0.000921], Avg. batch load time: 0.104, Elapsed time: 4343.96
+2024-07-20 20:20:00 - [34m[1mLOGS   [0m - Epoch:   3 [   26583/  100000], loss: {'classification': 37.3897, 'neural_augmentation': 0.2438, 'total_loss': 37.6335}, LR: [0.000919, 0.000919], Avg. batch load time: 0.104, Elapsed time: 4525.12
+2024-07-20 20:23:09 - [34m[1mLOGS   [0m - Epoch:   3 [   26708/  100000], loss: {'classification': 37.3809, 'neural_augmentation': 0.2433, 'total_loss': 37.6243}, LR: [0.000918, 0.000918], Avg. batch load time: 0.104, Elapsed time: 4714.09
+2024-07-20 20:26:19 - [34m[1mLOGS   [0m - Epoch:   3 [   26833/  100000], loss: {'classification': 37.3737, 'neural_augmentation': 0.2429, 'total_loss': 37.6166}, LR: [0.000917, 0.000917], Avg. batch load time: 0.104, Elapsed time: 4903.93
+2024-07-20 20:29:26 - [34m[1mLOGS   [0m - Epoch:   3 [   26958/  100000], loss: {'classification': 37.3659, 'neural_augmentation': 0.2425, 'total_loss': 37.6084}, LR: [0.000916, 0.000916], Avg. batch load time: 0.103, Elapsed time: 5091.00
+2024-07-20 20:32:35 - [34m[1mLOGS   [0m - Epoch:   3 [   27083/  100000], loss: {'classification': 37.3558, 'neural_augmentation': 0.2421, 'total_loss': 37.5979}, LR: [0.000915, 0.000915], Avg. batch load time: 0.103, Elapsed time: 5280.64
+2024-07-20 20:35:42 - [34m[1mLOGS   [0m - Epoch:   3 [   27208/  100000], loss: {'classification': 37.348, 'neural_augmentation': 0.2417, 'total_loss': 37.5896}, LR: [0.000913, 0.000913], Avg. batch load time: 0.103, Elapsed time: 5467.33
+2024-07-20 20:39:01 - [34m[1mLOGS   [0m - Epoch:   3 [   27333/  100000], loss: {'classification': 37.3418, 'neural_augmentation': 0.2413, 'total_loss': 37.583}, LR: [0.000912, 0.000912], Avg. batch load time: 0.102, Elapsed time: 5665.88
+2024-07-20 20:42:07 - [34m[1mLOGS   [0m - Epoch:   3 [   27458/  100000], loss: {'classification': 37.3343, 'neural_augmentation': 0.2409, 'total_loss': 37.5752}, LR: [0.000911, 0.000911], Avg. batch load time: 0.101, Elapsed time: 5852.11
+2024-07-20 20:45:24 - [34m[1mLOGS   [0m - Epoch:   3 [   27583/  100000], loss: {'classification': 37.3261, 'neural_augmentation': 0.2405, 'total_loss': 37.5666}, LR: [0.00091, 0.00091], Avg. batch load time: 0.101, Elapsed time: 6048.84
+2024-07-20 20:48:46 - [34m[1mLOGS   [0m - Epoch:   3 [   27708/  100000], loss: {'classification': 37.3209, 'neural_augmentation': 0.2401, 'total_loss': 37.561}, LR: [0.000908, 0.000908], Avg. batch load time: 0.102, Elapsed time: 6251.77
+2024-07-20 20:51:56 - [34m[1mLOGS   [0m - Epoch:   3 [   27833/  100000], loss: {'classification': 37.3125, 'neural_augmentation': 0.2397, 'total_loss': 37.5523}, LR: [0.000907, 0.000907], Avg. batch load time: 0.101, Elapsed time: 6441.56
+2024-07-20 20:55:06 - [34m[1mLOGS   [0m - Epoch:   3 [   27958/  100000], loss: {'classification': 37.305, 'neural_augmentation': 0.2394, 'total_loss': 37.5444}, LR: [0.000906, 0.000906], Avg. batch load time: 0.101, Elapsed time: 6630.79
+2024-07-20 20:58:20 - [34m[1mLOGS   [0m - Epoch:   3 [   28083/  100000], loss: {'classification': 37.2971, 'neural_augmentation': 0.2391, 'total_loss': 37.5361}, LR: [0.000905, 0.000905], Avg. batch load time: 0.101, Elapsed time: 6824.98
+2024-07-20 21:01:25 - [34m[1mLOGS   [0m - Epoch:   3 [   28208/  100000], loss: {'classification': 37.2912, 'neural_augmentation': 0.2387, 'total_loss': 37.5299}, LR: [0.000903, 0.000903], Avg. batch load time: 0.101, Elapsed time: 7010.43
+2024-07-20 21:04:37 - [34m[1mLOGS   [0m - Epoch:   3 [   28333/  100000], loss: {'classification': 37.2841, 'neural_augmentation': 0.2384, 'total_loss': 37.5225}, LR: [0.000902, 0.000902], Avg. batch load time: 0.100, Elapsed time: 7202.61
+2024-07-20 21:08:00 - [34m[1mLOGS   [0m - Epoch:   3 [   28458/  100000], loss: {'classification': 37.2764, 'neural_augmentation': 0.2381, 'total_loss': 37.5144}, LR: [0.000901, 0.000901], Avg. batch load time: 0.100, Elapsed time: 7405.50
+2024-07-20 21:11:06 - [34m[1mLOGS   [0m - Epoch:   3 [   28583/  100000], loss: {'classification': 37.2691, 'neural_augmentation': 0.2378, 'total_loss': 37.5068}, LR: [0.000899, 0.000899], Avg. batch load time: 0.100, Elapsed time: 7591.18
+2024-07-20 21:14:13 - [34m[1mLOGS   [0m - Epoch:   3 [   28708/  100000], loss: {'classification': 37.2615, 'neural_augmentation': 0.2375, 'total_loss': 37.499}, LR: [0.000898, 0.000898], Avg. batch load time: 0.099, Elapsed time: 7778.25
+2024-07-20 21:17:23 - [34m[1mLOGS   [0m - Epoch:   3 [   28833/  100000], loss: {'classification': 37.2557, 'neural_augmentation': 0.2372, 'total_loss': 37.4929}, LR: [0.000897, 0.000897], Avg. batch load time: 0.099, Elapsed time: 7968.35
+2024-07-20 21:20:41 - [34m[1mLOGS   [0m - Epoch:   3 [   28958/  100000], loss: {'classification': 37.2497, 'neural_augmentation': 0.2369, 'total_loss': 37.4867}, LR: [0.000896, 0.000896], Avg. batch load time: 0.099, Elapsed time: 8166.24
+2024-07-20 21:23:50 - [34m[1mLOGS   [0m - Epoch:   3 [   29083/  100000], loss: {'classification': 37.2417, 'neural_augmentation': 0.2367, 'total_loss': 37.4784}, LR: [0.000894, 0.000894], Avg. batch load time: 0.099, Elapsed time: 8354.95
+2024-07-20 21:26:47 - [34m[1mLOGS   [0m - Epoch:   3 [   29208/  100000], loss: {'classification': 37.2345, 'neural_augmentation': 0.2365, 'total_loss': 37.471}, LR: [0.000893, 0.000893], Avg. batch load time: 0.098, Elapsed time: 8532.24
+2024-07-20 21:29:58 - [34m[1mLOGS   [0m - Epoch:   3 [   29333/  100000], loss: {'classification': 37.2282, 'neural_augmentation': 0.2362, 'total_loss': 37.4644}, LR: [0.000892, 0.000892], Avg. batch load time: 0.098, Elapsed time: 8723.43
+2024-07-20 21:32:55 - [34m[1mLOGS   [0m - Epoch:   3 [   29458/  100000], loss: {'classification': 37.2207, 'neural_augmentation': 0.236, 'total_loss': 37.4568}, LR: [0.00089, 0.00089], Avg. batch load time: 0.098, Elapsed time: 8900.57
+2024-07-20 21:36:03 - [34m[1mLOGS   [0m - Epoch:   3 [   29583/  100000], loss: {'classification': 37.2134, 'neural_augmentation': 0.2358, 'total_loss': 37.4493}, LR: [0.000889, 0.000889], Avg. batch load time: 0.097, Elapsed time: 9088.20
+2024-07-20 21:39:06 - [34m[1mLOGS   [0m - Epoch:   3 [   29708/  100000], loss: {'classification': 37.2073, 'neural_augmentation': 0.2357, 'total_loss': 37.443}, LR: [0.000887, 0.000887], Avg. batch load time: 0.097, Elapsed time: 9271.03
+2024-07-20 21:42:09 - [34m[1mLOGS   [0m - Epoch:   3 [   29833/  100000], loss: {'classification': 37.2019, 'neural_augmentation': 0.2355, 'total_loss': 37.4373}, LR: [0.000886, 0.000886], Avg. batch load time: 0.097, Elapsed time: 9453.86
+2024-07-20 21:45:22 - [34m[1mLOGS   [0m - Epoch:   3 [   29958/  100000], loss: {'classification': 37.1946, 'neural_augmentation': 0.2353, 'total_loss': 37.4299}, LR: [0.000885, 0.000885], Avg. batch load time: 0.097, Elapsed time: 9647.62
+2024-07-20 21:48:31 - [34m[1mLOGS   [0m - Epoch:   3 [   30083/  100000], loss: {'classification': 37.1895, 'neural_augmentation': 0.2351, 'total_loss': 37.4246}, LR: [0.000883, 0.000883], Avg. batch load time: 0.097, Elapsed time: 9836.23
+2024-07-20 21:51:51 - [34m[1mLOGS   [0m - Epoch:   3 [   30208/  100000], loss: {'classification': 37.1833, 'neural_augmentation': 0.235, 'total_loss': 37.4182}, LR: [0.000882, 0.000882], Avg. batch load time: 0.096, Elapsed time: 10036.40
+2024-07-20 21:55:05 - [34m[1mLOGS   [0m - Epoch:   3 [   30333/  100000], loss: {'classification': 37.1777, 'neural_augmentation': 0.2348, 'total_loss': 37.4125}, LR: [0.00088, 0.00088], Avg. batch load time: 0.096, Elapsed time: 10230.61
+2024-07-20 21:58:19 - [34m[1mLOGS   [0m - Epoch:   3 [   30458/  100000], loss: {'classification': 37.1705, 'neural_augmentation': 0.2347, 'total_loss': 37.4051}, LR: [0.000879, 0.000879], Avg. batch load time: 0.096, Elapsed time: 10424.71
+2024-07-20 22:01:24 - [34m[1mLOGS   [0m - Epoch:   3 [   30583/  100000], loss: {'classification': 37.1646, 'neural_augmentation': 0.2345, 'total_loss': 37.3991}, LR: [0.000878, 0.000878], Avg. batch load time: 0.096, Elapsed time: 10609.37
+2024-07-20 22:04:36 - [34m[1mLOGS   [0m - Epoch:   3 [   30708/  100000], loss: {'classification': 37.1597, 'neural_augmentation': 0.2344, 'total_loss': 37.3941}, LR: [0.000876, 0.000876], Avg. batch load time: 0.095, Elapsed time: 10801.10
+2024-07-20 22:07:47 - [34m[1mLOGS   [0m - Epoch:   3 [   30833/  100000], loss: {'classification': 37.1541, 'neural_augmentation': 0.2343, 'total_loss': 37.3884}, LR: [0.000875, 0.000875], Avg. batch load time: 0.096, Elapsed time: 10992.10
+2024-07-20 22:10:53 - [34m[1mLOGS   [0m - Epoch:   3 [   30958/  100000], loss: {'classification': 37.1482, 'neural_augmentation': 0.2342, 'total_loss': 37.3824}, LR: [0.000873, 0.000873], Avg. batch load time: 0.096, Elapsed time: 11177.96
+2024-07-20 22:14:01 - [34m[1mLOGS   [0m - Epoch:   3 [   31083/  100000], loss: {'classification': 37.1425, 'neural_augmentation': 0.2341, 'total_loss': 37.3766}, LR: [0.000872, 0.000872], Avg. batch load time: 0.095, Elapsed time: 11366.76
+2024-07-20 22:17:02 - [34m[1mLOGS   [0m - Epoch:   3 [   31208/  100000], loss: {'classification': 37.1382, 'neural_augmentation': 0.234, 'total_loss': 37.3722}, LR: [0.00087, 0.00087], Avg. batch load time: 0.095, Elapsed time: 11547.43
+2024-07-20 22:20:04 - [34m[1mLOGS   [0m - Epoch:   3 [   31333/  100000], loss: {'classification': 37.1328, 'neural_augmentation': 0.2338, 'total_loss': 37.3666}, LR: [0.000869, 0.000869], Avg. batch load time: 0.095, Elapsed time: 11728.82
+2024-07-20 22:23:00 - [34m[1mLOGS   [0m - Epoch:   3 [   31458/  100000], loss: {'classification': 37.1267, 'neural_augmentation': 0.2338, 'total_loss': 37.3604}, LR: [0.000868, 0.000868], Avg. batch load time: 0.094, Elapsed time: 11905.32
+2024-07-20 22:26:19 - [34m[1mLOGS   [0m - Epoch:   3 [   31583/  100000], loss: {'classification': 37.122, 'neural_augmentation': 0.2337, 'total_loss': 37.3557}, LR: [0.000866, 0.000866], Avg. batch load time: 0.094, Elapsed time: 12104.33
+2024-07-20 22:27:02 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
+	 loss={'classification': 37.1197, 'neural_augmentation': 0.2336, 'total_loss': 37.3533}
+2024-07-20 22:27:05 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-20 22:27:05 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-20 22:27:06 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-20 22:27:06 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 31626 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_3_iter_31626.pt
+2024-07-20 22:27:06 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 31626 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_3_iter_31626.pt
+[31m===========================================================================[0m
+2024-07-20 22:27:08 - [32m[1mINFO   [0m - Training epoch 4
+2024-07-20 22:28:23 - [34m[1mLOGS   [0m - Epoch:   4 [   31626/  100000], loss: {'classification': 34.3562, 'neural_augmentation': 0.2289, 'total_loss': 34.5851}, LR: [0.000866, 0.000866], Avg. batch load time: 71.209, Elapsed time: 74.75
+2024-07-20 22:31:31 - [34m[1mLOGS   [0m - Epoch:   4 [   31751/  100000], loss: {'classification': 36.6984, 'neural_augmentation': 0.2286, 'total_loss': 36.9269}, LR: [0.000864, 0.000864], Avg. batch load time: 0.224, Elapsed time: 262.56
+2024-07-20 22:34:24 - [34m[1mLOGS   [0m - Epoch:   4 [   31876/  100000], loss: {'classification': 36.6917, 'neural_augmentation': 0.2287, 'total_loss': 36.9203}, LR: [0.000863, 0.000863], Avg. batch load time: 0.151, Elapsed time: 436.24
+2024-07-20 22:37:18 - [34m[1mLOGS   [0m - Epoch:   4 [   32001/  100000], loss: {'classification': 36.6821, 'neural_augmentation': 0.2289, 'total_loss': 36.911}, LR: [0.000861, 0.000861], Avg. batch load time: 0.124, Elapsed time: 610.08
+2024-07-20 22:40:17 - [34m[1mLOGS   [0m - Epoch:   4 [   32126/  100000], loss: {'classification': 36.6892, 'neural_augmentation': 0.2292, 'total_loss': 36.9184}, LR: [0.00086, 0.00086], Avg. batch load time: 0.113, Elapsed time: 788.89
+2024-07-20 22:43:18 - [34m[1mLOGS   [0m - Epoch:   4 [   32251/  100000], loss: {'classification': 36.6953, 'neural_augmentation': 0.2295, 'total_loss': 36.9248}, LR: [0.000858, 0.000858], Avg. batch load time: 0.107, Elapsed time: 970.02
+2024-07-20 22:46:12 - [34m[1mLOGS   [0m - Epoch:   4 [   32376/  100000], loss: {'classification': 36.697, 'neural_augmentation': 0.2296, 'total_loss': 36.9267}, LR: [0.000857, 0.000857], Avg. batch load time: 0.102, Elapsed time: 1143.66
+2024-07-20 22:49:09 - [34m[1mLOGS   [0m - Epoch:   4 [   32501/  100000], loss: {'classification': 36.6905, 'neural_augmentation': 0.2298, 'total_loss': 36.9203}, LR: [0.000855, 0.000855], Avg. batch load time: 0.098, Elapsed time: 1320.51
+2024-07-20 22:52:11 - [34m[1mLOGS   [0m - Epoch:   4 [   32626/  100000], loss: {'classification': 36.6945, 'neural_augmentation': 0.2301, 'total_loss': 36.9247}, LR: [0.000853, 0.000853], Avg. batch load time: 0.093, Elapsed time: 1502.42
+2024-07-20 22:55:07 - [34m[1mLOGS   [0m - Epoch:   4 [   32751/  100000], loss: {'classification': 36.6945, 'neural_augmentation': 0.2304, 'total_loss': 36.9249}, LR: [0.000852, 0.000852], Avg. batch load time: 0.090, Elapsed time: 1678.57
+2024-07-20 22:57:57 - [34m[1mLOGS   [0m - Epoch:   4 [   32876/  100000], loss: {'classification': 36.6915, 'neural_augmentation': 0.2306, 'total_loss': 36.9221}, LR: [0.00085, 0.00085], Avg. batch load time: 0.086, Elapsed time: 1848.79
+2024-07-20 23:01:13 - [34m[1mLOGS   [0m - Epoch:   4 [   33001/  100000], loss: {'classification': 36.6848, 'neural_augmentation': 0.2308, 'total_loss': 36.9156}, LR: [0.000849, 0.000849], Avg. batch load time: 0.087, Elapsed time: 2044.54
+2024-07-20 23:04:05 - [34m[1mLOGS   [0m - Epoch:   4 [   33126/  100000], loss: {'classification': 36.6832, 'neural_augmentation': 0.2311, 'total_loss': 36.9142}, LR: [0.000847, 0.000847], Avg. batch load time: 0.085, Elapsed time: 2216.57
+2024-07-20 23:07:03 - [34m[1mLOGS   [0m - Epoch:   4 [   33251/  100000], loss: {'classification': 36.6806, 'neural_augmentation': 0.2313, 'total_loss': 36.9119}, LR: [0.000846, 0.000846], Avg. batch load time: 0.084, Elapsed time: 2394.79
+2024-07-20 23:09:53 - [34m[1mLOGS   [0m - Epoch:   4 [   33376/  100000], loss: {'classification': 36.6734, 'neural_augmentation': 0.2315, 'total_loss': 36.9049}, LR: [0.000844, 0.000844], Avg. batch load time: 0.082, Elapsed time: 2565.38
+2024-07-20 23:12:53 - [34m[1mLOGS   [0m - Epoch:   4 [   33501/  100000], loss: {'classification': 36.6696, 'neural_augmentation': 0.2317, 'total_loss': 36.9014}, LR: [0.000843, 0.000843], Avg. batch load time: 0.081, Elapsed time: 2744.62
+2024-07-20 23:15:48 - [34m[1mLOGS   [0m - Epoch:   4 [   33626/  100000], loss: {'classification': 36.6613, 'neural_augmentation': 0.232, 'total_loss': 36.8933}, LR: [0.000841, 0.000841], Avg. batch load time: 0.080, Elapsed time: 2919.68
+2024-07-20 23:18:35 - [34m[1mLOGS   [0m - Epoch:   4 [   33751/  100000], loss: {'classification': 36.6548, 'neural_augmentation': 0.2323, 'total_loss': 36.8871}, LR: [0.000839, 0.000839], Avg. batch load time: 0.078, Elapsed time: 3087.13
+2024-07-20 23:21:29 - [34m[1mLOGS   [0m - Epoch:   4 [   33876/  100000], loss: {'classification': 36.6547, 'neural_augmentation': 0.2326, 'total_loss': 36.8872}, LR: [0.000838, 0.000838], Avg. batch load time: 0.078, Elapsed time: 3261.37
+2024-07-20 23:24:16 - [34m[1mLOGS   [0m - Epoch:   4 [   34001/  100000], loss: {'classification': 36.6476, 'neural_augmentation': 0.2328, 'total_loss': 36.8804}, LR: [0.000836, 0.000836], Avg. batch load time: 0.076, Elapsed time: 3427.92
+2024-07-20 23:27:25 - [34m[1mLOGS   [0m - Epoch:   4 [   34126/  100000], loss: {'classification': 36.6465, 'neural_augmentation': 0.2331, 'total_loss': 36.8796}, LR: [0.000835, 0.000835], Avg. batch load time: 0.077, Elapsed time: 3616.42
+2024-07-20 23:30:23 - [34m[1mLOGS   [0m - Epoch:   4 [   34251/  100000], loss: {'classification': 36.6446, 'neural_augmentation': 0.2334, 'total_loss': 36.878}, LR: [0.000833, 0.000833], Avg. batch load time: 0.077, Elapsed time: 3795.06
+2024-07-20 23:33:17 - [34m[1mLOGS   [0m - Epoch:   4 [   34376/  100000], loss: {'classification': 36.6414, 'neural_augmentation': 0.2336, 'total_loss': 36.875}, LR: [0.000831, 0.000831], Avg. batch load time: 0.076, Elapsed time: 3968.93
+2024-07-20 23:36:15 - [34m[1mLOGS   [0m - Epoch:   4 [   34501/  100000], loss: {'classification': 36.6377, 'neural_augmentation': 0.2339, 'total_loss': 36.8716}, LR: [0.00083, 0.00083], Avg. batch load time: 0.076, Elapsed time: 4146.49
+2024-07-20 23:38:53 - [34m[1mLOGS   [0m - Epoch:   4 [   34626/  100000], loss: {'classification': 36.635, 'neural_augmentation': 0.2342, 'total_loss': 36.8692}, LR: [0.000828, 0.000828], Avg. batch load time: 0.075, Elapsed time: 4305.13
+2024-07-20 23:42:00 - [34m[1mLOGS   [0m - Epoch:   4 [   34751/  100000], loss: {'classification': 36.6328, 'neural_augmentation': 0.2345, 'total_loss': 36.8673}, LR: [0.000826, 0.000826], Avg. batch load time: 0.076, Elapsed time: 4491.65
+2024-07-20 23:44:52 - [34m[1mLOGS   [0m - Epoch:   4 [   34876/  100000], loss: {'classification': 36.6274, 'neural_augmentation': 0.2347, 'total_loss': 36.8622}, LR: [0.000825, 0.000825], Avg. batch load time: 0.076, Elapsed time: 4663.83
+2024-07-20 23:47:48 - [34m[1mLOGS   [0m - Epoch:   4 [   35001/  100000], loss: {'classification': 36.622, 'neural_augmentation': 0.235, 'total_loss': 36.857}, LR: [0.000823, 0.000823], Avg. batch load time: 0.076, Elapsed time: 4840.30
+2024-07-20 23:50:45 - [34m[1mLOGS   [0m - Epoch:   4 [   35126/  100000], loss: {'classification': 36.6174, 'neural_augmentation': 0.2353, 'total_loss': 36.8527}, LR: [0.000822, 0.000822], Avg. batch load time: 0.075, Elapsed time: 5017.19
+2024-07-20 23:53:45 - [34m[1mLOGS   [0m - Epoch:   4 [   35251/  100000], loss: {'classification': 36.6115, 'neural_augmentation': 0.2356, 'total_loss': 36.847}, LR: [0.00082, 0.00082], Avg. batch load time: 0.075, Elapsed time: 5196.98
+2024-07-20 23:56:35 - [34m[1mLOGS   [0m - Epoch:   4 [   35376/  100000], loss: {'classification': 36.6065, 'neural_augmentation': 0.2359, 'total_loss': 36.8424}, LR: [0.000818, 0.000818], Avg. batch load time: 0.074, Elapsed time: 5366.70
+2024-07-20 23:59:38 - [34m[1mLOGS   [0m - Epoch:   4 [   35501/  100000], loss: {'classification': 36.6047, 'neural_augmentation': 0.2362, 'total_loss': 36.8409}, LR: [0.000816, 0.000816], Avg. batch load time: 0.074, Elapsed time: 5550.20
+2024-07-21 00:02:42 - [34m[1mLOGS   [0m - Epoch:   4 [   35626/  100000], loss: {'classification': 36.6043, 'neural_augmentation': 0.2365, 'total_loss': 36.8408}, LR: [0.000815, 0.000815], Avg. batch load time: 0.073, Elapsed time: 5733.45
+2024-07-21 00:05:39 - [34m[1mLOGS   [0m - Epoch:   4 [   35751/  100000], loss: {'classification': 36.601, 'neural_augmentation': 0.2368, 'total_loss': 36.8378}, LR: [0.000813, 0.000813], Avg. batch load time: 0.073, Elapsed time: 5911.31
+2024-07-21 00:08:21 - [34m[1mLOGS   [0m - Epoch:   4 [   35876/  100000], loss: {'classification': 36.595, 'neural_augmentation': 0.2371, 'total_loss': 36.8321}, LR: [0.000811, 0.000811], Avg. batch load time: 0.073, Elapsed time: 6073.13
+2024-07-21 00:11:09 - [34m[1mLOGS   [0m - Epoch:   4 [   36001/  100000], loss: {'classification': 36.5901, 'neural_augmentation': 0.2374, 'total_loss': 36.8275}, LR: [0.00081, 0.00081], Avg. batch load time: 0.072, Elapsed time: 6241.24
+2024-07-21 00:14:15 - [34m[1mLOGS   [0m - Epoch:   4 [   36126/  100000], loss: {'classification': 36.5872, 'neural_augmentation': 0.2377, 'total_loss': 36.8249}, LR: [0.000808, 0.000808], Avg. batch load time: 0.073, Elapsed time: 6426.58
+2024-07-21 00:16:56 - [34m[1mLOGS   [0m - Epoch:   4 [   36251/  100000], loss: {'classification': 36.5833, 'neural_augmentation': 0.238, 'total_loss': 36.8213}, LR: [0.000806, 0.000806], Avg. batch load time: 0.072, Elapsed time: 6588.37
+2024-07-21 00:19:53 - [34m[1mLOGS   [0m - Epoch:   4 [   36376/  100000], loss: {'classification': 36.577, 'neural_augmentation': 0.2383, 'total_loss': 36.8154}, LR: [0.000805, 0.000805], Avg. batch load time: 0.072, Elapsed time: 6765.38
+2024-07-21 00:22:48 - [34m[1mLOGS   [0m - Epoch:   4 [   36501/  100000], loss: {'classification': 36.5726, 'neural_augmentation': 0.2386, 'total_loss': 36.8113}, LR: [0.000803, 0.000803], Avg. batch load time: 0.072, Elapsed time: 6939.65
+2024-07-21 00:25:41 - [34m[1mLOGS   [0m - Epoch:   4 [   36626/  100000], loss: {'classification': 36.5687, 'neural_augmentation': 0.239, 'total_loss': 36.8077}, LR: [0.000801, 0.000801], Avg. batch load time: 0.072, Elapsed time: 7112.97
+2024-07-21 00:28:35 - [34m[1mLOGS   [0m - Epoch:   4 [   36751/  100000], loss: {'classification': 36.5637, 'neural_augmentation': 0.2393, 'total_loss': 36.8029}, LR: [0.000799, 0.000799], Avg. batch load time: 0.072, Elapsed time: 7286.91
+2024-07-21 00:31:30 - [34m[1mLOGS   [0m - Epoch:   4 [   36876/  100000], loss: {'classification': 36.5618, 'neural_augmentation': 0.2396, 'total_loss': 36.8014}, LR: [0.000798, 0.000798], Avg. batch load time: 0.072, Elapsed time: 7462.21
+2024-07-21 00:34:12 - [34m[1mLOGS   [0m - Epoch:   4 [   37001/  100000], loss: {'classification': 36.5568, 'neural_augmentation': 0.2399, 'total_loss': 36.7967}, LR: [0.000796, 0.000796], Avg. batch load time: 0.071, Elapsed time: 7623.51
+2024-07-21 00:37:08 - [34m[1mLOGS   [0m - Epoch:   4 [   37126/  100000], loss: {'classification': 36.554, 'neural_augmentation': 0.2403, 'total_loss': 36.7943}, LR: [0.000794, 0.000794], Avg. batch load time: 0.071, Elapsed time: 7799.73
+2024-07-21 00:40:10 - [34m[1mLOGS   [0m - Epoch:   4 [   37251/  100000], loss: {'classification': 36.5514, 'neural_augmentation': 0.2406, 'total_loss': 36.792}, LR: [0.000792, 0.000792], Avg. batch load time: 0.071, Elapsed time: 7982.37
+2024-07-21 00:43:00 - [34m[1mLOGS   [0m - Epoch:   4 [   37376/  100000], loss: {'classification': 36.5466, 'neural_augmentation': 0.2409, 'total_loss': 36.7875}, LR: [0.000791, 0.000791], Avg. batch load time: 0.071, Elapsed time: 8151.79
+2024-07-21 00:46:05 - [34m[1mLOGS   [0m - Epoch:   4 [   37501/  100000], loss: {'classification': 36.5437, 'neural_augmentation': 0.2413, 'total_loss': 36.785}, LR: [0.000789, 0.000789], Avg. batch load time: 0.071, Elapsed time: 8337.09
+2024-07-21 00:49:05 - [34m[1mLOGS   [0m - Epoch:   4 [   37626/  100000], loss: {'classification': 36.5416, 'neural_augmentation': 0.2417, 'total_loss': 36.7833}, LR: [0.000787, 0.000787], Avg. batch load time: 0.072, Elapsed time: 8516.93
+2024-07-21 00:51:52 - [34m[1mLOGS   [0m - Epoch:   4 [   37751/  100000], loss: {'classification': 36.5376, 'neural_augmentation': 0.2421, 'total_loss': 36.7797}, LR: [0.000785, 0.000785], Avg. batch load time: 0.071, Elapsed time: 8683.55
+2024-07-21 00:54:56 - [34m[1mLOGS   [0m - Epoch:   4 [   37876/  100000], loss: {'classification': 36.5338, 'neural_augmentation': 0.2424, 'total_loss': 36.7763}, LR: [0.000784, 0.000784], Avg. batch load time: 0.072, Elapsed time: 8867.89
+2024-07-21 00:57:52 - [34m[1mLOGS   [0m - Epoch:   4 [   38001/  100000], loss: {'classification': 36.529, 'neural_augmentation': 0.2428, 'total_loss': 36.7718}, LR: [0.000782, 0.000782], Avg. batch load time: 0.071, Elapsed time: 9043.51
+2024-07-21 01:00:47 - [34m[1mLOGS   [0m - Epoch:   4 [   38126/  100000], loss: {'classification': 36.5252, 'neural_augmentation': 0.2432, 'total_loss': 36.7684}, LR: [0.00078, 0.00078], Avg. batch load time: 0.071, Elapsed time: 9218.61
+2024-07-21 01:03:35 - [34m[1mLOGS   [0m - Epoch:   4 [   38251/  100000], loss: {'classification': 36.5206, 'neural_augmentation': 0.2435, 'total_loss': 36.7641}, LR: [0.000778, 0.000778], Avg. batch load time: 0.071, Elapsed time: 9387.13
+2024-07-21 01:06:29 - [34m[1mLOGS   [0m - Epoch:   4 [   38376/  100000], loss: {'classification': 36.5177, 'neural_augmentation': 0.2439, 'total_loss': 36.7616}, LR: [0.000776, 0.000776], Avg. batch load time: 0.071, Elapsed time: 9561.08
+2024-07-21 01:09:15 - [34m[1mLOGS   [0m - Epoch:   4 [   38501/  100000], loss: {'classification': 36.5132, 'neural_augmentation': 0.2443, 'total_loss': 36.7575}, LR: [0.000775, 0.000775], Avg. batch load time: 0.071, Elapsed time: 9727.34
+2024-07-21 01:12:16 - [34m[1mLOGS   [0m - Epoch:   4 [   38626/  100000], loss: {'classification': 36.509, 'neural_augmentation': 0.2446, 'total_loss': 36.7536}, LR: [0.000773, 0.000773], Avg. batch load time: 0.071, Elapsed time: 9907.49
+2024-07-21 01:15:09 - [34m[1mLOGS   [0m - Epoch:   4 [   38751/  100000], loss: {'classification': 36.505, 'neural_augmentation': 0.245, 'total_loss': 36.75}, LR: [0.000771, 0.000771], Avg. batch load time: 0.071, Elapsed time: 10080.41
+2024-07-21 01:18:03 - [34m[1mLOGS   [0m - Epoch:   4 [   38876/  100000], loss: {'classification': 36.5013, 'neural_augmentation': 0.2454, 'total_loss': 36.7467}, LR: [0.000769, 0.000769], Avg. batch load time: 0.071, Elapsed time: 10254.88
+2024-07-21 01:20:54 - [34m[1mLOGS   [0m - Epoch:   4 [   39001/  100000], loss: {'classification': 36.4974, 'neural_augmentation': 0.2458, 'total_loss': 36.7432}, LR: [0.000767, 0.000767], Avg. batch load time: 0.071, Elapsed time: 10426.25
+2024-07-21 01:23:50 - [34m[1mLOGS   [0m - Epoch:   4 [   39126/  100000], loss: {'classification': 36.4926, 'neural_augmentation': 0.2462, 'total_loss': 36.7387}, LR: [0.000765, 0.000765], Avg. batch load time: 0.071, Elapsed time: 10601.89
+2024-07-21 01:26:41 - [34m[1mLOGS   [0m - Epoch:   4 [   39251/  100000], loss: {'classification': 36.4896, 'neural_augmentation': 0.2466, 'total_loss': 36.7362}, LR: [0.000764, 0.000764], Avg. batch load time: 0.071, Elapsed time: 10773.35
+2024-07-21 01:29:41 - [34m[1mLOGS   [0m - Epoch:   4 [   39376/  100000], loss: {'classification': 36.4875, 'neural_augmentation': 0.247, 'total_loss': 36.7345}, LR: [0.000762, 0.000762], Avg. batch load time: 0.072, Elapsed time: 10952.55
+2024-07-21 01:31:48 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
+	 loss={'classification': 36.4834, 'neural_augmentation': 0.2473, 'total_loss': 36.7306}
+2024-07-21 01:31:51 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-21 01:31:51 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-21 01:31:51 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-21 01:31:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 39479 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_4_iter_39479.pt
+2024-07-21 01:31:52 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 39479 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_4_iter_39479.pt
+[31m===========================================================================[0m
+2024-07-21 01:31:54 - [32m[1mINFO   [0m - Training epoch 5
+2024-07-21 01:33:28 - [34m[1mLOGS   [0m - Epoch:   5 [   39479/  100000], loss: {'classification': 36.0101, 'neural_augmentation': 0.2712, 'total_loss': 36.2813}, LR: [0.00076, 0.00076], Avg. batch load time: 93.961, Elapsed time: 94.21
+2024-07-21 01:36:16 - [34m[1mLOGS   [0m - Epoch:   5 [   39604/  100000], loss: {'classification': 36.2298, 'neural_augmentation': 0.2724, 'total_loss': 36.5022}, LR: [0.000758, 0.000758], Avg. batch load time: 0.238, Elapsed time: 261.71
+2024-07-21 01:39:06 - [34m[1mLOGS   [0m - Epoch:   5 [   39729/  100000], loss: {'classification': 36.2668, 'neural_augmentation': 0.273, 'total_loss': 36.5398}, LR: [0.000757, 0.000757], Avg. batch load time: 0.154, Elapsed time: 432.20
+2024-07-21 01:41:58 - [34m[1mLOGS   [0m - Epoch:   5 [   39854/  100000], loss: {'classification': 36.2434, 'neural_augmentation': 0.2735, 'total_loss': 36.5169}, LR: [0.000755, 0.000755], Avg. batch load time: 0.120, Elapsed time: 603.68
+2024-07-21 01:44:54 - [34m[1mLOGS   [0m - Epoch:   5 [   39979/  100000], loss: {'classification': 36.2299, 'neural_augmentation': 0.2739, 'total_loss': 36.5039}, LR: [0.000753, 0.000753], Avg. batch load time: 0.108, Elapsed time: 780.19
+2024-07-21 01:47:38 - [34m[1mLOGS   [0m - Epoch:   5 [   40104/  100000], loss: {'classification': 36.2173, 'neural_augmentation': 0.2744, 'total_loss': 36.4916}, LR: [0.000751, 0.000751], Avg. batch load time: 0.098, Elapsed time: 944.10
+2024-07-21 01:50:48 - [34m[1mLOGS   [0m - Epoch:   5 [   40229/  100000], loss: {'classification': 36.2331, 'neural_augmentation': 0.2749, 'total_loss': 36.508}, LR: [0.000749, 0.000749], Avg. batch load time: 0.098, Elapsed time: 1134.28
+2024-07-21 01:53:47 - [34m[1mLOGS   [0m - Epoch:   5 [   40354/  100000], loss: {'classification': 36.2203, 'neural_augmentation': 0.2755, 'total_loss': 36.4957}, LR: [0.000747, 0.000747], Avg. batch load time: 0.096, Elapsed time: 1312.58
+2024-07-21 01:56:35 - [34m[1mLOGS   [0m - Epoch:   5 [   40479/  100000], loss: {'classification': 36.2121, 'neural_augmentation': 0.276, 'total_loss': 36.4881}, LR: [0.000745, 0.000745], Avg. batch load time: 0.091, Elapsed time: 1481.30
+2024-07-21 01:59:25 - [34m[1mLOGS   [0m - Epoch:   5 [   40604/  100000], loss: {'classification': 36.2051, 'neural_augmentation': 0.2764, 'total_loss': 36.4816}, LR: [0.000743, 0.000743], Avg. batch load time: 0.088, Elapsed time: 1651.14
+2024-07-21 02:02:19 - [34m[1mLOGS   [0m - Epoch:   5 [   40729/  100000], loss: {'classification': 36.2092, 'neural_augmentation': 0.2769, 'total_loss': 36.4861}, LR: [0.000742, 0.000742], Avg. batch load time: 0.085, Elapsed time: 1824.94
+2024-07-21 02:05:14 - [34m[1mLOGS   [0m - Epoch:   5 [   40854/  100000], loss: {'classification': 36.2042, 'neural_augmentation': 0.2774, 'total_loss': 36.4815}, LR: [0.00074, 0.00074], Avg. batch load time: 0.084, Elapsed time: 1999.98
+2024-07-21 02:08:11 - [34m[1mLOGS   [0m - Epoch:   5 [   40979/  100000], loss: {'classification': 36.2055, 'neural_augmentation': 0.2779, 'total_loss': 36.4833}, LR: [0.000738, 0.000738], Avg. batch load time: 0.082, Elapsed time: 2177.04
+2024-07-21 02:10:58 - [34m[1mLOGS   [0m - Epoch:   5 [   41104/  100000], loss: {'classification': 36.198, 'neural_augmentation': 0.2784, 'total_loss': 36.4764}, LR: [0.000736, 0.000736], Avg. batch load time: 0.080, Elapsed time: 2344.16
+2024-07-21 02:13:47 - [34m[1mLOGS   [0m - Epoch:   5 [   41229/  100000], loss: {'classification': 36.1985, 'neural_augmentation': 0.2789, 'total_loss': 36.4774}, LR: [0.000734, 0.000734], Avg. batch load time: 0.078, Elapsed time: 2513.10
+2024-07-21 02:16:43 - [34m[1mLOGS   [0m - Epoch:   5 [   41354/  100000], loss: {'classification': 36.1941, 'neural_augmentation': 0.2794, 'total_loss': 36.4735}, LR: [0.000732, 0.000732], Avg. batch load time: 0.077, Elapsed time: 2688.82
+2024-07-21 02:19:35 - [34m[1mLOGS   [0m - Epoch:   5 [   41479/  100000], loss: {'classification': 36.1926, 'neural_augmentation': 0.2799, 'total_loss': 36.4725}, LR: [0.00073, 0.00073], Avg. batch load time: 0.076, Elapsed time: 2861.37
+2024-07-21 02:22:23 - [34m[1mLOGS   [0m - Epoch:   5 [   41604/  100000], loss: {'classification': 36.1863, 'neural_augmentation': 0.2804, 'total_loss': 36.4668}, LR: [0.000728, 0.000728], Avg. batch load time: 0.077, Elapsed time: 3029.33
+2024-07-21 02:25:10 - [34m[1mLOGS   [0m - Epoch:   5 [   41729/  100000], loss: {'classification': 36.1823, 'neural_augmentation': 0.2809, 'total_loss': 36.4633}, LR: [0.000726, 0.000726], Avg. batch load time: 0.076, Elapsed time: 3195.77
+2024-07-21 02:28:11 - [34m[1mLOGS   [0m - Epoch:   5 [   41854/  100000], loss: {'classification': 36.1806, 'neural_augmentation': 0.2814, 'total_loss': 36.4621}, LR: [0.000724, 0.000724], Avg. batch load time: 0.075, Elapsed time: 3376.66
+2024-07-21 02:30:51 - [34m[1mLOGS   [0m - Epoch:   5 [   41979/  100000], loss: {'classification': 36.1758, 'neural_augmentation': 0.2819, 'total_loss': 36.4577}, LR: [0.000722, 0.000722], Avg. batch load time: 0.074, Elapsed time: 3537.25
+2024-07-21 02:33:54 - [34m[1mLOGS   [0m - Epoch:   5 [   42104/  100000], loss: {'classification': 36.1729, 'neural_augmentation': 0.2825, 'total_loss': 36.4554}, LR: [0.00072, 0.00072], Avg. batch load time: 0.074, Elapsed time: 3720.29
+2024-07-21 02:36:45 - [34m[1mLOGS   [0m - Epoch:   5 [   42229/  100000], loss: {'classification': 36.1744, 'neural_augmentation': 0.283, 'total_loss': 36.4574}, LR: [0.000718, 0.000718], Avg. batch load time: 0.073, Elapsed time: 3891.11
+2024-07-21 02:39:42 - [34m[1mLOGS   [0m - Epoch:   5 [   42354/  100000], loss: {'classification': 36.1707, 'neural_augmentation': 0.2835, 'total_loss': 36.4542}, LR: [0.000716, 0.000716], Avg. batch load time: 0.073, Elapsed time: 4067.57
+2024-07-21 02:42:31 - [34m[1mLOGS   [0m - Epoch:   5 [   42479/  100000], loss: {'classification': 36.1696, 'neural_augmentation': 0.284, 'total_loss': 36.4536}, LR: [0.000715, 0.000715], Avg. batch load time: 0.073, Elapsed time: 4237.44
+2024-07-21 02:45:25 - [34m[1mLOGS   [0m - Epoch:   5 [   42604/  100000], loss: {'classification': 36.166, 'neural_augmentation': 0.2846, 'total_loss': 36.4506}, LR: [0.000713, 0.000713], Avg. batch load time: 0.072, Elapsed time: 4411.38
+2024-07-21 02:48:17 - [34m[1mLOGS   [0m - Epoch:   5 [   42729/  100000], loss: {'classification': 36.1628, 'neural_augmentation': 0.2851, 'total_loss': 36.4479}, LR: [0.000711, 0.000711], Avg. batch load time: 0.072, Elapsed time: 4583.20
+2024-07-21 02:51:18 - [34m[1mLOGS   [0m - Epoch:   5 [   42854/  100000], loss: {'classification': 36.1583, 'neural_augmentation': 0.2856, 'total_loss': 36.4439}, LR: [0.000709, 0.000709], Avg. batch load time: 0.071, Elapsed time: 4764.42
+2024-07-21 02:54:17 - [34m[1mLOGS   [0m - Epoch:   5 [   42979/  100000], loss: {'classification': 36.1538, 'neural_augmentation': 0.2862, 'total_loss': 36.44}, LR: [0.000707, 0.000707], Avg. batch load time: 0.072, Elapsed time: 4943.28
+2024-07-21 02:57:13 - [34m[1mLOGS   [0m - Epoch:   5 [   43104/  100000], loss: {'classification': 36.1494, 'neural_augmentation': 0.2867, 'total_loss': 36.4361}, LR: [0.000705, 0.000705], Avg. batch load time: 0.071, Elapsed time: 5118.68
+2024-07-21 02:59:55 - [34m[1mLOGS   [0m - Epoch:   5 [   43229/  100000], loss: {'classification': 36.1471, 'neural_augmentation': 0.2872, 'total_loss': 36.4344}, LR: [0.000703, 0.000703], Avg. batch load time: 0.070, Elapsed time: 5281.07
+2024-07-21 03:02:54 - [34m[1mLOGS   [0m - Epoch:   5 [   43354/  100000], loss: {'classification': 36.1469, 'neural_augmentation': 0.2877, 'total_loss': 36.4346}, LR: [0.000701, 0.000701], Avg. batch load time: 0.071, Elapsed time: 5459.93
+2024-07-21 03:05:34 - [34m[1mLOGS   [0m - Epoch:   5 [   43479/  100000], loss: {'classification': 36.1416, 'neural_augmentation': 0.2882, 'total_loss': 36.4299}, LR: [0.000699, 0.000699], Avg. batch load time: 0.071, Elapsed time: 5620.28
+2024-07-21 03:08:34 - [34m[1mLOGS   [0m - Epoch:   5 [   43604/  100000], loss: {'classification': 36.1384, 'neural_augmentation': 0.2888, 'total_loss': 36.4272}, LR: [0.000697, 0.000697], Avg. batch load time: 0.071, Elapsed time: 5800.14
+2024-07-21 03:11:18 - [34m[1mLOGS   [0m - Epoch:   5 [   43729/  100000], loss: {'classification': 36.1371, 'neural_augmentation': 0.2893, 'total_loss': 36.4264}, LR: [0.000695, 0.000695], Avg. batch load time: 0.070, Elapsed time: 5963.80
+2024-07-21 03:14:12 - [34m[1mLOGS   [0m - Epoch:   5 [   43854/  100000], loss: {'classification': 36.1357, 'neural_augmentation': 0.2898, 'total_loss': 36.4255}, LR: [0.000693, 0.000693], Avg. batch load time: 0.070, Elapsed time: 6138.32
+2024-07-21 03:17:06 - [34m[1mLOGS   [0m - Epoch:   5 [   43979/  100000], loss: {'classification': 36.133, 'neural_augmentation': 0.2903, 'total_loss': 36.4234}, LR: [0.000691, 0.000691], Avg. batch load time: 0.070, Elapsed time: 6312.31
+2024-07-21 03:20:12 - [34m[1mLOGS   [0m - Epoch:   5 [   44104/  100000], loss: {'classification': 36.1286, 'neural_augmentation': 0.2909, 'total_loss': 36.4195}, LR: [0.000689, 0.000689], Avg. batch load time: 0.070, Elapsed time: 6497.97
+2024-07-21 03:22:53 - [34m[1mLOGS   [0m - Epoch:   5 [   44229/  100000], loss: {'classification': 36.1276, 'neural_augmentation': 0.2914, 'total_loss': 36.419}, LR: [0.000687, 0.000687], Avg. batch load time: 0.069, Elapsed time: 6658.74
+2024-07-21 03:25:51 - [34m[1mLOGS   [0m - Epoch:   5 [   44354/  100000], loss: {'classification': 36.1225, 'neural_augmentation': 0.2919, 'total_loss': 36.4144}, LR: [0.000685, 0.000685], Avg. batch load time: 0.069, Elapsed time: 6837.42
+2024-07-21 03:28:49 - [34m[1mLOGS   [0m - Epoch:   5 [   44479/  100000], loss: {'classification': 36.1175, 'neural_augmentation': 0.2925, 'total_loss': 36.41}, LR: [0.000683, 0.000683], Avg. batch load time: 0.069, Elapsed time: 7014.68
+2024-07-21 03:31:45 - [34m[1mLOGS   [0m - Epoch:   5 [   44604/  100000], loss: {'classification': 36.1152, 'neural_augmentation': 0.293, 'total_loss': 36.4083}, LR: [0.000681, 0.000681], Avg. batch load time: 0.069, Elapsed time: 7191.03
+2024-07-21 03:34:33 - [34m[1mLOGS   [0m - Epoch:   5 [   44729/  100000], loss: {'classification': 36.1125, 'neural_augmentation': 0.2935, 'total_loss': 36.406}, LR: [0.000679, 0.000679], Avg. batch load time: 0.069, Elapsed time: 7359.21
+2024-07-21 03:37:25 - [34m[1mLOGS   [0m - Epoch:   5 [   44854/  100000], loss: {'classification': 36.11, 'neural_augmentation': 0.2941, 'total_loss': 36.404}, LR: [0.000677, 0.000677], Avg. batch load time: 0.069, Elapsed time: 7530.85
+2024-07-21 03:40:15 - [34m[1mLOGS   [0m - Epoch:   5 [   44979/  100000], loss: {'classification': 36.1057, 'neural_augmentation': 0.2946, 'total_loss': 36.4003}, LR: [0.000675, 0.000675], Avg. batch load time: 0.069, Elapsed time: 7700.53
+2024-07-21 03:43:08 - [34m[1mLOGS   [0m - Epoch:   5 [   45104/  100000], loss: {'classification': 36.1023, 'neural_augmentation': 0.2952, 'total_loss': 36.3975}, LR: [0.000673, 0.000673], Avg. batch load time: 0.069, Elapsed time: 7873.73
+2024-07-21 03:46:10 - [34m[1mLOGS   [0m - Epoch:   5 [   45229/  100000], loss: {'classification': 36.0992, 'neural_augmentation': 0.2957, 'total_loss': 36.3949}, LR: [0.000671, 0.000671], Avg. batch load time: 0.069, Elapsed time: 8055.51
+2024-07-21 03:48:57 - [34m[1mLOGS   [0m - Epoch:   5 [   45354/  100000], loss: {'classification': 36.0965, 'neural_augmentation': 0.2962, 'total_loss': 36.3927}, LR: [0.000669, 0.000669], Avg. batch load time: 0.069, Elapsed time: 8223.00
+2024-07-21 03:51:53 - [34m[1mLOGS   [0m - Epoch:   5 [   45479/  100000], loss: {'classification': 36.0925, 'neural_augmentation': 0.2968, 'total_loss': 36.3893}, LR: [0.000667, 0.000667], Avg. batch load time: 0.069, Elapsed time: 8398.92
+2024-07-21 03:54:45 - [34m[1mLOGS   [0m - Epoch:   5 [   45604/  100000], loss: {'classification': 36.0905, 'neural_augmentation': 0.2973, 'total_loss': 36.3878}, LR: [0.000664, 0.000664], Avg. batch load time: 0.069, Elapsed time: 8571.23
+2024-07-21 03:57:55 - [34m[1mLOGS   [0m - Epoch:   5 [   45729/  100000], loss: {'classification': 36.0878, 'neural_augmentation': 0.2979, 'total_loss': 36.3857}, LR: [0.000662, 0.000662], Avg. batch load time: 0.070, Elapsed time: 8761.22
+2024-07-21 04:00:47 - [34m[1mLOGS   [0m - Epoch:   5 [   45854/  100000], loss: {'classification': 36.0839, 'neural_augmentation': 0.2985, 'total_loss': 36.3824}, LR: [0.00066, 0.00066], Avg. batch load time: 0.069, Elapsed time: 8933.22
+2024-07-21 04:03:35 - [34m[1mLOGS   [0m - Epoch:   5 [   45979/  100000], loss: {'classification': 36.0816, 'neural_augmentation': 0.299, 'total_loss': 36.3806}, LR: [0.000658, 0.000658], Avg. batch load time: 0.069, Elapsed time: 9101.25
+2024-07-21 04:06:28 - [34m[1mLOGS   [0m - Epoch:   5 [   46104/  100000], loss: {'classification': 36.0775, 'neural_augmentation': 0.2995, 'total_loss': 36.3771}, LR: [0.000656, 0.000656], Avg. batch load time: 0.069, Elapsed time: 9274.27
+2024-07-21 04:09:21 - [34m[1mLOGS   [0m - Epoch:   5 [   46229/  100000], loss: {'classification': 36.0748, 'neural_augmentation': 0.3001, 'total_loss': 36.3748}, LR: [0.000654, 0.000654], Avg. batch load time: 0.069, Elapsed time: 9447.44
+2024-07-21 04:12:17 - [34m[1mLOGS   [0m - Epoch:   5 [   46354/  100000], loss: {'classification': 36.0713, 'neural_augmentation': 0.3006, 'total_loss': 36.3719}, LR: [0.000652, 0.000652], Avg. batch load time: 0.069, Elapsed time: 9623.11
+2024-07-21 04:15:23 - [34m[1mLOGS   [0m - Epoch:   5 [   46479/  100000], loss: {'classification': 36.0683, 'neural_augmentation': 0.3012, 'total_loss': 36.3695}, LR: [0.00065, 0.00065], Avg. batch load time: 0.070, Elapsed time: 9809.11
+2024-07-21 04:18:05 - [34m[1mLOGS   [0m - Epoch:   5 [   46604/  100000], loss: {'classification': 36.0664, 'neural_augmentation': 0.3017, 'total_loss': 36.3681}, LR: [0.000648, 0.000648], Avg. batch load time: 0.069, Elapsed time: 9971.43
+2024-07-21 04:21:02 - [34m[1mLOGS   [0m - Epoch:   5 [   46729/  100000], loss: {'classification': 36.0617, 'neural_augmentation': 0.3023, 'total_loss': 36.364}, LR: [0.000646, 0.000646], Avg. batch load time: 0.069, Elapsed time: 10148.16
+2024-07-21 04:24:03 - [34m[1mLOGS   [0m - Epoch:   5 [   46854/  100000], loss: {'classification': 36.0596, 'neural_augmentation': 0.3029, 'total_loss': 36.3625}, LR: [0.000644, 0.000644], Avg. batch load time: 0.070, Elapsed time: 10328.48
+2024-07-21 04:26:56 - [34m[1mLOGS   [0m - Epoch:   5 [   46979/  100000], loss: {'classification': 36.0576, 'neural_augmentation': 0.3034, 'total_loss': 36.361}, LR: [0.000642, 0.000642], Avg. batch load time: 0.070, Elapsed time: 10502.36
+2024-07-21 04:29:39 - [34m[1mLOGS   [0m - Epoch:   5 [   47104/  100000], loss: {'classification': 36.055, 'neural_augmentation': 0.304, 'total_loss': 36.359}, LR: [0.00064, 0.00064], Avg. batch load time: 0.069, Elapsed time: 10665.29
+2024-07-21 04:32:38 - [34m[1mLOGS   [0m - Epoch:   5 [   47229/  100000], loss: {'classification': 36.0528, 'neural_augmentation': 0.3045, 'total_loss': 36.3573}, LR: [0.000638, 0.000638], Avg. batch load time: 0.070, Elapsed time: 10844.16
+2024-07-21 04:35:29 - [34m[1mLOGS   [0m - Epoch:   5 [   47354/  100000], loss: {'classification': 36.0491, 'neural_augmentation': 0.3051, 'total_loss': 36.3542}, LR: [0.000636, 0.000636], Avg. batch load time: 0.069, Elapsed time: 11014.82
+2024-07-21 04:37:11 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
+	 loss={'classification': 36.0465, 'neural_augmentation': 0.3055, 'total_loss': 36.352}
+2024-07-21 04:37:14 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-21 04:37:14 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-21 04:37:14 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-21 04:37:15 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 47440 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_5_iter_47440.pt
+2024-07-21 04:37:15 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 47440 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_5_iter_47440.pt
+[31m===========================================================================[0m
+2024-07-21 04:37:17 - [32m[1mINFO   [0m - Training epoch 6
+2024-07-21 04:38:53 - [34m[1mLOGS   [0m - Epoch:   6 [   47440/  100000], loss: {'classification': 35.3204, 'neural_augmentation': 0.3388, 'total_loss': 35.6591}, LR: [0.000634, 0.000634], Avg. batch load time: 92.206, Elapsed time: 96.02
+2024-07-21 04:41:33 - [34m[1mLOGS   [0m - Epoch:   6 [   47565/  100000], loss: {'classification': 35.8611, 'neural_augmentation': 0.3422, 'total_loss': 36.2033}, LR: [0.000632, 0.000632], Avg. batch load time: 0.226, Elapsed time: 256.07
+2024-07-21 04:44:43 - [34m[1mLOGS   [0m - Epoch:   6 [   47690/  100000], loss: {'classification': 35.889, 'neural_augmentation': 0.3428, 'total_loss': 36.2319}, LR: [0.00063, 0.00063], Avg. batch load time: 0.156, Elapsed time: 446.04
+2024-07-21 04:47:29 - [34m[1mLOGS   [0m - Epoch:   6 [   47815/  100000], loss: {'classification': 35.8993, 'neural_augmentation': 0.3435, 'total_loss': 36.2428}, LR: [0.000628, 0.000628], Avg. batch load time: 0.122, Elapsed time: 611.79
+2024-07-21 04:50:31 - [34m[1mLOGS   [0m - Epoch:   6 [   47940/  100000], loss: {'classification': 35.8999, 'neural_augmentation': 0.344, 'total_loss': 36.2439}, LR: [0.000626, 0.000626], Avg. batch load time: 0.115, Elapsed time: 793.75
+2024-07-21 04:53:27 - [34m[1mLOGS   [0m - Epoch:   6 [   48065/  100000], loss: {'classification': 35.8826, 'neural_augmentation': 0.3447, 'total_loss': 36.2272}, LR: [0.000624, 0.000624], Avg. batch load time: 0.107, Elapsed time: 969.89
+2024-07-21 04:56:13 - [34m[1mLOGS   [0m - Epoch:   6 [   48190/  100000], loss: {'classification': 35.8768, 'neural_augmentation': 0.3452, 'total_loss': 36.222}, LR: [0.000622, 0.000622], Avg. batch load time: 0.100, Elapsed time: 1136.60
+2024-07-21 04:59:18 - [34m[1mLOGS   [0m - Epoch:   6 [   48315/  100000], loss: {'classification': 35.8694, 'neural_augmentation': 0.3458, 'total_loss': 36.2152}, LR: [0.000619, 0.000619], Avg. batch load time: 0.095, Elapsed time: 1321.64
+2024-07-21 05:02:21 - [34m[1mLOGS   [0m - Epoch:   6 [   48440/  100000], loss: {'classification': 35.8624, 'neural_augmentation': 0.3464, 'total_loss': 36.2088}, LR: [0.000617, 0.000617], Avg. batch load time: 0.091, Elapsed time: 1504.32
+2024-07-21 05:05:13 - [34m[1mLOGS   [0m - Epoch:   6 [   48565/  100000], loss: {'classification': 35.8528, 'neural_augmentation': 0.347, 'total_loss': 36.1997}, LR: [0.000615, 0.000615], Avg. batch load time: 0.089, Elapsed time: 1675.67
+2024-07-21 05:08:11 - [34m[1mLOGS   [0m - Epoch:   6 [   48690/  100000], loss: {'classification': 35.8537, 'neural_augmentation': 0.3475, 'total_loss': 36.2013}, LR: [0.000613, 0.000613], Avg. batch load time: 0.087, Elapsed time: 1853.67
+2024-07-21 05:11:03 - [34m[1mLOGS   [0m - Epoch:   6 [   48815/  100000], loss: {'classification': 35.846, 'neural_augmentation': 0.3481, 'total_loss': 36.1941}, LR: [0.000611, 0.000611], Avg. batch load time: 0.085, Elapsed time: 2026.29
+2024-07-21 05:13:58 - [34m[1mLOGS   [0m - Epoch:   6 [   48940/  100000], loss: {'classification': 35.8387, 'neural_augmentation': 0.3487, 'total_loss': 36.1875}, LR: [0.000609, 0.000609], Avg. batch load time: 0.085, Elapsed time: 2201.39
+2024-07-21 05:16:52 - [34m[1mLOGS   [0m - Epoch:   6 [   49065/  100000], loss: {'classification': 35.8361, 'neural_augmentation': 0.3493, 'total_loss': 36.1854}, LR: [0.000607, 0.000607], Avg. batch load time: 0.083, Elapsed time: 2374.74
+2024-07-21 05:19:44 - [34m[1mLOGS   [0m - Epoch:   6 [   49190/  100000], loss: {'classification': 35.8302, 'neural_augmentation': 0.3499, 'total_loss': 36.1802}, LR: [0.000605, 0.000605], Avg. batch load time: 0.082, Elapsed time: 2547.38
+2024-07-21 05:22:48 - [34m[1mLOGS   [0m - Epoch:   6 [   49315/  100000], loss: {'classification': 35.8238, 'neural_augmentation': 0.3505, 'total_loss': 36.1744}, LR: [0.000603, 0.000603], Avg. batch load time: 0.081, Elapsed time: 2731.59
+2024-07-21 05:25:40 - [34m[1mLOGS   [0m - Epoch:   6 [   49440/  100000], loss: {'classification': 35.8213, 'neural_augmentation': 0.3511, 'total_loss': 36.1724}, LR: [0.0006, 0.0006], Avg. batch load time: 0.080, Elapsed time: 2903.60
+2024-07-21 05:28:33 - [34m[1mLOGS   [0m - Epoch:   6 [   49565/  100000], loss: {'classification': 35.8133, 'neural_augmentation': 0.3517, 'total_loss': 36.165}, LR: [0.000598, 0.000598], Avg. batch load time: 0.080, Elapsed time: 3076.59
+2024-07-21 05:31:32 - [34m[1mLOGS   [0m - Epoch:   6 [   49690/  100000], loss: {'classification': 35.8147, 'neural_augmentation': 0.3523, 'total_loss': 36.167}, LR: [0.000596, 0.000596], Avg. batch load time: 0.080, Elapsed time: 3254.81
+2024-07-21 05:34:29 - [34m[1mLOGS   [0m - Epoch:   6 [   49815/  100000], loss: {'classification': 35.814, 'neural_augmentation': 0.3529, 'total_loss': 36.167}, LR: [0.000594, 0.000594], Avg. batch load time: 0.078, Elapsed time: 3432.15
+2024-07-21 05:37:26 - [34m[1mLOGS   [0m - Epoch:   6 [   49940/  100000], loss: {'classification': 35.8108, 'neural_augmentation': 0.3535, 'total_loss': 36.1643}, LR: [0.000592, 0.000592], Avg. batch load time: 0.078, Elapsed time: 3608.94
+2024-07-21 05:40:27 - [34m[1mLOGS   [0m - Epoch:   6 [   50065/  100000], loss: {'classification': 35.8095, 'neural_augmentation': 0.3541, 'total_loss': 36.1637}, LR: [0.00059, 0.00059], Avg. batch load time: 0.079, Elapsed time: 3790.05
+2024-07-21 05:43:19 - [34m[1mLOGS   [0m - Epoch:   6 [   50190/  100000], loss: {'classification': 35.8025, 'neural_augmentation': 0.3547, 'total_loss': 36.1573}, LR: [0.000588, 0.000588], Avg. batch load time: 0.077, Elapsed time: 3962.18
+2024-07-21 05:46:17 - [34m[1mLOGS   [0m - Epoch:   6 [   50315/  100000], loss: {'classification': 35.7986, 'neural_augmentation': 0.3553, 'total_loss': 36.1539}, LR: [0.000586, 0.000586], Avg. batch load time: 0.077, Elapsed time: 4139.75
+2024-07-21 05:49:22 - [34m[1mLOGS   [0m - Epoch:   6 [   50440/  100000], loss: {'classification': 35.797, 'neural_augmentation': 0.356, 'total_loss': 36.1529}, LR: [0.000583, 0.000583], Avg. batch load time: 0.076, Elapsed time: 4325.23
+2024-07-21 05:52:23 - [34m[1mLOGS   [0m - Epoch:   6 [   50565/  100000], loss: {'classification': 35.7933, 'neural_augmentation': 0.3566, 'total_loss': 36.1499}, LR: [0.000581, 0.000581], Avg. batch load time: 0.077, Elapsed time: 4506.66
+2024-07-21 05:55:16 - [34m[1mLOGS   [0m - Epoch:   6 [   50690/  100000], loss: {'classification': 35.7917, 'neural_augmentation': 0.3572, 'total_loss': 36.1489}, LR: [0.000579, 0.000579], Avg. batch load time: 0.076, Elapsed time: 4679.62
+2024-07-21 05:58:12 - [34m[1mLOGS   [0m - Epoch:   6 [   50815/  100000], loss: {'classification': 35.7867, 'neural_augmentation': 0.3578, 'total_loss': 36.1444}, LR: [0.000577, 0.000577], Avg. batch load time: 0.076, Elapsed time: 4854.99
+2024-07-21 06:01:08 - [34m[1mLOGS   [0m - Epoch:   6 [   50940/  100000], loss: {'classification': 35.7833, 'neural_augmentation': 0.3584, 'total_loss': 36.1417}, LR: [0.000575, 0.000575], Avg. batch load time: 0.076, Elapsed time: 5031.19
+2024-07-21 06:04:05 - [34m[1mLOGS   [0m - Epoch:   6 [   51065/  100000], loss: {'classification': 35.7779, 'neural_augmentation': 0.359, 'total_loss': 36.1369}, LR: [0.000573, 0.000573], Avg. batch load time: 0.076, Elapsed time: 5208.38
+2024-07-21 06:07:01 - [34m[1mLOGS   [0m - Epoch:   6 [   51190/  100000], loss: {'classification': 35.7779, 'neural_augmentation': 0.3596, 'total_loss': 36.1375}, LR: [0.000571, 0.000571], Avg. batch load time: 0.076, Elapsed time: 5384.50
+2024-07-21 06:10:05 - [34m[1mLOGS   [0m - Epoch:   6 [   51315/  100000], loss: {'classification': 35.7772, 'neural_augmentation': 0.3602, 'total_loss': 36.1374}, LR: [0.000568, 0.000568], Avg. batch load time: 0.076, Elapsed time: 5568.07
+2024-07-21 06:13:07 - [34m[1mLOGS   [0m - Epoch:   6 [   51440/  100000], loss: {'classification': 35.7734, 'neural_augmentation': 0.3608, 'total_loss': 36.1342}, LR: [0.000566, 0.000566], Avg. batch load time: 0.076, Elapsed time: 5750.21
+2024-07-21 06:15:50 - [34m[1mLOGS   [0m - Epoch:   6 [   51565/  100000], loss: {'classification': 35.7703, 'neural_augmentation': 0.3614, 'total_loss': 36.1317}, LR: [0.000564, 0.000564], Avg. batch load time: 0.076, Elapsed time: 5913.17
+2024-07-21 06:18:48 - [34m[1mLOGS   [0m - Epoch:   6 [   51690/  100000], loss: {'classification': 35.7667, 'neural_augmentation': 0.362, 'total_loss': 36.1287}, LR: [0.000562, 0.000562], Avg. batch load time: 0.076, Elapsed time: 6091.06
+2024-07-21 06:21:42 - [34m[1mLOGS   [0m - Epoch:   6 [   51815/  100000], loss: {'classification': 35.7629, 'neural_augmentation': 0.3626, 'total_loss': 36.1255}, LR: [0.00056, 0.00056], Avg. batch load time: 0.075, Elapsed time: 6264.70
+2024-07-21 06:24:46 - [34m[1mLOGS   [0m - Epoch:   6 [   51940/  100000], loss: {'classification': 35.7615, 'neural_augmentation': 0.3633, 'total_loss': 36.1247}, LR: [0.000558, 0.000558], Avg. batch load time: 0.075, Elapsed time: 6449.31
+2024-07-21 06:28:00 - [34m[1mLOGS   [0m - Epoch:   6 [   52065/  100000], loss: {'classification': 35.7604, 'neural_augmentation': 0.3639, 'total_loss': 36.1243}, LR: [0.000556, 0.000556], Avg. batch load time: 0.076, Elapsed time: 6643.45
+2024-07-21 06:30:53 - [34m[1mLOGS   [0m - Epoch:   6 [   52190/  100000], loss: {'classification': 35.7564, 'neural_augmentation': 0.3645, 'total_loss': 36.1209}, LR: [0.000553, 0.000553], Avg. batch load time: 0.075, Elapsed time: 6815.92
+2024-07-21 06:33:58 - [34m[1mLOGS   [0m - Epoch:   6 [   52315/  100000], loss: {'classification': 35.7522, 'neural_augmentation': 0.3651, 'total_loss': 36.1173}, LR: [0.000551, 0.000551], Avg. batch load time: 0.075, Elapsed time: 7001.47
+2024-07-21 06:36:58 - [34m[1mLOGS   [0m - Epoch:   6 [   52440/  100000], loss: {'classification': 35.7462, 'neural_augmentation': 0.3657, 'total_loss': 36.1119}, LR: [0.000549, 0.000549], Avg. batch load time: 0.076, Elapsed time: 7181.21
+2024-07-21 06:40:11 - [34m[1mLOGS   [0m - Epoch:   6 [   52565/  100000], loss: {'classification': 35.7447, 'neural_augmentation': 0.3664, 'total_loss': 36.111}, LR: [0.000547, 0.000547], Avg. batch load time: 0.076, Elapsed time: 7374.66
+2024-07-21 06:43:07 - [34m[1mLOGS   [0m - Epoch:   6 [   52690/  100000], loss: {'classification': 35.7422, 'neural_augmentation': 0.367, 'total_loss': 36.1091}, LR: [0.000545, 0.000545], Avg. batch load time: 0.076, Elapsed time: 7550.37
+2024-07-21 06:45:58 - [34m[1mLOGS   [0m - Epoch:   6 [   52815/  100000], loss: {'classification': 35.7388, 'neural_augmentation': 0.3676, 'total_loss': 36.1064}, LR: [0.000543, 0.000543], Avg. batch load time: 0.076, Elapsed time: 7721.36
+2024-07-21 06:48:54 - [34m[1mLOGS   [0m - Epoch:   6 [   52940/  100000], loss: {'classification': 35.7354, 'neural_augmentation': 0.3682, 'total_loss': 36.1036}, LR: [0.000541, 0.000541], Avg. batch load time: 0.075, Elapsed time: 7897.20
+2024-07-21 06:51:52 - [34m[1mLOGS   [0m - Epoch:   6 [   53065/  100000], loss: {'classification': 35.7319, 'neural_augmentation': 0.3688, 'total_loss': 36.1007}, LR: [0.000538, 0.000538], Avg. batch load time: 0.075, Elapsed time: 8074.90
+2024-07-21 06:54:51 - [34m[1mLOGS   [0m - Epoch:   6 [   53190/  100000], loss: {'classification': 35.7275, 'neural_augmentation': 0.3694, 'total_loss': 36.0969}, LR: [0.000536, 0.000536], Avg. batch load time: 0.074, Elapsed time: 8254.45
+2024-07-21 06:58:05 - [34m[1mLOGS   [0m - Epoch:   6 [   53315/  100000], loss: {'classification': 35.7235, 'neural_augmentation': 0.37, 'total_loss': 36.0935}, LR: [0.000534, 0.000534], Avg. batch load time: 0.075, Elapsed time: 8448.11
+2024-07-21 07:00:58 - [34m[1mLOGS   [0m - Epoch:   6 [   53440/  100000], loss: {'classification': 35.7189, 'neural_augmentation': 0.3707, 'total_loss': 36.0896}, LR: [0.000532, 0.000532], Avg. batch load time: 0.075, Elapsed time: 8620.95
+2024-07-21 07:03:53 - [34m[1mLOGS   [0m - Epoch:   6 [   53565/  100000], loss: {'classification': 35.7158, 'neural_augmentation': 0.3713, 'total_loss': 36.0871}, LR: [0.00053, 0.00053], Avg. batch load time: 0.075, Elapsed time: 8796.14
+2024-07-21 07:06:57 - [34m[1mLOGS   [0m - Epoch:   6 [   53690/  100000], loss: {'classification': 35.7136, 'neural_augmentation': 0.3719, 'total_loss': 36.0855}, LR: [0.000528, 0.000528], Avg. batch load time: 0.075, Elapsed time: 8980.45
+2024-07-21 07:09:53 - [34m[1mLOGS   [0m - Epoch:   6 [   53815/  100000], loss: {'classification': 35.7106, 'neural_augmentation': 0.3725, 'total_loss': 36.0831}, LR: [0.000525, 0.000525], Avg. batch load time: 0.074, Elapsed time: 9156.66
+2024-07-21 07:13:03 - [34m[1mLOGS   [0m - Epoch:   6 [   53940/  100000], loss: {'classification': 35.7081, 'neural_augmentation': 0.3731, 'total_loss': 36.0812}, LR: [0.000523, 0.000523], Avg. batch load time: 0.074, Elapsed time: 9345.93
+2024-07-21 07:16:18 - [34m[1mLOGS   [0m - Epoch:   6 [   54065/  100000], loss: {'classification': 35.7041, 'neural_augmentation': 0.3737, 'total_loss': 36.0779}, LR: [0.000521, 0.000521], Avg. batch load time: 0.075, Elapsed time: 9541.36
+2024-07-21 07:19:19 - [34m[1mLOGS   [0m - Epoch:   6 [   54190/  100000], loss: {'classification': 35.7009, 'neural_augmentation': 0.3744, 'total_loss': 36.0752}, LR: [0.000519, 0.000519], Avg. batch load time: 0.075, Elapsed time: 9721.77
+2024-07-21 07:22:21 - [34m[1mLOGS   [0m - Epoch:   6 [   54315/  100000], loss: {'classification': 35.6971, 'neural_augmentation': 0.375, 'total_loss': 36.072}, LR: [0.000517, 0.000517], Avg. batch load time: 0.075, Elapsed time: 9903.85
+2024-07-21 07:25:37 - [34m[1mLOGS   [0m - Epoch:   6 [   54440/  100000], loss: {'classification': 35.694, 'neural_augmentation': 0.3756, 'total_loss': 36.0696}, LR: [0.000515, 0.000515], Avg. batch load time: 0.076, Elapsed time: 10100.25
+2024-07-21 07:28:33 - [34m[1mLOGS   [0m - Epoch:   6 [   54565/  100000], loss: {'classification': 35.6897, 'neural_augmentation': 0.3762, 'total_loss': 36.0659}, LR: [0.000513, 0.000513], Avg. batch load time: 0.075, Elapsed time: 10276.03
+2024-07-21 07:31:38 - [34m[1mLOGS   [0m - Epoch:   6 [   54690/  100000], loss: {'classification': 35.6861, 'neural_augmentation': 0.3768, 'total_loss': 36.0629}, LR: [0.00051, 0.00051], Avg. batch load time: 0.076, Elapsed time: 10460.70
+2024-07-21 07:34:28 - [34m[1mLOGS   [0m - Epoch:   6 [   54815/  100000], loss: {'classification': 35.6834, 'neural_augmentation': 0.3774, 'total_loss': 36.0608}, LR: [0.000508, 0.000508], Avg. batch load time: 0.075, Elapsed time: 10631.33
+2024-07-21 07:37:42 - [34m[1mLOGS   [0m - Epoch:   6 [   54940/  100000], loss: {'classification': 35.6795, 'neural_augmentation': 0.378, 'total_loss': 36.0576}, LR: [0.000506, 0.000506], Avg. batch load time: 0.075, Elapsed time: 10825.09
+2024-07-21 07:40:46 - [34m[1mLOGS   [0m - Epoch:   6 [   55065/  100000], loss: {'classification': 35.6782, 'neural_augmentation': 0.3787, 'total_loss': 36.0569}, LR: [0.000504, 0.000504], Avg. batch load time: 0.075, Elapsed time: 11008.99
+2024-07-21 07:43:56 - [34m[1mLOGS   [0m - Epoch:   6 [   55190/  100000], loss: {'classification': 35.675, 'neural_augmentation': 0.3793, 'total_loss': 36.0543}, LR: [0.000502, 0.000502], Avg. batch load time: 0.076, Elapsed time: 11198.94
+2024-07-21 07:46:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
+	 loss={'classification': 35.6724, 'neural_augmentation': 0.3799, 'total_loss': 36.0523}
+2024-07-21 07:46:51 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-21 07:46:52 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-21 07:46:52 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-21 07:46:53 - [34m[1mLOGS   [0m - Training checkpoint for epoch 6/iteration 55309 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_6_iter_55309.pt
+2024-07-21 07:46:53 - [34m[1mLOGS   [0m - Model state for epoch 6/iteration 55309 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_6_iter_55309.pt
+[31m===========================================================================[0m
+2024-07-21 07:46:55 - [32m[1mINFO   [0m - Training epoch 7
+2024-07-21 07:48:17 - [34m[1mLOGS   [0m - Epoch:   7 [   55309/  100000], loss: {'classification': 35.7792, 'neural_augmentation': 0.4228, 'total_loss': 36.202}, LR: [0.0005, 0.0005], Avg. batch load time: 82.029, Elapsed time: 82.38
+2024-07-21 07:51:35 - [34m[1mLOGS   [0m - Epoch:   7 [   55434/  100000], loss: {'classification': 35.4313, 'neural_augmentation': 0.4198, 'total_loss': 35.8511}, LR: [0.000498, 0.000498], Avg. batch load time: 0.281, Elapsed time: 280.01
+2024-07-21 07:54:26 - [34m[1mLOGS   [0m - Epoch:   7 [   55559/  100000], loss: {'classification': 35.4244, 'neural_augmentation': 0.4206, 'total_loss': 35.845}, LR: [0.000495, 0.000495], Avg. batch load time: 0.179, Elapsed time: 451.24
+2024-07-21 07:57:37 - [34m[1mLOGS   [0m - Epoch:   7 [   55684/  100000], loss: {'classification': 35.4355, 'neural_augmentation': 0.4211, 'total_loss': 35.8566}, LR: [0.000493, 0.000493], Avg. batch load time: 0.150, Elapsed time: 642.30
+2024-07-21 08:00:30 - [34m[1mLOGS   [0m - Epoch:   7 [   55809/  100000], loss: {'classification': 35.4324, 'neural_augmentation': 0.4218, 'total_loss': 35.8541}, LR: [0.000491, 0.000491], Avg. batch load time: 0.131, Elapsed time: 814.96
+2024-07-21 08:03:24 - [34m[1mLOGS   [0m - Epoch:   7 [   55934/  100000], loss: {'classification': 35.4405, 'neural_augmentation': 0.4225, 'total_loss': 35.863}, LR: [0.000489, 0.000489], Avg. batch load time: 0.116, Elapsed time: 989.43
+2024-07-21 08:06:27 - [34m[1mLOGS   [0m - Epoch:   7 [   56059/  100000], loss: {'classification': 35.4398, 'neural_augmentation': 0.4231, 'total_loss': 35.8629}, LR: [0.000487, 0.000487], Avg. batch load time: 0.111, Elapsed time: 1171.76
+2024-07-21 08:09:15 - [34m[1mLOGS   [0m - Epoch:   7 [   56184/  100000], loss: {'classification': 35.4403, 'neural_augmentation': 0.4237, 'total_loss': 35.864}, LR: [0.000485, 0.000485], Avg. batch load time: 0.105, Elapsed time: 1340.07
+2024-07-21 08:12:12 - [34m[1mLOGS   [0m - Epoch:   7 [   56309/  100000], loss: {'classification': 35.4358, 'neural_augmentation': 0.4243, 'total_loss': 35.8601}, LR: [0.000482, 0.000482], Avg. batch load time: 0.099, Elapsed time: 1517.38
+2024-07-21 08:15:17 - [34m[1mLOGS   [0m - Epoch:   7 [   56434/  100000], loss: {'classification': 35.4326, 'neural_augmentation': 0.4249, 'total_loss': 35.8575}, LR: [0.00048, 0.00048], Avg. batch load time: 0.096, Elapsed time: 1701.92
+2024-07-21 08:18:16 - [34m[1mLOGS   [0m - Epoch:   7 [   56559/  100000], loss: {'classification': 35.4253, 'neural_augmentation': 0.4255, 'total_loss': 35.8508}, LR: [0.000478, 0.000478], Avg. batch load time: 0.094, Elapsed time: 1881.09
+2024-07-21 08:21:05 - [34m[1mLOGS   [0m - Epoch:   7 [   56684/  100000], loss: {'classification': 35.4327, 'neural_augmentation': 0.4261, 'total_loss': 35.8589}, LR: [0.000476, 0.000476], Avg. batch load time: 0.092, Elapsed time: 2050.14
+2024-07-21 08:24:21 - [34m[1mLOGS   [0m - Epoch:   7 [   56809/  100000], loss: {'classification': 35.4319, 'neural_augmentation': 0.4268, 'total_loss': 35.8587}, LR: [0.000474, 0.000474], Avg. batch load time: 0.094, Elapsed time: 2246.65
+2024-07-21 08:27:14 - [34m[1mLOGS   [0m - Epoch:   7 [   56934/  100000], loss: {'classification': 35.4295, 'neural_augmentation': 0.4274, 'total_loss': 35.857}, LR: [0.000472, 0.000472], Avg. batch load time: 0.093, Elapsed time: 2419.13
+2024-07-21 08:30:08 - [34m[1mLOGS   [0m - Epoch:   7 [   57059/  100000], loss: {'classification': 35.4279, 'neural_augmentation': 0.4281, 'total_loss': 35.8559}, LR: [0.000469, 0.000469], Avg. batch load time: 0.091, Elapsed time: 2593.08
+2024-07-21 08:33:05 - [34m[1mLOGS   [0m - Epoch:   7 [   57184/  100000], loss: {'classification': 35.4212, 'neural_augmentation': 0.4287, 'total_loss': 35.8499}, LR: [0.000467, 0.000467], Avg. batch load time: 0.089, Elapsed time: 2769.99
+2024-07-21 08:36:08 - [34m[1mLOGS   [0m - Epoch:   7 [   57309/  100000], loss: {'classification': 35.4208, 'neural_augmentation': 0.4293, 'total_loss': 35.8501}, LR: [0.000465, 0.000465], Avg. batch load time: 0.088, Elapsed time: 2953.65
+2024-07-21 08:39:05 - [34m[1mLOGS   [0m - Epoch:   7 [   57434/  100000], loss: {'classification': 35.4163, 'neural_augmentation': 0.4299, 'total_loss': 35.8462}, LR: [0.000463, 0.000463], Avg. batch load time: 0.087, Elapsed time: 3130.64
+2024-07-21 08:42:14 - [34m[1mLOGS   [0m - Epoch:   7 [   57559/  100000], loss: {'classification': 35.4158, 'neural_augmentation': 0.4306, 'total_loss': 35.8464}, LR: [0.000461, 0.000461], Avg. batch load time: 0.088, Elapsed time: 3319.62
+2024-07-21 08:45:21 - [34m[1mLOGS   [0m - Epoch:   7 [   57684/  100000], loss: {'classification': 35.4174, 'neural_augmentation': 0.4312, 'total_loss': 35.8486}, LR: [0.000459, 0.000459], Avg. batch load time: 0.087, Elapsed time: 3506.24
+2024-07-21 08:48:39 - [34m[1mLOGS   [0m - Epoch:   7 [   57809/  100000], loss: {'classification': 35.4147, 'neural_augmentation': 0.4318, 'total_loss': 35.8465}, LR: [0.000457, 0.000457], Avg. batch load time: 0.089, Elapsed time: 3704.58
+2024-07-21 08:51:40 - [34m[1mLOGS   [0m - Epoch:   7 [   57934/  100000], loss: {'classification': 35.4108, 'neural_augmentation': 0.4325, 'total_loss': 35.8433}, LR: [0.000454, 0.000454], Avg. batch load time: 0.089, Elapsed time: 3885.18
+2024-07-21 08:54:47 - [34m[1mLOGS   [0m - Epoch:   7 [   58059/  100000], loss: {'classification': 35.4084, 'neural_augmentation': 0.4331, 'total_loss': 35.8416}, LR: [0.000452, 0.000452], Avg. batch load time: 0.089, Elapsed time: 4072.29
+2024-07-21 08:57:50 - [34m[1mLOGS   [0m - Epoch:   7 [   58184/  100000], loss: {'classification': 35.4063, 'neural_augmentation': 0.4338, 'total_loss': 35.84}, LR: [0.00045, 0.00045], Avg. batch load time: 0.088, Elapsed time: 4255.55
+2024-07-21 09:01:04 - [34m[1mLOGS   [0m - Epoch:   7 [   58309/  100000], loss: {'classification': 35.4021, 'neural_augmentation': 0.4344, 'total_loss': 35.8365}, LR: [0.000448, 0.000448], Avg. batch load time: 0.088, Elapsed time: 4449.41
+2024-07-21 09:04:21 - [34m[1mLOGS   [0m - Epoch:   7 [   58434/  100000], loss: {'classification': 35.4028, 'neural_augmentation': 0.4351, 'total_loss': 35.8379}, LR: [0.000446, 0.000446], Avg. batch load time: 0.088, Elapsed time: 4645.73
+2024-07-21 09:07:28 - [34m[1mLOGS   [0m - Epoch:   7 [   58559/  100000], loss: {'classification': 35.3998, 'neural_augmentation': 0.4357, 'total_loss': 35.8355}, LR: [0.000444, 0.000444], Avg. batch load time: 0.089, Elapsed time: 4833.54
+2024-07-21 09:10:46 - [34m[1mLOGS   [0m - Epoch:   7 [   58684/  100000], loss: {'classification': 35.3994, 'neural_augmentation': 0.4363, 'total_loss': 35.8357}, LR: [0.000442, 0.000442], Avg. batch load time: 0.089, Elapsed time: 5031.36
+2024-07-21 09:13:47 - [34m[1mLOGS   [0m - Epoch:   7 [   58809/  100000], loss: {'classification': 35.396, 'neural_augmentation': 0.4369, 'total_loss': 35.833}, LR: [0.000439, 0.000439], Avg. batch load time: 0.089, Elapsed time: 5212.30
+2024-07-21 09:17:07 - [34m[1mLOGS   [0m - Epoch:   7 [   58934/  100000], loss: {'classification': 35.3908, 'neural_augmentation': 0.4376, 'total_loss': 35.8283}, LR: [0.000437, 0.000437], Avg. batch load time: 0.090, Elapsed time: 5412.15
+2024-07-21 09:20:05 - [34m[1mLOGS   [0m - Epoch:   7 [   59059/  100000], loss: {'classification': 35.3863, 'neural_augmentation': 0.4382, 'total_loss': 35.8245}, LR: [0.000435, 0.000435], Avg. batch load time: 0.088, Elapsed time: 5590.02
+2024-07-21 09:23:15 - [34m[1mLOGS   [0m - Epoch:   7 [   59184/  100000], loss: {'classification': 35.3836, 'neural_augmentation': 0.4388, 'total_loss': 35.8225}, LR: [0.000433, 0.000433], Avg. batch load time: 0.088, Elapsed time: 5780.02
+2024-07-21 09:26:25 - [34m[1mLOGS   [0m - Epoch:   7 [   59309/  100000], loss: {'classification': 35.3812, 'neural_augmentation': 0.4395, 'total_loss': 35.8206}, LR: [0.000431, 0.000431], Avg. batch load time: 0.088, Elapsed time: 5970.12
+2024-07-21 09:29:47 - [34m[1mLOGS   [0m - Epoch:   7 [   59434/  100000], loss: {'classification': 35.3782, 'neural_augmentation': 0.4401, 'total_loss': 35.8183}, LR: [0.000429, 0.000429], Avg. batch load time: 0.089, Elapsed time: 6172.05
+2024-07-21 09:33:06 - [34m[1mLOGS   [0m - Epoch:   7 [   59559/  100000], loss: {'classification': 35.3757, 'neural_augmentation': 0.4407, 'total_loss': 35.8164}, LR: [0.000427, 0.000427], Avg. batch load time: 0.090, Elapsed time: 6371.01
+2024-07-21 09:36:22 - [34m[1mLOGS   [0m - Epoch:   7 [   59684/  100000], loss: {'classification': 35.3736, 'neural_augmentation': 0.4413, 'total_loss': 35.8149}, LR: [0.000424, 0.000424], Avg. batch load time: 0.090, Elapsed time: 6567.41
+2024-07-21 09:39:39 - [34m[1mLOGS   [0m - Epoch:   7 [   59809/  100000], loss: {'classification': 35.3721, 'neural_augmentation': 0.442, 'total_loss': 35.814}, LR: [0.000422, 0.000422], Avg. batch load time: 0.090, Elapsed time: 6764.46
+2024-07-21 09:42:39 - [34m[1mLOGS   [0m - Epoch:   7 [   59934/  100000], loss: {'classification': 35.3701, 'neural_augmentation': 0.4426, 'total_loss': 35.8127}, LR: [0.00042, 0.00042], Avg. batch load time: 0.089, Elapsed time: 6943.78
+2024-07-21 09:46:03 - [34m[1mLOGS   [0m - Epoch:   7 [   60059/  100000], loss: {'classification': 35.3677, 'neural_augmentation': 0.4432, 'total_loss': 35.8109}, LR: [0.000418, 0.000418], Avg. batch load time: 0.090, Elapsed time: 7148.44
+2024-07-21 09:49:14 - [34m[1mLOGS   [0m - Epoch:   7 [   60184/  100000], loss: {'classification': 35.3651, 'neural_augmentation': 0.4439, 'total_loss': 35.809}, LR: [0.000416, 0.000416], Avg. batch load time: 0.090, Elapsed time: 7339.11
+2024-07-21 09:52:32 - [34m[1mLOGS   [0m - Epoch:   7 [   60309/  100000], loss: {'classification': 35.363, 'neural_augmentation': 0.4445, 'total_loss': 35.8075}, LR: [0.000414, 0.000414], Avg. batch load time: 0.091, Elapsed time: 7536.68
+2024-07-21 09:55:58 - [34m[1mLOGS   [0m - Epoch:   7 [   60434/  100000], loss: {'classification': 35.3607, 'neural_augmentation': 0.4451, 'total_loss': 35.8059}, LR: [0.000412, 0.000412], Avg. batch load time: 0.092, Elapsed time: 7743.43
+2024-07-21 09:58:55 - [34m[1mLOGS   [0m - Epoch:   7 [   60559/  100000], loss: {'classification': 35.3567, 'neural_augmentation': 0.4457, 'total_loss': 35.8025}, LR: [0.00041, 0.00041], Avg. batch load time: 0.091, Elapsed time: 7920.61
+2024-07-21 10:02:09 - [34m[1mLOGS   [0m - Epoch:   7 [   60684/  100000], loss: {'classification': 35.3526, 'neural_augmentation': 0.4464, 'total_loss': 35.799}, LR: [0.000407, 0.000407], Avg. batch load time: 0.092, Elapsed time: 8114.53
+2024-07-21 10:05:19 - [34m[1mLOGS   [0m - Epoch:   7 [   60809/  100000], loss: {'classification': 35.3489, 'neural_augmentation': 0.447, 'total_loss': 35.7959}, LR: [0.000405, 0.000405], Avg. batch load time: 0.091, Elapsed time: 8304.17
+2024-07-21 10:08:23 - [34m[1mLOGS   [0m - Epoch:   7 [   60934/  100000], loss: {'classification': 35.344, 'neural_augmentation': 0.4476, 'total_loss': 35.7916}, LR: [0.000403, 0.000403], Avg. batch load time: 0.092, Elapsed time: 8488.47
+2024-07-21 10:11:43 - [34m[1mLOGS   [0m - Epoch:   7 [   61059/  100000], loss: {'classification': 35.3409, 'neural_augmentation': 0.4482, 'total_loss': 35.7891}, LR: [0.000401, 0.000401], Avg. batch load time: 0.092, Elapsed time: 8688.12
+2024-07-21 10:14:58 - [34m[1mLOGS   [0m - Epoch:   7 [   61184/  100000], loss: {'classification': 35.3365, 'neural_augmentation': 0.4488, 'total_loss': 35.7853}, LR: [0.000399, 0.000399], Avg. batch load time: 0.092, Elapsed time: 8883.43
+2024-07-21 10:18:12 - [34m[1mLOGS   [0m - Epoch:   7 [   61309/  100000], loss: {'classification': 35.3352, 'neural_augmentation': 0.4495, 'total_loss': 35.7847}, LR: [0.000397, 0.000397], Avg. batch load time: 0.092, Elapsed time: 9077.18
+2024-07-21 10:21:26 - [34m[1mLOGS   [0m - Epoch:   7 [   61434/  100000], loss: {'classification': 35.3323, 'neural_augmentation': 0.4501, 'total_loss': 35.7824}, LR: [0.000395, 0.000395], Avg. batch load time: 0.092, Elapsed time: 9271.38
+2024-07-21 10:24:55 - [34m[1mLOGS   [0m - Epoch:   7 [   61559/  100000], loss: {'classification': 35.3303, 'neural_augmentation': 0.4508, 'total_loss': 35.7811}, LR: [0.000393, 0.000393], Avg. batch load time: 0.093, Elapsed time: 9480.56
+2024-07-21 10:27:57 - [34m[1mLOGS   [0m - Epoch:   7 [   61684/  100000], loss: {'classification': 35.3274, 'neural_augmentation': 0.4514, 'total_loss': 35.7788}, LR: [0.000391, 0.000391], Avg. batch load time: 0.092, Elapsed time: 9662.05
+2024-07-21 10:30:43 - [34m[1mLOGS   [0m - Epoch:   7 [   61809/  100000], loss: {'classification': 35.324, 'neural_augmentation': 0.4519, 'total_loss': 35.7759}, LR: [0.000388, 0.000388], Avg. batch load time: 0.091, Elapsed time: 9828.30
+2024-07-21 10:34:12 - [34m[1mLOGS   [0m - Epoch:   7 [   61934/  100000], loss: {'classification': 35.3207, 'neural_augmentation': 0.4526, 'total_loss': 35.7732}, LR: [0.000386, 0.000386], Avg. batch load time: 0.092, Elapsed time: 10036.85
+2024-07-21 10:37:08 - [34m[1mLOGS   [0m - Epoch:   7 [   62059/  100000], loss: {'classification': 35.3188, 'neural_augmentation': 0.4532, 'total_loss': 35.772}, LR: [0.000384, 0.000384], Avg. batch load time: 0.092, Elapsed time: 10212.74
+2024-07-21 10:40:17 - [34m[1mLOGS   [0m - Epoch:   7 [   62184/  100000], loss: {'classification': 35.317, 'neural_augmentation': 0.4538, 'total_loss': 35.7709}, LR: [0.000382, 0.000382], Avg. batch load time: 0.092, Elapsed time: 10401.72
+2024-07-21 10:43:14 - [34m[1mLOGS   [0m - Epoch:   7 [   62309/  100000], loss: {'classification': 35.3146, 'neural_augmentation': 0.4544, 'total_loss': 35.769}, LR: [0.00038, 0.00038], Avg. batch load time: 0.092, Elapsed time: 10579.57
+2024-07-21 10:46:36 - [34m[1mLOGS   [0m - Epoch:   7 [   62434/  100000], loss: {'classification': 35.3104, 'neural_augmentation': 0.455, 'total_loss': 35.7654}, LR: [0.000378, 0.000378], Avg. batch load time: 0.093, Elapsed time: 10781.31
+2024-07-21 10:49:32 - [34m[1mLOGS   [0m - Epoch:   7 [   62559/  100000], loss: {'classification': 35.3073, 'neural_augmentation': 0.4556, 'total_loss': 35.7629}, LR: [0.000376, 0.000376], Avg. batch load time: 0.093, Elapsed time: 10957.46
+2024-07-21 10:52:29 - [34m[1mLOGS   [0m - Epoch:   7 [   62684/  100000], loss: {'classification': 35.3048, 'neural_augmentation': 0.4562, 'total_loss': 35.7611}, LR: [0.000374, 0.000374], Avg. batch load time: 0.092, Elapsed time: 11134.48
+2024-07-21 10:55:52 - [34m[1mLOGS   [0m - Epoch:   7 [   62809/  100000], loss: {'classification': 35.3019, 'neural_augmentation': 0.4568, 'total_loss': 35.7587}, LR: [0.000372, 0.000372], Avg. batch load time: 0.092, Elapsed time: 11337.42
+2024-07-21 10:58:54 - [34m[1mLOGS   [0m - Epoch:   7 [   62934/  100000], loss: {'classification': 35.2986, 'neural_augmentation': 0.4574, 'total_loss': 35.756}, LR: [0.00037, 0.00037], Avg. batch load time: 0.092, Elapsed time: 11519.52
+2024-07-21 11:02:01 - [34m[1mLOGS   [0m - Epoch:   7 [   63059/  100000], loss: {'classification': 35.2959, 'neural_augmentation': 0.458, 'total_loss': 35.7539}, LR: [0.000368, 0.000368], Avg. batch load time: 0.092, Elapsed time: 11705.81
+2024-07-21 11:04:56 - [34m[1mLOGS   [0m - Epoch:   7 [   63184/  100000], loss: {'classification': 35.2938, 'neural_augmentation': 0.4586, 'total_loss': 35.7525}, LR: [0.000366, 0.000366], Avg. batch load time: 0.092, Elapsed time: 11881.37
+2024-07-21 11:05:14 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
+	 loss={'classification': 35.2933, 'neural_augmentation': 0.4587, 'total_loss': 35.7521}
+2024-07-21 11:05:17 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_best.pt
+2024-07-21 11:05:18 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_last.pt
+2024-07-21 11:05:18 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_last.pt
+2024-07-21 11:05:18 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 63203 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/training_checkpoint_epoch_7_iter_63203.pt
+2024-07-21 11:05:18 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 63203 is saved at: /ML-A100/team/mm/models/catlip_data/results500_accum_dci/train/checkpoint_epoch_7_iter_63203.pt
+[31m===========================================================================[0m
+2024-07-21 11:05:20 - [32m[1mINFO   [0m - Training epoch 8
+2024-07-21 11:06:42 - [34m[1mLOGS   [0m - Epoch:   8 [   63203/  100000], loss: {'classification': 34.2698, 'neural_augmentation': 0.4952, 'total_loss': 34.765}, LR: [0.000365, 0.000365], Avg. batch load time: 81.321, Elapsed time: 81.57
+2024-07-21 11:09:39 - [34m[1mLOGS   [0m - Epoch:   8 [   63328/  100000], loss: {'classification': 35.1014, 'neural_augmentation': 0.4978, 'total_loss': 35.5992}, LR: [0.000363, 0.000363], Avg. batch load time: 0.241, Elapsed time: 258.29
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-07-21 11:11:50 - [34m[1mLOGS   [0m - Keyboard interruption. Exiting from early training
+2024-07-21 11:11:50 - [34m[1mLOGS   [0m - Training took 23:12:42.71
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

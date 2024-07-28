@@ -11,6 +11,7 @@ from corenet.train_eval_pipelines import (
 )
 
 
+
 def main(train_eval_pipeline: BaseTrainEvalPipeline):
     """
     This function will be invoked on each gpu worker process.
@@ -37,7 +38,7 @@ def main_worker(args: Optional[List[str]] = None):
 def main_worker_segmentation(args: Optional[List[str]] = None, **kwargs):
     from corenet.engine.eval_segmentation import main_segmentation_evaluation
 
-    main_segmentation_evaluation(args=args, **kwargs)
+    main_segmentation_evaluation(args=args, **kwargs)   
 
 
 def main_worker_detection(args: Optional[List[str]] = None, **kwargs):
@@ -47,8 +48,11 @@ def main_worker_detection(args: Optional[List[str]] = None, **kwargs):
 
 
 if __name__ == "__main__":
-    main_worker()
 
+    # if sys.argv[1] == 'seg':
+    #main_worker_segmentation()
+    # else:
+    main_worker()
 """
 
 """

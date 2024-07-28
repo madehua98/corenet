@@ -88,7 +88,7 @@ class VisionTransformer(BaseImageEncoder):
         )
 
         use_flash_attn = getattr(opts, "model.classification.vit.use_flash_attention")
-
+        
         if use_flash_attn:
             transformer_build_fn = self._build_transformer_layer_with_flash_attention
         else:

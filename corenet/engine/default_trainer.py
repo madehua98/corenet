@@ -469,9 +469,7 @@ class DefaultTrainer(object):
                     loss_dict_or_tensor = self.criteria(
                         input_sample=samples, prediction=pred_label, target=targets
                     )
-
                 processed_samples += batch_size
-
                 validation_stats.update(
                     pred_label=pred_label,
                     target_label=targets,
@@ -480,7 +478,6 @@ class DefaultTrainer(object):
                     batch_size=batch_size,
                     # TODO: use is_evaluation?
                 )
-
                 if batch_id % self.log_freq == 0 and batch_id !=0 and self.is_master_node:
                     validation_stats.iter_summary(
                         epoch=epoch,
@@ -489,7 +486,6 @@ class DefaultTrainer(object):
                         elapsed_time=epoch_start_time,
                         learning_rate=lr,
                     )
-
         validation_stats.epoch_summary(epoch=epoch, stage="validation" + extra_str)
         avg_loss = validation_stats.avg_statistics(
             metric_name="loss", sub_metric_name="total_loss"
@@ -543,7 +539,6 @@ class DefaultTrainer(object):
                     )
 
                 train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
-
                 val_loss, val_ckpt_metric = self.val_epoch(
                     epoch=epoch, model=self.model
                 )  # 评估入口

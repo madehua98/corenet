@@ -1,0 +1,1014 @@
+nohup: ignoring input
+2024-07-26 17:21:14 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+base
+dci
+2024-07-26 17:21:16 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-07-26 17:21:16 - [34m[1mLOGS   [0m - [36mModel[0m
+ViTamin(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=6743, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                            ViTamin Summary
+[31m=================================================================[0m
+Total parameters     =  109.299 M
+Total trainable parameters =  109.299 M
+
+2024-07-26 17:21:16 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-26 17:21:16 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.109G                 | 13.405G    |
+|  pos_embed                           |  (1, 1, 512)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  3.653M                |  5.52G     |
+|   patch_embed.backbone.stem          |   0.151M               |   1.901G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    43.352M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    8.028M  |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    1.85G   |
+|   patch_embed.backbone.stages        |   2.321M               |   3.387G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.478G  |
+|    patch_embed.backbone.stages.1     |    2.047M              |    1.909G  |
+|   patch_embed.backbone.pool          |   1.181M               |   0.232G   |
+|    patch_embed.backbone.pool.proj    |    1.18M               |    0.231G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.004M  |
+|  blocks                              |  18.404M               |  3.607G    |
+|   blocks.0                           |   2.629M               |   0.515G   |
+|    blocks.0.norm1                    |    1.024K              |    0.502M  |
+|    blocks.0.attn                     |    1.051M              |    0.206G  |
+|    blocks.0.norm2                    |    1.024K              |    0.502M  |
+|    blocks.0.mlp                      |    1.576M              |    0.309G  |
+|   blocks.1                           |   2.629M               |   0.515G   |
+|    blocks.1.norm1                    |    1.024K              |    0.502M  |
+|    blocks.1.attn                     |    1.051M              |    0.206G  |
+|    blocks.1.norm2                    |    1.024K              |    0.502M  |
+|    blocks.1.mlp                      |    1.576M              |    0.309G  |
+|   blocks.2                           |   2.629M               |   0.515G   |
+|    blocks.2.norm1                    |    1.024K              |    0.502M  |
+|    blocks.2.attn                     |    1.051M              |    0.206G  |
+|    blocks.2.norm2                    |    1.024K              |    0.502M  |
+|    blocks.2.mlp                      |    1.576M              |    0.309G  |
+|   blocks.3                           |   2.629M               |   0.515G   |
+|    blocks.3.norm1                    |    1.024K              |    0.502M  |
+|    blocks.3.attn                     |    1.051M              |    0.206G  |
+|    blocks.3.norm2                    |    1.024K              |    0.502M  |
+|    blocks.3.mlp                      |    1.576M              |    0.309G  |
+|   blocks.4                           |   2.629M               |   0.515G   |
+|    blocks.4.norm1                    |    1.024K              |    0.502M  |
+|    blocks.4.attn                     |    1.051M              |    0.206G  |
+|    blocks.4.norm2                    |    1.024K              |    0.502M  |
+|    blocks.4.mlp                      |    1.576M              |    0.309G  |
+|   blocks.5                           |   2.629M               |   0.515G   |
+|    blocks.5.norm1                    |    1.024K              |    0.502M  |
+|    blocks.5.attn                     |    1.051M              |    0.206G  |
+|    blocks.5.norm2                    |    1.024K              |    0.502M  |
+|    blocks.5.mlp                      |    1.576M              |    0.309G  |
+|   blocks.6                           |   2.629M               |   0.515G   |
+|    blocks.6.norm1                    |    1.024K              |    0.502M  |
+|    blocks.6.attn                     |    1.051M              |    0.206G  |
+|    blocks.6.norm2                    |    1.024K              |    0.502M  |
+|    blocks.6.mlp                      |    1.576M              |    0.309G  |
+|  pool                                |  4.721M                |  0.463G    |
+|   pool.proj                          |   4.72M                |   0.462G   |
+|    pool.proj.weight                  |    (1024, 512, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.024K               |   1.004M   |
+|    pool.norm.weight                  |    (512,)              |            |
+|    pool.norm.bias                    |    (512,)              |            |
+|  blocks1                             |  73.508M               |  3.602G    |
+|   blocks1.0                          |   10.501M              |   0.515G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.0.attn                    |    4.198M              |    0.206G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.0.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.1                          |   10.501M              |   0.515G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.1.attn                    |    4.198M              |    0.206G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.1.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.2                          |   10.501M              |   0.515G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.2.attn                    |    4.198M              |    0.206G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.2.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.3                          |   10.501M              |   0.515G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.3.attn                    |    4.198M              |    0.206G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.3.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.4                          |   10.501M              |   0.515G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.4.attn                    |    4.198M              |    0.206G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.4.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.5                          |   10.501M              |   0.515G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.5.attn                    |    4.198M              |    0.206G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.5.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.6                          |   10.501M              |   0.515G   |
+|    blocks1.6.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.6.attn                    |    4.198M              |    0.206G  |
+|    blocks1.6.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.6.mlp                     |    6.299M              |    0.309G  |
+|  mlp                                 |  2.099M                |  0.206G    |
+|   mlp.0                              |   1.05M                |   0.103G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.103G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  6.912M                |  6.905M    |
+|   classifier.weight                  |   (6743, 1024)         |            |
+|   classifier.bias                    |   (6743,)              |            |
+2024-07-26 17:21:16 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-26 17:21:16 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.2.drop_path1', 'blocks1.1.attn.k_norm', 'blocks1.4.attn.k_norm', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks.4.ls1', 'blocks.0.drop_path1', 'blocks.2.drop_path2', 'patch_embed.proj', 'blocks.2.attn.q_norm', 'blocks1.6.ls1', 'neural_augmentor.noise.max_fn', 'blocks.0.ls1', 'blocks1.2.attn.attn_drop', 'blocks1.2.drop_path2', 'blocks.0.attn.attn_drop', 'blocks.3.attn.q_norm', 'blocks1.3.ls2', 'patch_embed.backbone.stages.1.0.down', 'blocks1.3.attn.k_norm', 'blocks.5.drop_path2', 'patch_embed.backbone.stages.1.2.down', 'blocks1.4.drop_path1', 'blocks1.0.attn.q_norm', 'blocks.1.attn.k_norm', 'neural_augmentor.noise', 'blocks.2.ls1', 'blocks1.6.attn.attn_drop', 'blocks.1.drop_path1', 'blocks1.4.attn.attn_drop', 'blocks1.5.attn.q_norm', 'blocks1.5.drop_path2', 'blocks1.0.ls2', 'patch_embed.backbone.stages.1.3.down', 'blocks.0.attn.q_norm', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks.5.drop_path1', 'blocks1.4.attn.q_norm', 'blocks.3.attn.k_norm', 'blocks.2.attn.k_norm', 'blocks1.1.attn.q_norm', 'blocks1.0.drop_path2', 'blocks1.4.ls2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.6.drop_path2', 'blocks1.4.ls1', 'neural_augmentor', 'blocks1.6.attn.q_norm', 'neural_augmentor.noise.min_fn', 'blocks1.0.drop_path1', 'blocks1.4.drop_path2', 'blocks1.3.attn.attn_drop', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.5.ls2', 'patch_embed.backbone.stem.norm1.drop', 'blocks.5.ls1', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks1.1.attn.attn_drop', 'blocks.1.ls1', 'blocks1.6.drop_path1', 'blocks.5.ls2', 'blocks1.5.ls1', 'blocks.3.ls2', 'blocks1.5.drop_path1', 'blocks.4.drop_path2', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks1.0.ls1', 'blocks1.2.attn.q_norm', 'blocks.0.drop_path2', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks1.1.drop_path1', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks1.2.ls2', 'blocks.2.attn.attn_drop', 'blocks1.3.drop_path1', 'blocks1.3.drop_path2', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.5.attn.attn_drop', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.0.1.down', 'blocks1.6.attn.k_norm', 'neural_augmentor.contrast.max_fn', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.6.ls1', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.3.ls1', 'blocks.5.attn.attn_drop', 'norm', 'blocks.2.drop_path1', 'blocks.1.attn.attn_drop', 'blocks.0.ls2', 'blocks.5.attn.q_norm', 'blocks.4.attn.attn_drop', 'blocks.5.attn.k_norm', 'patch_embed.backbone.stages.1.3.shortcut', 'patch_embed.backbone.stages.0.0.down', 'norm_pre', 'patch_embed.backbone.stages.1.1.down', 'blocks1.2.ls1', 'neural_augmentor.brightness.max_fn', 'blocks1.1.ls2', 'blocks.3.attn.attn_drop', 'blocks.1.attn.q_norm', 'blocks1.3.attn.q_norm', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks1.1.ls1', 'blocks1.6.ls2', 'blocks.1.drop_path2', 'blocks.1.ls2', 'blocks.0.attn.k_norm', 'neural_augmentor.brightness', 'patch_drop', 'blocks.4.ls2', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks.6.ls2', 'neural_augmentor.contrast.min_fn', 'blocks.6.drop_path1', 'blocks1.3.ls1', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks.2.ls2', 'blocks.3.drop_path2', 'blocks.6.attn.q_norm', 'blocks1.0.attn.k_norm', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.6.drop_path2', 'neural_augmentor.brightness.min_fn', 'patch_embed.backbone.stages.0.1.drop_path', 'patch_embed.backbone.stages.1.2.drop_path', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks.3.drop_path1', 'blocks.6.attn.attn_drop', 'blocks1.1.drop_path2', 'neural_augmentor.contrast', 'blocks1.2.attn.k_norm', 'blocks1.0.attn.attn_drop', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.4.drop_path1', 'blocks.6.attn.k_norm', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks.4.attn.q_norm'}
+2024-07-26 17:21:16 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::avg_pool2d': 2, 'aten::sum': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-07-26 17:21:16 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-07-26 17:21:16 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-07-26 17:21:17 - [34m[1mLOGS   [0m - Available GPUs: 8
+2024-07-26 17:21:17 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-07-26 17:21:17 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              /ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-07-26 17:25:54 - [34m[1mLOGS   [0m - Epoch:  18 [  142555/  200000], loss: {'classification': 33.1218, 'neural_augmentation': 0.5779, 'total_loss': 33.6997}, LR: [0.000239, 0.000239], Avg. batch load time: 254.104, Elapsed time: 261.25
+2024-07-26 17:27:44 - [34m[1mLOGS   [0m - Epoch:  18 [  142617/  200000], loss: {'classification': 32.7894, 'neural_augmentation': 0.5689, 'total_loss': 33.3583}, LR: [0.000238, 0.000238], Avg. batch load time: 0.513, Elapsed time: 370.85
+2024-07-26 17:29:29 - [34m[1mLOGS   [0m - Epoch:  18 [  142680/  200000], loss: {'classification': 32.8347, 'neural_augmentation': 0.5692, 'total_loss': 33.4038}, LR: [0.000238, 0.000238], Avg. batch load time: 0.257, Elapsed time: 475.53
+2024-07-26 17:31:13 - [34m[1mLOGS   [0m - Epoch:  18 [  142742/  200000], loss: {'classification': 32.8592, 'neural_augmentation': 0.5692, 'total_loss': 33.4284}, LR: [0.000237, 0.000237], Avg. batch load time: 0.172, Elapsed time: 579.55
+2024-07-26 17:32:57 - [34m[1mLOGS   [0m - Epoch:  18 [  142805/  200000], loss: {'classification': 32.8591, 'neural_augmentation': 0.5694, 'total_loss': 33.4285}, LR: [0.000237, 0.000237], Avg. batch load time: 0.129, Elapsed time: 683.55
+2024-07-26 17:34:41 - [34m[1mLOGS   [0m - Epoch:  18 [  142867/  200000], loss: {'classification': 32.8641, 'neural_augmentation': 0.5695, 'total_loss': 33.4336}, LR: [0.000236, 0.000236], Avg. batch load time: 0.104, Elapsed time: 787.95
+2024-07-26 17:36:25 - [34m[1mLOGS   [0m - Epoch:  18 [  142930/  200000], loss: {'classification': 32.8903, 'neural_augmentation': 0.5696, 'total_loss': 33.4599}, LR: [0.000236, 0.000236], Avg. batch load time: 0.087, Elapsed time: 892.13
+2024-07-26 17:38:09 - [34m[1mLOGS   [0m - Epoch:  18 [  142992/  200000], loss: {'classification': 32.8829, 'neural_augmentation': 0.5696, 'total_loss': 33.4525}, LR: [0.000235, 0.000235], Avg. batch load time: 0.074, Elapsed time: 995.98
+2024-07-26 17:39:53 - [34m[1mLOGS   [0m - Epoch:  18 [  143055/  200000], loss: {'classification': 32.872, 'neural_augmentation': 0.5698, 'total_loss': 33.4417}, LR: [0.000235, 0.000235], Avg. batch load time: 0.065, Elapsed time: 1100.24
+2024-07-26 17:41:37 - [34m[1mLOGS   [0m - Epoch:  18 [  143117/  200000], loss: {'classification': 32.8788, 'neural_augmentation': 0.5699, 'total_loss': 33.4487}, LR: [0.000235, 0.000235], Avg. batch load time: 0.058, Elapsed time: 1204.05
+2024-07-26 17:43:23 - [34m[1mLOGS   [0m - Epoch:  18 [  143180/  200000], loss: {'classification': 32.8784, 'neural_augmentation': 0.57, 'total_loss': 33.4484}, LR: [0.000234, 0.000234], Avg. batch load time: 0.052, Elapsed time: 1309.82
+2024-07-26 17:45:12 - [34m[1mLOGS   [0m - Epoch:  18 [  143242/  200000], loss: {'classification': 32.8769, 'neural_augmentation': 0.5701, 'total_loss': 33.4471}, LR: [0.000234, 0.000234], Avg. batch load time: 0.048, Elapsed time: 1418.77
+2024-07-26 17:46:56 - [34m[1mLOGS   [0m - Epoch:  18 [  143305/  200000], loss: {'classification': 32.8873, 'neural_augmentation': 0.5703, 'total_loss': 33.4576}, LR: [0.000233, 0.000233], Avg. batch load time: 0.044, Elapsed time: 1522.75
+2024-07-26 17:48:40 - [34m[1mLOGS   [0m - Epoch:  18 [  143367/  200000], loss: {'classification': 32.8851, 'neural_augmentation': 0.5704, 'total_loss': 33.4555}, LR: [0.000233, 0.000233], Avg. batch load time: 0.040, Elapsed time: 1626.41
+2024-07-26 17:50:24 - [34m[1mLOGS   [0m - Epoch:  18 [  143430/  200000], loss: {'classification': 32.8824, 'neural_augmentation': 0.5706, 'total_loss': 33.453}, LR: [0.000232, 0.000232], Avg. batch load time: 0.038, Elapsed time: 1730.38
+2024-07-26 17:52:07 - [34m[1mLOGS   [0m - Epoch:  18 [  143492/  200000], loss: {'classification': 32.882, 'neural_augmentation': 0.5708, 'total_loss': 33.4527}, LR: [0.000232, 0.000232], Avg. batch load time: 0.035, Elapsed time: 1834.19
+2024-07-26 17:53:51 - [34m[1mLOGS   [0m - Epoch:  18 [  143555/  200000], loss: {'classification': 32.8853, 'neural_augmentation': 0.5709, 'total_loss': 33.4562}, LR: [0.000231, 0.000231], Avg. batch load time: 0.033, Elapsed time: 1938.10
+2024-07-26 17:55:35 - [34m[1mLOGS   [0m - Epoch:  18 [  143617/  200000], loss: {'classification': 32.8855, 'neural_augmentation': 0.571, 'total_loss': 33.4565}, LR: [0.000231, 0.000231], Avg. batch load time: 0.031, Elapsed time: 2042.09
+2024-07-26 17:57:19 - [34m[1mLOGS   [0m - Epoch:  18 [  143680/  200000], loss: {'classification': 32.888, 'neural_augmentation': 0.5711, 'total_loss': 33.4591}, LR: [0.00023, 0.00023], Avg. batch load time: 0.030, Elapsed time: 2146.28
+2024-07-26 17:59:04 - [34m[1mLOGS   [0m - Epoch:  18 [  143742/  200000], loss: {'classification': 32.8866, 'neural_augmentation': 0.5713, 'total_loss': 33.4579}, LR: [0.00023, 0.00023], Avg. batch load time: 0.028, Elapsed time: 2250.39
+2024-07-26 18:00:48 - [34m[1mLOGS   [0m - Epoch:  18 [  143805/  200000], loss: {'classification': 32.8887, 'neural_augmentation': 0.5714, 'total_loss': 33.4601}, LR: [0.00023, 0.00023], Avg. batch load time: 0.027, Elapsed time: 2354.58
+2024-07-26 18:02:32 - [34m[1mLOGS   [0m - Epoch:  18 [  143867/  200000], loss: {'classification': 32.8878, 'neural_augmentation': 0.5715, 'total_loss': 33.4594}, LR: [0.000229, 0.000229], Avg. batch load time: 0.025, Elapsed time: 2458.62
+2024-07-26 18:04:16 - [34m[1mLOGS   [0m - Epoch:  18 [  143930/  200000], loss: {'classification': 32.889, 'neural_augmentation': 0.5717, 'total_loss': 33.4607}, LR: [0.000229, 0.000229], Avg. batch load time: 0.024, Elapsed time: 2562.72
+2024-07-26 18:06:07 - [34m[1mLOGS   [0m - Epoch:  18 [  143992/  200000], loss: {'classification': 32.8902, 'neural_augmentation': 0.5718, 'total_loss': 33.462}, LR: [0.000228, 0.000228], Avg. batch load time: 0.023, Elapsed time: 2673.36
+2024-07-26 18:07:51 - [34m[1mLOGS   [0m - Epoch:  18 [  144055/  200000], loss: {'classification': 32.8862, 'neural_augmentation': 0.5719, 'total_loss': 33.4581}, LR: [0.000228, 0.000228], Avg. batch load time: 0.022, Elapsed time: 2777.64
+2024-07-26 18:09:35 - [34m[1mLOGS   [0m - Epoch:  18 [  144117/  200000], loss: {'classification': 32.8793, 'neural_augmentation': 0.572, 'total_loss': 33.4514}, LR: [0.000227, 0.000227], Avg. batch load time: 0.022, Elapsed time: 2881.55
+2024-07-26 18:11:19 - [34m[1mLOGS   [0m - Epoch:  18 [  144180/  200000], loss: {'classification': 32.8814, 'neural_augmentation': 0.5721, 'total_loss': 33.4536}, LR: [0.000227, 0.000227], Avg. batch load time: 0.021, Elapsed time: 2985.78
+2024-07-26 18:13:03 - [34m[1mLOGS   [0m - Epoch:  18 [  144242/  200000], loss: {'classification': 32.8819, 'neural_augmentation': 0.5723, 'total_loss': 33.4542}, LR: [0.000226, 0.000226], Avg. batch load time: 0.020, Elapsed time: 3089.93
+2024-07-26 18:14:47 - [34m[1mLOGS   [0m - Epoch:  18 [  144305/  200000], loss: {'classification': 32.8819, 'neural_augmentation': 0.5724, 'total_loss': 33.4543}, LR: [0.000226, 0.000226], Avg. batch load time: 0.019, Elapsed time: 3194.02
+2024-07-26 18:16:31 - [34m[1mLOGS   [0m - Epoch:  18 [  144367/  200000], loss: {'classification': 32.8814, 'neural_augmentation': 0.5725, 'total_loss': 33.4539}, LR: [0.000226, 0.000226], Avg. batch load time: 0.019, Elapsed time: 3297.93
+2024-07-26 18:18:15 - [34m[1mLOGS   [0m - Epoch:  18 [  144430/  200000], loss: {'classification': 32.8781, 'neural_augmentation': 0.5726, 'total_loss': 33.4507}, LR: [0.000225, 0.000225], Avg. batch load time: 0.018, Elapsed time: 3401.84
+2024-07-26 18:19:59 - [34m[1mLOGS   [0m - Epoch:  18 [  144492/  200000], loss: {'classification': 32.8789, 'neural_augmentation': 0.5727, 'total_loss': 33.4516}, LR: [0.000225, 0.000225], Avg. batch load time: 0.018, Elapsed time: 3505.99
+2024-07-26 18:21:43 - [34m[1mLOGS   [0m - Epoch:  18 [  144555/  200000], loss: {'classification': 32.8798, 'neural_augmentation': 0.5729, 'total_loss': 33.4527}, LR: [0.000224, 0.000224], Avg. batch load time: 0.017, Elapsed time: 3610.23
+2024-07-26 18:23:28 - [34m[1mLOGS   [0m - Epoch:  18 [  144617/  200000], loss: {'classification': 32.8784, 'neural_augmentation': 0.573, 'total_loss': 33.4514}, LR: [0.000224, 0.000224], Avg. batch load time: 0.017, Elapsed time: 3714.72
+2024-07-26 18:25:12 - [34m[1mLOGS   [0m - Epoch:  18 [  144680/  200000], loss: {'classification': 32.8782, 'neural_augmentation': 0.5732, 'total_loss': 33.4513}, LR: [0.000223, 0.000223], Avg. batch load time: 0.016, Elapsed time: 3818.72
+2024-07-26 18:27:02 - [34m[1mLOGS   [0m - Epoch:  18 [  144742/  200000], loss: {'classification': 32.8761, 'neural_augmentation': 0.5733, 'total_loss': 33.4494}, LR: [0.000223, 0.000223], Avg. batch load time: 0.016, Elapsed time: 3929.27
+2024-07-26 18:28:46 - [34m[1mLOGS   [0m - Epoch:  18 [  144805/  200000], loss: {'classification': 32.8761, 'neural_augmentation': 0.5734, 'total_loss': 33.4496}, LR: [0.000222, 0.000222], Avg. batch load time: 0.015, Elapsed time: 4033.12
+2024-07-26 18:30:30 - [34m[1mLOGS   [0m - Epoch:  18 [  144867/  200000], loss: {'classification': 32.8724, 'neural_augmentation': 0.5735, 'total_loss': 33.4459}, LR: [0.000222, 0.000222], Avg. batch load time: 0.015, Elapsed time: 4137.12
+2024-07-26 18:32:14 - [34m[1mLOGS   [0m - Epoch:  18 [  144930/  200000], loss: {'classification': 32.8758, 'neural_augmentation': 0.5737, 'total_loss': 33.4494}, LR: [0.000222, 0.000222], Avg. batch load time: 0.014, Elapsed time: 4240.88
+2024-07-26 18:33:58 - [34m[1mLOGS   [0m - Epoch:  18 [  144992/  200000], loss: {'classification': 32.877, 'neural_augmentation': 0.5738, 'total_loss': 33.4508}, LR: [0.000221, 0.000221], Avg. batch load time: 0.014, Elapsed time: 4344.69
+2024-07-26 18:35:42 - [34m[1mLOGS   [0m - Epoch:  18 [  145055/  200000], loss: {'classification': 32.876, 'neural_augmentation': 0.5739, 'total_loss': 33.4499}, LR: [0.000221, 0.000221], Avg. batch load time: 0.014, Elapsed time: 4448.95
+2024-07-26 18:37:26 - [34m[1mLOGS   [0m - Epoch:  18 [  145117/  200000], loss: {'classification': 32.8744, 'neural_augmentation': 0.574, 'total_loss': 33.4484}, LR: [0.00022, 0.00022], Avg. batch load time: 0.014, Elapsed time: 4552.89
+2024-07-26 18:39:10 - [34m[1mLOGS   [0m - Epoch:  18 [  145180/  200000], loss: {'classification': 32.8755, 'neural_augmentation': 0.5742, 'total_loss': 33.4497}, LR: [0.00022, 0.00022], Avg. batch load time: 0.013, Elapsed time: 4657.02
+2024-07-26 18:40:54 - [34m[1mLOGS   [0m - Epoch:  18 [  145242/  200000], loss: {'classification': 32.8765, 'neural_augmentation': 0.5743, 'total_loss': 33.4508}, LR: [0.000219, 0.000219], Avg. batch load time: 0.013, Elapsed time: 4761.14
+2024-07-26 18:42:38 - [34m[1mLOGS   [0m - Epoch:  18 [  145305/  200000], loss: {'classification': 32.8765, 'neural_augmentation': 0.5744, 'total_loss': 33.4509}, LR: [0.000219, 0.000219], Avg. batch load time: 0.013, Elapsed time: 4865.16
+2024-07-26 18:44:22 - [34m[1mLOGS   [0m - Epoch:  18 [  145367/  200000], loss: {'classification': 32.8752, 'neural_augmentation': 0.5746, 'total_loss': 33.4498}, LR: [0.000218, 0.000218], Avg. batch load time: 0.012, Elapsed time: 4969.10
+2024-07-26 18:46:06 - [34m[1mLOGS   [0m - Epoch:  18 [  145430/  200000], loss: {'classification': 32.874, 'neural_augmentation': 0.5747, 'total_loss': 33.4487}, LR: [0.000218, 0.000218], Avg. batch load time: 0.012, Elapsed time: 5073.11
+2024-07-26 18:47:50 - [34m[1mLOGS   [0m - Epoch:  18 [  145492/  200000], loss: {'classification': 32.8726, 'neural_augmentation': 0.5748, 'total_loss': 33.4474}, LR: [0.000218, 0.000218], Avg. batch load time: 0.012, Elapsed time: 5177.12
+2024-07-26 18:49:41 - [34m[1mLOGS   [0m - Epoch:  18 [  145555/  200000], loss: {'classification': 32.8725, 'neural_augmentation': 0.5749, 'total_loss': 33.4474}, LR: [0.000217, 0.000217], Avg. batch load time: 0.012, Elapsed time: 5288.12
+2024-07-26 18:51:25 - [34m[1mLOGS   [0m - Epoch:  18 [  145617/  200000], loss: {'classification': 32.8687, 'neural_augmentation': 0.575, 'total_loss': 33.4437}, LR: [0.000217, 0.000217], Avg. batch load time: 0.011, Elapsed time: 5391.89
+2024-07-26 18:53:09 - [34m[1mLOGS   [0m - Epoch:  18 [  145680/  200000], loss: {'classification': 32.8701, 'neural_augmentation': 0.5752, 'total_loss': 33.4453}, LR: [0.000216, 0.000216], Avg. batch load time: 0.011, Elapsed time: 5496.06
+2024-07-26 18:54:53 - [34m[1mLOGS   [0m - Epoch:  18 [  145742/  200000], loss: {'classification': 32.8683, 'neural_augmentation': 0.5753, 'total_loss': 33.4436}, LR: [0.000216, 0.000216], Avg. batch load time: 0.011, Elapsed time: 5600.14
+2024-07-26 18:56:37 - [34m[1mLOGS   [0m - Epoch:  18 [  145805/  200000], loss: {'classification': 32.8662, 'neural_augmentation': 0.5754, 'total_loss': 33.4417}, LR: [0.000215, 0.000215], Avg. batch load time: 0.011, Elapsed time: 5704.25
+2024-07-26 18:58:22 - [34m[1mLOGS   [0m - Epoch:  18 [  145867/  200000], loss: {'classification': 32.863, 'neural_augmentation': 0.5755, 'total_loss': 33.4386}, LR: [0.000215, 0.000215], Avg. batch load time: 0.011, Elapsed time: 5808.44
+2024-07-26 19:00:06 - [34m[1mLOGS   [0m - Epoch:  18 [  145930/  200000], loss: {'classification': 32.8653, 'neural_augmentation': 0.5757, 'total_loss': 33.441}, LR: [0.000215, 0.000215], Avg. batch load time: 0.010, Elapsed time: 5912.96
+2024-07-26 19:01:50 - [34m[1mLOGS   [0m - Epoch:  18 [  145992/  200000], loss: {'classification': 32.8637, 'neural_augmentation': 0.5758, 'total_loss': 33.4395}, LR: [0.000214, 0.000214], Avg. batch load time: 0.010, Elapsed time: 6016.68
+2024-07-26 19:03:34 - [34m[1mLOGS   [0m - Epoch:  18 [  146055/  200000], loss: {'classification': 32.8632, 'neural_augmentation': 0.5759, 'total_loss': 33.4391}, LR: [0.000214, 0.000214], Avg. batch load time: 0.010, Elapsed time: 6121.15
+2024-07-26 19:05:19 - [34m[1mLOGS   [0m - Epoch:  18 [  146117/  200000], loss: {'classification': 32.8628, 'neural_augmentation': 0.576, 'total_loss': 33.4388}, LR: [0.000213, 0.000213], Avg. batch load time: 0.010, Elapsed time: 6225.41
+2024-07-26 19:07:03 - [34m[1mLOGS   [0m - Epoch:  18 [  146180/  200000], loss: {'classification': 32.8612, 'neural_augmentation': 0.5762, 'total_loss': 33.4373}, LR: [0.000213, 0.000213], Avg. batch load time: 0.010, Elapsed time: 6329.45
+2024-07-26 19:08:47 - [34m[1mLOGS   [0m - Epoch:  18 [  146242/  200000], loss: {'classification': 32.8615, 'neural_augmentation': 0.5763, 'total_loss': 33.4377}, LR: [0.000212, 0.000212], Avg. batch load time: 0.010, Elapsed time: 6433.49
+2024-07-26 19:10:37 - [34m[1mLOGS   [0m - Epoch:  18 [  146305/  200000], loss: {'classification': 32.8604, 'neural_augmentation': 0.5764, 'total_loss': 33.4369}, LR: [0.000212, 0.000212], Avg. batch load time: 0.010, Elapsed time: 6544.28
+2024-07-26 19:12:22 - [34m[1mLOGS   [0m - Epoch:  18 [  146367/  200000], loss: {'classification': 32.8601, 'neural_augmentation': 0.5765, 'total_loss': 33.4366}, LR: [0.000211, 0.000211], Avg. batch load time: 0.009, Elapsed time: 6648.36
+2024-07-26 19:14:06 - [34m[1mLOGS   [0m - Epoch:  18 [  146430/  200000], loss: {'classification': 32.8591, 'neural_augmentation': 0.5767, 'total_loss': 33.4357}, LR: [0.000211, 0.000211], Avg. batch load time: 0.009, Elapsed time: 6752.32
+2024-07-26 19:15:50 - [34m[1mLOGS   [0m - Epoch:  18 [  146492/  200000], loss: {'classification': 32.8574, 'neural_augmentation': 0.5768, 'total_loss': 33.4342}, LR: [0.000211, 0.000211], Avg. batch load time: 0.009, Elapsed time: 6856.32
+2024-07-26 19:17:34 - [34m[1mLOGS   [0m - Epoch:  18 [  146555/  200000], loss: {'classification': 32.8569, 'neural_augmentation': 0.5769, 'total_loss': 33.4338}, LR: [0.00021, 0.00021], Avg. batch load time: 0.009, Elapsed time: 6960.51
+2024-07-26 19:19:18 - [34m[1mLOGS   [0m - Epoch:  18 [  146617/  200000], loss: {'classification': 32.856, 'neural_augmentation': 0.577, 'total_loss': 33.433}, LR: [0.00021, 0.00021], Avg. batch load time: 0.009, Elapsed time: 7064.84
+2024-07-26 19:21:02 - [34m[1mLOGS   [0m - Epoch:  18 [  146680/  200000], loss: {'classification': 32.8549, 'neural_augmentation': 0.5772, 'total_loss': 33.432}, LR: [0.000209, 0.000209], Avg. batch load time: 0.009, Elapsed time: 7169.26
+2024-07-26 19:22:47 - [34m[1mLOGS   [0m - Epoch:  18 [  146742/  200000], loss: {'classification': 32.8531, 'neural_augmentation': 0.5773, 'total_loss': 33.4304}, LR: [0.000209, 0.000209], Avg. batch load time: 0.009, Elapsed time: 7273.51
+2024-07-26 19:24:31 - [34m[1mLOGS   [0m - Epoch:  18 [  146805/  200000], loss: {'classification': 32.8531, 'neural_augmentation': 0.5774, 'total_loss': 33.4305}, LR: [0.000208, 0.000208], Avg. batch load time: 0.009, Elapsed time: 7377.70
+2024-07-26 19:26:15 - [34m[1mLOGS   [0m - Epoch:  18 [  146867/  200000], loss: {'classification': 32.8521, 'neural_augmentation': 0.5775, 'total_loss': 33.4296}, LR: [0.000208, 0.000208], Avg. batch load time: 0.008, Elapsed time: 7481.78
+2024-07-26 19:27:59 - [34m[1mLOGS   [0m - Epoch:  18 [  146930/  200000], loss: {'classification': 32.8503, 'neural_augmentation': 0.5777, 'total_loss': 33.428}, LR: [0.000208, 0.000208], Avg. batch load time: 0.008, Elapsed time: 7585.70
+2024-07-26 19:29:43 - [34m[1mLOGS   [0m - Epoch:  18 [  146992/  200000], loss: {'classification': 32.8503, 'neural_augmentation': 0.5778, 'total_loss': 33.4281}, LR: [0.000207, 0.000207], Avg. batch load time: 0.008, Elapsed time: 7689.95
+2024-07-26 19:31:34 - [34m[1mLOGS   [0m - Epoch:  18 [  147055/  200000], loss: {'classification': 32.8479, 'neural_augmentation': 0.5779, 'total_loss': 33.4258}, LR: [0.000207, 0.000207], Avg. batch load time: 0.008, Elapsed time: 7800.85
+2024-07-26 19:33:18 - [34m[1mLOGS   [0m - Epoch:  18 [  147117/  200000], loss: {'classification': 32.8463, 'neural_augmentation': 0.578, 'total_loss': 33.4244}, LR: [0.000206, 0.000206], Avg. batch load time: 0.008, Elapsed time: 7905.04
+2024-07-26 19:35:02 - [34m[1mLOGS   [0m - Epoch:  18 [  147180/  200000], loss: {'classification': 32.8453, 'neural_augmentation': 0.5782, 'total_loss': 33.4234}, LR: [0.000206, 0.000206], Avg. batch load time: 0.008, Elapsed time: 8008.69
+2024-07-26 19:36:46 - [34m[1mLOGS   [0m - Epoch:  18 [  147242/  200000], loss: {'classification': 32.8431, 'neural_augmentation': 0.5783, 'total_loss': 33.4214}, LR: [0.000205, 0.000205], Avg. batch load time: 0.008, Elapsed time: 8113.03
+2024-07-26 19:38:30 - [34m[1mLOGS   [0m - Epoch:  18 [  147305/  200000], loss: {'classification': 32.8421, 'neural_augmentation': 0.5784, 'total_loss': 33.4206}, LR: [0.000205, 0.000205], Avg. batch load time: 0.008, Elapsed time: 8217.03
+2024-07-26 19:40:14 - [34m[1mLOGS   [0m - Epoch:  18 [  147367/  200000], loss: {'classification': 32.8404, 'neural_augmentation': 0.5785, 'total_loss': 33.4189}, LR: [0.000205, 0.000205], Avg. batch load time: 0.008, Elapsed time: 8321.10
+2024-07-26 19:41:58 - [34m[1mLOGS   [0m - Epoch:  18 [  147430/  200000], loss: {'classification': 32.8404, 'neural_augmentation': 0.5787, 'total_loss': 33.4191}, LR: [0.000204, 0.000204], Avg. batch load time: 0.008, Elapsed time: 8425.25
+2024-07-26 19:43:43 - [34m[1mLOGS   [0m - Epoch:  18 [  147492/  200000], loss: {'classification': 32.8393, 'neural_augmentation': 0.5788, 'total_loss': 33.4181}, LR: [0.000204, 0.000204], Avg. batch load time: 0.007, Elapsed time: 8529.34
+2024-07-26 19:45:26 - [34m[1mLOGS   [0m - Epoch:  18 [  147555/  200000], loss: {'classification': 32.8372, 'neural_augmentation': 0.5789, 'total_loss': 33.4161}, LR: [0.000203, 0.000203], Avg. batch load time: 0.007, Elapsed time: 8633.25
+2024-07-26 19:47:10 - [34m[1mLOGS   [0m - Epoch:  18 [  147617/  200000], loss: {'classification': 32.836, 'neural_augmentation': 0.579, 'total_loss': 33.415}, LR: [0.000203, 0.000203], Avg. batch load time: 0.007, Elapsed time: 8737.26
+2024-07-26 19:48:55 - [34m[1mLOGS   [0m - Epoch:  18 [  147680/  200000], loss: {'classification': 32.8355, 'neural_augmentation': 0.5792, 'total_loss': 33.4146}, LR: [0.000202, 0.000202], Avg. batch load time: 0.007, Elapsed time: 8841.47
+2024-07-26 19:50:39 - [34m[1mLOGS   [0m - Epoch:  18 [  147742/  200000], loss: {'classification': 32.8334, 'neural_augmentation': 0.5793, 'total_loss': 33.4127}, LR: [0.000202, 0.000202], Avg. batch load time: 0.007, Elapsed time: 8945.48
+2024-07-26 19:52:26 - [34m[1mLOGS   [0m - Epoch:  18 [  147805/  200000], loss: {'classification': 32.8311, 'neural_augmentation': 0.5794, 'total_loss': 33.4105}, LR: [0.000202, 0.000202], Avg. batch load time: 0.007, Elapsed time: 9052.76
+2024-07-26 19:54:13 - [34m[1mLOGS   [0m - Epoch:  18 [  147867/  200000], loss: {'classification': 32.8288, 'neural_augmentation': 0.5795, 'total_loss': 33.4083}, LR: [0.000201, 0.000201], Avg. batch load time: 0.007, Elapsed time: 9160.10
+2024-07-26 19:55:57 - [34m[1mLOGS   [0m - Epoch:  18 [  147930/  200000], loss: {'classification': 32.8285, 'neural_augmentation': 0.5797, 'total_loss': 33.4081}, LR: [0.000201, 0.000201], Avg. batch load time: 0.007, Elapsed time: 9264.24
+2024-07-26 19:57:41 - [34m[1mLOGS   [0m - Epoch:  18 [  147992/  200000], loss: {'classification': 32.8293, 'neural_augmentation': 0.5798, 'total_loss': 33.4091}, LR: [0.0002, 0.0002], Avg. batch load time: 0.007, Elapsed time: 9368.09
+2024-07-26 19:59:25 - [34m[1mLOGS   [0m - Epoch:  18 [  148055/  200000], loss: {'classification': 32.8275, 'neural_augmentation': 0.5799, 'total_loss': 33.4074}, LR: [0.0002, 0.0002], Avg. batch load time: 0.007, Elapsed time: 9472.09
+2024-07-26 20:01:09 - [34m[1mLOGS   [0m - Epoch:  18 [  148117/  200000], loss: {'classification': 32.8266, 'neural_augmentation': 0.58, 'total_loss': 33.4066}, LR: [0.000199, 0.000199], Avg. batch load time: 0.007, Elapsed time: 9576.31
+2024-07-26 20:02:54 - [34m[1mLOGS   [0m - Epoch:  18 [  148180/  200000], loss: {'classification': 32.8267, 'neural_augmentation': 0.5801, 'total_loss': 33.4068}, LR: [0.000199, 0.000199], Avg. batch load time: 0.007, Elapsed time: 9680.44
+2024-07-26 20:04:38 - [34m[1mLOGS   [0m - Epoch:  18 [  148242/  200000], loss: {'classification': 32.8259, 'neural_augmentation': 0.5803, 'total_loss': 33.4062}, LR: [0.000199, 0.000199], Avg. batch load time: 0.007, Elapsed time: 9784.57
+2024-07-26 20:06:22 - [34m[1mLOGS   [0m - Epoch:  18 [  148305/  200000], loss: {'classification': 32.8243, 'neural_augmentation': 0.5804, 'total_loss': 33.4047}, LR: [0.000198, 0.000198], Avg. batch load time: 0.007, Elapsed time: 9888.63
+2024-07-26 20:08:06 - [34m[1mLOGS   [0m - Epoch:  18 [  148367/  200000], loss: {'classification': 32.8237, 'neural_augmentation': 0.5805, 'total_loss': 33.4043}, LR: [0.000198, 0.000198], Avg. batch load time: 0.006, Elapsed time: 9992.79
+2024-07-26 20:09:50 - [34m[1mLOGS   [0m - Epoch:  18 [  148430/  200000], loss: {'classification': 32.8244, 'neural_augmentation': 0.5807, 'total_loss': 33.405}, LR: [0.000197, 0.000197], Avg. batch load time: 0.006, Elapsed time: 10096.71
+2024-07-26 20:11:34 - [34m[1mLOGS   [0m - Epoch:  18 [  148492/  200000], loss: {'classification': 32.8246, 'neural_augmentation': 0.5808, 'total_loss': 33.4054}, LR: [0.000197, 0.000197], Avg. batch load time: 0.006, Elapsed time: 10200.86
+2024-07-26 20:13:18 - [34m[1mLOGS   [0m - Epoch:  18 [  148555/  200000], loss: {'classification': 32.8231, 'neural_augmentation': 0.5809, 'total_loss': 33.404}, LR: [0.000196, 0.000196], Avg. batch load time: 0.006, Elapsed time: 10305.15
+2024-07-26 20:15:11 - [34m[1mLOGS   [0m - Epoch:  18 [  148617/  200000], loss: {'classification': 32.8223, 'neural_augmentation': 0.581, 'total_loss': 33.4034}, LR: [0.000196, 0.000196], Avg. batch load time: 0.006, Elapsed time: 10417.56
+2024-07-26 20:16:55 - [34m[1mLOGS   [0m - Epoch:  18 [  148680/  200000], loss: {'classification': 32.8218, 'neural_augmentation': 0.5812, 'total_loss': 33.4029}, LR: [0.000196, 0.000196], Avg. batch load time: 0.006, Elapsed time: 10521.93
+2024-07-26 20:18:39 - [34m[1mLOGS   [0m - Epoch:  18 [  148742/  200000], loss: {'classification': 32.821, 'neural_augmentation': 0.5813, 'total_loss': 33.4022}, LR: [0.000195, 0.000195], Avg. batch load time: 0.006, Elapsed time: 10625.67
+2024-07-26 20:20:23 - [34m[1mLOGS   [0m - Epoch:  18 [  148805/  200000], loss: {'classification': 32.8207, 'neural_augmentation': 0.5814, 'total_loss': 33.4021}, LR: [0.000195, 0.000195], Avg. batch load time: 0.006, Elapsed time: 10729.99
+2024-07-26 20:22:07 - [34m[1mLOGS   [0m - Epoch:  18 [  148867/  200000], loss: {'classification': 32.8207, 'neural_augmentation': 0.5815, 'total_loss': 33.4022}, LR: [0.000194, 0.000194], Avg. batch load time: 0.006, Elapsed time: 10834.13
+2024-07-26 20:23:51 - [34m[1mLOGS   [0m - Epoch:  18 [  148930/  200000], loss: {'classification': 32.8194, 'neural_augmentation': 0.5816, 'total_loss': 33.401}, LR: [0.000194, 0.000194], Avg. batch load time: 0.006, Elapsed time: 10938.20
+2024-07-26 20:25:35 - [34m[1mLOGS   [0m - Epoch:  18 [  148992/  200000], loss: {'classification': 32.819, 'neural_augmentation': 0.5817, 'total_loss': 33.4007}, LR: [0.000194, 0.000194], Avg. batch load time: 0.006, Elapsed time: 11042.07
+2024-07-26 20:27:19 - [34m[1mLOGS   [0m - Epoch:  18 [  149055/  200000], loss: {'classification': 32.818, 'neural_augmentation': 0.5819, 'total_loss': 33.3999}, LR: [0.000193, 0.000193], Avg. batch load time: 0.006, Elapsed time: 11146.10
+2024-07-26 20:29:04 - [34m[1mLOGS   [0m - Epoch:  18 [  149117/  200000], loss: {'classification': 32.8174, 'neural_augmentation': 0.582, 'total_loss': 33.3994}, LR: [0.000193, 0.000193], Avg. batch load time: 0.006, Elapsed time: 11250.36
+2024-07-26 20:30:48 - [34m[1mLOGS   [0m - Epoch:  18 [  149180/  200000], loss: {'classification': 32.8164, 'neural_augmentation': 0.5821, 'total_loss': 33.3985}, LR: [0.000192, 0.000192], Avg. batch load time: 0.006, Elapsed time: 11354.65
+2024-07-26 20:32:32 - [34m[1mLOGS   [0m - Epoch:  18 [  149242/  200000], loss: {'classification': 32.8152, 'neural_augmentation': 0.5822, 'total_loss': 33.3975}, LR: [0.000192, 0.000192], Avg. batch load time: 0.006, Elapsed time: 11458.83
+2024-07-26 20:34:16 - [34m[1mLOGS   [0m - Epoch:  18 [  149305/  200000], loss: {'classification': 32.8143, 'neural_augmentation': 0.5824, 'total_loss': 33.3967}, LR: [0.000191, 0.000191], Avg. batch load time: 0.006, Elapsed time: 11563.03
+2024-07-26 20:36:10 - [34m[1mLOGS   [0m - Epoch:  18 [  149367/  200000], loss: {'classification': 32.8128, 'neural_augmentation': 0.5825, 'total_loss': 33.3953}, LR: [0.000191, 0.000191], Avg. batch load time: 0.006, Elapsed time: 11676.47
+2024-07-26 20:37:53 - [34m[1mLOGS   [0m - Epoch:  18 [  149430/  200000], loss: {'classification': 32.8121, 'neural_augmentation': 0.5826, 'total_loss': 33.3947}, LR: [0.000191, 0.000191], Avg. batch load time: 0.006, Elapsed time: 11780.16
+2024-07-26 20:39:37 - [34m[1mLOGS   [0m - Epoch:  18 [  149492/  200000], loss: {'classification': 32.8115, 'neural_augmentation': 0.5827, 'total_loss': 33.3942}, LR: [0.00019, 0.00019], Avg. batch load time: 0.006, Elapsed time: 11884.03
+2024-07-26 20:41:21 - [34m[1mLOGS   [0m - Epoch:  18 [  149555/  200000], loss: {'classification': 32.8106, 'neural_augmentation': 0.5828, 'total_loss': 33.3935}, LR: [0.00019, 0.00019], Avg. batch load time: 0.006, Elapsed time: 11987.92
+2024-07-26 20:43:05 - [34m[1mLOGS   [0m - Epoch:  18 [  149617/  200000], loss: {'classification': 32.8095, 'neural_augmentation': 0.5829, 'total_loss': 33.3924}, LR: [0.000189, 0.000189], Avg. batch load time: 0.006, Elapsed time: 12092.17
+2024-07-26 20:44:50 - [34m[1mLOGS   [0m - Epoch:  18 [  149680/  200000], loss: {'classification': 32.808, 'neural_augmentation': 0.5831, 'total_loss': 33.391}, LR: [0.000189, 0.000189], Avg. batch load time: 0.005, Elapsed time: 12196.41
+2024-07-26 20:46:34 - [34m[1mLOGS   [0m - Epoch:  18 [  149742/  200000], loss: {'classification': 32.8078, 'neural_augmentation': 0.5832, 'total_loss': 33.391}, LR: [0.000189, 0.000189], Avg. batch load time: 0.005, Elapsed time: 12300.53
+2024-07-26 20:48:18 - [34m[1mLOGS   [0m - Epoch:  18 [  149805/  200000], loss: {'classification': 32.8062, 'neural_augmentation': 0.5833, 'total_loss': 33.3895}, LR: [0.000188, 0.000188], Avg. batch load time: 0.005, Elapsed time: 12404.57
+2024-07-26 20:50:02 - [34m[1mLOGS   [0m - Epoch:  18 [  149867/  200000], loss: {'classification': 32.8051, 'neural_augmentation': 0.5834, 'total_loss': 33.3885}, LR: [0.000188, 0.000188], Avg. batch load time: 0.005, Elapsed time: 12508.53
+2024-07-26 20:51:45 - [34m[1mLOGS   [0m - Epoch:  18 [  149930/  200000], loss: {'classification': 32.8043, 'neural_augmentation': 0.5835, 'total_loss': 33.3878}, LR: [0.000187, 0.000187], Avg. batch load time: 0.005, Elapsed time: 12612.30
+2024-07-26 20:53:29 - [34m[1mLOGS   [0m - Epoch:  18 [  149992/  200000], loss: {'classification': 32.8036, 'neural_augmentation': 0.5837, 'total_loss': 33.3872}, LR: [0.000187, 0.000187], Avg. batch load time: 0.005, Elapsed time: 12716.28
+2024-07-26 20:55:14 - [34m[1mLOGS   [0m - Epoch:  18 [  150055/  200000], loss: {'classification': 32.8033, 'neural_augmentation': 0.5838, 'total_loss': 33.3871}, LR: [0.000186, 0.000186], Avg. batch load time: 0.005, Elapsed time: 12820.56
+2024-07-26 20:57:03 - [34m[1mLOGS   [0m - Epoch:  18 [  150117/  200000], loss: {'classification': 32.8019, 'neural_augmentation': 0.5839, 'total_loss': 33.3858}, LR: [0.000186, 0.000186], Avg. batch load time: 0.005, Elapsed time: 12929.44
+2024-07-26 20:58:54 - [34m[1mLOGS   [0m - Epoch:  18 [  150180/  200000], loss: {'classification': 32.8012, 'neural_augmentation': 0.584, 'total_loss': 33.3852}, LR: [0.000186, 0.000186], Avg. batch load time: 0.005, Elapsed time: 13040.74
+2024-07-26 21:00:38 - [34m[1mLOGS   [0m - Epoch:  18 [  150242/  200000], loss: {'classification': 32.8008, 'neural_augmentation': 0.5841, 'total_loss': 33.3849}, LR: [0.000185, 0.000185], Avg. batch load time: 0.005, Elapsed time: 13144.81
+2024-07-26 21:02:22 - [34m[1mLOGS   [0m - Epoch:  18 [  150305/  200000], loss: {'classification': 32.7999, 'neural_augmentation': 0.5843, 'total_loss': 33.3842}, LR: [0.000185, 0.000185], Avg. batch load time: 0.005, Elapsed time: 13249.05
+2024-07-26 21:04:06 - [34m[1mLOGS   [0m - Epoch:  18 [  150367/  200000], loss: {'classification': 32.7983, 'neural_augmentation': 0.5844, 'total_loss': 33.3826}, LR: [0.000184, 0.000184], Avg. batch load time: 0.005, Elapsed time: 13353.10
+2024-07-26 21:05:50 - [34m[1mLOGS   [0m - Epoch:  18 [  150430/  200000], loss: {'classification': 32.7978, 'neural_augmentation': 0.5845, 'total_loss': 33.3823}, LR: [0.000184, 0.000184], Avg. batch load time: 0.005, Elapsed time: 13456.98
+2024-07-26 21:07:34 - [34m[1mLOGS   [0m - Epoch:  18 [  150492/  200000], loss: {'classification': 32.7976, 'neural_augmentation': 0.5846, 'total_loss': 33.3822}, LR: [0.000184, 0.000184], Avg. batch load time: 0.005, Elapsed time: 13561.09
+2024-07-26 21:09:18 - [34m[1mLOGS   [0m - Epoch:  18 [  150555/  200000], loss: {'classification': 32.7969, 'neural_augmentation': 0.5847, 'total_loss': 33.3816}, LR: [0.000183, 0.000183], Avg. batch load time: 0.005, Elapsed time: 13665.11
+2024-07-26 21:11:02 - [34m[1mLOGS   [0m - Epoch:  18 [  150617/  200000], loss: {'classification': 32.7952, 'neural_augmentation': 0.5849, 'total_loss': 33.3801}, LR: [0.000183, 0.000183], Avg. batch load time: 0.005, Elapsed time: 13769.23
+2024-07-26 21:12:46 - [34m[1mLOGS   [0m - Epoch:  18 [  150680/  200000], loss: {'classification': 32.7938, 'neural_augmentation': 0.585, 'total_loss': 33.3788}, LR: [0.000182, 0.000182], Avg. batch load time: 0.005, Elapsed time: 13873.29
+2024-07-26 21:14:30 - [34m[1mLOGS   [0m - Epoch:  18 [  150742/  200000], loss: {'classification': 32.7932, 'neural_augmentation': 0.5851, 'total_loss': 33.3783}, LR: [0.000182, 0.000182], Avg. batch load time: 0.005, Elapsed time: 13977.30
+2024-07-26 21:16:15 - [34m[1mLOGS   [0m - Epoch:  18 [  150805/  200000], loss: {'classification': 32.7921, 'neural_augmentation': 0.5852, 'total_loss': 33.3773}, LR: [0.000182, 0.000182], Avg. batch load time: 0.005, Elapsed time: 14081.42
+2024-07-26 21:17:58 - [34m[1mLOGS   [0m - Epoch:  18 [  150867/  200000], loss: {'classification': 32.7913, 'neural_augmentation': 0.5853, 'total_loss': 33.3766}, LR: [0.000181, 0.000181], Avg. batch load time: 0.005, Elapsed time: 14185.28
+2024-07-26 21:19:56 - [34m[1mLOGS   [0m - Epoch:  18 [  150930/  200000], loss: {'classification': 32.7901, 'neural_augmentation': 0.5854, 'total_loss': 33.3755}, LR: [0.000181, 0.000181], Avg. batch load time: 0.005, Elapsed time: 14302.41
+2024-07-26 21:21:40 - [34m[1mLOGS   [0m - Epoch:  18 [  150992/  200000], loss: {'classification': 32.7887, 'neural_augmentation': 0.5856, 'total_loss': 33.3743}, LR: [0.00018, 0.00018], Avg. batch load time: 0.005, Elapsed time: 14406.52
+2024-07-26 21:23:24 - [34m[1mLOGS   [0m - Epoch:  18 [  151055/  200000], loss: {'classification': 32.7873, 'neural_augmentation': 0.5857, 'total_loss': 33.373}, LR: [0.00018, 0.00018], Avg. batch load time: 0.005, Elapsed time: 14510.41
+2024-07-26 21:25:08 - [34m[1mLOGS   [0m - Epoch:  18 [  151117/  200000], loss: {'classification': 32.7859, 'neural_augmentation': 0.5858, 'total_loss': 33.3717}, LR: [0.000179, 0.000179], Avg. batch load time: 0.005, Elapsed time: 14614.40
+2024-07-26 21:26:51 - [34m[1mLOGS   [0m - Epoch:  18 [  151180/  200000], loss: {'classification': 32.7848, 'neural_augmentation': 0.5859, 'total_loss': 33.3707}, LR: [0.000179, 0.000179], Avg. batch load time: 0.005, Elapsed time: 14718.23
+2024-07-26 21:28:35 - [34m[1mLOGS   [0m - Epoch:  18 [  151242/  200000], loss: {'classification': 32.7835, 'neural_augmentation': 0.586, 'total_loss': 33.3695}, LR: [0.000179, 0.000179], Avg. batch load time: 0.005, Elapsed time: 14822.18
+2024-07-26 21:30:20 - [34m[1mLOGS   [0m - Epoch:  18 [  151305/  200000], loss: {'classification': 32.7817, 'neural_augmentation': 0.5861, 'total_loss': 33.3679}, LR: [0.000178, 0.000178], Avg. batch load time: 0.005, Elapsed time: 14926.57
+2024-07-26 21:32:04 - [34m[1mLOGS   [0m - Epoch:  18 [  151367/  200000], loss: {'classification': 32.7804, 'neural_augmentation': 0.5863, 'total_loss': 33.3666}, LR: [0.000178, 0.000178], Avg. batch load time: 0.005, Elapsed time: 15030.51
+2024-07-26 21:33:48 - [34m[1mLOGS   [0m - Epoch:  18 [  151430/  200000], loss: {'classification': 32.7789, 'neural_augmentation': 0.5864, 'total_loss': 33.3653}, LR: [0.000177, 0.000177], Avg. batch load time: 0.005, Elapsed time: 15134.65
+2024-07-26 21:35:32 - [34m[1mLOGS   [0m - Epoch:  18 [  151492/  200000], loss: {'classification': 32.7776, 'neural_augmentation': 0.5865, 'total_loss': 33.3641}, LR: [0.000177, 0.000177], Avg. batch load time: 0.005, Elapsed time: 15238.74
+2024-07-26 21:37:16 - [34m[1mLOGS   [0m - Epoch:  18 [  151555/  200000], loss: {'classification': 32.776, 'neural_augmentation': 0.5866, 'total_loss': 33.3626}, LR: [0.000177, 0.000177], Avg. batch load time: 0.005, Elapsed time: 15342.84
+2024-07-26 21:39:00 - [34m[1mLOGS   [0m - Epoch:  18 [  151617/  200000], loss: {'classification': 32.775, 'neural_augmentation': 0.5867, 'total_loss': 33.3617}, LR: [0.000176, 0.000176], Avg. batch load time: 0.005, Elapsed time: 15447.08
+2024-07-26 21:40:57 - [34m[1mLOGS   [0m - Epoch:  18 [  151680/  200000], loss: {'classification': 32.7737, 'neural_augmentation': 0.5869, 'total_loss': 33.3605}, LR: [0.000176, 0.000176], Avg. batch load time: 0.004, Elapsed time: 15563.71
+2024-07-26 21:42:41 - [34m[1mLOGS   [0m - Epoch:  18 [  151742/  200000], loss: {'classification': 32.7724, 'neural_augmentation': 0.587, 'total_loss': 33.3594}, LR: [0.000175, 0.000175], Avg. batch load time: 0.004, Elapsed time: 15667.67
+2024-07-26 21:44:25 - [34m[1mLOGS   [0m - Epoch:  18 [  151805/  200000], loss: {'classification': 32.771, 'neural_augmentation': 0.5871, 'total_loss': 33.3581}, LR: [0.000175, 0.000175], Avg. batch load time: 0.004, Elapsed time: 15771.63
+2024-07-26 21:46:09 - [34m[1mLOGS   [0m - Epoch:  18 [  151867/  200000], loss: {'classification': 32.77, 'neural_augmentation': 0.5872, 'total_loss': 33.3573}, LR: [0.000175, 0.000175], Avg. batch load time: 0.004, Elapsed time: 15875.70
+2024-07-26 21:47:53 - [34m[1mLOGS   [0m - Epoch:  18 [  151930/  200000], loss: {'classification': 32.7687, 'neural_augmentation': 0.5873, 'total_loss': 33.356}, LR: [0.000174, 0.000174], Avg. batch load time: 0.004, Elapsed time: 15979.77
+2024-07-26 21:49:37 - [34m[1mLOGS   [0m - Epoch:  18 [  151992/  200000], loss: {'classification': 32.7676, 'neural_augmentation': 0.5874, 'total_loss': 33.355}, LR: [0.000174, 0.000174], Avg. batch load time: 0.004, Elapsed time: 16083.74
+2024-07-26 21:51:21 - [34m[1mLOGS   [0m - Epoch:  18 [  152055/  200000], loss: {'classification': 32.7666, 'neural_augmentation': 0.5876, 'total_loss': 33.3542}, LR: [0.000173, 0.000173], Avg. batch load time: 0.004, Elapsed time: 16187.75
+2024-07-26 21:53:05 - [34m[1mLOGS   [0m - Epoch:  18 [  152117/  200000], loss: {'classification': 32.765, 'neural_augmentation': 0.5877, 'total_loss': 33.3527}, LR: [0.000173, 0.000173], Avg. batch load time: 0.004, Elapsed time: 16291.62
+2024-07-26 21:54:49 - [34m[1mLOGS   [0m - Epoch:  18 [  152180/  200000], loss: {'classification': 32.7629, 'neural_augmentation': 0.5878, 'total_loss': 33.3507}, LR: [0.000173, 0.000173], Avg. batch load time: 0.004, Elapsed time: 16395.36
+2024-07-26 21:56:33 - [34m[1mLOGS   [0m - Epoch:  18 [  152242/  200000], loss: {'classification': 32.7617, 'neural_augmentation': 0.5879, 'total_loss': 33.3496}, LR: [0.000172, 0.000172], Avg. batch load time: 0.004, Elapsed time: 16499.38
+2024-07-26 21:58:17 - [34m[1mLOGS   [0m - Epoch:  18 [  152305/  200000], loss: {'classification': 32.7607, 'neural_augmentation': 0.588, 'total_loss': 33.3487}, LR: [0.000172, 0.000172], Avg. batch load time: 0.004, Elapsed time: 16603.60
+2024-07-26 22:00:01 - [34m[1mLOGS   [0m - Epoch:  18 [  152367/  200000], loss: {'classification': 32.7595, 'neural_augmentation': 0.5881, 'total_loss': 33.3477}, LR: [0.000171, 0.000171], Avg. batch load time: 0.004, Elapsed time: 16707.58
+2024-07-26 22:01:53 - [34m[1mLOGS   [0m - Epoch:  18 [  152430/  200000], loss: {'classification': 32.758, 'neural_augmentation': 0.5883, 'total_loss': 33.3462}, LR: [0.000171, 0.000171], Avg. batch load time: 0.004, Elapsed time: 16820.28
+2024-07-26 22:03:41 - [34m[1mLOGS   [0m - Epoch:  18 [  152492/  200000], loss: {'classification': 32.7566, 'neural_augmentation': 0.5884, 'total_loss': 33.345}, LR: [0.000171, 0.000171], Avg. batch load time: 0.004, Elapsed time: 16927.56
+2024-07-26 22:03:42 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
+	 loss={'classification': 32.7566, 'neural_augmentation': 0.5884, 'total_loss': 33.3449}
+2024-07-26 22:03:45 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_best.pt
+2024-07-26 22:03:47 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/training_checkpoint_last.pt
+2024-07-26 22:03:47 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_last.pt
+2024-07-26 22:03:48 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 152493 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/training_checkpoint_epoch_18_iter_152493.pt
+2024-07-26 22:03:49 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 152493 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_18_iter_152493.pt
+[31m===========================================================================[0m
+2024-07-26 22:03:51 - [32m[1mINFO   [0m - Training epoch 19
+2024-07-26 22:05:04 - [34m[1mLOGS   [0m - Epoch:  19 [  152493/  200000], loss: {'classification': 35.0324, 'neural_augmentation': 0.6042, 'total_loss': 35.6365}, LR: [0.000171, 0.000171], Avg. batch load time: 69.245, Elapsed time: 73.35
+2024-07-26 22:06:49 - [34m[1mLOGS   [0m - Epoch:  19 [  152555/  200000], loss: {'classification': 32.599, 'neural_augmentation': 0.6073, 'total_loss': 33.2063}, LR: [0.00017, 0.00017], Avg. batch load time: 0.139, Elapsed time: 177.95
+2024-07-26 22:08:32 - [34m[1mLOGS   [0m - Epoch:  19 [  152618/  200000], loss: {'classification': 32.6306, 'neural_augmentation': 0.6074, 'total_loss': 33.2381}, LR: [0.00017, 0.00017], Avg. batch load time: 0.070, Elapsed time: 281.86
+2024-07-26 22:10:16 - [34m[1mLOGS   [0m - Epoch:  19 [  152680/  200000], loss: {'classification': 32.5516, 'neural_augmentation': 0.6076, 'total_loss': 33.1592}, LR: [0.000169, 0.000169], Avg. batch load time: 0.047, Elapsed time: 385.38
+2024-07-26 22:12:00 - [34m[1mLOGS   [0m - Epoch:  19 [  152743/  200000], loss: {'classification': 32.5284, 'neural_augmentation': 0.6078, 'total_loss': 33.1362}, LR: [0.000169, 0.000169], Avg. batch load time: 0.036, Elapsed time: 489.23
+2024-07-26 22:13:43 - [34m[1mLOGS   [0m - Epoch:  19 [  152805/  200000], loss: {'classification': 32.5259, 'neural_augmentation': 0.6078, 'total_loss': 33.1337}, LR: [0.000169, 0.000169], Avg. batch load time: 0.029, Elapsed time: 592.86
+2024-07-26 22:15:27 - [34m[1mLOGS   [0m - Epoch:  19 [  152868/  200000], loss: {'classification': 32.5201, 'neural_augmentation': 0.6079, 'total_loss': 33.128}, LR: [0.000168, 0.000168], Avg. batch load time: 0.024, Elapsed time: 696.46
+2024-07-26 22:17:11 - [34m[1mLOGS   [0m - Epoch:  19 [  152930/  200000], loss: {'classification': 32.5121, 'neural_augmentation': 0.608, 'total_loss': 33.1201}, LR: [0.000168, 0.000168], Avg. batch load time: 0.021, Elapsed time: 800.45
+2024-07-26 22:18:55 - [34m[1mLOGS   [0m - Epoch:  19 [  152993/  200000], loss: {'classification': 32.5142, 'neural_augmentation': 0.6082, 'total_loss': 33.1224}, LR: [0.000167, 0.000167], Avg. batch load time: 0.018, Elapsed time: 904.19
+2024-07-26 22:20:39 - [34m[1mLOGS   [0m - Epoch:  19 [  153055/  200000], loss: {'classification': 32.515, 'neural_augmentation': 0.6083, 'total_loss': 33.1233}, LR: [0.000167, 0.000167], Avg. batch load time: 0.016, Elapsed time: 1007.96
+2024-07-26 22:22:22 - [34m[1mLOGS   [0m - Epoch:  19 [  153118/  200000], loss: {'classification': 32.5177, 'neural_augmentation': 0.6084, 'total_loss': 33.1261}, LR: [0.000167, 0.000167], Avg. batch load time: 0.015, Elapsed time: 1111.88
+2024-07-26 22:24:06 - [34m[1mLOGS   [0m - Epoch:  19 [  153180/  200000], loss: {'classification': 32.5165, 'neural_augmentation': 0.6085, 'total_loss': 33.125}, LR: [0.000166, 0.000166], Avg. batch load time: 0.014, Elapsed time: 1215.81
+2024-07-26 22:25:54 - [34m[1mLOGS   [0m - Epoch:  19 [  153243/  200000], loss: {'classification': 32.5128, 'neural_augmentation': 0.6086, 'total_loss': 33.1214}, LR: [0.000166, 0.000166], Avg. batch load time: 0.013, Elapsed time: 1323.01
+2024-07-26 22:27:41 - [34m[1mLOGS   [0m - Epoch:  19 [  153305/  200000], loss: {'classification': 32.5109, 'neural_augmentation': 0.6088, 'total_loss': 33.1197}, LR: [0.000165, 0.000165], Avg. batch load time: 0.012, Elapsed time: 1430.05
+2024-07-26 22:29:24 - [34m[1mLOGS   [0m - Epoch:  19 [  153368/  200000], loss: {'classification': 32.5037, 'neural_augmentation': 0.6089, 'total_loss': 33.1126}, LR: [0.000165, 0.000165], Avg. batch load time: 0.011, Elapsed time: 1533.61
+2024-07-26 22:31:08 - [34m[1mLOGS   [0m - Epoch:  19 [  153430/  200000], loss: {'classification': 32.4976, 'neural_augmentation': 0.609, 'total_loss': 33.1066}, LR: [0.000165, 0.000165], Avg. batch load time: 0.010, Elapsed time: 1637.22
+2024-07-26 22:32:52 - [34m[1mLOGS   [0m - Epoch:  19 [  153493/  200000], loss: {'classification': 32.5009, 'neural_augmentation': 0.6091, 'total_loss': 33.11}, LR: [0.000164, 0.000164], Avg. batch load time: 0.010, Elapsed time: 1740.94
+2024-07-26 22:34:35 - [34m[1mLOGS   [0m - Epoch:  19 [  153555/  200000], loss: {'classification': 32.5027, 'neural_augmentation': 0.6092, 'total_loss': 33.1118}, LR: [0.000164, 0.000164], Avg. batch load time: 0.009, Elapsed time: 1844.80
+2024-07-26 22:36:19 - [34m[1mLOGS   [0m - Epoch:  19 [  153618/  200000], loss: {'classification': 32.5038, 'neural_augmentation': 0.6092, 'total_loss': 33.113}, LR: [0.000164, 0.000164], Avg. batch load time: 0.009, Elapsed time: 1948.65
+2024-07-26 22:38:03 - [34m[1mLOGS   [0m - Epoch:  19 [  153680/  200000], loss: {'classification': 32.4994, 'neural_augmentation': 0.6093, 'total_loss': 33.1087}, LR: [0.000163, 0.000163], Avg. batch load time: 0.008, Elapsed time: 2052.57
+2024-07-26 22:39:47 - [34m[1mLOGS   [0m - Epoch:  19 [  153743/  200000], loss: {'classification': 32.4969, 'neural_augmentation': 0.6094, 'total_loss': 33.1063}, LR: [0.000163, 0.000163], Avg. batch load time: 0.008, Elapsed time: 2156.31
+2024-07-26 22:41:31 - [34m[1mLOGS   [0m - Epoch:  19 [  153805/  200000], loss: {'classification': 32.4974, 'neural_augmentation': 0.6095, 'total_loss': 33.1069}, LR: [0.000162, 0.000162], Avg. batch load time: 0.008, Elapsed time: 2260.14
+2024-07-26 22:43:14 - [34m[1mLOGS   [0m - Epoch:  19 [  153868/  200000], loss: {'classification': 32.4966, 'neural_augmentation': 0.6096, 'total_loss': 33.1062}, LR: [0.000162, 0.000162], Avg. batch load time: 0.007, Elapsed time: 2363.83
+2024-07-26 22:44:58 - [34m[1mLOGS   [0m - Epoch:  19 [  153930/  200000], loss: {'classification': 32.496, 'neural_augmentation': 0.6097, 'total_loss': 33.1057}, LR: [0.000162, 0.000162], Avg. batch load time: 0.007, Elapsed time: 2467.31
+2024-07-26 22:46:43 - [34m[1mLOGS   [0m - Epoch:  19 [  153993/  200000], loss: {'classification': 32.4965, 'neural_augmentation': 0.6098, 'total_loss': 33.1063}, LR: [0.000161, 0.000161], Avg. batch load time: 0.007, Elapsed time: 2572.59
+2024-07-26 22:48:34 - [34m[1mLOGS   [0m - Epoch:  19 [  154055/  200000], loss: {'classification': 32.4949, 'neural_augmentation': 0.6099, 'total_loss': 33.1048}, LR: [0.000161, 0.000161], Avg. batch load time: 0.007, Elapsed time: 2682.91
+2024-07-26 22:50:17 - [34m[1mLOGS   [0m - Epoch:  19 [  154118/  200000], loss: {'classification': 32.4923, 'neural_augmentation': 0.61, 'total_loss': 33.1023}, LR: [0.00016, 0.00016], Avg. batch load time: 0.006, Elapsed time: 2786.85
+2024-07-26 22:52:01 - [34m[1mLOGS   [0m - Epoch:  19 [  154180/  200000], loss: {'classification': 32.4954, 'neural_augmentation': 0.6101, 'total_loss': 33.1056}, LR: [0.00016, 0.00016], Avg. batch load time: 0.006, Elapsed time: 2890.78
+2024-07-26 22:53:45 - [34m[1mLOGS   [0m - Epoch:  19 [  154243/  200000], loss: {'classification': 32.4968, 'neural_augmentation': 0.6102, 'total_loss': 33.107}, LR: [0.00016, 0.00016], Avg. batch load time: 0.006, Elapsed time: 2994.69
+2024-07-26 22:55:29 - [34m[1mLOGS   [0m - Epoch:  19 [  154305/  200000], loss: {'classification': 32.4993, 'neural_augmentation': 0.6103, 'total_loss': 33.1096}, LR: [0.000159, 0.000159], Avg. batch load time: 0.006, Elapsed time: 3098.61
+2024-07-26 22:57:13 - [34m[1mLOGS   [0m - Epoch:  19 [  154368/  200000], loss: {'classification': 32.4992, 'neural_augmentation': 0.6105, 'total_loss': 33.1096}, LR: [0.000159, 0.000159], Avg. batch load time: 0.006, Elapsed time: 3202.31
+2024-07-26 22:58:57 - [34m[1mLOGS   [0m - Epoch:  19 [  154430/  200000], loss: {'classification': 32.4973, 'neural_augmentation': 0.6106, 'total_loss': 33.1078}, LR: [0.000158, 0.000158], Avg. batch load time: 0.005, Elapsed time: 3306.25
+2024-07-26 23:00:41 - [34m[1mLOGS   [0m - Epoch:  19 [  154493/  200000], loss: {'classification': 32.4971, 'neural_augmentation': 0.6107, 'total_loss': 33.1077}, LR: [0.000158, 0.000158], Avg. batch load time: 0.005, Elapsed time: 3410.21
+2024-07-26 23:02:25 - [34m[1mLOGS   [0m - Epoch:  19 [  154555/  200000], loss: {'classification': 32.4939, 'neural_augmentation': 0.6108, 'total_loss': 33.1047}, LR: [0.000158, 0.000158], Avg. batch load time: 0.005, Elapsed time: 3513.95
+2024-07-26 23:04:08 - [34m[1mLOGS   [0m - Epoch:  19 [  154618/  200000], loss: {'classification': 32.4942, 'neural_augmentation': 0.6109, 'total_loss': 33.1051}, LR: [0.000157, 0.000157], Avg. batch load time: 0.005, Elapsed time: 3617.67
+2024-07-26 23:05:52 - [34m[1mLOGS   [0m - Epoch:  19 [  154680/  200000], loss: {'classification': 32.4965, 'neural_augmentation': 0.611, 'total_loss': 33.1075}, LR: [0.000157, 0.000157], Avg. batch load time: 0.005, Elapsed time: 3721.43
+2024-07-26 23:07:36 - [34m[1mLOGS   [0m - Epoch:  19 [  154743/  200000], loss: {'classification': 32.4972, 'neural_augmentation': 0.6111, 'total_loss': 33.1083}, LR: [0.000157, 0.000157], Avg. batch load time: 0.005, Elapsed time: 3825.07
+2024-07-26 23:09:30 - [34m[1mLOGS   [0m - Epoch:  19 [  154805/  200000], loss: {'classification': 32.4962, 'neural_augmentation': 0.6112, 'total_loss': 33.1074}, LR: [0.000156, 0.000156], Avg. batch load time: 0.005, Elapsed time: 3939.14
+2024-07-26 23:11:14 - [34m[1mLOGS   [0m - Epoch:  19 [  154868/  200000], loss: {'classification': 32.4955, 'neural_augmentation': 0.6113, 'total_loss': 33.1068}, LR: [0.000156, 0.000156], Avg. batch load time: 0.005, Elapsed time: 4043.20
+2024-07-26 23:12:58 - [34m[1mLOGS   [0m - Epoch:  19 [  154930/  200000], loss: {'classification': 32.4931, 'neural_augmentation': 0.6114, 'total_loss': 33.1045}, LR: [0.000155, 0.000155], Avg. batch load time: 0.005, Elapsed time: 4147.02
+2024-07-26 23:14:41 - [34m[1mLOGS   [0m - Epoch:  19 [  154993/  200000], loss: {'classification': 32.4908, 'neural_augmentation': 0.6115, 'total_loss': 33.1023}, LR: [0.000155, 0.000155], Avg. batch load time: 0.004, Elapsed time: 4250.73
+2024-07-26 23:16:25 - [34m[1mLOGS   [0m - Epoch:  19 [  155055/  200000], loss: {'classification': 32.4881, 'neural_augmentation': 0.6116, 'total_loss': 33.0997}, LR: [0.000155, 0.000155], Avg. batch load time: 0.004, Elapsed time: 4354.49
+2024-07-26 23:18:09 - [34m[1mLOGS   [0m - Epoch:  19 [  155118/  200000], loss: {'classification': 32.4864, 'neural_augmentation': 0.6117, 'total_loss': 33.0981}, LR: [0.000154, 0.000154], Avg. batch load time: 0.004, Elapsed time: 4458.30
+2024-07-26 23:19:53 - [34m[1mLOGS   [0m - Epoch:  19 [  155180/  200000], loss: {'classification': 32.4891, 'neural_augmentation': 0.6119, 'total_loss': 33.1009}, LR: [0.000154, 0.000154], Avg. batch load time: 0.004, Elapsed time: 4562.30
+2024-07-26 23:21:37 - [34m[1mLOGS   [0m - Epoch:  19 [  155243/  200000], loss: {'classification': 32.4842, 'neural_augmentation': 0.612, 'total_loss': 33.0961}, LR: [0.000154, 0.000154], Avg. batch load time: 0.004, Elapsed time: 4666.06
+2024-07-26 23:23:20 - [34m[1mLOGS   [0m - Epoch:  19 [  155305/  200000], loss: {'classification': 32.4806, 'neural_augmentation': 0.612, 'total_loss': 33.0927}, LR: [0.000153, 0.000153], Avg. batch load time: 0.004, Elapsed time: 4769.74
+2024-07-26 23:25:04 - [34m[1mLOGS   [0m - Epoch:  19 [  155368/  200000], loss: {'classification': 32.4788, 'neural_augmentation': 0.6122, 'total_loss': 33.091}, LR: [0.000153, 0.000153], Avg. batch load time: 0.004, Elapsed time: 4873.55
+2024-07-26 23:26:48 - [34m[1mLOGS   [0m - Epoch:  19 [  155430/  200000], loss: {'classification': 32.4766, 'neural_augmentation': 0.6123, 'total_loss': 33.0889}, LR: [0.000152, 0.000152], Avg. batch load time: 0.004, Elapsed time: 4977.47
+2024-07-26 23:28:32 - [34m[1mLOGS   [0m - Epoch:  19 [  155493/  200000], loss: {'classification': 32.4775, 'neural_augmentation': 0.6124, 'total_loss': 33.0898}, LR: [0.000152, 0.000152], Avg. batch load time: 0.004, Elapsed time: 5081.29
+2024-07-26 23:30:19 - [34m[1mLOGS   [0m - Epoch:  19 [  155555/  200000], loss: {'classification': 32.4759, 'neural_augmentation': 0.6125, 'total_loss': 33.0884}, LR: [0.000152, 0.000152], Avg. batch load time: 0.004, Elapsed time: 5188.10
+2024-07-26 23:32:09 - [34m[1mLOGS   [0m - Epoch:  19 [  155618/  200000], loss: {'classification': 32.4753, 'neural_augmentation': 0.6126, 'total_loss': 33.0879}, LR: [0.000151, 0.000151], Avg. batch load time: 0.004, Elapsed time: 5298.54
+2024-07-26 23:33:53 - [34m[1mLOGS   [0m - Epoch:  19 [  155680/  200000], loss: {'classification': 32.4726, 'neural_augmentation': 0.6127, 'total_loss': 33.0853}, LR: [0.000151, 0.000151], Avg. batch load time: 0.004, Elapsed time: 5402.35
+2024-07-26 23:35:37 - [34m[1mLOGS   [0m - Epoch:  19 [  155743/  200000], loss: {'classification': 32.4722, 'neural_augmentation': 0.6128, 'total_loss': 33.085}, LR: [0.00015, 0.00015], Avg. batch load time: 0.004, Elapsed time: 5506.38
+2024-07-26 23:37:21 - [34m[1mLOGS   [0m - Epoch:  19 [  155805/  200000], loss: {'classification': 32.4713, 'neural_augmentation': 0.6129, 'total_loss': 33.0842}, LR: [0.00015, 0.00015], Avg. batch load time: 0.004, Elapsed time: 5610.05
+2024-07-26 23:39:05 - [34m[1mLOGS   [0m - Epoch:  19 [  155868/  200000], loss: {'classification': 32.4727, 'neural_augmentation': 0.613, 'total_loss': 33.0857}, LR: [0.00015, 0.00015], Avg. batch load time: 0.004, Elapsed time: 5714.12
+2024-07-26 23:40:48 - [34m[1mLOGS   [0m - Epoch:  19 [  155930/  200000], loss: {'classification': 32.4717, 'neural_augmentation': 0.6131, 'total_loss': 33.0848}, LR: [0.000149, 0.000149], Avg. batch load time: 0.004, Elapsed time: 5817.85
+2024-07-26 23:42:32 - [34m[1mLOGS   [0m - Epoch:  19 [  155993/  200000], loss: {'classification': 32.47, 'neural_augmentation': 0.6133, 'total_loss': 33.0833}, LR: [0.000149, 0.000149], Avg. batch load time: 0.003, Elapsed time: 5921.62
+2024-07-26 23:44:16 - [34m[1mLOGS   [0m - Epoch:  19 [  156055/  200000], loss: {'classification': 32.4674, 'neural_augmentation': 0.6134, 'total_loss': 33.0808}, LR: [0.000149, 0.000149], Avg. batch load time: 0.003, Elapsed time: 6025.32
+2024-07-26 23:46:00 - [34m[1mLOGS   [0m - Epoch:  19 [  156118/  200000], loss: {'classification': 32.4663, 'neural_augmentation': 0.6135, 'total_loss': 33.0798}, LR: [0.000148, 0.000148], Avg. batch load time: 0.003, Elapsed time: 6129.20
+2024-07-26 23:47:44 - [34m[1mLOGS   [0m - Epoch:  19 [  156180/  200000], loss: {'classification': 32.4645, 'neural_augmentation': 0.6136, 'total_loss': 33.0781}, LR: [0.000148, 0.000148], Avg. batch load time: 0.003, Elapsed time: 6232.90
+2024-07-26 23:49:27 - [34m[1mLOGS   [0m - Epoch:  19 [  156243/  200000], loss: {'classification': 32.4627, 'neural_augmentation': 0.6137, 'total_loss': 33.0764}, LR: [0.000147, 0.000147], Avg. batch load time: 0.003, Elapsed time: 6336.61
+2024-07-26 23:51:11 - [34m[1mLOGS   [0m - Epoch:  19 [  156305/  200000], loss: {'classification': 32.4604, 'neural_augmentation': 0.6138, 'total_loss': 33.0741}, LR: [0.000147, 0.000147], Avg. batch load time: 0.003, Elapsed time: 6440.14
+2024-07-26 23:53:04 - [34m[1mLOGS   [0m - Epoch:  19 [  156368/  200000], loss: {'classification': 32.4579, 'neural_augmentation': 0.6139, 'total_loss': 33.0717}, LR: [0.000147, 0.000147], Avg. batch load time: 0.003, Elapsed time: 6553.27
+2024-07-26 23:54:48 - [34m[1mLOGS   [0m - Epoch:  19 [  156430/  200000], loss: {'classification': 32.457, 'neural_augmentation': 0.614, 'total_loss': 33.0709}, LR: [0.000146, 0.000146], Avg. batch load time: 0.003, Elapsed time: 6657.08
+2024-07-26 23:56:32 - [34m[1mLOGS   [0m - Epoch:  19 [  156493/  200000], loss: {'classification': 32.4566, 'neural_augmentation': 0.6141, 'total_loss': 33.0706}, LR: [0.000146, 0.000146], Avg. batch load time: 0.003, Elapsed time: 6760.94
+2024-07-26 23:58:15 - [34m[1mLOGS   [0m - Epoch:  19 [  156555/  200000], loss: {'classification': 32.4556, 'neural_augmentation': 0.6142, 'total_loss': 33.0698}, LR: [0.000146, 0.000146], Avg. batch load time: 0.003, Elapsed time: 6864.25
+2024-07-26 23:59:59 - [34m[1mLOGS   [0m - Epoch:  19 [  156618/  200000], loss: {'classification': 32.4549, 'neural_augmentation': 0.6143, 'total_loss': 33.0692}, LR: [0.000145, 0.000145], Avg. batch load time: 0.003, Elapsed time: 6967.95
+2024-07-27 00:01:42 - [34m[1mLOGS   [0m - Epoch:  19 [  156680/  200000], loss: {'classification': 32.4542, 'neural_augmentation': 0.6144, 'total_loss': 33.0686}, LR: [0.000145, 0.000145], Avg. batch load time: 0.003, Elapsed time: 7071.74
+2024-07-27 00:03:26 - [34m[1mLOGS   [0m - Epoch:  19 [  156743/  200000], loss: {'classification': 32.4536, 'neural_augmentation': 0.6145, 'total_loss': 33.0681}, LR: [0.000144, 0.000144], Avg. batch load time: 0.003, Elapsed time: 7175.72
+2024-07-27 00:05:10 - [34m[1mLOGS   [0m - Epoch:  19 [  156805/  200000], loss: {'classification': 32.4535, 'neural_augmentation': 0.6146, 'total_loss': 33.0681}, LR: [0.000144, 0.000144], Avg. batch load time: 0.003, Elapsed time: 7279.46
+2024-07-27 00:06:54 - [34m[1mLOGS   [0m - Epoch:  19 [  156868/  200000], loss: {'classification': 32.4524, 'neural_augmentation': 0.6147, 'total_loss': 33.0671}, LR: [0.000144, 0.000144], Avg. batch load time: 0.003, Elapsed time: 7383.20
+2024-07-27 00:08:37 - [34m[1mLOGS   [0m - Epoch:  19 [  156930/  200000], loss: {'classification': 32.4499, 'neural_augmentation': 0.6148, 'total_loss': 33.0647}, LR: [0.000143, 0.000143], Avg. batch load time: 0.003, Elapsed time: 7486.72
+2024-07-27 00:10:22 - [34m[1mLOGS   [0m - Epoch:  19 [  156993/  200000], loss: {'classification': 32.4493, 'neural_augmentation': 0.6149, 'total_loss': 33.0642}, LR: [0.000143, 0.000143], Avg. batch load time: 0.003, Elapsed time: 7590.89
+2024-07-27 00:12:05 - [34m[1mLOGS   [0m - Epoch:  19 [  157055/  200000], loss: {'classification': 32.4494, 'neural_augmentation': 0.615, 'total_loss': 33.0644}, LR: [0.000143, 0.000143], Avg. batch load time: 0.003, Elapsed time: 7694.65
+2024-07-27 00:13:59 - [34m[1mLOGS   [0m - Epoch:  19 [  157118/  200000], loss: {'classification': 32.4474, 'neural_augmentation': 0.6151, 'total_loss': 33.0625}, LR: [0.000142, 0.000142], Avg. batch load time: 0.003, Elapsed time: 7808.31
+2024-07-27 00:15:43 - [34m[1mLOGS   [0m - Epoch:  19 [  157180/  200000], loss: {'classification': 32.4478, 'neural_augmentation': 0.6152, 'total_loss': 33.063}, LR: [0.000142, 0.000142], Avg. batch load time: 0.003, Elapsed time: 7912.13
+2024-07-27 00:17:26 - [34m[1mLOGS   [0m - Epoch:  19 [  157243/  200000], loss: {'classification': 32.4457, 'neural_augmentation': 0.6153, 'total_loss': 33.061}, LR: [0.000142, 0.000142], Avg. batch load time: 0.003, Elapsed time: 8015.88
+2024-07-27 00:19:10 - [34m[1mLOGS   [0m - Epoch:  19 [  157305/  200000], loss: {'classification': 32.4453, 'neural_augmentation': 0.6154, 'total_loss': 33.0608}, LR: [0.000141, 0.000141], Avg. batch load time: 0.003, Elapsed time: 8119.66
+2024-07-27 00:20:54 - [34m[1mLOGS   [0m - Epoch:  19 [  157368/  200000], loss: {'classification': 32.4462, 'neural_augmentation': 0.6155, 'total_loss': 33.0617}, LR: [0.000141, 0.000141], Avg. batch load time: 0.003, Elapsed time: 8223.26
+2024-07-27 00:22:37 - [34m[1mLOGS   [0m - Epoch:  19 [  157430/  200000], loss: {'classification': 32.4452, 'neural_augmentation': 0.6156, 'total_loss': 33.0609}, LR: [0.00014, 0.00014], Avg. batch load time: 0.003, Elapsed time: 8326.85
+2024-07-27 00:24:21 - [34m[1mLOGS   [0m - Epoch:  19 [  157493/  200000], loss: {'classification': 32.445, 'neural_augmentation': 0.6157, 'total_loss': 33.0607}, LR: [0.00014, 0.00014], Avg. batch load time: 0.003, Elapsed time: 8430.86
+2024-07-27 00:26:05 - [34m[1mLOGS   [0m - Epoch:  19 [  157555/  200000], loss: {'classification': 32.4436, 'neural_augmentation': 0.6158, 'total_loss': 33.0594}, LR: [0.00014, 0.00014], Avg. batch load time: 0.003, Elapsed time: 8534.85
+2024-07-27 00:27:49 - [34m[1mLOGS   [0m - Epoch:  19 [  157618/  200000], loss: {'classification': 32.4446, 'neural_augmentation': 0.6159, 'total_loss': 33.0606}, LR: [0.000139, 0.000139], Avg. batch load time: 0.003, Elapsed time: 8638.61
+2024-07-27 00:29:33 - [34m[1mLOGS   [0m - Epoch:  19 [  157680/  200000], loss: {'classification': 32.443, 'neural_augmentation': 0.616, 'total_loss': 33.059}, LR: [0.000139, 0.000139], Avg. batch load time: 0.003, Elapsed time: 8742.48
+2024-07-27 00:31:17 - [34m[1mLOGS   [0m - Epoch:  19 [  157743/  200000], loss: {'classification': 32.4424, 'neural_augmentation': 0.6161, 'total_loss': 33.0585}, LR: [0.000139, 0.000139], Avg. batch load time: 0.003, Elapsed time: 8846.01
+2024-07-27 00:33:00 - [34m[1mLOGS   [0m - Epoch:  19 [  157805/  200000], loss: {'classification': 32.4409, 'neural_augmentation': 0.6162, 'total_loss': 33.0571}, LR: [0.000138, 0.000138], Avg. batch load time: 0.003, Elapsed time: 8949.66
+2024-07-27 00:34:47 - [34m[1mLOGS   [0m - Epoch:  19 [  157868/  200000], loss: {'classification': 32.4411, 'neural_augmentation': 0.6163, 'total_loss': 33.0574}, LR: [0.000138, 0.000138], Avg. batch load time: 0.003, Elapsed time: 9056.59
+2024-07-27 00:36:38 - [34m[1mLOGS   [0m - Epoch:  19 [  157930/  200000], loss: {'classification': 32.4399, 'neural_augmentation': 0.6164, 'total_loss': 33.0564}, LR: [0.000138, 0.000138], Avg. batch load time: 0.003, Elapsed time: 9166.92
+2024-07-27 00:38:21 - [34m[1mLOGS   [0m - Epoch:  19 [  157993/  200000], loss: {'classification': 32.4382, 'neural_augmentation': 0.6165, 'total_loss': 33.0547}, LR: [0.000137, 0.000137], Avg. batch load time: 0.003, Elapsed time: 9270.57
+2024-07-27 00:40:05 - [34m[1mLOGS   [0m - Epoch:  19 [  158055/  200000], loss: {'classification': 32.4367, 'neural_augmentation': 0.6166, 'total_loss': 33.0534}, LR: [0.000137, 0.000137], Avg. batch load time: 0.003, Elapsed time: 9374.46
+2024-07-27 00:41:49 - [34m[1mLOGS   [0m - Epoch:  19 [  158118/  200000], loss: {'classification': 32.4358, 'neural_augmentation': 0.6167, 'total_loss': 33.0526}, LR: [0.000136, 0.000136], Avg. batch load time: 0.003, Elapsed time: 9478.08
+2024-07-27 00:43:32 - [34m[1mLOGS   [0m - Epoch:  19 [  158180/  200000], loss: {'classification': 32.4345, 'neural_augmentation': 0.6168, 'total_loss': 33.0513}, LR: [0.000136, 0.000136], Avg. batch load time: 0.003, Elapsed time: 9581.82
+2024-07-27 00:45:16 - [34m[1mLOGS   [0m - Epoch:  19 [  158243/  200000], loss: {'classification': 32.4325, 'neural_augmentation': 0.6169, 'total_loss': 33.0495}, LR: [0.000136, 0.000136], Avg. batch load time: 0.003, Elapsed time: 9685.66
+2024-07-27 00:47:00 - [34m[1mLOGS   [0m - Epoch:  19 [  158305/  200000], loss: {'classification': 32.4307, 'neural_augmentation': 0.6171, 'total_loss': 33.0478}, LR: [0.000135, 0.000135], Avg. batch load time: 0.002, Elapsed time: 9789.40
+2024-07-27 00:48:44 - [34m[1mLOGS   [0m - Epoch:  19 [  158368/  200000], loss: {'classification': 32.4292, 'neural_augmentation': 0.6172, 'total_loss': 33.0463}, LR: [0.000135, 0.000135], Avg. batch load time: 0.002, Elapsed time: 9893.14
+2024-07-27 00:50:28 - [34m[1mLOGS   [0m - Epoch:  19 [  158430/  200000], loss: {'classification': 32.4288, 'neural_augmentation': 0.6173, 'total_loss': 33.046}, LR: [0.000135, 0.000135], Avg. batch load time: 0.002, Elapsed time: 9996.95
+2024-07-27 00:52:11 - [34m[1mLOGS   [0m - Epoch:  19 [  158493/  200000], loss: {'classification': 32.4269, 'neural_augmentation': 0.6174, 'total_loss': 33.0443}, LR: [0.000134, 0.000134], Avg. batch load time: 0.002, Elapsed time: 10100.49
+2024-07-27 00:53:55 - [34m[1mLOGS   [0m - Epoch:  19 [  158555/  200000], loss: {'classification': 32.4248, 'neural_augmentation': 0.6175, 'total_loss': 33.0422}, LR: [0.000134, 0.000134], Avg. batch load time: 0.002, Elapsed time: 10204.09
+2024-07-27 00:55:38 - [34m[1mLOGS   [0m - Epoch:  19 [  158618/  200000], loss: {'classification': 32.4234, 'neural_augmentation': 0.6176, 'total_loss': 33.041}, LR: [0.000134, 0.000134], Avg. batch load time: 0.002, Elapsed time: 10307.83
+2024-07-27 00:57:32 - [34m[1mLOGS   [0m - Epoch:  19 [  158680/  200000], loss: {'classification': 32.4232, 'neural_augmentation': 0.6177, 'total_loss': 33.0409}, LR: [0.000133, 0.000133], Avg. batch load time: 0.002, Elapsed time: 10421.59
+2024-07-27 00:59:16 - [34m[1mLOGS   [0m - Epoch:  19 [  158743/  200000], loss: {'classification': 32.4216, 'neural_augmentation': 0.6178, 'total_loss': 33.0394}, LR: [0.000133, 0.000133], Avg. batch load time: 0.002, Elapsed time: 10525.26
+2024-07-27 01:01:00 - [34m[1mLOGS   [0m - Epoch:  19 [  158805/  200000], loss: {'classification': 32.4203, 'neural_augmentation': 0.6179, 'total_loss': 33.0382}, LR: [0.000133, 0.000133], Avg. batch load time: 0.002, Elapsed time: 10629.30
+2024-07-27 01:02:44 - [34m[1mLOGS   [0m - Epoch:  19 [  158868/  200000], loss: {'classification': 32.4193, 'neural_augmentation': 0.618, 'total_loss': 33.0373}, LR: [0.000132, 0.000132], Avg. batch load time: 0.002, Elapsed time: 10733.26
+2024-07-27 01:04:27 - [34m[1mLOGS   [0m - Epoch:  19 [  158930/  200000], loss: {'classification': 32.419, 'neural_augmentation': 0.6181, 'total_loss': 33.0371}, LR: [0.000132, 0.000132], Avg. batch load time: 0.002, Elapsed time: 10836.84
+2024-07-27 01:06:11 - [34m[1mLOGS   [0m - Epoch:  19 [  158993/  200000], loss: {'classification': 32.4166, 'neural_augmentation': 0.6182, 'total_loss': 33.0347}, LR: [0.000131, 0.000131], Avg. batch load time: 0.002, Elapsed time: 10940.84
+2024-07-27 01:07:55 - [34m[1mLOGS   [0m - Epoch:  19 [  159055/  200000], loss: {'classification': 32.4151, 'neural_augmentation': 0.6183, 'total_loss': 33.0334}, LR: [0.000131, 0.000131], Avg. batch load time: 0.002, Elapsed time: 11044.58
+2024-07-27 01:09:39 - [34m[1mLOGS   [0m - Epoch:  19 [  159118/  200000], loss: {'classification': 32.414, 'neural_augmentation': 0.6184, 'total_loss': 33.0323}, LR: [0.000131, 0.000131], Avg. batch load time: 0.002, Elapsed time: 11148.60
+2024-07-27 01:11:23 - [34m[1mLOGS   [0m - Epoch:  19 [  159180/  200000], loss: {'classification': 32.4119, 'neural_augmentation': 0.6185, 'total_loss': 33.0304}, LR: [0.00013, 0.00013], Avg. batch load time: 0.002, Elapsed time: 11252.20
+2024-07-27 01:13:06 - [34m[1mLOGS   [0m - Epoch:  19 [  159243/  200000], loss: {'classification': 32.4112, 'neural_augmentation': 0.6186, 'total_loss': 33.0298}, LR: [0.00013, 0.00013], Avg. batch load time: 0.002, Elapsed time: 11355.82
+2024-07-27 01:14:50 - [34m[1mLOGS   [0m - Epoch:  19 [  159305/  200000], loss: {'classification': 32.4096, 'neural_augmentation': 0.6187, 'total_loss': 33.0283}, LR: [0.00013, 0.00013], Avg. batch load time: 0.002, Elapsed time: 11459.61
+2024-07-27 01:16:34 - [34m[1mLOGS   [0m - Epoch:  19 [  159368/  200000], loss: {'classification': 32.4081, 'neural_augmentation': 0.6188, 'total_loss': 33.0269}, LR: [0.000129, 0.000129], Avg. batch load time: 0.002, Elapsed time: 11563.17
+2024-07-27 01:18:27 - [34m[1mLOGS   [0m - Epoch:  19 [  159430/  200000], loss: {'classification': 32.4065, 'neural_augmentation': 0.6189, 'total_loss': 33.0253}, LR: [0.000129, 0.000129], Avg. batch load time: 0.002, Elapsed time: 11676.69
+2024-07-27 01:20:11 - [34m[1mLOGS   [0m - Epoch:  19 [  159493/  200000], loss: {'classification': 32.4047, 'neural_augmentation': 0.619, 'total_loss': 33.0237}, LR: [0.000129, 0.000129], Avg. batch load time: 0.002, Elapsed time: 11780.72
+2024-07-27 01:21:55 - [34m[1mLOGS   [0m - Epoch:  19 [  159555/  200000], loss: {'classification': 32.4026, 'neural_augmentation': 0.6191, 'total_loss': 33.0216}, LR: [0.000128, 0.000128], Avg. batch load time: 0.002, Elapsed time: 11884.30
+2024-07-27 01:23:39 - [34m[1mLOGS   [0m - Epoch:  19 [  159618/  200000], loss: {'classification': 32.4017, 'neural_augmentation': 0.6192, 'total_loss': 33.0208}, LR: [0.000128, 0.000128], Avg. batch load time: 0.002, Elapsed time: 11988.13
+2024-07-27 01:25:23 - [34m[1mLOGS   [0m - Epoch:  19 [  159680/  200000], loss: {'classification': 32.4008, 'neural_augmentation': 0.6193, 'total_loss': 33.0201}, LR: [0.000128, 0.000128], Avg. batch load time: 0.002, Elapsed time: 12092.21
+2024-07-27 01:27:07 - [34m[1mLOGS   [0m - Epoch:  19 [  159743/  200000], loss: {'classification': 32.3998, 'neural_augmentation': 0.6194, 'total_loss': 33.0191}, LR: [0.000127, 0.000127], Avg. batch load time: 0.002, Elapsed time: 12196.18
+2024-07-27 01:28:50 - [34m[1mLOGS   [0m - Epoch:  19 [  159805/  200000], loss: {'classification': 32.3986, 'neural_augmentation': 0.6195, 'total_loss': 33.0181}, LR: [0.000127, 0.000127], Avg. batch load time: 0.002, Elapsed time: 12299.61
+2024-07-27 01:30:34 - [34m[1mLOGS   [0m - Epoch:  19 [  159868/  200000], loss: {'classification': 32.3972, 'neural_augmentation': 0.6196, 'total_loss': 33.0168}, LR: [0.000127, 0.000127], Avg. batch load time: 0.002, Elapsed time: 12403.36
+2024-07-27 01:32:18 - [34m[1mLOGS   [0m - Epoch:  19 [  159930/  200000], loss: {'classification': 32.396, 'neural_augmentation': 0.6197, 'total_loss': 33.0157}, LR: [0.000126, 0.000126], Avg. batch load time: 0.002, Elapsed time: 12507.34
+2024-07-27 01:34:02 - [34m[1mLOGS   [0m - Epoch:  19 [  159993/  200000], loss: {'classification': 32.3947, 'neural_augmentation': 0.6198, 'total_loss': 33.0145}, LR: [0.000126, 0.000126], Avg. batch load time: 0.002, Elapsed time: 12611.17
+2024-07-27 01:35:45 - [34m[1mLOGS   [0m - Epoch:  19 [  160055/  200000], loss: {'classification': 32.3931, 'neural_augmentation': 0.6199, 'total_loss': 33.013}, LR: [0.000126, 0.000126], Avg. batch load time: 0.002, Elapsed time: 12714.79
+2024-07-27 01:37:29 - [34m[1mLOGS   [0m - Epoch:  19 [  160118/  200000], loss: {'classification': 32.3925, 'neural_augmentation': 0.62, 'total_loss': 33.0125}, LR: [0.000125, 0.000125], Avg. batch load time: 0.002, Elapsed time: 12818.88
+2024-07-27 01:39:21 - [34m[1mLOGS   [0m - Epoch:  19 [  160180/  200000], loss: {'classification': 32.3915, 'neural_augmentation': 0.6201, 'total_loss': 33.0116}, LR: [0.000125, 0.000125], Avg. batch load time: 0.002, Elapsed time: 12930.66
+2024-07-27 01:41:07 - [34m[1mLOGS   [0m - Epoch:  19 [  160243/  200000], loss: {'classification': 32.3899, 'neural_augmentation': 0.6202, 'total_loss': 33.0101}, LR: [0.000124, 0.000124], Avg. batch load time: 0.002, Elapsed time: 13036.27
+2024-07-27 01:42:50 - [34m[1mLOGS   [0m - Epoch:  19 [  160305/  200000], loss: {'classification': 32.3885, 'neural_augmentation': 0.6203, 'total_loss': 33.0088}, LR: [0.000124, 0.000124], Avg. batch load time: 0.002, Elapsed time: 13139.88
+2024-07-27 01:44:34 - [34m[1mLOGS   [0m - Epoch:  19 [  160368/  200000], loss: {'classification': 32.387, 'neural_augmentation': 0.6204, 'total_loss': 33.0074}, LR: [0.000124, 0.000124], Avg. batch load time: 0.002, Elapsed time: 13243.68
+2024-07-27 01:46:18 - [34m[1mLOGS   [0m - Epoch:  19 [  160430/  200000], loss: {'classification': 32.3859, 'neural_augmentation': 0.6205, 'total_loss': 33.0064}, LR: [0.000123, 0.000123], Avg. batch load time: 0.002, Elapsed time: 13347.51
+2024-07-27 01:48:02 - [34m[1mLOGS   [0m - Epoch:  19 [  160493/  200000], loss: {'classification': 32.384, 'neural_augmentation': 0.6206, 'total_loss': 33.0045}, LR: [0.000123, 0.000123], Avg. batch load time: 0.002, Elapsed time: 13451.34
+2024-07-27 01:49:46 - [34m[1mLOGS   [0m - Epoch:  19 [  160555/  200000], loss: {'classification': 32.3831, 'neural_augmentation': 0.6207, 'total_loss': 33.0038}, LR: [0.000123, 0.000123], Avg. batch load time: 0.002, Elapsed time: 13555.17
+2024-07-27 01:51:30 - [34m[1mLOGS   [0m - Epoch:  19 [  160618/  200000], loss: {'classification': 32.3825, 'neural_augmentation': 0.6208, 'total_loss': 33.0033}, LR: [0.000122, 0.000122], Avg. batch load time: 0.002, Elapsed time: 13659.07
+2024-07-27 01:53:14 - [34m[1mLOGS   [0m - Epoch:  19 [  160680/  200000], loss: {'classification': 32.3817, 'neural_augmentation': 0.6209, 'total_loss': 33.0026}, LR: [0.000122, 0.000122], Avg. batch load time: 0.002, Elapsed time: 13762.93
+2024-07-27 01:54:57 - [34m[1mLOGS   [0m - Epoch:  19 [  160743/  200000], loss: {'classification': 32.3817, 'neural_augmentation': 0.621, 'total_loss': 33.0027}, LR: [0.000122, 0.000122], Avg. batch load time: 0.002, Elapsed time: 13866.77
+2024-07-27 01:56:41 - [34m[1mLOGS   [0m - Epoch:  19 [  160805/  200000], loss: {'classification': 32.3804, 'neural_augmentation': 0.6211, 'total_loss': 33.0014}, LR: [0.000121, 0.000121], Avg. batch load time: 0.002, Elapsed time: 13970.57
+2024-07-27 01:58:25 - [34m[1mLOGS   [0m - Epoch:  19 [  160868/  200000], loss: {'classification': 32.3789, 'neural_augmentation': 0.6212, 'total_loss': 33.0001}, LR: [0.000121, 0.000121], Avg. batch load time: 0.002, Elapsed time: 14074.27
+2024-07-27 02:00:09 - [34m[1mLOGS   [0m - Epoch:  19 [  160930/  200000], loss: {'classification': 32.3775, 'neural_augmentation': 0.6213, 'total_loss': 32.9987}, LR: [0.000121, 0.000121], Avg. batch load time: 0.002, Elapsed time: 14178.22
+2024-07-27 02:02:02 - [34m[1mLOGS   [0m - Epoch:  19 [  160993/  200000], loss: {'classification': 32.3768, 'neural_augmentation': 0.6214, 'total_loss': 32.9982}, LR: [0.00012, 0.00012], Avg. batch load time: 0.002, Elapsed time: 14291.76
+2024-07-27 02:03:46 - [34m[1mLOGS   [0m - Epoch:  19 [  161055/  200000], loss: {'classification': 32.3749, 'neural_augmentation': 0.6215, 'total_loss': 32.9964}, LR: [0.00012, 0.00012], Avg. batch load time: 0.002, Elapsed time: 14395.52
+2024-07-27 02:05:30 - [34m[1mLOGS   [0m - Epoch:  19 [  161118/  200000], loss: {'classification': 32.374, 'neural_augmentation': 0.6216, 'total_loss': 32.9956}, LR: [0.00012, 0.00012], Avg. batch load time: 0.002, Elapsed time: 14499.17
+2024-07-27 02:07:13 - [34m[1mLOGS   [0m - Epoch:  19 [  161180/  200000], loss: {'classification': 32.3726, 'neural_augmentation': 0.6217, 'total_loss': 32.9943}, LR: [0.000119, 0.000119], Avg. batch load time: 0.002, Elapsed time: 14602.83
+2024-07-27 02:08:57 - [34m[1mLOGS   [0m - Epoch:  19 [  161243/  200000], loss: {'classification': 32.372, 'neural_augmentation': 0.6218, 'total_loss': 32.9938}, LR: [0.000119, 0.000119], Avg. batch load time: 0.002, Elapsed time: 14706.63
+2024-07-27 02:10:41 - [34m[1mLOGS   [0m - Epoch:  19 [  161305/  200000], loss: {'classification': 32.3714, 'neural_augmentation': 0.6219, 'total_loss': 32.9933}, LR: [0.000119, 0.000119], Avg. batch load time: 0.002, Elapsed time: 14810.32
+2024-07-27 02:12:25 - [34m[1mLOGS   [0m - Epoch:  19 [  161368/  200000], loss: {'classification': 32.3703, 'neural_augmentation': 0.622, 'total_loss': 32.9922}, LR: [0.000118, 0.000118], Avg. batch load time: 0.002, Elapsed time: 14914.47
+2024-07-27 02:14:09 - [34m[1mLOGS   [0m - Epoch:  19 [  161430/  200000], loss: {'classification': 32.3689, 'neural_augmentation': 0.6221, 'total_loss': 32.9909}, LR: [0.000118, 0.000118], Avg. batch load time: 0.002, Elapsed time: 15018.16
+2024-07-27 02:15:52 - [34m[1mLOGS   [0m - Epoch:  19 [  161493/  200000], loss: {'classification': 32.3676, 'neural_augmentation': 0.6222, 'total_loss': 32.9898}, LR: [0.000118, 0.000118], Avg. batch load time: 0.002, Elapsed time: 15121.73
+2024-07-27 02:17:36 - [34m[1mLOGS   [0m - Epoch:  19 [  161555/  200000], loss: {'classification': 32.3664, 'neural_augmentation': 0.6223, 'total_loss': 32.9886}, LR: [0.000117, 0.000117], Avg. batch load time: 0.002, Elapsed time: 15225.35
+2024-07-27 02:19:20 - [34m[1mLOGS   [0m - Epoch:  19 [  161618/  200000], loss: {'classification': 32.3649, 'neural_augmentation': 0.6223, 'total_loss': 32.9872}, LR: [0.000117, 0.000117], Avg. batch load time: 0.002, Elapsed time: 15329.36
+2024-07-27 02:21:04 - [34m[1mLOGS   [0m - Epoch:  19 [  161680/  200000], loss: {'classification': 32.3631, 'neural_augmentation': 0.6224, 'total_loss': 32.9856}, LR: [0.000117, 0.000117], Avg. batch load time: 0.002, Elapsed time: 15433.32
+2024-07-27 02:22:58 - [34m[1mLOGS   [0m - Epoch:  19 [  161743/  200000], loss: {'classification': 32.3618, 'neural_augmentation': 0.6225, 'total_loss': 32.9844}, LR: [0.000116, 0.000116], Avg. batch load time: 0.002, Elapsed time: 15546.92
+2024-07-27 02:24:41 - [34m[1mLOGS   [0m - Epoch:  19 [  161805/  200000], loss: {'classification': 32.3602, 'neural_augmentation': 0.6226, 'total_loss': 32.9828}, LR: [0.000116, 0.000116], Avg. batch load time: 0.002, Elapsed time: 15650.56
+2024-07-27 02:26:25 - [34m[1mLOGS   [0m - Epoch:  19 [  161868/  200000], loss: {'classification': 32.3593, 'neural_augmentation': 0.6227, 'total_loss': 32.982}, LR: [0.000116, 0.000116], Avg. batch load time: 0.002, Elapsed time: 15754.45
+2024-07-27 02:28:09 - [34m[1mLOGS   [0m - Epoch:  19 [  161930/  200000], loss: {'classification': 32.3584, 'neural_augmentation': 0.6228, 'total_loss': 32.9813}, LR: [0.000115, 0.000115], Avg. batch load time: 0.002, Elapsed time: 15858.00
+2024-07-27 02:29:52 - [34m[1mLOGS   [0m - Epoch:  19 [  161993/  200000], loss: {'classification': 32.3566, 'neural_augmentation': 0.6229, 'total_loss': 32.9796}, LR: [0.000115, 0.000115], Avg. batch load time: 0.002, Elapsed time: 15961.41
+2024-07-27 02:31:36 - [34m[1mLOGS   [0m - Epoch:  19 [  162055/  200000], loss: {'classification': 32.3554, 'neural_augmentation': 0.623, 'total_loss': 32.9785}, LR: [0.000115, 0.000115], Avg. batch load time: 0.002, Elapsed time: 16065.04
+2024-07-27 02:33:19 - [34m[1mLOGS   [0m - Epoch:  19 [  162118/  200000], loss: {'classification': 32.355, 'neural_augmentation': 0.6231, 'total_loss': 32.9782}, LR: [0.000114, 0.000114], Avg. batch load time: 0.002, Elapsed time: 16168.68
+2024-07-27 02:35:03 - [34m[1mLOGS   [0m - Epoch:  19 [  162180/  200000], loss: {'classification': 32.3536, 'neural_augmentation': 0.6232, 'total_loss': 32.9768}, LR: [0.000114, 0.000114], Avg. batch load time: 0.002, Elapsed time: 16272.24
+2024-07-27 02:36:46 - [34m[1mLOGS   [0m - Epoch:  19 [  162243/  200000], loss: {'classification': 32.3525, 'neural_augmentation': 0.6233, 'total_loss': 32.9758}, LR: [0.000114, 0.000114], Avg. batch load time: 0.002, Elapsed time: 16375.79
+2024-07-27 02:38:30 - [34m[1mLOGS   [0m - Epoch:  19 [  162305/  200000], loss: {'classification': 32.3507, 'neural_augmentation': 0.6234, 'total_loss': 32.9741}, LR: [0.000113, 0.000113], Avg. batch load time: 0.002, Elapsed time: 16479.34
+2024-07-27 02:40:14 - [34m[1mLOGS   [0m - Epoch:  19 [  162368/  200000], loss: {'classification': 32.3489, 'neural_augmentation': 0.6235, 'total_loss': 32.9724}, LR: [0.000113, 0.000113], Avg. batch load time: 0.002, Elapsed time: 16583.25
+2024-07-27 02:41:58 - [34m[1mLOGS   [0m - Epoch:  19 [  162430/  200000], loss: {'classification': 32.3473, 'neural_augmentation': 0.6236, 'total_loss': 32.9709}, LR: [0.000113, 0.000113], Avg. batch load time: 0.002, Elapsed time: 16687.23
+2024-07-27 02:42:05 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
+	 loss={'classification': 32.3471, 'neural_augmentation': 0.6236, 'total_loss': 32.9707}
+2024-07-27 02:42:08 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_best.pt
+2024-07-27 02:42:10 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/training_checkpoint_last.pt
+2024-07-27 02:42:10 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_last.pt
+2024-07-27 02:42:11 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 162435 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/training_checkpoint_epoch_19_iter_162435.pt
+2024-07-27 02:42:12 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 162435 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
+[31m===========================================================================[0m
+2024-07-27 02:42:14 - [32m[1mINFO   [0m - Training epoch 20
+2024-07-27 02:43:22 - [34m[1mLOGS   [0m - Epoch:  20 [  162435/  200000], loss: {'classification': 30.8533, 'neural_augmentation': 0.6402, 'total_loss': 31.4936}, LR: [0.000113, 0.000113], Avg. batch load time: 65.414, Elapsed time: 68.13
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 53, in _pin_memory_loop
+    do_one_step()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 30, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 495, in rebuild_storage_fd
+    fd = df.detach()
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    answer_challenge(c, authkey)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 752, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-07-27 02:44:16 - [34m[1mLOGS   [0m - Keyboard interruption. Exiting from early training
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

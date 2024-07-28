@@ -1,5 +1,6 @@
 # pytest: disable
-taskname: '+ ViT-B/16 [COCO-CLS]'
+
+taskname: '+ ViT-B/16 [FT-IN1k]'
 
 common:
   run_label: "train"
@@ -11,45 +12,45 @@ common:
   save_all_checkpoints: true
 
 dataset:
-  root_train: "/ML-A100/team/mm/models/food172/food_172"
-  root_val: "/ML-A100/team/mm/models/food172/food_172"
-  # effective batch size is 128 (32 * 4 A100 80 GB GPU)
-  train_batch_size0: 16
-  val_batch_size0: 50
-  eval_batch_size0: 50
-  workers: -1 # use all CPUs
+  root_train: "/ML-A100/team/mm/models/food200/train_images"
+  root_val: "/ML-A100/team/mm/models/food200/test_images"
+  # effective batch size is 512 (512 * 1 A100 80 GB GPU)
+  train_batch_size0: 128
+  val_batch_size0: 100
+  eval_batch_size0: 100
+  workers: 64 # use all CPUs
   persistent_workers: true
   pin_memory: true
-  name: "food172_ingredient"
+  name: "imagenet"
   category: "classification"
 
 image_augmentation:
-  # training related augmentations
+  # training related augmentation
   random_resized_crop:
     enable: true
     interpolation: "bilinear"
   random_horizontal_flip:
     enable: true
-  # evaluation related augmentations
+  # validation related augmentation
   resize:
     enable: true
-    size: 512
+    size: 232
     interpolation: "bilinear"
   center_crop:
     enable: true
-    size: 512
+    size: 224
 
 sampler:
   name: "variable_batch_sampler"
   vbs:
-    crop_size_width: 512
-    crop_size_height: 512
+    crop_size_width: 224
+    crop_size_height: 224
     max_n_scales: 25
-    min_crop_size_width: 256
-    max_crop_size_width: 768
-    min_crop_size_height: 256
-    max_crop_size_height: 768
-    check_scale: 16
+    min_crop_size_width: 224
+    max_crop_size_width: 224
+    min_crop_size_height: 224
+    max_crop_size_height: 224
+    check_scale: 32
 
 loss:
   category: "composite_loss"
@@ -57,9 +58,9 @@ loss:
     - loss_category: "classification"
       loss_weight: 1.0
       classification:
-        name: "binary_cross_entropy"
-        binary_cross_entropy:
-          reduction: "batch_mean"
+        name: "cross_entropy"
+        cross_entropy:
+          label_smoothing: 0.1
     - loss_category: "neural_augmentation"
       loss_weight: 1.0
       neural_augmentation:
@@ -77,23 +78,26 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 10
+  max_epochs: 30
   warmup_iterations: 500
   warmup_init_lr: 1.e-6
   cosine:
-    max_lr: 0.00001
-    min_lr: 0.000001
+    max_lr: 0.00003
+    min_lr: 0.000003
 
 model:
   activation_checkpointing: true
-  # The number of classes in pre-trained model are 24320 while COCO has 80 classes.
-  # so, we exclude the classifier while loading the pre-trained weights
+  # during finetuning, we need to skip loading the classifier from a pre-trained model
+  # because the number of classes in down-stream task and pre-training are different.
   resume_exclude_scopes: [ "classifier" ]
   classification:
-    name: "vit"
-    n_classes: 353
-    pretrained: /ML-A100/team/mm/models/vit_base.pt
-    vit:
+    name: "openvit"
+    n_classes: 200
+    # Initalize the model with a pre-trained model and finetune it.
+    # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
+    # and replace the 'pretrained' with the fine-tuned model path.
+    #pretrained: None
+    openvit:
       mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
@@ -115,10 +119,10 @@ ema:
   momentum: 0.0005
 
 stats:
-  train: [ "loss" ]
-  val: [ "loss" , "multiclass_classification_pr(pred=logits)"]
-  checkpoint_metric: "multiclass_classification_pr(pred=logits).macro"
+  train: ["loss"]
+  val: [ "loss", "top1", "top5" ]
+  checkpoint_metric: "top1.logits"
   checkpoint_metric_max: true
-  metrics:
-    multiclass_classification_pr:
-      suppress_warnings: true
+
+ddp:
+  find_unused_params: true

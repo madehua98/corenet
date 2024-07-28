@@ -107,8 +107,8 @@ class BaseSegHead(BaseAnyNNModel):
                 self.upsample_seg_out.scale_factor = None
                 self.upsample_seg_out.size = mask_size
 
-            out = self.upsample_seg_out(out)
 
+            out = self.upsample_seg_out(out)              # torch.Size([2, 104, 128, 128])
         if self.aux_head is not None and self.training:
             aux_out = self.forward_aux_head(enc_out=enc_out)
             return out, aux_out

@@ -1,0 +1,127 @@
+nohup: ignoring input
+2024-07-27 09:14:37 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/vit_base.pt
+2024-07-27 09:14:39 - [32m[1mINFO   [0m - Trainable parameters: ['cls_token', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_emb.0.block.conv.weight', 'patch_emb.0.block.norm.weight', 'patch_emb.0.block.norm.bias', 'patch_emb.1.block.conv.weight', 'patch_emb.1.block.norm.weight', 'patch_emb.1.block.norm.bias', 'patch_emb.2.block.conv.weight', 'patch_emb.2.block.conv.bias', 'post_transformer_norm.weight', 'post_transformer_norm.bias', 'transformer.0.pre_norm_mha.0.weight', 'transformer.0.pre_norm_mha.0.bias', 'transformer.0.pre_norm_mha.1.qkv_proj.weight', 'transformer.0.pre_norm_mha.1.qkv_proj.bias', 'transformer.0.pre_norm_mha.1.out_proj_attn.weight', 'transformer.0.pre_norm_mha.1.out_proj_attn.bias', 'transformer.0.pre_norm_ffn.0.weight', 'transformer.0.pre_norm_ffn.0.bias', 'transformer.0.pre_norm_ffn.1.weight', 'transformer.0.pre_norm_ffn.1.bias', 'transformer.0.pre_norm_ffn.4.weight', 'transformer.0.pre_norm_ffn.4.bias', 'transformer.1.pre_norm_mha.0.weight', 'transformer.1.pre_norm_mha.0.bias', 'transformer.1.pre_norm_mha.1.qkv_proj.weight', 'transformer.1.pre_norm_mha.1.qkv_proj.bias', 'transformer.1.pre_norm_mha.1.out_proj_attn.weight', 'transformer.1.pre_norm_mha.1.out_proj_attn.bias', 'transformer.1.pre_norm_ffn.0.weight', 'transformer.1.pre_norm_ffn.0.bias', 'transformer.1.pre_norm_ffn.1.weight', 'transformer.1.pre_norm_ffn.1.bias', 'transformer.1.pre_norm_ffn.4.weight', 'transformer.1.pre_norm_ffn.4.bias', 'transformer.2.pre_norm_mha.0.weight', 'transformer.2.pre_norm_mha.0.bias', 'transformer.2.pre_norm_mha.1.qkv_proj.weight', 'transformer.2.pre_norm_mha.1.qkv_proj.bias', 'transformer.2.pre_norm_mha.1.out_proj_attn.weight', 'transformer.2.pre_norm_mha.1.out_proj_attn.bias', 'transformer.2.pre_norm_ffn.0.weight', 'transformer.2.pre_norm_ffn.0.bias', 'transformer.2.pre_norm_ffn.1.weight', 'transformer.2.pre_norm_ffn.1.bias', 'transformer.2.pre_norm_ffn.4.weight', 'transformer.2.pre_norm_ffn.4.bias', 'transformer.3.pre_norm_mha.0.weight', 'transformer.3.pre_norm_mha.0.bias', 'transformer.3.pre_norm_mha.1.qkv_proj.weight', 'transformer.3.pre_norm_mha.1.qkv_proj.bias', 'transformer.3.pre_norm_mha.1.out_proj_attn.weight', 'transformer.3.pre_norm_mha.1.out_proj_attn.bias', 'transformer.3.pre_norm_ffn.0.weight', 'transformer.3.pre_norm_ffn.0.bias', 'transformer.3.pre_norm_ffn.1.weight', 'transformer.3.pre_norm_ffn.1.bias', 'transformer.3.pre_norm_ffn.4.weight', 'transformer.3.pre_norm_ffn.4.bias', 'transformer.4.pre_norm_mha.0.weight', 'transformer.4.pre_norm_mha.0.bias', 'transformer.4.pre_norm_mha.1.qkv_proj.weight', 'transformer.4.pre_norm_mha.1.qkv_proj.bias', 'transformer.4.pre_norm_mha.1.out_proj_attn.weight', 'transformer.4.pre_norm_mha.1.out_proj_attn.bias', 'transformer.4.pre_norm_ffn.0.weight', 'transformer.4.pre_norm_ffn.0.bias', 'transformer.4.pre_norm_ffn.1.weight', 'transformer.4.pre_norm_ffn.1.bias', 'transformer.4.pre_norm_ffn.4.weight', 'transformer.4.pre_norm_ffn.4.bias', 'transformer.5.pre_norm_mha.0.weight', 'transformer.5.pre_norm_mha.0.bias', 'transformer.5.pre_norm_mha.1.qkv_proj.weight', 'transformer.5.pre_norm_mha.1.qkv_proj.bias', 'transformer.5.pre_norm_mha.1.out_proj_attn.weight', 'transformer.5.pre_norm_mha.1.out_proj_attn.bias', 'transformer.5.pre_norm_ffn.0.weight', 'transformer.5.pre_norm_ffn.0.bias', 'transformer.5.pre_norm_ffn.1.weight', 'transformer.5.pre_norm_ffn.1.bias', 'transformer.5.pre_norm_ffn.4.weight', 'transformer.5.pre_norm_ffn.4.bias', 'transformer.6.pre_norm_mha.0.weight', 'transformer.6.pre_norm_mha.0.bias', 'transformer.6.pre_norm_mha.1.qkv_proj.weight', 'transformer.6.pre_norm_mha.1.qkv_proj.bias', 'transformer.6.pre_norm_mha.1.out_proj_attn.weight', 'transformer.6.pre_norm_mha.1.out_proj_attn.bias', 'transformer.6.pre_norm_ffn.0.weight', 'transformer.6.pre_norm_ffn.0.bias', 'transformer.6.pre_norm_ffn.1.weight', 'transformer.6.pre_norm_ffn.1.bias', 'transformer.6.pre_norm_ffn.4.weight', 'transformer.6.pre_norm_ffn.4.bias', 'transformer.7.pre_norm_mha.0.weight', 'transformer.7.pre_norm_mha.0.bias', 'transformer.7.pre_norm_mha.1.qkv_proj.weight', 'transformer.7.pre_norm_mha.1.qkv_proj.bias', 'transformer.7.pre_norm_mha.1.out_proj_attn.weight', 'transformer.7.pre_norm_mha.1.out_proj_attn.bias', 'transformer.7.pre_norm_ffn.0.weight', 'transformer.7.pre_norm_ffn.0.bias', 'transformer.7.pre_norm_ffn.1.weight', 'transformer.7.pre_norm_ffn.1.bias', 'transformer.7.pre_norm_ffn.4.weight', 'transformer.7.pre_norm_ffn.4.bias', 'transformer.8.pre_norm_mha.0.weight', 'transformer.8.pre_norm_mha.0.bias', 'transformer.8.pre_norm_mha.1.qkv_proj.weight', 'transformer.8.pre_norm_mha.1.qkv_proj.bias', 'transformer.8.pre_norm_mha.1.out_proj_attn.weight', 'transformer.8.pre_norm_mha.1.out_proj_attn.bias', 'transformer.8.pre_norm_ffn.0.weight', 'transformer.8.pre_norm_ffn.0.bias', 'transformer.8.pre_norm_ffn.1.weight', 'transformer.8.pre_norm_ffn.1.bias', 'transformer.8.pre_norm_ffn.4.weight', 'transformer.8.pre_norm_ffn.4.bias', 'transformer.9.pre_norm_mha.0.weight', 'transformer.9.pre_norm_mha.0.bias', 'transformer.9.pre_norm_mha.1.qkv_proj.weight', 'transformer.9.pre_norm_mha.1.qkv_proj.bias', 'transformer.9.pre_norm_mha.1.out_proj_attn.weight', 'transformer.9.pre_norm_mha.1.out_proj_attn.bias', 'transformer.9.pre_norm_ffn.0.weight', 'transformer.9.pre_norm_ffn.0.bias', 'transformer.9.pre_norm_ffn.1.weight', 'transformer.9.pre_norm_ffn.1.bias', 'transformer.9.pre_norm_ffn.4.weight', 'transformer.9.pre_norm_ffn.4.bias', 'transformer.10.pre_norm_mha.0.weight', 'transformer.10.pre_norm_mha.0.bias', 'transformer.10.pre_norm_mha.1.qkv_proj.weight', 'transformer.10.pre_norm_mha.1.qkv_proj.bias', 'transformer.10.pre_norm_mha.1.out_proj_attn.weight', 'transformer.10.pre_norm_mha.1.out_proj_attn.bias', 'transformer.10.pre_norm_ffn.0.weight', 'transformer.10.pre_norm_ffn.0.bias', 'transformer.10.pre_norm_ffn.1.weight', 'transformer.10.pre_norm_ffn.1.bias', 'transformer.10.pre_norm_ffn.4.weight', 'transformer.10.pre_norm_ffn.4.bias', 'transformer.11.pre_norm_mha.0.weight', 'transformer.11.pre_norm_mha.0.bias', 'transformer.11.pre_norm_mha.1.qkv_proj.weight', 'transformer.11.pre_norm_mha.1.qkv_proj.bias', 'transformer.11.pre_norm_mha.1.out_proj_attn.weight', 'transformer.11.pre_norm_mha.1.out_proj_attn.bias', 'transformer.11.pre_norm_ffn.0.weight', 'transformer.11.pre_norm_ffn.0.bias', 'transformer.11.pre_norm_ffn.1.weight', 'transformer.11.pre_norm_ffn.1.bias', 'transformer.11.pre_norm_ffn.4.weight', 'transformer.11.pre_norm_ffn.4.bias', 'classifier.weight', 'classifier.bias', 'pos_embed.pos_embed.pos_embed']
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - [36mModel[0m
+VisionTransformer(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_emb): Sequential(
+    (0): Conv2d(3, 192, kernel_size=(4, 4), stride=(4, 4), padding=(1, 1), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (1): Conv2d(192, 192, kernel_size=(2, 2), stride=(2, 2), bias=False, normalization=BatchNorm2d, activation=GELU)
+    (2): Conv2d(192, 768, kernel_size=(2, 2), stride=(2, 2))
+  )
+  (post_transformer_norm): LayerNormFP32((768,), eps=1e-06, elementwise_affine=True)
+  (transformer): Sequential(
+    (0): FlashTransformerEncoder
+    (1): FlashTransformerEncoder
+    (2): FlashTransformerEncoder
+    (3): FlashTransformerEncoder
+    (4): FlashTransformerEncoder
+    (5): FlashTransformerEncoder
+    (6): FlashTransformerEncoder
+    (7): FlashTransformerEncoder
+    (8): FlashTransformerEncoder
+    (9): FlashTransformerEncoder
+    (10): FlashTransformerEncoder
+    (11): FlashTransformerEncoder
+  )
+  (classifier): LinearLayer(in_features=768, out_features=174, bias=True, channel_first=False)
+  (pos_embed): LearnablePositionalEmbedding(num_embeddings=196, embedding_dim=768, padding_idx=None, sequence_first=False)
+  (emb_dropout): Dropout(p=0.0, inplace=False)
+)
+[31m=================================================================[0m
+                  VisionTransformer Summary
+[31m=================================================================[0m
+Total parameters     =   86.089 M
+Total trainable parameters =   86.089 M
+
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 86.089M                | 17.013G    |
+|  cls_token                           |  (1, 1, 768)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_emb                           |  0.748M                |  0.262G    |
+|   patch_emb.0.block                  |   9.6K                 |   30.106M  |
+|    patch_emb.0.block.conv            |    9.216K              |    28.901M |
+|    patch_emb.0.block.norm            |    0.384K              |    1.204M  |
+|   patch_emb.1.block                  |   0.148M               |   0.116G   |
+|    patch_emb.1.block.conv            |    0.147M              |    0.116G  |
+|    patch_emb.1.block.norm            |    0.384K              |    0.301M  |
+|   patch_emb.2.block.conv             |   0.591M               |   0.116G   |
+|    patch_emb.2.block.conv.weight     |    (768, 192, 2, 2)    |            |
+|    patch_emb.2.block.conv.bias       |    (768,)              |            |
+|  post_transformer_norm               |  1.536K                |  0.756M    |
+|   post_transformer_norm.weight       |   (768,)               |            |
+|   post_transformer_norm.bias         |   (768,)               |            |
+|  transformer                         |  85.054M               |  16.75G    |
+|   transformer.0                      |   7.088M               |   1.396G   |
+|    transformer.0.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.0.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.1                      |   7.088M               |   1.396G   |
+|    transformer.1.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.1.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.2                      |   7.088M               |   1.396G   |
+|    transformer.2.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.2.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.3                      |   7.088M               |   1.396G   |
+|    transformer.3.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.3.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.4                      |   7.088M               |   1.396G   |
+|    transformer.4.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.4.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.5                      |   7.088M               |   1.396G   |
+|    transformer.5.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.5.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.6                      |   7.088M               |   1.396G   |
+|    transformer.6.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.6.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.7                      |   7.088M               |   1.396G   |
+|    transformer.7.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.7.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.8                      |   7.088M               |   1.396G   |
+|    transformer.8.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.8.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.9                      |   7.088M               |   1.396G   |
+|    transformer.9.pre_norm_mha        |    2.364M              |    0.466G  |
+|    transformer.9.pre_norm_ffn        |    4.724M              |    0.93G   |
+|   transformer.10                     |   7.088M               |   1.396G   |
+|    transformer.10.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.10.pre_norm_ffn       |    4.724M              |    0.93G   |
+|   transformer.11                     |   7.088M               |   1.396G   |
+|    transformer.11.pre_norm_mha       |    2.364M              |    0.466G  |
+|    transformer.11.pre_norm_ffn       |    4.724M              |    0.93G   |
+|  classifier                          |  0.134M                |  0.134M    |
+|   classifier.weight                  |   (174, 768)           |            |
+|   classifier.bias                    |   (174,)               |            |
+|  pos_embed.pos_embed                 |  0.151M                |  0         |
+|   pos_embed.pos_embed.pos_embed      |   (1, 1, 196, 768)     |            |
+2024-07-27 09:14:39 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-27 09:14:39 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.noise.max_fn', 'transformer.11.drop_path', 'transformer.8.drop_path', 'transformer.0.drop_path', 'neural_augmentor.contrast.min_fn', 'neural_augmentor.brightness.max_fn', 'transformer.4.drop_path', 'transformer.10.drop_path', 'neural_augmentor.noise.min_fn', 'neural_augmentor.contrast', 'transformer.2.drop_path', 'transformer.3.drop_path', 'neural_augmentor.contrast.max_fn', 'neural_augmentor', 'neural_augmentor.brightness.min_fn', 'transformer.1.drop_path', 'transformer.7.drop_path', 'transformer.5.drop_path', 'neural_augmentor.brightness', 'neural_augmentor.noise', 'transformer.9.drop_path', 'transformer.6.drop_path'}
+2024-07-27 09:14:39 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 25, 'aten::gelu': 14, 'aten::scaled_dot_product_attention': 12, 'aten::sub': 1})
+[31m=================================================================[0m
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-07-27 09:14:39 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/catlip_vit_base/ingredient_101/train
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 8 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Terminated

@@ -156,69 +156,6 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
     #         "MbConv_depths": [2, 4, 1],
     #         "MbConv_stem_width": 128,
     #     })
-    elif mode == "large":
-        foodv = {
-            "embed_dim": 1024,
-            "n_transformer_layers": 24,
-            "n_attn_heads": 16,
-            "ffn_dim": 1024 * 4,
-            "norm_layer": norm_layer,
-            "pos_emb_drop_p": 0.0,
-            "attn_dropout": 0.0,
-            "ffn_dropout": 0.0,
-            "dropout": dropout,
-        }
-    elif mode == "large-256":
-        foodv = {
-            "embed_dim": 1024,
-            "n_transformer_layers": 24,
-            "n_attn_heads": 16,
-            "ffn_dim": 1024 * 4,
-            "norm_layer": norm_layer,
-            "pos_emb_drop_p": 0.0,
-            "attn_dropout": 0.0,
-            "ffn_dropout": 0.0,
-            "dropout": dropout,
-        }
-    elif mode == "large-336":
-        foodv = {
-            "embed_dim": 1024,
-            "n_transformer_layers": 24,
-            "n_attn_heads": 16,
-            "ffn_dim": 1024 * 4,
-            "norm_layer": norm_layer,
-            "pos_emb_drop_p": 0.0,
-            "attn_dropout": 0.0,
-            "ffn_dropout": 0.0,
-            "dropout": dropout,
-        }
-    elif mode == "large-384":
-        foodv = {
-            "embed_dim": 1024,
-            "n_transformer_layers": 24,
-            "n_attn_heads": 16,
-            "ffn_dim": 1024 * 4,
-            "norm_layer": norm_layer,
-            "pos_emb_drop_p": 0.0,
-            "attn_dropout": 0.0,
-            "ffn_dropout": 0.0,
-            "dropout": dropout,
-        }
-    elif mode == "large-256":
-        foodv = {
-            "embed_dim": 1024,
-            "n_transformer_layers": 24,
-            "n_attn_heads": 16,
-            "ffn_dim": 1024 * 4,
-            "norm_layer": norm_layer,
-            "pos_emb_drop_p": 0.0,
-            "attn_dropout": 0.0,
-            "ffn_dropout": 0.0,
-            "dropout": dropout,
-        }
-
-
-
     else:
         logger.error("Got unsupported ViT configuration: {}".format(mode))
     return ViTamin_config

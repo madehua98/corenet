@@ -10,7 +10,7 @@ from corenet.data.datasets import DATASET_REGISTRY
 from corenet.data.datasets.segmentation.base_segmentation import (
     BaseImageSegmentationDataset,
 )
-
+from PIL import Image
 
 @DATASET_REGISTRY.register(name="foodseg", type="segmentation")
 class FoodsegDataset(BaseImageSegmentationDataset):
@@ -30,6 +30,26 @@ class FoodsegDataset(BaseImageSegmentationDataset):
             self.ids = [line.strip() for line in lines]
         self.ignore_label = 255
         self.background_idx = 0
+
+        # self.img_dir = os.path.join(self.root, "Images/img_dir/{}".format('train1'))
+        # self.ann_dir = os.path.join(self.root, "Images/ann_dir/{}".format('train1'))
+
+    def read_image_pil(self, image_path):
+        # Read the image using cv2
+        image = cv2.imread(image_path)
+        # Convert the image from BGR (OpenCV format) to RGB (PIL format)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        # Convert the image from NumPy array to PIL image
+        pil_image = Image.fromarray(image)
+        return pil_image
+
+
+    def read_mask_pil(self, mask_path):
+        # Read the mask using cv2
+        mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+        # Convert the mask from NumPy array to PIL image
+        pil_mask = Image.fromarray(mask)
+        return pil_mask
 
     def __getitem__(
         self, sample_size_and_index: Tuple[int, int, int], *args, **kwargs
@@ -59,7 +79,7 @@ class FoodsegDataset(BaseImageSegmentationDataset):
         rgb_img = self.read_image_pil(os.path.join(self.img_dir, path))
 
         mask_file = os.path.join(self.ann_dir, path.replace('.jpg', '.png'))
-        mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
+        mask = self.read_mask_pil(mask_file)
         data = {"image": rgb_img, "mask": None if self.is_evaluation else mask}
         data = _transform(data)
 

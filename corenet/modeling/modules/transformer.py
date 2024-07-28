@@ -73,7 +73,9 @@ class TransformerEncoder(BaseModule):
                     opts, "common.enable_coreml_compatible_module", False
                 ),
             )
-
+        a =  get_normalization_layer(
+                opts=opts, norm_type=transformer_norm_layer, num_features=embed_dim
+            )
         self.pre_norm_mha = nn.Sequential(
             get_normalization_layer(
                 opts=opts, norm_type=transformer_norm_layer, num_features=embed_dim

@@ -9,18 +9,18 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
+  accum_freq: 2
 
 dataset:
-  root_train: "/mnt/vision_datasets/coco"
-  root_val: "/mnt/vision_datasets/coco"
+  root: "/ML-A100/team/mm/models/food101/food101"
   # effective batch size is 128 (32 * 4 A100 80 GB GPU)
-  train_batch_size0: 32
-  val_batch_size0: 50
-  eval_batch_size0: 50
-  workers: -1 # use all CPUs
+  train_batch_size0: 16
+  val_batch_size0: 16
+  eval_batch_size0: 16
+  workers: 64 # use all CPUs
   persistent_workers: true
   pin_memory: true
-  name: "coco"
+  name: "food172_ingredient"
   category: "classification"
 
 image_augmentation:
@@ -33,22 +33,22 @@ image_augmentation:
   # evaluation related augmentations
   resize:
     enable: true
-    size: 512
+    size: 232
     interpolation: "bilinear"
   center_crop:
     enable: true
-    size: 512
+    size: 224
 
 sampler:
   name: "variable_batch_sampler"
   vbs:
-    crop_size_width: 512
-    crop_size_height: 512
+    crop_size_width: 224
+    crop_size_height: 224
     max_n_scales: 25
-    min_crop_size_width: 256
-    max_crop_size_width: 768
-    min_crop_size_height: 256
-    max_crop_size_height: 768
+    min_crop_size_width: 128
+    max_crop_size_width: 320
+    min_crop_size_height: 128
+    max_crop_size_height: 320
     check_scale: 16
 
 loss:
@@ -77,7 +77,7 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 10
+  max_epochs: 30
   warmup_iterations: 500
   warmup_init_lr: 1.e-6
   cosine:
@@ -90,10 +90,10 @@ model:
   # so, we exclude the classifier while loading the pre-trained weights
   resume_exclude_scopes: [ "classifier" ]
   classification:
-    name: "vit"
-    n_classes: 80
-    pretrained: https://docs-assets.developer.apple.com/ml-research/models/corenet/v0.1.0/catlip/pretrained_models/vit_base.pt
-    vit:
+    name: "foodv"
+    n_classes: 319
+    pretrained: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt
+    foodv:
       mode: "base"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
@@ -111,7 +111,7 @@ model:
     linear_init_std_dev: 0.02
   
 ema:
-  enable: true
+  enable: false
   momentum: 0.0005
 
 stats:

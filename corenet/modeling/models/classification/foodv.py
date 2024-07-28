@@ -455,7 +455,7 @@ def trunc_normal_(tensor, mean=0., std=1., a=-2., b=2.):
         return _trunc_normal_(tensor, mean, std, a, b)
 
 @MODEL_REGISTRY.register(name="foodv", type="classification")
-class ViTamin(BaseImageEncoder):
+class Foodv(BaseImageEncoder):
     dynamic_img_size: Final[bool]
 
     def __init__(
@@ -547,7 +547,15 @@ class ViTamin(BaseImageEncoder):
         self.mm_dense_connector_type = ViTamin_config["mm_dense_connector_type"]
         
         self.use_kl = False
-        
+        self.model_conf_dict = {
+            "conv1": {"in": 3, "out": self.block1_embed_dim},
+            "layer1": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+            "layer2": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+            "layer3": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+            "layer4": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+            "layer5": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+            "exp_before_cls": {"in": self.block1_embed_dim, "out": self.block1_embed_dim},
+        }
         embed_args = {}
         if self.dynamic_img_size:
             # flatten deferred until after pos embed
@@ -677,7 +685,7 @@ class ViTamin(BaseImageEncoder):
 
     @classmethod
     def add_arguments(cls, parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
-        if cls == ViTamin:
+        if cls == Foodv:
             group = parser.add_argument_group(cls.__name__)
             group.add_argument(
                 "--model.classification.foodv.mode",
@@ -833,26 +841,28 @@ class ViTamin(BaseImageEncoder):
         x = self.norm(x)
         return x
 
-    def forward_features_dense_connector(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.patch_embed(x)
-        if self.is_pos_embed:
-            x = self._pos_embed(x)
-        x = self.patch_drop(x)
-        x = self.norm_pre(x)
-        all_hidden_states = []
-        if self.grad_checkpointing and not torch.jit.is_scripting():
-            x = checkpoint_seq(self.blocks, x)
-        else:
-            for block in self.blocks:
-                x = block(x)
-                all_hidden_states.append(x)
-            x = self.pool_stage3_stage4(x)
+    # def forward_features_dense_connector(self, x: torch.Tensor) -> torch.Tensor:
+    #     x = self.patch_embed(x)
+    #     if self.is_pos_embed:
+    #         x = self._pos_embed(x)
+    #     x = self.patch_drop(x)
+    #     x = self.norm_pre(x)
+    #     all_hidden_states = []
+    #     if self.grad_checkpointing and not torch.jit.is_scripting():
+    #         x = checkpoint_seq(self.blocks, x)
+    #     else:
+    #         average_stage3 = torch.zeros()
+    #         for block in self.blocks:
+    #             x = block(x)
+    #             average_x
+    #             all_hidden_states.append(x)
+    #         x = self.pool_stage3_stage4(x)
 
-            for block1 in self.blocks1:
-                x = block1(x)
-                all_hidden_states.append(x)
-        x = self.norm(x)
-        return x, all_hidden_states
+    #         for block1 in self.blocks1:
+    #             x = block1(x)
+    #             all_hidden_states.append(x)
+    #     x = self.norm(x)
+    #     return x, all_hidden_states
 
     def forward_classifier(self, x: torch.Tensor, pre_logits: bool = False) -> torch.Tensor:
         if self.attn_pool is not None:
@@ -865,25 +875,71 @@ class ViTamin(BaseImageEncoder):
         x = self.classifier_drop(x)
         return x if pre_logits else self.classifier(x)
 
+    # def forward(self, x: torch.Tensor) -> torch.Tensor:
+    #     if self.neural_augmentor is not None:
+    #         out_dict = {"augmented_tensor": None}
+    #         if self.training and self.neural_augmentor is not None:
+    #             x = self.neural_augmentor(x)
+    #             out_dict.update({"augmented_tensor": x})
+    #         x, all_hidden_states = self.forward_features_dense_connector(x)
+    #         if self.mm_dense_connector_type == 'sci':
+    #             image_features_dc = self.dense_connnector.dense_connector_sci(x, all_hidden_states)
+    #             image_features_dc = self.pool_stage3_stage4(image_features_dc)
+    #             x = torch.cat((x, image_features_dc), dim=-2)
+
+    #         elif self.mm_dense_connector_type == 'dci':
+    #             image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
+    #             image_features_dc1 = self.pool_stage3_stage4(image_features_dc1)
+    #             x = torch.cat((image_features_dc1, image_features_dc2), dim=-2)
+    #         x = self.mlp(x)
+    #         logits = self.forward_classifier(x)
+    #         out_dict.update({"logits": logits})
+    #         return out_dict
+    #     else:
+    #         logits, _ = self.forward_classifier(x)
+    #         return logits
+
+    def forward_features_dense_connector(self, x: torch.Tensor) -> torch.Tensor:
+        x = self.patch_embed(x)
+        if self.is_pos_embed:
+            x = self._pos_embed(x)
+        x = self.patch_drop(x)
+        x = self.norm_pre(x)
+
+        if self.grad_checkpointing and not torch.jit.is_scripting():
+            x = checkpoint_seq(self.blocks, x)
+        else:
+            sum_x = torch.zeros_like(x)  # 初始化为和x相同形状和device的全0张量
+            count = 0
+            for block in self.blocks:
+                x = block(x)
+                sum_x += x  # 累计求和
+                count += 1  # 统计次数
+                
+            average_x = sum_x / count  # 计算均值
+            x = self.pool_stage3_stage4(x)
+
+            sum_x1 = torch.zeros_like(x)  # 第二阶段也同样处理
+            count1 = 0
+            for block1 in self.blocks1:
+                x = block1(x)
+                sum_x1 += x
+                count1 += 1
+                
+            average_x1 = sum_x1 / count1  # 计算第二个阶段的均值
+
+        x = self.norm(x)
+        return x, average_x, average_x1
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         if self.neural_augmentor is not None:
             out_dict = {"augmented_tensor": None}
             if self.training and self.neural_augmentor is not None:
                 x = self.neural_augmentor(x)
                 out_dict.update({"augmented_tensor": x})
-            x, all_hidden_states = self.forward_features_dense_connector(x)
-            if self.mm_dense_connector_type == 'sci':
-                image_features_dc = self.dense_connnector.dense_connector_sci(x, all_hidden_states)
-                image_features_dc = self.pool_stage3_stage4(image_features_dc)
-                #image_features_dc = self.block_to_block1(image_features_dc)
-                x = torch.cat((x, image_features_dc), dim=-2)
-
-            elif self.mm_dense_connector_type == 'dci':
-                image_features_dc1, image_features_dc2 = self.dense_connnector.dense_connector_dci(x, all_hidden_states)
-                image_features_dc1 = self.pool_stage3_stage4(image_features_dc1)
-                #image_features_dc1 = self.block_to_block1(image_features_dc1)
-                x = torch.cat((image_features_dc1, image_features_dc2), dim=-2)
-                x = self.dense_connnector.dense_connector(image_features_dc1, image_features_dc2, mm_dense_connector_type=self.mm_dense_connector_type)
+            _, average_stage3, average_stage4 = self.forward_features_dense_connector(x)
+            average_stage3 = self.pool_stage3_stage4(average_stage3)
+            x = torch.cat((average_stage3, average_stage4), dim=-2)
             x = self.mlp(x)
             logits = self.forward_classifier(x)
             out_dict.update({"logits": logits})
@@ -892,6 +948,35 @@ class ViTamin(BaseImageEncoder):
             logits, _ = self.forward_classifier(x)
             return logits
 
+    def extract_end_points_all(
+        self,
+        x: Tensor,
+        use_l5: Optional[bool] = True,
+        use_l5_exp: Optional[bool] = False,
+    ) -> Dict[str, Tensor]:
+
+        out_dict = {}
+        if self.training and self.neural_augmentor is not None:
+            x = self.neural_augmentor(x)
+            out_dict["augmented_tensor"] = x
+
+        _, out_dict_forward = self.forward_features_dense_connector(x)
+        x = out_dict_forward[-1]
+        x = x.transpose(1, 2)
+        n, c, h_w = x.shape
+        h = w = int(h_w ** 0.5)
+        x = x.view(n, c, h, w)
+        out_dict["out_l1"] = None
+        out_dict["out_l2"] = None
+        out_dict["out_l3"] = None
+        out_dict["out_l4"] = None
+        if use_l5_exp:
+            out_dict["out_l5"] = None
+            out_dict["out_l5_exp"] = x
+        else:
+            out_dict["out_l5"] = x
+            out_dict["out_l5_exp"] = None
+        return out_dict
 
 
 def _create_vision_transformer(variant, pretrained=False, **kwargs):

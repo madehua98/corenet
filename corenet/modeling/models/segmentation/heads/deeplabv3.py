@@ -146,9 +146,9 @@ class DeeplabV3(BaseSegHead):
             with adjusted strides and dilation rates to (1) increase the effective receptive field, and (2) adjust
             the feature map size to produce high-quality segmentation outputs.
         """
-        x = enc_out[self.encoder_level5_output_key]
-        x = self.aspp(x)
-        x = self.classifier(x)
+        x = enc_out[self.encoder_level5_output_key]         # torch.Size([2, 512, 16, 16])
+        x = self.aspp(x)                                    # torch.Size([2, 512, 16, 16])
+        x = self.classifier(x)               # torch.Size([2, 104, 16, 16])
         return x
 
 

@@ -131,7 +131,8 @@ class BaseImageSegmentationDataset(BaseImageDataset):
         Returns:
             An instance of `corenet.data.transforms.image_pil.BaseTransformation.`
         """
-        first_aug = T.RandomShortSizeResize(opts=self.opts)
+        #first_aug = T.RandomShortSizeResize(opts=self.opts)
+        first_aug = T.Resize(opts=self.opts)
         aug_list = [
             T.RandomHorizontalFlip(opts=self.opts),
             T.RandomCrop(opts=self.opts, size=size, ignore_idx=self.ignore_label),

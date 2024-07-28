@@ -155,7 +155,7 @@ def get_configuration(opts: argparse.Namespace) -> Dict:
             "global_pool": 'avg',
             "embed_dim": 512,
             "block1_embed_dim": 1024,
-            "depth": 7,
+            "depth": 7,           
             "num_heads": 16,
             "block1_num_heads": 16,
             "mlp_ratio": 2.0,

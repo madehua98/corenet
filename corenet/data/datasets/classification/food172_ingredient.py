@@ -32,6 +32,7 @@ class food172ingredient_lassification(BaseImageDataset):
         super().__init__(opts=opts, *args, **kwargs)
         split = "train" if self.is_training else "test"
         #split = "train"
+        self.root = getattr(opts, f"dataset.root")
         ann_file = os.path.join(
             self.root, "recognition/{}_IngreLabel.jsonl".format(split)
         )
@@ -110,8 +111,14 @@ class food172ingredient_lassification(BaseImageDataset):
         target = torch.zeros(self.n_classes, dtype=torch.long)
         for ingredient in self.image_ingredient[img_path]:
             target[ingredient] = 1
-        img_path1 = self.img_dir + img_path
-        input_img = self.read_image_pil(img_path1)
+
+        if img_path.startswith('/'):
+            # 直接将self.img_dir和img_path拼接
+            full_path = self.img_dir + img_path
+        else:
+            # 使用os.path.join()拼接路径
+            full_path = os.path.join(self.img_dir, img_path)
+        input_img = self.read_image_pil(full_path)
 
         transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
 

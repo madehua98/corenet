@@ -157,7 +157,6 @@ class Statistics(object):
                 return computed_metric
             else:
                 return None
-
         return None
 
     def iter_summary(
