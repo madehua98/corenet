@@ -13,7 +13,7 @@ common:
   grad_clip: 1.0
   save_all_checkpoints: true
   save_interval_freq: 1000000
-  accum_freq: 4
+  accum_freq: 8
 
 dataset:
   # root_train does not matter for img_text_tar dataset because dataset information is expected
@@ -21,7 +21,7 @@ dataset:
   root_train: ""
   disable_val: true
   # effective batch size is 65k (1024 images per GPU * 8 A100 40 GB GPUs * 8 Nodes)
-  train_batch_size0: 200
+  train_batch_size0: 100
   workers: 64 # use all CPUs  
   persistent_workers: true
   pin_memory: true
@@ -92,10 +92,10 @@ optim:
 
 scheduler:
   is_iteration_based: true
-  max_iterations: 100000
+  max_iterations: 200000
   name: cosine
   warmup_init_lr: 1.e-06
-  warmup_iterations: 10000
+  warmup_iterations: 20000
   cosine:
     max_lr: 0.001
     min_lr: 0.00001

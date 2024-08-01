@@ -1,0 +1,1281 @@
+nohup: ignoring input
+2024-08-01 11:39:29 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+base
+dci
+2024-08-01 11:39:36 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt
+2024-08-01 11:39:36 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-01 11:39:37 - [32m[1mINFO   [0m - Trainable parameters: ['aspp.aspp_layer.convs.0.block.conv.weight', 'aspp.aspp_layer.convs.0.block.norm.weight', 'aspp.aspp_layer.convs.0.block.norm.bias', 'aspp.aspp_layer.convs.1.block.conv.weight', 'aspp.aspp_layer.convs.1.block.norm.weight', 'aspp.aspp_layer.convs.1.block.norm.bias', 'aspp.aspp_layer.convs.2.block.conv.weight', 'aspp.aspp_layer.convs.2.block.norm.weight', 'aspp.aspp_layer.convs.2.block.norm.bias', 'aspp.aspp_layer.convs.3.block.conv.weight', 'aspp.aspp_layer.convs.3.block.norm.weight', 'aspp.aspp_layer.convs.3.block.norm.bias', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.conv.weight', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.weight', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.bias', 'aspp.aspp_layer.project.block.conv.weight', 'aspp.aspp_layer.project.block.norm.weight', 'aspp.aspp_layer.project.block.norm.bias', 'classifier.block.conv.weight', 'classifier.block.conv.bias']
+2024-08-01 11:39:37 - [32m[1mINFO   [0m - Trainable parameters: ['encoder.pos_embed', 'encoder.neural_augmentor.brightness._low', 'encoder.neural_augmentor.brightness._high', 'encoder.neural_augmentor.contrast._low', 'encoder.neural_augmentor.contrast._high', 'encoder.neural_augmentor.noise._low', 'encoder.neural_augmentor.noise._high', 'encoder.patch_embed.backbone.stem.conv1.weight', 'encoder.patch_embed.backbone.stem.conv1.bias', 'encoder.patch_embed.backbone.stem.norm1.weight', 'encoder.patch_embed.backbone.stem.norm1.bias', 'encoder.patch_embed.backbone.stem.conv2.weight', 'encoder.patch_embed.backbone.stem.conv2.bias', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.weight', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.bias', 'encoder.patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.weight', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.bias', 'encoder.patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'encoder.patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'encoder.patch_embed.backbone.pool.proj.weight', 'encoder.patch_embed.backbone.pool.proj.bias', 'encoder.patch_embed.backbone.pool.norm.weight', 'encoder.patch_embed.backbone.pool.norm.bias', 'encoder.blocks.0.norm1.weight', 'encoder.blocks.0.norm1.bias', 'encoder.blocks.0.attn.qkv.weight', 'encoder.blocks.0.attn.qkv.bias', 'encoder.blocks.0.attn.proj.weight', 'encoder.blocks.0.attn.proj.bias', 'encoder.blocks.0.norm2.weight', 'encoder.blocks.0.norm2.bias', 'encoder.blocks.0.mlp.norm.weight', 'encoder.blocks.0.mlp.norm.bias', 'encoder.blocks.0.mlp.w0.weight', 'encoder.blocks.0.mlp.w0.bias', 'encoder.blocks.0.mlp.w1.weight', 'encoder.blocks.0.mlp.w1.bias', 'encoder.blocks.0.mlp.w2.weight', 'encoder.blocks.0.mlp.w2.bias', 'encoder.blocks.1.norm1.weight', 'encoder.blocks.1.norm1.bias', 'encoder.blocks.1.attn.qkv.weight', 'encoder.blocks.1.attn.qkv.bias', 'encoder.blocks.1.attn.proj.weight', 'encoder.blocks.1.attn.proj.bias', 'encoder.blocks.1.norm2.weight', 'encoder.blocks.1.norm2.bias', 'encoder.blocks.1.mlp.norm.weight', 'encoder.blocks.1.mlp.norm.bias', 'encoder.blocks.1.mlp.w0.weight', 'encoder.blocks.1.mlp.w0.bias', 'encoder.blocks.1.mlp.w1.weight', 'encoder.blocks.1.mlp.w1.bias', 'encoder.blocks.1.mlp.w2.weight', 'encoder.blocks.1.mlp.w2.bias', 'encoder.blocks.2.norm1.weight', 'encoder.blocks.2.norm1.bias', 'encoder.blocks.2.attn.qkv.weight', 'encoder.blocks.2.attn.qkv.bias', 'encoder.blocks.2.attn.proj.weight', 'encoder.blocks.2.attn.proj.bias', 'encoder.blocks.2.norm2.weight', 'encoder.blocks.2.norm2.bias', 'encoder.blocks.2.mlp.norm.weight', 'encoder.blocks.2.mlp.norm.bias', 'encoder.blocks.2.mlp.w0.weight', 'encoder.blocks.2.mlp.w0.bias', 'encoder.blocks.2.mlp.w1.weight', 'encoder.blocks.2.mlp.w1.bias', 'encoder.blocks.2.mlp.w2.weight', 'encoder.blocks.2.mlp.w2.bias', 'encoder.blocks.3.norm1.weight', 'encoder.blocks.3.norm1.bias', 'encoder.blocks.3.attn.qkv.weight', 'encoder.blocks.3.attn.qkv.bias', 'encoder.blocks.3.attn.proj.weight', 'encoder.blocks.3.attn.proj.bias', 'encoder.blocks.3.norm2.weight', 'encoder.blocks.3.norm2.bias', 'encoder.blocks.3.mlp.norm.weight', 'encoder.blocks.3.mlp.norm.bias', 'encoder.blocks.3.mlp.w0.weight', 'encoder.blocks.3.mlp.w0.bias', 'encoder.blocks.3.mlp.w1.weight', 'encoder.blocks.3.mlp.w1.bias', 'encoder.blocks.3.mlp.w2.weight', 'encoder.blocks.3.mlp.w2.bias', 'encoder.blocks.4.norm1.weight', 'encoder.blocks.4.norm1.bias', 'encoder.blocks.4.attn.qkv.weight', 'encoder.blocks.4.attn.qkv.bias', 'encoder.blocks.4.attn.proj.weight', 'encoder.blocks.4.attn.proj.bias', 'encoder.blocks.4.norm2.weight', 'encoder.blocks.4.norm2.bias', 'encoder.blocks.4.mlp.norm.weight', 'encoder.blocks.4.mlp.norm.bias', 'encoder.blocks.4.mlp.w0.weight', 'encoder.blocks.4.mlp.w0.bias', 'encoder.blocks.4.mlp.w1.weight', 'encoder.blocks.4.mlp.w1.bias', 'encoder.blocks.4.mlp.w2.weight', 'encoder.blocks.4.mlp.w2.bias', 'encoder.blocks.5.norm1.weight', 'encoder.blocks.5.norm1.bias', 'encoder.blocks.5.attn.qkv.weight', 'encoder.blocks.5.attn.qkv.bias', 'encoder.blocks.5.attn.proj.weight', 'encoder.blocks.5.attn.proj.bias', 'encoder.blocks.5.norm2.weight', 'encoder.blocks.5.norm2.bias', 'encoder.blocks.5.mlp.norm.weight', 'encoder.blocks.5.mlp.norm.bias', 'encoder.blocks.5.mlp.w0.weight', 'encoder.blocks.5.mlp.w0.bias', 'encoder.blocks.5.mlp.w1.weight', 'encoder.blocks.5.mlp.w1.bias', 'encoder.blocks.5.mlp.w2.weight', 'encoder.blocks.5.mlp.w2.bias', 'encoder.blocks.6.norm1.weight', 'encoder.blocks.6.norm1.bias', 'encoder.blocks.6.attn.qkv.weight', 'encoder.blocks.6.attn.qkv.bias', 'encoder.blocks.6.attn.proj.weight', 'encoder.blocks.6.attn.proj.bias', 'encoder.blocks.6.norm2.weight', 'encoder.blocks.6.norm2.bias', 'encoder.blocks.6.mlp.norm.weight', 'encoder.blocks.6.mlp.norm.bias', 'encoder.blocks.6.mlp.w0.weight', 'encoder.blocks.6.mlp.w0.bias', 'encoder.blocks.6.mlp.w1.weight', 'encoder.blocks.6.mlp.w1.bias', 'encoder.blocks.6.mlp.w2.weight', 'encoder.blocks.6.mlp.w2.bias', 'encoder.pool.proj.weight', 'encoder.pool.proj.bias', 'encoder.pool.norm.weight', 'encoder.pool.norm.bias', 'encoder.blocks1.0.norm1.weight', 'encoder.blocks1.0.norm1.bias', 'encoder.blocks1.0.attn.qkv.weight', 'encoder.blocks1.0.attn.qkv.bias', 'encoder.blocks1.0.attn.proj.weight', 'encoder.blocks1.0.attn.proj.bias', 'encoder.blocks1.0.norm2.weight', 'encoder.blocks1.0.norm2.bias', 'encoder.blocks1.0.mlp.norm.weight', 'encoder.blocks1.0.mlp.norm.bias', 'encoder.blocks1.0.mlp.w0.weight', 'encoder.blocks1.0.mlp.w0.bias', 'encoder.blocks1.0.mlp.w1.weight', 'encoder.blocks1.0.mlp.w1.bias', 'encoder.blocks1.0.mlp.w2.weight', 'encoder.blocks1.0.mlp.w2.bias', 'encoder.blocks1.1.norm1.weight', 'encoder.blocks1.1.norm1.bias', 'encoder.blocks1.1.attn.qkv.weight', 'encoder.blocks1.1.attn.qkv.bias', 'encoder.blocks1.1.attn.proj.weight', 'encoder.blocks1.1.attn.proj.bias', 'encoder.blocks1.1.norm2.weight', 'encoder.blocks1.1.norm2.bias', 'encoder.blocks1.1.mlp.norm.weight', 'encoder.blocks1.1.mlp.norm.bias', 'encoder.blocks1.1.mlp.w0.weight', 'encoder.blocks1.1.mlp.w0.bias', 'encoder.blocks1.1.mlp.w1.weight', 'encoder.blocks1.1.mlp.w1.bias', 'encoder.blocks1.1.mlp.w2.weight', 'encoder.blocks1.1.mlp.w2.bias', 'encoder.blocks1.2.norm1.weight', 'encoder.blocks1.2.norm1.bias', 'encoder.blocks1.2.attn.qkv.weight', 'encoder.blocks1.2.attn.qkv.bias', 'encoder.blocks1.2.attn.proj.weight', 'encoder.blocks1.2.attn.proj.bias', 'encoder.blocks1.2.norm2.weight', 'encoder.blocks1.2.norm2.bias', 'encoder.blocks1.2.mlp.norm.weight', 'encoder.blocks1.2.mlp.norm.bias', 'encoder.blocks1.2.mlp.w0.weight', 'encoder.blocks1.2.mlp.w0.bias', 'encoder.blocks1.2.mlp.w1.weight', 'encoder.blocks1.2.mlp.w1.bias', 'encoder.blocks1.2.mlp.w2.weight', 'encoder.blocks1.2.mlp.w2.bias', 'encoder.blocks1.3.norm1.weight', 'encoder.blocks1.3.norm1.bias', 'encoder.blocks1.3.attn.qkv.weight', 'encoder.blocks1.3.attn.qkv.bias', 'encoder.blocks1.3.attn.proj.weight', 'encoder.blocks1.3.attn.proj.bias', 'encoder.blocks1.3.norm2.weight', 'encoder.blocks1.3.norm2.bias', 'encoder.blocks1.3.mlp.norm.weight', 'encoder.blocks1.3.mlp.norm.bias', 'encoder.blocks1.3.mlp.w0.weight', 'encoder.blocks1.3.mlp.w0.bias', 'encoder.blocks1.3.mlp.w1.weight', 'encoder.blocks1.3.mlp.w1.bias', 'encoder.blocks1.3.mlp.w2.weight', 'encoder.blocks1.3.mlp.w2.bias', 'encoder.blocks1.4.norm1.weight', 'encoder.blocks1.4.norm1.bias', 'encoder.blocks1.4.attn.qkv.weight', 'encoder.blocks1.4.attn.qkv.bias', 'encoder.blocks1.4.attn.proj.weight', 'encoder.blocks1.4.attn.proj.bias', 'encoder.blocks1.4.norm2.weight', 'encoder.blocks1.4.norm2.bias', 'encoder.blocks1.4.mlp.norm.weight', 'encoder.blocks1.4.mlp.norm.bias', 'encoder.blocks1.4.mlp.w0.weight', 'encoder.blocks1.4.mlp.w0.bias', 'encoder.blocks1.4.mlp.w1.weight', 'encoder.blocks1.4.mlp.w1.bias', 'encoder.blocks1.4.mlp.w2.weight', 'encoder.blocks1.4.mlp.w2.bias', 'encoder.blocks1.5.norm1.weight', 'encoder.blocks1.5.norm1.bias', 'encoder.blocks1.5.attn.qkv.weight', 'encoder.blocks1.5.attn.qkv.bias', 'encoder.blocks1.5.attn.proj.weight', 'encoder.blocks1.5.attn.proj.bias', 'encoder.blocks1.5.norm2.weight', 'encoder.blocks1.5.norm2.bias', 'encoder.blocks1.5.mlp.norm.weight', 'encoder.blocks1.5.mlp.norm.bias', 'encoder.blocks1.5.mlp.w0.weight', 'encoder.blocks1.5.mlp.w0.bias', 'encoder.blocks1.5.mlp.w1.weight', 'encoder.blocks1.5.mlp.w1.bias', 'encoder.blocks1.5.mlp.w2.weight', 'encoder.blocks1.5.mlp.w2.bias', 'encoder.blocks1.6.norm1.weight', 'encoder.blocks1.6.norm1.bias', 'encoder.blocks1.6.attn.qkv.weight', 'encoder.blocks1.6.attn.qkv.bias', 'encoder.blocks1.6.attn.proj.weight', 'encoder.blocks1.6.attn.proj.bias', 'encoder.blocks1.6.norm2.weight', 'encoder.blocks1.6.norm2.bias', 'encoder.blocks1.6.mlp.norm.weight', 'encoder.blocks1.6.mlp.norm.bias', 'encoder.blocks1.6.mlp.w0.weight', 'encoder.blocks1.6.mlp.w0.bias', 'encoder.blocks1.6.mlp.w1.weight', 'encoder.blocks1.6.mlp.w1.bias', 'encoder.blocks1.6.mlp.w2.weight', 'encoder.blocks1.6.mlp.w2.bias', 'encoder.mlp.0.weight', 'encoder.mlp.0.bias', 'encoder.mlp.2.weight', 'encoder.mlp.2.bias', 'encoder.fc_norm.weight', 'encoder.fc_norm.bias', 'seg_head.aspp.aspp_layer.convs.0.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.0.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.0.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.1.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.1.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.1.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.2.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.2.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.2.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.3.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.3.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.3.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.bias', 'seg_head.aspp.aspp_layer.project.block.conv.weight', 'seg_head.aspp.aspp_layer.project.block.norm.weight', 'seg_head.aspp.aspp_layer.project.block.norm.bias', 'seg_head.classifier.block.conv.weight', 'seg_head.classifier.block.conv.bias']
+2024-08-01 11:39:37 - [34m[1mLOGS   [0m - [36mModel[0m
+SegEncoderDecoder(
+  (encoder): Foodv(
+    (neural_augmentor): DistributionNeuralAugmentor(
+    	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+    	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+    	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+    (patch_embed): HybridEmbed(
+      (backbone): MbConvStages(
+        (stem): Stem(
+          (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (norm1): LayerNormAct2d(
+            (128,), eps=1e-06, elementwise_affine=True
+            (drop): Identity()
+            (act): GELU()
+          )
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (stages): ModuleList(
+          (0): Sequential(
+            (0): MbConvLNBlock(
+              (shortcut): Downsample2d(
+                (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+                (expand): Identity()
+              )
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+              (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (1): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+              (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+          )
+          (1): Sequential(
+            (0): MbConvLNBlock(
+              (shortcut): Downsample2d(
+                (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+                (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (1): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (2): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (3): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+          )
+        )
+        (pool): StridedConv(
+          (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+        )
+      )
+      (proj): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (pool): StridedConv(
+      (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+    )
+    (blocks1): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): Identity()
+    (mlp): Sequential(
+      (0): Linear(in_features=1024, out_features=1024, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=1024, out_features=1024, bias=True)
+    )
+    (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+    (classifier_drop): Dropout(p=0.0, inplace=False)
+    (classifier): None
+  )
+  (seg_head): DeeplabV3(
+    (upsample_seg_out): UpSample(scale_factor=32.0, mode='bilinear')
+    (aspp): Sequential(
+      (aspp_layer): ASPP(in_channels=1024, out_channels=224, atrous_rates=[12, 24, 36], is_aspp_sep=False, dropout=0.1)
+    )
+    (classifier): Conv2d(224, 103, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+[31m=================================================================[0m
+                  SegEncoderDecoder Summary
+[31m=================================================================[0m
+Total parameters     =  109.316 M
+Total trainable parameters =  109.316 M
+
+2024-08-01 11:39:37 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-01 11:39:37 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                                    | #parameters or shape   | #flops     |
+|:------------------------------------------|:-----------------------|:-----------|
+| model                                     | 0.109G                 | 13.31G     |
+|  encoder                                  |  0.102G                |  12.961G   |
+|   encoder.pos_embed                       |   (1, 1, 512)          |            |
+|   encoder.neural_augmentor                |   6                    |            |
+|    encoder.neural_augmentor.brightness    |    2                   |            |
+|    encoder.neural_augmentor.contrast      |    2                   |            |
+|    encoder.neural_augmentor.noise         |    2                   |            |
+|   encoder.patch_embed.backbone            |   3.653M               |   5.52G    |
+|    encoder.patch_embed.backbone.stem      |    0.151M              |    1.901G  |
+|    encoder.patch_embed.backbone.stages    |    2.321M              |    3.387G  |
+|    encoder.patch_embed.backbone.pool      |    1.181M              |    0.232G  |
+|   encoder.blocks                          |   18.404M              |   3.607G   |
+|    encoder.blocks.0                       |    2.629M              |    0.515G  |
+|    encoder.blocks.1                       |    2.629M              |    0.515G  |
+|    encoder.blocks.2                       |    2.629M              |    0.515G  |
+|    encoder.blocks.3                       |    2.629M              |    0.515G  |
+|    encoder.blocks.4                       |    2.629M              |    0.515G  |
+|    encoder.blocks.5                       |    2.629M              |    0.515G  |
+|    encoder.blocks.6                       |    2.629M              |    0.515G  |
+|   encoder.pool                            |   4.721M               |   0.232G   |
+|    encoder.pool.proj                      |    4.72M               |    0.231G  |
+|    encoder.pool.norm                      |    1.024K              |    0.502M  |
+|   encoder.blocks1                         |   73.508M              |   3.602G   |
+|    encoder.blocks1.0                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.1                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.2                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.3                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.4                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.5                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.6                      |    10.501M             |    0.515G  |
+|   encoder.mlp                             |   2.099M               |            |
+|    encoder.mlp.0                          |    1.05M               |            |
+|    encoder.mlp.2                          |    1.05M               |            |
+|   encoder.fc_norm                         |   2.048K               |            |
+|    encoder.fc_norm.weight                 |    (1024,)             |            |
+|    encoder.fc_norm.bias                   |    (1024,)             |            |
+|  seg_head                                 |  6.929M                |  0.349G    |
+|   seg_head.aspp.aspp_layer                |   6.905M               |   0.327G   |
+|    seg_head.aspp.aspp_layer.convs         |    6.654M              |    0.315G  |
+|    seg_head.aspp.aspp_layer.project.block |    0.251M              |    12.315M |
+|   seg_head.classifier.block.conv          |   23.175K              |   1.131M   |
+|    seg_head.classifier.block.conv.weight  |    (103, 224, 1, 1)    |            |
+|    seg_head.classifier.block.conv.bias    |    (103,)              |            |
+|   seg_head.upsample_seg_out               |                        |   20.673M  |
+2024-08-01 11:39:40 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-08-01 11:39:40 - [33m[1mWARNING[0m - Uncalled Modules:
+{'encoder.blocks.2.drop_path2', 'encoder.blocks1.4.attn.k_norm', 'encoder.blocks.4.attn.attn_drop', 'encoder.blocks1.5.ls1', 'encoder.blocks.0.drop_path1', 'encoder.neural_augmentor.brightness', 'encoder.blocks.6.attn.q_norm', 'encoder.blocks1.6.drop_path2', 'encoder.patch_embed.backbone.stages.1.2.shortcut', 'encoder.blocks.3.attn.attn_drop', 'encoder.blocks.6.attn.k_norm', 'encoder.blocks1.0.ls1', 'encoder.blocks1.1.attn.k_norm', 'encoder.blocks1.4.drop_path2', 'encoder.blocks1.4.attn.attn_drop', 'encoder.blocks1.6.attn.q_norm', 'encoder.blocks1.1.drop_path1', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.drop', 'encoder.mlp', 'encoder.blocks1.1.attn.q_norm', 'encoder.blocks.5.drop_path1', 'encoder.blocks1.6.ls1', 'encoder.blocks1.2.attn.attn_drop', 'encoder.neural_augmentor.brightness.max_fn', 'encoder.patch_embed.backbone.stages.1.2.drop_path', 'encoder.blocks1.0.attn.q_norm', 'encoder.blocks.0.attn.q_norm', 'encoder.blocks.4.attn.k_norm', 'encoder.patch_embed.backbone.stages.0.1.drop_path', 'encoder.blocks.1.drop_path1', 'encoder.blocks1.1.ls2', 'encoder.patch_embed.backbone.stages.1.1.shortcut', 'encoder.blocks.1.ls2', 'encoder.patch_embed.backbone.stages.1.1.down', 'encoder.patch_embed.proj', 'encoder.patch_embed.backbone.stages.0.0.shortcut.expand', 'encoder.blocks1.3.attn.k_norm', 'encoder.blocks1.2.attn.q_norm', 'encoder.neural_augmentor.contrast.max_fn', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.drop', 'encoder.patch_embed.backbone.stem.norm1.drop', 'encoder.blocks1.3.drop_path1', 'encoder.blocks.5.ls2', 'encoder.blocks1.2.ls2', 'encoder.blocks.6.ls1', 'encoder.patch_embed.backbone.stages.0.1.shortcut', 'encoder.blocks1.6.attn.k_norm', 'encoder.norm', 'encoder.blocks1.5.attn.attn_drop', 'encoder.blocks1.1.drop_path2', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.drop', 'encoder.blocks1.1.attn.attn_drop', 'encoder.blocks1.3.ls2', 'encoder.patch_embed.backbone.stages.0.0.drop_path', 'encoder.blocks1.3.drop_path2', 'encoder.blocks.1.drop_path2', 'encoder.patch_embed.backbone.stages.1.1.drop_path', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.drop', 'encoder.blocks.0.ls1', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.act', 'encoder.blocks.5.attn.k_norm', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.act', 'encoder.patch_drop', 'encoder.neural_augmentor.brightness.min_fn', 'encoder.blocks1.6.ls2', 'encoder.blocks.2.ls1', 'encoder.blocks1.6.drop_path1', 'encoder.neural_augmentor', 'encoder.blocks1.3.attn.q_norm', 'encoder.blocks1.4.ls1', 'encoder.blocks.2.attn.attn_drop', 'encoder.blocks.4.ls2', 'encoder.neural_augmentor.noise.max_fn', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.act', 'encoder.blocks1.0.drop_path1', 'encoder.blocks1.5.ls2', 'encoder.blocks.5.attn.attn_drop', 'encoder.blocks1.2.ls1', 'encoder.blocks.2.attn.q_norm', 'encoder.patch_embed.backbone.stages.1.0.down', 'encoder.blocks1.4.drop_path1', 'encoder.blocks.0.attn.attn_drop', 'encoder.blocks1.2.drop_path2', 'encoder.blocks.4.drop_path2', 'encoder.blocks.6.drop_path1', 'encoder.blocks1.5.attn.k_norm', 'encoder.blocks.6.attn.attn_drop', 'encoder.mlp.2', 'encoder.patch_embed.backbone.stages.0.1.down', 'encoder.neural_augmentor.noise.min_fn', 'encoder.blocks1.6.attn.attn_drop', 'encoder.blocks.4.attn.q_norm', 'encoder.blocks1.0.ls2', 'encoder.blocks.2.ls2', 'encoder.patch_embed.backbone.stages.1.3.drop_path', 'encoder.blocks1.1.ls1', 'encoder.classifier_drop', 'encoder.blocks1.4.attn.q_norm', 'encoder.blocks.2.drop_path1', 'encoder.blocks1.0.attn.k_norm', 'encoder.blocks.6.drop_path2', 'encoder.blocks.0.drop_path2', 'encoder.blocks.6.ls2', 'encoder.blocks1.2.attn.k_norm', 'encoder.blocks1.3.attn.attn_drop', 'encoder.blocks1.0.drop_path2', 'encoder.neural_augmentor.contrast', 'encoder.blocks.5.drop_path2', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.act', 'encoder.blocks.4.drop_path1', 'encoder.blocks.3.ls2', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.act', 'encoder.blocks1.5.attn.q_norm', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.drop', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.act', 'encoder.blocks1.5.drop_path2', 'encoder.blocks1.4.ls2', 'encoder.blocks.3.drop_path2', 'encoder.blocks.5.ls1', 'encoder.blocks.0.ls2', 'encoder.neural_augmentor.noise', 'encoder.blocks1.5.drop_path1', 'encoder.patch_embed.backbone.stages.1.2.down', 'encoder.blocks.1.ls1', 'encoder.blocks.1.attn.attn_drop', 'encoder.blocks.5.attn.q_norm', 'encoder.patch_embed.backbone.stages.0.0.down', 'encoder.blocks.4.ls1', 'encoder.blocks.3.attn.q_norm', 'encoder.norm_pre', 'encoder.mlp.1', 'encoder.blocks1.0.attn.attn_drop', 'encoder.blocks.1.attn.q_norm', 'encoder.blocks1.3.ls1', 'encoder.blocks1.2.drop_path1', 'encoder.neural_augmentor.contrast.min_fn', 'encoder.blocks.3.drop_path1', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.drop', 'encoder.blocks.0.attn.k_norm', 'encoder.patch_embed.backbone.stages.1.3.down', 'encoder.fc_norm', 'encoder.blocks.3.ls1', 'encoder.blocks.2.attn.k_norm', 'encoder.mlp.0', 'encoder.patch_embed.backbone.stages.1.0.drop_path', 'encoder.blocks.1.attn.k_norm', 'encoder.patch_embed.backbone.stages.1.3.shortcut', 'encoder.blocks.3.attn.k_norm'}
+2024-08-01 11:39:40 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 33, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::avg_pool2d': 2, 'aten::feature_dropout': 1})
+[31m=================================================================[0m
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-08-01 11:39:40 - [34m[1mLOGS   [0m - Directory created at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train
+2024-08-01 11:39:53 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:40010
+base
+dci
+2024-08-01 11:39:53 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:40010
+base
+dci
+2024-08-01 11:39:53 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:40010
+base
+dci
+2024-08-01 11:39:52 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:40010
+2024-08-01 11:40:00 - [34m[1mLOGS   [0m - Training dataset details are given below
+FoodsegDataset(
+	root=/ML-A100/team/mm/models/UECFOODPIXCOMPLETE/data 
+	is_training=True 
+	num_samples=9000
+	transforms=Compose(
+			Resize(size=[224, 224], interpolation=bicubic, maintain_aspect_ratio=False), 
+			RandomHorizontalFlip(p=0.5), 
+			RandomCrop(size=(h=224, w=224), seg_class_max_ratio=0.75, seg_fill=0), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+)
+2024-08-01 11:40:00 - [34m[1mLOGS   [0m - Validation dataset details are given below
+FoodsegDataset(
+	root=/ML-A100/team/mm/models/UECFOODPIXCOMPLETE/data 
+	is_training=False 
+	num_samples=1000
+	transforms=Compose(
+			Resize(size=[224, 224], interpolation=bicubic, maintain_aspect_ratio=False), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+)
+2024-08-01 11:40:00 - [34m[1mLOGS   [0m - Training sampler details: BatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	base_im_size=(h=224, w=224)
+	base_batch_size=8
+)
+2024-08-01 11:40:00 - [34m[1mLOGS   [0m - Validation sampler details: BatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	base_im_size=(h=224, w=224)
+	base_batch_size=4
+)
+2024-08-01 11:40:00 - [34m[1mLOGS   [0m - Number of data workers: 64
+base
+dci
+2024-08-01 11:40:06 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt
+2024-08-01 11:40:06 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-01 11:40:06 - [32m[1mINFO   [0m - Trainable parameters: ['aspp.aspp_layer.convs.0.block.conv.weight', 'aspp.aspp_layer.convs.0.block.norm.weight', 'aspp.aspp_layer.convs.0.block.norm.bias', 'aspp.aspp_layer.convs.1.block.conv.weight', 'aspp.aspp_layer.convs.1.block.norm.weight', 'aspp.aspp_layer.convs.1.block.norm.bias', 'aspp.aspp_layer.convs.2.block.conv.weight', 'aspp.aspp_layer.convs.2.block.norm.weight', 'aspp.aspp_layer.convs.2.block.norm.bias', 'aspp.aspp_layer.convs.3.block.conv.weight', 'aspp.aspp_layer.convs.3.block.norm.weight', 'aspp.aspp_layer.convs.3.block.norm.bias', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.conv.weight', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.weight', 'aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.bias', 'aspp.aspp_layer.project.block.conv.weight', 'aspp.aspp_layer.project.block.norm.weight', 'aspp.aspp_layer.project.block.norm.bias', 'classifier.block.conv.weight', 'classifier.block.conv.bias']
+2024-08-01 11:40:06 - [32m[1mINFO   [0m - Trainable parameters: ['encoder.pos_embed', 'encoder.neural_augmentor.brightness._low', 'encoder.neural_augmentor.brightness._high', 'encoder.neural_augmentor.contrast._low', 'encoder.neural_augmentor.contrast._high', 'encoder.neural_augmentor.noise._low', 'encoder.neural_augmentor.noise._high', 'encoder.patch_embed.backbone.stem.conv1.weight', 'encoder.patch_embed.backbone.stem.conv1.bias', 'encoder.patch_embed.backbone.stem.norm1.weight', 'encoder.patch_embed.backbone.stem.norm1.bias', 'encoder.patch_embed.backbone.stem.conv2.weight', 'encoder.patch_embed.backbone.stem.conv2.bias', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.weight', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.bias', 'encoder.patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.weight', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.bias', 'encoder.patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'encoder.patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.weight', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.bias', 'encoder.patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'encoder.patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'encoder.patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'encoder.patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'encoder.patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'encoder.patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'encoder.patch_embed.backbone.pool.proj.weight', 'encoder.patch_embed.backbone.pool.proj.bias', 'encoder.patch_embed.backbone.pool.norm.weight', 'encoder.patch_embed.backbone.pool.norm.bias', 'encoder.blocks.0.norm1.weight', 'encoder.blocks.0.norm1.bias', 'encoder.blocks.0.attn.qkv.weight', 'encoder.blocks.0.attn.qkv.bias', 'encoder.blocks.0.attn.proj.weight', 'encoder.blocks.0.attn.proj.bias', 'encoder.blocks.0.norm2.weight', 'encoder.blocks.0.norm2.bias', 'encoder.blocks.0.mlp.norm.weight', 'encoder.blocks.0.mlp.norm.bias', 'encoder.blocks.0.mlp.w0.weight', 'encoder.blocks.0.mlp.w0.bias', 'encoder.blocks.0.mlp.w1.weight', 'encoder.blocks.0.mlp.w1.bias', 'encoder.blocks.0.mlp.w2.weight', 'encoder.blocks.0.mlp.w2.bias', 'encoder.blocks.1.norm1.weight', 'encoder.blocks.1.norm1.bias', 'encoder.blocks.1.attn.qkv.weight', 'encoder.blocks.1.attn.qkv.bias', 'encoder.blocks.1.attn.proj.weight', 'encoder.blocks.1.attn.proj.bias', 'encoder.blocks.1.norm2.weight', 'encoder.blocks.1.norm2.bias', 'encoder.blocks.1.mlp.norm.weight', 'encoder.blocks.1.mlp.norm.bias', 'encoder.blocks.1.mlp.w0.weight', 'encoder.blocks.1.mlp.w0.bias', 'encoder.blocks.1.mlp.w1.weight', 'encoder.blocks.1.mlp.w1.bias', 'encoder.blocks.1.mlp.w2.weight', 'encoder.blocks.1.mlp.w2.bias', 'encoder.blocks.2.norm1.weight', 'encoder.blocks.2.norm1.bias', 'encoder.blocks.2.attn.qkv.weight', 'encoder.blocks.2.attn.qkv.bias', 'encoder.blocks.2.attn.proj.weight', 'encoder.blocks.2.attn.proj.bias', 'encoder.blocks.2.norm2.weight', 'encoder.blocks.2.norm2.bias', 'encoder.blocks.2.mlp.norm.weight', 'encoder.blocks.2.mlp.norm.bias', 'encoder.blocks.2.mlp.w0.weight', 'encoder.blocks.2.mlp.w0.bias', 'encoder.blocks.2.mlp.w1.weight', 'encoder.blocks.2.mlp.w1.bias', 'encoder.blocks.2.mlp.w2.weight', 'encoder.blocks.2.mlp.w2.bias', 'encoder.blocks.3.norm1.weight', 'encoder.blocks.3.norm1.bias', 'encoder.blocks.3.attn.qkv.weight', 'encoder.blocks.3.attn.qkv.bias', 'encoder.blocks.3.attn.proj.weight', 'encoder.blocks.3.attn.proj.bias', 'encoder.blocks.3.norm2.weight', 'encoder.blocks.3.norm2.bias', 'encoder.blocks.3.mlp.norm.weight', 'encoder.blocks.3.mlp.norm.bias', 'encoder.blocks.3.mlp.w0.weight', 'encoder.blocks.3.mlp.w0.bias', 'encoder.blocks.3.mlp.w1.weight', 'encoder.blocks.3.mlp.w1.bias', 'encoder.blocks.3.mlp.w2.weight', 'encoder.blocks.3.mlp.w2.bias', 'encoder.blocks.4.norm1.weight', 'encoder.blocks.4.norm1.bias', 'encoder.blocks.4.attn.qkv.weight', 'encoder.blocks.4.attn.qkv.bias', 'encoder.blocks.4.attn.proj.weight', 'encoder.blocks.4.attn.proj.bias', 'encoder.blocks.4.norm2.weight', 'encoder.blocks.4.norm2.bias', 'encoder.blocks.4.mlp.norm.weight', 'encoder.blocks.4.mlp.norm.bias', 'encoder.blocks.4.mlp.w0.weight', 'encoder.blocks.4.mlp.w0.bias', 'encoder.blocks.4.mlp.w1.weight', 'encoder.blocks.4.mlp.w1.bias', 'encoder.blocks.4.mlp.w2.weight', 'encoder.blocks.4.mlp.w2.bias', 'encoder.blocks.5.norm1.weight', 'encoder.blocks.5.norm1.bias', 'encoder.blocks.5.attn.qkv.weight', 'encoder.blocks.5.attn.qkv.bias', 'encoder.blocks.5.attn.proj.weight', 'encoder.blocks.5.attn.proj.bias', 'encoder.blocks.5.norm2.weight', 'encoder.blocks.5.norm2.bias', 'encoder.blocks.5.mlp.norm.weight', 'encoder.blocks.5.mlp.norm.bias', 'encoder.blocks.5.mlp.w0.weight', 'encoder.blocks.5.mlp.w0.bias', 'encoder.blocks.5.mlp.w1.weight', 'encoder.blocks.5.mlp.w1.bias', 'encoder.blocks.5.mlp.w2.weight', 'encoder.blocks.5.mlp.w2.bias', 'encoder.blocks.6.norm1.weight', 'encoder.blocks.6.norm1.bias', 'encoder.blocks.6.attn.qkv.weight', 'encoder.blocks.6.attn.qkv.bias', 'encoder.blocks.6.attn.proj.weight', 'encoder.blocks.6.attn.proj.bias', 'encoder.blocks.6.norm2.weight', 'encoder.blocks.6.norm2.bias', 'encoder.blocks.6.mlp.norm.weight', 'encoder.blocks.6.mlp.norm.bias', 'encoder.blocks.6.mlp.w0.weight', 'encoder.blocks.6.mlp.w0.bias', 'encoder.blocks.6.mlp.w1.weight', 'encoder.blocks.6.mlp.w1.bias', 'encoder.blocks.6.mlp.w2.weight', 'encoder.blocks.6.mlp.w2.bias', 'encoder.pool.proj.weight', 'encoder.pool.proj.bias', 'encoder.pool.norm.weight', 'encoder.pool.norm.bias', 'encoder.blocks1.0.norm1.weight', 'encoder.blocks1.0.norm1.bias', 'encoder.blocks1.0.attn.qkv.weight', 'encoder.blocks1.0.attn.qkv.bias', 'encoder.blocks1.0.attn.proj.weight', 'encoder.blocks1.0.attn.proj.bias', 'encoder.blocks1.0.norm2.weight', 'encoder.blocks1.0.norm2.bias', 'encoder.blocks1.0.mlp.norm.weight', 'encoder.blocks1.0.mlp.norm.bias', 'encoder.blocks1.0.mlp.w0.weight', 'encoder.blocks1.0.mlp.w0.bias', 'encoder.blocks1.0.mlp.w1.weight', 'encoder.blocks1.0.mlp.w1.bias', 'encoder.blocks1.0.mlp.w2.weight', 'encoder.blocks1.0.mlp.w2.bias', 'encoder.blocks1.1.norm1.weight', 'encoder.blocks1.1.norm1.bias', 'encoder.blocks1.1.attn.qkv.weight', 'encoder.blocks1.1.attn.qkv.bias', 'encoder.blocks1.1.attn.proj.weight', 'encoder.blocks1.1.attn.proj.bias', 'encoder.blocks1.1.norm2.weight', 'encoder.blocks1.1.norm2.bias', 'encoder.blocks1.1.mlp.norm.weight', 'encoder.blocks1.1.mlp.norm.bias', 'encoder.blocks1.1.mlp.w0.weight', 'encoder.blocks1.1.mlp.w0.bias', 'encoder.blocks1.1.mlp.w1.weight', 'encoder.blocks1.1.mlp.w1.bias', 'encoder.blocks1.1.mlp.w2.weight', 'encoder.blocks1.1.mlp.w2.bias', 'encoder.blocks1.2.norm1.weight', 'encoder.blocks1.2.norm1.bias', 'encoder.blocks1.2.attn.qkv.weight', 'encoder.blocks1.2.attn.qkv.bias', 'encoder.blocks1.2.attn.proj.weight', 'encoder.blocks1.2.attn.proj.bias', 'encoder.blocks1.2.norm2.weight', 'encoder.blocks1.2.norm2.bias', 'encoder.blocks1.2.mlp.norm.weight', 'encoder.blocks1.2.mlp.norm.bias', 'encoder.blocks1.2.mlp.w0.weight', 'encoder.blocks1.2.mlp.w0.bias', 'encoder.blocks1.2.mlp.w1.weight', 'encoder.blocks1.2.mlp.w1.bias', 'encoder.blocks1.2.mlp.w2.weight', 'encoder.blocks1.2.mlp.w2.bias', 'encoder.blocks1.3.norm1.weight', 'encoder.blocks1.3.norm1.bias', 'encoder.blocks1.3.attn.qkv.weight', 'encoder.blocks1.3.attn.qkv.bias', 'encoder.blocks1.3.attn.proj.weight', 'encoder.blocks1.3.attn.proj.bias', 'encoder.blocks1.3.norm2.weight', 'encoder.blocks1.3.norm2.bias', 'encoder.blocks1.3.mlp.norm.weight', 'encoder.blocks1.3.mlp.norm.bias', 'encoder.blocks1.3.mlp.w0.weight', 'encoder.blocks1.3.mlp.w0.bias', 'encoder.blocks1.3.mlp.w1.weight', 'encoder.blocks1.3.mlp.w1.bias', 'encoder.blocks1.3.mlp.w2.weight', 'encoder.blocks1.3.mlp.w2.bias', 'encoder.blocks1.4.norm1.weight', 'encoder.blocks1.4.norm1.bias', 'encoder.blocks1.4.attn.qkv.weight', 'encoder.blocks1.4.attn.qkv.bias', 'encoder.blocks1.4.attn.proj.weight', 'encoder.blocks1.4.attn.proj.bias', 'encoder.blocks1.4.norm2.weight', 'encoder.blocks1.4.norm2.bias', 'encoder.blocks1.4.mlp.norm.weight', 'encoder.blocks1.4.mlp.norm.bias', 'encoder.blocks1.4.mlp.w0.weight', 'encoder.blocks1.4.mlp.w0.bias', 'encoder.blocks1.4.mlp.w1.weight', 'encoder.blocks1.4.mlp.w1.bias', 'encoder.blocks1.4.mlp.w2.weight', 'encoder.blocks1.4.mlp.w2.bias', 'encoder.blocks1.5.norm1.weight', 'encoder.blocks1.5.norm1.bias', 'encoder.blocks1.5.attn.qkv.weight', 'encoder.blocks1.5.attn.qkv.bias', 'encoder.blocks1.5.attn.proj.weight', 'encoder.blocks1.5.attn.proj.bias', 'encoder.blocks1.5.norm2.weight', 'encoder.blocks1.5.norm2.bias', 'encoder.blocks1.5.mlp.norm.weight', 'encoder.blocks1.5.mlp.norm.bias', 'encoder.blocks1.5.mlp.w0.weight', 'encoder.blocks1.5.mlp.w0.bias', 'encoder.blocks1.5.mlp.w1.weight', 'encoder.blocks1.5.mlp.w1.bias', 'encoder.blocks1.5.mlp.w2.weight', 'encoder.blocks1.5.mlp.w2.bias', 'encoder.blocks1.6.norm1.weight', 'encoder.blocks1.6.norm1.bias', 'encoder.blocks1.6.attn.qkv.weight', 'encoder.blocks1.6.attn.qkv.bias', 'encoder.blocks1.6.attn.proj.weight', 'encoder.blocks1.6.attn.proj.bias', 'encoder.blocks1.6.norm2.weight', 'encoder.blocks1.6.norm2.bias', 'encoder.blocks1.6.mlp.norm.weight', 'encoder.blocks1.6.mlp.norm.bias', 'encoder.blocks1.6.mlp.w0.weight', 'encoder.blocks1.6.mlp.w0.bias', 'encoder.blocks1.6.mlp.w1.weight', 'encoder.blocks1.6.mlp.w1.bias', 'encoder.blocks1.6.mlp.w2.weight', 'encoder.blocks1.6.mlp.w2.bias', 'encoder.mlp.0.weight', 'encoder.mlp.0.bias', 'encoder.mlp.2.weight', 'encoder.mlp.2.bias', 'encoder.fc_norm.weight', 'encoder.fc_norm.bias', 'seg_head.aspp.aspp_layer.convs.0.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.0.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.0.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.1.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.1.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.1.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.2.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.2.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.2.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.3.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.3.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.3.block.norm.bias', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.conv.weight', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.weight', 'seg_head.aspp.aspp_layer.convs.4.aspp_pool.conv_1x1.block.norm.bias', 'seg_head.aspp.aspp_layer.project.block.conv.weight', 'seg_head.aspp.aspp_layer.project.block.norm.weight', 'seg_head.aspp.aspp_layer.project.block.norm.bias', 'seg_head.classifier.block.conv.weight', 'seg_head.classifier.block.conv.bias']
+2024-08-01 11:40:06 - [34m[1mLOGS   [0m - [36mModel[0m
+SegEncoderDecoder(
+  (encoder): Foodv(
+    (neural_augmentor): DistributionNeuralAugmentor(
+    	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+    	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+    	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+    (patch_embed): HybridEmbed(
+      (backbone): MbConvStages(
+        (stem): Stem(
+          (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (norm1): LayerNormAct2d(
+            (128,), eps=1e-06, elementwise_affine=True
+            (drop): Identity()
+            (act): GELU()
+          )
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (stages): ModuleList(
+          (0): Sequential(
+            (0): MbConvLNBlock(
+              (shortcut): Downsample2d(
+                (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+                (expand): Identity()
+              )
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+              (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (1): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+              (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+          )
+          (1): Sequential(
+            (0): MbConvLNBlock(
+              (shortcut): Downsample2d(
+                (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+                (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (pre_norm): LayerNormAct2d(
+                (128,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (1): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (2): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (3): MbConvLNBlock(
+              (shortcut): Identity()
+              (pre_norm): LayerNormAct2d(
+                (256,), eps=1e-06, elementwise_affine=True
+                (drop): Identity()
+                (act): Identity()
+              )
+              (down): Identity()
+              (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (act1): GELU()
+              (act2): GELU()
+              (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+              (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+          )
+        )
+        (pool): StridedConv(
+          (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+        )
+      )
+      (proj): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=512, out_features=1536, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=512, out_features=512, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=512, out_features=1024, bias=True)
+          (w1): Linear(in_features=512, out_features=1024, bias=True)
+          (w2): Linear(in_features=1024, out_features=512, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (pool): StridedConv(
+      (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+    )
+    (blocks1): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (mlp): GeGluMlp(
+          (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (act): GELU(approximate='none')
+          (w0): Linear(in_features=1024, out_features=2048, bias=True)
+          (w1): Linear(in_features=1024, out_features=2048, bias=True)
+          (w2): Linear(in_features=2048, out_features=1024, bias=True)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): Identity()
+    (mlp): Sequential(
+      (0): Linear(in_features=1024, out_features=1024, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=1024, out_features=1024, bias=True)
+    )
+    (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+    (classifier_drop): Dropout(p=0.0, inplace=False)
+    (classifier): None
+  )
+  (seg_head): DeeplabV3(
+    (upsample_seg_out): UpSample(scale_factor=32.0, mode='bilinear')
+    (aspp): Sequential(
+      (aspp_layer): ASPP(in_channels=1024, out_channels=224, atrous_rates=[12, 24, 36], is_aspp_sep=False, dropout=0.1)
+    )
+    (classifier): Conv2d(224, 103, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+[31m=================================================================[0m
+                  SegEncoderDecoder Summary
+[31m=================================================================[0m
+Total parameters     =  109.316 M
+Total trainable parameters =  109.316 M
+
+2024-08-01 11:40:06 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-01 11:40:06 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                                    | #parameters or shape   | #flops     |
+|:------------------------------------------|:-----------------------|:-----------|
+| model                                     | 0.109G                 | 13.31G     |
+|  encoder                                  |  0.102G                |  12.961G   |
+|   encoder.pos_embed                       |   (1, 1, 512)          |            |
+|   encoder.neural_augmentor                |   6                    |            |
+|    encoder.neural_augmentor.brightness    |    2                   |            |
+|    encoder.neural_augmentor.contrast      |    2                   |            |
+|    encoder.neural_augmentor.noise         |    2                   |            |
+|   encoder.patch_embed.backbone            |   3.653M               |   5.52G    |
+|    encoder.patch_embed.backbone.stem      |    0.151M              |    1.901G  |
+|    encoder.patch_embed.backbone.stages    |    2.321M              |    3.387G  |
+|    encoder.patch_embed.backbone.pool      |    1.181M              |    0.232G  |
+|   encoder.blocks                          |   18.404M              |   3.607G   |
+|    encoder.blocks.0                       |    2.629M              |    0.515G  |
+|    encoder.blocks.1                       |    2.629M              |    0.515G  |
+|    encoder.blocks.2                       |    2.629M              |    0.515G  |
+|    encoder.blocks.3                       |    2.629M              |    0.515G  |
+|    encoder.blocks.4                       |    2.629M              |    0.515G  |
+|    encoder.blocks.5                       |    2.629M              |    0.515G  |
+|    encoder.blocks.6                       |    2.629M              |    0.515G  |
+|   encoder.pool                            |   4.721M               |   0.232G   |
+|    encoder.pool.proj                      |    4.72M               |    0.231G  |
+|    encoder.pool.norm                      |    1.024K              |    0.502M  |
+|   encoder.blocks1                         |   73.508M              |   3.602G   |
+|    encoder.blocks1.0                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.1                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.2                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.3                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.4                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.5                      |    10.501M             |    0.515G  |
+|    encoder.blocks1.6                      |    10.501M             |    0.515G  |
+|   encoder.mlp                             |   2.099M               |            |
+|    encoder.mlp.0                          |    1.05M               |            |
+|    encoder.mlp.2                          |    1.05M               |            |
+|   encoder.fc_norm                         |   2.048K               |            |
+|    encoder.fc_norm.weight                 |    (1024,)             |            |
+|    encoder.fc_norm.bias                   |    (1024,)             |            |
+|  seg_head                                 |  6.929M                |  0.349G    |
+|   seg_head.aspp.aspp_layer                |   6.905M               |   0.327G   |
+|    seg_head.aspp.aspp_layer.convs         |    6.654M              |    0.315G  |
+|    seg_head.aspp.aspp_layer.project.block |    0.251M              |    12.315M |
+|   seg_head.classifier.block.conv          |   23.175K              |   1.131M   |
+|    seg_head.classifier.block.conv.weight  |    (103, 224, 1, 1)    |            |
+|    seg_head.classifier.block.conv.bias    |    (103,)              |            |
+|   seg_head.upsample_seg_out               |                        |   20.673M  |
+2024-08-01 11:40:07 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-08-01 11:40:07 - [33m[1mWARNING[0m - Uncalled Modules:
+{'encoder.blocks.6.attn.k_norm', 'encoder.blocks.1.drop_path1', 'encoder.blocks.1.attn.k_norm', 'encoder.blocks.1.ls1', 'encoder.patch_embed.backbone.stages.1.3.drop_path', 'encoder.neural_augmentor.brightness.min_fn', 'encoder.classifier_drop', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.drop', 'encoder.blocks.2.ls2', 'encoder.blocks.0.drop_path1', 'encoder.patch_embed.backbone.stages.1.1.drop_path', 'encoder.neural_augmentor.noise.min_fn', 'encoder.blocks.1.attn.q_norm', 'encoder.blocks.1.attn.attn_drop', 'encoder.blocks.0.ls1', 'encoder.blocks1.5.attn.attn_drop', 'encoder.mlp.0', 'encoder.blocks1.6.attn.q_norm', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.act', 'encoder.blocks1.1.drop_path1', 'encoder.blocks.0.ls2', 'encoder.blocks.2.ls1', 'encoder.blocks.4.attn.q_norm', 'encoder.blocks.5.drop_path2', 'encoder.patch_embed.proj', 'encoder.blocks1.3.drop_path1', 'encoder.blocks.5.ls2', 'encoder.patch_embed.backbone.stages.1.3.shortcut', 'encoder.blocks1.5.ls2', 'encoder.blocks1.2.drop_path2', 'encoder.blocks1.0.ls2', 'encoder.blocks.5.ls1', 'encoder.blocks.4.ls1', 'encoder.blocks1.2.ls2', 'encoder.patch_drop', 'encoder.blocks.4.attn.attn_drop', 'encoder.blocks.0.drop_path2', 'encoder.blocks1.4.attn.k_norm', 'encoder.patch_embed.backbone.stages.0.0.down', 'encoder.blocks.2.attn.attn_drop', 'encoder.blocks1.0.attn.q_norm', 'encoder.blocks1.3.attn.q_norm', 'encoder.patch_embed.backbone.stages.1.0.down', 'encoder.blocks1.1.attn.attn_drop', 'encoder.blocks1.4.attn.q_norm', 'encoder.blocks1.4.drop_path2', 'encoder.blocks1.5.drop_path1', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.act', 'encoder.patch_embed.backbone.stages.1.2.shortcut', 'encoder.neural_augmentor.contrast', 'encoder.blocks.4.drop_path2', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.drop', 'encoder.blocks.5.attn.attn_drop', 'encoder.mlp.2', 'encoder.blocks.3.drop_path1', 'encoder.blocks.6.drop_path2', 'encoder.patch_embed.backbone.stages.1.2.pre_norm.drop', 'encoder.patch_embed.backbone.stages.1.1.down', 'encoder.blocks.3.attn.attn_drop', 'encoder.blocks.4.attn.k_norm', 'encoder.blocks1.4.attn.attn_drop', 'encoder.blocks1.6.drop_path1', 'encoder.blocks1.5.attn.q_norm', 'encoder.patch_embed.backbone.stages.1.3.pre_norm.drop', 'encoder.blocks.5.attn.q_norm', 'encoder.blocks1.6.attn.attn_drop', 'encoder.blocks.4.ls2', 'encoder.blocks.0.attn.attn_drop', 'encoder.blocks1.2.ls1', 'encoder.blocks1.1.ls2', 'encoder.norm', 'encoder.blocks1.0.drop_path1', 'encoder.blocks1.6.attn.k_norm', 'encoder.fc_norm', 'encoder.blocks1.5.attn.k_norm', 'encoder.blocks1.5.ls1', 'encoder.blocks.0.attn.q_norm', 'encoder.blocks1.3.attn.attn_drop', 'encoder.patch_embed.backbone.stages.0.0.drop_path', 'encoder.blocks1.6.drop_path2', 'encoder.blocks1.2.attn.q_norm', 'encoder.blocks1.0.ls1', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.act', 'encoder.patch_embed.backbone.stages.0.0.shortcut.expand', 'encoder.patch_embed.backbone.stem.norm1.drop', 'encoder.blocks1.4.ls1', 'encoder.blocks1.1.attn.k_norm', 'encoder.neural_augmentor.noise', 'encoder.blocks.6.ls2', 'encoder.patch_embed.backbone.stages.0.1.down', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.act', 'encoder.blocks1.4.ls2', 'encoder.blocks1.6.ls1', 'encoder.blocks.6.drop_path1', 'encoder.mlp', 'encoder.blocks.2.attn.q_norm', 'encoder.blocks.6.attn.attn_drop', 'encoder.patch_embed.backbone.stages.1.0.pre_norm.act', 'encoder.norm_pre', 'encoder.patch_embed.backbone.stages.1.2.down', 'encoder.blocks1.4.drop_path1', 'encoder.mlp.1', 'encoder.blocks1.2.attn.attn_drop', 'encoder.blocks.5.attn.k_norm', 'encoder.patch_embed.backbone.stages.0.0.pre_norm.drop', 'encoder.blocks.1.ls2', 'encoder.blocks.2.attn.k_norm', 'encoder.blocks1.0.attn.attn_drop', 'encoder.patch_embed.backbone.stages.1.3.down', 'encoder.blocks1.0.drop_path2', 'encoder.blocks.3.attn.k_norm', 'encoder.patch_embed.backbone.stages.0.1.shortcut', 'encoder.patch_embed.backbone.stages.1.2.drop_path', 'encoder.neural_augmentor.noise.max_fn', 'encoder.blocks.4.drop_path1', 'encoder.blocks.0.attn.k_norm', 'encoder.blocks.6.ls1', 'encoder.blocks.6.attn.q_norm', 'encoder.patch_embed.backbone.stages.0.1.drop_path', 'encoder.neural_augmentor', 'encoder.blocks.2.drop_path2', 'encoder.blocks.3.drop_path2', 'encoder.blocks1.3.drop_path2', 'encoder.blocks1.3.ls2', 'encoder.blocks.3.ls2', 'encoder.patch_embed.backbone.stages.0.1.pre_norm.drop', 'encoder.blocks1.2.drop_path1', 'encoder.neural_augmentor.brightness', 'encoder.blocks.3.attn.q_norm', 'encoder.blocks.3.ls1', 'encoder.blocks.2.drop_path1', 'encoder.blocks1.1.ls1', 'encoder.blocks1.6.ls2', 'encoder.blocks1.1.attn.q_norm', 'encoder.blocks1.3.attn.k_norm', 'encoder.patch_embed.backbone.stages.1.0.drop_path', 'encoder.patch_embed.backbone.stages.1.1.shortcut', 'encoder.neural_augmentor.contrast.max_fn', 'encoder.blocks1.0.attn.k_norm', 'encoder.patch_embed.backbone.stages.1.1.pre_norm.act', 'encoder.blocks.1.drop_path2', 'encoder.neural_augmentor.brightness.max_fn', 'encoder.blocks.5.drop_path1', 'encoder.blocks1.1.drop_path2', 'encoder.blocks1.2.attn.k_norm', 'encoder.neural_augmentor.contrast.min_fn', 'encoder.blocks1.3.ls1', 'encoder.blocks1.5.drop_path2'}
+2024-08-01 11:40:07 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 33, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::avg_pool2d': 2, 'aten::feature_dropout': 1})
+[31m=================================================================[0m
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	SegCrossEntropy(  ignore_idx=-1  class_weighting=False  label_smoothing=0.0  aux_weight=0.4 loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - Max. epochs for training: 30
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=3e-06
+ 	 max_lr=3e-05
+ 	 period=30
+ 	 warmup_init_lr=1e-06
+ 	 warmup_iters=500
+ )
+2024-08-01 11:40:08 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt'
+2024-08-01 11:40:08 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-08-01 11:40:10 - [32m[1mINFO   [0m - Training epoch 0
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [224, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-08-01 11:44:12 - [34m[1mLOGS   [0m - Epoch:   0 [       1/10000000], loss: {'segmentation': 4.7337, 'neural_augmentation': 0.1643, 'total_loss': 4.898}, LR: [1e-06, 1e-06, 1e-06, 1e-06], Avg. batch load time: 235.553, Elapsed time: 242.40
+2024-08-01 11:44:26 - [34m[1mLOGS   [0m - Epoch:   0 [     101/10000000], loss: {'segmentation': 4.5973, 'neural_augmentation': 0.2373, 'total_loss': 4.8345}, LR: [7e-06, 7e-06, 7e-06, 7e-06], Avg. batch load time: 2.333, Elapsed time: 256.44
+2024-08-01 11:44:39 - [34m[1mLOGS   [0m - Epoch:   0 [     201/10000000], loss: {'segmentation': 4.3294, 'neural_augmentation': 0.2354, 'total_loss': 4.5648}, LR: [1.3e-05, 1.3e-05, 1.3e-05, 1.3e-05], Avg. batch load time: 1.172, Elapsed time: 269.56
+2024-08-01 11:44:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 0
+	 loss={'segmentation': 4.0341, 'neural_augmentation': 0.2336, 'total_loss': 4.2677}
+2024-08-01 11:48:39 - [34m[1mLOGS   [0m - *** Validation summary for epoch 0
+	 loss={'segmentation': 2.8759, 'neural_augmentation': 0.0, 'total_loss': 2.8759} || iou=22.2814
+2024-08-01 11:48:41 - [34m[1mLOGS   [0m - Best checkpoint with score 22.28 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:48:45 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:48:46 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:48:49 - [34m[1mLOGS   [0m - Training checkpoint for epoch 0/iteration 282 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_0_iter_282.pt
+2024-08-01 11:48:50 - [34m[1mLOGS   [0m - Model state for epoch 0/iteration 282 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_0_iter_282.pt
+[31m===========================================================================[0m
+2024-08-01 11:48:52 - [32m[1mINFO   [0m - Training epoch 1
+2024-08-01 11:48:53 - [34m[1mLOGS   [0m - Epoch:   1 [     283/10000000], loss: {'segmentation': 2.8998, 'neural_augmentation': 0.2166, 'total_loss': 3.1165}, LR: [1.7e-05, 1.7e-05, 1.7e-05, 1.7e-05], Avg. batch load time: 0.515, Elapsed time:  0.69
+2024-08-01 11:49:07 - [34m[1mLOGS   [0m - Epoch:   1 [     383/10000000], loss: {'segmentation': 2.7739, 'neural_augmentation': 0.2315, 'total_loss': 3.0054}, LR: [2.3e-05, 2.3e-05, 2.3e-05, 2.3e-05], Avg. batch load time: 0.006, Elapsed time: 15.29
+2024-08-01 11:49:20 - [34m[1mLOGS   [0m - Epoch:   1 [     483/10000000], loss: {'segmentation': 2.5841, 'neural_augmentation': 0.2279, 'total_loss': 2.812}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.003, Elapsed time: 28.24
+2024-08-01 11:49:31 - [34m[1mLOGS   [0m - *** Training summary for epoch 1
+	 loss={'segmentation': 2.4506, 'neural_augmentation': 0.2266, 'total_loss': 2.6773}
+2024-08-01 11:49:34 - [34m[1mLOGS   [0m - *** Validation summary for epoch 1
+	 loss={'segmentation': 1.8549, 'neural_augmentation': 0.0, 'total_loss': 1.8549} || iou=51.5764
+2024-08-01 11:49:36 - [34m[1mLOGS   [0m - Best checkpoint with score 51.58 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:49:40 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:49:41 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:49:43 - [34m[1mLOGS   [0m - Training checkpoint for epoch 1/iteration 564 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_1_iter_564.pt
+2024-08-01 11:49:44 - [34m[1mLOGS   [0m - Model state for epoch 1/iteration 564 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_1_iter_564.pt
+[31m===========================================================================[0m
+2024-08-01 11:49:46 - [32m[1mINFO   [0m - Training epoch 2
+2024-08-01 11:49:47 - [34m[1mLOGS   [0m - Epoch:   2 [     565/10000000], loss: {'segmentation': 1.9049, 'neural_augmentation': 0.2277, 'total_loss': 2.1325}, LR: [3e-05, 3e-05, 3e-05, 3e-05], Avg. batch load time: 0.403, Elapsed time:  0.54
+2024-08-01 11:49:59 - [34m[1mLOGS   [0m - Epoch:   2 [     665/10000000], loss: {'segmentation': 1.8705, 'neural_augmentation': 0.2243, 'total_loss': 2.0948}, LR: [3e-05, 3e-05, 3e-05, 3e-05], Avg. batch load time: 0.004, Elapsed time: 12.90
+2024-08-01 11:50:13 - [34m[1mLOGS   [0m - Epoch:   2 [     765/10000000], loss: {'segmentation': 1.7817, 'neural_augmentation': 0.2248, 'total_loss': 2.0065}, LR: [3e-05, 3e-05, 3e-05, 3e-05], Avg. batch load time: 0.002, Elapsed time: 26.91
+2024-08-01 11:50:24 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
+	 loss={'segmentation': 1.7157, 'neural_augmentation': 0.2244, 'total_loss': 1.94}
+2024-08-01 11:50:28 - [34m[1mLOGS   [0m - *** Validation summary for epoch 2
+	 loss={'segmentation': 1.4649, 'neural_augmentation': 0.0, 'total_loss': 1.4649} || iou=59.8393
+2024-08-01 11:50:29 - [34m[1mLOGS   [0m - Best checkpoint with score 59.84 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:50:33 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:50:34 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:50:36 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 846 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_2_iter_846.pt
+2024-08-01 11:50:37 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 846 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_2_iter_846.pt
+[31m===========================================================================[0m
+2024-08-01 11:50:40 - [32m[1mINFO   [0m - Training epoch 3
+2024-08-01 11:50:40 - [34m[1mLOGS   [0m - Epoch:   3 [     847/10000000], loss: {'segmentation': 1.4642, 'neural_augmentation': 0.2189, 'total_loss': 1.683}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.517, Elapsed time:  0.67
+2024-08-01 11:50:54 - [34m[1mLOGS   [0m - Epoch:   3 [     947/10000000], loss: {'segmentation': 1.3821, 'neural_augmentation': 0.2246, 'total_loss': 1.6067}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.006, Elapsed time: 14.95
+2024-08-01 11:51:08 - [34m[1mLOGS   [0m - Epoch:   3 [    1047/10000000], loss: {'segmentation': 1.3342, 'neural_augmentation': 0.2231, 'total_loss': 1.5573}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.003, Elapsed time: 28.10
+2024-08-01 11:51:18 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
+	 loss={'segmentation': 1.2932, 'neural_augmentation': 0.2243, 'total_loss': 1.5175}
+2024-08-01 11:51:21 - [34m[1mLOGS   [0m - *** Validation summary for epoch 3
+	 loss={'segmentation': 1.1348, 'neural_augmentation': 0.0, 'total_loss': 1.1348} || iou=62.5058
+2024-08-01 11:51:23 - [34m[1mLOGS   [0m - Best checkpoint with score 62.51 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:51:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:51:28 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:51:30 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 1128 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_3_iter_1128.pt
+2024-08-01 11:51:32 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 1128 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_3_iter_1128.pt
+[31m===========================================================================[0m
+2024-08-01 11:51:34 - [32m[1mINFO   [0m - Training epoch 4
+2024-08-01 11:51:34 - [34m[1mLOGS   [0m - Epoch:   4 [    1129/10000000], loss: {'segmentation': 1.1302, 'neural_augmentation': 0.3098, 'total_loss': 1.44}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.317, Elapsed time:  0.50
+2024-08-01 11:51:48 - [34m[1mLOGS   [0m - Epoch:   4 [    1229/10000000], loss: {'segmentation': 1.0703, 'neural_augmentation': 0.2147, 'total_loss': 1.285}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.004, Elapsed time: 13.86
+2024-08-01 11:52:02 - [34m[1mLOGS   [0m - Epoch:   4 [    1329/10000000], loss: {'segmentation': 1.0402, 'neural_augmentation': 0.2153, 'total_loss': 1.2555}, LR: [2.9e-05, 2.9e-05, 2.9e-05, 2.9e-05], Avg. batch load time: 0.002, Elapsed time: 28.23
+2024-08-01 11:52:12 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
+	 loss={'segmentation': 1.0121, 'neural_augmentation': 0.2147, 'total_loss': 1.2269}
+2024-08-01 11:52:16 - [34m[1mLOGS   [0m - *** Validation summary for epoch 4
+	 loss={'segmentation': 0.9165, 'neural_augmentation': 0.0, 'total_loss': 0.9165} || iou=64.9537
+2024-08-01 11:52:17 - [34m[1mLOGS   [0m - Best checkpoint with score 64.95 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:52:21 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:52:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:52:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 1410 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_4_iter_1410.pt
+2024-08-01 11:52:26 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 1410 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_4_iter_1410.pt
+[31m===========================================================================[0m
+2024-08-01 11:52:28 - [32m[1mINFO   [0m - Training epoch 5
+2024-08-01 11:52:28 - [34m[1mLOGS   [0m - Epoch:   5 [    1411/10000000], loss: {'segmentation': 0.9835, 'neural_augmentation': 0.1833, 'total_loss': 1.1669}, LR: [2.8e-05, 2.8e-05, 2.8e-05, 2.8e-05], Avg. batch load time: 0.499, Elapsed time:  0.63
+2024-08-01 11:52:41 - [34m[1mLOGS   [0m - Epoch:   5 [    1511/10000000], loss: {'segmentation': 0.8618, 'neural_augmentation': 0.2124, 'total_loss': 1.0742}, LR: [2.8e-05, 2.8e-05, 2.8e-05, 2.8e-05], Avg. batch load time: 0.005, Elapsed time: 13.78
+2024-08-01 11:52:54 - [34m[1mLOGS   [0m - Epoch:   5 [    1611/10000000], loss: {'segmentation': 0.825, 'neural_augmentation': 0.2079, 'total_loss': 1.0329}, LR: [2.8e-05, 2.8e-05, 2.8e-05, 2.8e-05], Avg. batch load time: 0.003, Elapsed time: 26.59
+2024-08-01 11:53:04 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
+	 loss={'segmentation': 0.8048, 'neural_augmentation': 0.2106, 'total_loss': 1.0154}
+2024-08-01 11:53:08 - [34m[1mLOGS   [0m - *** Validation summary for epoch 5
+	 loss={'segmentation': 0.8185, 'neural_augmentation': 0.0, 'total_loss': 0.8185} || iou=65.6298
+2024-08-01 11:53:09 - [34m[1mLOGS   [0m - Best checkpoint with score 65.63 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_best.pt
+2024-08-01 11:53:10 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_score_22.2814.pt
+2024-08-01 11:53:10 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_51.5764.pt', 'checkpoint_score_59.8393.pt', 'checkpoint_score_62.5058.pt', 'checkpoint_score_64.9537.pt', 'checkpoint_score_65.6298.pt']
+2024-08-01 11:53:15 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_avg.pt
+2024-08-01 11:53:19 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_last.pt
+2024-08-01 11:53:20 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_last.pt
+2024-08-01 11:53:23 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 1692 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/training_checkpoint_epoch_5_iter_1692.pt
+2024-08-01 11:53:24 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 1692 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/9_uec_224/train/checkpoint_epoch_5_iter_1692.pt
+[31m===========================================================================[0m
+2024-08-01 11:53:26 - [32m[1mINFO   [0m - Training epoch 6
+2024-08-01 11:53:27 - [34m[1mLOGS   [0m - Epoch:   6 [    1693/10000000], loss: {'segmentation': 0.6726, 'neural_augmentation': 0.1849, 'total_loss': 0.8575}, LR: [2.7e-05, 2.7e-05, 2.7e-05, 2.7e-05], Avg. batch load time: 0.836, Elapsed time:  1.00
+2024-08-01 11:53:41 - [34m[1mLOGS   [0m - Epoch:   6 [    1793/10000000], loss: {'segmentation': 0.6813, 'neural_augmentation': 0.2077, 'total_loss': 0.889}, LR: [2.7e-05, 2.7e-05, 2.7e-05, 2.7e-05], Avg. batch load time: 0.009, Elapsed time: 15.10
+2024-08-01 11:53:55 - [34m[1mLOGS   [0m - Epoch:   6 [    1893/10000000], loss: {'segmentation': 0.6576, 'neural_augmentation': 0.2069, 'total_loss': 0.8646}, LR: [2.7e-05, 2.7e-05, 2.7e-05, 2.7e-05], Avg. batch load time: 0.005, Elapsed time: 28.83
+2024-08-01 11:54:06 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
+	 loss={'segmentation': 0.6416, 'neural_augmentation': 0.2058, 'total_loss': 0.8474}
+2024-08-01 11:54:09 - [34m[1mLOGS   [0m - *** Validation summary for epoch 6
+	 loss={'segmentation': 0.6936, 'neural_augmentation': 0.0, 'total_loss': 0.6936} || iou=67.1633
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1608 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Terminated

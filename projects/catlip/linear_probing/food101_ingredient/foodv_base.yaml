@@ -14,7 +14,7 @@ common:
 dataset:
   root: "/ML-A100/team/mm/models/food101/food101"
   # effective batch size is 128 (32 * 4 A100 80 GB GPU)
-  train_batch_size0: 32
+  train_batch_size0: 128
   val_batch_size0: 32
   eval_batch_size0: 32
   workers: 64 # use all CPUs
@@ -77,12 +77,12 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 3s0
+  max_epochs: 60
   warmup_iterations: 500
-  warmup_init_lr: 1.e-6
+  warmup_init_lr: 1.e-5
   cosine:
-    max_lr: 0.00001
-    min_lr: 0.000001
+    max_lr: 0.0005
+    min_lr: 0.00005
 
 model:
   activation_checkpointing: true
@@ -93,7 +93,7 @@ model:
   classification:
     name: "foodv"
     n_classes: 174
-    pretrained: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt
+    pretrained: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
     foodv:
       mode: "base"
       norm_layer: "layer_norm_fp32"

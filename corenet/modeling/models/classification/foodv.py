@@ -906,29 +906,24 @@ class Foodv(BaseImageEncoder):
         x = self.patch_drop(x)
         x = self.norm_pre(x)
 
-        if self.grad_checkpointing and not torch.jit.is_scripting():
-            x = checkpoint_seq(self.blocks, x)
-        else:
-            sum_x = torch.zeros_like(x)  # 初始化为和x相同形状和device的全0张量
-            count = 0
-            for block in self.blocks:
-                x = block(x)
-                sum_x += x  # 累计求和
-                count += 1  # 统计次数
-                
-            average_x = sum_x / count  # 计算均值
-            x = self.pool_stage3_stage4(x)
+        sum_x = torch.zeros_like(x)  # 初始化为和x相同形状和device的全0张量
+        count = 0
+        for block in self.blocks:
+            x = block(x)
+            sum_x += x  # 累计求和
+            count += 1  # 统计次数
+            
+        average_x = sum_x / count  # 计算均值
+        x = self.pool_stage3_stage4(x)
 
-            sum_x1 = torch.zeros_like(x)  # 第二阶段也同样处理
-            count1 = 0
-            for block1 in self.blocks1:
-                x = block1(x)
-                sum_x1 += x
-                count1 += 1
-                
-            average_x1 = sum_x1 / count1  # 计算第二个阶段的均值
-
-        x = self.norm(x)
+        sum_x1 = torch.zeros_like(x)  # 第二阶段也同样处理
+        count1 = 0
+        for block1 in self.blocks1:
+            x = block1(x)
+            sum_x1 += x
+            count1 += 1
+            
+        average_x1 = sum_x1 / count1  # 计算第二个阶段的均值
         return x, average_x, average_x1
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -960,8 +955,8 @@ class Foodv(BaseImageEncoder):
             x = self.neural_augmentor(x)
             out_dict["augmented_tensor"] = x
 
-        _, out_dict_forward = self.forward_features_dense_connector(x)
-        x = out_dict_forward[-1]
+        x, average_stage3, average_stage4 = self.forward_features_dense_connector(x)
+        #x = average_stage4
         x = x.transpose(1, 2)
         n, c, h_w = x.shape
         h = w = int(h_w ** 0.5)

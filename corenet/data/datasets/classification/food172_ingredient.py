@@ -33,6 +33,7 @@ class food172ingredient_lassification(BaseImageDataset):
         split = "train" if self.is_training else "test"
         #split = "train"
         self.root = getattr(opts, f"dataset.root")
+        print(self.root)
         ann_file = os.path.join(
             self.root, "recognition/{}_IngreLabel.jsonl".format(split)
         )
@@ -119,7 +120,8 @@ class food172ingredient_lassification(BaseImageDataset):
             # 使用os.path.join()拼接路径
             full_path = os.path.join(self.img_dir, img_path)
         input_img = self.read_image_pil(full_path)
-
+        if input_img == None:
+            return self.__getitem__(( crop_size_h, crop_size_w, img_index + 1))
         transform_fn = self.get_augmentation_transforms(size=(crop_size_h, crop_size_w))
 
         data = transform_fn({"image": input_img})

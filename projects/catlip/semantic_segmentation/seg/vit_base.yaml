@@ -30,20 +30,20 @@ image_augmentation:
     enable: true
   resize:
     enable: true
-    size: [512, 512]
+    size: [224, 224]
     interpolation: "bicubic"
   random_short_size_resize:
     enable: true
     interpolation: "bicubic"
-    short_side_min: 256
-    short_side_max: 768
+    short_side_min: 128
+    short_side_max: 320
     max_img_dim: 1024
 
 sampler:
   name: "batch_sampler"
   bs:
-    crop_size_width: 512
-    crop_size_height: 512
+    crop_size_width: 224
+    crop_size_height: 224
 
 loss:
   category: "composite_loss"
@@ -71,7 +71,7 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 30
+  max_epochs: 50
   warmup_iterations: 500
   warmup_init_lr: 1.e-6
   cosine:
@@ -87,10 +87,10 @@ model:
     n_classes: 104
     norm_layer: "layer_norm_fp32"
     seg_head: "deeplabv3"
-    output_stride: 8
+    output_stride: 16
     deeplabv3:
       aspp_dropout: 0.1
-      aspp_out_channels: 512
+      aspp_out_channels: 224
       aspp_rates: [ 12, 24, 36 ]
   classification:
     name: "vit"

@@ -18,7 +18,7 @@ from nltk.data import find
 nltk_data_path = '/home/data_llm/anaconda3/envs/corenet/nltk_data'
 nltk.data.path.append(nltk_data_path)
 
-# 检查并下载常用数据包
+# 检查并下载常用数据
 packages = ['punkt', 'averaged_perceptron_tagger', 'wordnet', 'stopwords']
 for package in packages:
     try:

@@ -15,7 +15,7 @@ dataset:
   root_train: "/ML-A100/team/mm/models/food101/food101/train_images"
   root_val: "/ML-A100/team/mm/models/food101/food101/test_images"
   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
-  train_batch_size0: 64
+  train_batch_size0: 128
   val_batch_size0: 50
   eval_batch_size0: 50
   workers: 64 # use all CPUs
@@ -78,16 +78,12 @@ optim:
 
 scheduler:
   name: "cosine"
-  max_epochs: 30
+  max_epochs: 60
   warmup_iterations: 500
-  # warmup_init_lr: 1.e-3
-  # cosine:
-  #   max_lr: 0.03
-  #   min_lr: 0.001
-  warmup_init_lr: 1.e-6
+  warmup_init_lr: 1.e-5
   cosine:
-    max_lr: 0.00003
-    min_lr: 0.000003
+    max_lr: 0.0005
+    min_lr: 0.00005
 
 model:
   activation_checkpointing: true
@@ -104,7 +100,7 @@ model:
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt"
+    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
     #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
     foodv:
       mode: "base"

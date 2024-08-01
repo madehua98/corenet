@@ -1,0 +1,1986 @@
+nohup: ignoring input
+2024-07-31 02:28:19 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+base
+dci
+2024-07-31 02:28:21 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: neural_augmentor
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: patch_embed
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: pos_drop
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: patch_drop
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: norm_pre
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: blocks
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: pool
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: blocks1
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: norm
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: mlp
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing module: fc_norm
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: pos_embed
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._low
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._high
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._low
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._high
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._low
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._high
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.shortcut.expand.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.shortcut.expand.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.pre_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.pre_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv1_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv1_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv2_kxk.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv2_kxk.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv3_1x1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv3_1x1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: pool.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: pool.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: pool.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: pool.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.qkv.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.qkv.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.proj.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.proj.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w1.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w1.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: mlp.0.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: mlp.0.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: mlp.2.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: mlp.2.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: fc_norm.weight
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Freezing parameter: fc_norm.bias
+2024-07-31 02:28:21 - [32m[1mINFO   [0m - Trainable parameters: ['classifier.weight', 'classifier.bias']
+2024-07-31 02:28:21 - [34m[1mLOGS   [0m - [36mModel[0m
+Foodv(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=353, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                              Foodv Summary
+[31m=================================================================[0m
+Total parameters     =  102.749 M
+Total trainable parameters =    0.362 M
+
+2024-07-31 02:28:21 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-31 02:28:21 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.103G                 | 13.399G    |
+|  pos_embed                           |  (1, 1, 512)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  3.653M                |  5.52G     |
+|   patch_embed.backbone.stem          |   0.151M               |   1.901G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    43.352M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    8.028M  |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    1.85G   |
+|   patch_embed.backbone.stages        |   2.321M               |   3.387G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.478G  |
+|    patch_embed.backbone.stages.1     |    2.047M              |    1.909G  |
+|   patch_embed.backbone.pool          |   1.181M               |   0.232G   |
+|    patch_embed.backbone.pool.proj    |    1.18M               |    0.231G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.004M  |
+|  blocks                              |  18.404M               |  3.607G    |
+|   blocks.0                           |   2.629M               |   0.515G   |
+|    blocks.0.norm1                    |    1.024K              |    0.502M  |
+|    blocks.0.attn                     |    1.051M              |    0.206G  |
+|    blocks.0.norm2                    |    1.024K              |    0.502M  |
+|    blocks.0.mlp                      |    1.576M              |    0.309G  |
+|   blocks.1                           |   2.629M               |   0.515G   |
+|    blocks.1.norm1                    |    1.024K              |    0.502M  |
+|    blocks.1.attn                     |    1.051M              |    0.206G  |
+|    blocks.1.norm2                    |    1.024K              |    0.502M  |
+|    blocks.1.mlp                      |    1.576M              |    0.309G  |
+|   blocks.2                           |   2.629M               |   0.515G   |
+|    blocks.2.norm1                    |    1.024K              |    0.502M  |
+|    blocks.2.attn                     |    1.051M              |    0.206G  |
+|    blocks.2.norm2                    |    1.024K              |    0.502M  |
+|    blocks.2.mlp                      |    1.576M              |    0.309G  |
+|   blocks.3                           |   2.629M               |   0.515G   |
+|    blocks.3.norm1                    |    1.024K              |    0.502M  |
+|    blocks.3.attn                     |    1.051M              |    0.206G  |
+|    blocks.3.norm2                    |    1.024K              |    0.502M  |
+|    blocks.3.mlp                      |    1.576M              |    0.309G  |
+|   blocks.4                           |   2.629M               |   0.515G   |
+|    blocks.4.norm1                    |    1.024K              |    0.502M  |
+|    blocks.4.attn                     |    1.051M              |    0.206G  |
+|    blocks.4.norm2                    |    1.024K              |    0.502M  |
+|    blocks.4.mlp                      |    1.576M              |    0.309G  |
+|   blocks.5                           |   2.629M               |   0.515G   |
+|    blocks.5.norm1                    |    1.024K              |    0.502M  |
+|    blocks.5.attn                     |    1.051M              |    0.206G  |
+|    blocks.5.norm2                    |    1.024K              |    0.502M  |
+|    blocks.5.mlp                      |    1.576M              |    0.309G  |
+|   blocks.6                           |   2.629M               |   0.515G   |
+|    blocks.6.norm1                    |    1.024K              |    0.502M  |
+|    blocks.6.attn                     |    1.051M              |    0.206G  |
+|    blocks.6.norm2                    |    1.024K              |    0.502M  |
+|    blocks.6.mlp                      |    1.576M              |    0.309G  |
+|  pool                                |  4.721M                |  0.463G    |
+|   pool.proj                          |   4.72M                |   0.462G   |
+|    pool.proj.weight                  |    (1024, 512, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.024K               |   1.004M   |
+|    pool.norm.weight                  |    (512,)              |            |
+|    pool.norm.bias                    |    (512,)              |            |
+|  blocks1                             |  73.508M               |  3.602G    |
+|   blocks1.0                          |   10.501M              |   0.515G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.0.attn                    |    4.198M              |    0.206G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.0.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.1                          |   10.501M              |   0.515G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.1.attn                    |    4.198M              |    0.206G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.1.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.2                          |   10.501M              |   0.515G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.2.attn                    |    4.198M              |    0.206G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.2.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.3                          |   10.501M              |   0.515G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.3.attn                    |    4.198M              |    0.206G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.3.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.4                          |   10.501M              |   0.515G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.4.attn                    |    4.198M              |    0.206G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.4.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.5                          |   10.501M              |   0.515G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.5.attn                    |    4.198M              |    0.206G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.5.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.6                          |   10.501M              |   0.515G   |
+|    blocks1.6.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.6.attn                    |    4.198M              |    0.206G  |
+|    blocks1.6.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.6.mlp                     |    6.299M              |    0.309G  |
+|  mlp                                 |  2.099M                |  0.206G    |
+|   mlp.0                              |   1.05M                |   0.103G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.103G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  0.362M                |  0.361M    |
+|   classifier.weight                  |   (353, 1024)          |            |
+|   classifier.bias                    |   (353,)               |            |
+2024-07-31 02:28:22 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-31 02:28:22 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.3.attn.k_norm', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'patch_embed.backbone.stages.0.0.down', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks.6.drop_path1', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'neural_augmentor.contrast.max_fn', 'blocks1.4.attn.attn_drop', 'blocks1.1.attn.q_norm', 'blocks1.3.ls1', 'patch_embed.backbone.stages.1.2.shortcut', 'neural_augmentor.noise.min_fn', 'blocks1.6.drop_path1', 'blocks.2.drop_path2', 'blocks1.3.drop_path1', 'blocks.5.drop_path2', 'blocks.2.ls2', 'neural_augmentor.noise.max_fn', 'blocks.4.attn.k_norm', 'blocks.3.drop_path2', 'blocks1.0.attn.attn_drop', 'blocks1.4.ls2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks.5.ls1', 'patch_embed.backbone.stages.1.3.drop_path', 'neural_augmentor.noise', 'blocks1.5.drop_path2', 'blocks1.1.attn.attn_drop', 'blocks.2.ls1', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'neural_augmentor.brightness', 'blocks1.6.attn.q_norm', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.1.ls1', 'blocks.1.drop_path2', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks.0.drop_path2', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'patch_embed.backbone.stages.1.3.down', 'blocks1.1.ls2', 'blocks.2.drop_path1', 'blocks1.3.attn.attn_drop', 'patch_embed.backbone.stages.1.3.shortcut', 'patch_drop', 'blocks1.6.ls2', 'blocks1.0.ls2', 'blocks1.4.drop_path1', 'blocks.0.ls2', 'blocks1.0.attn.q_norm', 'blocks.2.attn.attn_drop', 'blocks.1.attn.attn_drop', 'blocks.6.attn.q_norm', 'blocks1.5.ls1', 'blocks.0.attn.k_norm', 'blocks1.4.attn.k_norm', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'neural_augmentor', 'blocks.3.attn.k_norm', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.0.attn.q_norm', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks.4.ls2', 'blocks.5.drop_path1', 'blocks.6.drop_path2', 'neural_augmentor.contrast', 'blocks.5.attn.k_norm', 'blocks.3.ls2', 'neural_augmentor.brightness.max_fn', 'blocks1.3.attn.q_norm', 'blocks1.6.drop_path2', 'blocks.4.drop_path1', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks1.0.drop_path1', 'blocks.1.attn.q_norm', 'norm', 'neural_augmentor.brightness.min_fn', 'blocks1.5.attn.attn_drop', 'patch_embed.backbone.stem.norm1.drop', 'blocks.0.drop_path1', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks.3.drop_path1', 'patch_embed.backbone.stages.1.1.down', 'blocks1.1.drop_path1', 'blocks1.0.ls1', 'blocks1.0.attn.k_norm', 'blocks.5.attn.attn_drop', 'blocks1.2.attn.k_norm', 'norm_pre', 'blocks.0.attn.attn_drop', 'blocks.4.drop_path2', 'blocks1.2.attn.q_norm', 'blocks1.1.attn.k_norm', 'blocks.2.attn.k_norm', 'blocks1.5.ls2', 'patch_embed.backbone.stages.1.1.shortcut', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks1.6.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks1.2.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.5.attn.q_norm', 'blocks.6.attn.k_norm', 'blocks1.2.drop_path1', 'blocks1.5.drop_path1', 'blocks.4.ls1', 'patch_embed.backbone.stages.0.1.down', 'blocks.3.attn.attn_drop', 'blocks1.3.ls2', 'patch_embed.backbone.stages.1.0.down', 'blocks.6.ls1', 'blocks.1.drop_path1', 'blocks1.4.attn.q_norm', 'blocks.2.attn.q_norm', 'blocks.3.ls1', 'blocks.4.attn.q_norm', 'blocks1.6.ls1', 'blocks1.1.drop_path2', 'blocks.6.attn.attn_drop', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks.3.attn.q_norm', 'blocks.0.ls1', 'patch_embed.proj', 'blocks.4.attn.attn_drop', 'blocks.1.ls2', 'blocks1.6.attn.k_norm', 'blocks.5.ls2', 'blocks1.1.ls1', 'blocks1.3.drop_path2', 'blocks1.0.drop_path2', 'blocks1.2.ls1', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.1.attn.k_norm', 'blocks.6.ls2', 'neural_augmentor.contrast.min_fn', 'blocks1.2.drop_path2', 'blocks1.4.ls1', 'blocks1.5.attn.q_norm', 'blocks1.4.drop_path2', 'blocks1.2.ls2', 'patch_embed.backbone.stages.1.2.down'}
+2024-07-31 02:28:22 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-07-31 02:28:22 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train
+2024-07-31 02:28:29 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:30009
+/ML-A100/team/mm/models/food172/food_172
+/ML-A100/team/mm/models/food172/food_172
+base
+dci
+2024-07-31 02:28:29 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:30009
+/ML-A100/team/mm/models/food172/food_172
+2024-07-31 02:28:33 - [34m[1mLOGS   [0m - Training dataset details are given below
+food172ingredient_lassification(
+	root=/ML-A100/team/mm/models/food172/food_172 
+	is_training=True 
+	num_samples=77087
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+)
+/ML-A100/team/mm/models/food172/food_172
+2024-07-31 02:28:33 - [34m[1mLOGS   [0m - Validation dataset details are given below
+food172ingredient_lassification(
+	root=/ML-A100/team/mm/models/food172/food_172 
+	is_training=False 
+	num_samples=33154
+	transforms=Compose(
+			Resize(size=232, interpolation=bilinear, maintain_aspect_ratio=True), 
+			CenterCrop(size=(h=224, w=224)), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+)
+2024-07-31 02:28:33 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=128
+	 scales=[(128, 128, 392), (144, 144, 309), (160, 160, 250), (176, 176, 207), (192, 192, 174), (208, 208, 148), (224, 224, 128), (240, 240, 111), (256, 256, 98), (272, 272, 86), (288, 288, 77), (304, 304, 69), (320, 320, 62)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-07-31 02:28:33 - [34m[1mLOGS   [0m - Validation sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=16
+	 scales=[(224, 224, 16)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-07-31 02:28:33 - [34m[1mLOGS   [0m - Number of data workers: 64
+base
+dci
+2024-07-31 02:28:37 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: neural_augmentor
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: patch_embed
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: pos_drop
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: patch_drop
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: norm_pre
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: blocks
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: pool
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: blocks1
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: norm
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: mlp
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing module: fc_norm
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: pos_embed
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._low
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._high
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._low
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._high
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._low
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._high
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stem.conv2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.0.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.0.1.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.shortcut.expand.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.shortcut.expand.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.0.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.1.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.2.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.pre_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.pre_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv1_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv1_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv2_kxk.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv2_kxk.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv3_1x1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.stages.1.3.conv3_1x1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: patch_embed.backbone.pool.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.0.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.1.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.2.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.3.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.4.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.5.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks.6.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: pool.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: pool.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: pool.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: pool.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.0.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.1.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.2.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.3.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.4.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.5.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.qkv.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.qkv.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.proj.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.attn.proj.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.norm2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w1.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w1.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: blocks1.6.mlp.w2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: mlp.0.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: mlp.0.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: mlp.2.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: mlp.2.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: fc_norm.weight
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Freezing parameter: fc_norm.bias
+2024-07-31 02:28:37 - [32m[1mINFO   [0m - Trainable parameters: ['classifier.weight', 'classifier.bias']
+2024-07-31 02:28:37 - [34m[1mLOGS   [0m - [36mModel[0m
+Foodv(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=353, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                              Foodv Summary
+[31m=================================================================[0m
+Total parameters     =  102.749 M
+Total trainable parameters =    0.362 M
+
+2024-07-31 02:28:37 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-31 02:28:37 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 0.103G                 | 13.399G    |
+|  pos_embed                           |  (1, 1, 512)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  3.653M                |  5.52G     |
+|   patch_embed.backbone.stem          |   0.151M               |   1.901G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    43.352M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    8.028M  |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    1.85G   |
+|   patch_embed.backbone.stages        |   2.321M               |   3.387G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.478G  |
+|    patch_embed.backbone.stages.1     |    2.047M              |    1.909G  |
+|   patch_embed.backbone.pool          |   1.181M               |   0.232G   |
+|    patch_embed.backbone.pool.proj    |    1.18M               |    0.231G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.004M  |
+|  blocks                              |  18.404M               |  3.607G    |
+|   blocks.0                           |   2.629M               |   0.515G   |
+|    blocks.0.norm1                    |    1.024K              |    0.502M  |
+|    blocks.0.attn                     |    1.051M              |    0.206G  |
+|    blocks.0.norm2                    |    1.024K              |    0.502M  |
+|    blocks.0.mlp                      |    1.576M              |    0.309G  |
+|   blocks.1                           |   2.629M               |   0.515G   |
+|    blocks.1.norm1                    |    1.024K              |    0.502M  |
+|    blocks.1.attn                     |    1.051M              |    0.206G  |
+|    blocks.1.norm2                    |    1.024K              |    0.502M  |
+|    blocks.1.mlp                      |    1.576M              |    0.309G  |
+|   blocks.2                           |   2.629M               |   0.515G   |
+|    blocks.2.norm1                    |    1.024K              |    0.502M  |
+|    blocks.2.attn                     |    1.051M              |    0.206G  |
+|    blocks.2.norm2                    |    1.024K              |    0.502M  |
+|    blocks.2.mlp                      |    1.576M              |    0.309G  |
+|   blocks.3                           |   2.629M               |   0.515G   |
+|    blocks.3.norm1                    |    1.024K              |    0.502M  |
+|    blocks.3.attn                     |    1.051M              |    0.206G  |
+|    blocks.3.norm2                    |    1.024K              |    0.502M  |
+|    blocks.3.mlp                      |    1.576M              |    0.309G  |
+|   blocks.4                           |   2.629M               |   0.515G   |
+|    blocks.4.norm1                    |    1.024K              |    0.502M  |
+|    blocks.4.attn                     |    1.051M              |    0.206G  |
+|    blocks.4.norm2                    |    1.024K              |    0.502M  |
+|    blocks.4.mlp                      |    1.576M              |    0.309G  |
+|   blocks.5                           |   2.629M               |   0.515G   |
+|    blocks.5.norm1                    |    1.024K              |    0.502M  |
+|    blocks.5.attn                     |    1.051M              |    0.206G  |
+|    blocks.5.norm2                    |    1.024K              |    0.502M  |
+|    blocks.5.mlp                      |    1.576M              |    0.309G  |
+|   blocks.6                           |   2.629M               |   0.515G   |
+|    blocks.6.norm1                    |    1.024K              |    0.502M  |
+|    blocks.6.attn                     |    1.051M              |    0.206G  |
+|    blocks.6.norm2                    |    1.024K              |    0.502M  |
+|    blocks.6.mlp                      |    1.576M              |    0.309G  |
+|  pool                                |  4.721M                |  0.463G    |
+|   pool.proj                          |   4.72M                |   0.462G   |
+|    pool.proj.weight                  |    (1024, 512, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.024K               |   1.004M   |
+|    pool.norm.weight                  |    (512,)              |            |
+|    pool.norm.bias                    |    (512,)              |            |
+|  blocks1                             |  73.508M               |  3.602G    |
+|   blocks1.0                          |   10.501M              |   0.515G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.0.attn                    |    4.198M              |    0.206G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.0.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.1                          |   10.501M              |   0.515G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.1.attn                    |    4.198M              |    0.206G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.1.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.2                          |   10.501M              |   0.515G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.2.attn                    |    4.198M              |    0.206G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.2.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.3                          |   10.501M              |   0.515G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.3.attn                    |    4.198M              |    0.206G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.3.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.4                          |   10.501M              |   0.515G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.4.attn                    |    4.198M              |    0.206G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.4.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.5                          |   10.501M              |   0.515G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.5.attn                    |    4.198M              |    0.206G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.5.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.6                          |   10.501M              |   0.515G   |
+|    blocks1.6.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.6.attn                    |    4.198M              |    0.206G  |
+|    blocks1.6.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.6.mlp                     |    6.299M              |    0.309G  |
+|  mlp                                 |  2.099M                |  0.206G    |
+|   mlp.0                              |   1.05M                |   0.103G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.103G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  0.362M                |  0.361M    |
+|   classifier.weight                  |   (353, 1024)          |            |
+|   classifier.bias                    |   (353,)               |            |
+2024-07-31 02:28:38 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-31 02:28:38 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.6.ls2', 'blocks.4.attn.k_norm', 'blocks1.1.attn.attn_drop', 'blocks.1.attn.k_norm', 'norm', 'patch_embed.backbone.stages.0.1.down', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'patch_drop', 'patch_embed.proj', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'neural_augmentor.noise', 'blocks1.3.drop_path1', 'blocks1.4.attn.attn_drop', 'blocks.5.attn.q_norm', 'blocks.0.attn.k_norm', 'blocks.4.drop_path1', 'blocks.4.attn.attn_drop', 'blocks.1.attn.q_norm', 'blocks.1.drop_path1', 'blocks.6.drop_path1', 'patch_embed.backbone.stages.0.0.down', 'blocks1.1.drop_path1', 'blocks1.0.attn.attn_drop', 'blocks1.3.attn.q_norm', 'neural_augmentor.brightness.max_fn', 'blocks1.4.ls1', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks1.5.attn.attn_drop', 'neural_augmentor.brightness.min_fn', 'blocks.4.drop_path2', 'blocks.2.ls2', 'blocks.4.ls2', 'blocks1.0.ls2', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks.0.attn.q_norm', 'blocks1.5.ls2', 'blocks1.0.ls1', 'blocks.5.attn.k_norm', 'blocks1.5.drop_path1', 'blocks1.6.ls1', 'blocks.5.drop_path2', 'blocks1.3.attn.k_norm', 'blocks1.2.ls1', 'blocks.0.ls1', 'blocks.0.attn.attn_drop', 'blocks.3.ls1', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks.3.attn.attn_drop', 'blocks.3.attn.q_norm', 'blocks.0.drop_path1', 'blocks1.6.attn.attn_drop', 'blocks.5.drop_path1', 'blocks1.4.drop_path2', 'blocks1.2.ls2', 'patch_embed.backbone.stages.1.3.down', 'blocks1.1.drop_path2', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks.1.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.3.drop_path2', 'neural_augmentor.contrast.max_fn', 'blocks.6.attn.k_norm', 'neural_augmentor.contrast.min_fn', 'neural_augmentor.noise.max_fn', 'blocks.0.ls2', 'blocks.2.ls1', 'neural_augmentor', 'blocks1.2.drop_path2', 'blocks.6.attn.attn_drop', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks1.5.ls1', 'blocks.1.drop_path2', 'blocks.4.attn.q_norm', 'neural_augmentor.contrast', 'blocks.5.attn.attn_drop', 'blocks1.3.drop_path2', 'blocks1.1.attn.q_norm', 'blocks.5.ls1', 'blocks.2.drop_path2', 'blocks.6.ls2', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks1.4.drop_path1', 'blocks1.6.drop_path1', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks.2.attn.k_norm', 'blocks.1.ls1', 'blocks1.4.attn.q_norm', 'blocks.1.ls2', 'blocks.4.ls1', 'blocks1.6.attn.k_norm', 'blocks1.2.drop_path1', 'blocks1.3.attn.attn_drop', 'blocks1.4.ls2', 'patch_embed.backbone.stages.1.2.down', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'norm_pre', 'blocks1.2.attn.q_norm', 'patch_embed.backbone.stages.1.0.down', 'neural_augmentor.brightness', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks1.5.drop_path2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.0.drop_path2', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.1.3.drop_path', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.2.drop_path1', 'blocks1.1.ls1', 'blocks.5.ls2', 'neural_augmentor.noise.min_fn', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks.3.ls2', 'blocks.2.attn.attn_drop', 'blocks.6.attn.q_norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.1.ls2', 'blocks1.5.attn.q_norm', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks1.2.attn.k_norm', 'blocks.3.attn.k_norm', 'blocks.6.ls1', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.3.ls1', 'blocks.0.drop_path2', 'blocks1.6.drop_path2', 'blocks.2.attn.q_norm', 'blocks.6.drop_path2', 'patch_embed.backbone.stages.1.2.drop_path', 'patch_embed.backbone.stem.norm1.drop', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks1.0.drop_path1', 'blocks1.1.attn.k_norm', 'blocks.3.drop_path1', 'blocks1.4.attn.k_norm', 'patch_embed.backbone.stages.1.1.down', 'blocks1.3.ls2', 'blocks1.0.attn.k_norm', 'blocks1.0.attn.q_norm', 'blocks1.2.attn.attn_drop', 'blocks1.6.attn.q_norm', 'patch_embed.backbone.stages.0.0.pre_norm.act'}
+2024-07-31 02:28:38 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	BinaryCrossEntropy(  reduction=batch_mean loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - Max. epochs for training: 60
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=5e-05
+ 	 max_lr=0.0005
+ 	 period=60
+ 	 warmup_init_lr=1e-05
+ 	 warmup_iters=500
+ )
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - Loaded checkpoint from /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/training_checkpoint_last.pt
+2024-07-31 02:28:38 - [34m[1mLOGS   [0m - Resuming training for epoch 40
+2024-07-31 02:28:38 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-07-31 02:28:40 - [32m[1mINFO   [0m - Training epoch 40
+2024-07-31 02:28:29 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:30009
+/ML-A100/team/mm/models/food172/food_172
+/ML-A100/team/mm/models/food172/food_172
+base
+dci
+2024-07-31 02:28:29 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:30009
+/ML-A100/team/mm/models/food172/food_172
+/ML-A100/team/mm/models/food172/food_172
+base
+dci
+2024-07-31 02:31:49 - [34m[1mLOGS   [0m - Epoch:  40 [    2411/10000000], loss: {'classification': 4.9234, 'neural_augmentation': 0.5104, 'total_loss': 5.4338}, LR: [0.000162, 0.000162], Avg. batch load time: 186.658, Elapsed time: 188.24
+2024-07-31 02:32:08 - [34m[1mLOGS   [0m - *** Training summary for epoch 40
+	 loss={'classification': 5.0905, 'neural_augmentation': 0.5142, 'total_loss': 5.6047}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+2024-07-31 02:35:31 - [34m[1mLOGS   [0m - Epoch:  40 [    8016/   33154], loss: {'classification': 4.6655, 'neural_augmentation': 0.0, 'total_loss': 4.6655}, multiclass_classification_pr(pred=logits): {'ODS-F1': [0.6737, 0.5993, 0.3193, 0.8424, 0.8117, 0.5714, 0.5833, 0.3171, 0.7284, 0.4613, 0.2832, 0.6376, 0.7046, 0.5774, 0.7445, 0.6137, 0.5211, 0.6647, 0.2857, 0.2893, 0.91, 0.6161, 0.7588, 0.2857, 0.8042, 0.1762, 0.3427, 0.4615, 0.3243, 0.886, 0.7784, 0.9383, 0.6858, 0.917, 0.4615, 0.2, 0.2857, 0.32, 0.4828, 0.7402, 0.7547, 0.9479, 0.2361, 0.34, 0.25, 0.7292, 0.7528, 0.4054, 0.3504, 0.7527, 0.32, 0.891, 0.9817, 0.647, 0.3949, 0.8444, 0.5602, 0.7657, 0.6084, 0.4662, 0.7, 0.4, 0.804, 0.802, 0.2222, 0.169, 0.4314, 0.3896, 0.9272, 0.8112, 0.5965, 0.7607, 0.7273, 0.8966, 0.7147, 0.9661, 0.9861, 0.2, 0.2581, 0.6875, 0.6828, 0.7867, 0.7689, 0.7193, 0.6295, 0.784, 0.5833, 0.5455, 0.4211, 0.8915, 0.5215, 0.7647, 0.8341, 0.4615, 0.3912, 0.5733, 0.8037, 0.6886, 0.6557, 0.3448, 0.3333, 0.8194, 0.8341, 0.0667, 0.8458, 0.9892, 0.6667, 0.375, 0.8923, 0.7744, 0.3, 0.4444, 0.6316, 0.9164, 0.9035, 0.4, 0.069, 0.3971, 0.9892, 0.069, 0.631, 0.8946, 0.8301, 0.7307, 0.8997, 0.8155, 0.2963, 0.1385, 0.8442, 0.7262, 0.8392, 0.2119, 0.9728, 0.8559, 0.4681, 0.7416, 0.5873, 0.2373, 0.7293, 0.2727, 0.5341, 0.792, 0.8326, 0.4233, 0.9563, 0.4828, 0.7634, 0.6667, 0.8477, 0.9449, 0.9091, 0.8028, 0.2857, 0.6667, 0.439, 0.9578, 0.8323, 0.6164, 0.8646, 0.9391, 0.4444, 0.7988, 0.8995, 0.5714, 0.3171, 0.3333, 0.375, 0.0042, 0.186, 0.2381, 0.5155, 0.9568, 0.7984, 0.8154, 0.8102, 0.5185, 0.3478, 0.9406, 0.6427, 0.8261, 0.9869, 0.9536, 0.5, 0.4138, 0.8703, 0.7359, 0.2857, 0.9156, 0.6257, 0.9607, 0.9831, 0.8, 0.6165, 0.4048, 0.4773, 0.6115, 0.8052, 0.8141, 0.9345, 0.0473, 0.9498, 0.9373, 0.6736, 0.5432, 0.8952, 0.9883, 0.2264, 0.7959, 0.9009, 0.3721, 0.9264, 0.9485, 0.7879, 0.9726, 0.4615, 0.2308, 0.9238, 0.8854, 0.4, 0.7952, 0.543, 0.9463, 0.7136, 0.9401, 0.6032, 0.0952, 0.3093, 0.3548, 0.4, 0.8213, 0.9426, 0.3784, 0.1818, 0.8347, 0.087, 0.8407, 0.4673, 0.891, 0.4074, 0.3902, 0.1379, 0.5055, 0.4186, 0.8889, 1.0, 0.8791, 0.8613, 0.4314, 0.8856, 0.6296, 0.8541, 0.9333, 0.8506, 0.0, 0.4543, 0.9772, 0.9275, 0.9495, 0.371, 0.4, 0.9586, 0.5176, 0.6286, 0.2105, 0.4568, 0.9058, 0.9118, 0.7609, 0.4286, 0.9355, 0.4146, 0.2709, 0.4706, 0.9407, 0.8819, 0.6977, 0.5882, 0.2963, 0.4467, 0.8706, 0.0556, 0.2797, 0.9333, 0.775, 0.9568, 0.6415, 0.8607, 0.2759, 0.9315, 0.7413, 0.6667, 0.7424, 0.8141, 0.9305, 0.7541, 0.8966, 0.5094, 0.9635, 0.1579, 0.9797, 0.96, 0.747, 0.5205, 0.907, 0.9474, 0.7213, 0.9661, 0.7778, 0.0784, 0.8, 0.1014, 0.4706, 0.3077, 0.3, 0.8, 0.3913, 0.5714, 0.9735, 0.9506, 0.4, 0.9712, 0.7273, 0.991, 0.8311, 0.8561, 0.7761, 0.8829, 0.6667, 0.7435, 0.9091, 0.8233, 0.9883, 0.4444, 0.7762, 0.56, 0.9292, 0.8293, 0.8182, 0.9455, 0.9532, 0.9318, 0.359, 0.8686, 0.6897, 0.768, 0.9908, 0.6061, 0.3364, 0.8427, 0.0, 0.9895, 0.2308, 0.6667], 'AP': [0.7264, 0.5738, 0.2253, 0.8445, 0.8549, 0.565, 0.5708, 0.2434, 0.7676, 0.4377, 0.1347, 0.6658, 0.7431, 0.5986, 0.7731, 0.6644, 0.5085, 0.7214, 0.116, 0.1678, 0.9341, 0.6546, 0.7448, 0.2114, 0.827, 0.0974, 0.2322, 0.4146, 0.1891, 0.9314, 0.7855, 0.9724, 0.7365, 0.9514, 0.3564, 0.1378, 0.2258, 0.205, 0.4339, 0.7261, 0.6854, 0.9642, 0.14, 0.2958, 0.119, 0.7494, 0.7992, 0.2699, 0.2678, 0.7964, 0.1651, 0.9334, 0.993, 0.6943, 0.2984, 0.8483, 0.5705, 0.817, 0.6335, 0.4342, 0.7164, 0.2637, 0.8535, 0.867, 0.0796, 0.1024, 0.3329, 0.2762, 0.974, 0.8442, 0.5475, 0.7815, 0.6693, 0.9408, 0.7388, 0.9846, 0.9989, 0.1099, 0.0737, 0.6263, 0.7333, 0.8605, 0.838, 0.7757, 0.6351, 0.8192, 0.5122, 0.4641, 0.3175, 0.923, 0.5502, 0.7328, 0.8997, 0.2118, 0.3141, 0.6042, 0.8748, 0.7031, 0.6868, 0.1914, 0.2413, 0.858, 0.8926, 0.0215, 0.879, 0.9978, 0.5238, 0.2608, 0.9302, 0.8368, 0.2305, 0.2211, 0.6713, 0.9594, 0.9131, 0.2894, 0.0188, 0.3705, 0.9982, 0.0142, 0.5862, 0.9491, 0.8809, 0.7913, 0.9516, 0.8742, 0.16, 0.0571, 0.9002, 0.8042, 0.8924, 0.1036, 0.9851, 0.9036, 0.3486, 0.7814, 0.6109, 0.1983, 0.7578, 0.1263, 0.5255, 0.8052, 0.8709, 0.3867, 0.9625, 0.4212, 0.8524, 0.5564, 0.8978, 0.9766, 0.9569, 0.8514, 0.1946, 0.5, 0.3764, 0.9873, 0.8907, 0.5971, 0.9256, 0.9748, 0.3646, 0.8665, 0.947, 0.4409, 0.2366, 0.1931, 0.3218, 0.0014, 0.0701, 0.1066, 0.514, 0.9892, 0.8625, 0.8742, 0.8548, 0.3445, 0.2152, 0.9715, 0.6786, 0.8309, 0.9978, 0.9772, 0.478, 0.3199, 0.9236, 0.6995, 0.1001, 0.961, 0.6284, 0.9788, 0.9894, 0.6691, 0.6237, 0.3293, 0.384, 0.5947, 0.8747, 0.7688, 0.9689, 0.0168, 0.9786, 0.974, 0.7133, 0.4408, 0.938, 0.9973, 0.1628, 0.8448, 0.9488, 0.3098, 0.947, 0.9771, 0.7169, 0.9748, 0.1994, 0.1243, 0.9592, 0.9475, 0.263, 0.8518, 0.4471, 0.975, 0.756, 0.9765, 0.5668, 0.0437, 0.2302, 0.2264, 0.1964, 0.8937, 0.9702, 0.3207, 0.0819, 0.8472, 0.0278, 0.8956, 0.3983, 0.8914, 0.2766, 0.2392, 0.0783, 0.524, 0.4292, 0.8875, 1.0, 0.9225, 0.9158, 0.4194, 0.9371, 0.5859, 0.8995, 0.9617, 0.9282, -0.0, 0.4346, 0.9945, 0.97, 0.9778, 0.2746, 0.2602, 0.9853, 0.5276, 0.6403, 0.057, 0.4181, 0.9609, 0.9619, 0.842, 0.3203, 0.965, 0.3961, 0.1629, 0.4879, 0.9582, 0.9519, 0.7393, 0.5598, 0.2406, 0.3914, 0.9271, 0.0156, 0.196, 0.9622, 0.7966, 0.9856, 0.6084, 0.9163, 0.1766, 0.9705, 0.7524, 0.5231, 0.6985, 0.8791, 0.9723, 0.8153, 0.9458, 0.4832, 0.9924, 0.0697, 0.9976, 0.9888, 0.8124, 0.4283, 0.9609, 0.9587, 0.7341, 0.9941, 0.6669, 0.0389, 0.8773, 0.0409, 0.419, 0.1676, 0.2749, 0.8333, 0.3567, 0.3792, 0.9955, 0.9823, 0.2565, 0.9839, 0.751, 0.9993, 0.8813, 0.9155, 0.8124, 0.9056, 0.6871, 0.8046, 0.9457, 0.889, 0.9954, 0.2046, 0.8346, 0.4991, 0.9798, 0.8805, 0.8347, 0.9784, 0.969, 0.9796, 0.2366, 0.9382, 0.6807, 0.7607, 0.9992, 0.6263, 0.2389, 0.892, -0.0, 0.9939, 0.1153, 0.5054], 'Recall@P=50': [0.8532, 0.6488, 0.044, 0.9722, 0.9724, 0.4, 0.5833, 0.0217, 0.8844, 0.4095, 0.0, 0.7135, 0.7818, 0.6292, 0.7763, 0.7314, 0.5244, 0.7898, 0.0, 0.0202, 0.945, 0.0003, 0.7754, 0.1429, 0.8093, 0.0256, 0.0094, 0.4152, 0.0408, 0.941, 0.7723, 0.985, 0.8397, 0.9608, 0.0556, 0.1111, 0.1667, 0.1176, 0.3889, 0.7117, 0.0417, 0.9691, 0.0568, 0.186, 0.1176, 0.8298, 0.8866, 0.0469, 0.0233, 0.849, 0.0625, 0.9748, 0.9955, 0.7169, 0.3263, 0.903, 0.5625, 0.912, 0.7365, 0.3562, 0.8312, 0.25, 0.8762, 0.9062, 0.0, 0.0131, 0.0234, 0.0256, 0.9941, 0.008, 0.6393, 0.8043, 0.8, 0.9598, 0.75, 0.9864, 1.0, 0.04, 0.0, 0.0625, 0.7763, 0.935, 0.8995, 0.8371, 0.7123, 0.8427, 0.5682, 0.25, 0.0909, 0.9385, 0.5345, 0.75, 0.9397, 0.0, 0.1985, 0.6385, 1.0, 0.7362, 0.689, 0.0303, 0.2222, 0.8985, 0.9333, 0.0, 0.9083, 1.0, 0.5, 0.2353, 0.9474, 0.883, 0.1538, 0.0, 0.7899, 0.9793, 0.9185, 0.25, 0.0, 0.2326, 1.0, 0.0, 0.8333, 0.9733, 0.9611, 0.8544, 0.9828, 0.9012, 0.0625, 0.0, 0.9336, 0.8696, 0.9296, 0.0, 0.9858, 0.93, 0.2609, 0.9161, 0.702, 0.0909, 0.7751, 0.0, 0.5312, 0.8592, 0.9358, 0.2471, 0.9653, 0.3684, 0.926, 0.6, 0.9171, 0.9845, 0.9811, 0.8881, 0.0513, 1.0, 0.3333, 0.9939, 0.9182, 0.6556, 0.9434, 0.9943, 0.1111, 0.9167, 0.9581, 0.4286, 0.0323, 0.0, 0.2308, 0.0, 0.0, 0.0, 0.4737, 1.0, 0.9317, 0.9006, 0.9342, 0.04, 0.1429, 0.9805, 0.7384, 0.8, 1.0, 0.9948, 0.4231, 0.3158, 0.978, 0.0275, 0.0, 0.9664, 0.7973, 0.9828, 0.9904, 0.6667, 0.6522, 0.0606, 0.3684, 0.6815, 0.9012, 0.8889, 0.9939, 0.0, 0.9836, 0.9838, 0.768, 0.0364, 0.9412, 1.0, 0.037, 0.8673, 0.963, 0.08, 0.9798, 0.996, 0.875, 0.9732, 0.0, 0.0833, 0.964, 0.9693, 0.25, 0.9037, 0.0175, 0.9849, 0.9, 0.9895, 0.6863, 0.0, 0.0312, 0.0, 0.0, 0.9436, 0.9763, 0.1935, 0.1111, 0.9012, 0.0, 0.9564, 0.0833, 1.0, 0.2083, 0.0, 0.0526, 0.4735, 0.2667, 1.0, 1.0, 0.9493, 0.9547, 0.3235, 0.9667, 0.8, 0.9562, 1.0, 0.9729, 0.0, 0.3308, 1.0, 0.9837, 0.9929, 0.0686, 0.25, 1.0, 0.375, 0.6, 0.0, 0.331, 0.9725, 0.972, 0.8836, 0.125, 0.9808, 0.3288, 0.028, 0.3235, 0.9615, 0.9962, 0.7808, 0.5833, 0.1538, 0.0008, 0.9516, 0.0, 0.1616, 0.9903, 0.8605, 0.9965, 0.7761, 0.9295, 0.1429, 0.9883, 0.9821, 0.2, 1.0, 1.0, 0.9894, 0.8899, 0.9635, 0.487, 1.0, 0.0, 1.0, 1.0, 0.9397, 0.383, 0.9893, 0.9474, 0.6522, 1.0, 0.7778, 0.0, 0.9318, 0.0, 0.2727, 0.2222, 0.125, 1.0, 0.2432, 0.25, 1.0, 0.9937, 0.25, 0.9857, 0.8276, 1.0, 0.9252, 0.9371, 0.9211, 0.9554, 0.764, 0.8881, 0.9738, 0.9202, 0.9961, 0.4, 0.9008, 0.4667, 0.9877, 0.9367, 0.9412, 0.9777, 0.9714, 1.0, 0.0, 0.9891, 0.7857, 0.0103, 1.0, 0.6923, 0.0, 0.9267, 0.0, 1.0, 0.08, 0.0], 'micro': 0.7945, 'macro': 0.6258, 'weighted': 0.7571}, LR: [0.000162, 0.000162], Avg. batch load time: 0.000, Elapsed time: 201.57
+2024-07-31 02:35:45 - [34m[1mLOGS   [0m - *** Validation summary for epoch 40
+	 loss={'classification': 4.6148, 'neural_augmentation': 0.0, 'total_loss': 4.6148} || multiclass_classification_pr(pred=logits)={'ODS-F1': [0.673, 0.5923, 0.3165, 0.8424, 0.8107, 0.5714, 0.5714, 0.3333, 0.7251, 0.4537, 0.2807, 0.6359, 0.7044, 0.5795, 0.7445, 0.6101, 0.5216, 0.6623, 0.2857, 0.2893, 0.91, 0.6155, 0.7588, 0.2667, 0.8042, 0.1762, 0.3413, 0.4605, 0.3243, 0.8772, 0.7784, 0.9351, 0.6835, 0.917, 0.4615, 0.2, 0.3333, 0.32, 0.5455, 0.7382, 0.75, 0.9337, 0.2345, 0.3381, 0.25, 0.7292, 0.75, 0.4054, 0.3504, 0.866, 0.32, 0.8889, 0.9817, 0.647, 0.3949, 0.8413, 0.5587, 0.7657, 0.6073, 0.464, 0.7, 0.4, 0.804, 0.8019, 0.2222, 0.1682, 0.4314, 0.3896, 0.9267, 0.8389, 0.5965, 0.7607, 0.7273, 0.8946, 0.7147, 0.9661, 0.9861, 0.2, 0.2581, 0.6875, 0.6806, 0.7867, 0.7636, 0.7251, 0.6251, 0.784, 0.5833, 0.5455, 0.4211, 0.8863, 0.5158, 0.7647, 0.8315, 0.4615, 0.3887, 0.5725, 0.8037, 0.6886, 0.654, 0.3409, 0.3333, 0.8172, 0.8322, 0.0667, 0.8407, 0.9892, 0.6667, 0.375, 0.8923, 0.7744, 0.3, 0.4444, 0.6288, 0.9274, 0.9035, 0.4, 0.069, 0.3971, 0.9892, 0.069, 0.631, 0.8943, 0.8294, 0.7307, 0.8997, 0.8151, 0.2963, 0.1385, 0.8442, 0.7311, 0.8387, 0.2119, 0.9728, 0.8559, 0.4681, 0.7412, 0.5873, 0.2373, 0.8038, 0.2727, 0.5278, 0.792, 0.8326, 0.4233, 0.9563, 0.4828, 0.7625, 0.6667, 0.8477, 0.9424, 0.9091, 0.8028, 0.2857, 0.6667, 0.439, 0.9578, 0.8323, 0.6164, 0.8412, 0.9391, 0.4419, 0.7975, 0.8985, 0.5714, 0.3171, 0.3333, 0.375, 0.004, 0.186, 0.2381, 0.5155, 0.9568, 0.7976, 0.8113, 0.8102, 0.5185, 0.3478, 0.936, 0.6373, 0.8261, 0.9869, 0.9536, 0.5, 0.4138, 0.8703, 0.7359, 0.2857, 0.9156, 0.6257, 0.9607, 0.9831, 0.8, 0.6165, 0.4048, 0.4773, 0.6115, 0.8017, 0.81, 0.9345, 0.0473, 0.9422, 0.9373, 0.6736, 0.541, 0.8952, 0.9883, 0.2264, 0.7938, 0.9009, 0.3721, 0.9264, 0.9485, 0.7879, 0.9726, 0.3333, 0.2308, 0.9238, 0.8823, 0.4, 0.7952, 0.543, 0.9463, 0.7136, 0.9401, 0.6032, 0.0952, 0.3093, 0.3548, 0.4, 0.8213, 0.9426, 0.3784, 0.1818, 0.8347, 0.087, 0.8221, 0.4673, 0.891, 0.8943, 0.381, 0.1379, 0.5008, 0.3846, 0.8889, 1.0, 0.8791, 0.8613, 0.3876, 0.8856, 0.6296, 0.8541, 0.9333, 0.8171, 0.4444, 0.6791, 0.9772, 0.9275, 0.9495, 0.371, 0.4, 0.9586, 0.5176, 0.6286, 0.2105, 0.4568, 0.9058, 0.9118, 0.7609, 0.4286, 0.9355, 0.4382, 0.2636, 0.4706, 0.9407, 0.8809, 0.6977, 0.5882, 0.2883, 0.4503, 0.8608, 0.0556, 0.2797, 0.9289, 0.7815, 0.9568, 0.6415, 0.8607, 0.2759, 0.9315, 0.7413, 0.6667, 0.7424, 0.8141, 0.9305, 0.7541, 0.8966, 0.5094, 0.9635, 0.1579, 0.9797, 0.96, 0.7448, 0.5205, 0.8944, 0.9474, 0.7213, 0.9661, 0.7778, 0.0784, 0.8, 0.1014, 0.4706, 0.3077, 0.3, 0.8, 0.383, 0.5714, 0.9735, 0.9506, 0.4, 0.9712, 0.7273, 0.991, 0.8283, 0.8561, 0.7761, 0.8829, 0.664, 0.8006, 0.9091, 0.8233, 0.9883, 0.4444, 0.7706, 0.56, 0.9292, 0.8293, 0.8182, 0.9455, 0.9532, 0.9318, 0.359, 0.8686, 0.6897, 0.768, 0.9908, 0.6061, 0.3364, 0.8427, 0.8657, 0.9895, 0.2264, 0.6667], 'AP': [0.7251, 0.5652, 0.222, 0.8444, 0.8526, 0.565, 0.5657, 0.2653, 0.7612, 0.4313, 0.1318, 0.6631, 0.7419, 0.6007, 0.7679, 0.6606, 0.5131, 0.7184, 0.1156, 0.1678, 0.934, 0.6533, 0.7447, 0.185, 0.8265, 0.0973, 0.2304, 0.4128, 0.189, 0.9219, 0.7853, 0.9685, 0.7346, 0.9509, 0.3553, 0.1378, 0.2729, 0.205, 0.5135, 0.7229, 0.6779, 0.9446, 0.1383, 0.2937, 0.119, 0.7494, 0.7962, 0.2699, 0.2678, 0.9277, 0.1648, 0.9316, 0.993, 0.6938, 0.2978, 0.8458, 0.5686, 0.8166, 0.632, 0.432, 0.7159, 0.2637, 0.8535, 0.8675, 0.0796, 0.1016, 0.3328, 0.2762, 0.9729, 0.885, 0.5463, 0.7814, 0.6693, 0.9395, 0.7384, 0.9846, 0.9989, 0.1098, 0.0737, 0.6263, 0.7309, 0.8603, 0.8313, 0.7829, 0.6286, 0.8189, 0.512, 0.4641, 0.3175, 0.9209, 0.5436, 0.7327, 0.8965, 0.2118, 0.3111, 0.6023, 0.8748, 0.7027, 0.6818, 0.187, 0.2412, 0.8564, 0.891, 0.0215, 0.8758, 0.9978, 0.5213, 0.2602, 0.9298, 0.8366, 0.2305, 0.221, 0.6667, 0.9683, 0.9131, 0.2894, 0.0188, 0.3704, 0.9982, 0.0141, 0.5862, 0.9488, 0.8797, 0.7897, 0.9515, 0.8733, 0.16, 0.0571, 0.8999, 0.792, 0.8917, 0.1035, 0.985, 0.9029, 0.3484, 0.7811, 0.6107, 0.1983, 0.8381, 0.1263, 0.5186, 0.8047, 0.8706, 0.3867, 0.9624, 0.4211, 0.8519, 0.5564, 0.8976, 0.9758, 0.9563, 0.8494, 0.1945, 0.5, 0.3762, 0.9871, 0.8906, 0.597, 0.9103, 0.9747, 0.3404, 0.8663, 0.9462, 0.4408, 0.2366, 0.1931, 0.3218, 0.0013, 0.07, 0.1066, 0.5138, 0.9892, 0.8616, 0.8704, 0.8543, 0.3445, 0.2152, 0.9707, 0.6732, 0.8309, 0.9978, 0.9771, 0.478, 0.3199, 0.9233, 0.6994, 0.1001, 0.961, 0.6284, 0.9787, 0.9893, 0.6691, 0.6236, 0.3293, 0.3839, 0.5926, 0.8683, 0.7657, 0.9689, 0.0168, 0.9766, 0.974, 0.7129, 0.4363, 0.938, 0.9973, 0.1625, 0.8429, 0.9479, 0.3098, 0.947, 0.977, 0.7169, 0.9747, 0.12, 0.1243, 0.9591, 0.9451, 0.263, 0.8516, 0.4471, 0.975, 0.7559, 0.9763, 0.5668, 0.0437, 0.2302, 0.2264, 0.1964, 0.8933, 0.9696, 0.3205, 0.0818, 0.8468, 0.0275, 0.8843, 0.3983, 0.8913, 0.9251, 0.2205, 0.0781, 0.5205, 0.3621, 0.8875, 1.0, 0.9215, 0.9158, 0.3708, 0.9368, 0.5859, 0.8994, 0.9617, 0.8936, 0.3824, 0.7475, 0.9944, 0.97, 0.9764, 0.274, 0.2602, 0.9853, 0.5276, 0.6403, 0.0567, 0.418, 0.9607, 0.9616, 0.8419, 0.3203, 0.965, 0.4139, 0.1576, 0.4879, 0.9581, 0.9507, 0.7393, 0.5598, 0.2348, 0.3906, 0.9223, 0.0155, 0.1958, 0.9604, 0.7584, 0.9856, 0.6084, 0.915, 0.1765, 0.9705, 0.7524, 0.5231, 0.6985, 0.8791, 0.972, 0.8152, 0.9456, 0.4831, 0.9924, 0.0697, 0.9976, 0.9888, 0.8094, 0.4283, 0.9516, 0.9587, 0.7341, 0.9941, 0.6654, 0.0389, 0.8767, 0.0409, 0.419, 0.1676, 0.2749, 0.8333, 0.3485, 0.3789, 0.9954, 0.9823, 0.2565, 0.9839, 0.751, 0.9993, 0.8794, 0.9155, 0.8117, 0.9053, 0.6826, 0.8658, 0.9457, 0.8886, 0.9954, 0.2046, 0.8314, 0.4991, 0.9796, 0.8802, 0.8347, 0.9783, 0.969, 0.9796, 0.2366, 0.9339, 0.6806, 0.7607, 0.9992, 0.6263, 0.2389, 0.8918, 0.9235, 0.9938, 0.1109, 0.5054], 'Recall@P=50': [0.8516, 0.6306, 0.0055, 0.9722, 0.9683, 0.4, 0.5833, 0.0213, 0.878, 0.4055, 0.0, 0.7124, 0.7804, 0.6312, 0.7763, 0.7262, 0.5264, 0.7866, 0.0, 0.0202, 0.945, 0.0003, 0.7754, 0.125, 0.8093, 0.0256, 0.0093, 0.4121, 0.0408, 0.9349, 0.7723, 0.9813, 0.8386, 0.9608, 0.0556, 0.1111, 0.2, 0.1176, 0.5, 0.7117, 0.8704, 0.9502, 0.0562, 0.1848, 0.1176, 0.8298, 0.8845, 0.0469, 0.0233, 0.9557, 0.0625, 0.9717, 0.9955, 0.7077, 0.3158, 0.8996, 0.562, 0.9099, 0.7353, 0.3536, 0.8312, 0.25, 0.8762, 0.9073, 0.0, 0.013, 0.0234, 0.2821, 0.9935, 0.9679, 0.6393, 0.8043, 0.2, 0.9558, 0.75, 0.9864, 1.0, 0.04, 0.0, 0.0625, 0.7738, 0.9343, 0.8971, 0.849, 0.7057, 0.8427, 0.5682, 0.5556, 0.0909, 0.9385, 0.5235, 0.75, 0.9369, 0.0, 0.1968, 0.6374, 1.0, 0.7362, 0.6794, 0.0294, 0.2222, 0.8985, 0.9286, 0.0, 0.9083, 1.0, 0.5, 0.1176, 0.9474, 0.883, 0.1538, 0.0, 0.7899, 0.9829, 0.9185, 0.25, 0.0, 0.2326, 1.0, 0.0, 0.8333, 0.9734, 0.9611, 0.8414, 0.9828, 0.9012, 0.0625, 0.0, 0.9336, 0.8526, 0.9286, 0.0, 0.9858, 0.93, 0.2609, 0.9161, 0.702, 0.0909, 0.863, 0.0, 0.5121, 0.8592, 0.9358, 0.2471, 0.9653, 0.3684, 0.926, 0.6, 0.9171, 0.9845, 0.9811, 0.8741, 0.0513, 1.0, 0.3333, 0.9939, 0.9182, 0.6556, 0.9351, 0.9943, 0.225, 0.9167, 0.9559, 0.4286, 0.0323, 0.0, 0.2308, 0.0, 0.0, 0.0, 0.4737, 1.0, 0.9306, 0.8986, 0.9342, 0.04, 0.1429, 0.9805, 0.7384, 0.8, 1.0, 0.9948, 0.4231, 0.3158, 0.978, 0.0275, 0.0, 0.9664, 0.7973, 0.9828, 0.9904, 0.6667, 0.6522, 0.1212, 0.3684, 0.6688, 0.8893, 0.8889, 0.9939, 0.0, 0.9836, 0.9838, 0.768, 0.5545, 0.9412, 1.0, 0.037, 0.8626, 0.963, 0.08, 0.9798, 0.996, 0.875, 0.9732, 0.0, 0.0833, 0.964, 0.9693, 0.25, 0.9037, 0.0175, 0.9849, 0.9, 0.9895, 0.6863, 0.0, 0.0312, 0.0, 0.0, 0.9436, 0.9763, 0.1935, 0.1111, 0.9012, 0.0, 0.9422, 0.1667, 1.0, 0.9786, 0.0, 0.0526, 0.4757, 0.2941, 1.0, 1.0, 0.942, 0.9547, 0.25, 0.9667, 0.8, 0.9562, 1.0, 0.9333, 0.0167, 0.8362, 1.0, 0.9837, 0.9929, 0.0686, 0.25, 1.0, 0.375, 0.6, 0.0, 0.331, 0.9725, 0.972, 0.8836, 0.125, 0.9808, 0.35, 0.1149, 0.3235, 0.9615, 0.9962, 0.7808, 0.5833, 0.1471, 0.0008, 0.9435, 0.0, 0.1616, 0.9806, 0.9221, 0.9965, 0.7761, 0.9228, 0.1429, 0.9883, 0.9821, 0.2, 1.0, 1.0, 0.9894, 0.8899, 0.9635, 0.487, 1.0, 0.0, 1.0, 1.0, 0.9343, 0.383, 0.9893, 0.9474, 1.0, 1.0, 0.7778, 0.0, 0.9318, 0.0, 0.2727, 0.2222, 0.125, 1.0, 0.2368, 0.25, 1.0, 0.9937, 0.25, 0.9857, 0.8276, 1.0, 0.9184, 0.9371, 0.9211, 0.9554, 0.7566, 0.942, 0.9738, 0.9202, 0.9961, 0.4, 0.8969, 0.4667, 0.9877, 0.9367, 0.9412, 0.9777, 0.9714, 1.0, 0.0, 0.9783, 0.7857, 0.0103, 1.0, 0.6923, 0.0, 0.9267, 0.9439, 1.0, 0.0769, 0.0], 'micro': 0.7951, 'macro': 0.6317, 'weighted': 0.7577}
+2024-07-31 02:36:00 - [34m[1mLOGS   [0m - Best checkpoint with score 0.63 saved at /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/checkpoint_best.pt
+2024-07-31 02:36:01 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/checkpoint_score_0.6271.pt
+2024-07-31 02:36:01 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_0.6282.pt', 'checkpoint_score_0.6295.pt', 'checkpoint_score_0.6306.pt', 'checkpoint_score_0.6315.pt', 'checkpoint_score_0.6317.pt']
+2024-07-31 02:36:04 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/checkpoint_avg.pt
+2024-07-31 02:36:05 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/training_checkpoint_last.pt
+2024-07-31 02:36:05 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/checkpoint_last.pt
+2024-07-31 02:36:06 - [34m[1mLOGS   [0m - Training checkpoint for epoch 40/iteration 2478 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/training_checkpoint_epoch_40_iter_2478.pt
+2024-07-31 02:36:07 - [34m[1mLOGS   [0m - Model state for epoch 40/iteration 2478 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_dci/19_ingredient172_lp/train/checkpoint_epoch_40_iter_2478.pt
+[31m===========================================================================[0m
+2024-07-31 02:36:09 - [32m[1mINFO   [0m - Training epoch 41
+2024-07-31 02:36:10 - [34m[1mLOGS   [0m - Epoch:  41 [    2478/10000000], loss: {'classification': 5.1703, 'neural_augmentation': 0.5226, 'total_loss': 5.6929}, LR: [0.000152, 0.000152], Avg. batch load time: 0.763, Elapsed time:  0.87
+2024-07-31 02:36:22 - [34m[1mLOGS   [0m - *** Training summary for epoch 41
+	 loss={'classification': 5.1698, 'neural_augmentation': 0.5301, 'total_loss': 5.6999}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/sklearn/metrics/_ranking.py:993: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+2024-07-31 02:36:46 - [34m[1mLOGS   [0m - Epoch:  41 [    8016/   33154], loss: {'classification': 4.6617, 'neural_augmentation': 0.0, 'total_loss': 4.6617}, multiclass_classification_pr(pred=logits): {'ODS-F1': [0.6735, 0.6021, 0.3193, 0.8424, 0.8126, 0.5714, 0.5652, 0.3291, 0.7285, 0.4689, 0.2783, 0.6416, 0.7059, 0.5772, 0.7445, 0.6139, 0.5187, 0.6647, 0.274, 0.2803, 0.9095, 0.6173, 0.7588, 0.25, 0.8047, 0.1752, 0.3484, 0.462, 0.3243, 0.8878, 0.7742, 0.9383, 0.689, 0.9193, 0.4762, 0.2, 0.2857, 0.32, 0.5, 0.7371, 0.75, 0.9504, 0.2313, 0.3446, 0.2609, 0.7292, 0.755, 0.4133, 0.3582, 0.7534, 0.2963, 0.892, 0.9817, 0.6393, 0.3924, 0.845, 0.5605, 0.7648, 0.6089, 0.467, 0.6998, 0.4103, 0.804, 0.8017, 0.25, 0.1639, 0.4333, 0.4, 0.9255, 0.811, 0.6016, 0.7574, 0.7273, 0.9002, 0.7119, 0.9661, 0.9861, 0.1905, 0.25, 0.6875, 0.6838, 0.7889, 0.7703, 0.7206, 0.6255, 0.7804, 0.5897, 0.5526, 0.4364, 0.8882, 0.5255, 0.7647, 0.8331, 0.4615, 0.3885, 0.5757, 0.8, 0.6909, 0.6584, 0.3226, 0.3333, 0.8212, 0.8345, 0.08, 0.8496, 0.9892, 0.6667, 0.375, 0.8957, 0.7758, 0.3, 0.4444, 0.6305, 0.9167, 0.9035, 0.4, 0.0588, 0.3971, 0.9892, 0.0741, 0.6294, 0.8958, 0.8296, 0.7296, 0.896, 0.8164, 0.2963, 0.1404, 0.845, 0.7251, 0.8397, 0.2027, 0.9728, 0.8559, 0.4681, 0.7404, 0.5887, 0.2553, 0.7293, 0.3051, 0.5333, 0.783, 0.8326, 0.4233, 0.9563, 0.4828, 0.7683, 0.6667, 0.849, 0.9449, 0.9135, 0.803, 0.2883, 0.6667, 0.439, 0.9578, 0.8331, 0.6164, 0.8642, 0.9391, 0.4286, 0.8037, 0.9006, 0.5455, 0.3171, 0.3333, 0.375, 0.004, 0.2105, 0.2727, 0.52, 0.9565, 0.799, 0.8158, 0.8102, 0.5091, 0.3636, 0.9403, 0.6482, 0.8261, 0.9868, 0.9536, 0.5, 0.4138, 0.8691, 0.7401, 0.4, 0.9156, 0.6237, 0.9628, 0.9831, 0.8, 0.6142, 0.4, 0.4835, 0.6174, 0.8036, 0.806, 0.9377, 0.0494, 0.9498, 0.9402, 0.6695, 0.5401, 0.8962, 0.9883, 0.2353, 0.7958, 0.8995, 0.3902, 0.9266, 0.9485, 0.7879, 0.9693, 0.4615, 0.2308, 0.9245, 0.8865, 0.4, 0.7933, 0.5417, 0.9463, 0.7136, 0.9403, 0.6032, 0.0909, 0.3178, 0.3529, 0.4, 0.823, 0.9426, 0.3889, 0.1818, 0.834, 0.087, 0.8424, 0.466, 0.8889, 0.4151, 0.4, 0.1481, 0.5081, 0.4186, 0.8889, 1.0, 0.8791, 0.864, 0.4444, 0.8856, 0.638, 0.8549, 0.9333, 0.8501, 0.0, 0.4556, 0.9772, 0.9275, 0.9512, 0.3622, 0.4, 0.9586, 0.5128, 0.6364, 0.2222, 0.4552, 0.9058, 0.9109, 0.7687, 0.434, 0.9355, 0.4286, 0.2661, 0.4691, 0.9407, 0.8815, 0.702, 0.56, 0.2906, 0.4491, 0.8706, 0.0571, 0.2857, 0.9378, 0.775, 0.9568, 0.6452, 0.8623, 0.2581, 0.9315, 0.7413, 0.6667, 0.7391, 0.802, 0.9305, 0.7579, 0.8975, 0.5069, 0.9635, 0.1579, 0.9831, 0.96, 0.7496, 0.5118, 0.9106, 0.9474, 0.7188, 0.9661, 0.7778, 0.0851, 0.8, 0.0968, 0.4706, 0.3077, 0.3333, 0.8, 0.3803, 0.5714, 0.9735, 0.9503, 0.4, 0.9712, 0.7273, 0.991, 0.8311, 0.855, 0.7745, 0.8822, 0.6602, 0.7445, 0.9091, 0.8255, 0.9881, 0.4, 0.7701, 0.5833, 0.9292, 0.8319, 0.8116, 0.9462, 0.9532, 0.9326, 0.3684, 0.8636, 0.6897, 0.7649, 0.9885, 0.6061, 0.3464, 0.8451, 0.0, 0.9895, 0.2368, 0.6667], 'AP': [0.7263, 0.5762, 0.2249, 0.8443, 0.8553, 0.5626, 0.5681, 0.2497, 0.768, 0.439, 0.1348, 0.6659, 0.7447, 0.5991, 0.7707, 0.6653, 0.5082, 0.7212, 0.1203, 0.168, 0.9344, 0.6569, 0.7445, 0.2011, 0.8274, 0.0975, 0.2344, 0.4154, 0.191, 0.9314, 0.7849, 0.9727, 0.7397, 0.9521, 0.3558, 0.1382, 0.2242, 0.213, 0.4445, 0.7265, 0.6729, 0.9647, 0.142, 0.2921, 0.1252, 0.7475, 0.7993, 0.2702, 0.2716, 0.7974, 0.1487, 0.9346, 0.9929, 0.6948, 0.2995, 0.848, 0.5714, 0.8171, 0.6326, 0.4355, 0.7177, 0.2699, 0.8543, 0.8668, 0.0942, 0.1004, 0.3359, 0.2765, 0.974, 0.8434, 0.5518, 0.7823, 0.6722, 0.941, 0.7387, 0.9849, 0.9988, 0.1121, 0.073, 0.6271, 0.736, 0.862, 0.8388, 0.777, 0.636, 0.8185, 0.5151, 0.4637, 0.323, 0.9239, 0.552, 0.7307, 0.9002, 0.2585, 0.3135, 0.6039, 0.8752, 0.7045, 0.6873, 0.1759, 0.2468, 0.8602, 0.8924, 0.0229, 0.8805, 0.9979, 0.525, 0.26, 0.931, 0.8367, 0.2326, 0.2512, 0.6695, 0.9596, 0.9133, 0.292, 0.0173, 0.3725, 0.9981, 0.0151, 0.5873, 0.9492, 0.8804, 0.7938, 0.9514, 0.8746, 0.1553, 0.0584, 0.8994, 0.8044, 0.8924, 0.1044, 0.9851, 0.9033, 0.349, 0.7822, 0.6115, 0.2129, 0.7586, 0.1474, 0.5267, 0.8048, 0.8715, 0.385, 0.9625, 0.4227, 0.853, 0.5561, 0.8975, 0.9769, 0.9579, 0.8517, 0.1948, 0.5, 0.3922, 0.9875, 0.8921, 0.5954, 0.9259, 0.9753, 0.3631, 0.8659, 0.9472, 0.435, 0.2314, 0.1798, 0.3116, 0.0014, 0.0723, 0.1186, 0.5154, 0.9893, 0.8635, 0.8746, 0.8571, 0.3422, 0.218, 0.9714, 0.6793, 0.8296, 0.9978, 0.9772, 0.4746, 0.3406, 0.9238, 0.6995, 0.1668, 0.961, 0.6324, 0.9785, 0.9895, 0.6691, 0.6218, 0.325, 0.3812, 0.5963, 0.8754, 0.7695, 0.9696, 0.0174, 0.9787, 0.9746, 0.7124, 0.4439, 0.9384, 0.9973, 0.1632, 0.8445, 0.9492, 0.3108, 0.9468, 0.977, 0.7191, 0.9747, 0.2089, 0.1216, 0.9596, 0.9476, 0.2633, 0.8525, 0.4481, 0.9747, 0.7569, 0.9766, 0.5704, 0.0429, 0.236, 0.2316, 0.1964, 0.8941, 0.9706, 0.3153, 0.0815, 0.847, 0.0278, 0.8959, 0.4004, 0.8885, 0.2756, 0.2411, 0.0811, 0.5231, 0.434, 0.8875, 1.0, 0.9232, 0.9161, 0.4194, 0.9372, 0.5832, 0.9016, 0.9617, 0.9287, -0.0, 0.4395, 0.9944, 0.9703, 0.9777, 0.2747, 0.2606, 0.9855, 0.5333, 0.6441, 0.058, 0.4219, 0.9613, 0.9627, 0.8423, 0.3214, 0.9654, 0.4157, 0.1658, 0.4922, 0.9583, 0.9516, 0.7378, 0.5432, 0.2365, 0.3904, 0.9266, 0.016, 0.1976, 0.9637, 0.7985, 0.9857, 0.6093, 0.918, 0.1794, 0.9709, 0.7562, 0.5231, 0.6979, 0.8777, 0.9724, 0.8168, 0.9461, 0.489, 0.9925, 0.0743, 0.9978, 0.9889, 0.8121, 0.432, 0.9617, 0.9591, 0.7345, 0.9941, 0.6639, 0.0389, 0.8774, 0.0409, 0.4225, 0.1717, 0.2864, 0.8333, 0.3596, 0.4212, 0.9953, 0.9821, 0.2564, 0.9839, 0.7474, 0.9993, 0.8813, 0.9163, 0.812, 0.9064, 0.6875, 0.8027, 0.9462, 0.8912, 0.9956, 0.1985, 0.8345, 0.5085, 0.9795, 0.881, 0.8228, 0.9787, 0.9691, 0.9795, 0.2388, 0.9382, 0.6802, 0.7608, 0.9991, 0.6332, 0.2453, 0.8926, -0.0, 0.9941, 0.1108, 0.5052], 'Recall@P=50': [0.8538, 0.6518, 0.0055, 0.9722, 0.9701, 0.4, 0.5833, 0.1522, 0.8856, 0.4095, 0.0, 0.7135, 0.7844, 0.6311, 0.7763, 0.7317, 0.5271, 0.7905, 0.0, 0.0505, 0.945, 0.0003, 0.7754, 0.1429, 0.8093, 0.0256, 0.0094, 0.4189, 0.0204, 0.9501, 0.7624, 0.985, 0.8397, 0.9608, 0.0556, 0.1111, 0.0, 0.2353, 0.3889, 0.7252, 0.0208, 0.9691, 0.0568, 0.1728, 0.1765, 0.8298, 0.8856, 0.0469, 0.2674, 0.8542, 0.0625, 0.9764, 0.9955, 0.7231, 0.0105, 0.903, 0.5643, 0.9163, 0.7362, 0.3653, 0.8312, 0.2083, 0.8762, 0.9062, 0.0, 0.0065, 0.0175, 0.0513, 0.9941, 0.008, 0.6393, 0.8043, 0.2, 0.9598, 0.7551, 0.9864, 1.0, 0.04, 0.0, 0.75, 0.7796, 0.9336, 0.8995, 0.8415, 0.7174, 0.8427, 0.5758, 0.25, 0.1364, 0.9385, 0.542, 0.7, 0.9397, 0.2, 0.1967, 0.6411, 1.0, 0.7362, 0.6794, 0.0, 0.2222, 0.8985, 0.9333, 0.0, 0.9083, 1.0, 0.5, 0.2353, 0.9474, 0.886, 0.1538, 0.0, 0.7899, 0.9793, 0.9185, 0.25, 0.0, 0.2326, 1.0, 0.0, 0.0303, 0.9733, 0.9619, 0.8479, 0.9828, 0.9021, 0.0625, 0.0, 0.9295, 0.8696, 0.9296, 0.0, 0.9858, 0.93, 0.0435, 0.9185, 0.702, 0.1212, 0.7831, 0.087, 0.5208, 0.8592, 0.9358, 0.2706, 0.9653, 0.3684, 0.9284, 0.6, 0.9171, 0.9845, 0.9811, 0.8951, 0.0513, 1.0, 0.3333, 0.9939, 0.9182, 0.6444, 0.9446, 0.9943, 0.0556, 0.9267, 0.9559, 0.4286, 0.129, 0.0, 0.2308, 0.0, 0.0, 0.0, 0.4737, 1.0, 0.9317, 0.9006, 0.9342, 0.44, 0.1429, 0.9805, 0.7384, 0.8, 1.0, 0.9948, 0.4231, 0.2105, 0.978, 0.9266, 0.0, 0.9748, 0.7973, 0.9828, 0.9904, 0.6667, 0.6449, 0.1515, 0.0263, 0.6688, 0.9012, 0.899, 0.9939, 0.0, 0.9836, 0.9838, 0.768, 0.4636, 0.9412, 1.0, 0.0741, 0.872, 0.963, 0.32, 0.9798, 1.0, 0.0625, 0.9732, 0.0, 0.0833, 0.964, 0.9693, 0.25, 0.8991, 0.3333, 0.9849, 0.9, 0.9895, 0.0392, 0.0, 0.0312, 0.0, 0.0, 0.9436, 0.9763, 0.1613, 0.1111, 0.9012, 0.0, 0.9564, 0.25, 1.0, 0.0833, 0.0, 0.0526, 0.4882, 0.2667, 1.0, 1.0, 0.9493, 0.9564, 0.2794, 0.9667, 0.8, 0.9543, 1.0, 0.9729, 0.0, 0.3459, 1.0, 0.9837, 0.9929, 0.0686, 0.25, 1.0, 0.375, 0.6, 0.0, 0.345, 0.9725, 0.972, 0.8904, 0.2857, 0.9808, 0.3562, 0.042, 0.3235, 0.9615, 0.9962, 0.7808, 0.5833, 0.1538, 0.0017, 0.9516, 0.0, 0.0808, 0.9903, 0.8837, 0.9965, 0.7761, 0.9262, 0.1429, 0.9883, 0.9821, 0.6, 0.037, 1.0, 0.9894, 0.8923, 0.9635, 0.4957, 1.0, 0.0, 1.0, 1.0, 0.9454, 0.2872, 0.9893, 0.9474, 1.0, 1.0, 0.1111, 0.0, 0.9261, 0.0, 0.0606, 0.2222, 0.125, 1.0, 0.2432, 0.5, 1.0, 0.9937, 0.25, 0.9857, 0.8276, 1.0, 0.9252, 0.9371, 0.9254, 0.9554, 0.7566, 0.8857, 0.9738, 0.9412, 0.9961, 0.0, 0.8969, 0.4667, 0.9938, 0.9333, 0.9412, 0.9777, 0.9714, 1.0, 0.0, 0.9891, 0.75, 0.0103, 1.0, 0.7692, 0.0, 0.9267, 0.0, 1.0, 0.0, 0.5], 'micro': 0.7945, 'macro': 0.627, 'weighted': 0.7576}, LR: [0.000152, 0.000152], Avg. batch load time: 0.000, Elapsed time: 22.21
+Terminated
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1608 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

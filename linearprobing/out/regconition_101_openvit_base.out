@@ -1,0 +1,1108 @@
+nohup: ignoring input
+2024-07-30 07:17:12 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+2024-07-30 07:17:12 - [33m[1mWARNING[0m - UnrecognizedYamlConfigEntry("Yaml config key 'model.classification.openvit.mode' was not recognized by argparser. If you think that you have already added argument in corenet/options/opts.py file, then check for typos. If not, then please add it to corenet/options/opts.py."
+2024-07-30 07:17:12 - [33m[1mWARNING[0m - UnrecognizedYamlConfigEntry("Yaml config key 'model.classification.openvit.norm_layer' was not recognized by argparser. If you think that you have already added argument in corenet/options/opts.py file, then check for typos. If not, then please add it to corenet/options/opts.py."
+2024-07-30 07:17:12 - [33m[1mWARNING[0m - UnrecognizedYamlConfigEntry("Yaml config key 'model.classification.openvit.use_flash_attention' was not recognized by argparser. If you think that you have already added argument in corenet/options/opts.py file, then check for typos. If not, then please add it to corenet/options/opts.py."
+101
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing module: neural_augmentor
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing module: model
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._low
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._high
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._low
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._high
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._low
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._high
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.class_embedding
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.patch_embedding.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.position_embedding.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.pre_layrnorm.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.pre_layrnorm.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.k_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.k_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.v_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.v_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.q_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.q_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.out_proj.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.out_proj.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc1.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc1.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm2.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm2.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.post_layernorm.weight
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Freezing parameter: model.post_layernorm.bias
+2024-07-30 07:17:15 - [32m[1mINFO   [0m - Trainable parameters: ['classifier.weight', 'classifier.bias']
+2024-07-30 07:17:15 - [34m[1mLOGS   [0m - [36mModel[0m
+OpenClipViT(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (model): CLIPVisionTransformer(
+    (embeddings): CLIPVisionEmbeddings(
+      (patch_embedding): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16), bias=False)
+      (position_embedding): Embedding(197, 768)
+    )
+    (pre_layrnorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (encoder): CLIPEncoder(
+      (layers): ModuleList(
+        (0-11): 12 x CLIPEncoderLayer(
+          (self_attn): CLIPAttention(
+            (k_proj): Linear(in_features=768, out_features=768, bias=True)
+            (v_proj): Linear(in_features=768, out_features=768, bias=True)
+            (q_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (layer_norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): CLIPMLP(
+            (activation_fn): QuickGELUActivation()
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (layer_norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (post_layernorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (classifier): Linear(in_features=768, out_features=101, bias=True)
+)
+[31m=================================================================[0m
+                        OpenClipViT Summary
+[31m=================================================================[0m
+Total parameters     =   85.877 M
+Total trainable parameters =    0.078 M
+
+2024-07-30 07:17:15 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-30 07:17:15 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                                 | #parameters or shape   | #flops    |
+|:---------------------------------------|:-----------------------|:----------|
+| model                                  | 85.877M                | 17.582G   |
+|  neural_augmentor                      |  6                     |           |
+|   neural_augmentor.brightness          |   2                    |           |
+|    neural_augmentor.brightness._low    |    ()                  |           |
+|    neural_augmentor.brightness._high   |    ()                  |           |
+|   neural_augmentor.contrast            |   2                    |           |
+|    neural_augmentor.contrast._low      |    ()                  |           |
+|    neural_augmentor.contrast._high     |    ()                  |           |
+|   neural_augmentor.noise               |   2                    |           |
+|    neural_augmentor.noise._low         |    ()                  |           |
+|    neural_augmentor.noise._high        |    ()                  |           |
+|  model                                 |  85.799M               |  17.582G  |
+|   model.embeddings                     |   0.742M               |   0.116G  |
+|    model.embeddings.class_embedding    |    (768,)              |           |
+|    model.embeddings.patch_embedding    |    0.59M               |    0.116G |
+|    model.embeddings.position_embedding |    0.151M              |    0      |
+|   model.pre_layrnorm                   |   1.536K               |   0.756M  |
+|    model.pre_layrnorm.weight           |    (768,)              |           |
+|    model.pre_layrnorm.bias             |    (768,)              |           |
+|   model.encoder.layers                 |   85.054M              |   17.466G |
+|    model.encoder.layers.0              |    7.088M              |    1.455G |
+|    model.encoder.layers.1              |    7.088M              |    1.455G |
+|    model.encoder.layers.2              |    7.088M              |    1.455G |
+|    model.encoder.layers.3              |    7.088M              |    1.455G |
+|    model.encoder.layers.4              |    7.088M              |    1.455G |
+|    model.encoder.layers.5              |    7.088M              |    1.455G |
+|    model.encoder.layers.6              |    7.088M              |    1.455G |
+|    model.encoder.layers.7              |    7.088M              |    1.455G |
+|    model.encoder.layers.8              |    7.088M              |    1.455G |
+|    model.encoder.layers.9              |    7.088M              |    1.455G |
+|    model.encoder.layers.10             |    7.088M              |    1.455G |
+|    model.encoder.layers.11             |    7.088M              |    1.455G |
+|   model.post_layernorm                 |   1.536K               |           |
+|    model.post_layernorm.weight         |    (768,)              |           |
+|    model.post_layernorm.bias           |    (768,)              |           |
+|  classifier                            |  77.669K               |  77.568K  |
+|   classifier.weight                    |   (101, 768)           |           |
+|   classifier.bias                      |   (101,)               |           |
+2024-07-30 07:17:16 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-30 07:17:16 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.brightness', 'neural_augmentor.noise', 'model.post_layernorm', 'neural_augmentor.contrast', 'neural_augmentor.brightness.min_fn', 'neural_augmentor.brightness.max_fn', 'neural_augmentor.contrast.max_fn', 'neural_augmentor', 'neural_augmentor.noise.min_fn', 'neural_augmentor.noise.max_fn', 'neural_augmentor.contrast.min_fn'}
+2024-07-30 07:17:16 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::mul': 48, 'aten::add': 25, 'aten::softmax': 12, 'aten::sigmoid': 12, 'aten::embedding': 1, 'aten::sub': 1})
+[31m=================================================================[0m
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-07-30 07:17:16 - [34m[1mLOGS   [0m - Directory created at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train
+2024-07-30 07:17:42 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:30017
+101
+2024-07-30 07:17:37 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:30017
+101
+2024-07-30 07:17:45 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:30017
+101
+2024-07-30 07:17:26 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:30017
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Number of categories: 101
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Total number of samples: 75750
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Training dataset details are given below
+ImageNetDataset(
+	root=/ML-A100/team/mm/models/food101/food101/train_images 
+	is_training=True 
+	num_samples=75750
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	 num_classes=101
+)
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Number of categories: 101
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Total number of samples: 25250
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Validation dataset details are given below
+ImageNetDataset(
+	root=/ML-A100/team/mm/models/food101/food101/test_images 
+	is_training=False 
+	num_samples=25250
+	transforms=Compose(
+			Resize(size=232, interpolation=bilinear, maintain_aspect_ratio=True), 
+			CenterCrop(size=(h=224, w=224)), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	 num_classes=101
+)
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=128
+	 scales=[(224, 224, 128)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Validation sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=100
+	 scales=[(224, 224, 100)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-07-30 07:17:49 - [34m[1mLOGS   [0m - Number of data workers: 64
+101
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing module: neural_augmentor
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing module: model
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._low
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.brightness._high
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._low
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.contrast._high
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._low
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: neural_augmentor.noise._high
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.class_embedding
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.patch_embedding.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.embeddings.position_embedding.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.pre_layrnorm.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.pre_layrnorm.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.0.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.1.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.2.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.3.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.4.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.5.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.6.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.7.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.8.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.9.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.10.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.k_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.k_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.v_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.v_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.q_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.q_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.out_proj.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.self_attn.out_proj.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc1.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc1.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.mlp.fc2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm2.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.encoder.layers.11.layer_norm2.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.post_layernorm.weight
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Freezing parameter: model.post_layernorm.bias
+2024-07-30 07:17:57 - [32m[1mINFO   [0m - Trainable parameters: ['classifier.weight', 'classifier.bias']
+2024-07-30 07:17:57 - [34m[1mLOGS   [0m - [36mModel[0m
+OpenClipViT(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (model): CLIPVisionTransformer(
+    (embeddings): CLIPVisionEmbeddings(
+      (patch_embedding): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16), bias=False)
+      (position_embedding): Embedding(197, 768)
+    )
+    (pre_layrnorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (encoder): CLIPEncoder(
+      (layers): ModuleList(
+        (0-11): 12 x CLIPEncoderLayer(
+          (self_attn): CLIPAttention(
+            (k_proj): Linear(in_features=768, out_features=768, bias=True)
+            (v_proj): Linear(in_features=768, out_features=768, bias=True)
+            (q_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (layer_norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): CLIPMLP(
+            (activation_fn): QuickGELUActivation()
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (layer_norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (post_layernorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (classifier): Linear(in_features=768, out_features=101, bias=True)
+)
+[31m=================================================================[0m
+                        OpenClipViT Summary
+[31m=================================================================[0m
+Total parameters     =   85.877 M
+Total trainable parameters =    0.078 M
+
+2024-07-30 07:17:57 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-07-30 07:17:57 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                                 | #parameters or shape   | #flops    |
+|:---------------------------------------|:-----------------------|:----------|
+| model                                  | 85.877M                | 17.582G   |
+|  neural_augmentor                      |  6                     |           |
+|   neural_augmentor.brightness          |   2                    |           |
+|    neural_augmentor.brightness._low    |    ()                  |           |
+|    neural_augmentor.brightness._high   |    ()                  |           |
+|   neural_augmentor.contrast            |   2                    |           |
+|    neural_augmentor.contrast._low      |    ()                  |           |
+|    neural_augmentor.contrast._high     |    ()                  |           |
+|   neural_augmentor.noise               |   2                    |           |
+|    neural_augmentor.noise._low         |    ()                  |           |
+|    neural_augmentor.noise._high        |    ()                  |           |
+|  model                                 |  85.799M               |  17.582G  |
+|   model.embeddings                     |   0.742M               |   0.116G  |
+|    model.embeddings.class_embedding    |    (768,)              |           |
+|    model.embeddings.patch_embedding    |    0.59M               |    0.116G |
+|    model.embeddings.position_embedding |    0.151M              |    0      |
+|   model.pre_layrnorm                   |   1.536K               |   0.756M  |
+|    model.pre_layrnorm.weight           |    (768,)              |           |
+|    model.pre_layrnorm.bias             |    (768,)              |           |
+|   model.encoder.layers                 |   85.054M              |   17.466G |
+|    model.encoder.layers.0              |    7.088M              |    1.455G |
+|    model.encoder.layers.1              |    7.088M              |    1.455G |
+|    model.encoder.layers.2              |    7.088M              |    1.455G |
+|    model.encoder.layers.3              |    7.088M              |    1.455G |
+|    model.encoder.layers.4              |    7.088M              |    1.455G |
+|    model.encoder.layers.5              |    7.088M              |    1.455G |
+|    model.encoder.layers.6              |    7.088M              |    1.455G |
+|    model.encoder.layers.7              |    7.088M              |    1.455G |
+|    model.encoder.layers.8              |    7.088M              |    1.455G |
+|    model.encoder.layers.9              |    7.088M              |    1.455G |
+|    model.encoder.layers.10             |    7.088M              |    1.455G |
+|    model.encoder.layers.11             |    7.088M              |    1.455G |
+|   model.post_layernorm                 |   1.536K               |           |
+|    model.post_layernorm.weight         |    (768,)              |           |
+|    model.post_layernorm.bias           |    (768,)              |           |
+|  classifier                            |  77.669K               |  77.568K  |
+|   classifier.weight                    |   (101, 768)           |           |
+|   classifier.bias                      |   (101,)               |           |
+2024-07-30 07:18:10 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-07-30 07:18:10 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.noise.min_fn', 'neural_augmentor.brightness.max_fn', 'model.post_layernorm', 'neural_augmentor.noise', 'neural_augmentor.brightness', 'neural_augmentor.contrast.max_fn', 'neural_augmentor', 'neural_augmentor.contrast.min_fn', 'neural_augmentor.contrast', 'neural_augmentor.brightness.min_fn', 'neural_augmentor.noise.max_fn'}
+2024-07-30 07:18:10 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::mul': 48, 'aten::add': 25, 'aten::softmax': 12, 'aten::sigmoid': 12, 'aten::embedding': 1, 'aten::sub': 1})
+[31m=================================================================[0m
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	CrossEntropy(  ignore_idx=-1  class_weighting=False  label_smoothing=0.1 loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - Max. epochs for training: 30
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=5e-05
+ 	 max_lr=0.0005
+ 	 period=30
+ 	 warmup_init_lr=1e-05
+ 	 warmup_iters=500
+ )
+2024-07-30 07:18:10 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt'
+2024-07-30 07:18:10 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-07-30 07:18:12 - [32m[1mINFO   [0m - Training epoch 0
+[rank3]:[W reducer.cpp:1360] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank0]:[W reducer.cpp:1360] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank1]:[W reducer.cpp:1360] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank2]:[W reducer.cpp:1360] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2024-07-30 07:24:01 - [34m[1mLOGS   [0m - Epoch:   0 [       1/10000000], loss: {'classification': 4.6334, 'neural_augmentation': 9.9127, 'total_loss': 14.5461}, LR: [1e-05, 1e-05], Avg. batch load time: 343.853, Elapsed time: 348.72
+2024-07-30 07:24:22 - [34m[1mLOGS   [0m - *** Training summary for epoch 0
+	 loss={'classification': 4.5827, 'neural_augmentation': 10.8288, 'total_loss': 15.4115}
+2024-07-30 07:29:46 - [34m[1mLOGS   [0m - *** Validation summary for epoch 0
+	 loss={'classification': 4.3247, 'neural_augmentation': 0.0, 'total_loss': 4.3247} || top1={'logits': 32.6914} || top5={'logits': 62.3711}
+2024-07-30 07:29:47 - [34m[1mLOGS   [0m - Best checkpoint with score 32.69 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:29:47 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:29:48 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:29:48 - [34m[1mLOGS   [0m - Training checkpoint for epoch 0/iteration 148 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_0_iter_148.pt
+2024-07-30 07:29:51 - [34m[1mLOGS   [0m - Model state for epoch 0/iteration 148 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_0_iter_148.pt
+[31m===========================================================================[0m
+2024-07-30 07:29:53 - [32m[1mINFO   [0m - Training epoch 1
+2024-07-30 07:30:05 - [34m[1mLOGS   [0m - Epoch:   1 [     149/10000000], loss: {'classification': 4.509, 'neural_augmentation': 10.2192, 'total_loss': 14.7282}, LR: [0.000155, 0.000155], Avg. batch load time: 12.478, Elapsed time: 12.85
+2024-07-30 07:30:20 - [34m[1mLOGS   [0m - *** Training summary for epoch 1
+	 loss={'classification': 4.3837, 'neural_augmentation': 10.7983, 'total_loss': 15.182}
+2024-07-30 07:30:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 1
+	 loss={'classification': 3.5947, 'neural_augmentation': 0.0, 'total_loss': 3.5947} || top1={'logits': 62.7148} || top5={'logits': 90.6641}
+2024-07-30 07:30:37 - [34m[1mLOGS   [0m - Best checkpoint with score 62.71 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:30:40 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:30:43 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:30:45 - [34m[1mLOGS   [0m - Training checkpoint for epoch 1/iteration 296 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_1_iter_296.pt
+2024-07-30 07:30:45 - [34m[1mLOGS   [0m - Model state for epoch 1/iteration 296 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_1_iter_296.pt
+[31m===========================================================================[0m
+2024-07-30 07:30:47 - [32m[1mINFO   [0m - Training epoch 2
+2024-07-30 07:30:55 - [34m[1mLOGS   [0m - Epoch:   2 [     297/10000000], loss: {'classification': 4.2236, 'neural_augmentation': 10.4458, 'total_loss': 14.6695}, LR: [0.0003, 0.0003], Avg. batch load time: 7.611, Elapsed time:  7.88
+2024-07-30 07:31:11 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
+	 loss={'classification': 4.0779, 'neural_augmentation': 10.8342, 'total_loss': 14.9121}
+2024-07-30 07:31:26 - [34m[1mLOGS   [0m - *** Validation summary for epoch 2
+	 loss={'classification': 2.6943, 'neural_augmentation': 0.0, 'total_loss': 2.6943} || top1={'logits': 69.8086} || top5={'logits': 93.9297}
+2024-07-30 07:31:27 - [34m[1mLOGS   [0m - Best checkpoint with score 69.81 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:31:34 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:31:39 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:31:41 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 444 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_2_iter_444.pt
+2024-07-30 07:31:43 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 444 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_2_iter_444.pt
+[31m===========================================================================[0m
+2024-07-30 07:31:45 - [32m[1mINFO   [0m - Training epoch 3
+2024-07-30 07:31:47 - [34m[1mLOGS   [0m - Epoch:   3 [     445/10000000], loss: {'classification': 3.9788, 'neural_augmentation': 12.1526, 'total_loss': 16.1314}, LR: [0.000445, 0.000445], Avg. batch load time: 1.773, Elapsed time:  2.06
+2024-07-30 07:32:01 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
+	 loss={'classification': 3.7804, 'neural_augmentation': 10.9282, 'total_loss': 14.7086}
+2024-07-30 07:32:10 - [34m[1mLOGS   [0m - *** Validation summary for epoch 3
+	 loss={'classification': 1.9667, 'neural_augmentation': 0.0, 'total_loss': 1.9667} || top1={'logits': 77.1328} || top5={'logits': 95.7305}
+2024-07-30 07:32:15 - [34m[1mLOGS   [0m - Best checkpoint with score 77.13 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:32:24 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:32:28 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:32:30 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 592 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_3_iter_592.pt
+2024-07-30 07:32:30 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 592 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_3_iter_592.pt
+[31m===========================================================================[0m
+2024-07-30 07:32:32 - [32m[1mINFO   [0m - Training epoch 4
+2024-07-30 07:32:34 - [34m[1mLOGS   [0m - Epoch:   4 [     593/10000000], loss: {'classification': 3.6403, 'neural_augmentation': 10.1316, 'total_loss': 13.7719}, LR: [0.000481, 0.000481], Avg. batch load time: 0.939, Elapsed time:  1.11
+2024-07-30 07:32:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
+	 loss={'classification': 3.5823, 'neural_augmentation': 10.9336, 'total_loss': 14.5159}
+2024-07-30 07:33:03 - [34m[1mLOGS   [0m - *** Validation summary for epoch 4
+	 loss={'classification': 1.5551, 'neural_augmentation': 0.0, 'total_loss': 1.5551} || top1={'logits': 80.4961} || top5={'logits': 96.25}
+2024-07-30 07:33:05 - [34m[1mLOGS   [0m - Best checkpoint with score 80.50 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:33:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:33:09 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:33:11 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 740 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_4_iter_740.pt
+2024-07-30 07:33:11 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 740 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_4_iter_740.pt
+[31m===========================================================================[0m
+2024-07-30 07:33:13 - [32m[1mINFO   [0m - Training epoch 5
+2024-07-30 07:33:15 - [34m[1mLOGS   [0m - Epoch:   5 [     741/10000000], loss: {'classification': 3.4942, 'neural_augmentation': 10.0928, 'total_loss': 13.587}, LR: [0.00047, 0.00047], Avg. batch load time: 1.319, Elapsed time:  1.41
+2024-07-30 07:33:34 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
+	 loss={'classification': 3.4473, 'neural_augmentation': 10.7965, 'total_loss': 14.2437}
+2024-07-30 07:33:48 - [34m[1mLOGS   [0m - *** Validation summary for epoch 5
+	 loss={'classification': 1.3116, 'neural_augmentation': 0.0, 'total_loss': 1.3116} || top1={'logits': 81.6797} || top5={'logits': 96.5586}
+2024-07-30 07:33:50 - [34m[1mLOGS   [0m - Best checkpoint with score 81.68 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:33:52 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_32.6914.pt
+2024-07-30 07:33:52 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_62.7148.pt', 'checkpoint_score_69.8086.pt', 'checkpoint_score_77.1328.pt', 'checkpoint_score_80.4961.pt', 'checkpoint_score_81.6797.pt']
+2024-07-30 07:34:02 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:34:02 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:34:02 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:34:03 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 888 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_5_iter_888.pt
+2024-07-30 07:34:04 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 888 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_5_iter_888.pt
+[31m===========================================================================[0m
+2024-07-30 07:34:06 - [32m[1mINFO   [0m - Training epoch 6
+2024-07-30 07:34:09 - [34m[1mLOGS   [0m - Epoch:   6 [     889/10000000], loss: {'classification': 3.5644, 'neural_augmentation': 11.8399, 'total_loss': 15.4044}, LR: [0.000457, 0.000457], Avg. batch load time: 2.979, Elapsed time:  3.07
+2024-07-30 07:34:22 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
+	 loss={'classification': 3.354, 'neural_augmentation': 10.7049, 'total_loss': 14.0589}
+2024-07-30 07:34:39 - [34m[1mLOGS   [0m - *** Validation summary for epoch 6
+	 loss={'classification': 1.1531, 'neural_augmentation': 0.0, 'total_loss': 1.1531} || top1={'logits': 82.4648} || top5={'logits': 96.7109}
+2024-07-30 07:34:42 - [34m[1mLOGS   [0m - Best checkpoint with score 82.46 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:34:43 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_62.7148.pt
+2024-07-30 07:34:43 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_69.8086.pt', 'checkpoint_score_77.1328.pt', 'checkpoint_score_80.4961.pt', 'checkpoint_score_81.6797.pt', 'checkpoint_score_82.4648.pt']
+2024-07-30 07:34:49 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:34:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:34:49 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:34:50 - [34m[1mLOGS   [0m - Training checkpoint for epoch 6/iteration 1036 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_6_iter_1036.pt
+2024-07-30 07:34:51 - [34m[1mLOGS   [0m - Model state for epoch 6/iteration 1036 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_6_iter_1036.pt
+[31m===========================================================================[0m
+2024-07-30 07:34:53 - [32m[1mINFO   [0m - Training epoch 7
+2024-07-30 07:34:57 - [34m[1mLOGS   [0m - Epoch:   7 [    1037/10000000], loss: {'classification': 3.2247, 'neural_augmentation': 9.4688, 'total_loss': 12.6935}, LR: [0.000442, 0.000442], Avg. batch load time: 4.431, Elapsed time:  4.58
+2024-07-30 07:35:15 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
+	 loss={'classification': 3.3214, 'neural_augmentation': 10.7729, 'total_loss': 14.0943}
+2024-07-30 07:35:27 - [34m[1mLOGS   [0m - *** Validation summary for epoch 7
+	 loss={'classification': 1.0505, 'neural_augmentation': 0.0, 'total_loss': 1.0505} || top1={'logits': 82.9805} || top5={'logits': 96.9258}
+2024-07-30 07:35:27 - [34m[1mLOGS   [0m - Best checkpoint with score 82.98 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:35:27 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_69.8086.pt
+2024-07-30 07:35:27 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_77.1328.pt', 'checkpoint_score_80.4961.pt', 'checkpoint_score_81.6797.pt', 'checkpoint_score_82.4648.pt', 'checkpoint_score_82.9805.pt']
+2024-07-30 07:35:32 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:35:35 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:35:39 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:35:43 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 1184 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_7_iter_1184.pt
+2024-07-30 07:35:47 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 1184 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_7_iter_1184.pt
+[31m===========================================================================[0m
+2024-07-30 07:35:49 - [32m[1mINFO   [0m - Training epoch 8
+2024-07-30 07:35:52 - [34m[1mLOGS   [0m - Epoch:   8 [    1185/10000000], loss: {'classification': 3.2317, 'neural_augmentation': 10.1587, 'total_loss': 13.3903}, LR: [0.000426, 0.000426], Avg. batch load time: 2.575, Elapsed time:  2.66
+2024-07-30 07:36:06 - [34m[1mLOGS   [0m - *** Training summary for epoch 8
+	 loss={'classification': 3.2774, 'neural_augmentation': 10.7034, 'total_loss': 13.9808}
+2024-07-30 07:36:17 - [34m[1mLOGS   [0m - *** Validation summary for epoch 8
+	 loss={'classification': 0.9752, 'neural_augmentation': 0.0, 'total_loss': 0.9752} || top1={'logits': 83.5742} || top5={'logits': 96.9883}
+2024-07-30 07:36:18 - [34m[1mLOGS   [0m - Best checkpoint with score 83.57 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:36:19 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_77.1328.pt
+2024-07-30 07:36:19 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_80.4961.pt', 'checkpoint_score_81.6797.pt', 'checkpoint_score_82.4648.pt', 'checkpoint_score_82.9805.pt', 'checkpoint_score_83.5742.pt']
+2024-07-30 07:36:32 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:36:33 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:36:33 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:36:34 - [34m[1mLOGS   [0m - Training checkpoint for epoch 8/iteration 1332 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_8_iter_1332.pt
+2024-07-30 07:36:34 - [34m[1mLOGS   [0m - Model state for epoch 8/iteration 1332 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_8_iter_1332.pt
+[31m===========================================================================[0m
+2024-07-30 07:36:36 - [32m[1mINFO   [0m - Training epoch 9
+2024-07-30 07:36:37 - [34m[1mLOGS   [0m - Epoch:   9 [    1333/10000000], loss: {'classification': 3.159, 'neural_augmentation': 9.5368, 'total_loss': 12.6958}, LR: [0.000407, 0.000407], Avg. batch load time: 1.078, Elapsed time:  1.17
+2024-07-30 07:36:54 - [34m[1mLOGS   [0m - *** Training summary for epoch 9
+	 loss={'classification': 3.246, 'neural_augmentation': 10.6976, 'total_loss': 13.9435}
+2024-07-30 07:37:05 - [34m[1mLOGS   [0m - *** Validation summary for epoch 9
+	 loss={'classification': 0.9208, 'neural_augmentation': 0.0, 'total_loss': 0.9208} || top1={'logits': 83.793} || top5={'logits': 97.0859}
+2024-07-30 07:37:06 - [34m[1mLOGS   [0m - Best checkpoint with score 83.79 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:37:09 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_80.4961.pt
+2024-07-30 07:37:09 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_81.6797.pt', 'checkpoint_score_82.4648.pt', 'checkpoint_score_82.9805.pt', 'checkpoint_score_83.5742.pt', 'checkpoint_score_83.7930.pt']
+2024-07-30 07:37:23 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:37:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:37:27 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:37:29 - [34m[1mLOGS   [0m - Training checkpoint for epoch 9/iteration 1480 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_9_iter_1480.pt
+2024-07-30 07:37:30 - [34m[1mLOGS   [0m - Model state for epoch 9/iteration 1480 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_9_iter_1480.pt
+[31m===========================================================================[0m
+2024-07-30 07:37:32 - [32m[1mINFO   [0m - Training epoch 10
+2024-07-30 07:37:36 - [34m[1mLOGS   [0m - Epoch:  10 [    1481/10000000], loss: {'classification': 3.0899, 'neural_augmentation': 9.5886, 'total_loss': 12.6784}, LR: [0.000387, 0.000387], Avg. batch load time: 3.871, Elapsed time:  3.96
+2024-07-30 07:37:51 - [34m[1mLOGS   [0m - *** Training summary for epoch 10
+	 loss={'classification': 3.2119, 'neural_augmentation': 10.5383, 'total_loss': 13.7502}
+2024-07-30 07:38:07 - [34m[1mLOGS   [0m - *** Validation summary for epoch 10
+	 loss={'classification': 0.8791, 'neural_augmentation': 0.0, 'total_loss': 0.8791} || top1={'logits': 84.1758} || top5={'logits': 97.1797}
+2024-07-30 07:38:08 - [34m[1mLOGS   [0m - Best checkpoint with score 84.18 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:38:08 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_81.6797.pt
+2024-07-30 07:38:08 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_82.4648.pt', 'checkpoint_score_82.9805.pt', 'checkpoint_score_83.5742.pt', 'checkpoint_score_83.7930.pt', 'checkpoint_score_84.1758.pt']
+2024-07-30 07:38:24 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:38:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:38:27 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:38:28 - [34m[1mLOGS   [0m - Training checkpoint for epoch 10/iteration 1628 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_10_iter_1628.pt
+2024-07-30 07:38:29 - [34m[1mLOGS   [0m - Model state for epoch 10/iteration 1628 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_10_iter_1628.pt
+[31m===========================================================================[0m
+2024-07-30 07:38:31 - [32m[1mINFO   [0m - Training epoch 11
+2024-07-30 07:38:35 - [34m[1mLOGS   [0m - Epoch:  11 [    1629/10000000], loss: {'classification': 3.0468, 'neural_augmentation': 9.8, 'total_loss': 12.8468}, LR: [0.000367, 0.000367], Avg. batch load time: 3.534, Elapsed time:  3.62
+2024-07-30 07:38:48 - [34m[1mLOGS   [0m - *** Training summary for epoch 11
+	 loss={'classification': 3.191, 'neural_augmentation': 10.5805, 'total_loss': 13.7715}
+2024-07-30 07:39:03 - [34m[1mLOGS   [0m - *** Validation summary for epoch 11
+	 loss={'classification': 0.846, 'neural_augmentation': 0.0, 'total_loss': 0.846} || top1={'logits': 84.4727} || top5={'logits': 97.2461}
+2024-07-30 07:39:07 - [34m[1mLOGS   [0m - Best checkpoint with score 84.47 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:39:10 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_82.4648.pt
+2024-07-30 07:39:10 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_82.9805.pt', 'checkpoint_score_83.5742.pt', 'checkpoint_score_83.7930.pt', 'checkpoint_score_84.1758.pt', 'checkpoint_score_84.4727.pt']
+2024-07-30 07:39:14 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:39:15 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:39:15 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:39:15 - [34m[1mLOGS   [0m - Training checkpoint for epoch 11/iteration 1776 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_11_iter_1776.pt
+2024-07-30 07:39:16 - [34m[1mLOGS   [0m - Model state for epoch 11/iteration 1776 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_11_iter_1776.pt
+[31m===========================================================================[0m
+2024-07-30 07:39:18 - [32m[1mINFO   [0m - Training epoch 12
+2024-07-30 07:39:24 - [34m[1mLOGS   [0m - Epoch:  12 [    1777/10000000], loss: {'classification': 3.047, 'neural_augmentation': 9.4249, 'total_loss': 12.4718}, LR: [0.000345, 0.000345], Avg. batch load time: 6.184, Elapsed time:  6.30
+2024-07-30 07:39:42 - [34m[1mLOGS   [0m - *** Training summary for epoch 12
+	 loss={'classification': 3.1896, 'neural_augmentation': 10.6115, 'total_loss': 13.8011}
+2024-07-30 07:39:53 - [34m[1mLOGS   [0m - *** Validation summary for epoch 12
+	 loss={'classification': 0.8193, 'neural_augmentation': 0.0, 'total_loss': 0.8193} || top1={'logits': 84.7461} || top5={'logits': 97.2695}
+2024-07-30 07:39:53 - [34m[1mLOGS   [0m - Best checkpoint with score 84.75 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:39:54 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_82.9805.pt
+2024-07-30 07:39:54 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_83.5742.pt', 'checkpoint_score_83.7930.pt', 'checkpoint_score_84.1758.pt', 'checkpoint_score_84.4727.pt', 'checkpoint_score_84.7461.pt']
+2024-07-30 07:40:03 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:40:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:40:10 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:40:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 12/iteration 1924 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_12_iter_1924.pt
+2024-07-30 07:40:15 - [34m[1mLOGS   [0m - Model state for epoch 12/iteration 1924 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_12_iter_1924.pt
+[31m===========================================================================[0m
+2024-07-30 07:40:17 - [32m[1mINFO   [0m - Training epoch 13
+2024-07-30 07:40:19 - [34m[1mLOGS   [0m - Epoch:  13 [    1925/10000000], loss: {'classification': 3.2688, 'neural_augmentation': 11.4608, 'total_loss': 14.7295}, LR: [0.000322, 0.000322], Avg. batch load time: 2.397, Elapsed time:  2.48
+2024-07-30 07:40:33 - [34m[1mLOGS   [0m - *** Training summary for epoch 13
+	 loss={'classification': 3.1635, 'neural_augmentation': 10.4744, 'total_loss': 13.6379}
+2024-07-30 07:40:44 - [34m[1mLOGS   [0m - *** Validation summary for epoch 13
+	 loss={'classification': 0.7987, 'neural_augmentation': 0.0, 'total_loss': 0.7987} || top1={'logits': 84.8047} || top5={'logits': 97.3242}
+2024-07-30 07:40:45 - [34m[1mLOGS   [0m - Best checkpoint with score 84.80 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:40:46 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_83.5742.pt
+2024-07-30 07:40:46 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_83.7930.pt', 'checkpoint_score_84.1758.pt', 'checkpoint_score_84.4727.pt', 'checkpoint_score_84.7461.pt', 'checkpoint_score_84.8047.pt']
+2024-07-30 07:40:58 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:40:59 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:40:59 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:41:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 13/iteration 2072 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_13_iter_2072.pt
+2024-07-30 07:41:01 - [34m[1mLOGS   [0m - Model state for epoch 13/iteration 2072 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_13_iter_2072.pt
+[31m===========================================================================[0m
+2024-07-30 07:41:03 - [32m[1mINFO   [0m - Training epoch 14
+2024-07-30 07:41:03 - [34m[1mLOGS   [0m - Epoch:  14 [    2073/10000000], loss: {'classification': 3.324, 'neural_augmentation': 11.0722, 'total_loss': 14.3963}, LR: [0.000299, 0.000299], Avg. batch load time: 0.778, Elapsed time:  0.86
+2024-07-30 07:41:21 - [34m[1mLOGS   [0m - *** Training summary for epoch 14
+	 loss={'classification': 3.1495, 'neural_augmentation': 10.4252, 'total_loss': 13.5747}
+2024-07-30 07:41:31 - [34m[1mLOGS   [0m - *** Validation summary for epoch 14
+	 loss={'classification': 0.7839, 'neural_augmentation': 0.0, 'total_loss': 0.7839} || top1={'logits': 84.957} || top5={'logits': 97.3164}
+2024-07-30 07:41:35 - [34m[1mLOGS   [0m - Best checkpoint with score 84.96 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:41:39 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_83.7930.pt
+2024-07-30 07:41:39 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.1758.pt', 'checkpoint_score_84.4727.pt', 'checkpoint_score_84.7461.pt', 'checkpoint_score_84.8047.pt', 'checkpoint_score_84.9570.pt']
+2024-07-30 07:41:59 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:42:00 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:42:01 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:42:01 - [34m[1mLOGS   [0m - Training checkpoint for epoch 14/iteration 2220 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_14_iter_2220.pt
+2024-07-30 07:42:02 - [34m[1mLOGS   [0m - Model state for epoch 14/iteration 2220 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_14_iter_2220.pt
+[31m===========================================================================[0m
+2024-07-30 07:42:04 - [32m[1mINFO   [0m - Training epoch 15
+2024-07-30 07:42:06 - [34m[1mLOGS   [0m - Epoch:  15 [    2221/10000000], loss: {'classification': 3.1881, 'neural_augmentation': 11.2192, 'total_loss': 14.4072}, LR: [0.000275, 0.000275], Avg. batch load time: 1.627, Elapsed time:  1.71
+2024-07-30 07:42:21 - [34m[1mLOGS   [0m - *** Training summary for epoch 15
+	 loss={'classification': 3.1488, 'neural_augmentation': 10.4203, 'total_loss': 13.5691}
+2024-07-30 07:42:33 - [34m[1mLOGS   [0m - *** Validation summary for epoch 15
+	 loss={'classification': 0.7699, 'neural_augmentation': 0.0, 'total_loss': 0.7699} || top1={'logits': 84.9883} || top5={'logits': 97.3906}
+2024-07-30 07:42:34 - [34m[1mLOGS   [0m - Best checkpoint with score 84.99 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:42:36 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.1758.pt
+2024-07-30 07:42:36 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.4727.pt', 'checkpoint_score_84.7461.pt', 'checkpoint_score_84.8047.pt', 'checkpoint_score_84.9570.pt', 'checkpoint_score_84.9883.pt']
+2024-07-30 07:42:51 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:42:52 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:42:53 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:42:54 - [34m[1mLOGS   [0m - Training checkpoint for epoch 15/iteration 2368 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_15_iter_2368.pt
+2024-07-30 07:42:54 - [34m[1mLOGS   [0m - Model state for epoch 15/iteration 2368 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_15_iter_2368.pt
+[31m===========================================================================[0m
+2024-07-30 07:42:56 - [32m[1mINFO   [0m - Training epoch 16
+2024-07-30 07:43:00 - [34m[1mLOGS   [0m - Epoch:  16 [    2369/10000000], loss: {'classification': 3.1635, 'neural_augmentation': 9.844, 'total_loss': 13.0075}, LR: [0.000251, 0.000251], Avg. batch load time: 2.985, Elapsed time:  3.07
+2024-07-30 07:43:14 - [34m[1mLOGS   [0m - *** Training summary for epoch 16
+	 loss={'classification': 3.1384, 'neural_augmentation': 10.3557, 'total_loss': 13.494}
+2024-07-30 07:43:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 16
+	 loss={'classification': 0.7574, 'neural_augmentation': 0.0, 'total_loss': 0.7574} || top1={'logits': 85.1562} || top5={'logits': 97.4453}
+2024-07-30 07:43:29 - [34m[1mLOGS   [0m - Best checkpoint with score 85.16 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:43:32 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.4727.pt
+2024-07-30 07:43:32 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.7461.pt', 'checkpoint_score_84.8047.pt', 'checkpoint_score_84.9570.pt', 'checkpoint_score_84.9883.pt', 'checkpoint_score_85.1562.pt']
+2024-07-30 07:43:40 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:43:41 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:43:41 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:43:41 - [34m[1mLOGS   [0m - Training checkpoint for epoch 16/iteration 2516 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_16_iter_2516.pt
+2024-07-30 07:43:41 - [34m[1mLOGS   [0m - Model state for epoch 16/iteration 2516 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_16_iter_2516.pt
+[31m===========================================================================[0m
+2024-07-30 07:43:43 - [32m[1mINFO   [0m - Training epoch 17
+2024-07-30 07:43:45 - [34m[1mLOGS   [0m - Epoch:  17 [    2517/10000000], loss: {'classification': 3.0624, 'neural_augmentation': 9.9772, 'total_loss': 13.0396}, LR: [0.000228, 0.000228], Avg. batch load time: 1.665, Elapsed time:  1.77
+2024-07-30 07:44:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 17
+	 loss={'classification': 3.1516, 'neural_augmentation': 10.531, 'total_loss': 13.6826}
+2024-07-30 07:44:16 - [34m[1mLOGS   [0m - *** Validation summary for epoch 17
+	 loss={'classification': 0.7495, 'neural_augmentation': 0.0, 'total_loss': 0.7495} || top1={'logits': 85.2031} || top5={'logits': 97.4414}
+2024-07-30 07:44:17 - [34m[1mLOGS   [0m - Best checkpoint with score 85.20 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:44:17 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.7461.pt
+2024-07-30 07:44:17 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.8047.pt', 'checkpoint_score_84.9570.pt', 'checkpoint_score_84.9883.pt', 'checkpoint_score_85.1562.pt', 'checkpoint_score_85.2031.pt']
+2024-07-30 07:44:22 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:44:23 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:44:23 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:44:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 17/iteration 2664 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_17_iter_2664.pt
+2024-07-30 07:44:24 - [34m[1mLOGS   [0m - Model state for epoch 17/iteration 2664 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_17_iter_2664.pt
+[31m===========================================================================[0m
+2024-07-30 07:44:26 - [32m[1mINFO   [0m - Training epoch 18
+2024-07-30 07:44:34 - [34m[1mLOGS   [0m - Epoch:  18 [    2665/10000000], loss: {'classification': 3.1375, 'neural_augmentation': 9.9795, 'total_loss': 13.117}, LR: [0.000205, 0.000205], Avg. batch load time: 8.032, Elapsed time:  8.13
+2024-07-30 07:44:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
+	 loss={'classification': 3.1253, 'neural_augmentation': 10.3103, 'total_loss': 13.4355}
+2024-07-30 07:45:04 - [34m[1mLOGS   [0m - *** Validation summary for epoch 18
+	 loss={'classification': 0.7415, 'neural_augmentation': 0.0, 'total_loss': 0.7415} || top1={'logits': 85.1562} || top5={'logits': 97.4609}
+2024-07-30 07:45:06 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:45:06 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:45:07 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 2812 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_18_iter_2812.pt
+2024-07-30 07:45:08 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 2812 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_18_iter_2812.pt
+[31m===========================================================================[0m
+2024-07-30 07:45:10 - [32m[1mINFO   [0m - Training epoch 19
+2024-07-30 07:45:15 - [34m[1mLOGS   [0m - Epoch:  19 [    2813/10000000], loss: {'classification': 3.1017, 'neural_augmentation': 10.8769, 'total_loss': 13.9786}, LR: [0.000183, 0.000183], Avg. batch load time: 4.309, Elapsed time:  4.41
+2024-07-30 07:45:33 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
+	 loss={'classification': 3.1351, 'neural_augmentation': 10.4039, 'total_loss': 13.5391}
+2024-07-30 07:45:50 - [34m[1mLOGS   [0m - *** Validation summary for epoch 19
+	 loss={'classification': 0.7344, 'neural_augmentation': 0.0, 'total_loss': 0.7344} || top1={'logits': 85.2266} || top5={'logits': 97.4922}
+2024-07-30 07:45:52 - [34m[1mLOGS   [0m - Best checkpoint with score 85.23 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:45:52 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.8047.pt
+2024-07-30 07:45:52 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.9570.pt', 'checkpoint_score_84.9883.pt', 'checkpoint_score_85.1562.pt', 'checkpoint_score_85.2031.pt', 'checkpoint_score_85.2266.pt']
+2024-07-30 07:45:59 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:45:59 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:46:00 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:46:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 2960 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_19_iter_2960.pt
+2024-07-30 07:46:00 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 2960 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_19_iter_2960.pt
+[31m===========================================================================[0m
+2024-07-30 07:46:02 - [32m[1mINFO   [0m - Training epoch 20
+2024-07-30 07:46:03 - [34m[1mLOGS   [0m - Epoch:  20 [    2961/10000000], loss: {'classification': 3.0793, 'neural_augmentation': 10.4142, 'total_loss': 13.4935}, LR: [0.000162, 0.000162], Avg. batch load time: 0.717, Elapsed time:  0.80
+2024-07-30 07:46:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 20
+	 loss={'classification': 3.1255, 'neural_augmentation': 10.3373, 'total_loss': 13.4628}
+2024-07-30 07:46:39 - [34m[1mLOGS   [0m - *** Validation summary for epoch 20
+	 loss={'classification': 0.7302, 'neural_augmentation': 0.0, 'total_loss': 0.7302} || top1={'logits': 85.2656} || top5={'logits': 97.4531}
+2024-07-30 07:46:39 - [34m[1mLOGS   [0m - Best checkpoint with score 85.27 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:46:40 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.9570.pt
+2024-07-30 07:46:40 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.9883.pt', 'checkpoint_score_85.1562.pt', 'checkpoint_score_85.2031.pt', 'checkpoint_score_85.2266.pt', 'checkpoint_score_85.2656.pt']
+2024-07-30 07:46:42 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:46:44 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:46:45 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:46:46 - [34m[1mLOGS   [0m - Training checkpoint for epoch 20/iteration 3108 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_20_iter_3108.pt
+2024-07-30 07:46:46 - [34m[1mLOGS   [0m - Model state for epoch 20/iteration 3108 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_20_iter_3108.pt
+[31m===========================================================================[0m
+2024-07-30 07:46:48 - [32m[1mINFO   [0m - Training epoch 21
+2024-07-30 07:46:52 - [34m[1mLOGS   [0m - Epoch:  21 [    3109/10000000], loss: {'classification': 2.9955, 'neural_augmentation': 8.9164, 'total_loss': 11.9119}, LR: [0.000143, 0.000143], Avg. batch load time: 3.617, Elapsed time:  3.77
+2024-07-30 07:47:16 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
+	 loss={'classification': 3.1225, 'neural_augmentation': 10.2978, 'total_loss': 13.4202}
+2024-07-30 07:47:29 - [34m[1mLOGS   [0m - *** Validation summary for epoch 21
+	 loss={'classification': 0.7251, 'neural_augmentation': 0.0, 'total_loss': 0.7251} || top1={'logits': 85.3672} || top5={'logits': 97.4961}
+2024-07-30 07:47:30 - [34m[1mLOGS   [0m - Best checkpoint with score 85.37 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:47:30 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_84.9883.pt
+2024-07-30 07:47:30 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_85.1562.pt', 'checkpoint_score_85.2031.pt', 'checkpoint_score_85.2266.pt', 'checkpoint_score_85.2656.pt', 'checkpoint_score_85.3672.pt']
+2024-07-30 07:47:32 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:47:32 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:47:34 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:47:35 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 3256 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_21_iter_3256.pt
+2024-07-30 07:47:36 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 3256 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_21_iter_3256.pt
+[31m===========================================================================[0m
+2024-07-30 07:47:38 - [32m[1mINFO   [0m - Training epoch 22
+2024-07-30 07:47:40 - [34m[1mLOGS   [0m - Epoch:  22 [    3257/10000000], loss: {'classification': 3.1738, 'neural_augmentation': 11.246, 'total_loss': 14.4198}, LR: [0.000124, 0.000124], Avg. batch load time: 1.711, Elapsed time:  1.80
+2024-07-30 07:47:58 - [34m[1mLOGS   [0m - *** Training summary for epoch 22
+	 loss={'classification': 3.1272, 'neural_augmentation': 10.3321, 'total_loss': 13.4593}
+2024-07-30 07:48:10 - [34m[1mLOGS   [0m - *** Validation summary for epoch 22
+	 loss={'classification': 0.7209, 'neural_augmentation': 0.0, 'total_loss': 0.7209} || top1={'logits': 85.4648} || top5={'logits': 97.543}
+2024-07-30 07:48:10 - [34m[1mLOGS   [0m - Best checkpoint with score 85.46 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:48:10 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_85.1562.pt
+2024-07-30 07:48:10 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_85.2031.pt', 'checkpoint_score_85.2266.pt', 'checkpoint_score_85.2656.pt', 'checkpoint_score_85.3672.pt', 'checkpoint_score_85.4648.pt']
+2024-07-30 07:48:12 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:48:14 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:48:16 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:48:16 - [34m[1mLOGS   [0m - Training checkpoint for epoch 22/iteration 3404 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_22_iter_3404.pt
+2024-07-30 07:48:16 - [34m[1mLOGS   [0m - Model state for epoch 22/iteration 3404 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_22_iter_3404.pt
+[31m===========================================================================[0m
+2024-07-30 07:48:18 - [32m[1mINFO   [0m - Training epoch 23
+2024-07-30 07:48:20 - [34m[1mLOGS   [0m - Epoch:  23 [    3405/10000000], loss: {'classification': 3.2519, 'neural_augmentation': 10.8455, 'total_loss': 14.0974}, LR: [0.000108, 0.000108], Avg. batch load time: 1.624, Elapsed time:  1.71
+2024-07-30 07:48:38 - [34m[1mLOGS   [0m - *** Training summary for epoch 23
+	 loss={'classification': 3.1088, 'neural_augmentation': 10.1975, 'total_loss': 13.3063}
+2024-07-30 07:48:49 - [34m[1mLOGS   [0m - *** Validation summary for epoch 23
+	 loss={'classification': 0.7183, 'neural_augmentation': 0.0, 'total_loss': 0.7183} || top1={'logits': 85.5859} || top5={'logits': 97.4648}
+2024-07-30 07:48:49 - [34m[1mLOGS   [0m - Best checkpoint with score 85.59 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:48:50 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_85.2031.pt
+2024-07-30 07:48:50 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_85.2266.pt', 'checkpoint_score_85.2656.pt', 'checkpoint_score_85.3672.pt', 'checkpoint_score_85.4648.pt', 'checkpoint_score_85.5859.pt']
+2024-07-30 07:48:51 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:48:53 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:48:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:48:56 - [34m[1mLOGS   [0m - Training checkpoint for epoch 23/iteration 3552 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_23_iter_3552.pt
+2024-07-30 07:48:56 - [34m[1mLOGS   [0m - Model state for epoch 23/iteration 3552 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_23_iter_3552.pt
+[31m===========================================================================[0m
+2024-07-30 07:48:58 - [32m[1mINFO   [0m - Training epoch 24
+2024-07-30 07:48:59 - [34m[1mLOGS   [0m - Epoch:  24 [    3553/10000000], loss: {'classification': 3.2177, 'neural_augmentation': 11.4894, 'total_loss': 14.7071}, LR: [9.3e-05, 9.3e-05], Avg. batch load time: 1.177, Elapsed time:  1.26
+2024-07-30 07:49:17 - [34m[1mLOGS   [0m - *** Training summary for epoch 24
+	 loss={'classification': 3.1024, 'neural_augmentation': 10.1643, 'total_loss': 13.2667}
+2024-07-30 07:49:28 - [34m[1mLOGS   [0m - *** Validation summary for epoch 24
+	 loss={'classification': 0.7154, 'neural_augmentation': 0.0, 'total_loss': 0.7154} || top1={'logits': 85.582} || top5={'logits': 97.5039}
+2024-07-30 07:49:29 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:49:29 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:49:29 - [34m[1mLOGS   [0m - Training checkpoint for epoch 24/iteration 3700 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_24_iter_3700.pt
+2024-07-30 07:49:30 - [34m[1mLOGS   [0m - Model state for epoch 24/iteration 3700 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_24_iter_3700.pt
+[31m===========================================================================[0m
+2024-07-30 07:49:32 - [32m[1mINFO   [0m - Training epoch 25
+2024-07-30 07:49:37 - [34m[1mLOGS   [0m - Epoch:  25 [    3701/10000000], loss: {'classification': 3.411, 'neural_augmentation': 11.2371, 'total_loss': 14.6481}, LR: [8e-05, 8e-05], Avg. batch load time: 2.942, Elapsed time:  5.45
+2024-07-30 07:49:54 - [34m[1mLOGS   [0m - *** Training summary for epoch 25
+	 loss={'classification': 3.1208, 'neural_augmentation': 10.2629, 'total_loss': 13.3838}
+2024-07-30 07:50:05 - [34m[1mLOGS   [0m - *** Validation summary for epoch 25
+	 loss={'classification': 0.713, 'neural_augmentation': 0.0, 'total_loss': 0.713} || top1={'logits': 85.6406} || top5={'logits': 97.5117}
+2024-07-30 07:50:05 - [34m[1mLOGS   [0m - Best checkpoint with score 85.64 saved at /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_best.pt
+2024-07-30 07:50:06 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_score_85.2266.pt
+2024-07-30 07:50:06 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_85.2656.pt', 'checkpoint_score_85.3672.pt', 'checkpoint_score_85.4648.pt', 'checkpoint_score_85.5859.pt', 'checkpoint_score_85.6406.pt']
+2024-07-30 07:50:08 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_avg.pt
+2024-07-30 07:50:10 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:50:11 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:50:12 - [34m[1mLOGS   [0m - Training checkpoint for epoch 25/iteration 3848 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_25_iter_3848.pt
+2024-07-30 07:50:12 - [34m[1mLOGS   [0m - Model state for epoch 25/iteration 3848 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_25_iter_3848.pt
+[31m===========================================================================[0m
+2024-07-30 07:50:14 - [32m[1mINFO   [0m - Training epoch 26
+2024-07-30 07:50:16 - [34m[1mLOGS   [0m - Epoch:  26 [    3849/10000000], loss: {'classification': 3.1158, 'neural_augmentation': 10.7875, 'total_loss': 13.9033}, LR: [6.9e-05, 6.9e-05], Avg. batch load time: 2.011, Elapsed time:  2.10
+2024-07-30 07:50:34 - [34m[1mLOGS   [0m - *** Training summary for epoch 26
+	 loss={'classification': 3.1067, 'neural_augmentation': 10.1912, 'total_loss': 13.2979}
+2024-07-30 07:50:45 - [34m[1mLOGS   [0m - *** Validation summary for epoch 26
+	 loss={'classification': 0.7115, 'neural_augmentation': 0.0, 'total_loss': 0.7115} || top1={'logits': 85.5625} || top5={'logits': 97.4883}
+2024-07-30 07:50:46 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:50:46 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:50:46 - [34m[1mLOGS   [0m - Training checkpoint for epoch 26/iteration 3996 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_26_iter_3996.pt
+2024-07-30 07:50:46 - [34m[1mLOGS   [0m - Model state for epoch 26/iteration 3996 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_26_iter_3996.pt
+[31m===========================================================================[0m
+2024-07-30 07:50:48 - [32m[1mINFO   [0m - Training epoch 27
+2024-07-30 07:50:53 - [34m[1mLOGS   [0m - Epoch:  27 [    3997/10000000], loss: {'classification': 3.0614, 'neural_augmentation': 9.5206, 'total_loss': 12.582}, LR: [6.1e-05, 6.1e-05], Avg. batch load time: 4.076, Elapsed time:  5.16
+2024-07-30 07:51:11 - [34m[1mLOGS   [0m - *** Training summary for epoch 27
+	 loss={'classification': 3.1121, 'neural_augmentation': 10.1926, 'total_loss': 13.3047}
+2024-07-30 07:51:22 - [34m[1mLOGS   [0m - *** Validation summary for epoch 27
+	 loss={'classification': 0.7098, 'neural_augmentation': 0.0, 'total_loss': 0.7098} || top1={'logits': 85.6172} || top5={'logits': 97.5234}
+2024-07-30 07:51:23 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:51:23 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:51:23 - [34m[1mLOGS   [0m - Training checkpoint for epoch 27/iteration 4144 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_27_iter_4144.pt
+2024-07-30 07:51:23 - [34m[1mLOGS   [0m - Model state for epoch 27/iteration 4144 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_27_iter_4144.pt
+[31m===========================================================================[0m
+2024-07-30 07:51:25 - [32m[1mINFO   [0m - Training epoch 28
+2024-07-30 07:51:31 - [34m[1mLOGS   [0m - Epoch:  28 [    4145/10000000], loss: {'classification': 3.0113, 'neural_augmentation': 9.3947, 'total_loss': 12.406}, LR: [5.5e-05, 5.5e-05], Avg. batch load time: 5.120, Elapsed time:  5.21
+2024-07-30 07:51:48 - [34m[1mLOGS   [0m - *** Training summary for epoch 28
+	 loss={'classification': 3.1018, 'neural_augmentation': 10.1109, 'total_loss': 13.2127}
+2024-07-30 07:51:59 - [34m[1mLOGS   [0m - *** Validation summary for epoch 28
+	 loss={'classification': 0.7081, 'neural_augmentation': 0.0, 'total_loss': 0.7081} || top1={'logits': 85.6094} || top5={'logits': 97.5352}
+2024-07-30 07:52:00 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:52:00 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:52:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 28/iteration 4292 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_28_iter_4292.pt
+2024-07-30 07:52:00 - [34m[1mLOGS   [0m - Model state for epoch 28/iteration 4292 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_28_iter_4292.pt
+[31m===========================================================================[0m
+2024-07-30 07:52:02 - [32m[1mINFO   [0m - Training epoch 29
+2024-07-30 07:52:08 - [34m[1mLOGS   [0m - Epoch:  29 [    4293/10000000], loss: {'classification': 2.929, 'neural_augmentation': 9.0846, 'total_loss': 12.0136}, LR: [5.1e-05, 5.1e-05], Avg. batch load time: 5.318, Elapsed time:  5.40
+2024-07-30 07:52:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 29
+	 loss={'classification': 3.098, 'neural_augmentation': 10.1436, 'total_loss': 13.2416}
+2024-07-30 07:52:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 29
+	 loss={'classification': 0.7067, 'neural_augmentation': 0.0, 'total_loss': 0.7067} || top1={'logits': 85.6328} || top5={'logits': 97.543}
+2024-07-30 07:52:40 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_last.pt
+2024-07-30 07:52:40 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_last.pt
+2024-07-30 07:52:40 - [34m[1mLOGS   [0m - Training checkpoint for epoch 29/iteration 4440 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/training_checkpoint_epoch_29_iter_4440.pt
+2024-07-30 07:52:40 - [34m[1mLOGS   [0m - Model state for epoch 29/iteration 4440 is saved at: /ML-A100/team/mm/models/catlip_data/open_vit_base/food101_lp/train/checkpoint_epoch_29_iter_4440.pt
+2024-07-30 07:52:40 - [34m[1mLOGS   [0m - Training took 00:34:30.16
