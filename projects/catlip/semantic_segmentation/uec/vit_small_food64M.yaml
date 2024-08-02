@@ -15,7 +15,7 @@ dataset:
   category: "segmentation"
   # effective base batch size is 32 (4 images per GPU * 8 A100 GPUs)
   train_batch_size0: 8
-  val_batch_size0: 4
+  val_batch_size0: 8
   workers: 64 # use all CPUs
   persistent_workers: true
   pin_memory: true
@@ -75,33 +75,33 @@ scheduler:
   warmup_iterations: 500
   warmup_init_lr: 1.e-6
   cosine:
-    max_lr: 5.e-5
-    min_lr: 5.e-6
+    max_lr: 3.e-5
+    min_lr: 3.e-6
 
 model:
   activation_checkpointing: true
   # During object detection training, we do not use classifier and cls_token, so we exclude them
-  resume_exclude_scopes: [ "classifier", "mlp"]
+  resume_exclude_scopes: [ "classifier" , "cls_token" ]
   segmentation:
     name: "encoder_decoder"
     n_classes: 103
     norm_layer: "layer_norm_fp32"
     seg_head: "deeplabv3"
-    output_stride: 32
+    output_stride: 8
     deeplabv3:
       aspp_dropout: 0.1
       aspp_out_channels: 224
       aspp_rates: [ 12, 24, 36 ]
   classification:
-    name: "foodv"
+    name: "vit"
     # Initalize the model with a pre-trained model and finetune it.
-    #pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt"
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
+    pretrained: "//ML-A100/team/mm/models/catlip_data/results_vit_small/train/checkpoint_epoch_9_iter_79038.pt"
     n_classes: 102
-    foodv:
-      mode: "base"
+    vit:
+      mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
+      no_cls_token: true
   learn_augmentation:
     brightness: true
     contrast: true
@@ -134,7 +134,4 @@ evaluation:
   segmentation:
     resize_input_images_fixed_size: true
     mode: "image_folder"
-    # path: "/ML-A100/team/mm/models/FoodSeg103/Images/img_dir/test"
-  
-ddp:
-  find_unused_params: true
+    path: "/ML-A100/team/mm/models/UECFOODPIXCOMPLETE/data/UECFoodPIXCOMPLETE/test/img"

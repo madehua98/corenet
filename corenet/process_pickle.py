@@ -35,6 +35,9 @@ def load_pickle(filename):
         obj = pickle.load(f)
     return obj
 
+obj = load_pickle('/ML-A100/team/mm/models/catlip_data/recipe1M+_1/0/7748.pkl')
+print(obj)
+
 def plot_histogram(data, thresholds, save_path):
     threshold_counts = {threshold: sum(1 for freq in data.values() if freq > threshold) for threshold in thresholds}
     
@@ -54,14 +57,14 @@ def plot_histogram(data, thresholds, save_path):
     plt.savefig(save_path)
     plt.close()
 
-if __name__ == '__main__':
-    filename = 'corenet/data/datasets/classification/all_new_vocab.pkl'
-    datacomp_vocab = load_pickle(filename)
+# if __name__ == '__main__':
+#     filename = 'corenet/data/datasets/classification/all_new_vocab.pkl'
+#     datacomp_vocab = load_pickle(filename)
 
-    thresholds = [10, 50, 100, 200, 500, 700, 1000]  # 设定多个阈值
-    save_path = '/ML-A800/home/guoshuyue/madehua/code/corenet/word_frequencies_histogram_new.png'  # 保存图像的路径
+#     thresholds = [10, 50, 100, 200, 500, 700, 1000]  # 设定多个阈值
+#     save_path = '/ML-A800/home/guoshuyue/madehua/code/corenet/word_frequencies_histogram_new.png'  # 保存图像的路径
     
-    plot_histogram(datacomp_vocab, thresholds, save_path)
+#     plot_histogram(datacomp_vocab, thresholds, save_path)
 
 # filename = 'corenet/data/datasets/classification/datacomp_1_2B_vocab.pkl'
 # datacomp_1b = load_pickle(filename)
