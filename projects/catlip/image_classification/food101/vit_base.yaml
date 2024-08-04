@@ -96,7 +96,7 @@ model:
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/vit_base.pt"
+    pretrained: "/ML-A100/team/mm/zhangge/mdh/model/vit_large.pt"
     vit:
       mode: "base"
       norm_layer: "layer_norm_fp32"

@@ -24,8 +24,8 @@ common:
 #   category: "classification"
 
 dataset:
-  root_train: "/ML-A100/team/mm/models/food172/food_172/train_images"
-  root_val: "/ML-A100/team/mm/models/food172/food_172/test_images"
+  root_train: "/ML-A100/team/mm/models/food101/food101/train_images"
+  root_val: "/ML-A100/team/mm/models/food101/food101/test_images"
   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
   train_batch_size0: 128
   val_batch_size0: 100
@@ -111,14 +111,14 @@ model:
   classification:
     name: "foodv"
     #name: "vit"
-    n_classes: 172
+    n_classes: 101
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt"
+    pretrained: "/ML-A100/team/mm/models/catlip_data/results_small_noc/train/checkpoint_epoch_9_iter_79125.pt"
     #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
     foodv:
-      mode: "small"
+      mode: "small"ss
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
       connector_type: "dci"

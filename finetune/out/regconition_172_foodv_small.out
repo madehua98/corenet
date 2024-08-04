@@ -1,10 +1,12 @@
 nohup: ignoring input
-2024-07-30 11:46:15 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+2024-08-04 06:06:52 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+../projects/catlip/image_classification/food172/foodv_small.yaml
+{'taskname': '+ ViT-B/16 [FT-IN1k]', 'common': {'run_label': 'train', 'log_freq': 500, 'auto_resume': True, 'mixed_precision': True, 'mixed_precision_dtype': 'bfloat16', 'grad_clip': 1.0, 'save_all_checkpoints': True}, 'dataset': {'root_train': '/ML-A100/team/mm/models/food172/food_172/train_images', 'root_val': '/ML-A100/team/mm/models/food172/food_172/test_images', 'train_batch_size0': 128, 'val_batch_size0': 100, 'eval_batch_size0': 100, 'workers': 64, 'persistent_workers': True, 'pin_memory': True, 'name': 'imagenet', 'category': 'classification'}, 'image_augmentation': {'random_resized_crop': {'enable': True, 'interpolation': 'bilinear'}, 'random_horizontal_flip': {'enable': True}, 'resize': {'enable': True, 'size': 232, 'interpolation': 'bilinear'}, 'center_crop': {'enable': True, 'size': 224}}, 'sampler': {'name': 'variable_batch_sampler', 'vbs': {'crop_size_width': 224, 'crop_size_height': 224, 'max_n_scales': 25, 'min_crop_size_width': 128, 'max_crop_size_width': 320, 'min_crop_size_height': 128, 'max_crop_size_height': 320, 'check_scale': 32}}, 'loss': {'category': 'composite_loss', 'composite_loss': [{'loss_category': 'classification', 'loss_weight': 1.0, 'classification': {'name': 'cross_entropy', 'cross_entropy': {'label_smoothing': 0.1}}}, {'loss_category': 'neural_augmentation', 'loss_weight': 1.0, 'neural_augmentation': {'perceptual_metric': 'psnr', 'target_value': [40, 20], 'curriculum_method': 'cosine'}}]}, 'optim': {'name': 'adamw', 'weight_decay': 0.05, 'no_decay_bn_filter_bias': True, 'adamw': {'beta1': 0.9, 'beta2': 0.999}}, 'scheduler': {'name': 'cosine', 'max_epochs': 30, 'warmup_iterations': 500, 'warmup_init_lr': 1e-06, 'cosine': {'max_lr': 5e-05, 'min_lr': 5e-06}}, 'model': {'activation_checkpointing': True, 'resume_exclude_scopes': ['classifier'], 'ft': True, 'classification': {'name': 'foodv', 'n_classes': 172, 'pretrained': '/ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt', 'foodv': {'mode': 'small', 'norm_layer': 'layer_norm_fp32', 'use_flash_attention': True, 'connector_type': 'dci'}}, 'learn_augmentation': {'brightness': True, 'contrast': True, 'noise': True, 'mode': 'distribution'}, 'activation': {'name': 'gelu'}, 'layer': {'conv_init': 'kaiming_normal', 'linear_init': 'trunc_normal', 'linear_init_std_dev': 0.02}}, 'ema': {'enable': False, 'momentum': 0.0005}, 'stats': {'train': ['loss'], 'val': ['loss', 'top1', 'top5'], 'checkpoint_metric': 'top1.logits', 'checkpoint_metric_max': True}}
 small
 dci
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
-2024-07-30 11:46:16 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - [36mModel[0m
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
+2024-08-04 06:06:53 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - [36mModel[0m
 Foodv(
   (neural_augmentor): DistributionNeuralAugmentor(
   	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
@@ -479,8 +481,8 @@ Foodv(
 Total parameters     =   25.743 M
 Total trainable parameters =   25.743 M
 
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - FVCore Analysis:
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
 | module                               | #parameters or shape   | #flops     |
 |:-------------------------------------|:-----------------------|:-----------|
 | model                                | 25.743M                | 3.385G     |
@@ -598,27 +600,24 @@ Total trainable parameters =   25.743 M
 |  classifier                          |  88.236K               |  88.064K   |
 |   classifier.weight                  |   (172, 512)           |            |
 |   classifier.bias                    |   (172,)               |            |
-2024-07-30 11:46:16 - [33m[1mWARNING[0m - 
+2024-08-04 06:06:53 - [33m[1mWARNING[0m - 
 ** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
-2024-07-30 11:46:16 - [33m[1mWARNING[0m - Uncalled Modules:
-{'patch_embed.backbone.stages.0.0.down', 'blocks.3.attn.k_norm', 'blocks1.3.attn.q_norm', 'blocks.3.ls2', 'blocks1.3.drop_path2', 'blocks1.3.attn.k_norm', 'blocks1.2.ls2', 'patch_drop', 'norm', 'blocks1.6.drop_path1', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks1.2.attn.k_norm', 'norm_pre', 'blocks.3.drop_path1', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks.6.attn.k_norm', 'blocks.5.attn.q_norm', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks.4.attn.attn_drop', 'blocks.0.drop_path2', 'blocks.0.drop_path1', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks1.0.attn.k_norm', 'blocks1.2.attn.attn_drop', 'blocks.2.drop_path2', 'blocks1.3.ls2', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks1.2.drop_path1', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'patch_embed.backbone.stages.1.2.down', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks1.0.ls2', 'neural_augmentor.noise.max_fn', 'blocks.6.ls1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.1.attn.q_norm', 'blocks.2.drop_path1', 'blocks1.0.attn.q_norm', 'blocks1.0.attn.attn_drop', 'blocks.2.attn.q_norm', 'blocks1.1.attn.attn_drop', 'blocks.0.attn.q_norm', 'blocks1.2.drop_path2', 'blocks1.2.attn.q_norm', 'blocks.5.ls1', 'blocks1.5.ls1', 'patch_embed.backbone.stages.1.1.down', 'blocks1.3.drop_path1', 'blocks.4.attn.q_norm', 'blocks.5.ls2', 'blocks.4.ls1', 'blocks1.4.ls1', 'neural_augmentor.brightness.min_fn', 'blocks1.5.ls2', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks.6.attn.q_norm', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'neural_augmentor.noise', 'blocks1.3.ls1', 'neural_augmentor', 'blocks1.1.ls1', 'blocks1.1.attn.k_norm', 'blocks1.1.attn.q_norm', 'blocks.6.attn.attn_drop', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks.2.attn.attn_drop', 'blocks1.6.attn.q_norm', 'blocks.3.attn.q_norm', 'blocks.5.attn.attn_drop', 'blocks.1.drop_path1', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks1.4.drop_path1', 'patch_embed.backbone.stages.1.1.shortcut', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.3.attn.attn_drop', 'blocks.3.drop_path2', 'blocks1.5.attn.q_norm', 'blocks.2.attn.k_norm', 'neural_augmentor.contrast', 'blocks.5.drop_path1', 'blocks.1.ls2', 'blocks.4.attn.k_norm', 'blocks.4.drop_path2', 'blocks.5.attn.k_norm', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks1.2.ls1', 'blocks.4.drop_path1', 'blocks.3.ls1', 'blocks1.5.drop_path1', 'blocks.2.ls1', 'neural_augmentor.noise.min_fn', 'blocks1.1.drop_path1', 'blocks.1.attn.attn_drop', 'blocks.1.drop_path2', 'blocks1.4.attn.attn_drop', 'blocks1.6.attn.attn_drop', 'blocks1.1.ls2', 'neural_augmentor.contrast.max_fn', 'patch_embed.backbone.stages.0.1.down', 'patch_embed.backbone.stages.1.3.down', 'blocks1.6.ls1', 'blocks1.0.drop_path2', 'patch_embed.backbone.stem.norm1.drop', 'blocks.0.ls1', 'blocks1.5.attn.k_norm', 'blocks1.1.drop_path2', 'blocks1.6.drop_path2', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks1.4.attn.k_norm', 'blocks.0.attn.attn_drop', 'blocks1.6.ls2', 'neural_augmentor.brightness', 'blocks1.4.drop_path2', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks1.5.drop_path2', 'blocks.3.attn.attn_drop', 'blocks.6.ls2', 'blocks1.0.drop_path1', 'blocks.0.attn.k_norm', 'neural_augmentor.brightness.max_fn', 'blocks.6.drop_path1', 'blocks.2.ls2', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks.1.ls1', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks.1.attn.k_norm', 'blocks1.0.ls1', 'blocks.0.ls2', 'patch_embed.backbone.stages.1.0.down', 'blocks1.5.attn.attn_drop', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks.5.drop_path2', 'blocks.6.drop_path2', 'blocks1.6.attn.k_norm', 'patch_embed.backbone.stages.1.2.shortcut', 'neural_augmentor.contrast.min_fn', 'blocks1.4.attn.q_norm', 'patch_embed.proj', 'blocks.4.ls2'}
-2024-07-30 11:46:16 - [33m[1mWARNING[0m - Unsupported Ops:
+2024-08-04 06:06:53 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.2.attn.attn_drop', 'neural_augmentor.contrast', 'blocks.4.attn.attn_drop', 'patch_embed.backbone.stages.1.1.down', 'blocks1.6.drop_path1', 'blocks1.1.drop_path1', 'blocks1.0.ls2', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks.0.attn.q_norm', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks.0.drop_path2', 'blocks1.0.ls1', 'blocks1.4.drop_path2', 'blocks.6.attn.k_norm', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks1.2.ls2', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks1.5.attn.attn_drop', 'blocks.4.ls1', 'blocks1.3.ls1', 'blocks1.3.attn.k_norm', 'blocks.3.ls1', 'blocks1.3.drop_path2', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.2.drop_path1', 'blocks1.0.attn.k_norm', 'neural_augmentor.brightness.max_fn', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks.5.ls1', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.5.drop_path1', 'blocks1.5.attn.k_norm', 'blocks1.2.drop_path1', 'blocks1.5.attn.q_norm', 'blocks.3.attn.k_norm', 'blocks.6.drop_path2', 'neural_augmentor.noise.max_fn', 'blocks1.1.attn.k_norm', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks.3.ls2', 'blocks.2.drop_path2', 'blocks.1.ls2', 'blocks1.1.ls2', 'blocks.2.attn.q_norm', 'neural_augmentor.contrast.min_fn', 'neural_augmentor', 'blocks.2.ls2', 'blocks1.4.ls1', 'blocks1.5.ls1', 'blocks.4.attn.q_norm', 'patch_embed.proj', 'blocks.1.attn.k_norm', 'blocks.5.drop_path2', 'patch_embed.backbone.stages.0.0.down', 'blocks.2.ls1', 'neural_augmentor.brightness', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks1.0.attn.attn_drop', 'blocks1.6.ls2', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks.4.ls2', 'blocks.4.drop_path1', 'blocks.4.drop_path2', 'patch_embed.backbone.stages.0.1.down', 'blocks1.4.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks1.6.attn.attn_drop', 'blocks.2.attn.k_norm', 'patch_embed.backbone.stages.1.2.drop_path', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks1.1.attn.attn_drop', 'blocks.6.attn.attn_drop', 'blocks.0.ls1', 'norm_pre', 'blocks1.6.attn.q_norm', 'neural_augmentor.noise', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks.6.drop_path1', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.1.0.down', 'patch_embed.backbone.stages.1.3.down', 'blocks1.2.attn.k_norm', 'blocks1.1.attn.q_norm', 'blocks1.2.ls1', 'blocks1.6.ls1', 'blocks1.3.attn.q_norm', 'blocks1.4.attn.q_norm', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks1.5.drop_path2', 'blocks1.0.drop_path2', 'blocks.1.ls1', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks1.4.drop_path1', 'blocks.6.ls1', 'blocks.1.attn.q_norm', 'blocks1.1.ls1', 'neural_augmentor.brightness.min_fn', 'blocks.1.drop_path1', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks.6.ls2', 'blocks.5.attn.k_norm', 'blocks1.1.drop_path2', 'blocks.3.drop_path2', 'blocks1.2.drop_path2', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks1.0.attn.q_norm', 'blocks.3.attn.attn_drop', 'blocks.3.attn.q_norm', 'blocks.2.attn.attn_drop', 'patch_embed.backbone.stages.1.0.drop_path', 'patch_drop', 'blocks.0.drop_path1', 'blocks.5.attn.q_norm', 'blocks.6.attn.q_norm', 'neural_augmentor.contrast.max_fn', 'blocks1.0.drop_path1', 'blocks1.3.ls2', 'blocks1.4.ls2', 'blocks1.4.attn.k_norm', 'neural_augmentor.noise.min_fn', 'norm', 'blocks.5.drop_path1', 'blocks.0.attn.attn_drop', 'blocks.5.ls2', 'blocks.3.drop_path1', 'blocks.0.ls2', 'blocks.5.attn.attn_drop', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks.1.attn.attn_drop', 'blocks.0.attn.k_norm', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks1.3.drop_path1', 'patch_embed.backbone.stem.norm1.drop', 'blocks1.5.ls2', 'patch_embed.backbone.stages.1.2.down', 'blocks.1.drop_path2', 'blocks1.6.drop_path2', 'blocks1.3.attn.attn_drop', 'blocks1.2.attn.q_norm', 'blocks1.6.attn.k_norm'}
+2024-08-04 06:06:53 - [33m[1mWARNING[0m - Unsupported Ops:
 Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
 [31m=================================================================[0m
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Random seeds are set to 0
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Available GPUs: 2
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - CUDNN is enabled
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
-2024-07-30 11:46:16 - [34m[1mLOGS   [0m - Directory created at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train
-2024-07-30 11:46:20 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:40000
-small
-dci
-2024-07-30 11:46:20 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:40000
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Number of categories: 172
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Total number of samples: 66071
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Using all samples in the dataset.
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Training dataset details are given below
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-08-04 06:06:53 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train
+2024-08-04 06:06:55 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:40000
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Number of categories: 172
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Total number of samples: 66071
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Training dataset details are given below
 ImageNetDataset(
 	root=/ML-A100/team/mm/models/food172/food_172/train_images 
 	is_training=True 
@@ -630,10 +629,10 @@ ImageNetDataset(
 		)
 	 num_classes=172
 )
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Number of categories: 172
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Total number of samples: 44170
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Using all samples in the dataset.
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Validation dataset details are given below
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Number of categories: 172
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Total number of samples: 44170
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Validation dataset details are given below
 ImageNetDataset(
 	root=/ML-A100/team/mm/models/food172/food_172/test_images 
 	is_training=False 
@@ -645,20 +644,20 @@ ImageNetDataset(
 		)
 	 num_classes=172
 )
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
 	 num_repeat=1
 	 trunc_rep_aug=False
 	 sharding=False
 	 disable_shuffle_sharding=False
 	 base_im_size=(h=224, w=224)
-	 base_batch_size=256
-	 scales=[(128, 128, 784), (160, 160, 501), (192, 192, 348), (224, 224, 256), (256, 256, 196), (288, 288, 154), (320, 320, 125)]
+	 base_batch_size=128
+	 scales=[(128, 128, 392), (160, 160, 250), (192, 192, 174), (224, 224, 128), (256, 256, 98), (288, 288, 77), (320, 320, 62)]
 	 scale_inc=False
 	 min_scale_inc_factor=1.0
 	 max_scale_inc_factor=1.0
 	 ep_intervals=[40]
 )
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Validation sampler details: VariableBatchSamplerDDP(
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Validation sampler details: VariableBatchSamplerDDP(
 	 num_repeat=1
 	 trunc_rep_aug=False
 	 sharding=False
@@ -671,12 +670,12 @@ ImageNetDataset(
 	 max_scale_inc_factor=1.0
 	 ep_intervals=[40]
 )
-2024-07-30 11:46:22 - [34m[1mLOGS   [0m - Number of data workers: 64
+2024-08-04 06:06:59 - [34m[1mLOGS   [0m - Number of data workers: 64
 small
 dci
-2024-07-30 11:46:23 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
-2024-07-30 11:46:23 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
-2024-07-30 11:46:23 - [34m[1mLOGS   [0m - [36mModel[0m
+2024-08-04 06:07:03 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
+2024-08-04 06:07:03 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-04 06:07:03 - [34m[1mLOGS   [0m - [36mModel[0m
 Foodv(
   (neural_augmentor): DistributionNeuralAugmentor(
   	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
@@ -1151,8 +1150,8 @@ Foodv(
 Total parameters     =   25.743 M
 Total trainable parameters =   25.743 M
 
-2024-07-30 11:46:23 - [34m[1mLOGS   [0m - FVCore Analysis:
-2024-07-30 11:46:23 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+2024-08-04 06:07:03 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-04 06:07:03 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
 | module                               | #parameters or shape   | #flops     |
 |:-------------------------------------|:-----------------------|:-----------|
 | model                                | 25.743M                | 3.385G     |
@@ -1270,34 +1269,43 @@ Total trainable parameters =   25.743 M
 |  classifier                          |  88.236K               |  88.064K   |
 |   classifier.weight                  |   (172, 512)           |            |
 |   classifier.bias                    |   (172,)               |            |
-2024-07-30 11:46:23 - [33m[1mWARNING[0m - 
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - 
 ** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
-2024-07-30 11:46:23 - [33m[1mWARNING[0m - Uncalled Modules:
-{'blocks1.1.drop_path2', 'blocks.0.drop_path1', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks.1.drop_path1', 'blocks1.5.attn.q_norm', 'blocks1.1.ls2', 'blocks.1.attn.attn_drop', 'blocks1.1.attn.q_norm', 'blocks.1.ls2', 'blocks1.3.attn.attn_drop', 'blocks.3.attn.attn_drop', 'patch_embed.backbone.stages.1.2.down', 'blocks.4.ls2', 'blocks.4.drop_path2', 'blocks.0.attn.k_norm', 'blocks1.5.drop_path1', 'neural_augmentor.brightness', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks.2.attn.q_norm', 'blocks1.6.attn.q_norm', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks1.3.attn.k_norm', 'blocks1.6.drop_path1', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.4.ls1', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.0.1.down', 'norm', 'blocks.1.ls1', 'blocks.0.attn.attn_drop', 'blocks.0.ls2', 'blocks1.3.ls2', 'neural_augmentor.noise.max_fn', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.0.ls1', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks.3.ls2', 'blocks.0.attn.q_norm', 'blocks.2.attn.attn_drop', 'blocks1.0.ls2', 'blocks1.4.attn.q_norm', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks1.5.ls1', 'blocks1.2.ls2', 'patch_embed.proj', 'blocks.6.drop_path2', 'blocks1.2.attn.k_norm', 'blocks.5.drop_path2', 'blocks1.4.drop_path2', 'blocks.2.attn.k_norm', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'patch_embed.backbone.stem.norm1.drop', 'blocks1.0.attn.attn_drop', 'blocks.2.drop_path2', 'blocks.5.attn.k_norm', 'blocks.4.drop_path1', 'neural_augmentor.contrast.max_fn', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.5.attn.attn_drop', 'blocks.5.ls1', 'blocks.1.drop_path2', 'blocks.6.attn.k_norm', 'neural_augmentor', 'blocks.3.ls1', 'blocks.6.attn.attn_drop', 'patch_embed.backbone.stages.1.0.down', 'blocks1.4.attn.attn_drop', 'neural_augmentor.noise.min_fn', 'blocks1.6.ls2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.5.drop_path2', 'blocks.1.attn.q_norm', 'blocks1.1.attn.k_norm', 'blocks1.0.drop_path1', 'blocks1.4.drop_path1', 'blocks.6.ls1', 'blocks.4.ls1', 'blocks1.5.attn.attn_drop', 'blocks.5.attn.q_norm', 'blocks.2.ls2', 'blocks1.5.ls2', 'blocks.5.ls2', 'blocks1.6.attn.k_norm', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks1.1.attn.attn_drop', 'blocks.6.drop_path1', 'blocks1.2.ls1', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'neural_augmentor.contrast.min_fn', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.6.attn.q_norm', 'blocks.3.drop_path2', 'blocks1.1.ls1', 'blocks.4.attn.q_norm', 'blocks.5.drop_path1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.1.1.drop_path', 'patch_embed.backbone.stages.0.0.down', 'blocks1.6.drop_path2', 'blocks1.2.drop_path2', 'neural_augmentor.noise', 'blocks.3.attn.q_norm', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks1.3.drop_path1', 'patch_embed.backbone.stages.1.3.down', 'blocks.3.attn.k_norm', 'blocks1.0.attn.q_norm', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'norm_pre', 'blocks.4.attn.attn_drop', 'blocks1.3.ls1', 'patch_drop', 'blocks.2.ls1', 'blocks1.0.ls1', 'blocks1.1.drop_path1', 'blocks1.4.attn.k_norm', 'patch_embed.backbone.stages.1.1.shortcut', 'neural_augmentor.brightness.max_fn', 'blocks1.2.attn.q_norm', 'blocks.6.ls2', 'blocks1.3.drop_path2', 'blocks1.6.ls1', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks1.2.attn.attn_drop', 'neural_augmentor.brightness.min_fn', 'blocks.2.drop_path1', 'patch_embed.backbone.stages.1.1.down', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.1.attn.k_norm', 'neural_augmentor.contrast', 'blocks1.2.drop_path1', 'blocks.0.drop_path2', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks.3.drop_path1', 'blocks1.3.attn.q_norm', 'blocks1.0.drop_path2', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks1.6.attn.attn_drop', 'blocks1.0.attn.k_norm'}
-2024-07-30 11:46:23 - [33m[1mWARNING[0m - Unsupported Ops:
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - Uncalled Modules:
+{'neural_augmentor.brightness.min_fn', 'blocks1.3.attn.attn_drop', 'blocks1.5.ls1', 'blocks1.3.ls2', 'blocks.6.attn.attn_drop', 'blocks1.1.attn.q_norm', 'blocks1.0.drop_path2', 'blocks.2.drop_path2', 'blocks.3.attn.k_norm', 'blocks.0.ls2', 'neural_augmentor.noise.min_fn', 'blocks1.1.attn.k_norm', 'blocks.3.drop_path2', 'blocks1.5.attn.attn_drop', 'blocks1.1.drop_path2', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.0.1.down', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.6.ls1', 'blocks1.3.ls1', 'blocks1.4.attn.q_norm', 'blocks1.6.ls1', 'blocks.0.attn.k_norm', 'neural_augmentor.noise.max_fn', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.6.attn.attn_drop', 'blocks.5.attn.attn_drop', 'blocks.3.attn.attn_drop', 'neural_augmentor.noise', 'blocks1.1.drop_path1', 'blocks.5.ls2', 'blocks1.4.ls2', 'blocks.0.attn.attn_drop', 'patch_embed.backbone.stages.1.3.down', 'blocks.2.attn.k_norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'patch_embed.backbone.stages.1.0.drop_path', 'neural_augmentor.contrast.max_fn', 'blocks.3.ls1', 'patch_embed.backbone.stages.1.1.shortcut', 'patch_embed.backbone.stages.1.0.down', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.5.drop_path1', 'blocks.0.ls1', 'blocks1.5.ls2', 'blocks.2.ls1', 'blocks.0.drop_path2', 'blocks.5.attn.q_norm', 'blocks.3.ls2', 'blocks1.2.attn.q_norm', 'blocks1.3.drop_path2', 'blocks1.4.ls1', 'blocks.1.attn.attn_drop', 'blocks.0.drop_path1', 'neural_augmentor.contrast.min_fn', 'neural_augmentor.brightness.max_fn', 'blocks1.1.attn.attn_drop', 'patch_embed.backbone.stem.norm1.drop', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks1.2.ls1', 'norm_pre', 'blocks1.0.attn.q_norm', 'patch_embed.backbone.stages.1.3.shortcut', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks1.3.attn.k_norm', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks1.0.attn.k_norm', 'blocks.3.attn.q_norm', 'blocks.4.ls2', 'blocks.1.ls2', 'blocks1.6.attn.k_norm', 'blocks1.2.attn.attn_drop', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.6.drop_path1', 'blocks.1.attn.q_norm', 'blocks1.4.drop_path1', 'blocks1.2.drop_path1', 'blocks1.5.drop_path1', 'blocks.2.ls2', 'blocks.2.drop_path1', 'blocks1.0.drop_path1', 'blocks1.6.attn.q_norm', 'neural_augmentor.brightness', 'blocks1.2.attn.k_norm', 'neural_augmentor.contrast', 'patch_embed.backbone.stages.1.2.down', 'blocks.4.drop_path2', 'neural_augmentor', 'blocks1.5.attn.k_norm', 'blocks1.3.attn.q_norm', 'blocks1.4.attn.k_norm', 'blocks1.0.ls1', 'patch_drop', 'norm', 'blocks.5.attn.k_norm', 'blocks.5.ls1', 'blocks1.1.ls2', 'blocks1.3.drop_path1', 'patch_embed.proj', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.4.attn.attn_drop', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks1.2.ls2', 'blocks.0.attn.q_norm', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks1.0.attn.attn_drop', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks.1.drop_path1', 'patch_embed.backbone.stages.0.0.down', 'blocks.4.drop_path1', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks.4.ls1', 'blocks1.2.drop_path2', 'blocks.2.attn.q_norm', 'blocks1.1.ls1', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks1.5.drop_path2', 'blocks1.6.drop_path2', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.5.attn.q_norm', 'blocks.1.attn.k_norm', 'blocks.6.attn.q_norm', 'blocks.3.drop_path1', 'blocks1.6.ls2', 'blocks.4.attn.q_norm', 'blocks.6.attn.k_norm', 'blocks1.6.drop_path1', 'blocks.1.ls1', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks.6.ls2', 'blocks.5.drop_path2', 'blocks.1.drop_path2', 'blocks1.0.ls2', 'patch_embed.backbone.stages.1.1.down', 'blocks1.4.drop_path2', 'blocks1.4.attn.attn_drop', 'blocks.6.drop_path2', 'blocks.2.attn.attn_drop'}
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - Unsupported Ops:
 Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
 [31m=================================================================[0m
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - [36mLoss function[0m
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - [36mLoss function[0m
 CompositeLoss(
 	CrossEntropy(  ignore_idx=-1  class_weighting=False  label_smoothing=0.1 loss_wt=1.0)
 	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
 	
 )
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - [36mOptimizer[0m
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - Max. epochs for training: 30
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - Max. epochs for training: 30
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
 CosineScheduler(
- 	 min_lr=3e-06
- 	 max_lr=3e-05
+ 	 min_lr=5e-06
+ 	 max_lr=5e-05
  	 period=30
  	 warmup_init_lr=1e-06
  	 warmup_iters=500
  )
-2024-07-30 11:46:24 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt'
-2024-07-30 11:46:24 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/config.yaml[0m
+2024-08-04 06:07:06 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt'
+2024-08-04 06:07:06 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/config.yaml[0m
 [31m===========================================================================[0m
-2024-07-30 11:46:26 - [32m[1mINFO   [0m - Training epoch 0
+2024-08-04 06:07:08 - [32m[1mINFO   [0m - Training epoch 0
+2024-08-04 06:06:56 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:40000
+small
+dci
+2024-08-04 06:06:56 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:40000
+small
+dci
+2024-08-04 06:06:55 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:40000
+small
+dci
 /ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
 grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
 bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
@@ -1306,413 +1314,409 @@ bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered in
 grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
 bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
   Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-2024-07-30 11:51:17 - [34m[1mLOGS   [0m - Epoch:   0 [       1/10000000], loss: {'classification': 7.4064, 'neural_augmentation': 0.3174, 'total_loss': 7.7239}, LR: [1e-06, 1e-06], Avg. batch load time: 197.885, Elapsed time: 291.45
-2024-07-30 11:51:50 - [34m[1mLOGS   [0m - *** Training summary for epoch 0
-	 loss={'classification': 6.3162, 'neural_augmentation': 0.3408, 'total_loss': 6.657}
-2024-07-30 11:55:03 - [34m[1mLOGS   [0m - *** Validation summary for epoch 0
-	 loss={'classification': 5.1392, 'neural_augmentation': 0.0, 'total_loss': 5.1392} || top1={'logits': 4.724} || top5={'logits': 12.1561}
-2024-07-30 11:55:03 - [34m[1mLOGS   [0m - Best checkpoint with score 4.72 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:55:04 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:55:04 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:55:04 - [34m[1mLOGS   [0m - Training checkpoint for epoch 0/iteration 103 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_0_iter_103.pt
-2024-07-30 11:55:04 - [34m[1mLOGS   [0m - Model state for epoch 0/iteration 103 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_0_iter_103.pt
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-08-04 06:10:05 - [34m[1mLOGS   [0m - Epoch:   0 [       1/10000000], loss: {'classification': 7.2777, 'neural_augmentation': 0.3423, 'total_loss': 7.62}, LR: [1e-06, 1e-06], Avg. batch load time: 174.547, Elapsed time: 177.30
+2024-08-04 06:10:24 - [34m[1mLOGS   [0m - *** Training summary for epoch 0
+	 loss={'classification': 5.9885, 'neural_augmentation': 0.3404, 'total_loss': 6.3289}
+2024-08-04 06:13:16 - [34m[1mLOGS   [0m - *** Validation summary for epoch 0
+	 loss={'classification': 4.2518, 'neural_augmentation': 0.0, 'total_loss': 4.2518} || top1={'logits': 15.1239} || top5={'logits': 30.3851}
+2024-08-04 06:13:17 - [34m[1mLOGS   [0m - Best checkpoint with score 15.12 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:13:18 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:13:18 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:13:18 - [34m[1mLOGS   [0m - Training checkpoint for epoch 0/iteration 103 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_0_iter_103.pt
+2024-08-04 06:13:18 - [34m[1mLOGS   [0m - Model state for epoch 0/iteration 103 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_0_iter_103.pt
 [31m===========================================================================[0m
-2024-07-30 11:55:06 - [32m[1mINFO   [0m - Training epoch 1
-2024-07-30 11:55:09 - [34m[1mLOGS   [0m - Epoch:   1 [     104/10000000], loss: {'classification': 5.2143, 'neural_augmentation': 0.3201, 'total_loss': 5.5344}, LR: [7e-06, 7e-06], Avg. batch load time: 2.592, Elapsed time:  2.93
-2024-07-30 11:55:40 - [34m[1mLOGS   [0m - *** Training summary for epoch 1
-	 loss={'classification': 4.081, 'neural_augmentation': 0.3377, 'total_loss': 4.4187}
-2024-07-30 11:55:55 - [34m[1mLOGS   [0m - *** Validation summary for epoch 1
-	 loss={'classification': 2.1139, 'neural_augmentation': 0.0, 'total_loss': 2.1139} || top1={'logits': 55.0611} || top5={'logits': 75.6629}
-2024-07-30 11:55:55 - [34m[1mLOGS   [0m - Best checkpoint with score 55.06 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:55:56 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:55:56 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:55:56 - [34m[1mLOGS   [0m - Training checkpoint for epoch 1/iteration 198 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_1_iter_198.pt
-2024-07-30 11:55:56 - [34m[1mLOGS   [0m - Model state for epoch 1/iteration 198 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_1_iter_198.pt
+2024-08-04 06:13:20 - [32m[1mINFO   [0m - Training epoch 1
+2024-08-04 06:13:22 - [34m[1mLOGS   [0m - Epoch:   1 [     104/10000000], loss: {'classification': 4.4834, 'neural_augmentation': 0.3438, 'total_loss': 4.8272}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 1.230, Elapsed time:  1.39
+2024-08-04 06:13:37 - [34m[1mLOGS   [0m - *** Training summary for epoch 1
+	 loss={'classification': 3.0095, 'neural_augmentation': 0.3351, 'total_loss': 3.3446}
+2024-08-04 06:13:48 - [34m[1mLOGS   [0m - *** Validation summary for epoch 1
+	 loss={'classification': 1.0769, 'neural_augmentation': 0.0, 'total_loss': 1.0769} || top1={'logits': 74.732} || top5={'logits': 91.8964}
+2024-08-04 06:13:48 - [34m[1mLOGS   [0m - Best checkpoint with score 74.73 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:13:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:13:49 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:13:49 - [34m[1mLOGS   [0m - Training checkpoint for epoch 1/iteration 198 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_1_iter_198.pt
+2024-08-04 06:13:49 - [34m[1mLOGS   [0m - Model state for epoch 1/iteration 198 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_1_iter_198.pt
 [31m===========================================================================[0m
-2024-07-30 11:55:58 - [32m[1mINFO   [0m - Training epoch 2
-2024-07-30 11:56:03 - [34m[1mLOGS   [0m - Epoch:   2 [     199/10000000], loss: {'classification': 2.7823, 'neural_augmentation': 0.3444, 'total_loss': 3.1267}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 4.474, Elapsed time:  4.82
-2024-07-30 11:56:37 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
-	 loss={'classification': 2.2606, 'neural_augmentation': 0.3347, 'total_loss': 2.5954}
-2024-07-30 11:56:51 - [34m[1mLOGS   [0m - *** Validation summary for epoch 2
-	 loss={'classification': 0.925, 'neural_augmentation': 0.0, 'total_loss': 0.925} || top1={'logits': 78.6719} || top5={'logits': 93.7783}
-2024-07-30 11:56:51 - [34m[1mLOGS   [0m - Best checkpoint with score 78.67 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:56:52 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:56:52 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:56:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 306 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_2_iter_306.pt
-2024-07-30 11:56:52 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 306 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_2_iter_306.pt
+2024-08-04 06:13:51 - [32m[1mINFO   [0m - Training epoch 2
+2024-08-04 06:13:57 - [34m[1mLOGS   [0m - Epoch:   2 [     199/10000000], loss: {'classification': 1.894, 'neural_augmentation': 0.3384, 'total_loss': 2.2323}, LR: [2e-05, 2e-05], Avg. batch load time: 5.386, Elapsed time:  5.54
+2024-08-04 06:14:14 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
+	 loss={'classification': 1.8086, 'neural_augmentation': 0.3331, 'total_loss': 2.1417}
+2024-08-04 06:14:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 2
+	 loss={'classification': 0.6656, 'neural_augmentation': 0.0, 'total_loss': 0.6656} || top1={'logits': 84.8739} || top5={'logits': 96.8784}
+2024-08-04 06:14:25 - [34m[1mLOGS   [0m - Best checkpoint with score 84.87 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:14:25 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:14:25 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:14:26 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 306 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_2_iter_306.pt
+2024-08-04 06:14:26 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 306 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_2_iter_306.pt
 [31m===========================================================================[0m
-2024-07-30 11:56:54 - [32m[1mINFO   [0m - Training epoch 3
-2024-07-30 11:56:57 - [34m[1mLOGS   [0m - Epoch:   3 [     307/10000000], loss: {'classification': 1.9528, 'neural_augmentation': 0.3411, 'total_loss': 2.2939}, LR: [1.9e-05, 1.9e-05], Avg. batch load time: 2.163, Elapsed time:  2.50
-2024-07-30 11:57:30 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
-	 loss={'classification': 1.7648, 'neural_augmentation': 0.3314, 'total_loss': 2.0962}
-2024-07-30 11:57:44 - [34m[1mLOGS   [0m - *** Validation summary for epoch 3
-	 loss={'classification': 0.69, 'neural_augmentation': 0.0, 'total_loss': 0.69} || top1={'logits': 84.0882} || top5={'logits': 96.4412}
-2024-07-30 11:57:45 - [34m[1mLOGS   [0m - Best checkpoint with score 84.09 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:57:45 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:57:45 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:57:45 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 408 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_3_iter_408.pt
-2024-07-30 11:57:45 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 408 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_3_iter_408.pt
+2024-08-04 06:14:28 - [32m[1mINFO   [0m - Training epoch 3
+2024-08-04 06:14:29 - [34m[1mLOGS   [0m - Epoch:   3 [     307/10000000], loss: {'classification': 1.5285, 'neural_augmentation': 0.3032, 'total_loss': 1.8317}, LR: [3.1e-05, 3.1e-05], Avg. batch load time: 1.360, Elapsed time:  1.52
+2024-08-04 06:14:48 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
+	 loss={'classification': 1.5561, 'neural_augmentation': 0.3295, 'total_loss': 1.8855}
+2024-08-04 06:14:59 - [34m[1mLOGS   [0m - *** Validation summary for epoch 3
+	 loss={'classification': 0.6092, 'neural_augmentation': 0.0, 'total_loss': 0.6092} || top1={'logits': 87.0473} || top5={'logits': 97.6622}
+2024-08-04 06:14:59 - [34m[1mLOGS   [0m - Best checkpoint with score 87.05 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:15:00 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:15:00 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:15:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 408 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_3_iter_408.pt
+2024-08-04 06:15:00 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 408 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_3_iter_408.pt
 [31m===========================================================================[0m
-2024-07-30 11:57:47 - [32m[1mINFO   [0m - Training epoch 4
-2024-07-30 11:57:53 - [34m[1mLOGS   [0m - Epoch:   4 [     409/10000000], loss: {'classification': 1.8012, 'neural_augmentation': 0.3281, 'total_loss': 2.1292}, LR: [2.5e-05, 2.5e-05], Avg. batch load time: 5.672, Elapsed time:  6.02
-2024-07-30 11:58:22 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
-	 loss={'classification': 1.589, 'neural_augmentation': 0.3245, 'total_loss': 1.9135}
-2024-07-30 11:58:37 - [34m[1mLOGS   [0m - *** Validation summary for epoch 4
-	 loss={'classification': 0.5982, 'neural_augmentation': 0.0, 'total_loss': 0.5982} || top1={'logits': 86.8054} || top5={'logits': 97.4208}
-2024-07-30 11:58:37 - [34m[1mLOGS   [0m - Best checkpoint with score 86.81 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:58:37 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:58:37 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:58:38 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 500 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_4_iter_500.pt
-2024-07-30 11:58:38 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 500 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_4_iter_500.pt
+2024-08-04 06:15:02 - [32m[1mINFO   [0m - Training epoch 4
+2024-08-04 06:15:06 - [34m[1mLOGS   [0m - Epoch:   4 [     409/10000000], loss: {'classification': 1.6228, 'neural_augmentation': 0.323, 'total_loss': 1.9458}, LR: [4.1e-05, 4.1e-05], Avg. batch load time: 3.837, Elapsed time:  4.00
+2024-08-04 06:15:20 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
+	 loss={'classification': 1.4506, 'neural_augmentation': 0.3223, 'total_loss': 1.7729}
+2024-08-04 06:15:31 - [34m[1mLOGS   [0m - *** Validation summary for epoch 4
+	 loss={'classification': 0.5152, 'neural_augmentation': 0.0, 'total_loss': 0.5152} || top1={'logits': 88.8514} || top5={'logits': 98.214}
+2024-08-04 06:15:31 - [34m[1mLOGS   [0m - Best checkpoint with score 88.85 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:15:32 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:15:32 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:15:32 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 500 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_4_iter_500.pt
+2024-08-04 06:15:32 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 500 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_4_iter_500.pt
 [31m===========================================================================[0m
-2024-07-30 11:58:40 - [32m[1mINFO   [0m - Training epoch 5
-2024-07-30 11:58:43 - [34m[1mLOGS   [0m - Epoch:   5 [     501/10000000], loss: {'classification': 1.4338, 'neural_augmentation': 0.3066, 'total_loss': 1.7404}, LR: [2.8e-05, 2.8e-05], Avg. batch load time: 2.337, Elapsed time:  2.69
-2024-07-30 11:59:16 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
-	 loss={'classification': 1.4853, 'neural_augmentation': 0.3178, 'total_loss': 1.803}
-2024-07-30 11:59:30 - [34m[1mLOGS   [0m - *** Validation summary for epoch 5
-	 loss={'classification': 0.5386, 'neural_augmentation': 0.0, 'total_loss': 0.5386} || top1={'logits': 88.2624} || top5={'logits': 97.9774}
-2024-07-30 11:59:31 - [34m[1mLOGS   [0m - Best checkpoint with score 88.26 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 11:59:31 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_4.7240.pt
-2024-07-30 11:59:31 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_55.0611.pt', 'checkpoint_score_78.6719.pt', 'checkpoint_score_84.0882.pt', 'checkpoint_score_86.8054.pt', 'checkpoint_score_88.2624.pt']
-2024-07-30 11:59:32 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 11:59:32 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 11:59:32 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 11:59:32 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 598 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_5_iter_598.pt
-2024-07-30 11:59:32 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 598 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_5_iter_598.pt
+2024-08-04 06:15:34 - [32m[1mINFO   [0m - Training epoch 5
+2024-08-04 06:15:36 - [34m[1mLOGS   [0m - Epoch:   5 [     501/10000000], loss: {'classification': 1.3498, 'neural_augmentation': 0.3224, 'total_loss': 1.6722}, LR: [4.7e-05, 4.7e-05], Avg. batch load time: 1.831, Elapsed time:  2.00
+2024-08-04 06:15:53 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
+	 loss={'classification': 1.3872, 'neural_augmentation': 0.3157, 'total_loss': 1.7029}
+2024-08-04 06:16:04 - [34m[1mLOGS   [0m - *** Validation summary for epoch 5
+	 loss={'classification': 0.4664, 'neural_augmentation': 0.0, 'total_loss': 0.4664} || top1={'logits': 89.723} || top5={'logits': 98.3964}
+2024-08-04 06:16:05 - [34m[1mLOGS   [0m - Best checkpoint with score 89.72 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:16:05 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_15.1239.pt
+2024-08-04 06:16:05 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_74.7320.pt', 'checkpoint_score_84.8739.pt', 'checkpoint_score_87.0473.pt', 'checkpoint_score_88.8514.pt', 'checkpoint_score_89.7230.pt']
+2024-08-04 06:16:06 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:16:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:16:07 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:16:08 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 598 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_5_iter_598.pt
+2024-08-04 06:16:08 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 598 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_5_iter_598.pt
 [31m===========================================================================[0m
-2024-07-30 11:59:34 - [32m[1mINFO   [0m - Training epoch 6
-2024-07-30 11:59:38 - [34m[1mLOGS   [0m - Epoch:   6 [     599/10000000], loss: {'classification': 1.2962, 'neural_augmentation': 0.307, 'total_loss': 1.6032}, LR: [2.7e-05, 2.7e-05], Avg. batch load time: 3.195, Elapsed time:  3.52
-2024-07-30 12:00:09 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
-	 loss={'classification': 1.4253, 'neural_augmentation': 0.3129, 'total_loss': 1.7383}
-2024-07-30 12:00:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 6
-	 loss={'classification': 0.5119, 'neural_augmentation': 0.0, 'total_loss': 0.5119} || top1={'logits': 89.1719} || top5={'logits': 98.2104}
-2024-07-30 12:00:24 - [34m[1mLOGS   [0m - Best checkpoint with score 89.17 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:00:24 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_55.0611.pt
-2024-07-30 12:00:24 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_78.6719.pt', 'checkpoint_score_84.0882.pt', 'checkpoint_score_86.8054.pt', 'checkpoint_score_88.2624.pt', 'checkpoint_score_89.1719.pt']
-2024-07-30 12:00:25 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:00:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:00:26 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:00:26 - [34m[1mLOGS   [0m - Training checkpoint for epoch 6/iteration 691 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_6_iter_691.pt
-2024-07-30 12:00:26 - [34m[1mLOGS   [0m - Model state for epoch 6/iteration 691 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_6_iter_691.pt
+2024-08-04 06:16:10 - [32m[1mINFO   [0m - Training epoch 6
+2024-08-04 06:16:12 - [34m[1mLOGS   [0m - Epoch:   6 [     599/10000000], loss: {'classification': 1.2092, 'neural_augmentation': 0.3189, 'total_loss': 1.5281}, LR: [4.6e-05, 4.6e-05], Avg. batch load time: 1.511, Elapsed time:  1.67
+2024-08-04 06:16:27 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
+	 loss={'classification': 1.3251, 'neural_augmentation': 0.3106, 'total_loss': 1.6357}
+2024-08-04 06:16:40 - [34m[1mLOGS   [0m - *** Validation summary for epoch 6
+	 loss={'classification': 0.4515, 'neural_augmentation': 0.0, 'total_loss': 0.4515} || top1={'logits': 90.536} || top5={'logits': 98.5563}
+2024-08-04 06:16:41 - [34m[1mLOGS   [0m - Best checkpoint with score 90.54 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:16:41 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_74.7320.pt
+2024-08-04 06:16:41 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.8739.pt', 'checkpoint_score_87.0473.pt', 'checkpoint_score_88.8514.pt', 'checkpoint_score_89.7230.pt', 'checkpoint_score_90.5360.pt']
+2024-08-04 06:16:43 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:16:43 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:16:44 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:16:45 - [34m[1mLOGS   [0m - Training checkpoint for epoch 6/iteration 691 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_6_iter_691.pt
+2024-08-04 06:16:45 - [34m[1mLOGS   [0m - Model state for epoch 6/iteration 691 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_6_iter_691.pt
 [31m===========================================================================[0m
-2024-07-30 12:00:28 - [32m[1mINFO   [0m - Training epoch 7
-2024-07-30 12:00:33 - [34m[1mLOGS   [0m - Epoch:   7 [     692/10000000], loss: {'classification': 1.3586, 'neural_augmentation': 0.3301, 'total_loss': 1.6887}, LR: [2.7e-05, 2.7e-05], Avg. batch load time: 4.174, Elapsed time:  4.51
-2024-07-30 12:01:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
-	 loss={'classification': 1.3573, 'neural_augmentation': 0.3084, 'total_loss': 1.6658}
-2024-07-30 12:01:17 - [34m[1mLOGS   [0m - *** Validation summary for epoch 7
-	 loss={'classification': 0.4917, 'neural_augmentation': 0.0, 'total_loss': 0.4917} || top1={'logits': 89.5385} || top5={'logits': 98.2941}
-2024-07-30 12:01:18 - [34m[1mLOGS   [0m - Best checkpoint with score 89.54 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:01:18 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_78.6719.pt
-2024-07-30 12:01:18 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_84.0882.pt', 'checkpoint_score_86.8054.pt', 'checkpoint_score_88.2624.pt', 'checkpoint_score_89.1719.pt', 'checkpoint_score_89.5385.pt']
-2024-07-30 12:01:19 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:01:19 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:01:19 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:01:19 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 787 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_7_iter_787.pt
-2024-07-30 12:01:19 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 787 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_7_iter_787.pt
+2024-08-04 06:16:47 - [32m[1mINFO   [0m - Training epoch 7
+2024-08-04 06:16:49 - [34m[1mLOGS   [0m - Epoch:   7 [     692/10000000], loss: {'classification': 1.2211, 'neural_augmentation': 0.3002, 'total_loss': 1.5213}, LR: [4.4e-05, 4.4e-05], Avg. batch load time: 1.719, Elapsed time:  1.97
+2024-08-04 06:17:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
+	 loss={'classification': 1.2707, 'neural_augmentation': 0.3055, 'total_loss': 1.5762}
+2024-08-04 06:17:14 - [34m[1mLOGS   [0m - *** Validation summary for epoch 7
+	 loss={'classification': 0.447, 'neural_augmentation': 0.0, 'total_loss': 0.447} || top1={'logits': 90.6982} || top5={'logits': 98.6599}
+2024-08-04 06:17:16 - [34m[1mLOGS   [0m - Best checkpoint with score 90.70 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:17:16 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_84.8739.pt
+2024-08-04 06:17:16 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_87.0473.pt', 'checkpoint_score_88.8514.pt', 'checkpoint_score_89.7230.pt', 'checkpoint_score_90.5360.pt', 'checkpoint_score_90.6982.pt']
+2024-08-04 06:17:20 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:17:21 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:17:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:17:22 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 787 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_7_iter_787.pt
+2024-08-04 06:17:22 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 787 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_7_iter_787.pt
 [31m===========================================================================[0m
-2024-07-30 12:01:21 - [32m[1mINFO   [0m - Training epoch 8
-2024-07-30 12:01:27 - [34m[1mLOGS   [0m - Epoch:   8 [     788/10000000], loss: {'classification': 1.372, 'neural_augmentation': 0.2906, 'total_loss': 1.6626}, LR: [2.6e-05, 2.6e-05], Avg. batch load time: 5.251, Elapsed time:  5.60
-2024-07-30 12:01:58 - [34m[1mLOGS   [0m - *** Training summary for epoch 8
-	 loss={'classification': 1.3296, 'neural_augmentation': 0.3067, 'total_loss': 1.6363}
-2024-07-30 12:02:13 - [34m[1mLOGS   [0m - *** Validation summary for epoch 8
-	 loss={'classification': 0.4612, 'neural_augmentation': 0.0, 'total_loss': 0.4612} || top1={'logits': 89.8914} || top5={'logits': 98.4661}
-2024-07-30 12:02:13 - [34m[1mLOGS   [0m - Best checkpoint with score 89.89 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:02:13 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_84.0882.pt
-2024-07-30 12:02:13 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_86.8054.pt', 'checkpoint_score_88.2624.pt', 'checkpoint_score_89.1719.pt', 'checkpoint_score_89.5385.pt', 'checkpoint_score_89.8914.pt']
-2024-07-30 12:02:14 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:02:14 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:02:14 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:02:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 8/iteration 886 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_8_iter_886.pt
-2024-07-30 12:02:15 - [34m[1mLOGS   [0m - Model state for epoch 8/iteration 886 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_8_iter_886.pt
+2024-08-04 06:17:24 - [32m[1mINFO   [0m - Training epoch 8
+2024-08-04 06:17:27 - [34m[1mLOGS   [0m - Epoch:   8 [     788/10000000], loss: {'classification': 1.2145, 'neural_augmentation': 0.304, 'total_loss': 1.5185}, LR: [4.3e-05, 4.3e-05], Avg. batch load time: 2.235, Elapsed time:  2.39
+2024-08-04 06:17:41 - [34m[1mLOGS   [0m - *** Training summary for epoch 8
+	 loss={'classification': 1.2441, 'neural_augmentation': 0.3022, 'total_loss': 1.5463}
+2024-08-04 06:17:52 - [34m[1mLOGS   [0m - *** Validation summary for epoch 8
+	 loss={'classification': 0.4326, 'neural_augmentation': 0.0, 'total_loss': 0.4326} || top1={'logits': 91.1149} || top5={'logits': 98.6937}
+2024-08-04 06:17:52 - [34m[1mLOGS   [0m - Best checkpoint with score 91.11 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:17:52 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_87.0473.pt
+2024-08-04 06:17:52 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_88.8514.pt', 'checkpoint_score_89.7230.pt', 'checkpoint_score_90.5360.pt', 'checkpoint_score_90.6982.pt', 'checkpoint_score_91.1149.pt']
+2024-08-04 06:18:01 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:18:03 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:18:03 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:18:04 - [34m[1mLOGS   [0m - Training checkpoint for epoch 8/iteration 886 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_8_iter_886.pt
+2024-08-04 06:18:04 - [34m[1mLOGS   [0m - Model state for epoch 8/iteration 886 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_8_iter_886.pt
 [31m===========================================================================[0m
-2024-07-30 12:02:17 - [32m[1mINFO   [0m - Training epoch 9
-2024-07-30 12:02:21 - [34m[1mLOGS   [0m - Epoch:   9 [     887/10000000], loss: {'classification': 1.2459, 'neural_augmentation': 0.2986, 'total_loss': 1.5446}, LR: [2.4e-05, 2.4e-05], Avg. batch load time: 3.913, Elapsed time:  4.25
-2024-07-30 12:02:55 - [34m[1mLOGS   [0m - *** Training summary for epoch 9
-	 loss={'classification': 1.2931, 'neural_augmentation': 0.3045, 'total_loss': 1.5976}
-2024-07-30 12:03:09 - [34m[1mLOGS   [0m - *** Validation summary for epoch 9
-	 loss={'classification': 0.4579, 'neural_augmentation': 0.0, 'total_loss': 0.4579} || top1={'logits': 90.3982} || top5={'logits': 98.5566}
-2024-07-30 12:03:10 - [34m[1mLOGS   [0m - Best checkpoint with score 90.40 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:03:10 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_86.8054.pt
-2024-07-30 12:03:10 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_88.2624.pt', 'checkpoint_score_89.1719.pt', 'checkpoint_score_89.5385.pt', 'checkpoint_score_89.8914.pt', 'checkpoint_score_90.3982.pt']
-2024-07-30 12:03:10 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:03:11 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:03:11 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:03:11 - [34m[1mLOGS   [0m - Training checkpoint for epoch 9/iteration 992 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_9_iter_992.pt
-2024-07-30 12:03:11 - [34m[1mLOGS   [0m - Model state for epoch 9/iteration 992 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_9_iter_992.pt
+2024-08-04 06:18:06 - [32m[1mINFO   [0m - Training epoch 9
+2024-08-04 06:18:09 - [34m[1mLOGS   [0m - Epoch:   9 [     887/10000000], loss: {'classification': 1.1524, 'neural_augmentation': 0.3163, 'total_loss': 1.4688}, LR: [4.1e-05, 4.1e-05], Avg. batch load time: 1.887, Elapsed time:  2.22
+2024-08-04 06:18:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 9
+	 loss={'classification': 1.2171, 'neural_augmentation': 0.3021, 'total_loss': 1.5191}
+2024-08-04 06:18:35 - [34m[1mLOGS   [0m - *** Validation summary for epoch 9
+	 loss={'classification': 0.4144, 'neural_augmentation': 0.0, 'total_loss': 0.4144} || top1={'logits': 91.2905} || top5={'logits': 98.7613}
+2024-08-04 06:18:35 - [34m[1mLOGS   [0m - Best checkpoint with score 91.29 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:18:36 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_88.8514.pt
+2024-08-04 06:18:36 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_89.7230.pt', 'checkpoint_score_90.5360.pt', 'checkpoint_score_90.6982.pt', 'checkpoint_score_91.1149.pt', 'checkpoint_score_91.2905.pt']
+2024-08-04 06:18:37 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:18:38 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:18:38 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:18:40 - [34m[1mLOGS   [0m - Training checkpoint for epoch 9/iteration 992 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_9_iter_992.pt
+2024-08-04 06:18:41 - [34m[1mLOGS   [0m - Model state for epoch 9/iteration 992 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_9_iter_992.pt
 [31m===========================================================================[0m
-2024-07-30 12:03:13 - [32m[1mINFO   [0m - Training epoch 10
-2024-07-30 12:03:19 - [34m[1mLOGS   [0m - Epoch:  10 [     993/10000000], loss: {'classification': 1.3318, 'neural_augmentation': 0.3105, 'total_loss': 1.6423}, LR: [2.3e-05, 2.3e-05], Avg. batch load time: 5.589, Elapsed time:  5.93
-2024-07-30 12:03:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 10
-	 loss={'classification': 1.2676, 'neural_augmentation': 0.3082, 'total_loss': 1.5758}
-2024-07-30 12:04:03 - [34m[1mLOGS   [0m - *** Validation summary for epoch 10
-	 loss={'classification': 0.4414, 'neural_augmentation': 0.0, 'total_loss': 0.4414} || top1={'logits': 90.7557} || top5={'logits': 98.638}
-2024-07-30 12:04:03 - [34m[1mLOGS   [0m - Best checkpoint with score 90.76 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:04:04 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_88.2624.pt
-2024-07-30 12:04:04 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_89.1719.pt', 'checkpoint_score_89.5385.pt', 'checkpoint_score_89.8914.pt', 'checkpoint_score_90.3982.pt', 'checkpoint_score_90.7557.pt']
-2024-07-30 12:04:04 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:04:05 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:04:05 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:04:05 - [34m[1mLOGS   [0m - Training checkpoint for epoch 10/iteration 1085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_10_iter_1085.pt
-2024-07-30 12:04:05 - [34m[1mLOGS   [0m - Model state for epoch 10/iteration 1085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_10_iter_1085.pt
+2024-08-04 06:18:43 - [32m[1mINFO   [0m - Training epoch 10
+2024-08-04 06:18:49 - [34m[1mLOGS   [0m - Epoch:  10 [     993/10000000], loss: {'classification': 1.2848, 'neural_augmentation': 0.2978, 'total_loss': 1.5826}, LR: [3.9e-05, 3.9e-05], Avg. batch load time: 6.047, Elapsed time:  6.21
+2024-08-04 06:19:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 10
+	 loss={'classification': 1.1961, 'neural_augmentation': 0.3036, 'total_loss': 1.4997}
+2024-08-04 06:19:13 - [34m[1mLOGS   [0m - *** Validation summary for epoch 10
+	 loss={'classification': 0.4165, 'neural_augmentation': 0.0, 'total_loss': 0.4165} || top1={'logits': 91.3784} || top5={'logits': 98.7432}
+2024-08-04 06:19:13 - [34m[1mLOGS   [0m - Best checkpoint with score 91.38 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_89.7230.pt
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_90.5360.pt', 'checkpoint_score_90.6982.pt', 'checkpoint_score_91.1149.pt', 'checkpoint_score_91.2905.pt', 'checkpoint_score_91.3784.pt']
+2024-08-04 06:19:15 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:19:17 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:19:18 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:19:22 - [34m[1mLOGS   [0m - Training checkpoint for epoch 10/iteration 1085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_10_iter_1085.pt
+2024-08-04 06:19:22 - [34m[1mLOGS   [0m - Model state for epoch 10/iteration 1085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_10_iter_1085.pt
 [31m===========================================================================[0m
-2024-07-30 12:04:07 - [32m[1mINFO   [0m - Training epoch 11
-2024-07-30 12:04:12 - [34m[1mLOGS   [0m - Epoch:  11 [    1086/10000000], loss: {'classification': 1.1764, 'neural_augmentation': 0.3124, 'total_loss': 1.4888}, LR: [2.2e-05, 2.2e-05], Avg. batch load time: 4.589, Elapsed time:  4.94
-2024-07-30 12:04:46 - [34m[1mLOGS   [0m - *** Training summary for epoch 11
-	 loss={'classification': 1.2448, 'neural_augmentation': 0.3106, 'total_loss': 1.5554}
-2024-07-30 12:05:00 - [34m[1mLOGS   [0m - *** Validation summary for epoch 11
-	 loss={'classification': 0.4203, 'neural_augmentation': 0.0, 'total_loss': 0.4203} || top1={'logits': 91.1833} || top5={'logits': 98.6584}
-2024-07-30 12:05:01 - [34m[1mLOGS   [0m - Best checkpoint with score 91.18 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:05:01 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_89.1719.pt
-2024-07-30 12:05:01 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_89.5385.pt', 'checkpoint_score_89.8914.pt', 'checkpoint_score_90.3982.pt', 'checkpoint_score_90.7557.pt', 'checkpoint_score_91.1833.pt']
-2024-07-30 12:05:02 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:05:02 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:05:02 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:05:02 - [34m[1mLOGS   [0m - Training checkpoint for epoch 11/iteration 1191 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_11_iter_1191.pt
-2024-07-30 12:05:03 - [34m[1mLOGS   [0m - Model state for epoch 11/iteration 1191 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_11_iter_1191.pt
+2024-08-04 06:19:24 - [32m[1mINFO   [0m - Training epoch 11
+2024-08-04 06:19:27 - [34m[1mLOGS   [0m - Epoch:  11 [    1086/10000000], loss: {'classification': 1.1307, 'neural_augmentation': 0.298, 'total_loss': 1.4287}, LR: [3.7e-05, 3.7e-05], Avg. batch load time: 2.410, Elapsed time:  2.63
+2024-08-04 06:19:43 - [34m[1mLOGS   [0m - *** Training summary for epoch 11
+	 loss={'classification': 1.1727, 'neural_augmentation': 0.308, 'total_loss': 1.4807}
+2024-08-04 06:19:53 - [34m[1mLOGS   [0m - *** Validation summary for epoch 11
+	 loss={'classification': 0.3977, 'neural_augmentation': 0.0, 'total_loss': 0.3977} || top1={'logits': 91.714} || top5={'logits': 98.8131}
+2024-08-04 06:19:53 - [34m[1mLOGS   [0m - Best checkpoint with score 91.71 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:19:54 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_90.5360.pt
+2024-08-04 06:19:54 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_90.6982.pt', 'checkpoint_score_91.1149.pt', 'checkpoint_score_91.2905.pt', 'checkpoint_score_91.3784.pt', 'checkpoint_score_91.7140.pt']
+2024-08-04 06:19:55 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:19:55 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:19:56 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:19:57 - [34m[1mLOGS   [0m - Training checkpoint for epoch 11/iteration 1191 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_11_iter_1191.pt
+2024-08-04 06:19:57 - [34m[1mLOGS   [0m - Model state for epoch 11/iteration 1191 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_11_iter_1191.pt
 [31m===========================================================================[0m
-2024-07-30 12:05:05 - [32m[1mINFO   [0m - Training epoch 12
-2024-07-30 12:05:07 - [34m[1mLOGS   [0m - Epoch:  12 [    1192/10000000], loss: {'classification': 1.1734, 'neural_augmentation': 0.2947, 'total_loss': 1.4681}, LR: [2.1e-05, 2.1e-05], Avg. batch load time: 1.652, Elapsed time:  1.99
-2024-07-30 12:05:40 - [34m[1mLOGS   [0m - *** Training summary for epoch 12
-	 loss={'classification': 1.2207, 'neural_augmentation': 0.3218, 'total_loss': 1.5424}
-2024-07-30 12:05:54 - [34m[1mLOGS   [0m - *** Validation summary for epoch 12
-	 loss={'classification': 0.4202, 'neural_augmentation': 0.0, 'total_loss': 0.4202} || top1={'logits': 91.129} || top5={'logits': 98.69}
-2024-07-30 12:05:55 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:05:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:05:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 12/iteration 1291 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_12_iter_1291.pt
-2024-07-30 12:05:55 - [34m[1mLOGS   [0m - Model state for epoch 12/iteration 1291 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_12_iter_1291.pt
+2024-08-04 06:19:59 - [32m[1mINFO   [0m - Training epoch 12
+2024-08-04 06:20:01 - [34m[1mLOGS   [0m - Epoch:  12 [    1192/10000000], loss: {'classification': 1.0907, 'neural_augmentation': 0.3157, 'total_loss': 1.4063}, LR: [3.4e-05, 3.4e-05], Avg. batch load time: 1.517, Elapsed time:  1.68
+2024-08-04 06:20:19 - [34m[1mLOGS   [0m - *** Training summary for epoch 12
+	 loss={'classification': 1.1484, 'neural_augmentation': 0.3174, 'total_loss': 1.4658}
+2024-08-04 06:20:29 - [34m[1mLOGS   [0m - *** Validation summary for epoch 12
+	 loss={'classification': 0.4041, 'neural_augmentation': 0.0, 'total_loss': 0.4041} || top1={'logits': 91.8604} || top5={'logits': 98.8446}
+2024-08-04 06:20:30 - [34m[1mLOGS   [0m - Best checkpoint with score 91.86 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:20:30 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_90.6982.pt
+2024-08-04 06:20:30 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.1149.pt', 'checkpoint_score_91.2905.pt', 'checkpoint_score_91.3784.pt', 'checkpoint_score_91.7140.pt', 'checkpoint_score_91.8604.pt']
+2024-08-04 06:20:32 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:20:33 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:20:33 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:20:34 - [34m[1mLOGS   [0m - Training checkpoint for epoch 12/iteration 1292 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_12_iter_1292.pt
+2024-08-04 06:20:34 - [34m[1mLOGS   [0m - Model state for epoch 12/iteration 1292 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_12_iter_1292.pt
 [31m===========================================================================[0m
-2024-07-30 12:05:57 - [32m[1mINFO   [0m - Training epoch 13
-2024-07-30 12:06:01 - [34m[1mLOGS   [0m - Epoch:  13 [    1292/10000000], loss: {'classification': 1.1785, 'neural_augmentation': 0.3392, 'total_loss': 1.5176}, LR: [1.9e-05, 1.9e-05], Avg. batch load time: 3.484, Elapsed time:  3.81
-2024-07-30 12:06:35 - [34m[1mLOGS   [0m - *** Training summary for epoch 13
-	 loss={'classification': 1.1896, 'neural_augmentation': 0.3319, 'total_loss': 1.5215}
-2024-07-30 12:06:50 - [34m[1mLOGS   [0m - *** Validation summary for epoch 13
-	 loss={'classification': 0.4135, 'neural_augmentation': 0.0, 'total_loss': 0.4135} || top1={'logits': 91.3665} || top5={'logits': 98.7081}
-2024-07-30 12:06:50 - [34m[1mLOGS   [0m - Best checkpoint with score 91.37 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:06:50 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_89.5385.pt
-2024-07-30 12:06:50 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_89.8914.pt', 'checkpoint_score_90.3982.pt', 'checkpoint_score_90.7557.pt', 'checkpoint_score_91.1833.pt', 'checkpoint_score_91.3665.pt']
-2024-07-30 12:06:51 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:06:51 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:06:52 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:06:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 13/iteration 1396 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_13_iter_1396.pt
-2024-07-30 12:06:52 - [34m[1mLOGS   [0m - Model state for epoch 13/iteration 1396 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_13_iter_1396.pt
+2024-08-04 06:20:36 - [32m[1mINFO   [0m - Training epoch 13
+2024-08-04 06:20:38 - [34m[1mLOGS   [0m - Epoch:  13 [    1293/10000000], loss: {'classification': 1.1528, 'neural_augmentation': 0.3199, 'total_loss': 1.4727}, LR: [3.2e-05, 3.2e-05], Avg. batch load time: 2.231, Elapsed time:  2.39
+2024-08-04 06:20:58 - [34m[1mLOGS   [0m - *** Training summary for epoch 13
+	 loss={'classification': 1.1263, 'neural_augmentation': 0.3286, 'total_loss': 1.4549}
+2024-08-04 06:21:08 - [34m[1mLOGS   [0m - *** Validation summary for epoch 13
+	 loss={'classification': 0.4032, 'neural_augmentation': 0.0, 'total_loss': 0.4032} || top1={'logits': 91.8401} || top5={'logits': 98.8423}
+2024-08-04 06:21:09 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:21:09 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:21:09 - [34m[1mLOGS   [0m - Training checkpoint for epoch 13/iteration 1397 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_13_iter_1397.pt
+2024-08-04 06:21:10 - [34m[1mLOGS   [0m - Model state for epoch 13/iteration 1397 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_13_iter_1397.pt
 [31m===========================================================================[0m
-2024-07-30 12:06:54 - [32m[1mINFO   [0m - Training epoch 14
-2024-07-30 12:06:58 - [34m[1mLOGS   [0m - Epoch:  14 [    1397/10000000], loss: {'classification': 1.1175, 'neural_augmentation': 0.3529, 'total_loss': 1.4705}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 3.738, Elapsed time:  4.07
-2024-07-30 12:07:29 - [34m[1mLOGS   [0m - *** Training summary for epoch 14
-	 loss={'classification': 1.1978, 'neural_augmentation': 0.3499, 'total_loss': 1.5477}
-2024-07-30 12:07:44 - [34m[1mLOGS   [0m - *** Validation summary for epoch 14
-	 loss={'classification': 0.4222, 'neural_augmentation': 0.0, 'total_loss': 0.4222} || top1={'logits': 91.4253} || top5={'logits': 98.7398}
-2024-07-30 12:07:44 - [34m[1mLOGS   [0m - Best checkpoint with score 91.43 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:07:44 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_89.8914.pt
-2024-07-30 12:07:44 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_90.3982.pt', 'checkpoint_score_90.7557.pt', 'checkpoint_score_91.1833.pt', 'checkpoint_score_91.3665.pt', 'checkpoint_score_91.4253.pt']
-2024-07-30 12:07:45 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:07:45 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:07:46 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:07:46 - [34m[1mLOGS   [0m - Training checkpoint for epoch 14/iteration 1492 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_14_iter_1492.pt
-2024-07-30 12:07:46 - [34m[1mLOGS   [0m - Model state for epoch 14/iteration 1492 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_14_iter_1492.pt
+2024-08-04 06:21:12 - [32m[1mINFO   [0m - Training epoch 14
+2024-08-04 06:21:15 - [34m[1mLOGS   [0m - Epoch:  14 [    1398/10000000], loss: {'classification': 1.0496, 'neural_augmentation': 0.3466, 'total_loss': 1.3961}, LR: [3e-05, 3e-05], Avg. batch load time: 3.209, Elapsed time:  3.37
+2024-08-04 06:21:33 - [34m[1mLOGS   [0m - *** Training summary for epoch 14
+	 loss={'classification': 1.1297, 'neural_augmentation': 0.3466, 'total_loss': 1.4763}
+2024-08-04 06:21:43 - [34m[1mLOGS   [0m - *** Validation summary for epoch 14
+	 loss={'classification': 0.3892, 'neural_augmentation': 0.0, 'total_loss': 0.3892} || top1={'logits': 92.0856} || top5={'logits': 98.8221}
+2024-08-04 06:21:46 - [34m[1mLOGS   [0m - Best checkpoint with score 92.09 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:21:46 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.1149.pt
+2024-08-04 06:21:46 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.2905.pt', 'checkpoint_score_91.3784.pt', 'checkpoint_score_91.7140.pt', 'checkpoint_score_91.8604.pt', 'checkpoint_score_92.0856.pt']
+2024-08-04 06:21:50 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:21:50 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:21:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:21:51 - [34m[1mLOGS   [0m - Training checkpoint for epoch 14/iteration 1493 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_14_iter_1493.pt
+2024-08-04 06:21:51 - [34m[1mLOGS   [0m - Model state for epoch 14/iteration 1493 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_14_iter_1493.pt
 [31m===========================================================================[0m
-2024-07-30 12:07:48 - [32m[1mINFO   [0m - Training epoch 15
-2024-07-30 12:07:54 - [34m[1mLOGS   [0m - Epoch:  15 [    1493/10000000], loss: {'classification': 1.1859, 'neural_augmentation': 0.3688, 'total_loss': 1.5547}, LR: [1.7e-05, 1.7e-05], Avg. batch load time: 5.531, Elapsed time:  5.87
-2024-07-30 12:08:29 - [34m[1mLOGS   [0m - *** Training summary for epoch 15
-	 loss={'classification': 1.1655, 'neural_augmentation': 0.3697, 'total_loss': 1.5352}
-2024-07-30 12:08:44 - [34m[1mLOGS   [0m - *** Validation summary for epoch 15
-	 loss={'classification': 0.4143, 'neural_augmentation': 0.0, 'total_loss': 0.4143} || top1={'logits': 91.5317} || top5={'logits': 98.7715}
-2024-07-30 12:08:44 - [34m[1mLOGS   [0m - Best checkpoint with score 91.53 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:08:44 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_90.3982.pt
-2024-07-30 12:08:44 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_90.7557.pt', 'checkpoint_score_91.1833.pt', 'checkpoint_score_91.3665.pt', 'checkpoint_score_91.4253.pt', 'checkpoint_score_91.5317.pt']
-2024-07-30 12:08:45 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:08:45 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:08:45 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:08:46 - [34m[1mLOGS   [0m - Training checkpoint for epoch 15/iteration 1602 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_15_iter_1602.pt
-2024-07-30 12:08:46 - [34m[1mLOGS   [0m - Model state for epoch 15/iteration 1602 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_15_iter_1602.pt
+2024-08-04 06:21:53 - [32m[1mINFO   [0m - Training epoch 15
+2024-08-04 06:21:57 - [34m[1mLOGS   [0m - Epoch:  15 [    1494/10000000], loss: {'classification': 1.0853, 'neural_augmentation': 0.3655, 'total_loss': 1.4508}, LR: [2.8e-05, 2.8e-05], Avg. batch load time: 4.177, Elapsed time:  4.41
+2024-08-04 06:22:14 - [34m[1mLOGS   [0m - *** Training summary for epoch 15
+	 loss={'classification': 1.1012, 'neural_augmentation': 0.3681, 'total_loss': 1.4693}
+2024-08-04 06:22:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 15
+	 loss={'classification': 0.376, 'neural_augmentation': 0.0, 'total_loss': 0.376} || top1={'logits': 92.1734} || top5={'logits': 98.8378}
+2024-08-04 06:22:24 - [34m[1mLOGS   [0m - Best checkpoint with score 92.17 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:22:25 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.2905.pt
+2024-08-04 06:22:25 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.3784.pt', 'checkpoint_score_91.7140.pt', 'checkpoint_score_91.8604.pt', 'checkpoint_score_92.0856.pt', 'checkpoint_score_92.1734.pt']
+2024-08-04 06:22:26 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:22:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:22:27 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:22:28 - [34m[1mLOGS   [0m - Training checkpoint for epoch 15/iteration 1603 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_15_iter_1603.pt
+2024-08-04 06:22:28 - [34m[1mLOGS   [0m - Model state for epoch 15/iteration 1603 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_15_iter_1603.pt
 [31m===========================================================================[0m
-2024-07-30 12:08:48 - [32m[1mINFO   [0m - Training epoch 16
-2024-07-30 12:08:50 - [34m[1mLOGS   [0m - Epoch:  16 [    1603/10000000], loss: {'classification': 1.1216, 'neural_augmentation': 0.368, 'total_loss': 1.4896}, LR: [1.5e-05, 1.5e-05], Avg. batch load time: 2.073, Elapsed time:  2.41
-2024-07-30 12:09:23 - [34m[1mLOGS   [0m - *** Training summary for epoch 16
-	 loss={'classification': 1.1652, 'neural_augmentation': 0.3907, 'total_loss': 1.5559}
-2024-07-30 12:09:38 - [34m[1mLOGS   [0m - *** Validation summary for epoch 16
-	 loss={'classification': 0.3975, 'neural_augmentation': 0.0, 'total_loss': 0.3975} || top1={'logits': 91.7602} || top5={'logits': 98.7873}
-2024-07-30 12:09:38 - [34m[1mLOGS   [0m - Best checkpoint with score 91.76 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:09:38 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_90.7557.pt
-2024-07-30 12:09:38 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.1833.pt', 'checkpoint_score_91.3665.pt', 'checkpoint_score_91.4253.pt', 'checkpoint_score_91.5317.pt', 'checkpoint_score_91.7602.pt']
-2024-07-30 12:09:40 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:09:40 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:09:40 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:09:40 - [34m[1mLOGS   [0m - Training checkpoint for epoch 16/iteration 1700 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_16_iter_1700.pt
-2024-07-30 12:09:40 - [34m[1mLOGS   [0m - Model state for epoch 16/iteration 1700 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_16_iter_1700.pt
+2024-08-04 06:22:30 - [32m[1mINFO   [0m - Training epoch 16
+2024-08-04 06:22:32 - [34m[1mLOGS   [0m - Epoch:  16 [    1604/10000000], loss: {'classification': 1.0148, 'neural_augmentation': 0.4066, 'total_loss': 1.4214}, LR: [2.5e-05, 2.5e-05], Avg. batch load time: 1.606, Elapsed time:  1.76
+2024-08-04 06:22:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 16
+	 loss={'classification': 1.1, 'neural_augmentation': 0.3916, 'total_loss': 1.4916}
+2024-08-04 06:22:59 - [34m[1mLOGS   [0m - *** Validation summary for epoch 16
+	 loss={'classification': 0.3915, 'neural_augmentation': 0.0, 'total_loss': 0.3915} || top1={'logits': 92.4032} || top5={'logits': 98.8829}
+2024-08-04 06:23:00 - [34m[1mLOGS   [0m - Best checkpoint with score 92.40 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:23:00 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.3784.pt
+2024-08-04 06:23:00 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.7140.pt', 'checkpoint_score_91.8604.pt', 'checkpoint_score_92.0856.pt', 'checkpoint_score_92.1734.pt', 'checkpoint_score_92.4032.pt']
+2024-08-04 06:23:07 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:23:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:23:07 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:23:08 - [34m[1mLOGS   [0m - Training checkpoint for epoch 16/iteration 1701 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_16_iter_1701.pt
+2024-08-04 06:23:08 - [34m[1mLOGS   [0m - Model state for epoch 16/iteration 1701 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_16_iter_1701.pt
 [31m===========================================================================[0m
-2024-07-30 12:09:42 - [32m[1mINFO   [0m - Training epoch 17
-2024-07-30 12:09:45 - [34m[1mLOGS   [0m - Epoch:  17 [    1701/10000000], loss: {'classification': 1.038, 'neural_augmentation': 0.4266, 'total_loss': 1.4646}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 2.502, Elapsed time:  2.83
-2024-07-30 12:10:16 - [34m[1mLOGS   [0m - *** Training summary for epoch 17
-	 loss={'classification': 1.1683, 'neural_augmentation': 0.4157, 'total_loss': 1.5839}
-2024-07-30 12:10:30 - [34m[1mLOGS   [0m - *** Validation summary for epoch 17
-	 loss={'classification': 0.3972, 'neural_augmentation': 0.0, 'total_loss': 0.3972} || top1={'logits': 91.7376} || top5={'logits': 98.81}
-2024-07-30 12:10:30 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:10:31 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:10:31 - [34m[1mLOGS   [0m - Training checkpoint for epoch 17/iteration 1788 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_17_iter_1788.pt
-2024-07-30 12:10:31 - [34m[1mLOGS   [0m - Model state for epoch 17/iteration 1788 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_17_iter_1788.pt
+2024-08-04 06:23:10 - [32m[1mINFO   [0m - Training epoch 17
+2024-08-04 06:23:11 - [34m[1mLOGS   [0m - Epoch:  17 [    1702/10000000], loss: {'classification': 1.0521, 'neural_augmentation': 0.3991, 'total_loss': 1.4512}, LR: [2.3e-05, 2.3e-05], Avg. batch load time: 1.211, Elapsed time:  1.37
+2024-08-04 06:23:28 - [34m[1mLOGS   [0m - *** Training summary for epoch 17
+	 loss={'classification': 1.091, 'neural_augmentation': 0.4143, 'total_loss': 1.5052}
+2024-08-04 06:23:38 - [34m[1mLOGS   [0m - *** Validation summary for epoch 17
+	 loss={'classification': 0.387, 'neural_augmentation': 0.0, 'total_loss': 0.387} || top1={'logits': 92.2545} || top5={'logits': 98.8041}
+2024-08-04 06:23:39 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:23:39 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:23:43 - [34m[1mLOGS   [0m - Training checkpoint for epoch 17/iteration 1789 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_17_iter_1789.pt
+2024-08-04 06:23:43 - [34m[1mLOGS   [0m - Model state for epoch 17/iteration 1789 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_17_iter_1789.pt
 [31m===========================================================================[0m
-2024-07-30 12:10:33 - [32m[1mINFO   [0m - Training epoch 18
-2024-07-30 12:10:37 - [34m[1mLOGS   [0m - Epoch:  18 [    1789/10000000], loss: {'classification': 1.1254, 'neural_augmentation': 0.4412, 'total_loss': 1.5666}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 3.930, Elapsed time:  4.27
-2024-07-30 12:11:10 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
-	 loss={'classification': 1.1408, 'neural_augmentation': 0.4436, 'total_loss': 1.5844}
-2024-07-30 12:11:25 - [34m[1mLOGS   [0m - *** Validation summary for epoch 18
-	 loss={'classification': 0.4107, 'neural_augmentation': 0.0, 'total_loss': 0.4107} || top1={'logits': 91.81} || top5={'logits': 98.7941}
-2024-07-30 12:11:25 - [34m[1mLOGS   [0m - Best checkpoint with score 91.81 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:11:25 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.1833.pt
-2024-07-30 12:11:25 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.3665.pt', 'checkpoint_score_91.4253.pt', 'checkpoint_score_91.5317.pt', 'checkpoint_score_91.7602.pt', 'checkpoint_score_91.8100.pt']
-2024-07-30 12:11:26 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:11:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:11:26 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:11:27 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 1887 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_18_iter_1887.pt
-2024-07-30 12:11:27 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 1887 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_18_iter_1887.pt
+2024-08-04 06:23:45 - [32m[1mINFO   [0m - Training epoch 18
+2024-08-04 06:23:47 - [34m[1mLOGS   [0m - Epoch:  18 [    1790/10000000], loss: {'classification': 1.0469, 'neural_augmentation': 0.4259, 'total_loss': 1.4728}, LR: [2.1e-05, 2.1e-05], Avg. batch load time: 1.516, Elapsed time:  1.67
+2024-08-04 06:24:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
+	 loss={'classification': 1.0733, 'neural_augmentation': 0.4435, 'total_loss': 1.5168}
+2024-08-04 06:24:13 - [34m[1mLOGS   [0m - *** Validation summary for epoch 18
+	 loss={'classification': 0.3719, 'neural_augmentation': 0.0, 'total_loss': 0.3719} || top1={'logits': 92.4865} || top5={'logits': 98.8559}
+2024-08-04 06:24:13 - [34m[1mLOGS   [0m - Best checkpoint with score 92.49 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:24:13 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.7140.pt
+2024-08-04 06:24:13 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.8604.pt', 'checkpoint_score_92.0856.pt', 'checkpoint_score_92.1734.pt', 'checkpoint_score_92.4032.pt', 'checkpoint_score_92.4865.pt']
+2024-08-04 06:24:15 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:24:16 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:24:16 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:24:17 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 1888 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_18_iter_1888.pt
+2024-08-04 06:24:18 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 1888 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_18_iter_1888.pt
 [31m===========================================================================[0m
-2024-07-30 12:11:29 - [32m[1mINFO   [0m - Training epoch 19
-2024-07-30 12:11:32 - [34m[1mLOGS   [0m - Epoch:  19 [    1888/10000000], loss: {'classification': 1.09, 'neural_augmentation': 0.4761, 'total_loss': 1.5661}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 3.142, Elapsed time:  3.47
-2024-07-30 12:12:04 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
-	 loss={'classification': 1.1414, 'neural_augmentation': 0.4734, 'total_loss': 1.6148}
-2024-07-30 12:12:18 - [34m[1mLOGS   [0m - *** Validation summary for epoch 19
-	 loss={'classification': 0.3952, 'neural_augmentation': 0.0, 'total_loss': 0.3952} || top1={'logits': 91.8145} || top5={'logits': 98.8213}
-2024-07-30 12:12:18 - [34m[1mLOGS   [0m - Best checkpoint with score 91.81 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:12:19 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.3665.pt
-2024-07-30 12:12:19 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.4253.pt', 'checkpoint_score_91.5317.pt', 'checkpoint_score_91.7602.pt', 'checkpoint_score_91.8100.pt', 'checkpoint_score_91.8145.pt']
-2024-07-30 12:12:19 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:12:20 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:12:20 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:12:20 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 1986 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_19_iter_1986.pt
-2024-07-30 12:12:20 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 1986 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_19_iter_1986.pt
+2024-08-04 06:24:20 - [32m[1mINFO   [0m - Training epoch 19
+2024-08-04 06:24:22 - [34m[1mLOGS   [0m - Epoch:  19 [    1889/10000000], loss: {'classification': 1.0385, 'neural_augmentation': 0.4889, 'total_loss': 1.5274}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 1.993, Elapsed time:  2.15
+2024-08-04 06:24:37 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
+	 loss={'classification': 1.0751, 'neural_augmentation': 0.4725, 'total_loss': 1.5476}
+2024-08-04 06:24:47 - [34m[1mLOGS   [0m - *** Validation summary for epoch 19
+	 loss={'classification': 0.3716, 'neural_augmentation': 0.0, 'total_loss': 0.3716} || top1={'logits': 92.5923} || top5={'logits': 98.8941}
+2024-08-04 06:24:47 - [34m[1mLOGS   [0m - Best checkpoint with score 92.59 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:24:47 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.8604.pt
+2024-08-04 06:24:47 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.0856.pt', 'checkpoint_score_92.1734.pt', 'checkpoint_score_92.4032.pt', 'checkpoint_score_92.4865.pt', 'checkpoint_score_92.5923.pt']
+2024-08-04 06:24:49 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:24:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:24:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:24:51 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 1987 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_19_iter_1987.pt
+2024-08-04 06:24:51 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 1987 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_19_iter_1987.pt
 [31m===========================================================================[0m
-2024-07-30 12:12:22 - [32m[1mINFO   [0m - Training epoch 20
-2024-07-30 12:12:26 - [34m[1mLOGS   [0m - Epoch:  20 [    1987/10000000], loss: {'classification': 1.0871, 'neural_augmentation': 0.509, 'total_loss': 1.5961}, LR: [1e-05, 1e-05], Avg. batch load time: 2.894, Elapsed time:  3.24
-2024-07-30 12:12:56 - [34m[1mLOGS   [0m - *** Training summary for epoch 20
-	 loss={'classification': 1.1335, 'neural_augmentation': 0.5026, 'total_loss': 1.6361}
-2024-07-30 12:13:11 - [34m[1mLOGS   [0m - *** Validation summary for epoch 20
-	 loss={'classification': 0.3873, 'neural_augmentation': 0.0, 'total_loss': 0.3873} || top1={'logits': 92.0792} || top5={'logits': 98.8281}
-2024-07-30 12:13:11 - [34m[1mLOGS   [0m - Best checkpoint with score 92.08 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:13:11 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.4253.pt
-2024-07-30 12:13:11 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.5317.pt', 'checkpoint_score_91.7602.pt', 'checkpoint_score_91.8100.pt', 'checkpoint_score_91.8145.pt', 'checkpoint_score_92.0792.pt']
-2024-07-30 12:13:12 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:13:12 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:13:12 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:13:13 - [34m[1mLOGS   [0m - Training checkpoint for epoch 20/iteration 2084 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_20_iter_2084.pt
-2024-07-30 12:13:13 - [34m[1mLOGS   [0m - Model state for epoch 20/iteration 2084 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_20_iter_2084.pt
+2024-08-04 06:24:53 - [32m[1mINFO   [0m - Training epoch 20
+2024-08-04 06:24:55 - [34m[1mLOGS   [0m - Epoch:  20 [    1988/10000000], loss: {'classification': 1.0485, 'neural_augmentation': 0.4967, 'total_loss': 1.5453}, LR: [1.6e-05, 1.6e-05], Avg. batch load time: 1.534, Elapsed time:  1.69
+2024-08-04 06:25:09 - [34m[1mLOGS   [0m - *** Training summary for epoch 20
+	 loss={'classification': 1.0636, 'neural_augmentation': 0.5032, 'total_loss': 1.5668}
+2024-08-04 06:25:20 - [34m[1mLOGS   [0m - *** Validation summary for epoch 20
+	 loss={'classification': 0.3681, 'neural_augmentation': 0.0, 'total_loss': 0.3681} || top1={'logits': 92.7275} || top5={'logits': 98.9167}
+2024-08-04 06:25:20 - [34m[1mLOGS   [0m - Best checkpoint with score 92.73 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:25:20 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_92.0856.pt
+2024-08-04 06:25:20 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.1734.pt', 'checkpoint_score_92.4032.pt', 'checkpoint_score_92.4865.pt', 'checkpoint_score_92.5923.pt', 'checkpoint_score_92.7275.pt']
+2024-08-04 06:25:22 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:25:22 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:25:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:25:23 - [34m[1mLOGS   [0m - Training checkpoint for epoch 20/iteration 2085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_20_iter_2085.pt
+2024-08-04 06:25:24 - [34m[1mLOGS   [0m - Model state for epoch 20/iteration 2085 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_20_iter_2085.pt
 [31m===========================================================================[0m
-2024-07-30 12:13:15 - [32m[1mINFO   [0m - Training epoch 21
-2024-07-30 12:13:17 - [34m[1mLOGS   [0m - Epoch:  21 [    2085/10000000], loss: {'classification': 1.077, 'neural_augmentation': 0.5367, 'total_loss': 1.6138}, LR: [9e-06, 9e-06], Avg. batch load time: 1.643, Elapsed time:  2.00
-2024-07-30 12:13:51 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
-	 loss={'classification': 1.1246, 'neural_augmentation': 0.5326, 'total_loss': 1.6572}
-2024-07-30 12:14:06 - [34m[1mLOGS   [0m - *** Validation summary for epoch 21
-	 loss={'classification': 0.395, 'neural_augmentation': 0.0, 'total_loss': 0.395} || top1={'logits': 91.8959} || top5={'logits': 98.8552}
-2024-07-30 12:14:07 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:14:07 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:14:07 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 2186 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_21_iter_2186.pt
-2024-07-30 12:14:07 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 2186 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_21_iter_2186.pt
+2024-08-04 06:25:26 - [32m[1mINFO   [0m - Training epoch 21
+2024-08-04 06:25:27 - [34m[1mLOGS   [0m - Epoch:  21 [    2086/10000000], loss: {'classification': 1.0078, 'neural_augmentation': 0.5342, 'total_loss': 1.542}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 0.737, Elapsed time:  0.89
+2024-08-04 06:25:43 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
+	 loss={'classification': 1.0531, 'neural_augmentation': 0.5338, 'total_loss': 1.587}
+2024-08-04 06:25:54 - [34m[1mLOGS   [0m - *** Validation summary for epoch 21
+	 loss={'classification': 0.3803, 'neural_augmentation': 0.0, 'total_loss': 0.3803} || top1={'logits': 92.6036} || top5={'logits': 98.8829}
+2024-08-04 06:25:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:25:54 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:25:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 2187 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_21_iter_2187.pt
+2024-08-04 06:25:55 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 2187 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_21_iter_2187.pt
 [31m===========================================================================[0m
-2024-07-30 12:14:09 - [32m[1mINFO   [0m - Training epoch 22
-2024-07-30 12:14:16 - [34m[1mLOGS   [0m - Epoch:  22 [    2187/10000000], loss: {'classification': 1.1525, 'neural_augmentation': 0.5623, 'total_loss': 1.7148}, LR: [7e-06, 7e-06], Avg. batch load time: 6.818, Elapsed time:  7.16
-2024-07-30 12:14:48 - [34m[1mLOGS   [0m - *** Training summary for epoch 22
-	 loss={'classification': 1.1159, 'neural_augmentation': 0.5637, 'total_loss': 1.6796}
-2024-07-30 12:15:02 - [34m[1mLOGS   [0m - *** Validation summary for epoch 22
-	 loss={'classification': 0.3834, 'neural_augmentation': 0.0, 'total_loss': 0.3834} || top1={'logits': 92.0588} || top5={'logits': 98.871}
-2024-07-30 12:15:03 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:15:03 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:15:03 - [34m[1mLOGS   [0m - Training checkpoint for epoch 22/iteration 2286 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_22_iter_2286.pt
-2024-07-30 12:15:04 - [34m[1mLOGS   [0m - Model state for epoch 22/iteration 2286 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_22_iter_2286.pt
+2024-08-04 06:25:57 - [32m[1mINFO   [0m - Training epoch 22
+2024-08-04 06:26:01 - [34m[1mLOGS   [0m - Epoch:  22 [    2188/10000000], loss: {'classification': 1.102, 'neural_augmentation': 0.5629, 'total_loss': 1.6649}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 4.341, Elapsed time:  4.50
+2024-08-04 06:26:16 - [34m[1mLOGS   [0m - *** Training summary for epoch 22
+	 loss={'classification': 1.0431, 'neural_augmentation': 0.5656, 'total_loss': 1.6088}
+2024-08-04 06:26:28 - [34m[1mLOGS   [0m - *** Validation summary for epoch 22
+	 loss={'classification': 0.3721, 'neural_augmentation': 0.0, 'total_loss': 0.3721} || top1={'logits': 92.6689} || top5={'logits': 98.9009}
+2024-08-04 06:26:29 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:26:29 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:26:29 - [34m[1mLOGS   [0m - Training checkpoint for epoch 22/iteration 2287 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_22_iter_2287.pt
+2024-08-04 06:26:29 - [34m[1mLOGS   [0m - Model state for epoch 22/iteration 2287 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_22_iter_2287.pt
 [31m===========================================================================[0m
-2024-07-30 12:15:06 - [32m[1mINFO   [0m - Training epoch 23
-2024-07-30 12:15:08 - [34m[1mLOGS   [0m - Epoch:  23 [    2287/10000000], loss: {'classification': 1.1355, 'neural_augmentation': 0.5885, 'total_loss': 1.724}, LR: [6e-06, 6e-06], Avg. batch load time: 2.252, Elapsed time:  2.60
-2024-07-30 12:15:42 - [34m[1mLOGS   [0m - *** Training summary for epoch 23
-	 loss={'classification': 1.1131, 'neural_augmentation': 0.5909, 'total_loss': 1.704}
-2024-07-30 12:15:56 - [34m[1mLOGS   [0m - *** Validation summary for epoch 23
-	 loss={'classification': 0.3852, 'neural_augmentation': 0.0, 'total_loss': 0.3852} || top1={'logits': 92.0588} || top5={'logits': 98.862}
-2024-07-30 12:15:57 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:15:57 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:15:57 - [34m[1mLOGS   [0m - Training checkpoint for epoch 23/iteration 2380 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_23_iter_2380.pt
-2024-07-30 12:15:57 - [34m[1mLOGS   [0m - Model state for epoch 23/iteration 2380 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_23_iter_2380.pt
+2024-08-04 06:26:31 - [32m[1mINFO   [0m - Training epoch 23
+2024-08-04 06:26:33 - [34m[1mLOGS   [0m - Epoch:  23 [    2288/10000000], loss: {'classification': 1.0539, 'neural_augmentation': 0.5821, 'total_loss': 1.636}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 0.975, Elapsed time:  1.13
+2024-08-04 06:26:50 - [34m[1mLOGS   [0m - *** Training summary for epoch 23
+	 loss={'classification': 1.0456, 'neural_augmentation': 0.5925, 'total_loss': 1.6381}
+2024-08-04 06:27:05 - [34m[1mLOGS   [0m - *** Validation summary for epoch 23
+	 loss={'classification': 0.3727, 'neural_augmentation': 0.0, 'total_loss': 0.3727} || top1={'logits': 92.6712} || top5={'logits': 98.8468}
+2024-08-04 06:27:05 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:27:05 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:27:06 - [34m[1mLOGS   [0m - Training checkpoint for epoch 23/iteration 2381 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_23_iter_2381.pt
+2024-08-04 06:27:06 - [34m[1mLOGS   [0m - Model state for epoch 23/iteration 2381 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_23_iter_2381.pt
 [31m===========================================================================[0m
-2024-07-30 12:15:59 - [32m[1mINFO   [0m - Training epoch 24
-2024-07-30 12:16:04 - [34m[1mLOGS   [0m - Epoch:  24 [    2381/10000000], loss: {'classification': 1.0606, 'neural_augmentation': 0.6424, 'total_loss': 1.703}, LR: [6e-06, 6e-06], Avg. batch load time: 4.355, Elapsed time:  4.68
-2024-07-30 12:16:37 - [34m[1mLOGS   [0m - *** Training summary for epoch 24
-	 loss={'classification': 1.1021, 'neural_augmentation': 0.6182, 'total_loss': 1.7204}
-2024-07-30 12:16:51 - [34m[1mLOGS   [0m - *** Validation summary for epoch 24
-	 loss={'classification': 0.3876, 'neural_augmentation': 0.0, 'total_loss': 0.3876} || top1={'logits': 92.1312} || top5={'logits': 98.8529}
-2024-07-30 12:16:52 - [34m[1mLOGS   [0m - Best checkpoint with score 92.13 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:16:52 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.5317.pt
-2024-07-30 12:16:52 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.7602.pt', 'checkpoint_score_91.8100.pt', 'checkpoint_score_91.8145.pt', 'checkpoint_score_92.0792.pt', 'checkpoint_score_92.1312.pt']
-2024-07-30 12:16:53 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:16:53 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:16:53 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:16:54 - [34m[1mLOGS   [0m - Training checkpoint for epoch 24/iteration 2486 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_24_iter_2486.pt
-2024-07-30 12:16:54 - [34m[1mLOGS   [0m - Model state for epoch 24/iteration 2486 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_24_iter_2486.pt
+2024-08-04 06:27:08 - [32m[1mINFO   [0m - Training epoch 24
+2024-08-04 06:27:11 - [34m[1mLOGS   [0m - Epoch:  24 [    2382/10000000], loss: {'classification': 1.0044, 'neural_augmentation': 0.6158, 'total_loss': 1.6202}, LR: [9e-06, 9e-06], Avg. batch load time: 2.765, Elapsed time:  2.92
+2024-08-04 06:27:27 - [34m[1mLOGS   [0m - *** Training summary for epoch 24
+	 loss={'classification': 1.0382, 'neural_augmentation': 0.6203, 'total_loss': 1.6585}
+2024-08-04 06:27:37 - [34m[1mLOGS   [0m - *** Validation summary for epoch 24
+	 loss={'classification': 0.3732, 'neural_augmentation': 0.0, 'total_loss': 0.3732} || top1={'logits': 92.7703} || top5={'logits': 98.9032}
+2024-08-04 06:27:38 - [34m[1mLOGS   [0m - Best checkpoint with score 92.77 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:27:38 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_92.1734.pt
+2024-08-04 06:27:38 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.4032.pt', 'checkpoint_score_92.4865.pt', 'checkpoint_score_92.5923.pt', 'checkpoint_score_92.7275.pt', 'checkpoint_score_92.7703.pt']
+2024-08-04 06:27:40 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:27:41 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:27:42 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:27:43 - [34m[1mLOGS   [0m - Training checkpoint for epoch 24/iteration 2487 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_24_iter_2487.pt
+2024-08-04 06:27:43 - [34m[1mLOGS   [0m - Model state for epoch 24/iteration 2487 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_24_iter_2487.pt
 [31m===========================================================================[0m
-2024-07-30 12:16:56 - [32m[1mINFO   [0m - Training epoch 25
-2024-07-30 12:16:58 - [34m[1mLOGS   [0m - Epoch:  25 [    2487/10000000], loss: {'classification': 1.0516, 'neural_augmentation': 0.6344, 'total_loss': 1.686}, LR: [5e-06, 5e-06], Avg. batch load time: 2.089, Elapsed time:  2.44
-2024-07-30 12:17:34 - [34m[1mLOGS   [0m - *** Training summary for epoch 25
-	 loss={'classification': 1.1094, 'neural_augmentation': 0.643, 'total_loss': 1.7524}
-2024-07-30 12:17:49 - [34m[1mLOGS   [0m - *** Validation summary for epoch 25
-	 loss={'classification': 0.3856, 'neural_augmentation': 0.0, 'total_loss': 0.3856} || top1={'logits': 92.2104} || top5={'logits': 98.8801}
-2024-07-30 12:17:49 - [34m[1mLOGS   [0m - Best checkpoint with score 92.21 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:17:49 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.7602.pt
-2024-07-30 12:17:49 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.8100.pt', 'checkpoint_score_91.8145.pt', 'checkpoint_score_92.0792.pt', 'checkpoint_score_92.1312.pt', 'checkpoint_score_92.2104.pt']
-2024-07-30 12:17:50 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:17:50 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:17:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:17:51 - [34m[1mLOGS   [0m - Training checkpoint for epoch 25/iteration 2588 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_25_iter_2588.pt
-2024-07-30 12:17:51 - [34m[1mLOGS   [0m - Model state for epoch 25/iteration 2588 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_25_iter_2588.pt
+2024-08-04 06:27:45 - [32m[1mINFO   [0m - Training epoch 25
+2024-08-04 06:27:46 - [34m[1mLOGS   [0m - Epoch:  25 [    2488/10000000], loss: {'classification': 1.0471, 'neural_augmentation': 0.6251, 'total_loss': 1.6723}, LR: [8e-06, 8e-06], Avg. batch load time: 0.759, Elapsed time:  0.92
+2024-08-04 06:28:03 - [34m[1mLOGS   [0m - *** Training summary for epoch 25
+	 loss={'classification': 1.0352, 'neural_augmentation': 0.6451, 'total_loss': 1.6803}
+2024-08-04 06:28:14 - [34m[1mLOGS   [0m - *** Validation summary for epoch 25
+	 loss={'classification': 0.3734, 'neural_augmentation': 0.0, 'total_loss': 0.3734} || top1={'logits': 92.9257} || top5={'logits': 98.9189}
+2024-08-04 06:28:16 - [34m[1mLOGS   [0m - Best checkpoint with score 92.93 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
+2024-08-04 06:28:19 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_92.4032.pt
+2024-08-04 06:28:19 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.4865.pt', 'checkpoint_score_92.5923.pt', 'checkpoint_score_92.7275.pt', 'checkpoint_score_92.7703.pt', 'checkpoint_score_92.9257.pt']
+2024-08-04 06:28:23 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
+2024-08-04 06:28:24 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:28:24 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:28:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 25/iteration 2589 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_25_iter_2589.pt
+2024-08-04 06:28:25 - [34m[1mLOGS   [0m - Model state for epoch 25/iteration 2589 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_25_iter_2589.pt
 [31m===========================================================================[0m
-2024-07-30 12:17:53 - [32m[1mINFO   [0m - Training epoch 26
-2024-07-30 12:17:56 - [34m[1mLOGS   [0m - Epoch:  26 [    2589/10000000], loss: {'classification': 1.1623, 'neural_augmentation': 0.6614, 'total_loss': 1.8237}, LR: [4e-06, 4e-06], Avg. batch load time: 2.788, Elapsed time:  3.12
-2024-07-30 12:18:31 - [34m[1mLOGS   [0m - *** Training summary for epoch 26
-	 loss={'classification': 1.1001, 'neural_augmentation': 0.6644, 'total_loss': 1.7646}
-2024-07-30 12:18:45 - [34m[1mLOGS   [0m - *** Validation summary for epoch 26
-	 loss={'classification': 0.3903, 'neural_augmentation': 0.0, 'total_loss': 0.3903} || top1={'logits': 92.2534} || top5={'logits': 98.8643}
-2024-07-30 12:18:46 - [34m[1mLOGS   [0m - Best checkpoint with score 92.25 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:18:46 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.8100.pt
-2024-07-30 12:18:46 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.8145.pt', 'checkpoint_score_92.0792.pt', 'checkpoint_score_92.1312.pt', 'checkpoint_score_92.2104.pt', 'checkpoint_score_92.2534.pt']
-2024-07-30 12:18:47 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:18:47 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:18:47 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:18:47 - [34m[1mLOGS   [0m - Training checkpoint for epoch 26/iteration 2696 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_26_iter_2696.pt
-2024-07-30 12:18:48 - [34m[1mLOGS   [0m - Model state for epoch 26/iteration 2696 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_26_iter_2696.pt
+2024-08-04 06:28:27 - [32m[1mINFO   [0m - Training epoch 26
+2024-08-04 06:28:28 - [34m[1mLOGS   [0m - Epoch:  26 [    2590/10000000], loss: {'classification': 0.9978, 'neural_augmentation': 0.6518, 'total_loss': 1.6496}, LR: [7e-06, 7e-06], Avg. batch load time: 1.252, Elapsed time:  1.41
+2024-08-04 06:28:45 - [34m[1mLOGS   [0m - *** Training summary for epoch 26
+	 loss={'classification': 1.0308, 'neural_augmentation': 0.6663, 'total_loss': 1.697}
+2024-08-04 06:28:57 - [34m[1mLOGS   [0m - *** Validation summary for epoch 26
+	 loss={'classification': 0.3753, 'neural_augmentation': 0.0, 'total_loss': 0.3753} || top1={'logits': 92.7815} || top5={'logits': 98.9189}
+2024-08-04 06:28:58 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:28:58 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:28:59 - [34m[1mLOGS   [0m - Training checkpoint for epoch 26/iteration 2697 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_26_iter_2697.pt
+2024-08-04 06:28:59 - [34m[1mLOGS   [0m - Model state for epoch 26/iteration 2697 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_26_iter_2697.pt
 [31m===========================================================================[0m
-2024-07-30 12:18:50 - [32m[1mINFO   [0m - Training epoch 27
-2024-07-30 12:18:56 - [34m[1mLOGS   [0m - Epoch:  27 [    2697/10000000], loss: {'classification': 1.1321, 'neural_augmentation': 0.6803, 'total_loss': 1.8124}, LR: [4e-06, 4e-06], Avg. batch load time: 5.685, Elapsed time:  6.01
-2024-07-30 12:19:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 27
-	 loss={'classification': 1.1021, 'neural_augmentation': 0.6846, 'total_loss': 1.7867}
-2024-07-30 12:19:39 - [34m[1mLOGS   [0m - *** Validation summary for epoch 27
-	 loss={'classification': 0.3825, 'neural_augmentation': 0.0, 'total_loss': 0.3825} || top1={'logits': 92.2828} || top5={'logits': 98.8597}
-2024-07-30 12:19:40 - [34m[1mLOGS   [0m - Best checkpoint with score 92.28 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:19:40 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_91.8145.pt
-2024-07-30 12:19:40 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.0792.pt', 'checkpoint_score_92.1312.pt', 'checkpoint_score_92.2104.pt', 'checkpoint_score_92.2534.pt', 'checkpoint_score_92.2828.pt']
-2024-07-30 12:19:41 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:19:41 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:19:41 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:19:41 - [34m[1mLOGS   [0m - Training checkpoint for epoch 27/iteration 2789 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_27_iter_2789.pt
-2024-07-30 12:19:41 - [34m[1mLOGS   [0m - Model state for epoch 27/iteration 2789 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_27_iter_2789.pt
+2024-08-04 06:29:01 - [32m[1mINFO   [0m - Training epoch 27
+2024-08-04 06:29:05 - [34m[1mLOGS   [0m - Epoch:  27 [    2698/10000000], loss: {'classification': 1.0843, 'neural_augmentation': 0.6847, 'total_loss': 1.769}, LR: [6e-06, 6e-06], Avg. batch load time: 4.525, Elapsed time:  4.68
+2024-08-04 06:29:19 - [34m[1mLOGS   [0m - *** Training summary for epoch 27
+	 loss={'classification': 1.0317, 'neural_augmentation': 0.6857, 'total_loss': 1.7173}
+2024-08-04 06:29:30 - [34m[1mLOGS   [0m - *** Validation summary for epoch 27
+	 loss={'classification': 0.3731, 'neural_augmentation': 0.0, 'total_loss': 0.3731} || top1={'logits': 92.8604} || top5={'logits': 98.9167}
+2024-08-04 06:29:35 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:29:35 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:29:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 27/iteration 2790 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_27_iter_2790.pt
+2024-08-04 06:29:37 - [34m[1mLOGS   [0m - Model state for epoch 27/iteration 2790 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_27_iter_2790.pt
 [31m===========================================================================[0m
-2024-07-30 12:19:43 - [32m[1mINFO   [0m - Training epoch 28
-2024-07-30 12:19:45 - [34m[1mLOGS   [0m - Epoch:  28 [    2790/10000000], loss: {'classification': 1.0061, 'neural_augmentation': 0.7232, 'total_loss': 1.7293}, LR: [3e-06, 3e-06], Avg. batch load time: 1.701, Elapsed time:  2.05
-2024-07-30 12:20:23 - [34m[1mLOGS   [0m - *** Training summary for epoch 28
-	 loss={'classification': 1.0871, 'neural_augmentation': 0.6946, 'total_loss': 1.7817}
-2024-07-30 12:20:37 - [34m[1mLOGS   [0m - *** Validation summary for epoch 28
-	 loss={'classification': 0.3869, 'neural_augmentation': 0.0, 'total_loss': 0.3869} || top1={'logits': 92.2896} || top5={'logits': 98.8756}
-2024-07-30 12:20:37 - [34m[1mLOGS   [0m - Best checkpoint with score 92.29 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_best.pt
-2024-07-30 12:20:38 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_score_92.0792.pt
-2024-07-30 12:20:38 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_92.1312.pt', 'checkpoint_score_92.2104.pt', 'checkpoint_score_92.2534.pt', 'checkpoint_score_92.2828.pt', 'checkpoint_score_92.2896.pt']
-2024-07-30 12:20:38 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_avg.pt
-2024-07-30 12:20:39 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:20:39 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:20:39 - [34m[1mLOGS   [0m - Training checkpoint for epoch 28/iteration 2893 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_28_iter_2893.pt
-2024-07-30 12:20:39 - [34m[1mLOGS   [0m - Model state for epoch 28/iteration 2893 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_28_iter_2893.pt
+2024-08-04 06:29:39 - [32m[1mINFO   [0m - Training epoch 28
+2024-08-04 06:29:40 - [34m[1mLOGS   [0m - Epoch:  28 [    2791/10000000], loss: {'classification': 0.9777, 'neural_augmentation': 0.7251, 'total_loss': 1.7028}, LR: [5e-06, 5e-06], Avg. batch load time: 0.437, Elapsed time:  0.60
+2024-08-04 06:29:58 - [34m[1mLOGS   [0m - *** Training summary for epoch 28
+	 loss={'classification': 1.0203, 'neural_augmentation': 0.6991, 'total_loss': 1.7194}
+2024-08-04 06:30:08 - [34m[1mLOGS   [0m - *** Validation summary for epoch 28
+	 loss={'classification': 0.3771, 'neural_augmentation': 0.0, 'total_loss': 0.3771} || top1={'logits': 92.786} || top5={'logits': 98.9032}
+2024-08-04 06:30:11 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:30:11 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:30:13 - [34m[1mLOGS   [0m - Training checkpoint for epoch 28/iteration 2894 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_28_iter_2894.pt
+2024-08-04 06:30:14 - [34m[1mLOGS   [0m - Model state for epoch 28/iteration 2894 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_28_iter_2894.pt
 [31m===========================================================================[0m
-2024-07-30 12:20:41 - [32m[1mINFO   [0m - Training epoch 29
-2024-07-30 12:20:46 - [34m[1mLOGS   [0m - Epoch:  29 [    2894/10000000], loss: {'classification': 1.0606, 'neural_augmentation': 0.7119, 'total_loss': 1.7726}, LR: [3e-06, 3e-06], Avg. batch load time: 4.505, Elapsed time:  4.84
-2024-07-30 12:21:21 - [34m[1mLOGS   [0m - *** Training summary for epoch 29
-	 loss={'classification': 1.0906, 'neural_augmentation': 0.7069, 'total_loss': 1.7975}
-2024-07-30 12:21:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 29
-	 loss={'classification': 0.3855, 'neural_augmentation': 0.0, 'total_loss': 0.3855} || top1={'logits': 92.2624} || top5={'logits': 98.8665}
-2024-07-30 12:21:37 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
-2024-07-30 12:21:37 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
-2024-07-30 12:21:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 29/iteration 3003 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_29_iter_3003.pt
-2024-07-30 12:21:38 - [34m[1mLOGS   [0m - Model state for epoch 29/iteration 3003 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_29_iter_3003.pt
-2024-07-30 12:21:38 - [34m[1mLOGS   [0m - Training took 00:35:14.07
+2024-08-04 06:30:16 - [32m[1mINFO   [0m - Training epoch 29
+2024-08-04 06:30:18 - [34m[1mLOGS   [0m - Epoch:  29 [    2895/10000000], loss: {'classification': 1.0084, 'neural_augmentation': 0.7173, 'total_loss': 1.7258}, LR: [5e-06, 5e-06], Avg. batch load time: 1.821, Elapsed time:  2.04
+2024-08-04 06:30:35 - [34m[1mLOGS   [0m - *** Training summary for epoch 29
+	 loss={'classification': 1.0261, 'neural_augmentation': 0.7109, 'total_loss': 1.737}
+2024-08-04 06:30:45 - [34m[1mLOGS   [0m - *** Validation summary for epoch 29
+	 loss={'classification': 0.3731, 'neural_augmentation': 0.0, 'total_loss': 0.3731} || top1={'logits': 92.8243} || top5={'logits': 98.9324}
+2024-08-04 06:30:51 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_last.pt
+2024-08-04 06:30:52 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_last.pt
+2024-08-04 06:30:52 - [34m[1mLOGS   [0m - Training checkpoint for epoch 29/iteration 3004 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/training_checkpoint_epoch_29_iter_3004.pt
+2024-08-04 06:30:53 - [34m[1mLOGS   [0m - Model state for epoch 29/iteration 3004 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food172/train/checkpoint_epoch_29_iter_3004.pt
+2024-08-04 06:30:53 - [34m[1mLOGS   [0m - Training took 00:23:46.73

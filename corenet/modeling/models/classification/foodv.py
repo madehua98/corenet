@@ -943,6 +943,18 @@ class Foodv(BaseImageEncoder):
             logits, _ = self.forward_classifier(x)
             return logits
 
+    # def forward(self, x: torch.Tensor) -> torch.Tensor:
+    #     if self.neural_augmentor is not None:
+    #         out_dict = {"augmented_tensor": None}
+    #         if self.training and self.neural_augmentor is not None:
+    #             x = self.neural_augmentor(x)
+    #             out_dict.update({"augmented_tensor": x})
+    #         x = self.forward_features(x)
+    #         x = self.mlp(x)
+    #         logits = self.forward_classifier(x)
+    #         out_dict.update({"logits": logits})
+    #         return out_dict
+
     def extract_end_points_all(
         self,
         x: Tensor,

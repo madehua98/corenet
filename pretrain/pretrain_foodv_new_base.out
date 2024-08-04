@@ -523,3 +523,893 @@ Counter({'aten::add': 29, 'aten::gelu': 22, 'aten::scaled_dot_product_attention'
 2024-08-02 03:57:10 - [34m[1mLOGS   [0m - Available GPUs: 8
 2024-08-02 03:57:10 - [34m[1mLOGS   [0m - CUDNN is enabled
 2024-08-02 03:57:10 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train
+2024-08-02 03:57:13 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:20000
+2024-08-02 03:57:16 - [34m[1mLOGS   [0m - Training dataset details are given below
+WordnetTaggedClassificationDataset(
+	root= 
+	is_training=True 
+	num_samples=64290000
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	total_tar_files=6429
+	max_files_per_tar=10000
+	num_synsets=6743
+)
+2024-08-02 03:57:18 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=True
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=100
+	 scales=[(128, 128, 306), (144, 144, 241), (160, 160, 196), (176, 176, 161), (192, 192, 136), (208, 208, 115), (224, 224, 100), (240, 240, 87), (256, 256, 76), (272, 272, 67), (288, 288, 60), (304, 304, 54), (320, 320, 49)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-08-02 03:57:18 - [34m[1mLOGS   [0m - Number of data workers: 64
+base
+dci
+2024-08-02 03:57:20 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-02 03:57:20 - [34m[1mLOGS   [0m - [36mModel[0m
+Foodv(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (128,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (256,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024)
+            (conv3_1x1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=1024, out_features=2048, bias=True)
+        (w1): Linear(in_features=1024, out_features=2048, bias=True)
+        (w2): Linear(in_features=2048, out_features=1024, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=1024, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (fc_norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=1024, out_features=6743, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                              Foodv Summary
+[31m=================================================================[0m
+Total parameters     =   95.096 M
+Total trainable parameters =   95.096 M
+
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 95.096M                | 11.537G    |
+|  pos_embed                           |  (1, 1, 512)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  2.581M                |  4.682G    |
+|   patch_embed.backbone.stem          |   0.151M               |   1.901G   |
+|    patch_embed.backbone.stem.conv1   |    3.584K              |    43.352M |
+|    patch_embed.backbone.stem.norm1   |    0.256K              |    8.028M  |
+|    patch_embed.backbone.stem.conv2   |    0.148M              |    1.85G   |
+|   patch_embed.backbone.stages        |   1.249M               |   2.548G   |
+|    patch_embed.backbone.stages.0     |    0.274M              |    1.478G  |
+|    patch_embed.backbone.stages.1     |    0.974M              |    1.071G  |
+|   patch_embed.backbone.pool          |   1.181M               |   0.232G   |
+|    patch_embed.backbone.pool.proj    |    1.18M               |    0.231G  |
+|    patch_embed.backbone.pool.norm    |    0.512K              |    1.004M  |
+|  blocks                              |  15.775M               |  3.092G    |
+|   blocks.0                           |   2.629M               |   0.515G   |
+|    blocks.0.norm1                    |    1.024K              |    0.502M  |
+|    blocks.0.attn                     |    1.051M              |    0.206G  |
+|    blocks.0.norm2                    |    1.024K              |    0.502M  |
+|    blocks.0.mlp                      |    1.576M              |    0.309G  |
+|   blocks.1                           |   2.629M               |   0.515G   |
+|    blocks.1.norm1                    |    1.024K              |    0.502M  |
+|    blocks.1.attn                     |    1.051M              |    0.206G  |
+|    blocks.1.norm2                    |    1.024K              |    0.502M  |
+|    blocks.1.mlp                      |    1.576M              |    0.309G  |
+|   blocks.2                           |   2.629M               |   0.515G   |
+|    blocks.2.norm1                    |    1.024K              |    0.502M  |
+|    blocks.2.attn                     |    1.051M              |    0.206G  |
+|    blocks.2.norm2                    |    1.024K              |    0.502M  |
+|    blocks.2.mlp                      |    1.576M              |    0.309G  |
+|   blocks.3                           |   2.629M               |   0.515G   |
+|    blocks.3.norm1                    |    1.024K              |    0.502M  |
+|    blocks.3.attn                     |    1.051M              |    0.206G  |
+|    blocks.3.norm2                    |    1.024K              |    0.502M  |
+|    blocks.3.mlp                      |    1.576M              |    0.309G  |
+|   blocks.4                           |   2.629M               |   0.515G   |
+|    blocks.4.norm1                    |    1.024K              |    0.502M  |
+|    blocks.4.attn                     |    1.051M              |    0.206G  |
+|    blocks.4.norm2                    |    1.024K              |    0.502M  |
+|    blocks.4.mlp                      |    1.576M              |    0.309G  |
+|   blocks.5                           |   2.629M               |   0.515G   |
+|    blocks.5.norm1                    |    1.024K              |    0.502M  |
+|    blocks.5.attn                     |    1.051M              |    0.206G  |
+|    blocks.5.norm2                    |    1.024K              |    0.502M  |
+|    blocks.5.mlp                      |    1.576M              |    0.309G  |
+|  pool                                |  4.721M                |  0.463G    |
+|   pool.proj                          |   4.72M                |   0.462G   |
+|    pool.proj.weight                  |    (1024, 512, 3, 3)   |            |
+|    pool.proj.bias                    |    (1024,)             |            |
+|   pool.norm                          |   1.024K               |   1.004M   |
+|    pool.norm.weight                  |    (512,)              |            |
+|    pool.norm.bias                    |    (512,)              |            |
+|  blocks1                             |  63.007M               |  3.087G    |
+|   blocks1.0                          |   10.501M              |   0.515G   |
+|    blocks1.0.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.0.attn                    |    4.198M              |    0.206G  |
+|    blocks1.0.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.0.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.1                          |   10.501M              |   0.515G   |
+|    blocks1.1.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.1.attn                    |    4.198M              |    0.206G  |
+|    blocks1.1.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.1.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.2                          |   10.501M              |   0.515G   |
+|    blocks1.2.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.2.attn                    |    4.198M              |    0.206G  |
+|    blocks1.2.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.2.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.3                          |   10.501M              |   0.515G   |
+|    blocks1.3.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.3.attn                    |    4.198M              |    0.206G  |
+|    blocks1.3.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.3.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.4                          |   10.501M              |   0.515G   |
+|    blocks1.4.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.4.attn                    |    4.198M              |    0.206G  |
+|    blocks1.4.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.4.mlp                     |    6.299M              |    0.309G  |
+|   blocks1.5                          |   10.501M              |   0.515G   |
+|    blocks1.5.norm1                   |    2.048K              |    0.251M  |
+|    blocks1.5.attn                    |    4.198M              |    0.206G  |
+|    blocks1.5.norm2                   |    2.048K              |    0.251M  |
+|    blocks1.5.mlp                     |    6.299M              |    0.309G  |
+|  mlp                                 |  2.099M                |  0.206G    |
+|   mlp.0                              |   1.05M                |   0.103G   |
+|    mlp.0.weight                      |    (1024, 1024)        |            |
+|    mlp.0.bias                        |    (1024,)             |            |
+|   mlp.2                              |   1.05M                |   0.103G   |
+|    mlp.2.weight                      |    (1024, 1024)        |            |
+|    mlp.2.bias                        |    (1024,)             |            |
+|  fc_norm                             |  2.048K                |  5.12K     |
+|   fc_norm.weight                     |   (1024,)              |            |
+|   fc_norm.bias                       |   (1024,)              |            |
+|  classifier                          |  6.912M                |  6.905M    |
+|   classifier.weight                  |   (6743, 1024)         |            |
+|   classifier.bias                    |   (6743,)              |            |
+2024-08-02 03:57:21 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-08-02 03:57:21 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.2.attn.k_norm', 'neural_augmentor.brightness.max_fn', 'blocks1.3.attn.attn_drop', 'patch_embed.backbone.stages.0.1.down', 'blocks1.3.drop_path2', 'blocks1.3.ls2', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks.1.attn.q_norm', 'blocks.2.ls1', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks1.3.attn.k_norm', 'blocks.2.attn.k_norm', 'blocks.1.attn.attn_drop', 'blocks1.1.drop_path2', 'blocks.3.attn.q_norm', 'norm', 'neural_augmentor.contrast', 'blocks1.1.ls2', 'blocks.1.ls1', 'patch_embed.backbone.stages.0.0.drop_path', 'patch_embed.proj', 'blocks.1.drop_path1', 'blocks1.2.ls1', 'blocks.0.ls1', 'blocks1.2.attn.q_norm', 'neural_augmentor.contrast.max_fn', 'blocks.1.ls2', 'neural_augmentor.noise.min_fn', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks1.1.attn.attn_drop', 'patch_embed.backbone.stages.1.1.down', 'patch_drop', 'blocks1.2.ls2', 'blocks.4.attn.k_norm', 'blocks1.0.ls2', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'neural_augmentor', 'blocks.0.ls2', 'blocks1.5.drop_path2', 'blocks1.4.attn.q_norm', 'blocks1.4.drop_path2', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.5.ls1', 'blocks.5.attn.q_norm', 'blocks1.3.attn.q_norm', 'blocks.4.attn.attn_drop', 'blocks.0.attn.k_norm', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks.4.ls2', 'blocks.4.drop_path1', 'blocks.2.attn.q_norm', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.0.attn.k_norm', 'blocks.3.ls1', 'blocks.0.drop_path2', 'blocks.0.attn.attn_drop', 'blocks1.5.attn.q_norm', 'patch_embed.backbone.stem.norm1.drop', 'blocks1.0.drop_path1', 'patch_embed.backbone.stages.0.0.down', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks.5.drop_path2', 'blocks1.2.attn.attn_drop', 'blocks1.0.ls1', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks.4.ls1', 'blocks1.4.drop_path1', 'blocks1.0.attn.q_norm', 'neural_augmentor.brightness.min_fn', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks1.0.drop_path2', 'blocks.3.ls2', 'blocks.5.attn.k_norm', 'blocks.1.attn.k_norm', 'blocks1.1.attn.k_norm', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks1.5.ls2', 'blocks.2.ls2', 'blocks1.0.attn.attn_drop', 'norm_pre', 'blocks.0.attn.q_norm', 'blocks1.3.drop_path1', 'blocks.1.drop_path2', 'blocks1.5.drop_path1', 'blocks.5.attn.attn_drop', 'neural_augmentor.noise.max_fn', 'blocks.2.drop_path1', 'blocks1.2.drop_path2', 'blocks.3.attn.attn_drop', 'blocks1.1.drop_path1', 'neural_augmentor.contrast.min_fn', 'blocks.2.attn.attn_drop', 'blocks1.5.ls1', 'blocks.3.attn.k_norm', 'blocks1.4.attn.k_norm', 'blocks.4.drop_path2', 'blocks1.4.attn.attn_drop', 'neural_augmentor.brightness', 'neural_augmentor.noise', 'patch_embed.backbone.stages.1.1.shortcut', 'blocks1.2.drop_path1', 'blocks.3.drop_path1', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'patch_embed.backbone.stages.1.0.down', 'blocks1.5.attn.attn_drop', 'blocks1.3.ls1', 'blocks.5.drop_path1', 'blocks.0.drop_path1', 'blocks1.4.ls1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks.2.drop_path2', 'blocks1.1.ls1', 'blocks.4.attn.q_norm', 'blocks.3.drop_path2', 'blocks.5.ls2', 'blocks1.1.attn.q_norm'}
+2024-08-02 03:57:21 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 29, 'aten::gelu': 22, 'aten::scaled_dot_product_attention': 12, 'aten::mul': 12, 'aten::add_': 12, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	BinaryCrossEntropy(  reduction=batch_mean loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - Max. iteration for training: 200000
+2024-08-02 03:57:21 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=1e-05
+ 	 max_lr=0.001
+ 	 period=180001
+ 	 warmup_init_lr=1e-06
+ 	 warmup_iters=20000
+ )
+2024-08-02 03:57:23 - [34m[1mLOGS   [0m - Loaded checkpoint from /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/training_checkpoint_last.pt
+2024-08-02 03:57:23 - [34m[1mLOGS   [0m - Resuming training for epoch 7
+2024-08-02 03:57:23 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-08-02 03:57:25 - [32m[1mINFO   [0m - Training epoch 7
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 7): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 5): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:13 - [32m[1mINFO   [0m - distributed init (rank 4): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:20000
+base
+dci
+2024-08-02 03:57:14 - [32m[1mINFO   [0m - distributed init (rank 6): tcp://localhost:20000
+base
+dci
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1024, 1024]
+bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-08-02 04:01:48 - [34m[1mLOGS   [0m - Epoch:   7 [   55382/  200000], loss: {'classification': 31.5021, 'neural_augmentation': 0.1708, 'total_loss': 31.6729}, LR: [0.000909, 0.000909], Avg. batch load time: 244.346, Elapsed time: 262.95
+2024-08-02 04:03:47 - [34m[1mLOGS   [0m - Epoch:   7 [   55444/  200000], loss: {'classification': 35.1915, 'neural_augmentation': 0.1725, 'total_loss': 35.364}, LR: [0.000908, 0.000908], Avg. batch load time: 0.496, Elapsed time: 381.50
+2024-08-02 04:05:40 - [34m[1mLOGS   [0m - Epoch:   7 [   55507/  200000], loss: {'classification': 35.1875, 'neural_augmentation': 0.1728, 'total_loss': 35.3602}, LR: [0.000908, 0.000908], Avg. batch load time: 0.249, Elapsed time: 494.55
+2024-08-02 04:07:32 - [34m[1mLOGS   [0m - Epoch:   7 [   55569/  200000], loss: {'classification': 35.2237, 'neural_augmentation': 0.1728, 'total_loss': 35.3965}, LR: [0.000908, 0.000908], Avg. batch load time: 0.166, Elapsed time: 606.51
+2024-08-02 04:09:23 - [34m[1mLOGS   [0m - Epoch:   7 [   55632/  200000], loss: {'classification': 35.2099, 'neural_augmentation': 0.173, 'total_loss': 35.3828}, LR: [0.000907, 0.000907], Avg. batch load time: 0.125, Elapsed time: 718.33
+2024-08-02 04:11:15 - [34m[1mLOGS   [0m - Epoch:   7 [   55694/  200000], loss: {'classification': 35.211, 'neural_augmentation': 0.173, 'total_loss': 35.384}, LR: [0.000907, 0.000907], Avg. batch load time: 0.100, Elapsed time: 830.26
+2024-08-02 04:13:07 - [34m[1mLOGS   [0m - Epoch:   7 [   55757/  200000], loss: {'classification': 35.2107, 'neural_augmentation': 0.1732, 'total_loss': 35.3838}, LR: [0.000907, 0.000907], Avg. batch load time: 0.084, Elapsed time: 942.04
+2024-08-02 04:14:59 - [34m[1mLOGS   [0m - Epoch:   7 [   55819/  200000], loss: {'classification': 35.2187, 'neural_augmentation': 0.1732, 'total_loss': 35.3919}, LR: [0.000906, 0.000906], Avg. batch load time: 0.072, Elapsed time: 1053.67
+2024-08-02 04:16:50 - [34m[1mLOGS   [0m - Epoch:   7 [   55882/  200000], loss: {'classification': 35.2097, 'neural_augmentation': 0.1733, 'total_loss': 35.383}, LR: [0.000906, 0.000906], Avg. batch load time: 0.063, Elapsed time: 1165.46
+2024-08-02 04:18:42 - [34m[1mLOGS   [0m - Epoch:   7 [   55944/  200000], loss: {'classification': 35.2097, 'neural_augmentation': 0.1733, 'total_loss': 35.383}, LR: [0.000906, 0.000906], Avg. batch load time: 0.056, Elapsed time: 1277.28
+2024-08-02 04:20:36 - [34m[1mLOGS   [0m - Epoch:   7 [   56007/  200000], loss: {'classification': 35.2167, 'neural_augmentation': 0.1734, 'total_loss': 35.3901}, LR: [0.000905, 0.000905], Avg. batch load time: 0.051, Elapsed time: 1390.76
+2024-08-02 04:22:33 - [34m[1mLOGS   [0m - Epoch:   7 [   56069/  200000], loss: {'classification': 35.2176, 'neural_augmentation': 0.1735, 'total_loss': 35.3911}, LR: [0.000905, 0.000905], Avg. batch load time: 0.046, Elapsed time: 1507.94
+2024-08-02 04:24:25 - [34m[1mLOGS   [0m - Epoch:   7 [   56132/  200000], loss: {'classification': 35.2276, 'neural_augmentation': 0.1736, 'total_loss': 35.4011}, LR: [0.000905, 0.000905], Avg. batch load time: 0.042, Elapsed time: 1620.04
+2024-08-02 04:26:17 - [34m[1mLOGS   [0m - Epoch:   7 [   56194/  200000], loss: {'classification': 35.225, 'neural_augmentation': 0.1737, 'total_loss': 35.3987}, LR: [0.000904, 0.000904], Avg. batch load time: 0.039, Elapsed time: 1731.96
+2024-08-02 04:28:09 - [34m[1mLOGS   [0m - Epoch:   7 [   56257/  200000], loss: {'classification': 35.2261, 'neural_augmentation': 0.1738, 'total_loss': 35.3998}, LR: [0.000904, 0.000904], Avg. batch load time: 0.036, Elapsed time: 1843.80
+2024-08-02 04:30:01 - [34m[1mLOGS   [0m - Epoch:   7 [   56319/  200000], loss: {'classification': 35.2273, 'neural_augmentation': 0.1739, 'total_loss': 35.4012}, LR: [0.000904, 0.000904], Avg. batch load time: 0.034, Elapsed time: 1955.53
+2024-08-02 04:31:52 - [34m[1mLOGS   [0m - Epoch:   7 [   56382/  200000], loss: {'classification': 35.2268, 'neural_augmentation': 0.174, 'total_loss': 35.4008}, LR: [0.000904, 0.000904], Avg. batch load time: 0.032, Elapsed time: 2067.36
+2024-08-02 04:33:44 - [34m[1mLOGS   [0m - Epoch:   7 [   56444/  200000], loss: {'classification': 35.225, 'neural_augmentation': 0.1741, 'total_loss': 35.3991}, LR: [0.000903, 0.000903], Avg. batch load time: 0.030, Elapsed time: 2179.15
+2024-08-02 04:35:36 - [34m[1mLOGS   [0m - Epoch:   7 [   56507/  200000], loss: {'classification': 35.227, 'neural_augmentation': 0.1741, 'total_loss': 35.4012}, LR: [0.000903, 0.000903], Avg. batch load time: 0.029, Elapsed time: 2291.02
+2024-08-02 04:37:28 - [34m[1mLOGS   [0m - Epoch:   7 [   56569/  200000], loss: {'classification': 35.2225, 'neural_augmentation': 0.1742, 'total_loss': 35.3967}, LR: [0.000903, 0.000903], Avg. batch load time: 0.027, Elapsed time: 2402.86
+2024-08-02 04:39:20 - [34m[1mLOGS   [0m - Epoch:   7 [   56632/  200000], loss: {'classification': 35.2211, 'neural_augmentation': 0.1743, 'total_loss': 35.3954}, LR: [0.000902, 0.000902], Avg. batch load time: 0.026, Elapsed time: 2514.89
+2024-08-02 04:41:12 - [34m[1mLOGS   [0m - Epoch:   7 [   56694/  200000], loss: {'classification': 35.225, 'neural_augmentation': 0.1744, 'total_loss': 35.3994}, LR: [0.000902, 0.000902], Avg. batch load time: 0.025, Elapsed time: 2626.92
+2024-08-02 04:43:04 - [34m[1mLOGS   [0m - Epoch:   7 [   56757/  200000], loss: {'classification': 35.2256, 'neural_augmentation': 0.1745, 'total_loss': 35.4001}, LR: [0.000902, 0.000902], Avg. batch load time: 0.024, Elapsed time: 2738.83
+2024-08-02 04:45:00 - [34m[1mLOGS   [0m - Epoch:   7 [   56819/  200000], loss: {'classification': 35.2252, 'neural_augmentation': 0.1746, 'total_loss': 35.3998}, LR: [0.000901, 0.000901], Avg. batch load time: 0.023, Elapsed time: 2854.93
+2024-08-02 04:46:55 - [34m[1mLOGS   [0m - Epoch:   7 [   56882/  200000], loss: {'classification': 35.2272, 'neural_augmentation': 0.1747, 'total_loss': 35.4018}, LR: [0.000901, 0.000901], Avg. batch load time: 0.022, Elapsed time: 2970.48
+2024-08-02 04:48:48 - [34m[1mLOGS   [0m - Epoch:   7 [   56944/  200000], loss: {'classification': 35.2246, 'neural_augmentation': 0.1747, 'total_loss': 35.3994}, LR: [0.000901, 0.000901], Avg. batch load time: 0.021, Elapsed time: 3082.59
+2024-08-02 04:50:39 - [34m[1mLOGS   [0m - Epoch:   7 [   57007/  200000], loss: {'classification': 35.227, 'neural_augmentation': 0.1748, 'total_loss': 35.4018}, LR: [0.0009, 0.0009], Avg. batch load time: 0.020, Elapsed time: 3194.46
+2024-08-02 04:52:32 - [34m[1mLOGS   [0m - Epoch:   7 [   57069/  200000], loss: {'classification': 35.225, 'neural_augmentation': 0.1749, 'total_loss': 35.3999}, LR: [0.0009, 0.0009], Avg. batch load time: 0.019, Elapsed time: 3306.53
+2024-08-02 04:54:23 - [34m[1mLOGS   [0m - Epoch:   7 [   57132/  200000], loss: {'classification': 35.225, 'neural_augmentation': 0.175, 'total_loss': 35.4001}, LR: [0.0009, 0.0009], Avg. batch load time: 0.019, Elapsed time: 3418.45
+2024-08-02 04:56:15 - [34m[1mLOGS   [0m - Epoch:   7 [   57194/  200000], loss: {'classification': 35.2236, 'neural_augmentation': 0.1751, 'total_loss': 35.3988}, LR: [0.000899, 0.000899], Avg. batch load time: 0.018, Elapsed time: 3530.46
+2024-08-02 04:58:07 - [34m[1mLOGS   [0m - Epoch:   7 [   57257/  200000], loss: {'classification': 35.2229, 'neural_augmentation': 0.1752, 'total_loss': 35.3981}, LR: [0.000899, 0.000899], Avg. batch load time: 0.018, Elapsed time: 3642.32
+2024-08-02 04:59:59 - [34m[1mLOGS   [0m - Epoch:   7 [   57319/  200000], loss: {'classification': 35.2244, 'neural_augmentation': 0.1753, 'total_loss': 35.3997}, LR: [0.000899, 0.000899], Avg. batch load time: 0.017, Elapsed time: 3754.39
+2024-08-02 05:01:52 - [34m[1mLOGS   [0m - Epoch:   7 [   57382/  200000], loss: {'classification': 35.2237, 'neural_augmentation': 0.1754, 'total_loss': 35.3991}, LR: [0.000898, 0.000898], Avg. batch load time: 0.017, Elapsed time: 3866.48
+2024-08-02 05:03:44 - [34m[1mLOGS   [0m - Epoch:   7 [   57444/  200000], loss: {'classification': 35.2219, 'neural_augmentation': 0.1755, 'total_loss': 35.3974}, LR: [0.000898, 0.000898], Avg. batch load time: 0.016, Elapsed time: 3978.61
+2024-08-02 05:05:35 - [34m[1mLOGS   [0m - Epoch:   7 [   57507/  200000], loss: {'classification': 35.2196, 'neural_augmentation': 0.1756, 'total_loss': 35.3951}, LR: [0.000898, 0.000898], Avg. batch load time: 0.016, Elapsed time: 4090.43
+2024-08-02 05:07:30 - [34m[1mLOGS   [0m - Epoch:   7 [   57569/  200000], loss: {'classification': 35.2161, 'neural_augmentation': 0.1757, 'total_loss': 35.3917}, LR: [0.000897, 0.000897], Avg. batch load time: 0.015, Elapsed time: 4204.63
+2024-08-02 05:09:29 - [34m[1mLOGS   [0m - Epoch:   7 [   57632/  200000], loss: {'classification': 35.218, 'neural_augmentation': 0.1757, 'total_loss': 35.3937}, LR: [0.000897, 0.000897], Avg. batch load time: 0.015, Elapsed time: 4324.32
+2024-08-02 05:11:21 - [34m[1mLOGS   [0m - Epoch:   7 [   57694/  200000], loss: {'classification': 35.2171, 'neural_augmentation': 0.1758, 'total_loss': 35.3929}, LR: [0.000897, 0.000897], Avg. batch load time: 0.014, Elapsed time: 4436.36
+2024-08-02 05:13:13 - [34m[1mLOGS   [0m - Epoch:   7 [   57757/  200000], loss: {'classification': 35.2196, 'neural_augmentation': 0.1759, 'total_loss': 35.3955}, LR: [0.000896, 0.000896], Avg. batch load time: 0.014, Elapsed time: 4548.36
+2024-08-02 05:15:06 - [34m[1mLOGS   [0m - Epoch:   7 [   57819/  200000], loss: {'classification': 35.2213, 'neural_augmentation': 0.176, 'total_loss': 35.3973}, LR: [0.000896, 0.000896], Avg. batch load time: 0.014, Elapsed time: 4660.55
+2024-08-02 05:16:58 - [34m[1mLOGS   [0m - Epoch:   7 [   57882/  200000], loss: {'classification': 35.2202, 'neural_augmentation': 0.1761, 'total_loss': 35.3962}, LR: [0.000896, 0.000896], Avg. batch load time: 0.013, Elapsed time: 4772.64
+2024-08-02 05:18:50 - [34m[1mLOGS   [0m - Epoch:   7 [   57944/  200000], loss: {'classification': 35.2207, 'neural_augmentation': 0.1761, 'total_loss': 35.3968}, LR: [0.000895, 0.000895], Avg. batch load time: 0.013, Elapsed time: 4884.58
+2024-08-02 05:20:42 - [34m[1mLOGS   [0m - Epoch:   7 [   58007/  200000], loss: {'classification': 35.2204, 'neural_augmentation': 0.1762, 'total_loss': 35.3966}, LR: [0.000895, 0.000895], Avg. batch load time: 0.013, Elapsed time: 4996.66
+2024-08-02 05:22:34 - [34m[1mLOGS   [0m - Epoch:   7 [   58069/  200000], loss: {'classification': 35.2202, 'neural_augmentation': 0.1763, 'total_loss': 35.3965}, LR: [0.000895, 0.000895], Avg. batch load time: 0.013, Elapsed time: 5108.84
+2024-08-02 05:24:26 - [34m[1mLOGS   [0m - Epoch:   7 [   58132/  200000], loss: {'classification': 35.2213, 'neural_augmentation': 0.1764, 'total_loss': 35.3977}, LR: [0.000894, 0.000894], Avg. batch load time: 0.012, Elapsed time: 5220.88
+2024-08-02 05:26:18 - [34m[1mLOGS   [0m - Epoch:   7 [   58194/  200000], loss: {'classification': 35.2198, 'neural_augmentation': 0.1765, 'total_loss': 35.3963}, LR: [0.000894, 0.000894], Avg. batch load time: 0.012, Elapsed time: 5333.14
+2024-08-02 05:28:10 - [34m[1mLOGS   [0m - Epoch:   7 [   58257/  200000], loss: {'classification': 35.2179, 'neural_augmentation': 0.1766, 'total_loss': 35.3945}, LR: [0.000894, 0.000894], Avg. batch load time: 0.012, Elapsed time: 5445.01
+2024-08-02 05:30:04 - [34m[1mLOGS   [0m - Epoch:   7 [   58319/  200000], loss: {'classification': 35.218, 'neural_augmentation': 0.1767, 'total_loss': 35.3946}, LR: [0.000893, 0.000893], Avg. batch load time: 0.012, Elapsed time: 5558.70
+2024-08-02 05:32:04 - [34m[1mLOGS   [0m - Epoch:   7 [   58382/  200000], loss: {'classification': 35.2182, 'neural_augmentation': 0.1768, 'total_loss': 35.395}, LR: [0.000893, 0.000893], Avg. batch load time: 0.011, Elapsed time: 5679.17
+2024-08-02 05:33:56 - [34m[1mLOGS   [0m - Epoch:   7 [   58444/  200000], loss: {'classification': 35.22, 'neural_augmentation': 0.1768, 'total_loss': 35.3969}, LR: [0.000893, 0.000893], Avg. batch load time: 0.011, Elapsed time: 5791.18
+2024-08-02 05:35:49 - [34m[1mLOGS   [0m - Epoch:   7 [   58507/  200000], loss: {'classification': 35.2203, 'neural_augmentation': 0.1769, 'total_loss': 35.3972}, LR: [0.000892, 0.000892], Avg. batch load time: 0.011, Elapsed time: 5903.48
+2024-08-02 05:37:40 - [34m[1mLOGS   [0m - Epoch:   7 [   58569/  200000], loss: {'classification': 35.2203, 'neural_augmentation': 0.177, 'total_loss': 35.3973}, LR: [0.000892, 0.000892], Avg. batch load time: 0.011, Elapsed time: 6015.28
+2024-08-02 05:39:32 - [34m[1mLOGS   [0m - Epoch:   7 [   58632/  200000], loss: {'classification': 35.2185, 'neural_augmentation': 0.1771, 'total_loss': 35.3956}, LR: [0.000892, 0.000892], Avg. batch load time: 0.011, Elapsed time: 6127.03
+2024-08-02 05:41:24 - [34m[1mLOGS   [0m - Epoch:   7 [   58694/  200000], loss: {'classification': 35.2197, 'neural_augmentation': 0.1772, 'total_loss': 35.3969}, LR: [0.000891, 0.000891], Avg. batch load time: 0.010, Elapsed time: 6239.03
+2024-08-02 05:43:16 - [34m[1mLOGS   [0m - Epoch:   7 [   58757/  200000], loss: {'classification': 35.2202, 'neural_augmentation': 0.1773, 'total_loss': 35.3975}, LR: [0.000891, 0.000891], Avg. batch load time: 0.010, Elapsed time: 6351.04
+2024-08-02 05:45:08 - [34m[1mLOGS   [0m - Epoch:   7 [   58819/  200000], loss: {'classification': 35.2207, 'neural_augmentation': 0.1774, 'total_loss': 35.3981}, LR: [0.000891, 0.000891], Avg. batch load time: 0.010, Elapsed time: 6462.96
+2024-08-02 05:47:00 - [34m[1mLOGS   [0m - Epoch:   7 [   58882/  200000], loss: {'classification': 35.2201, 'neural_augmentation': 0.1775, 'total_loss': 35.3976}, LR: [0.00089, 0.00089], Avg. batch load time: 0.010, Elapsed time: 6574.61
+2024-08-02 05:48:52 - [34m[1mLOGS   [0m - Epoch:   7 [   58944/  200000], loss: {'classification': 35.2179, 'neural_augmentation': 0.1775, 'total_loss': 35.3955}, LR: [0.00089, 0.00089], Avg. batch load time: 0.010, Elapsed time: 6686.61
+2024-08-02 05:50:43 - [34m[1mLOGS   [0m - Epoch:   7 [   59007/  200000], loss: {'classification': 35.2174, 'neural_augmentation': 0.1776, 'total_loss': 35.395}, LR: [0.00089, 0.00089], Avg. batch load time: 0.010, Elapsed time: 6798.42
+2024-08-02 05:52:35 - [34m[1mLOGS   [0m - Epoch:   7 [   59069/  200000], loss: {'classification': 35.2169, 'neural_augmentation': 0.1777, 'total_loss': 35.3946}, LR: [0.000889, 0.000889], Avg. batch load time: 0.010, Elapsed time: 6910.47
+2024-08-02 05:54:33 - [34m[1mLOGS   [0m - Epoch:   7 [   59132/  200000], loss: {'classification': 35.2171, 'neural_augmentation': 0.1778, 'total_loss': 35.395}, LR: [0.000889, 0.000889], Avg. batch load time: 0.009, Elapsed time: 7027.55
+2024-08-02 05:56:28 - [34m[1mLOGS   [0m - Epoch:   7 [   59194/  200000], loss: {'classification': 35.216, 'neural_augmentation': 0.1779, 'total_loss': 35.3939}, LR: [0.000889, 0.000889], Avg. batch load time: 0.009, Elapsed time: 7142.81
+2024-08-02 05:58:20 - [34m[1mLOGS   [0m - Epoch:   7 [   59257/  200000], loss: {'classification': 35.2171, 'neural_augmentation': 0.178, 'total_loss': 35.3951}, LR: [0.000888, 0.000888], Avg. batch load time: 0.009, Elapsed time: 7254.75
+2024-08-02 06:00:11 - [34m[1mLOGS   [0m - Epoch:   7 [   59319/  200000], loss: {'classification': 35.2161, 'neural_augmentation': 0.1781, 'total_loss': 35.3942}, LR: [0.000888, 0.000888], Avg. batch load time: 0.009, Elapsed time: 7366.40
+2024-08-02 06:02:03 - [34m[1mLOGS   [0m - Epoch:   7 [   59382/  200000], loss: {'classification': 35.2164, 'neural_augmentation': 0.1782, 'total_loss': 35.3946}, LR: [0.000888, 0.000888], Avg. batch load time: 0.009, Elapsed time: 7478.46
+2024-08-02 06:03:55 - [34m[1mLOGS   [0m - Epoch:   7 [   59444/  200000], loss: {'classification': 35.2163, 'neural_augmentation': 0.1783, 'total_loss': 35.3946}, LR: [0.000887, 0.000887], Avg. batch load time: 0.009, Elapsed time: 7590.39
+2024-08-02 06:05:47 - [34m[1mLOGS   [0m - Epoch:   7 [   59507/  200000], loss: {'classification': 35.2161, 'neural_augmentation': 0.1784, 'total_loss': 35.3945}, LR: [0.000887, 0.000887], Avg. batch load time: 0.009, Elapsed time: 7702.07
+2024-08-02 06:07:39 - [34m[1mLOGS   [0m - Epoch:   7 [   59569/  200000], loss: {'classification': 35.2156, 'neural_augmentation': 0.1784, 'total_loss': 35.394}, LR: [0.000887, 0.000887], Avg. batch load time: 0.009, Elapsed time: 7814.14
+2024-08-02 06:09:31 - [34m[1mLOGS   [0m - Epoch:   7 [   59632/  200000], loss: {'classification': 35.2161, 'neural_augmentation': 0.1785, 'total_loss': 35.3947}, LR: [0.000886, 0.000886], Avg. batch load time: 0.008, Elapsed time: 7926.16
+2024-08-02 06:11:23 - [34m[1mLOGS   [0m - Epoch:   7 [   59694/  200000], loss: {'classification': 35.2149, 'neural_augmentation': 0.1786, 'total_loss': 35.3935}, LR: [0.000886, 0.000886], Avg. batch load time: 0.008, Elapsed time: 8037.96
+2024-08-02 06:13:15 - [34m[1mLOGS   [0m - Epoch:   7 [   59757/  200000], loss: {'classification': 35.2164, 'neural_augmentation': 0.1787, 'total_loss': 35.3952}, LR: [0.000886, 0.000886], Avg. batch load time: 0.008, Elapsed time: 8150.35
+2024-08-02 06:15:07 - [34m[1mLOGS   [0m - Epoch:   7 [   59819/  200000], loss: {'classification': 35.2157, 'neural_augmentation': 0.1788, 'total_loss': 35.3946}, LR: [0.000885, 0.000885], Avg. batch load time: 0.008, Elapsed time: 8262.31
+2024-08-02 06:17:01 - [34m[1mLOGS   [0m - Epoch:   7 [   59882/  200000], loss: {'classification': 35.2141, 'neural_augmentation': 0.1789, 'total_loss': 35.393}, LR: [0.000885, 0.000885], Avg. batch load time: 0.008, Elapsed time: 8376.26
+2024-08-02 06:19:00 - [34m[1mLOGS   [0m - Epoch:   7 [   59944/  200000], loss: {'classification': 35.2144, 'neural_augmentation': 0.179, 'total_loss': 35.3934}, LR: [0.000884, 0.000884], Avg. batch load time: 0.008, Elapsed time: 8494.83
+2024-08-02 06:20:52 - [34m[1mLOGS   [0m - Epoch:   7 [   60007/  200000], loss: {'classification': 35.214, 'neural_augmentation': 0.1791, 'total_loss': 35.393}, LR: [0.000884, 0.000884], Avg. batch load time: 0.008, Elapsed time: 8606.89
+2024-08-02 06:22:44 - [34m[1mLOGS   [0m - Epoch:   7 [   60069/  200000], loss: {'classification': 35.2131, 'neural_augmentation': 0.1792, 'total_loss': 35.3922}, LR: [0.000884, 0.000884], Avg. batch load time: 0.008, Elapsed time: 8718.96
+2024-08-02 06:24:36 - [34m[1mLOGS   [0m - Epoch:   7 [   60132/  200000], loss: {'classification': 35.2115, 'neural_augmentation': 0.1793, 'total_loss': 35.3907}, LR: [0.000883, 0.000883], Avg. batch load time: 0.008, Elapsed time: 8831.12
+2024-08-02 06:26:28 - [34m[1mLOGS   [0m - Epoch:   7 [   60194/  200000], loss: {'classification': 35.2108, 'neural_augmentation': 0.1794, 'total_loss': 35.3902}, LR: [0.000883, 0.000883], Avg. batch load time: 0.008, Elapsed time: 8942.73
+2024-08-02 06:28:20 - [34m[1mLOGS   [0m - Epoch:   7 [   60257/  200000], loss: {'classification': 35.2087, 'neural_augmentation': 0.1795, 'total_loss': 35.3881}, LR: [0.000883, 0.000883], Avg. batch load time: 0.007, Elapsed time: 9054.60
+2024-08-02 06:30:12 - [34m[1mLOGS   [0m - Epoch:   7 [   60319/  200000], loss: {'classification': 35.2096, 'neural_augmentation': 0.1795, 'total_loss': 35.3892}, LR: [0.000882, 0.000882], Avg. batch load time: 0.007, Elapsed time: 9166.56
+2024-08-02 06:32:03 - [34m[1mLOGS   [0m - Epoch:   7 [   60382/  200000], loss: {'classification': 35.2088, 'neural_augmentation': 0.1796, 'total_loss': 35.3884}, LR: [0.000882, 0.000882], Avg. batch load time: 0.007, Elapsed time: 9278.28
+2024-08-02 06:33:55 - [34m[1mLOGS   [0m - Epoch:   7 [   60444/  200000], loss: {'classification': 35.208, 'neural_augmentation': 0.1797, 'total_loss': 35.3877}, LR: [0.000882, 0.000882], Avg. batch load time: 0.007, Elapsed time: 9390.25
+2024-08-02 06:35:47 - [34m[1mLOGS   [0m - Epoch:   7 [   60507/  200000], loss: {'classification': 35.2082, 'neural_augmentation': 0.1798, 'total_loss': 35.388}, LR: [0.000881, 0.000881], Avg. batch load time: 0.007, Elapsed time: 9502.00
+2024-08-02 06:37:39 - [34m[1mLOGS   [0m - Epoch:   7 [   60569/  200000], loss: {'classification': 35.2064, 'neural_augmentation': 0.1799, 'total_loss': 35.3863}, LR: [0.000881, 0.000881], Avg. batch load time: 0.007, Elapsed time: 9613.80
+2024-08-02 06:39:32 - [34m[1mLOGS   [0m - Epoch:   7 [   60632/  200000], loss: {'classification': 35.2058, 'neural_augmentation': 0.18, 'total_loss': 35.3858}, LR: [0.000881, 0.000881], Avg. batch load time: 0.007, Elapsed time: 9727.43
+2024-08-02 06:41:32 - [34m[1mLOGS   [0m - Epoch:   7 [   60694/  200000], loss: {'classification': 35.2058, 'neural_augmentation': 0.1801, 'total_loss': 35.3859}, LR: [0.00088, 0.00088], Avg. batch load time: 0.007, Elapsed time: 9847.20
+2024-08-02 06:43:24 - [34m[1mLOGS   [0m - Epoch:   7 [   60757/  200000], loss: {'classification': 35.2044, 'neural_augmentation': 0.1802, 'total_loss': 35.3846}, LR: [0.00088, 0.00088], Avg. batch load time: 0.007, Elapsed time: 9958.98
+2024-08-02 06:45:16 - [34m[1mLOGS   [0m - Epoch:   7 [   60819/  200000], loss: {'classification': 35.2036, 'neural_augmentation': 0.1803, 'total_loss': 35.3839}, LR: [0.00088, 0.00088], Avg. batch load time: 0.007, Elapsed time: 10071.07
+2024-08-02 06:47:08 - [34m[1mLOGS   [0m - Epoch:   7 [   60882/  200000], loss: {'classification': 35.2036, 'neural_augmentation': 0.1804, 'total_loss': 35.384}, LR: [0.000879, 0.000879], Avg. batch load time: 0.007, Elapsed time: 10183.20
+2024-08-02 06:49:00 - [34m[1mLOGS   [0m - Epoch:   7 [   60944/  200000], loss: {'classification': 35.2025, 'neural_augmentation': 0.1805, 'total_loss': 35.383}, LR: [0.000879, 0.000879], Avg. batch load time: 0.007, Elapsed time: 10295.25
+2024-08-02 06:50:52 - [34m[1mLOGS   [0m - Epoch:   7 [   61007/  200000], loss: {'classification': 35.202, 'neural_augmentation': 0.1806, 'total_loss': 35.3826}, LR: [0.000879, 0.000879], Avg. batch load time: 0.007, Elapsed time: 10407.27
+2024-08-02 06:52:44 - [34m[1mLOGS   [0m - Epoch:   7 [   61069/  200000], loss: {'classification': 35.201, 'neural_augmentation': 0.1807, 'total_loss': 35.3816}, LR: [0.000878, 0.000878], Avg. batch load time: 0.007, Elapsed time: 10519.20
+2024-08-02 06:54:36 - [34m[1mLOGS   [0m - Epoch:   7 [   61132/  200000], loss: {'classification': 35.2005, 'neural_augmentation': 0.1807, 'total_loss': 35.3812}, LR: [0.000878, 0.000878], Avg. batch load time: 0.007, Elapsed time: 10631.00
+2024-08-02 06:56:28 - [34m[1mLOGS   [0m - Epoch:   7 [   61194/  200000], loss: {'classification': 35.1999, 'neural_augmentation': 0.1808, 'total_loss': 35.3807}, LR: [0.000877, 0.000877], Avg. batch load time: 0.006, Elapsed time: 10742.84
+2024-08-02 06:58:20 - [34m[1mLOGS   [0m - Epoch:   7 [   61257/  200000], loss: {'classification': 35.1988, 'neural_augmentation': 0.1809, 'total_loss': 35.3797}, LR: [0.000877, 0.000877], Avg. batch load time: 0.006, Elapsed time: 10854.77
+2024-08-02 07:00:12 - [34m[1mLOGS   [0m - Epoch:   7 [   61319/  200000], loss: {'classification': 35.199, 'neural_augmentation': 0.181, 'total_loss': 35.38}, LR: [0.000877, 0.000877], Avg. batch load time: 0.006, Elapsed time: 10966.67
+2024-08-02 07:02:03 - [34m[1mLOGS   [0m - Epoch:   7 [   61382/  200000], loss: {'classification': 35.1996, 'neural_augmentation': 0.1811, 'total_loss': 35.3807}, LR: [0.000876, 0.000876], Avg. batch load time: 0.006, Elapsed time: 11078.33
+2024-08-02 07:04:05 - [34m[1mLOGS   [0m - Epoch:   7 [   61444/  200000], loss: {'classification': 35.1994, 'neural_augmentation': 0.1812, 'total_loss': 35.3806}, LR: [0.000876, 0.000876], Avg. batch load time: 0.006, Elapsed time: 11200.03
+2024-08-02 07:05:57 - [34m[1mLOGS   [0m - Epoch:   7 [   61507/  200000], loss: {'classification': 35.1985, 'neural_augmentation': 0.1813, 'total_loss': 35.3798}, LR: [0.000876, 0.000876], Avg. batch load time: 0.006, Elapsed time: 11311.86
+2024-08-02 07:07:49 - [34m[1mLOGS   [0m - Epoch:   7 [   61569/  200000], loss: {'classification': 35.198, 'neural_augmentation': 0.1814, 'total_loss': 35.3794}, LR: [0.000875, 0.000875], Avg. batch load time: 0.006, Elapsed time: 11423.86
+2024-08-02 07:09:41 - [34m[1mLOGS   [0m - Epoch:   7 [   61632/  200000], loss: {'classification': 35.1978, 'neural_augmentation': 0.1815, 'total_loss': 35.3792}, LR: [0.000875, 0.000875], Avg. batch load time: 0.006, Elapsed time: 11535.92
+2024-08-02 07:11:33 - [34m[1mLOGS   [0m - Epoch:   7 [   61694/  200000], loss: {'classification': 35.1969, 'neural_augmentation': 0.1816, 'total_loss': 35.3785}, LR: [0.000875, 0.000875], Avg. batch load time: 0.006, Elapsed time: 11647.93
+2024-08-02 07:13:25 - [34m[1mLOGS   [0m - Epoch:   7 [   61757/  200000], loss: {'classification': 35.1968, 'neural_augmentation': 0.1817, 'total_loss': 35.3784}, LR: [0.000874, 0.000874], Avg. batch load time: 0.006, Elapsed time: 11760.12
+2024-08-02 07:15:17 - [34m[1mLOGS   [0m - Epoch:   7 [   61819/  200000], loss: {'classification': 35.1957, 'neural_augmentation': 0.1817, 'total_loss': 35.3775}, LR: [0.000874, 0.000874], Avg. batch load time: 0.006, Elapsed time: 11872.07
+2024-08-02 07:17:09 - [34m[1mLOGS   [0m - Epoch:   7 [   61882/  200000], loss: {'classification': 35.1944, 'neural_augmentation': 0.1818, 'total_loss': 35.3763}, LR: [0.000874, 0.000874], Avg. batch load time: 0.006, Elapsed time: 11984.01
+2024-08-02 07:19:01 - [34m[1mLOGS   [0m - Epoch:   7 [   61944/  200000], loss: {'classification': 35.1929, 'neural_augmentation': 0.1819, 'total_loss': 35.3748}, LR: [0.000873, 0.000873], Avg. batch load time: 0.006, Elapsed time: 12095.92
+2024-08-02 07:20:53 - [34m[1mLOGS   [0m - Epoch:   7 [   62007/  200000], loss: {'classification': 35.1926, 'neural_augmentation': 0.182, 'total_loss': 35.3746}, LR: [0.000873, 0.000873], Avg. batch load time: 0.006, Elapsed time: 12207.79
+2024-08-02 07:22:45 - [34m[1mLOGS   [0m - Epoch:   7 [   62069/  200000], loss: {'classification': 35.1913, 'neural_augmentation': 0.1821, 'total_loss': 35.3735}, LR: [0.000872, 0.000872], Avg. batch load time: 0.006, Elapsed time: 12319.88
+2024-08-02 07:24:37 - [34m[1mLOGS   [0m - Epoch:   7 [   62132/  200000], loss: {'classification': 35.1914, 'neural_augmentation': 0.1822, 'total_loss': 35.3737}, LR: [0.000872, 0.000872], Avg. batch load time: 0.006, Elapsed time: 12431.77
+2024-08-02 07:26:31 - [34m[1mLOGS   [0m - Epoch:   7 [   62194/  200000], loss: {'classification': 35.1908, 'neural_augmentation': 0.1823, 'total_loss': 35.3731}, LR: [0.000872, 0.000872], Avg. batch load time: 0.006, Elapsed time: 12545.71
+2024-08-02 07:28:29 - [34m[1mLOGS   [0m - Epoch:   7 [   62257/  200000], loss: {'classification': 35.1902, 'neural_augmentation': 0.1824, 'total_loss': 35.3726}, LR: [0.000871, 0.000871], Avg. batch load time: 0.006, Elapsed time: 12664.18
+2024-08-02 07:30:21 - [34m[1mLOGS   [0m - Epoch:   7 [   62319/  200000], loss: {'classification': 35.1898, 'neural_augmentation': 0.1825, 'total_loss': 35.3723}, LR: [0.000871, 0.000871], Avg. batch load time: 0.006, Elapsed time: 12775.89
+2024-08-02 07:32:13 - [34m[1mLOGS   [0m - Epoch:   7 [   62382/  200000], loss: {'classification': 35.1898, 'neural_augmentation': 0.1826, 'total_loss': 35.3724}, LR: [0.000871, 0.000871], Avg. batch load time: 0.006, Elapsed time: 12887.81
+2024-08-02 07:34:04 - [34m[1mLOGS   [0m - Epoch:   7 [   62444/  200000], loss: {'classification': 35.1882, 'neural_augmentation': 0.1827, 'total_loss': 35.3709}, LR: [0.00087, 0.00087], Avg. batch load time: 0.006, Elapsed time: 12999.42
+2024-08-02 07:35:57 - [34m[1mLOGS   [0m - Epoch:   7 [   62507/  200000], loss: {'classification': 35.1875, 'neural_augmentation': 0.1828, 'total_loss': 35.3703}, LR: [0.00087, 0.00087], Avg. batch load time: 0.005, Elapsed time: 13111.58
+2024-08-02 07:37:49 - [34m[1mLOGS   [0m - Epoch:   7 [   62569/  200000], loss: {'classification': 35.187, 'neural_augmentation': 0.1829, 'total_loss': 35.3699}, LR: [0.00087, 0.00087], Avg. batch load time: 0.005, Elapsed time: 13223.61
+2024-08-02 07:39:41 - [34m[1mLOGS   [0m - Epoch:   7 [   62632/  200000], loss: {'classification': 35.1865, 'neural_augmentation': 0.183, 'total_loss': 35.3695}, LR: [0.000869, 0.000869], Avg. batch load time: 0.005, Elapsed time: 13335.85
+2024-08-02 07:41:33 - [34m[1mLOGS   [0m - Epoch:   7 [   62694/  200000], loss: {'classification': 35.1859, 'neural_augmentation': 0.1831, 'total_loss': 35.369}, LR: [0.000869, 0.000869], Avg. batch load time: 0.005, Elapsed time: 13448.05
+2024-08-02 07:43:25 - [34m[1mLOGS   [0m - Epoch:   7 [   62757/  200000], loss: {'classification': 35.1848, 'neural_augmentation': 0.1832, 'total_loss': 35.368}, LR: [0.000868, 0.000868], Avg. batch load time: 0.005, Elapsed time: 13560.34
+2024-08-02 07:45:17 - [34m[1mLOGS   [0m - Epoch:   7 [   62819/  200000], loss: {'classification': 35.1844, 'neural_augmentation': 0.1833, 'total_loss': 35.3677}, LR: [0.000868, 0.000868], Avg. batch load time: 0.005, Elapsed time: 13672.48
+2024-08-02 07:47:09 - [34m[1mLOGS   [0m - Epoch:   7 [   62882/  200000], loss: {'classification': 35.1832, 'neural_augmentation': 0.1834, 'total_loss': 35.3665}, LR: [0.000868, 0.000868], Avg. batch load time: 0.005, Elapsed time: 13784.01
+2024-08-02 07:49:03 - [34m[1mLOGS   [0m - Epoch:   7 [   62944/  200000], loss: {'classification': 35.1826, 'neural_augmentation': 0.1835, 'total_loss': 35.3661}, LR: [0.000867, 0.000867], Avg. batch load time: 0.005, Elapsed time: 13897.74
+2024-08-02 07:51:03 - [34m[1mLOGS   [0m - Epoch:   7 [   63007/  200000], loss: {'classification': 35.1827, 'neural_augmentation': 0.1836, 'total_loss': 35.3662}, LR: [0.000867, 0.000867], Avg. batch load time: 0.005, Elapsed time: 14017.79
+2024-08-02 07:52:55 - [34m[1mLOGS   [0m - Epoch:   7 [   63069/  200000], loss: {'classification': 35.1826, 'neural_augmentation': 0.1837, 'total_loss': 35.3662}, LR: [0.000867, 0.000867], Avg. batch load time: 0.005, Elapsed time: 14129.74
+2024-08-02 07:54:47 - [34m[1mLOGS   [0m - Epoch:   7 [   63132/  200000], loss: {'classification': 35.1821, 'neural_augmentation': 0.1838, 'total_loss': 35.3659}, LR: [0.000866, 0.000866], Avg. batch load time: 0.005, Elapsed time: 14241.64
+2024-08-02 07:56:38 - [34m[1mLOGS   [0m - Epoch:   7 [   63194/  200000], loss: {'classification': 35.1813, 'neural_augmentation': 0.1839, 'total_loss': 35.3652}, LR: [0.000866, 0.000866], Avg. batch load time: 0.005, Elapsed time: 14353.47
+2024-08-02 07:58:30 - [34m[1mLOGS   [0m - Epoch:   7 [   63257/  200000], loss: {'classification': 35.1806, 'neural_augmentation': 0.184, 'total_loss': 35.3646}, LR: [0.000865, 0.000865], Avg. batch load time: 0.005, Elapsed time: 14465.18
+2024-08-02 07:59:55 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
+	 loss={'classification': 35.1809, 'neural_augmentation': 0.184, 'total_loss': 35.365}
+2024-08-02 07:59:58 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/checkpoint_best.pt
+2024-08-02 07:59:59 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/training_checkpoint_last.pt
+2024-08-02 07:59:59 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/checkpoint_last.pt
+2024-08-02 08:00:01 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 63304 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/training_checkpoint_epoch_7_iter_63304.pt
+2024-08-02 08:00:01 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 63304 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_new_dci/train/checkpoint_epoch_7_iter_63304.pt
+[31m===========================================================================[0m
+2024-08-02 08:00:03 - [32m[1mINFO   [0m - Training epoch 8
+2024-08-02 08:01:13 - [34m[1mLOGS   [0m - Epoch:   8 [   63304/  200000], loss: {'classification': 34.0062, 'neural_augmentation': 0.201, 'total_loss': 34.2072}, LR: [0.000865, 0.000865], Avg. batch load time: 68.096, Elapsed time: 69.66
+2024-08-02 08:03:09 - [34m[1mLOGS   [0m - Epoch:   8 [   63366/  200000], loss: {'classification': 35.1007, 'neural_augmentation': 0.1967, 'total_loss': 35.2974}, LR: [0.000865, 0.000865], Avg. batch load time: 0.139, Elapsed time: 186.17
+2024-08-02 08:05:01 - [34m[1mLOGS   [0m - Epoch:   8 [   63429/  200000], loss: {'classification': 35.0837, 'neural_augmentation': 0.1967, 'total_loss': 35.2805}, LR: [0.000864, 0.000864], Avg. batch load time: 0.070, Elapsed time: 298.05
+2024-08-02 08:06:53 - [34m[1mLOGS   [0m - Epoch:   8 [   63491/  200000], loss: {'classification': 35.0809, 'neural_augmentation': 0.1968, 'total_loss': 35.2777}, LR: [0.000864, 0.000864], Avg. batch load time: 0.047, Elapsed time: 410.03
+2024-08-02 08:08:45 - [34m[1mLOGS   [0m - Epoch:   8 [   63554/  200000], loss: {'classification': 35.07, 'neural_augmentation': 0.197, 'total_loss': 35.267}, LR: [0.000864, 0.000864], Avg. batch load time: 0.036, Elapsed time: 521.82
+2024-08-02 08:10:37 - [34m[1mLOGS   [0m - Epoch:   8 [   63616/  200000], loss: {'classification': 35.0724, 'neural_augmentation': 0.1972, 'total_loss': 35.2695}, LR: [0.000863, 0.000863], Avg. batch load time: 0.029, Elapsed time: 633.48
+2024-08-02 08:12:28 - [34m[1mLOGS   [0m - Epoch:   8 [   63679/  200000], loss: {'classification': 35.0817, 'neural_augmentation': 0.1973, 'total_loss': 35.279}, LR: [0.000863, 0.000863], Avg. batch load time: 0.024, Elapsed time: 745.24
+2024-08-02 08:14:20 - [34m[1mLOGS   [0m - Epoch:   8 [   63741/  200000], loss: {'classification': 35.0714, 'neural_augmentation': 0.1974, 'total_loss': 35.2688}, LR: [0.000863, 0.000863], Avg. batch load time: 0.021, Elapsed time: 857.24
+2024-08-02 08:16:13 - [34m[1mLOGS   [0m - Epoch:   8 [   63804/  200000], loss: {'classification': 35.0793, 'neural_augmentation': 0.1975, 'total_loss': 35.2768}, LR: [0.000862, 0.000862], Avg. batch load time: 0.018, Elapsed time: 969.57
+2024-08-02 08:18:05 - [34m[1mLOGS   [0m - Epoch:   8 [   63866/  200000], loss: {'classification': 35.073, 'neural_augmentation': 0.1976, 'total_loss': 35.2707}, LR: [0.000862, 0.000862], Avg. batch load time: 0.016, Elapsed time: 1081.62
+2024-08-02 08:19:56 - [34m[1mLOGS   [0m - Epoch:   8 [   63929/  200000], loss: {'classification': 35.0704, 'neural_augmentation': 0.1977, 'total_loss': 35.2682}, LR: [0.000861, 0.000861], Avg. batch load time: 0.015, Elapsed time: 1193.41
+2024-08-02 08:21:48 - [34m[1mLOGS   [0m - Epoch:   8 [   63991/  200000], loss: {'classification': 35.073, 'neural_augmentation': 0.1978, 'total_loss': 35.2708}, LR: [0.000861, 0.000861], Avg. batch load time: 0.014, Elapsed time: 1305.31
+2024-08-02 08:23:45 - [34m[1mLOGS   [0m - Epoch:   8 [   64054/  200000], loss: {'classification': 35.0727, 'neural_augmentation': 0.1979, 'total_loss': 35.2706}, LR: [0.000861, 0.000861], Avg. batch load time: 0.013, Elapsed time: 1422.34
+2024-08-02 08:25:43 - [34m[1mLOGS   [0m - Epoch:   8 [   64116/  200000], loss: {'classification': 35.0838, 'neural_augmentation': 0.1981, 'total_loss': 35.2819}, LR: [0.00086, 0.00086], Avg. batch load time: 0.012, Elapsed time: 1539.81
+2024-08-02 08:27:35 - [34m[1mLOGS   [0m - Epoch:   8 [   64179/  200000], loss: {'classification': 35.0793, 'neural_augmentation': 0.1982, 'total_loss': 35.2775}, LR: [0.00086, 0.00086], Avg. batch load time: 0.011, Elapsed time: 1651.58
+2024-08-02 08:29:26 - [34m[1mLOGS   [0m - Epoch:   8 [   64241/  200000], loss: {'classification': 35.0786, 'neural_augmentation': 0.1983, 'total_loss': 35.2769}, LR: [0.00086, 0.00086], Avg. batch load time: 0.010, Elapsed time: 1763.40
+2024-08-02 08:31:18 - [34m[1mLOGS   [0m - Epoch:   8 [   64304/  200000], loss: {'classification': 35.0806, 'neural_augmentation': 0.1984, 'total_loss': 35.2791}, LR: [0.000859, 0.000859], Avg. batch load time: 0.010, Elapsed time: 1875.24
+2024-08-02 08:33:10 - [34m[1mLOGS   [0m - Epoch:   8 [   64366/  200000], loss: {'classification': 35.0743, 'neural_augmentation': 0.1986, 'total_loss': 35.2728}, LR: [0.000859, 0.000859], Avg. batch load time: 0.009, Elapsed time: 1987.43
+2024-08-02 08:35:03 - [34m[1mLOGS   [0m - Epoch:   8 [   64429/  200000], loss: {'classification': 35.0756, 'neural_augmentation': 0.1987, 'total_loss': 35.2742}, LR: [0.000858, 0.000858], Avg. batch load time: 0.009, Elapsed time: 2099.49
+2024-08-02 08:36:54 - [34m[1mLOGS   [0m - Epoch:   8 [   64491/  200000], loss: {'classification': 35.0769, 'neural_augmentation': 0.1988, 'total_loss': 35.2757}, LR: [0.000858, 0.000858], Avg. batch load time: 0.008, Elapsed time: 2211.43
+2024-08-02 08:38:47 - [34m[1mLOGS   [0m - Epoch:   8 [   64554/  200000], loss: {'classification': 35.0752, 'neural_augmentation': 0.1989, 'total_loss': 35.2741}, LR: [0.000858, 0.000858], Avg. batch load time: 0.008, Elapsed time: 2323.72
+2024-08-02 08:40:39 - [34m[1mLOGS   [0m - Epoch:   8 [   64616/  200000], loss: {'classification': 35.0741, 'neural_augmentation': 0.199, 'total_loss': 35.273}, LR: [0.000857, 0.000857], Avg. batch load time: 0.008, Elapsed time: 2435.98
+2024-08-02 08:42:31 - [34m[1mLOGS   [0m - Epoch:   8 [   64679/  200000], loss: {'classification': 35.0729, 'neural_augmentation': 0.1991, 'total_loss': 35.272}, LR: [0.000857, 0.000857], Avg. batch load time: 0.007, Elapsed time: 2548.13
+2024-08-02 08:44:23 - [34m[1mLOGS   [0m - Epoch:   8 [   64741/  200000], loss: {'classification': 35.0768, 'neural_augmentation': 0.1992, 'total_loss': 35.276}, LR: [0.000857, 0.000857], Avg. batch load time: 0.007, Elapsed time: 2660.23
+2024-08-02 08:46:17 - [34m[1mLOGS   [0m - Epoch:   8 [   64804/  200000], loss: {'classification': 35.0741, 'neural_augmentation': 0.1993, 'total_loss': 35.2734}, LR: [0.000856, 0.000856], Avg. batch load time: 0.007, Elapsed time: 2773.82
+2024-08-02 08:48:19 - [34m[1mLOGS   [0m - Epoch:   8 [   64866/  200000], loss: {'classification': 35.0702, 'neural_augmentation': 0.1994, 'total_loss': 35.2696}, LR: [0.000856, 0.000856], Avg. batch load time: 0.007, Elapsed time: 2895.52
+2024-08-02 08:50:11 - [34m[1mLOGS   [0m - Epoch:   8 [   64929/  200000], loss: {'classification': 35.068, 'neural_augmentation': 0.1995, 'total_loss': 35.2675}, LR: [0.000855, 0.000855], Avg. batch load time: 0.006, Elapsed time: 3007.53
+2024-08-02 08:52:03 - [34m[1mLOGS   [0m - Epoch:   8 [   64991/  200000], loss: {'classification': 35.0685, 'neural_augmentation': 0.1996, 'total_loss': 35.2681}, LR: [0.000855, 0.000855], Avg. batch load time: 0.006, Elapsed time: 3119.65
+2024-08-02 08:53:55 - [34m[1mLOGS   [0m - Epoch:   8 [   65054/  200000], loss: {'classification': 35.0666, 'neural_augmentation': 0.1997, 'total_loss': 35.2663}, LR: [0.000855, 0.000855], Avg. batch load time: 0.006, Elapsed time: 3231.59
+2024-08-02 08:55:47 - [34m[1mLOGS   [0m - Epoch:   8 [   65116/  200000], loss: {'classification': 35.067, 'neural_augmentation': 0.1998, 'total_loss': 35.2668}, LR: [0.000854, 0.000854], Avg. batch load time: 0.006, Elapsed time: 3343.55
+2024-08-02 08:57:38 - [34m[1mLOGS   [0m - Epoch:   8 [   65179/  200000], loss: {'classification': 35.0658, 'neural_augmentation': 0.1999, 'total_loss': 35.2658}, LR: [0.000854, 0.000854], Avg. batch load time: 0.006, Elapsed time: 3455.41
+2024-08-02 08:59:30 - [34m[1mLOGS   [0m - Epoch:   8 [   65241/  200000], loss: {'classification': 35.065, 'neural_augmentation': 0.2, 'total_loss': 35.2651}, LR: [0.000854, 0.000854], Avg. batch load time: 0.006, Elapsed time: 3567.39
+2024-08-02 09:01:22 - [34m[1mLOGS   [0m - Epoch:   8 [   65304/  200000], loss: {'classification': 35.0651, 'neural_augmentation': 0.2001, 'total_loss': 35.2652}, LR: [0.000853, 0.000853], Avg. batch load time: 0.005, Elapsed time: 3679.31
+2024-08-02 09:03:14 - [34m[1mLOGS   [0m - Epoch:   8 [   65366/  200000], loss: {'classification': 35.0625, 'neural_augmentation': 0.2003, 'total_loss': 35.2627}, LR: [0.000853, 0.000853], Avg. batch load time: 0.005, Elapsed time: 3791.32
+2024-08-02 09:05:06 - [34m[1mLOGS   [0m - Epoch:   8 [   65429/  200000], loss: {'classification': 35.0614, 'neural_augmentation': 0.2004, 'total_loss': 35.2617}, LR: [0.000852, 0.000852], Avg. batch load time: 0.005, Elapsed time: 3903.24
+2024-08-02 09:06:58 - [34m[1mLOGS   [0m - Epoch:   8 [   65491/  200000], loss: {'classification': 35.0643, 'neural_augmentation': 0.2005, 'total_loss': 35.2648}, LR: [0.000852, 0.000852], Avg. batch load time: 0.005, Elapsed time: 4014.99
+2024-08-02 09:08:50 - [34m[1mLOGS   [0m - Epoch:   8 [   65554/  200000], loss: {'classification': 35.064, 'neural_augmentation': 0.2006, 'total_loss': 35.2645}, LR: [0.000852, 0.000852], Avg. batch load time: 0.005, Elapsed time: 4126.98
+2024-08-02 09:10:53 - [34m[1mLOGS   [0m - Epoch:   8 [   65616/  200000], loss: {'classification': 35.0608, 'neural_augmentation': 0.2007, 'total_loss': 35.2615}, LR: [0.000851, 0.000851], Avg. batch load time: 0.005, Elapsed time: 4250.14
+2024-08-02 09:12:45 - [34m[1mLOGS   [0m - Epoch:   8 [   65679/  200000], loss: {'classification': 35.0625, 'neural_augmentation': 0.2008, 'total_loss': 35.2633}, LR: [0.000851, 0.000851], Avg. batch load time: 0.005, Elapsed time: 4362.37
+2024-08-02 09:14:38 - [34m[1mLOGS   [0m - Epoch:   8 [   65741/  200000], loss: {'classification': 35.0629, 'neural_augmentation': 0.2009, 'total_loss': 35.2638}, LR: [0.00085, 0.00085], Avg. batch load time: 0.005, Elapsed time: 4474.55
+2024-08-02 09:16:29 - [34m[1mLOGS   [0m - Epoch:   8 [   65804/  200000], loss: {'classification': 35.0647, 'neural_augmentation': 0.201, 'total_loss': 35.2657}, LR: [0.00085, 0.00085], Avg. batch load time: 0.005, Elapsed time: 4586.47
+2024-08-02 09:18:21 - [34m[1mLOGS   [0m - Epoch:   8 [   65866/  200000], loss: {'classification': 35.0665, 'neural_augmentation': 0.2011, 'total_loss': 35.2676}, LR: [0.00085, 0.00085], Avg. batch load time: 0.004, Elapsed time: 4698.42
+2024-08-02 09:20:14 - [34m[1mLOGS   [0m - Epoch:   8 [   65929/  200000], loss: {'classification': 35.063, 'neural_augmentation': 0.2013, 'total_loss': 35.2643}, LR: [0.000849, 0.000849], Avg. batch load time: 0.004, Elapsed time: 4810.54
+2024-08-02 09:22:06 - [34m[1mLOGS   [0m - Epoch:   8 [   65991/  200000], loss: {'classification': 35.0637, 'neural_augmentation': 0.2014, 'total_loss': 35.265}, LR: [0.000849, 0.000849], Avg. batch load time: 0.004, Elapsed time: 4922.94
+2024-08-02 09:23:58 - [34m[1mLOGS   [0m - Epoch:   8 [   66054/  200000], loss: {'classification': 35.0648, 'neural_augmentation': 0.2015, 'total_loss': 35.2663}, LR: [0.000849, 0.000849], Avg. batch load time: 0.004, Elapsed time: 5035.09
+2024-08-02 09:25:50 - [34m[1mLOGS   [0m - Epoch:   8 [   66116/  200000], loss: {'classification': 35.062, 'neural_augmentation': 0.2016, 'total_loss': 35.2636}, LR: [0.000848, 0.000848], Avg. batch load time: 0.004, Elapsed time: 5147.16
+2024-08-02 09:27:42 - [34m[1mLOGS   [0m - Epoch:   8 [   66179/  200000], loss: {'classification': 35.0617, 'neural_augmentation': 0.2017, 'total_loss': 35.2634}, LR: [0.000848, 0.000848], Avg. batch load time: 0.004, Elapsed time: 5259.13
+2024-08-02 09:29:34 - [34m[1mLOGS   [0m - Epoch:   8 [   66241/  200000], loss: {'classification': 35.0633, 'neural_augmentation': 0.2018, 'total_loss': 35.2652}, LR: [0.000847, 0.000847], Avg. batch load time: 0.004, Elapsed time: 5371.08
+2024-08-02 09:31:27 - [34m[1mLOGS   [0m - Epoch:   8 [   66304/  200000], loss: {'classification': 35.0645, 'neural_augmentation': 0.202, 'total_loss': 35.2665}, LR: [0.000847, 0.000847], Avg. batch load time: 0.004, Elapsed time: 5483.52
+2024-08-02 09:33:27 - [34m[1mLOGS   [0m - Epoch:   8 [   66366/  200000], loss: {'classification': 35.0656, 'neural_augmentation': 0.2021, 'total_loss': 35.2677}, LR: [0.000847, 0.000847], Avg. batch load time: 0.004, Elapsed time: 5603.90
+2024-08-02 09:35:22 - [34m[1mLOGS   [0m - Epoch:   8 [   66429/  200000], loss: {'classification': 35.0645, 'neural_augmentation': 0.2022, 'total_loss': 35.2667}, LR: [0.000846, 0.000846], Avg. batch load time: 0.004, Elapsed time: 5719.32
+2024-08-02 09:37:14 - [34m[1mLOGS   [0m - Epoch:   8 [   66491/  200000], loss: {'classification': 35.0648, 'neural_augmentation': 0.2023, 'total_loss': 35.2671}, LR: [0.000846, 0.000846], Avg. batch load time: 0.004, Elapsed time: 5831.27
+2024-08-02 09:39:06 - [34m[1mLOGS   [0m - Epoch:   8 [   66554/  200000], loss: {'classification': 35.0643, 'neural_augmentation': 0.2024, 'total_loss': 35.2667}, LR: [0.000845, 0.000845], Avg. batch load time: 0.004, Elapsed time: 5943.28
+2024-08-02 09:40:58 - [34m[1mLOGS   [0m - Epoch:   8 [   66616/  200000], loss: {'classification': 35.0651, 'neural_augmentation': 0.2025, 'total_loss': 35.2676}, LR: [0.000845, 0.000845], Avg. batch load time: 0.004, Elapsed time: 6055.46
+2024-08-02 09:42:51 - [34m[1mLOGS   [0m - Epoch:   8 [   66679/  200000], loss: {'classification': 35.0668, 'neural_augmentation': 0.2026, 'total_loss': 35.2694}, LR: [0.000845, 0.000845], Avg. batch load time: 0.004, Elapsed time: 6167.50
+2024-08-02 09:44:43 - [34m[1mLOGS   [0m - Epoch:   8 [   66741/  200000], loss: {'classification': 35.0668, 'neural_augmentation': 0.2027, 'total_loss': 35.2695}, LR: [0.000844, 0.000844], Avg. batch load time: 0.004, Elapsed time: 6279.60
+2024-08-02 09:46:35 - [34m[1mLOGS   [0m - Epoch:   8 [   66804/  200000], loss: {'classification': 35.0649, 'neural_augmentation': 0.2028, 'total_loss': 35.2677}, LR: [0.000844, 0.000844], Avg. batch load time: 0.004, Elapsed time: 6391.65
+2024-08-02 09:48:27 - [34m[1mLOGS   [0m - Epoch:   8 [   66866/  200000], loss: {'classification': 35.0622, 'neural_augmentation': 0.2029, 'total_loss': 35.2652}, LR: [0.000843, 0.000843], Avg. batch load time: 0.004, Elapsed time: 6503.85
+2024-08-02 09:50:19 - [34m[1mLOGS   [0m - Epoch:   8 [   66929/  200000], loss: {'classification': 35.0619, 'neural_augmentation': 0.2031, 'total_loss': 35.265}, LR: [0.000843, 0.000843], Avg. batch load time: 0.003, Elapsed time: 6615.76
+2024-08-02 09:52:11 - [34m[1mLOGS   [0m - Epoch:   8 [   66991/  200000], loss: {'classification': 35.0624, 'neural_augmentation': 0.2032, 'total_loss': 35.2656}, LR: [0.000843, 0.000843], Avg. batch load time: 0.003, Elapsed time: 6727.85
+2024-08-02 09:54:03 - [34m[1mLOGS   [0m - Epoch:   8 [   67054/  200000], loss: {'classification': 35.0618, 'neural_augmentation': 0.2033, 'total_loss': 35.2651}, LR: [0.000842, 0.000842], Avg. batch load time: 0.003, Elapsed time: 6839.84
+2024-08-02 09:55:56 - [34m[1mLOGS   [0m - Epoch:   8 [   67116/  200000], loss: {'classification': 35.0604, 'neural_augmentation': 0.2034, 'total_loss': 35.2638}, LR: [0.000842, 0.000842], Avg. batch load time: 0.003, Elapsed time: 6953.34
+2024-08-02 09:58:00 - [34m[1mLOGS   [0m - Epoch:   8 [   67179/  200000], loss: {'classification': 35.0581, 'neural_augmentation': 0.2035, 'total_loss': 35.2616}, LR: [0.000841, 0.000841], Avg. batch load time: 0.003, Elapsed time: 7076.70
+2024-08-02 09:59:52 - [34m[1mLOGS   [0m - Epoch:   8 [   67241/  200000], loss: {'classification': 35.0577, 'neural_augmentation': 0.2036, 'total_loss': 35.2613}, LR: [0.000841, 0.000841], Avg. batch load time: 0.003, Elapsed time: 7188.50
+2024-08-02 10:01:44 - [34m[1mLOGS   [0m - Epoch:   8 [   67304/  200000], loss: {'classification': 35.0571, 'neural_augmentation': 0.2037, 'total_loss': 35.2608}, LR: [0.000841, 0.000841], Avg. batch load time: 0.003, Elapsed time: 7300.54
+2024-08-02 10:03:35 - [34m[1mLOGS   [0m - Epoch:   8 [   67366/  200000], loss: {'classification': 35.0568, 'neural_augmentation': 0.2038, 'total_loss': 35.2606}, LR: [0.00084, 0.00084], Avg. batch load time: 0.003, Elapsed time: 7412.44
+2024-08-02 10:05:28 - [34m[1mLOGS   [0m - Epoch:   8 [   67429/  200000], loss: {'classification': 35.0577, 'neural_augmentation': 0.2039, 'total_loss': 35.2617}, LR: [0.00084, 0.00084], Avg. batch load time: 0.003, Elapsed time: 7524.85
+2024-08-02 10:07:20 - [34m[1mLOGS   [0m - Epoch:   8 [   67491/  200000], loss: {'classification': 35.0568, 'neural_augmentation': 0.2041, 'total_loss': 35.2608}, LR: [0.000839, 0.000839], Avg. batch load time: 0.003, Elapsed time: 7636.98
+2024-08-02 10:09:12 - [34m[1mLOGS   [0m - Epoch:   8 [   67554/  200000], loss: {'classification': 35.0562, 'neural_augmentation': 0.2042, 'total_loss': 35.2604}, LR: [0.000839, 0.000839], Avg. batch load time: 0.003, Elapsed time: 7748.98
+2024-08-02 10:11:04 - [34m[1mLOGS   [0m - Epoch:   8 [   67616/  200000], loss: {'classification': 35.0564, 'neural_augmentation': 0.2043, 'total_loss': 35.2607}, LR: [0.000839, 0.000839], Avg. batch load time: 0.003, Elapsed time: 7861.01
+2024-08-02 10:12:55 - [34m[1mLOGS   [0m - Epoch:   8 [   67679/  200000], loss: {'classification': 35.0558, 'neural_augmentation': 0.2044, 'total_loss': 35.2602}, LR: [0.000838, 0.000838], Avg. batch load time: 0.003, Elapsed time: 7972.44
+2024-08-02 10:14:47 - [34m[1mLOGS   [0m - Epoch:   8 [   67741/  200000], loss: {'classification': 35.0559, 'neural_augmentation': 0.2045, 'total_loss': 35.2604}, LR: [0.000838, 0.000838], Avg. batch load time: 0.003, Elapsed time: 8084.35
+2024-08-02 10:16:39 - [34m[1mLOGS   [0m - Epoch:   8 [   67804/  200000], loss: {'classification': 35.0566, 'neural_augmentation': 0.2046, 'total_loss': 35.2612}, LR: [0.000837, 0.000837], Avg. batch load time: 0.003, Elapsed time: 8196.33
+2024-08-02 10:18:31 - [34m[1mLOGS   [0m - Epoch:   8 [   67866/  200000], loss: {'classification': 35.0564, 'neural_augmentation': 0.2047, 'total_loss': 35.2611}, LR: [0.000837, 0.000837], Avg. batch load time: 0.003, Elapsed time: 8308.27
+2024-08-02 10:20:36 - [34m[1mLOGS   [0m - Epoch:   8 [   67929/  200000], loss: {'classification': 35.0562, 'neural_augmentation': 0.2049, 'total_loss': 35.261}, LR: [0.000837, 0.000837], Avg. batch load time: 0.003, Elapsed time: 8432.83
+2024-08-02 10:22:28 - [34m[1mLOGS   [0m - Epoch:   8 [   67991/  200000], loss: {'classification': 35.0566, 'neural_augmentation': 0.205, 'total_loss': 35.2616}, LR: [0.000836, 0.000836], Avg. batch load time: 0.003, Elapsed time: 8544.76
+2024-08-02 10:24:20 - [34m[1mLOGS   [0m - Epoch:   8 [   68054/  200000], loss: {'classification': 35.0544, 'neural_augmentation': 0.2051, 'total_loss': 35.2595}, LR: [0.000836, 0.000836], Avg. batch load time: 0.003, Elapsed time: 8656.92
+2024-08-02 10:26:12 - [34m[1mLOGS   [0m - Epoch:   8 [   68116/  200000], loss: {'classification': 35.0534, 'neural_augmentation': 0.2052, 'total_loss': 35.2586}, LR: [0.000835, 0.000835], Avg. batch load time: 0.003, Elapsed time: 8768.97
+2024-08-02 10:28:04 - [34m[1mLOGS   [0m - Epoch:   8 [   68179/  200000], loss: {'classification': 35.0532, 'neural_augmentation': 0.2053, 'total_loss': 35.2585}, LR: [0.000835, 0.000835], Avg. batch load time: 0.003, Elapsed time: 8881.21
+2024-08-02 10:29:56 - [34m[1mLOGS   [0m - Epoch:   8 [   68241/  200000], loss: {'classification': 35.0521, 'neural_augmentation': 0.2054, 'total_loss': 35.2575}, LR: [0.000835, 0.000835], Avg. batch load time: 0.003, Elapsed time: 8993.39
+2024-08-02 10:31:49 - [34m[1mLOGS   [0m - Epoch:   8 [   68304/  200000], loss: {'classification': 35.0518, 'neural_augmentation': 0.2055, 'total_loss': 35.2573}, LR: [0.000834, 0.000834], Avg. batch load time: 0.003, Elapsed time: 9105.54
+2024-08-02 10:33:41 - [34m[1mLOGS   [0m - Epoch:   8 [   68366/  200000], loss: {'classification': 35.0526, 'neural_augmentation': 0.2057, 'total_loss': 35.2583}, LR: [0.000834, 0.000834], Avg. batch load time: 0.003, Elapsed time: 9217.89
+2024-08-02 10:35:33 - [34m[1mLOGS   [0m - Epoch:   8 [   68429/  200000], loss: {'classification': 35.0525, 'neural_augmentation': 0.2058, 'total_loss': 35.2583}, LR: [0.000833, 0.000833], Avg. batch load time: 0.003, Elapsed time: 9330.33
+2024-08-02 10:37:26 - [34m[1mLOGS   [0m - Epoch:   8 [   68491/  200000], loss: {'classification': 35.0517, 'neural_augmentation': 0.2059, 'total_loss': 35.2576}, LR: [0.000833, 0.000833], Avg. batch load time: 0.003, Elapsed time: 9442.91
+2024-08-02 10:39:18 - [34m[1mLOGS   [0m - Epoch:   8 [   68554/  200000], loss: {'classification': 35.0515, 'neural_augmentation': 0.206, 'total_loss': 35.2576}, LR: [0.000833, 0.000833], Avg. batch load time: 0.003, Elapsed time: 9555.16
+2024-08-02 10:41:16 - [34m[1mLOGS   [0m - Epoch:   8 [   68616/  200000], loss: {'classification': 35.0515, 'neural_augmentation': 0.2061, 'total_loss': 35.2576}, LR: [0.000832, 0.000832], Avg. batch load time: 0.003, Elapsed time: 9672.84
+2024-08-02 10:43:17 - [34m[1mLOGS   [0m - Epoch:   8 [   68679/  200000], loss: {'classification': 35.0506, 'neural_augmentation': 0.2062, 'total_loss': 35.2569}, LR: [0.000832, 0.000832], Avg. batch load time: 0.003, Elapsed time: 9794.02
+2024-08-02 10:45:12 - [34m[1mLOGS   [0m - Epoch:   8 [   68741/  200000], loss: {'classification': 35.0512, 'neural_augmentation': 0.2064, 'total_loss': 35.2576}, LR: [0.000831, 0.000831], Avg. batch load time: 0.003, Elapsed time: 9909.35
+2024-08-02 10:47:05 - [34m[1mLOGS   [0m - Epoch:   8 [   68804/  200000], loss: {'classification': 35.0512, 'neural_augmentation': 0.2065, 'total_loss': 35.2577}, LR: [0.000831, 0.000831], Avg. batch load time: 0.003, Elapsed time: 10021.70
+2024-08-02 10:48:57 - [34m[1mLOGS   [0m - Epoch:   8 [   68866/  200000], loss: {'classification': 35.0518, 'neural_augmentation': 0.2066, 'total_loss': 35.2584}, LR: [0.000831, 0.000831], Avg. batch load time: 0.003, Elapsed time: 10133.91
+2024-08-02 10:50:49 - [34m[1mLOGS   [0m - Epoch:   8 [   68929/  200000], loss: {'classification': 35.0513, 'neural_augmentation': 0.2067, 'total_loss': 35.258}, LR: [0.00083, 0.00083], Avg. batch load time: 0.003, Elapsed time: 10246.24
+2024-08-02 10:52:41 - [34m[1mLOGS   [0m - Epoch:   8 [   68991/  200000], loss: {'classification': 35.0514, 'neural_augmentation': 0.2068, 'total_loss': 35.2583}, LR: [0.00083, 0.00083], Avg. batch load time: 0.003, Elapsed time: 10358.43
+2024-08-02 10:54:34 - [34m[1mLOGS   [0m - Epoch:   8 [   69054/  200000], loss: {'classification': 35.0506, 'neural_augmentation': 0.2069, 'total_loss': 35.2576}, LR: [0.000829, 0.000829], Avg. batch load time: 0.003, Elapsed time: 10470.52
+2024-08-02 10:56:26 - [34m[1mLOGS   [0m - Epoch:   8 [   69116/  200000], loss: {'classification': 35.0505, 'neural_augmentation': 0.207, 'total_loss': 35.2576}, LR: [0.000829, 0.000829], Avg. batch load time: 0.003, Elapsed time: 10582.74
+2024-08-02 10:58:18 - [34m[1mLOGS   [0m - Epoch:   8 [   69179/  200000], loss: {'classification': 35.0491, 'neural_augmentation': 0.2072, 'total_loss': 35.2562}, LR: [0.000829, 0.000829], Avg. batch load time: 0.003, Elapsed time: 10694.83
+2024-08-02 11:00:10 - [34m[1mLOGS   [0m - Epoch:   8 [   69241/  200000], loss: {'classification': 35.0493, 'neural_augmentation': 0.2073, 'total_loss': 35.2566}, LR: [0.000828, 0.000828], Avg. batch load time: 0.003, Elapsed time: 10807.35
+2024-08-02 11:02:02 - [34m[1mLOGS   [0m - Epoch:   8 [   69304/  200000], loss: {'classification': 35.049, 'neural_augmentation': 0.2074, 'total_loss': 35.2564}, LR: [0.000828, 0.000828], Avg. batch load time: 0.003, Elapsed time: 10919.46
+2024-08-02 11:03:55 - [34m[1mLOGS   [0m - Epoch:   8 [   69366/  200000], loss: {'classification': 35.0499, 'neural_augmentation': 0.2075, 'total_loss': 35.2574}, LR: [0.000827, 0.000827], Avg. batch load time: 0.003, Elapsed time: 11032.10
+2024-08-02 11:05:49 - [34m[1mLOGS   [0m - Epoch:   8 [   69429/  200000], loss: {'classification': 35.0495, 'neural_augmentation': 0.2076, 'total_loss': 35.2571}, LR: [0.000827, 0.000827], Avg. batch load time: 0.003, Elapsed time: 11146.23
+2024-08-02 11:07:51 - [34m[1mLOGS   [0m - Epoch:   8 [   69491/  200000], loss: {'classification': 35.0472, 'neural_augmentation': 0.2077, 'total_loss': 35.255}, LR: [0.000827, 0.000827], Avg. batch load time: 0.003, Elapsed time: 11268.21
+2024-08-02 11:09:44 - [34m[1mLOGS   [0m - Epoch:   8 [   69554/  200000], loss: {'classification': 35.0469, 'neural_augmentation': 0.2078, 'total_loss': 35.2548}, LR: [0.000826, 0.000826], Avg. batch load time: 0.003, Elapsed time: 11380.80
+2024-08-02 11:11:36 - [34m[1mLOGS   [0m - Epoch:   8 [   69616/  200000], loss: {'classification': 35.0471, 'neural_augmentation': 0.208, 'total_loss': 35.255}, LR: [0.000826, 0.000826], Avg. batch load time: 0.003, Elapsed time: 11492.88
+2024-08-02 11:13:28 - [34m[1mLOGS   [0m - Epoch:   8 [   69679/  200000], loss: {'classification': 35.0465, 'neural_augmentation': 0.2081, 'total_loss': 35.2546}, LR: [0.000825, 0.000825], Avg. batch load time: 0.003, Elapsed time: 11605.03
+2024-08-02 11:15:20 - [34m[1mLOGS   [0m - Epoch:   8 [   69741/  200000], loss: {'classification': 35.0459, 'neural_augmentation': 0.2082, 'total_loss': 35.2541}, LR: [0.000825, 0.000825], Avg. batch load time: 0.002, Elapsed time: 11717.44
+2024-08-02 11:17:13 - [34m[1mLOGS   [0m - Epoch:   8 [   69804/  200000], loss: {'classification': 35.0459, 'neural_augmentation': 0.2083, 'total_loss': 35.2542}, LR: [0.000824, 0.000824], Avg. batch load time: 0.002, Elapsed time: 11829.56
+2024-08-02 11:19:05 - [34m[1mLOGS   [0m - Epoch:   8 [   69866/  200000], loss: {'classification': 35.0459, 'neural_augmentation': 0.2084, 'total_loss': 35.2543}, LR: [0.000824, 0.000824], Avg. batch load time: 0.002, Elapsed time: 11941.91
+2024-08-02 11:20:58 - [34m[1mLOGS   [0m - Epoch:   8 [   69929/  200000], loss: {'classification': 35.0454, 'neural_augmentation': 0.2085, 'total_loss': 35.254}, LR: [0.000824, 0.000824], Avg. batch load time: 0.002, Elapsed time: 12054.66
+2024-08-02 11:22:50 - [34m[1mLOGS   [0m - Epoch:   8 [   69991/  200000], loss: {'classification': 35.0443, 'neural_augmentation': 0.2087, 'total_loss': 35.2529}, LR: [0.000823, 0.000823], Avg. batch load time: 0.002, Elapsed time: 12167.15
+2024-08-02 11:24:43 - [34m[1mLOGS   [0m - Epoch:   8 [   70054/  200000], loss: {'classification': 35.0429, 'neural_augmentation': 0.2088, 'total_loss': 35.2516}, LR: [0.000823, 0.000823], Avg. batch load time: 0.002, Elapsed time: 12279.53
+2024-08-02 11:26:35 - [34m[1mLOGS   [0m - Epoch:   8 [   70116/  200000], loss: {'classification': 35.0424, 'neural_augmentation': 0.2089, 'total_loss': 35.2513}, LR: [0.000822, 0.000822], Avg. batch load time: 0.002, Elapsed time: 12391.95
+2024-08-02 11:28:27 - [34m[1mLOGS   [0m - Epoch:   8 [   70179/  200000], loss: {'classification': 35.0412, 'neural_augmentation': 0.209, 'total_loss': 35.2502}, LR: [0.000822, 0.000822], Avg. batch load time: 0.002, Elapsed time: 12504.14
+2024-08-02 11:30:32 - [34m[1mLOGS   [0m - Epoch:   8 [   70241/  200000], loss: {'classification': 35.0405, 'neural_augmentation': 0.2091, 'total_loss': 35.2496}, LR: [0.000822, 0.000822], Avg. batch load time: 0.002, Elapsed time: 12628.70
+2024-08-02 11:32:24 - [34m[1mLOGS   [0m - Epoch:   8 [   70304/  200000], loss: {'classification': 35.0402, 'neural_augmentation': 0.2093, 'total_loss': 35.2495}, LR: [0.000821, 0.000821], Avg. batch load time: 0.002, Elapsed time: 12740.96
+2024-08-02 11:34:16 - [34m[1mLOGS   [0m - Epoch:   8 [   70366/  200000], loss: {'classification': 35.0391, 'neural_augmentation': 0.2094, 'total_loss': 35.2484}, LR: [0.000821, 0.000821], Avg. batch load time: 0.002, Elapsed time: 12853.04
+2024-08-02 11:36:08 - [34m[1mLOGS   [0m - Epoch:   8 [   70429/  200000], loss: {'classification': 35.0388, 'neural_augmentation': 0.2095, 'total_loss': 35.2483}, LR: [0.00082, 0.00082], Avg. batch load time: 0.002, Elapsed time: 12965.40
+2024-08-02 11:38:01 - [34m[1mLOGS   [0m - Epoch:   8 [   70491/  200000], loss: {'classification': 35.0385, 'neural_augmentation': 0.2096, 'total_loss': 35.2482}, LR: [0.00082, 0.00082], Avg. batch load time: 0.002, Elapsed time: 13077.62
+2024-08-02 11:39:53 - [34m[1mLOGS   [0m - Epoch:   8 [   70554/  200000], loss: {'classification': 35.0372, 'neural_augmentation': 0.2097, 'total_loss': 35.2469}, LR: [0.00082, 0.00082], Avg. batch load time: 0.002, Elapsed time: 13189.92
+2024-08-02 11:41:46 - [34m[1mLOGS   [0m - Epoch:   8 [   70616/  200000], loss: {'classification': 35.0365, 'neural_augmentation': 0.2098, 'total_loss': 35.2464}, LR: [0.000819, 0.000819], Avg. batch load time: 0.002, Elapsed time: 13302.65
+2024-08-02 11:43:38 - [34m[1mLOGS   [0m - Epoch:   8 [   70679/  200000], loss: {'classification': 35.0358, 'neural_augmentation': 0.21, 'total_loss': 35.2458}, LR: [0.000819, 0.000819], Avg. batch load time: 0.002, Elapsed time: 13415.21
+2024-08-02 11:45:30 - [34m[1mLOGS   [0m - Epoch:   8 [   70741/  200000], loss: {'classification': 35.0349, 'neural_augmentation': 0.2101, 'total_loss': 35.245}, LR: [0.000818, 0.000818], Avg. batch load time: 0.002, Elapsed time: 13527.42
+2024-08-02 11:47:23 - [34m[1mLOGS   [0m - Epoch:   8 [   70804/  200000], loss: {'classification': 35.0334, 'neural_augmentation': 0.2102, 'total_loss': 35.2436}, LR: [0.000818, 0.000818], Avg. batch load time: 0.002, Elapsed time: 13639.59
+2024-08-02 11:49:15 - [34m[1mLOGS   [0m - Epoch:   8 [   70866/  200000], loss: {'classification': 35.0325, 'neural_augmentation': 0.2103, 'total_loss': 35.2428}, LR: [0.000817, 0.000817], Avg. batch load time: 0.002, Elapsed time: 13751.97
+2024-08-02 11:51:07 - [34m[1mLOGS   [0m - Epoch:   8 [   70929/  200000], loss: {'classification': 35.0324, 'neural_augmentation': 0.2104, 'total_loss': 35.2429}, LR: [0.000817, 0.000817], Avg. batch load time: 0.002, Elapsed time: 13864.20
+2024-08-02 11:53:10 - [34m[1mLOGS   [0m - Epoch:   8 [   70991/  200000], loss: {'classification': 35.0314, 'neural_augmentation': 0.2106, 'total_loss': 35.242}, LR: [0.000817, 0.000817], Avg. batch load time: 0.002, Elapsed time: 13987.15
+2024-08-02 11:55:02 - [34m[1mLOGS   [0m - Epoch:   8 [   71054/  200000], loss: {'classification': 35.032, 'neural_augmentation': 0.2107, 'total_loss': 35.2427}, LR: [0.000816, 0.000816], Avg. batch load time: 0.002, Elapsed time: 14099.30
+2024-08-02 11:56:54 - [34m[1mLOGS   [0m - Epoch:   8 [   71116/  200000], loss: {'classification': 35.0319, 'neural_augmentation': 0.2108, 'total_loss': 35.2427}, LR: [0.000816, 0.000816], Avg. batch load time: 0.002, Elapsed time: 14211.29
+2024-08-02 11:58:47 - [34m[1mLOGS   [0m - Epoch:   8 [   71179/  200000], loss: {'classification': 35.0302, 'neural_augmentation': 0.2109, 'total_loss': 35.2411}, LR: [0.000815, 0.000815], Avg. batch load time: 0.002, Elapsed time: 14323.60
+2024-08-02 11:59:51 - [34m[1mLOGS   [0m - *** Training summary for epoch 8
+	 loss={'classification': 35.0298, 'neural_augmentation': 0.211, 'total_loss': 35.2407}
+Terminated
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1616 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,1711 @@
+nohup: ignoring input
+2024-08-04 06:06:59 - [93m[1mDEBUG   [0m - Cannot load internal arguments, skipping.
+/ML-A800/home/guoshuyue/madehua/code/corenet/projects/catlip/image_classification/food101/foodv_small.yaml
+{'taskname': '+ ViT-B/16 [FT-IN1k]', 'common': {'run_label': 'train', 'log_freq': 500, 'auto_resume': True, 'mixed_precision': True, 'mixed_precision_dtype': 'bfloat16', 'grad_clip': 1.0, 'save_all_checkpoints': True}, 'dataset': {'root_train': '/ML-A100/team/mm/models/food101/food101/train_images', 'root_val': '/ML-A100/team/mm/models/food101/food101/test_images', 'train_batch_size0': 128, 'val_batch_size0': 100, 'eval_batch_size0': 100, 'workers': 64, 'persistent_workers': True, 'pin_memory': True, 'name': 'imagenet', 'category': 'classification'}, 'image_augmentation': {'random_resized_crop': {'enable': True, 'interpolation': 'bilinear'}, 'random_horizontal_flip': {'enable': True}, 'resize': {'enable': True, 'size': 232, 'interpolation': 'bilinear'}, 'center_crop': {'enable': True, 'size': 224}}, 'sampler': {'name': 'variable_batch_sampler', 'vbs': {'crop_size_width': 224, 'crop_size_height': 224, 'max_n_scales': 25, 'min_crop_size_width': 128, 'max_crop_size_width': 320, 'min_crop_size_height': 128, 'max_crop_size_height': 320, 'check_scale': 32}}, 'loss': {'category': 'composite_loss', 'composite_loss': [{'loss_category': 'classification', 'loss_weight': 1.0, 'classification': {'name': 'cross_entropy', 'cross_entropy': {'label_smoothing': 0.1}}}, {'loss_category': 'neural_augmentation', 'loss_weight': 1.0, 'neural_augmentation': {'perceptual_metric': 'psnr', 'target_value': [40, 20], 'curriculum_method': 'cosine'}}]}, 'optim': {'name': 'adamw', 'weight_decay': 0.05, 'no_decay_bn_filter_bias': True, 'adamw': {'beta1': 0.9, 'beta2': 0.999}}, 'scheduler': {'name': 'cosine', 'max_epochs': 30, 'warmup_iterations': 500, 'warmup_init_lr': 1e-06, 'cosine': {'max_lr': 5e-05, 'min_lr': 5e-06}}, 'model': {'activation_checkpointing': True, 'resume_exclude_scopes': ['classifier'], 'ft': True, 'classification': {'name': 'foodv', 'n_classes': 101, 'pretrained': '/ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt', 'foodv': {'mode': 'small', 'norm_layer': 'layer_norm_fp32', 'use_flash_attention': True, 'connector_type': 'dci'}}, 'learn_augmentation': {'brightness': True, 'contrast': True, 'noise': True, 'mode': 'distribution'}, 'activation': {'name': 'gelu'}, 'layer': {'conv_init': 'kaiming_normal', 'linear_init': 'trunc_normal', 'linear_init_std_dev': 0.02}}, 'ema': {'enable': False, 'momentum': 0.0005}, 'stats': {'train': ['loss'], 'val': ['loss', 'top1', 'top5'], 'checkpoint_metric': 'top1.logits', 'checkpoint_metric_max': True}}
+small
+dci
+2024-08-04 06:07:02 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
+2024-08-04 06:07:02 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-04 06:07:02 - [34m[1mLOGS   [0m - [36mModel[0m
+Foodv(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (64,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=256)
+            (conv3_1x1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256)
+            (conv3_1x1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((128,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=512, bias=True)
+  )
+  (fc_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=512, out_features=101, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                              Foodv Summary
+[31m=================================================================[0m
+Total parameters     =   25.707 M
+Total trainable parameters =   25.707 M
+
+2024-08-04 06:07:02 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-04 06:07:02 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 25.707M                | 3.385G     |
+|  pos_embed                           |  (1, 1, 256)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  0.93M                 |  1.411G    |
+|   patch_embed.backbone.stem          |   38.848K              |   0.488G   |
+|    patch_embed.backbone.stem.conv1   |    1.792K              |    21.676M |
+|    patch_embed.backbone.stem.norm1   |    0.128K              |    4.014M  |
+|    patch_embed.backbone.stem.conv2   |    36.928K             |    0.462G  |
+|   patch_embed.backbone.stages        |   0.595M               |   0.865G   |
+|    patch_embed.backbone.stages.0     |    71.552K             |    0.379G  |
+|    patch_embed.backbone.stages.1     |    0.524M              |    0.486G  |
+|   patch_embed.backbone.pool          |   0.295M               |   58.305M  |
+|    patch_embed.backbone.pool.proj    |    0.295M              |    57.803M |
+|    patch_embed.backbone.pool.norm    |    0.256K              |    0.502M  |
+|  blocks                              |  4.614M                |  0.904G    |
+|   blocks.0                           |   0.659M               |   0.129G   |
+|    blocks.0.norm1                    |    0.512K              |    0.251M  |
+|    blocks.0.attn                     |    0.263M              |    51.38M  |
+|    blocks.0.norm2                    |    0.512K              |    0.251M  |
+|    blocks.0.mlp                      |    0.395M              |    77.321M |
+|   blocks.1                           |   0.659M               |   0.129G   |
+|    blocks.1.norm1                    |    0.512K              |    0.251M  |
+|    blocks.1.attn                     |    0.263M              |    51.38M  |
+|    blocks.1.norm2                    |    0.512K              |    0.251M  |
+|    blocks.1.mlp                      |    0.395M              |    77.321M |
+|   blocks.2                           |   0.659M               |   0.129G   |
+|    blocks.2.norm1                    |    0.512K              |    0.251M  |
+|    blocks.2.attn                     |    0.263M              |    51.38M  |
+|    blocks.2.norm2                    |    0.512K              |    0.251M  |
+|    blocks.2.mlp                      |    0.395M              |    77.321M |
+|   blocks.3                           |   0.659M               |   0.129G   |
+|    blocks.3.norm1                    |    0.512K              |    0.251M  |
+|    blocks.3.attn                     |    0.263M              |    51.38M  |
+|    blocks.3.norm2                    |    0.512K              |    0.251M  |
+|    blocks.3.mlp                      |    0.395M              |    77.321M |
+|   blocks.4                           |   0.659M               |   0.129G   |
+|    blocks.4.norm1                    |    0.512K              |    0.251M  |
+|    blocks.4.attn                     |    0.263M              |    51.38M  |
+|    blocks.4.norm2                    |    0.512K              |    0.251M  |
+|    blocks.4.mlp                      |    0.395M              |    77.321M |
+|   blocks.5                           |   0.659M               |   0.129G   |
+|    blocks.5.norm1                    |    0.512K              |    0.251M  |
+|    blocks.5.attn                     |    0.263M              |    51.38M  |
+|    blocks.5.norm2                    |    0.512K              |    0.251M  |
+|    blocks.5.mlp                      |    0.395M              |    77.321M |
+|   blocks.6                           |   0.659M               |   0.129G   |
+|    blocks.6.norm1                    |    0.512K              |    0.251M  |
+|    blocks.6.attn                     |    0.263M              |    51.38M  |
+|    blocks.6.norm2                    |    0.512K              |    0.251M  |
+|    blocks.6.mlp                      |    0.395M              |    77.321M |
+|  pool                                |  1.181M                |  0.116G    |
+|   pool.proj                          |   1.18M                |   0.116G   |
+|    pool.proj.weight                  |    (512, 256, 3, 3)    |            |
+|    pool.proj.bias                    |    (512,)              |            |
+|   pool.norm                          |   0.512K               |   0.502M   |
+|    pool.norm.weight                  |    (256,)              |            |
+|    pool.norm.bias                    |    (256,)              |            |
+|  blocks1                             |  18.404M               |  0.902G    |
+|   blocks1.0                          |   2.629M               |   0.129G   |
+|    blocks1.0.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.0.attn                    |    1.051M              |    51.38M  |
+|    blocks1.0.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.0.mlp                     |    1.576M              |    77.196M |
+|   blocks1.1                          |   2.629M               |   0.129G   |
+|    blocks1.1.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.1.attn                    |    1.051M              |    51.38M  |
+|    blocks1.1.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.1.mlp                     |    1.576M              |    77.196M |
+|   blocks1.2                          |   2.629M               |   0.129G   |
+|    blocks1.2.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.2.attn                    |    1.051M              |    51.38M  |
+|    blocks1.2.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.2.mlp                     |    1.576M              |    77.196M |
+|   blocks1.3                          |   2.629M               |   0.129G   |
+|    blocks1.3.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.3.attn                    |    1.051M              |    51.38M  |
+|    blocks1.3.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.3.mlp                     |    1.576M              |    77.196M |
+|   blocks1.4                          |   2.629M               |   0.129G   |
+|    blocks1.4.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.4.attn                    |    1.051M              |    51.38M  |
+|    blocks1.4.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.4.mlp                     |    1.576M              |    77.196M |
+|   blocks1.5                          |   2.629M               |   0.129G   |
+|    blocks1.5.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.5.attn                    |    1.051M              |    51.38M  |
+|    blocks1.5.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.5.mlp                     |    1.576M              |    77.196M |
+|   blocks1.6                          |   2.629M               |   0.129G   |
+|    blocks1.6.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.6.attn                    |    1.051M              |    51.38M  |
+|    blocks1.6.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.6.mlp                     |    1.576M              |    77.196M |
+|  mlp                                 |  0.525M                |  51.38M    |
+|   mlp.0                              |   0.263M               |   25.69M   |
+|    mlp.0.weight                      |    (512, 512)          |            |
+|    mlp.0.bias                        |    (512,)              |            |
+|   mlp.2                              |   0.263M               |   25.69M   |
+|    mlp.2.weight                      |    (512, 512)          |            |
+|    mlp.2.bias                        |    (512,)              |            |
+|  fc_norm                             |  1.024K                |  2.56K     |
+|   fc_norm.weight                     |   (512,)               |            |
+|   fc_norm.bias                       |   (512,)               |            |
+|  classifier                          |  51.813K               |  51.712K   |
+|   classifier.weight                  |   (101, 512)           |            |
+|   classifier.bias                    |   (101,)               |            |
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks.0.attn.q_norm', 'blocks1.3.drop_path1', 'blocks.0.ls1', 'blocks1.4.ls1', 'blocks.4.attn.k_norm', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.5.attn.q_norm', 'blocks1.4.attn.k_norm', 'neural_augmentor.noise.max_fn', 'blocks.0.ls2', 'neural_augmentor.brightness.min_fn', 'blocks1.3.attn.q_norm', 'patch_embed.backbone.stages.1.1.shortcut', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks1.0.attn.attn_drop', 'blocks1.5.attn.attn_drop', 'blocks1.5.drop_path1', 'patch_drop', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'blocks.6.attn.attn_drop', 'blocks.5.drop_path1', 'blocks.3.attn.attn_drop', 'neural_augmentor.noise.min_fn', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks.5.attn.attn_drop', 'blocks1.6.drop_path1', 'blocks1.6.ls1', 'blocks.5.drop_path2', 'neural_augmentor', 'blocks.0.attn.k_norm', 'norm_pre', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks.2.drop_path1', 'blocks.1.ls2', 'blocks1.6.attn.k_norm', 'patch_embed.backbone.stages.1.3.drop_path', 'blocks.0.drop_path2', 'blocks.0.attn.attn_drop', 'blocks1.0.attn.q_norm', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks.1.drop_path2', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks.2.ls1', 'neural_augmentor.noise', 'blocks1.2.attn.attn_drop', 'blocks1.3.drop_path2', 'blocks1.2.attn.q_norm', 'neural_augmentor.contrast.max_fn', 'blocks1.3.attn.attn_drop', 'blocks.2.attn.q_norm', 'blocks.4.attn.attn_drop', 'blocks1.6.ls2', 'neural_augmentor.brightness.max_fn', 'blocks.5.attn.k_norm', 'patch_embed.proj', 'blocks.4.attn.q_norm', 'patch_embed.backbone.stages.0.1.down', 'blocks.0.drop_path1', 'blocks.5.ls1', 'blocks1.3.ls2', 'neural_augmentor.brightness', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks1.6.drop_path2', 'blocks.1.ls1', 'norm', 'blocks1.0.drop_path2', 'blocks1.1.ls1', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks.3.attn.q_norm', 'blocks1.2.ls1', 'blocks1.0.attn.k_norm', 'blocks.1.attn.q_norm', 'blocks1.1.attn.q_norm', 'blocks.1.drop_path1', 'blocks1.5.attn.k_norm', 'blocks.6.ls2', 'blocks.1.attn.attn_drop', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks1.4.attn.q_norm', 'blocks1.2.attn.k_norm', 'blocks1.5.drop_path2', 'patch_embed.backbone.stages.1.2.down', 'blocks1.3.attn.k_norm', 'blocks1.1.drop_path1', 'blocks.4.drop_path2', 'patch_embed.backbone.stages.0.1.drop_path', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'blocks.1.attn.k_norm', 'neural_augmentor.contrast.min_fn', 'blocks1.2.drop_path1', 'blocks.2.attn.k_norm', 'blocks1.4.drop_path1', 'blocks.4.ls1', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.5.ls2', 'blocks1.6.attn.attn_drop', 'blocks1.1.drop_path2', 'blocks.2.ls2', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks1.5.ls2', 'neural_augmentor.contrast', 'patch_embed.backbone.stages.1.3.down', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'blocks.2.drop_path2', 'blocks.4.drop_path1', 'blocks1.4.drop_path2', 'blocks.6.ls1', 'blocks.2.attn.attn_drop', 'blocks.4.ls2', 'patch_embed.backbone.stages.1.1.down', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'patch_embed.backbone.stages.0.0.drop_path', 'patch_embed.backbone.stages.1.1.drop_path', 'blocks1.1.ls2', 'blocks.3.ls2', 'blocks1.1.attn.attn_drop', 'blocks1.0.ls2', 'blocks1.1.attn.k_norm', 'blocks1.0.drop_path1', 'blocks1.6.attn.q_norm', 'blocks.3.drop_path1', 'blocks1.2.ls2', 'patch_embed.backbone.stem.norm1.drop', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.3.ls1', 'blocks.5.attn.q_norm', 'blocks1.2.drop_path2', 'blocks.6.drop_path1', 'patch_embed.backbone.stages.1.0.down', 'blocks1.3.ls1', 'blocks.6.attn.k_norm', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks.3.attn.k_norm', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'blocks.3.drop_path2', 'blocks1.4.attn.attn_drop', 'blocks.6.attn.q_norm', 'blocks1.5.ls1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.0.0.down', 'blocks.6.drop_path2', 'blocks1.0.ls1'}
+2024-08-04 06:07:05 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - Random seeds are set to 0
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - Using PyTorch version 2.2.1+cu121
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - Available GPUs: 4
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - CUDNN is enabled
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - Setting --ddp.world-size the same as the number of available gpus.
+2024-08-04 06:07:05 - [34m[1mLOGS   [0m - Directory exists at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train
+2024-08-04 06:07:08 - [32m[1mINFO   [0m - distributed init (rank 3): tcp://localhost:30006
+small
+dci
+2024-08-04 06:07:08 - [32m[1mINFO   [0m - distributed init (rank 2): tcp://localhost:30006
+small
+dci
+2024-08-04 06:07:08 - [32m[1mINFO   [0m - distributed init (rank 1): tcp://localhost:30006
+small
+dci
+2024-08-04 06:07:08 - [32m[1mINFO   [0m - distributed init (rank 0): tcp://localhost:30006
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Number of categories: 101
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Total number of samples: 75750
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Training dataset details are given below
+ImageNetDataset(
+	root=/ML-A100/team/mm/models/food101/food101/train_images 
+	is_training=True 
+	num_samples=75750
+	transforms=Compose(
+			RandomResizedCrop(scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), size=(224, 224), interpolation=bilinear), 
+			RandomHorizontalFlip(p=0.5), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	 num_classes=101
+)
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Number of categories: 101
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Total number of samples: 25250
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Using all samples in the dataset.
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Validation dataset details are given below
+ImageNetDataset(
+	root=/ML-A100/team/mm/models/food101/food101/test_images 
+	is_training=False 
+	num_samples=25250
+	transforms=Compose(
+			Resize(size=232, interpolation=bilinear, maintain_aspect_ratio=True), 
+			CenterCrop(size=(h=224, w=224)), 
+			ToTensor(dtype=torch.float32, norm_factor=255)
+		)
+	 num_classes=101
+)
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Training sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=128
+	 scales=[(128, 128, 392), (160, 160, 250), (192, 192, 174), (224, 224, 128), (256, 256, 98), (288, 288, 77), (320, 320, 62)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Validation sampler details: VariableBatchSamplerDDP(
+	 num_repeat=1
+	 trunc_rep_aug=False
+	 sharding=False
+	 disable_shuffle_sharding=False
+	 base_im_size=(h=224, w=224)
+	 base_batch_size=100
+	 scales=[(224, 224, 100)]
+	 scale_inc=False
+	 min_scale_inc_factor=1.0
+	 max_scale_inc_factor=1.0
+	 ep_intervals=[40]
+)
+2024-08-04 06:07:10 - [34m[1mLOGS   [0m - Number of data workers: 64
+small
+dci
+2024-08-04 06:07:11 - [34m[1mLOGS   [0m - Pretrained weights are loaded from /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
+2024-08-04 06:07:11 - [32m[1mINFO   [0m - Trainable parameters: ['pos_embed', 'neural_augmentor.brightness._low', 'neural_augmentor.brightness._high', 'neural_augmentor.contrast._low', 'neural_augmentor.contrast._high', 'neural_augmentor.noise._low', 'neural_augmentor.noise._high', 'patch_embed.backbone.stem.conv1.weight', 'patch_embed.backbone.stem.conv1.bias', 'patch_embed.backbone.stem.norm1.weight', 'patch_embed.backbone.stem.norm1.bias', 'patch_embed.backbone.stem.conv2.weight', 'patch_embed.backbone.stem.conv2.bias', 'patch_embed.backbone.stages.0.0.pre_norm.weight', 'patch_embed.backbone.stages.0.0.pre_norm.bias', 'patch_embed.backbone.stages.0.0.conv1_1x1.weight', 'patch_embed.backbone.stages.0.0.conv1_1x1.bias', 'patch_embed.backbone.stages.0.0.conv2_kxk.weight', 'patch_embed.backbone.stages.0.0.conv2_kxk.bias', 'patch_embed.backbone.stages.0.0.conv3_1x1.weight', 'patch_embed.backbone.stages.0.0.conv3_1x1.bias', 'patch_embed.backbone.stages.0.1.pre_norm.weight', 'patch_embed.backbone.stages.0.1.pre_norm.bias', 'patch_embed.backbone.stages.0.1.conv1_1x1.weight', 'patch_embed.backbone.stages.0.1.conv1_1x1.bias', 'patch_embed.backbone.stages.0.1.conv2_kxk.weight', 'patch_embed.backbone.stages.0.1.conv2_kxk.bias', 'patch_embed.backbone.stages.0.1.conv3_1x1.weight', 'patch_embed.backbone.stages.0.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.0.shortcut.expand.weight', 'patch_embed.backbone.stages.1.0.shortcut.expand.bias', 'patch_embed.backbone.stages.1.0.pre_norm.weight', 'patch_embed.backbone.stages.1.0.pre_norm.bias', 'patch_embed.backbone.stages.1.0.conv1_1x1.weight', 'patch_embed.backbone.stages.1.0.conv1_1x1.bias', 'patch_embed.backbone.stages.1.0.conv2_kxk.weight', 'patch_embed.backbone.stages.1.0.conv2_kxk.bias', 'patch_embed.backbone.stages.1.0.conv3_1x1.weight', 'patch_embed.backbone.stages.1.0.conv3_1x1.bias', 'patch_embed.backbone.stages.1.1.pre_norm.weight', 'patch_embed.backbone.stages.1.1.pre_norm.bias', 'patch_embed.backbone.stages.1.1.conv1_1x1.weight', 'patch_embed.backbone.stages.1.1.conv1_1x1.bias', 'patch_embed.backbone.stages.1.1.conv2_kxk.weight', 'patch_embed.backbone.stages.1.1.conv2_kxk.bias', 'patch_embed.backbone.stages.1.1.conv3_1x1.weight', 'patch_embed.backbone.stages.1.1.conv3_1x1.bias', 'patch_embed.backbone.stages.1.2.pre_norm.weight', 'patch_embed.backbone.stages.1.2.pre_norm.bias', 'patch_embed.backbone.stages.1.2.conv1_1x1.weight', 'patch_embed.backbone.stages.1.2.conv1_1x1.bias', 'patch_embed.backbone.stages.1.2.conv2_kxk.weight', 'patch_embed.backbone.stages.1.2.conv2_kxk.bias', 'patch_embed.backbone.stages.1.2.conv3_1x1.weight', 'patch_embed.backbone.stages.1.2.conv3_1x1.bias', 'patch_embed.backbone.stages.1.3.pre_norm.weight', 'patch_embed.backbone.stages.1.3.pre_norm.bias', 'patch_embed.backbone.stages.1.3.conv1_1x1.weight', 'patch_embed.backbone.stages.1.3.conv1_1x1.bias', 'patch_embed.backbone.stages.1.3.conv2_kxk.weight', 'patch_embed.backbone.stages.1.3.conv2_kxk.bias', 'patch_embed.backbone.stages.1.3.conv3_1x1.weight', 'patch_embed.backbone.stages.1.3.conv3_1x1.bias', 'patch_embed.backbone.pool.proj.weight', 'patch_embed.backbone.pool.proj.bias', 'patch_embed.backbone.pool.norm.weight', 'patch_embed.backbone.pool.norm.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.qkv.bias', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.norm.weight', 'blocks.0.mlp.norm.bias', 'blocks.0.mlp.w0.weight', 'blocks.0.mlp.w0.bias', 'blocks.0.mlp.w1.weight', 'blocks.0.mlp.w1.bias', 'blocks.0.mlp.w2.weight', 'blocks.0.mlp.w2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.qkv.bias', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.norm.weight', 'blocks.1.mlp.norm.bias', 'blocks.1.mlp.w0.weight', 'blocks.1.mlp.w0.bias', 'blocks.1.mlp.w1.weight', 'blocks.1.mlp.w1.bias', 'blocks.1.mlp.w2.weight', 'blocks.1.mlp.w2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.qkv.bias', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.norm.weight', 'blocks.2.mlp.norm.bias', 'blocks.2.mlp.w0.weight', 'blocks.2.mlp.w0.bias', 'blocks.2.mlp.w1.weight', 'blocks.2.mlp.w1.bias', 'blocks.2.mlp.w2.weight', 'blocks.2.mlp.w2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.qkv.bias', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.norm.weight', 'blocks.3.mlp.norm.bias', 'blocks.3.mlp.w0.weight', 'blocks.3.mlp.w0.bias', 'blocks.3.mlp.w1.weight', 'blocks.3.mlp.w1.bias', 'blocks.3.mlp.w2.weight', 'blocks.3.mlp.w2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.qkv.bias', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.norm.weight', 'blocks.4.mlp.norm.bias', 'blocks.4.mlp.w0.weight', 'blocks.4.mlp.w0.bias', 'blocks.4.mlp.w1.weight', 'blocks.4.mlp.w1.bias', 'blocks.4.mlp.w2.weight', 'blocks.4.mlp.w2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.qkv.bias', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.norm.weight', 'blocks.5.mlp.norm.bias', 'blocks.5.mlp.w0.weight', 'blocks.5.mlp.w0.bias', 'blocks.5.mlp.w1.weight', 'blocks.5.mlp.w1.bias', 'blocks.5.mlp.w2.weight', 'blocks.5.mlp.w2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.qkv.bias', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.norm.weight', 'blocks.6.mlp.norm.bias', 'blocks.6.mlp.w0.weight', 'blocks.6.mlp.w0.bias', 'blocks.6.mlp.w1.weight', 'blocks.6.mlp.w1.bias', 'blocks.6.mlp.w2.weight', 'blocks.6.mlp.w2.bias', 'pool.proj.weight', 'pool.proj.bias', 'pool.norm.weight', 'pool.norm.bias', 'blocks1.0.norm1.weight', 'blocks1.0.norm1.bias', 'blocks1.0.attn.qkv.weight', 'blocks1.0.attn.qkv.bias', 'blocks1.0.attn.proj.weight', 'blocks1.0.attn.proj.bias', 'blocks1.0.norm2.weight', 'blocks1.0.norm2.bias', 'blocks1.0.mlp.norm.weight', 'blocks1.0.mlp.norm.bias', 'blocks1.0.mlp.w0.weight', 'blocks1.0.mlp.w0.bias', 'blocks1.0.mlp.w1.weight', 'blocks1.0.mlp.w1.bias', 'blocks1.0.mlp.w2.weight', 'blocks1.0.mlp.w2.bias', 'blocks1.1.norm1.weight', 'blocks1.1.norm1.bias', 'blocks1.1.attn.qkv.weight', 'blocks1.1.attn.qkv.bias', 'blocks1.1.attn.proj.weight', 'blocks1.1.attn.proj.bias', 'blocks1.1.norm2.weight', 'blocks1.1.norm2.bias', 'blocks1.1.mlp.norm.weight', 'blocks1.1.mlp.norm.bias', 'blocks1.1.mlp.w0.weight', 'blocks1.1.mlp.w0.bias', 'blocks1.1.mlp.w1.weight', 'blocks1.1.mlp.w1.bias', 'blocks1.1.mlp.w2.weight', 'blocks1.1.mlp.w2.bias', 'blocks1.2.norm1.weight', 'blocks1.2.norm1.bias', 'blocks1.2.attn.qkv.weight', 'blocks1.2.attn.qkv.bias', 'blocks1.2.attn.proj.weight', 'blocks1.2.attn.proj.bias', 'blocks1.2.norm2.weight', 'blocks1.2.norm2.bias', 'blocks1.2.mlp.norm.weight', 'blocks1.2.mlp.norm.bias', 'blocks1.2.mlp.w0.weight', 'blocks1.2.mlp.w0.bias', 'blocks1.2.mlp.w1.weight', 'blocks1.2.mlp.w1.bias', 'blocks1.2.mlp.w2.weight', 'blocks1.2.mlp.w2.bias', 'blocks1.3.norm1.weight', 'blocks1.3.norm1.bias', 'blocks1.3.attn.qkv.weight', 'blocks1.3.attn.qkv.bias', 'blocks1.3.attn.proj.weight', 'blocks1.3.attn.proj.bias', 'blocks1.3.norm2.weight', 'blocks1.3.norm2.bias', 'blocks1.3.mlp.norm.weight', 'blocks1.3.mlp.norm.bias', 'blocks1.3.mlp.w0.weight', 'blocks1.3.mlp.w0.bias', 'blocks1.3.mlp.w1.weight', 'blocks1.3.mlp.w1.bias', 'blocks1.3.mlp.w2.weight', 'blocks1.3.mlp.w2.bias', 'blocks1.4.norm1.weight', 'blocks1.4.norm1.bias', 'blocks1.4.attn.qkv.weight', 'blocks1.4.attn.qkv.bias', 'blocks1.4.attn.proj.weight', 'blocks1.4.attn.proj.bias', 'blocks1.4.norm2.weight', 'blocks1.4.norm2.bias', 'blocks1.4.mlp.norm.weight', 'blocks1.4.mlp.norm.bias', 'blocks1.4.mlp.w0.weight', 'blocks1.4.mlp.w0.bias', 'blocks1.4.mlp.w1.weight', 'blocks1.4.mlp.w1.bias', 'blocks1.4.mlp.w2.weight', 'blocks1.4.mlp.w2.bias', 'blocks1.5.norm1.weight', 'blocks1.5.norm1.bias', 'blocks1.5.attn.qkv.weight', 'blocks1.5.attn.qkv.bias', 'blocks1.5.attn.proj.weight', 'blocks1.5.attn.proj.bias', 'blocks1.5.norm2.weight', 'blocks1.5.norm2.bias', 'blocks1.5.mlp.norm.weight', 'blocks1.5.mlp.norm.bias', 'blocks1.5.mlp.w0.weight', 'blocks1.5.mlp.w0.bias', 'blocks1.5.mlp.w1.weight', 'blocks1.5.mlp.w1.bias', 'blocks1.5.mlp.w2.weight', 'blocks1.5.mlp.w2.bias', 'blocks1.6.norm1.weight', 'blocks1.6.norm1.bias', 'blocks1.6.attn.qkv.weight', 'blocks1.6.attn.qkv.bias', 'blocks1.6.attn.proj.weight', 'blocks1.6.attn.proj.bias', 'blocks1.6.norm2.weight', 'blocks1.6.norm2.bias', 'blocks1.6.mlp.norm.weight', 'blocks1.6.mlp.norm.bias', 'blocks1.6.mlp.w0.weight', 'blocks1.6.mlp.w0.bias', 'blocks1.6.mlp.w1.weight', 'blocks1.6.mlp.w1.bias', 'blocks1.6.mlp.w2.weight', 'blocks1.6.mlp.w2.bias', 'mlp.0.weight', 'mlp.0.bias', 'mlp.2.weight', 'mlp.2.bias', 'fc_norm.weight', 'fc_norm.bias', 'classifier.weight', 'classifier.bias']
+2024-08-04 06:07:11 - [34m[1mLOGS   [0m - [36mModel[0m
+Foodv(
+  (neural_augmentor): DistributionNeuralAugmentor(
+  	Brightness=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Contrast=UniformSampler(min_fn=Clip(min=0.1, max=0.9, clipping=soft), max_fn=Clip(min=1.1, max=10.0, clipping=soft)), 
+  	Noise=UniformSampler(min_fn=Clip(min=0.0, max=5e-05, clipping=soft), max_fn=Clip(min=0.0001, max=1.0, clipping=soft)), )
+  (patch_embed): HybridEmbed(
+    (backbone): MbConvStages(
+      (stem): Stem(
+        (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm1): LayerNormAct2d(
+          (64,), eps=1e-06, elementwise_affine=True
+          (drop): Identity()
+          (act): GELU()
+        )
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (stages): ModuleList(
+        (0): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Identity()
+            )
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=256)
+            (conv3_1x1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256)
+            (conv3_1x1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): MbConvLNBlock(
+            (shortcut): Downsample2d(
+              (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+              (expand): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (pre_norm): LayerNormAct2d(
+              (64,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(64, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (1): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (2): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+          (3): MbConvLNBlock(
+            (shortcut): Identity()
+            (pre_norm): LayerNormAct2d(
+              (128,), eps=1e-06, elementwise_affine=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (down): Identity()
+            (conv1_1x1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (act1): GELU()
+            (act2): GELU()
+            (conv2_kxk): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512)
+            (conv3_1x1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Identity()
+          )
+        )
+      )
+      (pool): StridedConv(
+        (proj): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): LayerNorm2d((128,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+    (proj): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=256, out_features=768, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=256, out_features=256, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=256, out_features=512, bias=True)
+        (w1): Linear(in_features=256, out_features=512, bias=True)
+        (w2): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (pool): StridedConv(
+    (proj): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (norm): LayerNorm2d((256,), eps=1e-06, elementwise_affine=True)
+  )
+  (blocks1): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=512, out_features=1536, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=512, out_features=512, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): Identity()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+      (mlp): GeGluMlp(
+        (norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (act): GELU(approximate='none')
+        (w0): Linear(in_features=512, out_features=1024, bias=True)
+        (w1): Linear(in_features=512, out_features=1024, bias=True)
+        (w2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ls2): Identity()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): Identity()
+  (mlp): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=512, bias=True)
+  )
+  (fc_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+  (classifier_drop): Dropout(p=0.0, inplace=False)
+  (classifier): LinearLayer(in_features=512, out_features=101, bias=True, channel_first=False)
+)
+[31m=================================================================[0m
+                              Foodv Summary
+[31m=================================================================[0m
+Total parameters     =   25.707 M
+Total trainable parameters =   25.707 M
+
+2024-08-04 06:07:11 - [34m[1mLOGS   [0m - FVCore Analysis:
+2024-08-04 06:07:11 - [34m[1mLOGS   [0m - Input sizes: [1, 3, 224, 224]
+| module                               | #parameters or shape   | #flops     |
+|:-------------------------------------|:-----------------------|:-----------|
+| model                                | 25.707M                | 3.385G     |
+|  pos_embed                           |  (1, 1, 256)           |            |
+|  neural_augmentor                    |  6                     |            |
+|   neural_augmentor.brightness        |   2                    |            |
+|    neural_augmentor.brightness._low  |    ()                  |            |
+|    neural_augmentor.brightness._high |    ()                  |            |
+|   neural_augmentor.contrast          |   2                    |            |
+|    neural_augmentor.contrast._low    |    ()                  |            |
+|    neural_augmentor.contrast._high   |    ()                  |            |
+|   neural_augmentor.noise             |   2                    |            |
+|    neural_augmentor.noise._low       |    ()                  |            |
+|    neural_augmentor.noise._high      |    ()                  |            |
+|  patch_embed.backbone                |  0.93M                 |  1.411G    |
+|   patch_embed.backbone.stem          |   38.848K              |   0.488G   |
+|    patch_embed.backbone.stem.conv1   |    1.792K              |    21.676M |
+|    patch_embed.backbone.stem.norm1   |    0.128K              |    4.014M  |
+|    patch_embed.backbone.stem.conv2   |    36.928K             |    0.462G  |
+|   patch_embed.backbone.stages        |   0.595M               |   0.865G   |
+|    patch_embed.backbone.stages.0     |    71.552K             |    0.379G  |
+|    patch_embed.backbone.stages.1     |    0.524M              |    0.486G  |
+|   patch_embed.backbone.pool          |   0.295M               |   58.305M  |
+|    patch_embed.backbone.pool.proj    |    0.295M              |    57.803M |
+|    patch_embed.backbone.pool.norm    |    0.256K              |    0.502M  |
+|  blocks                              |  4.614M                |  0.904G    |
+|   blocks.0                           |   0.659M               |   0.129G   |
+|    blocks.0.norm1                    |    0.512K              |    0.251M  |
+|    blocks.0.attn                     |    0.263M              |    51.38M  |
+|    blocks.0.norm2                    |    0.512K              |    0.251M  |
+|    blocks.0.mlp                      |    0.395M              |    77.321M |
+|   blocks.1                           |   0.659M               |   0.129G   |
+|    blocks.1.norm1                    |    0.512K              |    0.251M  |
+|    blocks.1.attn                     |    0.263M              |    51.38M  |
+|    blocks.1.norm2                    |    0.512K              |    0.251M  |
+|    blocks.1.mlp                      |    0.395M              |    77.321M |
+|   blocks.2                           |   0.659M               |   0.129G   |
+|    blocks.2.norm1                    |    0.512K              |    0.251M  |
+|    blocks.2.attn                     |    0.263M              |    51.38M  |
+|    blocks.2.norm2                    |    0.512K              |    0.251M  |
+|    blocks.2.mlp                      |    0.395M              |    77.321M |
+|   blocks.3                           |   0.659M               |   0.129G   |
+|    blocks.3.norm1                    |    0.512K              |    0.251M  |
+|    blocks.3.attn                     |    0.263M              |    51.38M  |
+|    blocks.3.norm2                    |    0.512K              |    0.251M  |
+|    blocks.3.mlp                      |    0.395M              |    77.321M |
+|   blocks.4                           |   0.659M               |   0.129G   |
+|    blocks.4.norm1                    |    0.512K              |    0.251M  |
+|    blocks.4.attn                     |    0.263M              |    51.38M  |
+|    blocks.4.norm2                    |    0.512K              |    0.251M  |
+|    blocks.4.mlp                      |    0.395M              |    77.321M |
+|   blocks.5                           |   0.659M               |   0.129G   |
+|    blocks.5.norm1                    |    0.512K              |    0.251M  |
+|    blocks.5.attn                     |    0.263M              |    51.38M  |
+|    blocks.5.norm2                    |    0.512K              |    0.251M  |
+|    blocks.5.mlp                      |    0.395M              |    77.321M |
+|   blocks.6                           |   0.659M               |   0.129G   |
+|    blocks.6.norm1                    |    0.512K              |    0.251M  |
+|    blocks.6.attn                     |    0.263M              |    51.38M  |
+|    blocks.6.norm2                    |    0.512K              |    0.251M  |
+|    blocks.6.mlp                      |    0.395M              |    77.321M |
+|  pool                                |  1.181M                |  0.116G    |
+|   pool.proj                          |   1.18M                |   0.116G   |
+|    pool.proj.weight                  |    (512, 256, 3, 3)    |            |
+|    pool.proj.bias                    |    (512,)              |            |
+|   pool.norm                          |   0.512K               |   0.502M   |
+|    pool.norm.weight                  |    (256,)              |            |
+|    pool.norm.bias                    |    (256,)              |            |
+|  blocks1                             |  18.404M               |  0.902G    |
+|   blocks1.0                          |   2.629M               |   0.129G   |
+|    blocks1.0.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.0.attn                    |    1.051M              |    51.38M  |
+|    blocks1.0.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.0.mlp                     |    1.576M              |    77.196M |
+|   blocks1.1                          |   2.629M               |   0.129G   |
+|    blocks1.1.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.1.attn                    |    1.051M              |    51.38M  |
+|    blocks1.1.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.1.mlp                     |    1.576M              |    77.196M |
+|   blocks1.2                          |   2.629M               |   0.129G   |
+|    blocks1.2.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.2.attn                    |    1.051M              |    51.38M  |
+|    blocks1.2.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.2.mlp                     |    1.576M              |    77.196M |
+|   blocks1.3                          |   2.629M               |   0.129G   |
+|    blocks1.3.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.3.attn                    |    1.051M              |    51.38M  |
+|    blocks1.3.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.3.mlp                     |    1.576M              |    77.196M |
+|   blocks1.4                          |   2.629M               |   0.129G   |
+|    blocks1.4.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.4.attn                    |    1.051M              |    51.38M  |
+|    blocks1.4.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.4.mlp                     |    1.576M              |    77.196M |
+|   blocks1.5                          |   2.629M               |   0.129G   |
+|    blocks1.5.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.5.attn                    |    1.051M              |    51.38M  |
+|    blocks1.5.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.5.mlp                     |    1.576M              |    77.196M |
+|   blocks1.6                          |   2.629M               |   0.129G   |
+|    blocks1.6.norm1                   |    1.024K              |    0.125M  |
+|    blocks1.6.attn                    |    1.051M              |    51.38M  |
+|    blocks1.6.norm2                   |    1.024K              |    0.125M  |
+|    blocks1.6.mlp                     |    1.576M              |    77.196M |
+|  mlp                                 |  0.525M                |  51.38M    |
+|   mlp.0                              |   0.263M               |   25.69M   |
+|    mlp.0.weight                      |    (512, 512)          |            |
+|    mlp.0.bias                        |    (512,)              |            |
+|   mlp.2                              |   0.263M               |   25.69M   |
+|    mlp.2.weight                      |    (512, 512)          |            |
+|    mlp.2.bias                        |    (512,)              |            |
+|  fc_norm                             |  1.024K                |  2.56K     |
+|   fc_norm.weight                     |   (512,)               |            |
+|   fc_norm.bias                       |   (512,)               |            |
+|  classifier                          |  51.813K               |  51.712K   |
+|   classifier.weight                  |   (101, 512)           |            |
+|   classifier.bias                    |   (101,)               |            |
+2024-08-04 06:07:14 - [33m[1mWARNING[0m - 
+** Please be cautious when using the results in papers. Certain operations may or may not be accounted in FLOP computation in FVCore. Therefore, you want to manually ensure that FLOP computation is correct.
+2024-08-04 06:07:14 - [33m[1mWARNING[0m - Uncalled Modules:
+{'blocks1.3.attn.k_norm', 'blocks1.6.attn.k_norm', 'blocks1.1.drop_path2', 'blocks.3.ls1', 'patch_embed.backbone.stages.1.3.pre_norm.drop', 'patch_embed.proj', 'blocks.2.attn.q_norm', 'blocks1.4.attn.attn_drop', 'patch_embed.backbone.stages.1.1.down', 'neural_augmentor.contrast.min_fn', 'patch_embed.backbone.stages.1.1.pre_norm.drop', 'patch_embed.backbone.stages.1.3.shortcut', 'blocks1.0.ls2', 'blocks.5.attn.attn_drop', 'blocks.1.ls2', 'blocks.6.ls2', 'blocks1.0.drop_path2', 'patch_embed.backbone.stem.norm1.drop', 'blocks.1.drop_path1', 'blocks.6.attn.k_norm', 'patch_embed.backbone.stages.0.1.drop_path', 'blocks1.4.ls1', 'blocks.3.drop_path2', 'blocks.6.attn.q_norm', 'blocks1.3.ls2', 'blocks1.1.ls2', 'blocks1.0.drop_path1', 'blocks1.6.attn.q_norm', 'blocks.6.attn.attn_drop', 'blocks1.4.drop_path2', 'patch_embed.backbone.stages.1.0.pre_norm.act', 'neural_augmentor.noise.max_fn', 'blocks1.1.attn.k_norm', 'neural_augmentor.contrast', 'blocks1.3.ls1', 'blocks1.6.drop_path2', 'patch_embed.backbone.stages.1.2.shortcut', 'blocks.4.ls2', 'blocks.5.attn.k_norm', 'blocks.0.ls1', 'blocks1.5.attn.k_norm', 'patch_embed.backbone.stages.0.1.shortcut', 'blocks.4.drop_path1', 'blocks.0.attn.q_norm', 'blocks1.2.ls1', 'neural_augmentor.brightness.max_fn', 'patch_embed.backbone.stages.0.0.shortcut.expand', 'blocks.1.attn.k_norm', 'neural_augmentor.brightness.min_fn', 'blocks1.5.ls1', 'blocks1.5.drop_path1', 'blocks.2.attn.attn_drop', 'blocks1.1.attn.q_norm', 'blocks1.0.ls1', 'blocks.5.attn.q_norm', 'blocks.3.attn.k_norm', 'blocks1.2.drop_path2', 'blocks.4.ls1', 'patch_embed.backbone.stages.1.2.down', 'blocks1.3.drop_path2', 'blocks1.4.attn.q_norm', 'patch_embed.backbone.stages.1.2.pre_norm.act', 'blocks1.3.attn.attn_drop', 'blocks.6.ls1', 'blocks.5.ls1', 'blocks.1.attn.attn_drop', 'blocks.3.attn.q_norm', 'patch_embed.backbone.stages.1.1.pre_norm.act', 'blocks1.4.attn.k_norm', 'neural_augmentor.noise.min_fn', 'neural_augmentor', 'blocks1.5.attn.q_norm', 'blocks1.5.ls2', 'blocks1.2.attn.q_norm', 'blocks.0.drop_path2', 'blocks1.2.attn.k_norm', 'blocks.0.drop_path1', 'blocks1.1.ls1', 'blocks1.6.ls1', 'patch_embed.backbone.stages.1.0.drop_path', 'blocks1.1.attn.attn_drop', 'blocks1.5.attn.attn_drop', 'blocks1.0.attn.k_norm', 'patch_embed.backbone.stages.1.3.pre_norm.act', 'blocks1.5.drop_path2', 'blocks.4.attn.q_norm', 'blocks1.0.attn.attn_drop', 'neural_augmentor.noise', 'patch_embed.backbone.stages.0.0.pre_norm.drop', 'blocks1.2.attn.attn_drop', 'blocks1.2.drop_path1', 'patch_embed.backbone.stages.1.0.pre_norm.drop', 'blocks.1.attn.q_norm', 'blocks1.1.drop_path1', 'blocks1.6.drop_path1', 'blocks.4.drop_path2', 'neural_augmentor.contrast.max_fn', 'blocks.0.attn.k_norm', 'blocks1.2.ls2', 'blocks.5.drop_path2', 'blocks.5.drop_path1', 'patch_embed.backbone.stages.1.2.pre_norm.drop', 'blocks.3.attn.attn_drop', 'blocks.3.drop_path1', 'blocks1.4.ls2', 'patch_embed.backbone.stages.0.0.down', 'patch_embed.backbone.stages.1.0.down', 'blocks.2.drop_path1', 'blocks.3.ls2', 'blocks.6.drop_path1', 'blocks1.6.attn.attn_drop', 'blocks1.0.attn.q_norm', 'patch_embed.backbone.stages.1.3.drop_path', 'patch_embed.backbone.stages.1.3.down', 'patch_embed.backbone.stages.0.1.pre_norm.act', 'blocks1.3.attn.q_norm', 'blocks.6.drop_path2', 'blocks.4.attn.k_norm', 'neural_augmentor.brightness', 'patch_drop', 'patch_embed.backbone.stages.0.0.drop_path', 'blocks.4.attn.attn_drop', 'blocks.1.ls1', 'blocks.2.drop_path2', 'blocks.5.ls2', 'blocks1.4.drop_path1', 'blocks1.6.ls2', 'blocks1.3.drop_path1', 'patch_embed.backbone.stages.0.1.pre_norm.drop', 'patch_embed.backbone.stages.1.1.drop_path', 'patch_embed.backbone.stages.0.1.down', 'blocks.0.attn.attn_drop', 'blocks.0.ls2', 'patch_embed.backbone.stages.0.0.pre_norm.act', 'blocks.2.ls2', 'blocks.1.drop_path2', 'patch_embed.backbone.stages.1.1.shortcut', 'patch_embed.backbone.stages.1.2.drop_path', 'blocks.2.ls1', 'norm_pre', 'norm', 'blocks.2.attn.k_norm'}
+2024-08-04 06:07:14 - [33m[1mWARNING[0m - Unsupported Ops:
+Counter({'aten::add': 35, 'aten::gelu': 28, 'aten::scaled_dot_product_attention': 14, 'aten::mul': 14, 'aten::add_': 14, 'aten::avg_pool2d': 2, 'aten::div': 2, 'aten::mean': 1})
+[31m=================================================================[0m
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - Using DistributedDataParallel.
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - [36mLoss function[0m
+CompositeLoss(
+	CrossEntropy(  ignore_idx=-1  class_weighting=False  label_smoothing=0.1 loss_wt=1.0)
+	NeuralAugmentation(  target_metric=psnr  target_value=[40, 20]  curriculum_learning=True  alpha=0.0015378700499807767 loss_wt=1.0)
+	
+)
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - [36mOptimizer[0m
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - Max. epochs for training: 30
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - [36mLearning rate scheduler[0m
+CosineScheduler(
+ 	 min_lr=5e-06
+ 	 max_lr=5e-05
+ 	 period=30
+ 	 warmup_init_lr=1e-06
+ 	 warmup_iters=500
+ )
+2024-08-04 06:07:14 - [34m[1mLOGS   [0m - No checkpoint found at '/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt'
+2024-08-04 06:07:14 - [32m[1mINFO   [0m - Configuration file is stored here: [36m/ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/config.yaml[0m
+[31m===========================================================================[0m
+2024-08-04 06:07:16 - [32m[1mINFO   [0m - Training epoch 0
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 512, 1, 1], strides() = [512, 1, 512, 512]
+bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-08-04 06:10:10 - [34m[1mLOGS   [0m - Epoch:   0 [       1/10000000], loss: {'classification': 7.8798, 'neural_augmentation': 0.3169, 'total_loss': 8.1967}, LR: [1e-06, 1e-06], Avg. batch load time: 171.448, Elapsed time: 174.05
+2024-08-04 06:10:32 - [34m[1mLOGS   [0m - *** Training summary for epoch 0
+	 loss={'classification': 5.6117, 'neural_augmentation': 0.3195, 'total_loss': 5.9312}
+2024-08-04 06:13:20 - [34m[1mLOGS   [0m - *** Validation summary for epoch 0
+	 loss={'classification': 2.4708, 'neural_augmentation': 0.0, 'total_loss': 2.4708} || top1={'logits': 47.0156} || top5={'logits': 66.9883}
+2024-08-04 06:13:21 - [34m[1mLOGS   [0m - Best checkpoint with score 47.02 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:13:22 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:13:22 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:13:22 - [34m[1mLOGS   [0m - Training checkpoint for epoch 0/iteration 115 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_0_iter_115.pt
+2024-08-04 06:13:22 - [34m[1mLOGS   [0m - Model state for epoch 0/iteration 115 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_0_iter_115.pt
+[31m===========================================================================[0m
+2024-08-04 06:13:24 - [32m[1mINFO   [0m - Training epoch 1
+2024-08-04 06:13:28 - [34m[1mLOGS   [0m - Epoch:   1 [     116/10000000], loss: {'classification': 3.0325, 'neural_augmentation': 0.3077, 'total_loss': 3.3401}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 3.369, Elapsed time:  3.53
+2024-08-04 06:13:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 1
+	 loss={'classification': 1.9647, 'neural_augmentation': 0.3194, 'total_loss': 2.2841}
+2024-08-04 06:13:59 - [34m[1mLOGS   [0m - *** Validation summary for epoch 1
+	 loss={'classification': 0.4605, 'neural_augmentation': 0.0, 'total_loss': 0.4605} || top1={'logits': 91.2617} || top5={'logits': 97.957}
+2024-08-04 06:14:00 - [34m[1mLOGS   [0m - Best checkpoint with score 91.26 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:14:00 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:14:00 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:14:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 1/iteration 234 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_1_iter_234.pt
+2024-08-04 06:14:01 - [34m[1mLOGS   [0m - Model state for epoch 1/iteration 234 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_1_iter_234.pt
+[31m===========================================================================[0m
+2024-08-04 06:14:03 - [32m[1mINFO   [0m - Training epoch 2
+2024-08-04 06:14:06 - [34m[1mLOGS   [0m - Epoch:   2 [     235/10000000], loss: {'classification': 1.4429, 'neural_augmentation': 0.2996, 'total_loss': 1.7426}, LR: [2.4e-05, 2.4e-05], Avg. batch load time: 3.040, Elapsed time:  3.21
+2024-08-04 06:14:27 - [34m[1mLOGS   [0m - *** Training summary for epoch 2
+	 loss={'classification': 1.4671, 'neural_augmentation': 0.3127, 'total_loss': 1.7798}
+2024-08-04 06:14:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 2
+	 loss={'classification': 0.3724, 'neural_augmentation': 0.0, 'total_loss': 0.3724} || top1={'logits': 93.0703} || top5={'logits': 98.7383}
+2024-08-04 06:14:37 - [34m[1mLOGS   [0m - Best checkpoint with score 93.07 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:14:37 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:14:37 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:14:38 - [34m[1mLOGS   [0m - Training checkpoint for epoch 2/iteration 354 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_2_iter_354.pt
+2024-08-04 06:14:38 - [34m[1mLOGS   [0m - Model state for epoch 2/iteration 354 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_2_iter_354.pt
+[31m===========================================================================[0m
+2024-08-04 06:14:40 - [32m[1mINFO   [0m - Training epoch 3
+2024-08-04 06:14:42 - [34m[1mLOGS   [0m - Epoch:   3 [     355/10000000], loss: {'classification': 1.3156, 'neural_augmentation': 0.3482, 'total_loss': 1.6638}, LR: [3.6e-05, 3.6e-05], Avg. batch load time: 2.222, Elapsed time:  2.38
+2024-08-04 06:15:04 - [34m[1mLOGS   [0m - *** Training summary for epoch 3
+	 loss={'classification': 1.3751, 'neural_augmentation': 0.3104, 'total_loss': 1.6855}
+2024-08-04 06:15:12 - [34m[1mLOGS   [0m - *** Validation summary for epoch 3
+	 loss={'classification': 0.3542, 'neural_augmentation': 0.0, 'total_loss': 0.3542} || top1={'logits': 93.3984} || top5={'logits': 98.9141}
+2024-08-04 06:15:12 - [34m[1mLOGS   [0m - Best checkpoint with score 93.40 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:15:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:15:13 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:15:13 - [34m[1mLOGS   [0m - Training checkpoint for epoch 3/iteration 465 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_3_iter_465.pt
+2024-08-04 06:15:13 - [34m[1mLOGS   [0m - Model state for epoch 3/iteration 465 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_3_iter_465.pt
+[31m===========================================================================[0m
+2024-08-04 06:15:15 - [32m[1mINFO   [0m - Training epoch 4
+2024-08-04 06:15:18 - [34m[1mLOGS   [0m - Epoch:   4 [     466/10000000], loss: {'classification': 1.261, 'neural_augmentation': 0.2629, 'total_loss': 1.5239}, LR: [4.7e-05, 4.7e-05], Avg. batch load time: 2.695, Elapsed time:  2.86
+2024-08-04 06:15:38 - [34m[1mLOGS   [0m - *** Training summary for epoch 4
+	 loss={'classification': 1.3334, 'neural_augmentation': 0.3021, 'total_loss': 1.6355}
+2024-08-04 06:15:47 - [34m[1mLOGS   [0m - *** Validation summary for epoch 4
+	 loss={'classification': 0.3445, 'neural_augmentation': 0.0, 'total_loss': 0.3445} || top1={'logits': 93.6406} || top5={'logits': 99.1055}
+2024-08-04 06:15:47 - [34m[1mLOGS   [0m - Best checkpoint with score 93.64 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:15:48 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:15:48 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:15:48 - [34m[1mLOGS   [0m - Training checkpoint for epoch 4/iteration 568 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_4_iter_568.pt
+2024-08-04 06:15:48 - [34m[1mLOGS   [0m - Model state for epoch 4/iteration 568 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_4_iter_568.pt
+[31m===========================================================================[0m
+2024-08-04 06:15:50 - [32m[1mINFO   [0m - Training epoch 5
+2024-08-04 06:16:00 - [34m[1mLOGS   [0m - Epoch:   5 [     569/10000000], loss: {'classification': 1.3231, 'neural_augmentation': 0.3048, 'total_loss': 1.6279}, LR: [4.7e-05, 4.7e-05], Avg. batch load time: 9.790, Elapsed time:  9.96
+2024-08-04 06:16:18 - [34m[1mLOGS   [0m - *** Training summary for epoch 5
+	 loss={'classification': 1.2768, 'neural_augmentation': 0.2964, 'total_loss': 1.5732}
+2024-08-04 06:16:26 - [34m[1mLOGS   [0m - *** Validation summary for epoch 5
+	 loss={'classification': 0.3099, 'neural_augmentation': 0.0, 'total_loss': 0.3099} || top1={'logits': 93.9297} || top5={'logits': 99.1836}
+2024-08-04 06:16:27 - [34m[1mLOGS   [0m - Best checkpoint with score 93.93 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:16:27 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_47.0156.pt
+2024-08-04 06:16:27 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_91.2617.pt', 'checkpoint_score_93.0703.pt', 'checkpoint_score_93.3984.pt', 'checkpoint_score_93.6406.pt', 'checkpoint_score_93.9297.pt']
+2024-08-04 06:16:28 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:16:29 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:16:29 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:16:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 5/iteration 684 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_5_iter_684.pt
+2024-08-04 06:16:37 - [34m[1mLOGS   [0m - Model state for epoch 5/iteration 684 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_5_iter_684.pt
+[31m===========================================================================[0m
+2024-08-04 06:16:39 - [32m[1mINFO   [0m - Training epoch 6
+2024-08-04 06:16:43 - [34m[1mLOGS   [0m - Epoch:   6 [     685/10000000], loss: {'classification': 1.3501, 'neural_augmentation': 0.2816, 'total_loss': 1.6317}, LR: [4.6e-05, 4.6e-05], Avg. batch load time: 3.405, Elapsed time:  3.57
+2024-08-04 06:17:00 - [34m[1mLOGS   [0m - *** Training summary for epoch 6
+	 loss={'classification': 1.2434, 'neural_augmentation': 0.291, 'total_loss': 1.5344}
+2024-08-04 06:17:09 - [34m[1mLOGS   [0m - *** Validation summary for epoch 6
+	 loss={'classification': 0.313, 'neural_augmentation': 0.0, 'total_loss': 0.313} || top1={'logits': 94.0859} || top5={'logits': 99.1445}
+2024-08-04 06:17:09 - [34m[1mLOGS   [0m - Best checkpoint with score 94.09 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:17:09 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_91.2617.pt
+2024-08-04 06:17:09 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_93.0703.pt', 'checkpoint_score_93.3984.pt', 'checkpoint_score_93.6406.pt', 'checkpoint_score_93.9297.pt', 'checkpoint_score_94.0859.pt']
+2024-08-04 06:17:11 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:17:11 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:17:11 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:17:16 - [34m[1mLOGS   [0m - Training checkpoint for epoch 6/iteration 798 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_6_iter_798.pt
+2024-08-04 06:17:16 - [34m[1mLOGS   [0m - Model state for epoch 6/iteration 798 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_6_iter_798.pt
+[31m===========================================================================[0m
+2024-08-04 06:17:18 - [32m[1mINFO   [0m - Training epoch 7
+2024-08-04 06:17:24 - [34m[1mLOGS   [0m - Epoch:   7 [     799/10000000], loss: {'classification': 1.2733, 'neural_augmentation': 0.2917, 'total_loss': 1.565}, LR: [4.4e-05, 4.4e-05], Avg. batch load time: 5.233, Elapsed time:  5.51
+2024-08-04 06:17:43 - [34m[1mLOGS   [0m - *** Training summary for epoch 7
+	 loss={'classification': 1.2072, 'neural_augmentation': 0.2841, 'total_loss': 1.4913}
+2024-08-04 06:17:52 - [34m[1mLOGS   [0m - *** Validation summary for epoch 7
+	 loss={'classification': 0.3212, 'neural_augmentation': 0.0, 'total_loss': 0.3212} || top1={'logits': 94.1836} || top5={'logits': 99.1406}
+2024-08-04 06:17:53 - [34m[1mLOGS   [0m - Best checkpoint with score 94.18 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:17:53 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_93.0703.pt
+2024-08-04 06:17:53 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_93.3984.pt', 'checkpoint_score_93.6406.pt', 'checkpoint_score_93.9297.pt', 'checkpoint_score_94.0859.pt', 'checkpoint_score_94.1836.pt']
+2024-08-04 06:18:02 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:18:03 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:18:04 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:18:04 - [34m[1mLOGS   [0m - Training checkpoint for epoch 7/iteration 919 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_7_iter_919.pt
+2024-08-04 06:18:04 - [34m[1mLOGS   [0m - Model state for epoch 7/iteration 919 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_7_iter_919.pt
+[31m===========================================================================[0m
+2024-08-04 06:18:06 - [32m[1mINFO   [0m - Training epoch 8
+2024-08-04 06:18:08 - [34m[1mLOGS   [0m - Epoch:   8 [     920/10000000], loss: {'classification': 1.114, 'neural_augmentation': 0.303, 'total_loss': 1.4169}, LR: [4.3e-05, 4.3e-05], Avg. batch load time: 1.058, Elapsed time:  1.22
+2024-08-04 06:18:26 - [34m[1mLOGS   [0m - *** Training summary for epoch 8
+	 loss={'classification': 1.2, 'neural_augmentation': 0.2862, 'total_loss': 1.4861}
+2024-08-04 06:18:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 8
+	 loss={'classification': 0.3169, 'neural_augmentation': 0.0, 'total_loss': 0.3169} || top1={'logits': 94.1367} || top5={'logits': 99.1602}
+2024-08-04 06:18:36 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:18:36 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:18:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 8/iteration 1028 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_8_iter_1028.pt
+2024-08-04 06:18:37 - [34m[1mLOGS   [0m - Model state for epoch 8/iteration 1028 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_8_iter_1028.pt
+[31m===========================================================================[0m
+2024-08-04 06:18:39 - [32m[1mINFO   [0m - Training epoch 9
+2024-08-04 06:18:44 - [34m[1mLOGS   [0m - Epoch:   9 [    1029/10000000], loss: {'classification': 1.1374, 'neural_augmentation': 0.293, 'total_loss': 1.4304}, LR: [4.1e-05, 4.1e-05], Avg. batch load time: 5.528, Elapsed time:  5.69
+2024-08-04 06:19:04 - [34m[1mLOGS   [0m - *** Training summary for epoch 9
+	 loss={'classification': 1.1744, 'neural_augmentation': 0.2853, 'total_loss': 1.4597}
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - *** Validation summary for epoch 9
+	 loss={'classification': 0.3012, 'neural_augmentation': 0.0, 'total_loss': 0.3012} || top1={'logits': 94.3008} || top5={'logits': 99.1641}
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - Best checkpoint with score 94.30 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_93.3984.pt
+2024-08-04 06:19:14 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_93.6406.pt', 'checkpoint_score_93.9297.pt', 'checkpoint_score_94.0859.pt', 'checkpoint_score_94.1836.pt', 'checkpoint_score_94.3008.pt']
+2024-08-04 06:19:21 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:19:23 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:19:23 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:19:24 - [34m[1mLOGS   [0m - Training checkpoint for epoch 9/iteration 1140 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_9_iter_1140.pt
+2024-08-04 06:19:25 - [34m[1mLOGS   [0m - Model state for epoch 9/iteration 1140 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_9_iter_1140.pt
+[31m===========================================================================[0m
+2024-08-04 06:19:27 - [32m[1mINFO   [0m - Training epoch 10
+2024-08-04 06:19:29 - [34m[1mLOGS   [0m - Epoch:  10 [    1141/10000000], loss: {'classification': 1.0786, 'neural_augmentation': 0.2755, 'total_loss': 1.3541}, LR: [3.9e-05, 3.9e-05], Avg. batch load time: 1.880, Elapsed time:  2.04
+2024-08-04 06:19:47 - [34m[1mLOGS   [0m - *** Training summary for epoch 10
+	 loss={'classification': 1.156, 'neural_augmentation': 0.2885, 'total_loss': 1.4445}
+2024-08-04 06:19:56 - [34m[1mLOGS   [0m - *** Validation summary for epoch 10
+	 loss={'classification': 0.3054, 'neural_augmentation': 0.0, 'total_loss': 0.3054} || top1={'logits': 94.3164} || top5={'logits': 99.1445}
+2024-08-04 06:19:56 - [34m[1mLOGS   [0m - Best checkpoint with score 94.32 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:19:57 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_93.6406.pt
+2024-08-04 06:19:57 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_93.9297.pt', 'checkpoint_score_94.0859.pt', 'checkpoint_score_94.1836.pt', 'checkpoint_score_94.3008.pt', 'checkpoint_score_94.3164.pt']
+2024-08-04 06:20:02 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:20:03 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:20:04 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:20:05 - [34m[1mLOGS   [0m - Training checkpoint for epoch 10/iteration 1254 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_10_iter_1254.pt
+2024-08-04 06:20:05 - [34m[1mLOGS   [0m - Model state for epoch 10/iteration 1254 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_10_iter_1254.pt
+[31m===========================================================================[0m
+2024-08-04 06:20:07 - [32m[1mINFO   [0m - Training epoch 11
+2024-08-04 06:20:08 - [34m[1mLOGS   [0m - Epoch:  11 [    1255/10000000], loss: {'classification': 0.9922, 'neural_augmentation': 0.2888, 'total_loss': 1.2809}, LR: [3.7e-05, 3.7e-05], Avg. batch load time: 1.170, Elapsed time:  1.33
+2024-08-04 06:20:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 11
+	 loss={'classification': 1.1385, 'neural_augmentation': 0.2968, 'total_loss': 1.4353}
+2024-08-04 06:20:34 - [34m[1mLOGS   [0m - *** Validation summary for epoch 11
+	 loss={'classification': 0.3146, 'neural_augmentation': 0.0, 'total_loss': 0.3146} || top1={'logits': 94.2305} || top5={'logits': 99.168}
+2024-08-04 06:20:34 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:20:35 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:20:35 - [34m[1mLOGS   [0m - Training checkpoint for epoch 11/iteration 1357 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_11_iter_1357.pt
+2024-08-04 06:20:35 - [34m[1mLOGS   [0m - Model state for epoch 11/iteration 1357 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_11_iter_1357.pt
+[31m===========================================================================[0m
+2024-08-04 06:20:37 - [32m[1mINFO   [0m - Training epoch 12
+2024-08-04 06:20:39 - [34m[1mLOGS   [0m - Epoch:  12 [    1358/10000000], loss: {'classification': 1.0817, 'neural_augmentation': 0.312, 'total_loss': 1.3937}, LR: [3.4e-05, 3.4e-05], Avg. batch load time: 2.032, Elapsed time:  2.21
+2024-08-04 06:21:01 - [34m[1mLOGS   [0m - *** Training summary for epoch 12
+	 loss={'classification': 1.1227, 'neural_augmentation': 0.3086, 'total_loss': 1.4313}
+2024-08-04 06:21:10 - [34m[1mLOGS   [0m - *** Validation summary for epoch 12
+	 loss={'classification': 0.3073, 'neural_augmentation': 0.0, 'total_loss': 0.3073} || top1={'logits': 94.3438} || top5={'logits': 99.1641}
+2024-08-04 06:21:11 - [34m[1mLOGS   [0m - Best checkpoint with score 94.34 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:21:11 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_93.9297.pt
+2024-08-04 06:21:11 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.0859.pt', 'checkpoint_score_94.1836.pt', 'checkpoint_score_94.3008.pt', 'checkpoint_score_94.3164.pt', 'checkpoint_score_94.3438.pt']
+2024-08-04 06:21:16 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:21:18 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:21:18 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:21:19 - [34m[1mLOGS   [0m - Training checkpoint for epoch 12/iteration 1473 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_12_iter_1473.pt
+2024-08-04 06:21:20 - [34m[1mLOGS   [0m - Model state for epoch 12/iteration 1473 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_12_iter_1473.pt
+[31m===========================================================================[0m
+2024-08-04 06:21:22 - [32m[1mINFO   [0m - Training epoch 13
+2024-08-04 06:21:23 - [34m[1mLOGS   [0m - Epoch:  13 [    1474/10000000], loss: {'classification': 1.042, 'neural_augmentation': 0.354, 'total_loss': 1.396}, LR: [3.2e-05, 3.2e-05], Avg. batch load time: 1.219, Elapsed time:  1.38
+2024-08-04 06:21:40 - [34m[1mLOGS   [0m - *** Training summary for epoch 13
+	 loss={'classification': 1.1126, 'neural_augmentation': 0.3225, 'total_loss': 1.4351}
+2024-08-04 06:21:50 - [34m[1mLOGS   [0m - *** Validation summary for epoch 13
+	 loss={'classification': 0.3021, 'neural_augmentation': 0.0, 'total_loss': 0.3021} || top1={'logits': 94.3672} || top5={'logits': 99.1758}
+2024-08-04 06:21:51 - [34m[1mLOGS   [0m - Best checkpoint with score 94.37 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:21:51 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.0859.pt
+2024-08-04 06:21:51 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.1836.pt', 'checkpoint_score_94.3008.pt', 'checkpoint_score_94.3164.pt', 'checkpoint_score_94.3438.pt', 'checkpoint_score_94.3672.pt']
+2024-08-04 06:21:52 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:21:53 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:21:53 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:21:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 13/iteration 1579 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_13_iter_1579.pt
+2024-08-04 06:21:55 - [34m[1mLOGS   [0m - Model state for epoch 13/iteration 1579 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_13_iter_1579.pt
+[31m===========================================================================[0m
+2024-08-04 06:21:57 - [32m[1mINFO   [0m - Training epoch 14
+2024-08-04 06:22:01 - [34m[1mLOGS   [0m - Epoch:  14 [    1580/10000000], loss: {'classification': 1.1066, 'neural_augmentation': 0.3404, 'total_loss': 1.447}, LR: [3e-05, 3e-05], Avg. batch load time: 3.718, Elapsed time:  3.88
+2024-08-04 06:22:18 - [34m[1mLOGS   [0m - *** Training summary for epoch 14
+	 loss={'classification': 1.0985, 'neural_augmentation': 0.3426, 'total_loss': 1.4411}
+2024-08-04 06:22:27 - [34m[1mLOGS   [0m - *** Validation summary for epoch 14
+	 loss={'classification': 0.3007, 'neural_augmentation': 0.0, 'total_loss': 0.3007} || top1={'logits': 94.4531} || top5={'logits': 99.1758}
+2024-08-04 06:22:28 - [34m[1mLOGS   [0m - Best checkpoint with score 94.45 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:22:28 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.1836.pt
+2024-08-04 06:22:28 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.3008.pt', 'checkpoint_score_94.3164.pt', 'checkpoint_score_94.3438.pt', 'checkpoint_score_94.3672.pt', 'checkpoint_score_94.4531.pt']
+2024-08-04 06:22:34 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:22:35 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:22:35 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:22:36 - [34m[1mLOGS   [0m - Training checkpoint for epoch 14/iteration 1692 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_14_iter_1692.pt
+2024-08-04 06:22:36 - [34m[1mLOGS   [0m - Model state for epoch 14/iteration 1692 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_14_iter_1692.pt
+[31m===========================================================================[0m
+2024-08-04 06:22:38 - [32m[1mINFO   [0m - Training epoch 15
+2024-08-04 06:22:39 - [34m[1mLOGS   [0m - Epoch:  15 [    1693/10000000], loss: {'classification': 0.9814, 'neural_augmentation': 0.3658, 'total_loss': 1.3472}, LR: [2.8e-05, 2.8e-05], Avg. batch load time: 0.935, Elapsed time:  1.09
+2024-08-04 06:22:58 - [34m[1mLOGS   [0m - *** Training summary for epoch 15
+	 loss={'classification': 1.0851, 'neural_augmentation': 0.3637, 'total_loss': 1.4489}
+2024-08-04 06:23:08 - [34m[1mLOGS   [0m - *** Validation summary for epoch 15
+	 loss={'classification': 0.3003, 'neural_augmentation': 0.0, 'total_loss': 0.3003} || top1={'logits': 94.4531} || top5={'logits': 99.2695}
+2024-08-04 06:23:08 - [34m[1mLOGS   [0m - Best checkpoint with score 94.45 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:23:09 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:23:09 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:23:09 - [34m[1mLOGS   [0m - Training checkpoint for epoch 15/iteration 1803 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_15_iter_1803.pt
+2024-08-04 06:23:09 - [34m[1mLOGS   [0m - Model state for epoch 15/iteration 1803 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_15_iter_1803.pt
+[31m===========================================================================[0m
+2024-08-04 06:23:11 - [32m[1mINFO   [0m - Training epoch 16
+2024-08-04 06:23:17 - [34m[1mLOGS   [0m - Epoch:  16 [    1804/10000000], loss: {'classification': 1.0505, 'neural_augmentation': 0.3857, 'total_loss': 1.4362}, LR: [2.5e-05, 2.5e-05], Avg. batch load time: 5.674, Elapsed time:  5.84
+2024-08-04 06:23:36 - [34m[1mLOGS   [0m - *** Training summary for epoch 16
+	 loss={'classification': 1.0614, 'neural_augmentation': 0.3893, 'total_loss': 1.4507}
+2024-08-04 06:23:46 - [34m[1mLOGS   [0m - *** Validation summary for epoch 16
+	 loss={'classification': 0.2951, 'neural_augmentation': 0.0, 'total_loss': 0.2951} || top1={'logits': 94.5039} || top5={'logits': 99.1992}
+2024-08-04 06:23:47 - [34m[1mLOGS   [0m - Best checkpoint with score 94.50 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:23:47 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.3008.pt
+2024-08-04 06:23:47 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.3164.pt', 'checkpoint_score_94.3438.pt', 'checkpoint_score_94.3672.pt', 'checkpoint_score_94.4531.pt', 'checkpoint_score_94.5039.pt']
+2024-08-04 06:23:48 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:23:49 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:23:49 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:23:50 - [34m[1mLOGS   [0m - Training checkpoint for epoch 16/iteration 1925 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_16_iter_1925.pt
+2024-08-04 06:23:50 - [34m[1mLOGS   [0m - Model state for epoch 16/iteration 1925 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_16_iter_1925.pt
+[31m===========================================================================[0m
+2024-08-04 06:23:52 - [32m[1mINFO   [0m - Training epoch 17
+2024-08-04 06:23:54 - [34m[1mLOGS   [0m - Epoch:  17 [    1926/10000000], loss: {'classification': 0.9525, 'neural_augmentation': 0.4234, 'total_loss': 1.376}, LR: [2.3e-05, 2.3e-05], Avg. batch load time: 1.724, Elapsed time:  1.88
+2024-08-04 06:24:15 - [34m[1mLOGS   [0m - *** Training summary for epoch 17
+	 loss={'classification': 1.0594, 'neural_augmentation': 0.4195, 'total_loss': 1.4789}
+2024-08-04 06:24:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 17
+	 loss={'classification': 0.3072, 'neural_augmentation': 0.0, 'total_loss': 0.3072} || top1={'logits': 94.5117} || top5={'logits': 99.2109}
+2024-08-04 06:24:25 - [34m[1mLOGS   [0m - Best checkpoint with score 94.51 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:24:25 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.3164.pt
+2024-08-04 06:24:25 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.3438.pt', 'checkpoint_score_94.3672.pt', 'checkpoint_score_94.4531.pt', 'checkpoint_score_94.5039.pt', 'checkpoint_score_94.5117.pt']
+2024-08-04 06:24:26 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:24:26 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:24:27 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:24:29 - [34m[1mLOGS   [0m - Training checkpoint for epoch 17/iteration 2039 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_17_iter_2039.pt
+2024-08-04 06:24:30 - [34m[1mLOGS   [0m - Model state for epoch 17/iteration 2039 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_17_iter_2039.pt
+[31m===========================================================================[0m
+2024-08-04 06:24:32 - [32m[1mINFO   [0m - Training epoch 18
+2024-08-04 06:24:35 - [34m[1mLOGS   [0m - Epoch:  18 [    2040/10000000], loss: {'classification': 1.0472, 'neural_augmentation': 0.4458, 'total_loss': 1.493}, LR: [2.1e-05, 2.1e-05], Avg. batch load time: 2.541, Elapsed time:  2.70
+2024-08-04 06:24:52 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
+	 loss={'classification': 1.0554, 'neural_augmentation': 0.4484, 'total_loss': 1.5037}
+2024-08-04 06:25:00 - [34m[1mLOGS   [0m - *** Validation summary for epoch 18
+	 loss={'classification': 0.302, 'neural_augmentation': 0.0, 'total_loss': 0.302} || top1={'logits': 94.6094} || top5={'logits': 99.1641}
+2024-08-04 06:25:01 - [34m[1mLOGS   [0m - Best checkpoint with score 94.61 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:25:01 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.3438.pt
+2024-08-04 06:25:01 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.3672.pt', 'checkpoint_score_94.4531.pt', 'checkpoint_score_94.5039.pt', 'checkpoint_score_94.5117.pt', 'checkpoint_score_94.6094.pt']
+2024-08-04 06:25:02 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:25:02 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:25:03 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:25:05 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 2152 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_18_iter_2152.pt
+2024-08-04 06:25:05 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 2152 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_18_iter_2152.pt
+[31m===========================================================================[0m
+2024-08-04 06:25:07 - [32m[1mINFO   [0m - Training epoch 19
+2024-08-04 06:25:09 - [34m[1mLOGS   [0m - Epoch:  19 [    2153/10000000], loss: {'classification': 1.0684, 'neural_augmentation': 0.4693, 'total_loss': 1.5378}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 1.207, Elapsed time:  1.37
+2024-08-04 06:25:27 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
+	 loss={'classification': 1.0455, 'neural_augmentation': 0.479, 'total_loss': 1.5244}
+2024-08-04 06:25:36 - [34m[1mLOGS   [0m - *** Validation summary for epoch 19
+	 loss={'classification': 0.3068, 'neural_augmentation': 0.0, 'total_loss': 0.3068} || top1={'logits': 94.4922} || top5={'logits': 99.1602}
+2024-08-04 06:25:36 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:25:37 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:25:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 2262 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_19_iter_2262.pt
+2024-08-04 06:25:37 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 2262 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_19_iter_2262.pt
+[31m===========================================================================[0m
+2024-08-04 06:25:39 - [32m[1mINFO   [0m - Training epoch 20
+2024-08-04 06:25:43 - [34m[1mLOGS   [0m - Epoch:  20 [    2263/10000000], loss: {'classification': 1.0146, 'neural_augmentation': 0.5185, 'total_loss': 1.5331}, LR: [1.6e-05, 1.6e-05], Avg. batch load time: 3.547, Elapsed time:  3.71
+2024-08-04 06:26:04 - [34m[1mLOGS   [0m - *** Training summary for epoch 20
+	 loss={'classification': 1.041, 'neural_augmentation': 0.513, 'total_loss': 1.554}
+2024-08-04 06:26:13 - [34m[1mLOGS   [0m - *** Validation summary for epoch 20
+	 loss={'classification': 0.3018, 'neural_augmentation': 0.0, 'total_loss': 0.3018} || top1={'logits': 94.5039} || top5={'logits': 99.1992}
+2024-08-04 06:26:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:26:13 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:26:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 20/iteration 2381 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_20_iter_2381.pt
+2024-08-04 06:26:14 - [34m[1mLOGS   [0m - Model state for epoch 20/iteration 2381 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_20_iter_2381.pt
+[31m===========================================================================[0m
+2024-08-04 06:26:16 - [32m[1mINFO   [0m - Training epoch 21
+2024-08-04 06:26:22 - [34m[1mLOGS   [0m - Epoch:  21 [    2382/10000000], loss: {'classification': 1.0179, 'neural_augmentation': 0.5511, 'total_loss': 1.569}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 6.075, Elapsed time:  6.24
+2024-08-04 06:26:41 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
+	 loss={'classification': 1.0334, 'neural_augmentation': 0.5456, 'total_loss': 1.5789}
+2024-08-04 06:26:49 - [34m[1mLOGS   [0m - *** Validation summary for epoch 21
+	 loss={'classification': 0.3058, 'neural_augmentation': 0.0, 'total_loss': 0.3058} || top1={'logits': 94.5742} || top5={'logits': 99.125}
+2024-08-04 06:26:50 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:26:50 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:26:50 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 2490 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_21_iter_2490.pt
+2024-08-04 06:26:50 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 2490 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_21_iter_2490.pt
+[31m===========================================================================[0m
+2024-08-04 06:26:52 - [32m[1mINFO   [0m - Training epoch 22
+2024-08-04 06:27:02 - [34m[1mLOGS   [0m - Epoch:  22 [    2491/10000000], loss: {'classification': 0.978, 'neural_augmentation': 0.5647, 'total_loss': 1.5427}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 9.339, Elapsed time:  9.52
+2024-08-04 06:27:21 - [34m[1mLOGS   [0m - *** Training summary for epoch 22
+	 loss={'classification': 1.0325, 'neural_augmentation': 0.5768, 'total_loss': 1.6093}
+2024-08-04 06:27:29 - [34m[1mLOGS   [0m - *** Validation summary for epoch 22
+	 loss={'classification': 0.3025, 'neural_augmentation': 0.0, 'total_loss': 0.3025} || top1={'logits': 94.668} || top5={'logits': 99.1953}
+2024-08-04 06:27:30 - [34m[1mLOGS   [0m - Best checkpoint with score 94.67 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:27:30 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.3672.pt
+2024-08-04 06:27:30 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.4531.pt', 'checkpoint_score_94.5039.pt', 'checkpoint_score_94.5117.pt', 'checkpoint_score_94.6094.pt', 'checkpoint_score_94.6680.pt']
+2024-08-04 06:27:35 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:27:36 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:27:36 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:27:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 22/iteration 2607 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_22_iter_2607.pt
+2024-08-04 06:27:37 - [34m[1mLOGS   [0m - Model state for epoch 22/iteration 2607 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_22_iter_2607.pt
+[31m===========================================================================[0m
+2024-08-04 06:27:39 - [32m[1mINFO   [0m - Training epoch 23
+2024-08-04 06:27:41 - [34m[1mLOGS   [0m - Epoch:  23 [    2608/10000000], loss: {'classification': 1.0114, 'neural_augmentation': 0.615, 'total_loss': 1.6264}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 1.923, Elapsed time:  2.09
+2024-08-04 06:28:01 - [34m[1mLOGS   [0m - *** Training summary for epoch 23
+	 loss={'classification': 1.026, 'neural_augmentation': 0.6059, 'total_loss': 1.6319}
+2024-08-04 06:28:11 - [34m[1mLOGS   [0m - *** Validation summary for epoch 23
+	 loss={'classification': 0.3045, 'neural_augmentation': 0.0, 'total_loss': 0.3045} || top1={'logits': 94.6172} || top5={'logits': 99.2031}
+2024-08-04 06:28:12 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:28:12 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:28:12 - [34m[1mLOGS   [0m - Training checkpoint for epoch 23/iteration 2722 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_23_iter_2722.pt
+2024-08-04 06:28:12 - [34m[1mLOGS   [0m - Model state for epoch 23/iteration 2722 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_23_iter_2722.pt
+[31m===========================================================================[0m
+2024-08-04 06:28:14 - [32m[1mINFO   [0m - Training epoch 24
+2024-08-04 06:28:17 - [34m[1mLOGS   [0m - Epoch:  24 [    2723/10000000], loss: {'classification': 0.9225, 'neural_augmentation': 0.6496, 'total_loss': 1.5721}, LR: [9e-06, 9e-06], Avg. batch load time: 2.282, Elapsed time:  2.44
+2024-08-04 06:28:39 - [34m[1mLOGS   [0m - *** Training summary for epoch 24
+	 loss={'classification': 1.0224, 'neural_augmentation': 0.633, 'total_loss': 1.6554}
+2024-08-04 06:28:48 - [34m[1mLOGS   [0m - *** Validation summary for epoch 24
+	 loss={'classification': 0.2967, 'neural_augmentation': 0.0, 'total_loss': 0.2967} || top1={'logits': 94.7188} || top5={'logits': 99.1523}
+2024-08-04 06:28:48 - [34m[1mLOGS   [0m - Best checkpoint with score 94.72 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_best.pt
+2024-08-04 06:28:49 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_score_94.4531.pt
+2024-08-04 06:28:49 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_94.5039.pt', 'checkpoint_score_94.5117.pt', 'checkpoint_score_94.6094.pt', 'checkpoint_score_94.6680.pt', 'checkpoint_score_94.7188.pt']
+2024-08-04 06:28:53 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_avg.pt
+2024-08-04 06:28:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:28:54 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:28:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 24/iteration 2830 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_24_iter_2830.pt
+2024-08-04 06:28:55 - [34m[1mLOGS   [0m - Model state for epoch 24/iteration 2830 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_24_iter_2830.pt
+[31m===========================================================================[0m
+2024-08-04 06:28:57 - [32m[1mINFO   [0m - Training epoch 25
+2024-08-04 06:28:58 - [34m[1mLOGS   [0m - Epoch:  25 [    2831/10000000], loss: {'classification': 0.9945, 'neural_augmentation': 0.6593, 'total_loss': 1.6538}, LR: [8e-06, 8e-06], Avg. batch load time: 0.771, Elapsed time:  0.93
+2024-08-04 06:29:15 - [34m[1mLOGS   [0m - *** Training summary for epoch 25
+	 loss={'classification': 1.0198, 'neural_augmentation': 0.6611, 'total_loss': 1.6809}
+2024-08-04 06:29:24 - [34m[1mLOGS   [0m - *** Validation summary for epoch 25
+	 loss={'classification': 0.3005, 'neural_augmentation': 0.0, 'total_loss': 0.3005} || top1={'logits': 94.7109} || top5={'logits': 99.1445}
+2024-08-04 06:29:25 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:29:25 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:29:25 - [34m[1mLOGS   [0m - Training checkpoint for epoch 25/iteration 2936 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_25_iter_2936.pt
+2024-08-04 06:29:26 - [34m[1mLOGS   [0m - Model state for epoch 25/iteration 2936 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_25_iter_2936.pt
+[31m===========================================================================[0m
+2024-08-04 06:29:28 - [32m[1mINFO   [0m - Training epoch 26
+2024-08-04 06:29:32 - [34m[1mLOGS   [0m - Epoch:  26 [    2937/10000000], loss: {'classification': 0.982, 'neural_augmentation': 0.6614, 'total_loss': 1.6434}, LR: [7e-06, 7e-06], Avg. batch load time: 4.141, Elapsed time:  4.30
+2024-08-04 06:29:54 - [34m[1mLOGS   [0m - *** Training summary for epoch 26
+	 loss={'classification': 1.0086, 'neural_augmentation': 0.6829, 'total_loss': 1.6914}
+2024-08-04 06:30:03 - [34m[1mLOGS   [0m - *** Validation summary for epoch 26
+	 loss={'classification': 0.3006, 'neural_augmentation': 0.0, 'total_loss': 0.3006} || top1={'logits': 94.6406} || top5={'logits': 99.1914}
+2024-08-04 06:30:04 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:30:04 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:30:04 - [34m[1mLOGS   [0m - Training checkpoint for epoch 26/iteration 3050 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_26_iter_3050.pt
+2024-08-04 06:30:04 - [34m[1mLOGS   [0m - Model state for epoch 26/iteration 3050 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_26_iter_3050.pt
+[31m===========================================================================[0m
+2024-08-04 06:30:06 - [32m[1mINFO   [0m - Training epoch 27
+2024-08-04 06:30:10 - [34m[1mLOGS   [0m - Epoch:  27 [    3051/10000000], loss: {'classification': 0.9202, 'neural_augmentation': 0.6675, 'total_loss': 1.5877}, LR: [6e-06, 6e-06], Avg. batch load time: 3.393, Elapsed time:  3.56
+2024-08-04 06:30:33 - [34m[1mLOGS   [0m - *** Training summary for epoch 27
+	 loss={'classification': 1.0068, 'neural_augmentation': 0.7009, 'total_loss': 1.7077}
+2024-08-04 06:30:42 - [34m[1mLOGS   [0m - *** Validation summary for epoch 27
+	 loss={'classification': 0.3004, 'neural_augmentation': 0.0, 'total_loss': 0.3004} || top1={'logits': 94.6992} || top5={'logits': 99.1836}
+2024-08-04 06:30:43 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:30:43 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:30:44 - [34m[1mLOGS   [0m - Training checkpoint for epoch 27/iteration 3176 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_27_iter_3176.pt
+2024-08-04 06:30:44 - [34m[1mLOGS   [0m - Model state for epoch 27/iteration 3176 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_27_iter_3176.pt
+[31m===========================================================================[0m
+2024-08-04 06:30:46 - [32m[1mINFO   [0m - Training epoch 28
+2024-08-04 06:30:54 - [34m[1mLOGS   [0m - Epoch:  28 [    3177/10000000], loss: {'classification': 1.061, 'neural_augmentation': 0.7033, 'total_loss': 1.7643}, LR: [5e-06, 5e-06], Avg. batch load time: 7.633, Elapsed time:  7.80
+2024-08-04 06:31:10 - [34m[1mLOGS   [0m - *** Training summary for epoch 28
+	 loss={'classification': 1.0184, 'neural_augmentation': 0.7155, 'total_loss': 1.7339}
+2024-08-04 06:31:19 - [34m[1mLOGS   [0m - *** Validation summary for epoch 28
+	 loss={'classification': 0.2987, 'neural_augmentation': 0.0, 'total_loss': 0.2987} || top1={'logits': 94.6875} || top5={'logits': 99.1875}
+2024-08-04 06:31:19 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:31:20 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:31:20 - [34m[1mLOGS   [0m - Training checkpoint for epoch 28/iteration 3281 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_28_iter_3281.pt
+2024-08-04 06:31:20 - [34m[1mLOGS   [0m - Model state for epoch 28/iteration 3281 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_28_iter_3281.pt
+[31m===========================================================================[0m
+2024-08-04 06:31:22 - [32m[1mINFO   [0m - Training epoch 29
+2024-08-04 06:31:24 - [34m[1mLOGS   [0m - Epoch:  29 [    3282/10000000], loss: {'classification': 0.9867, 'neural_augmentation': 0.6988, 'total_loss': 1.6855}, LR: [5e-06, 5e-06], Avg. batch load time: 1.319, Elapsed time:  1.49
+2024-08-04 06:31:43 - [34m[1mLOGS   [0m - *** Training summary for epoch 29
+	 loss={'classification': 1.0131, 'neural_augmentation': 0.7264, 'total_loss': 1.7395}
+2024-08-04 06:31:52 - [34m[1mLOGS   [0m - *** Validation summary for epoch 29
+	 loss={'classification': 0.3008, 'neural_augmentation': 0.0, 'total_loss': 0.3008} || top1={'logits': 94.6641} || top5={'logits': 99.2109}
+2024-08-04 06:31:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_last.pt
+2024-08-04 06:31:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_last.pt
+2024-08-04 06:31:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 29/iteration 3387 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/training_checkpoint_epoch_29_iter_3387.pt
+2024-08-04 06:31:55 - [34m[1mLOGS   [0m - Model state for epoch 29/iteration 3387 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food101/train/checkpoint_epoch_29_iter_3387.pt
+2024-08-04 06:31:56 - [34m[1mLOGS   [0m - Training took 00:24:41.85

@@ -1,5 +1,8 @@
 # pytest: disable
-taskname: '+ ViT-B/16 [COCO-CLS]'
+
+taskname: '+ CatLIP vitamin small [DataComp]'
+
+_anchor_vocab_size: &_anchor_vocab_size 7476
 
 common:
   run_label: "train"
@@ -9,18 +12,28 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
+  save_interval_freq: 1000000
+  accum_freq: 8
 
 dataset:
-  root: "/ML-A100/team/mm/models/food172/food_172"
-  # effective batch size is 128 (32 * 4 A100 80 GB GPU)
-  train_batch_size0: 128
-  val_batch_size0: 50
-  eval_batch_size0: 50
-  workers: 64 # use all CPUs
+  # root_train does not matter for img_text_tar dataset because dataset information is expected
+  # to be contained in metadata file.
+  root_train: ""
+  disable_val: true
+  # effective batch size is 65k (1024 images per GPU * 8 A100 40 GB GPUs * 8 Nodes)
+  train_batch_size0: 100
+  workers: 64 # use all CPUs  
   persistent_workers: true
   pin_memory: true
-  name: "food172_ingredient"
+  name: "wordnet_tagged_classification"
   category: "classification"
+  wordnet_tagged_classification:
+    vocab_size: *_anchor_vocab_size
+    vocab_file: "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/data/datasets/classification/all_new_vocab.pkl"
+    # Uncomment these lines and replace with the path to metadata file containing dataset information
+    # and vocabulary file containing synset information.
+    metadata_file: "/ML-A100/team/mm/models/catlip_data/cache/metadata.pkl"
+   
 
 image_augmentation:
   # training related augmentations
@@ -29,21 +42,14 @@ image_augmentation:
     interpolation: "bilinear"
   random_horizontal_flip:
     enable: true
-  # evaluation related augmentations
-  resize:
-    enable: true
-    size: 232
-    interpolation: "bilinear"
-  resize:
-    enable: true
-    size: 232
-    interpolation: "bilinear"
-  center_crop:
-    enable: true
-    size: 224
 
 sampler:
   name: "variable_batch_sampler"
+  use_shards: true
+  # In the 0-th epoch, data is downloaded to local machine from remote location.
+  # Therefore, we process the data sequentially in the 0-th epoch and start shuffling
+  # from first epoch onwards.
+  start_shuffling_from_epoch: 1
   vbs:
     crop_size_width: 224
     crop_size_height: 224
@@ -69,37 +75,41 @@ loss:
         perceptual_metric: "psnr"
         target_value: [ 40, 20 ]
         curriculum_method: "cosine"
+    # - loss_category: "distribution"
+    #   loss_weight: 1.0
+    #   distribution:
+    #     name: "kl"
+    #     kl:
+    #       reduction: "batch_mean"
 
 optim:
-  name: "adamw"
-  weight_decay: 0.05
   no_decay_bn_filter_bias: true
+  weight_decay: 0.2
+  name: "adamw"
   adamw:
     beta1: 0.9
     beta2: 0.999
 
 scheduler:
-  name: "cosine"
-  max_epochs: 30
-  warmup_iterations: 500
-  warmup_init_lr: 1.e-6
+  is_iteration_based: true
+  max_iterations: 100000
+  name: cosine
+  warmup_init_lr: 1.e-06
+  warmup_iterations: 10000
   cosine:
-    max_lr: 0.00005
-    min_lr: 0.000005
+    max_lr: 0.001
+    min_lr: 0.00001
 
 model:
   activation_checkpointing: true
-  # The number of classes in pre-trained model are 24320 while COCO has 80 classes.
-  # so, we exclude the classifier while loading the pre-trained weights
-  resume_exclude_scopes: [ "classifier" ]
   classification:
     name: "foodv"
-    n_classes: 353
-    pretrained: /ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt
+    n_classes: *_anchor_vocab_size
     foodv:
       mode: "small"
       norm_layer: "layer_norm_fp32"
       use_flash_attention: true
+      connector_type: "dci"
   # use rangeaugment
   learn_augmentation: 
     brightness: true
@@ -118,10 +128,7 @@ ema:
   momentum: 0.0005
 
 stats:
-  train: [ "loss" ]
-  val: [ "loss" , "multiclass_classification_pr(pred=logits)"]
-  checkpoint_metric: "multiclass_classification_pr(pred=logits).macro"
-  checkpoint_metric_max: true
-  metrics:
-    multiclass_classification_pr:
-      suppress_warnings: true
+  train: ["loss"]
+  val: [ "loss" ]
+  checkpoint_metric: "loss"
+  checkpoint_metric_max: false
