@@ -1,11 +1,11 @@
-from torchvision.models import resnet101
+from torchvision.models import resnet50, densenet161
 from thop import profile
 import torch
 import timm
 
 # 加载 ViT base 模型
 # model1 = timm.create_model('vit_base_patch16_224', pretrained=True)
-model = resnet101()
+model = densenet161()
 input = torch.randn(1, 3, 224, 224)
 macs, params = profile(model, inputs=(input, ))
 from thop import clever_format

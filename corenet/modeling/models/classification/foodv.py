@@ -926,34 +926,34 @@ class Foodv(BaseImageEncoder):
         average_x1 = sum_x1 / count1  # 计算第二个阶段的均值
         return x, average_x, average_x1
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        if self.neural_augmentor is not None:
-            out_dict = {"augmented_tensor": None}
-            if self.training and self.neural_augmentor is not None:
-                x = self.neural_augmentor(x)
-                out_dict.update({"augmented_tensor": x})
-            _, average_stage3, average_stage4 = self.forward_features_dense_connector(x)
-            average_stage3 = self.pool_stage3_stage4(average_stage3)
-            x = torch.cat((average_stage3, average_stage4), dim=-2)
-            x = self.mlp(x)
-            logits = self.forward_classifier(x)
-            out_dict.update({"logits": logits})
-            return out_dict
-        else:
-            logits, _ = self.forward_classifier(x)
-            return logits
-
     # def forward(self, x: torch.Tensor) -> torch.Tensor:
     #     if self.neural_augmentor is not None:
     #         out_dict = {"augmented_tensor": None}
     #         if self.training and self.neural_augmentor is not None:
     #             x = self.neural_augmentor(x)
     #             out_dict.update({"augmented_tensor": x})
-    #         x = self.forward_features(x)
+    #         _, average_stage3, average_stage4 = self.forward_features_dense_connector(x)
+    #         average_stage3 = self.pool_stage3_stage4(average_stage3)
+    #         x = torch.cat((average_stage3, average_stage4), dim=-2)
     #         x = self.mlp(x)
     #         logits = self.forward_classifier(x)
     #         out_dict.update({"logits": logits})
     #         return out_dict
+    #     else:
+    #         logits, _ = self.forward_classifier(x)
+    #         return logits
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        if self.neural_augmentor is not None:
+            out_dict = {"augmented_tensor": None}
+            if self.training and self.neural_augmentor is not None:
+                x = self.neural_augmentor(x)
+                out_dict.update({"augmented_tensor": x})
+            x = self.forward_features(x)
+            x = self.mlp(x)
+            logits = self.forward_classifier(x)
+            out_dict.update({"logits": logits})
+            return out_dict
 
     def extract_end_points_all(
         self,

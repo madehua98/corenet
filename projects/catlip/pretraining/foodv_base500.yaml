@@ -12,7 +12,7 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
-  save_interval_freq: 120000
+  save_interval_freq: 12000000
   accum_freq: 8
 
 dataset:
@@ -91,10 +91,10 @@ optim:
 
 scheduler:
   is_iteration_based: true
-  max_iterations: 300000
+  max_iterations: 200000
   name: cosine
   warmup_init_lr: 1.e-06
-  warmup_iterations: 30000
+  warmup_iterations: 20000
   cosine:
     max_lr: 0.001
     min_lr: 0.00001

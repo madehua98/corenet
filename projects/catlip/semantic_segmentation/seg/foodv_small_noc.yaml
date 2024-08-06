@@ -95,7 +95,7 @@ model:
   classification:
     name: "foodv"
     # Initalize the model with a pre-trained model and finetune it.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_small_dci/train/checkpoint_epoch_9_iter_79046.pt"
+    pretrained: /ML-A100/team/mm/models/catlip_data/results_small_noc/train/checkpoint_epoch_9_iter_79125.pt
     n_classes: 104
     foodv:
       mode: "small"

@@ -1829,3 +1829,344 @@ bucket_view.sizes() = [128, 512, 1, 1], strides() = [512, 1, 1, 1] (Triggered in
 	 loss={'classification': 0.9963, 'neural_augmentation': 0.0, 'total_loss': 0.9963} || top1={'logits': 73.6191} || top5={'logits': 94.2097}
 /ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
   warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 06:59:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 06:59:54 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 06:59:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 15/iteration 2814 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_15_iter_2814.pt
+2024-08-04 06:59:55 - [34m[1mLOGS   [0m - Model state for epoch 15/iteration 2814 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_15_iter_2814.pt
+[31m===========================================================================[0m
+2024-08-04 06:59:57 - [32m[1mINFO   [0m - Training epoch 16
+2024-08-04 07:00:16 - [34m[1mLOGS   [0m - Epoch:  16 [    2815/10000000], loss: {'classification': 1.6224, 'neural_augmentation': 0.3892, 'total_loss': 2.0116}, LR: [2.5e-05, 2.5e-05], Avg. batch load time: 18.848, Elapsed time: 19.37
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:00:43 - [34m[1mLOGS   [0m - *** Training summary for epoch 16
+	 loss={'classification': 1.501, 'neural_augmentation': 0.3908, 'total_loss': 1.8918}
+2024-08-04 07:01:09 - [34m[1mLOGS   [0m - *** Validation summary for epoch 16
+	 loss={'classification': 0.9922, 'neural_augmentation': 0.0, 'total_loss': 0.9922} || top1={'logits': 73.7416} || top5={'logits': 94.2517}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:01:10 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:01:10 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:01:10 - [34m[1mLOGS   [0m - Training checkpoint for epoch 16/iteration 2986 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_16_iter_2986.pt
+2024-08-04 07:01:10 - [34m[1mLOGS   [0m - Model state for epoch 16/iteration 2986 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_16_iter_2986.pt
+[31m===========================================================================[0m
+2024-08-04 07:01:12 - [32m[1mINFO   [0m - Training epoch 17
+2024-08-04 07:01:31 - [34m[1mLOGS   [0m - Epoch:  17 [    2987/10000000], loss: {'classification': 1.3753, 'neural_augmentation': 0.4283, 'total_loss': 1.8036}, LR: [2.3e-05, 2.3e-05], Avg. batch load time: 18.419, Elapsed time: 18.58
+2024-08-04 07:01:59 - [34m[1mLOGS   [0m - *** Training summary for epoch 17
+	 loss={'classification': 1.4775, 'neural_augmentation': 0.4152, 'total_loss': 1.8927}
+2024-08-04 07:02:27 - [34m[1mLOGS   [0m - *** Validation summary for epoch 17
+	 loss={'classification': 0.9933, 'neural_augmentation': 0.0, 'total_loss': 0.9933} || top1={'logits': 73.8054} || top5={'logits': 94.1275}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:02:28 - [34m[1mLOGS   [0m - Best checkpoint with score 73.81 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_best.pt
+2024-08-04 07:02:28 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_score_72.9094.pt
+2024-08-04 07:02:28 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_73.0436.pt', 'checkpoint_score_73.4782.pt', 'checkpoint_score_73.7819.pt', 'checkpoint_score_73.7903.pt', 'checkpoint_score_73.8054.pt']
+2024-08-04 07:02:36 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_avg.pt
+2024-08-04 07:02:38 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:02:38 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:02:39 - [34m[1mLOGS   [0m - Training checkpoint for epoch 17/iteration 3163 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_17_iter_3163.pt
+2024-08-04 07:02:40 - [34m[1mLOGS   [0m - Model state for epoch 17/iteration 3163 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_17_iter_3163.pt
+[31m===========================================================================[0m
+2024-08-04 07:02:42 - [32m[1mINFO   [0m - Training epoch 18
+2024-08-04 07:02:46 - [34m[1mLOGS   [0m - Epoch:  18 [    3164/10000000], loss: {'classification': 1.3815, 'neural_augmentation': 0.4523, 'total_loss': 1.8337}, LR: [2.1e-05, 2.1e-05], Avg. batch load time: 3.676, Elapsed time:  3.84
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:03:17 - [34m[1mLOGS   [0m - *** Training summary for epoch 18
+	 loss={'classification': 1.4634, 'neural_augmentation': 0.4431, 'total_loss': 1.9065}
+2024-08-04 07:03:43 - [34m[1mLOGS   [0m - *** Validation summary for epoch 18
+	 loss={'classification': 0.9955, 'neural_augmentation': 0.0, 'total_loss': 0.9955} || top1={'logits': 73.8792} || top5={'logits': 94.2148}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:03:43 - [34m[1mLOGS   [0m - Best checkpoint with score 73.88 saved at /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_best.pt
+2024-08-04 07:03:44 - [34m[1mLOGS   [0m - Deleting checkpoint: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_score_73.0436.pt
+2024-08-04 07:03:44 - [34m[1mLOGS   [0m - Averaging checkpoints: ['checkpoint_score_73.4782.pt', 'checkpoint_score_73.7819.pt', 'checkpoint_score_73.7903.pt', 'checkpoint_score_73.8054.pt', 'checkpoint_score_73.8792.pt']
+2024-08-04 07:03:57 - [34m[1mLOGS   [0m - Averaged checkpoint saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_avg.pt
+2024-08-04 07:03:58 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:03:58 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:03:58 - [34m[1mLOGS   [0m - Training checkpoint for epoch 18/iteration 3334 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_18_iter_3334.pt
+2024-08-04 07:03:59 - [34m[1mLOGS   [0m - Model state for epoch 18/iteration 3334 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_18_iter_3334.pt
+[31m===========================================================================[0m
+2024-08-04 07:04:01 - [32m[1mINFO   [0m - Training epoch 19
+2024-08-04 07:04:06 - [34m[1mLOGS   [0m - Epoch:  19 [    3335/10000000], loss: {'classification': 1.5129, 'neural_augmentation': 0.4848, 'total_loss': 1.9976}, LR: [1.8e-05, 1.8e-05], Avg. batch load time: 5.185, Elapsed time:  5.35
+2024-08-04 07:04:34 - [34m[1mLOGS   [0m - *** Training summary for epoch 19
+	 loss={'classification': 1.4492, 'neural_augmentation': 0.472, 'total_loss': 1.9211}
+2024-08-04 07:04:59 - [34m[1mLOGS   [0m - *** Validation summary for epoch 19
+	 loss={'classification': 1.0012, 'neural_augmentation': 0.0, 'total_loss': 1.0012} || top1={'logits': 73.8037} || top5={'logits': 94.0638}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:04:59 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:05:00 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:05:00 - [34m[1mLOGS   [0m - Training checkpoint for epoch 19/iteration 3504 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_19_iter_3504.pt
+2024-08-04 07:05:00 - [34m[1mLOGS   [0m - Model state for epoch 19/iteration 3504 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_19_iter_3504.pt
+[31m===========================================================================[0m
+2024-08-04 07:05:02 - [32m[1mINFO   [0m - Training epoch 20
+2024-08-04 07:05:15 - [34m[1mLOGS   [0m - Epoch:  20 [    3505/10000000], loss: {'classification': 1.3591, 'neural_augmentation': 0.5102, 'total_loss': 1.8693}, LR: [1.6e-05, 1.6e-05], Avg. batch load time: 12.243, Elapsed time: 12.68
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:05:51 - [34m[1mLOGS   [0m - *** Training summary for epoch 20
+	 loss={'classification': 1.4337, 'neural_augmentation': 0.5012, 'total_loss': 1.9349}
+2024-08-04 07:06:15 - [34m[1mLOGS   [0m - *** Validation summary for epoch 20
+	 loss={'classification': 1.0111, 'neural_augmentation': 0.0, 'total_loss': 1.0111} || top1={'logits': 73.599} || top5={'logits': 94.1862}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:06:19 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:06:19 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:06:21 - [34m[1mLOGS   [0m - Training checkpoint for epoch 20/iteration 3678 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_20_iter_3678.pt
+2024-08-04 07:06:21 - [34m[1mLOGS   [0m - Model state for epoch 20/iteration 3678 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_20_iter_3678.pt
+[31m===========================================================================[0m
+2024-08-04 07:06:23 - [32m[1mINFO   [0m - Training epoch 21
+2024-08-04 07:06:44 - [34m[1mLOGS   [0m - Epoch:  21 [    3679/10000000], loss: {'classification': 1.3738, 'neural_augmentation': 0.5211, 'total_loss': 1.8949}, LR: [1.4e-05, 1.4e-05], Avg. batch load time: 15.334, Elapsed time: 20.67
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:07:09 - [34m[1mLOGS   [0m - *** Training summary for epoch 21
+	 loss={'classification': 1.4292, 'neural_augmentation': 0.5309, 'total_loss': 1.9601}
+2024-08-04 07:07:34 - [34m[1mLOGS   [0m - *** Validation summary for epoch 21
+	 loss={'classification': 1.0146, 'neural_augmentation': 0.0, 'total_loss': 1.0146} || top1={'logits': 73.7919} || top5={'logits': 94.005}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:07:35 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:07:35 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:07:36 - [34m[1mLOGS   [0m - Training checkpoint for epoch 21/iteration 3837 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_21_iter_3837.pt
+2024-08-04 07:07:36 - [34m[1mLOGS   [0m - Model state for epoch 21/iteration 3837 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_21_iter_3837.pt
+[31m===========================================================================[0m
+2024-08-04 07:07:38 - [32m[1mINFO   [0m - Training epoch 22
+2024-08-04 07:07:56 - [34m[1mLOGS   [0m - Epoch:  22 [    3838/10000000], loss: {'classification': 1.2392, 'neural_augmentation': 0.557, 'total_loss': 1.7962}, LR: [1.2e-05, 1.2e-05], Avg. batch load time: 14.684, Elapsed time: 17.59
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:08:30 - [34m[1mLOGS   [0m - *** Training summary for epoch 22
+	 loss={'classification': 1.41, 'neural_augmentation': 0.5615, 'total_loss': 1.9715}
+2024-08-04 07:08:57 - [34m[1mLOGS   [0m - *** Validation summary for epoch 22
+	 loss={'classification': 1.0173, 'neural_augmentation': 0.0, 'total_loss': 1.0173} || top1={'logits': 73.6158} || top5={'logits': 94.0436}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:08:58 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:08:58 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:08:59 - [34m[1mLOGS   [0m - Training checkpoint for epoch 22/iteration 4009 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_22_iter_4009.pt
+2024-08-04 07:08:59 - [34m[1mLOGS   [0m - Model state for epoch 22/iteration 4009 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_22_iter_4009.pt
+[31m===========================================================================[0m
+2024-08-04 07:09:01 - [32m[1mINFO   [0m - Training epoch 23
+2024-08-04 07:09:15 - [34m[1mLOGS   [0m - Epoch:  23 [    4010/10000000], loss: {'classification': 1.3491, 'neural_augmentation': 0.5994, 'total_loss': 1.9485}, LR: [1.1e-05, 1.1e-05], Avg. batch load time: 12.804, Elapsed time: 13.61
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:09:49 - [34m[1mLOGS   [0m - *** Training summary for epoch 23
+	 loss={'classification': 1.3978, 'neural_augmentation': 0.5889, 'total_loss': 1.9867}
+2024-08-04 07:10:16 - [34m[1mLOGS   [0m - *** Validation summary for epoch 23
+	 loss={'classification': 1.0178, 'neural_augmentation': 0.0, 'total_loss': 1.0178} || top1={'logits': 73.6728} || top5={'logits': 94.0117}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+2024-08-04 07:10:17 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:10:18 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:10:18 - [34m[1mLOGS   [0m - Training checkpoint for epoch 23/iteration 4184 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_23_iter_4184.pt
+2024-08-04 07:10:18 - [34m[1mLOGS   [0m - Model state for epoch 23/iteration 4184 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_23_iter_4184.pt
+[31m===========================================================================[0m
+2024-08-04 07:10:20 - [32m[1mINFO   [0m - Training epoch 24
+2024-08-04 07:10:32 - [34m[1mLOGS   [0m - Epoch:  24 [    4185/10000000], loss: {'classification': 1.3671, 'neural_augmentation': 0.6323, 'total_loss': 1.9994}, LR: [9e-06, 9e-06], Avg. batch load time: 8.243, Elapsed time: 11.62
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:11:08 - [34m[1mLOGS   [0m - *** Training summary for epoch 24
+	 loss={'classification': 1.3898, 'neural_augmentation': 0.6157, 'total_loss': 2.0055}
+2024-08-04 07:11:35 - [34m[1mLOGS   [0m - *** Validation summary for epoch 24
+	 loss={'classification': 1.0194, 'neural_augmentation': 0.0, 'total_loss': 1.0194} || top1={'logits': 73.5906} || top5={'logits': 93.9648}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:11:36 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:11:36 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:11:37 - [34m[1mLOGS   [0m - Training checkpoint for epoch 24/iteration 4358 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_24_iter_4358.pt
+2024-08-04 07:11:37 - [34m[1mLOGS   [0m - Model state for epoch 24/iteration 4358 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_24_iter_4358.pt
+[31m===========================================================================[0m
+2024-08-04 07:11:39 - [32m[1mINFO   [0m - Training epoch 25
+2024-08-04 07:11:59 - [34m[1mLOGS   [0m - Epoch:  25 [    4359/10000000], loss: {'classification': 1.3355, 'neural_augmentation': 0.6523, 'total_loss': 1.9878}, LR: [8e-06, 8e-06], Avg. batch load time: 18.106, Elapsed time: 20.09
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:12:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 25
+	 loss={'classification': 1.3805, 'neural_augmentation': 0.6399, 'total_loss': 2.0204}
+2024-08-04 07:12:51 - [34m[1mLOGS   [0m - *** Validation summary for epoch 25
+	 loss={'classification': 1.0215, 'neural_augmentation': 0.0, 'total_loss': 1.0215} || top1={'logits': 73.6426} || top5={'logits': 93.9362}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:12:52 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:12:52 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:12:53 - [34m[1mLOGS   [0m - Training checkpoint for epoch 25/iteration 4519 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_25_iter_4519.pt
+2024-08-04 07:12:53 - [34m[1mLOGS   [0m - Model state for epoch 25/iteration 4519 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_25_iter_4519.pt
+[31m===========================================================================[0m
+2024-08-04 07:12:55 - [32m[1mINFO   [0m - Training epoch 26
+2024-08-04 07:13:09 - [34m[1mLOGS   [0m - Epoch:  26 [    4520/10000000], loss: {'classification': 1.2856, 'neural_augmentation': 0.666, 'total_loss': 1.9516}, LR: [7e-06, 7e-06], Avg. batch load time: 12.002, Elapsed time: 13.26
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:13:46 - [34m[1mLOGS   [0m - *** Training summary for epoch 26
+	 loss={'classification': 1.3642, 'neural_augmentation': 0.6606, 'total_loss': 2.0248}
+2024-08-04 07:14:12 - [34m[1mLOGS   [0m - *** Validation summary for epoch 26
+	 loss={'classification': 1.0277, 'neural_augmentation': 0.0, 'total_loss': 1.0277} || top1={'logits': 73.5738} || top5={'logits': 93.8775}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:14:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:14:13 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:14:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 26/iteration 4719 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_26_iter_4719.pt
+2024-08-04 07:14:14 - [34m[1mLOGS   [0m - Model state for epoch 26/iteration 4719 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_26_iter_4719.pt
+[31m===========================================================================[0m
+2024-08-04 07:14:16 - [32m[1mINFO   [0m - Training epoch 27
+2024-08-04 07:14:30 - [34m[1mLOGS   [0m - Epoch:  27 [    4720/10000000], loss: {'classification': 1.2923, 'neural_augmentation': 0.6703, 'total_loss': 1.9626}, LR: [6e-06, 6e-06], Avg. batch load time: 9.619, Elapsed time: 13.53
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:15:05 - [34m[1mLOGS   [0m - *** Training summary for epoch 27
+	 loss={'classification': 1.3716, 'neural_augmentation': 0.6794, 'total_loss': 2.0511}
+2024-08-04 07:15:33 - [34m[1mLOGS   [0m - *** Validation summary for epoch 27
+	 loss={'classification': 1.0268, 'neural_augmentation': 0.0, 'total_loss': 1.0268} || top1={'logits': 73.5587} || top5={'logits': 93.8624}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:15:34 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:15:34 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:15:35 - [34m[1mLOGS   [0m - Training checkpoint for epoch 27/iteration 4899 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_27_iter_4899.pt
+2024-08-04 07:15:35 - [34m[1mLOGS   [0m - Model state for epoch 27/iteration 4899 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_27_iter_4899.pt
+[31m===========================================================================[0m
+2024-08-04 07:15:37 - [32m[1mINFO   [0m - Training epoch 28
+2024-08-04 07:15:45 - [34m[1mLOGS   [0m - Epoch:  28 [    4900/10000000], loss: {'classification': 1.3305, 'neural_augmentation': 0.6776, 'total_loss': 2.0081}, LR: [5e-06, 5e-06], Avg. batch load time: 5.981, Elapsed time:  7.69
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+2024-08-04 07:16:25 - [34m[1mLOGS   [0m - *** Training summary for epoch 28
+	 loss={'classification': 1.3609, 'neural_augmentation': 0.6935, 'total_loss': 2.0544}
+2024-08-04 07:16:54 - [34m[1mLOGS   [0m - *** Validation summary for epoch 28
+	 loss={'classification': 1.0284, 'neural_augmentation': 0.0, 'total_loss': 1.0284} || top1={'logits': 73.5034} || top5={'logits': 93.8809}
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:16:54 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:16:55 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:16:55 - [34m[1mLOGS   [0m - Training checkpoint for epoch 28/iteration 5088 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_28_iter_5088.pt
+2024-08-04 07:16:55 - [34m[1mLOGS   [0m - Model state for epoch 28/iteration 5088 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_28_iter_5088.pt
+[31m===========================================================================[0m
+2024-08-04 07:16:57 - [32m[1mINFO   [0m - Training epoch 29
+2024-08-04 07:17:15 - [34m[1mLOGS   [0m - Epoch:  29 [    5089/10000000], loss: {'classification': 1.3425, 'neural_augmentation': 0.6888, 'total_loss': 2.0312}, LR: [5e-06, 5e-06], Avg. batch load time: 17.350, Elapsed time: 17.52
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/PIL/TiffImagePlugin.py:890: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 8. 
+  warnings.warn(str(msg))
+2024-08-04 07:17:45 - [34m[1mLOGS   [0m - *** Training summary for epoch 29
+	 loss={'classification': 1.3561, 'neural_augmentation': 0.704, 'total_loss': 2.06}
+2024-08-04 07:18:09 - [34m[1mLOGS   [0m - *** Validation summary for epoch 29
+	 loss={'classification': 1.0304, 'neural_augmentation': 0.0, 'total_loss': 1.0304} || top1={'logits': 73.5839} || top5={'logits': 93.8171}
+2024-08-04 07:18:10 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_last.pt
+2024-08-04 07:18:11 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_last.pt
+2024-08-04 07:18:14 - [34m[1mLOGS   [0m - Training checkpoint for epoch 29/iteration 5281 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/training_checkpoint_epoch_29_iter_5281.pt
+2024-08-04 07:18:15 - [34m[1mLOGS   [0m - Model state for epoch 29/iteration 5281 is saved at: /ML-A100/team/mm/models/catlip_data/results_small_dci/9_food200/train/checkpoint_epoch_29_iter_5281.pt
+2024-08-04 07:18:15 - [34m[1mLOGS   [0m - Training took 00:43:46.97
