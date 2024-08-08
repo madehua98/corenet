@@ -16,6 +16,8 @@ def extract_sample_images(jsonl_file_path, output_json_path, sample_size=100000,
     if prompts is None:
         prompts = ["Render a clear and concise summary of the photo"]
 
+
+
     with open(jsonl_file_path, "r") as file:
         for line in file:
             all_data.append(json.loads(line))
@@ -63,8 +65,8 @@ prompts = [
 
 # JSONL 文件路径和输出 JSON 文件路径
 # 指定 JSONL 文件路径
-jsonl_file_path = '/ML-A100/team/mm/models/datacomp_1b/images2text.jsonl'
-output_json_path = '/ML-A100/team/mm/models/datacomp_1b/datacomp_1b.json'
+jsonl_file_path = '/ML-A100/team/mm/models/laion2b/images2text.jsonl'
+output_json_path = '/ML-A100/team/mm/models/laion2b/laion2b.json'
 
 # 调用函数
-extract_sample_images(jsonl_file_path, output_json_path, 100000, prompts)
+extract_sample_images(jsonl_file_path, output_json_path, 200000, prompts)

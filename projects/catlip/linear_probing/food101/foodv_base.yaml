@@ -10,12 +10,13 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
+  accum_freq: 2
 
 dataset:
   root_train: "/ML-A100/team/mm/models/food101/food101/train_images"
   root_val: "/ML-A100/team/mm/models/food101/food101/test_images"
   # effective batch size is 512 (512 * 1 A100 80 GB GPU)
-  train_batch_size0: 128
+  train_batch_size0: 64
   val_batch_size0: 50
   eval_batch_size0: 50
   workers: 64 # use all CPUs
@@ -100,7 +101,8 @@ model:
     # Initalize the model with a pre-trained model and finetune it.
     # Note that during evaluation, we need to set 'resume_exclude_scopes' to an empty string
     # and replace the 'pretrained' with the fine-tuned model path.
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
+    #pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
+    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt"
     #pretrained: "/ML-A100/team/mm/models/vit_base.pt"
     foodv:
       mode: "base"

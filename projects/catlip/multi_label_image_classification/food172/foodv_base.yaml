@@ -8,10 +8,11 @@ common:
   mixed_precision_dtype: "bfloat16"
   grad_clip: 1.0
   save_all_checkpoints: true
+  accum_freq: 2
 dataset:
   root: "/ML-A100/team/mm/models/food172/food_172"
   # effective batch size is 128 (32 * 4 A100 80 GB GPU)
-  train_batch_size0: 128
+  train_batch_size0: 64
   val_batch_size0: 50
   eval_batch_size0: 50
   workers: 64 # use all CPUs
@@ -94,7 +95,8 @@ model:
     name: "foodv"
     n_classes: 353
     #pretrained: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
-    pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
+    #pretrained: "/ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_9_iter_79060.pt"
+    pretrained: /ML-A100/team/mm/models/catlip_data/results_base_dci/train/checkpoint_epoch_19_iter_162435.pt
     foodv:
       mode: "base"
       norm_layer: "layer_norm_fp32"
