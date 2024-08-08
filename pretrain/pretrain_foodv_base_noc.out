@@ -3119,3 +3119,525 @@ bucket_view.sizes() = [256, 1024, 1, 1], strides() = [1024, 1, 1, 1] (Triggered 
 2024-08-06 19:08:13 - [34m[1mLOGS   [0m - Epoch:  13 [  104720/  200000], loss: {'classification': 33.963, 'neural_augmentation': 0.3808, 'total_loss': 34.3438}, LR: [0.000551, 0.000551], Avg. batch load time: 0.006, Elapsed time: 3609.45
 2024-08-06 19:10:14 - [34m[1mLOGS   [0m - Epoch:  13 [  104783/  200000], loss: {'classification': 33.9596, 'neural_augmentation': 0.381, 'total_loss': 34.3406}, LR: [0.00055, 0.00055], Avg. batch load time: 0.006, Elapsed time: 3731.22
 2024-08-06 19:12:16 - [34m[1mLOGS   [0m - Epoch:  13 [  104845/  200000], loss: {'classification': 33.956, 'neural_augmentation': 0.3812, 'total_loss': 34.3372}, LR: [0.000549, 0.000549], Avg. batch load time: 0.006, Elapsed time: 3852.93
+2024-08-06 19:14:18 - [34m[1mLOGS   [0m - Epoch:  13 [  104908/  200000], loss: {'classification': 33.9551, 'neural_augmentation': 0.3813, 'total_loss': 34.3364}, LR: [0.000549, 0.000549], Avg. batch load time: 0.005, Elapsed time: 3974.86
+2024-08-06 19:16:20 - [34m[1mLOGS   [0m - Epoch:  13 [  104970/  200000], loss: {'classification': 33.955, 'neural_augmentation': 0.3815, 'total_loss': 34.3365}, LR: [0.000548, 0.000548], Avg. batch load time: 0.005, Elapsed time: 4096.91
+2024-08-06 19:18:22 - [34m[1mLOGS   [0m - Epoch:  13 [  105033/  200000], loss: {'classification': 33.956, 'neural_augmentation': 0.3817, 'total_loss': 34.3376}, LR: [0.000548, 0.000548], Avg. batch load time: 0.005, Elapsed time: 4218.52
+2024-08-06 19:20:23 - [34m[1mLOGS   [0m - Epoch:  13 [  105095/  200000], loss: {'classification': 33.9555, 'neural_augmentation': 0.3818, 'total_loss': 34.3373}, LR: [0.000547, 0.000547], Avg. batch load time: 0.005, Elapsed time: 4340.14
+2024-08-06 19:22:25 - [34m[1mLOGS   [0m - Epoch:  13 [  105158/  200000], loss: {'classification': 33.954, 'neural_augmentation': 0.382, 'total_loss': 34.336}, LR: [0.000547, 0.000547], Avg. batch load time: 0.005, Elapsed time: 4461.69
+2024-08-06 19:24:33 - [34m[1mLOGS   [0m - Epoch:  13 [  105220/  200000], loss: {'classification': 33.9513, 'neural_augmentation': 0.3821, 'total_loss': 34.3335}, LR: [0.000546, 0.000546], Avg. batch load time: 0.005, Elapsed time: 4589.58
+2024-08-06 19:26:34 - [34m[1mLOGS   [0m - Epoch:  13 [  105283/  200000], loss: {'classification': 33.9525, 'neural_augmentation': 0.3823, 'total_loss': 34.3348}, LR: [0.000546, 0.000546], Avg. batch load time: 0.005, Elapsed time: 4711.07
+2024-08-06 19:28:36 - [34m[1mLOGS   [0m - Epoch:  13 [  105345/  200000], loss: {'classification': 33.9515, 'neural_augmentation': 0.3825, 'total_loss': 34.3339}, LR: [0.000545, 0.000545], Avg. batch load time: 0.005, Elapsed time: 4832.39
+2024-08-06 19:30:37 - [34m[1mLOGS   [0m - Epoch:  13 [  105408/  200000], loss: {'classification': 33.9506, 'neural_augmentation': 0.3826, 'total_loss': 34.3333}, LR: [0.000545, 0.000545], Avg. batch load time: 0.005, Elapsed time: 4953.68
+2024-08-06 19:32:38 - [34m[1mLOGS   [0m - Epoch:  13 [  105470/  200000], loss: {'classification': 33.9492, 'neural_augmentation': 0.3828, 'total_loss': 34.332}, LR: [0.000544, 0.000544], Avg. batch load time: 0.004, Elapsed time: 5074.81
+2024-08-06 19:34:39 - [34m[1mLOGS   [0m - Epoch:  13 [  105533/  200000], loss: {'classification': 33.9463, 'neural_augmentation': 0.3829, 'total_loss': 34.3292}, LR: [0.000544, 0.000544], Avg. batch load time: 0.004, Elapsed time: 5196.05
+2024-08-06 19:36:41 - [34m[1mLOGS   [0m - Epoch:  13 [  105595/  200000], loss: {'classification': 33.9453, 'neural_augmentation': 0.3831, 'total_loss': 34.3285}, LR: [0.000543, 0.000543], Avg. batch load time: 0.004, Elapsed time: 5317.43
+2024-08-06 19:38:42 - [34m[1mLOGS   [0m - Epoch:  13 [  105658/  200000], loss: {'classification': 33.9447, 'neural_augmentation': 0.3833, 'total_loss': 34.328}, LR: [0.000542, 0.000542], Avg. batch load time: 0.004, Elapsed time: 5438.85
+2024-08-06 19:40:44 - [34m[1mLOGS   [0m - Epoch:  13 [  105720/  200000], loss: {'classification': 33.9461, 'neural_augmentation': 0.3834, 'total_loss': 34.3296}, LR: [0.000542, 0.000542], Avg. batch load time: 0.004, Elapsed time: 5560.46
+2024-08-06 19:42:45 - [34m[1mLOGS   [0m - Epoch:  13 [  105783/  200000], loss: {'classification': 33.9448, 'neural_augmentation': 0.3836, 'total_loss': 34.3284}, LR: [0.000541, 0.000541], Avg. batch load time: 0.004, Elapsed time: 5681.84
+2024-08-06 19:44:46 - [34m[1mLOGS   [0m - Epoch:  13 [  105845/  200000], loss: {'classification': 33.9425, 'neural_augmentation': 0.3838, 'total_loss': 34.3263}, LR: [0.000541, 0.000541], Avg. batch load time: 0.004, Elapsed time: 5803.07
+2024-08-06 19:46:48 - [34m[1mLOGS   [0m - Epoch:  13 [  105908/  200000], loss: {'classification': 33.9449, 'neural_augmentation': 0.3839, 'total_loss': 34.3288}, LR: [0.00054, 0.00054], Avg. batch load time: 0.004, Elapsed time: 5924.27
+2024-08-06 19:48:52 - [34m[1mLOGS   [0m - Epoch:  13 [  105970/  200000], loss: {'classification': 33.9451, 'neural_augmentation': 0.3841, 'total_loss': 34.3292}, LR: [0.00054, 0.00054], Avg. batch load time: 0.004, Elapsed time: 6048.68
+2024-08-06 19:50:58 - [34m[1mLOGS   [0m - Epoch:  13 [  106033/  200000], loss: {'classification': 33.9458, 'neural_augmentation': 0.3842, 'total_loss': 34.3301}, LR: [0.000539, 0.000539], Avg. batch load time: 0.004, Elapsed time: 6174.75
+2024-08-06 19:53:00 - [34m[1mLOGS   [0m - Epoch:  13 [  106095/  200000], loss: {'classification': 33.9452, 'neural_augmentation': 0.3844, 'total_loss': 34.3296}, LR: [0.000539, 0.000539], Avg. batch load time: 0.004, Elapsed time: 6296.32
+2024-08-06 19:55:01 - [34m[1mLOGS   [0m - Epoch:  13 [  106158/  200000], loss: {'classification': 33.9446, 'neural_augmentation': 0.3846, 'total_loss': 34.3292}, LR: [0.000538, 0.000538], Avg. batch load time: 0.004, Elapsed time: 6417.87
+2024-08-06 19:57:02 - [34m[1mLOGS   [0m - Epoch:  13 [  106220/  200000], loss: {'classification': 33.9432, 'neural_augmentation': 0.3847, 'total_loss': 34.3279}, LR: [0.000538, 0.000538], Avg. batch load time: 0.004, Elapsed time: 6539.19
+2024-08-06 19:59:04 - [34m[1mLOGS   [0m - Epoch:  13 [  106283/  200000], loss: {'classification': 33.944, 'neural_augmentation': 0.3849, 'total_loss': 34.3289}, LR: [0.000537, 0.000537], Avg. batch load time: 0.004, Elapsed time: 6660.47
+2024-08-06 20:01:05 - [34m[1mLOGS   [0m - Epoch:  13 [  106345/  200000], loss: {'classification': 33.9425, 'neural_augmentation': 0.3851, 'total_loss': 34.3275}, LR: [0.000537, 0.000537], Avg. batch load time: 0.004, Elapsed time: 6782.02
+2024-08-06 20:03:07 - [34m[1mLOGS   [0m - Epoch:  13 [  106408/  200000], loss: {'classification': 33.9406, 'neural_augmentation': 0.3852, 'total_loss': 34.3258}, LR: [0.000536, 0.000536], Avg. batch load time: 0.004, Elapsed time: 6903.40
+2024-08-06 20:05:08 - [34m[1mLOGS   [0m - Epoch:  13 [  106470/  200000], loss: {'classification': 33.9408, 'neural_augmentation': 0.3854, 'total_loss': 34.3262}, LR: [0.000535, 0.000535], Avg. batch load time: 0.003, Elapsed time: 7024.79
+2024-08-06 20:07:10 - [34m[1mLOGS   [0m - Epoch:  13 [  106533/  200000], loss: {'classification': 33.94, 'neural_augmentation': 0.3856, 'total_loss': 34.3255}, LR: [0.000535, 0.000535], Avg. batch load time: 0.003, Elapsed time: 7146.39
+2024-08-06 20:09:11 - [34m[1mLOGS   [0m - Epoch:  13 [  106595/  200000], loss: {'classification': 33.9383, 'neural_augmentation': 0.3857, 'total_loss': 34.324}, LR: [0.000534, 0.000534], Avg. batch load time: 0.003, Elapsed time: 7267.81
+2024-08-06 20:11:12 - [34m[1mLOGS   [0m - Epoch:  13 [  106658/  200000], loss: {'classification': 33.9371, 'neural_augmentation': 0.3859, 'total_loss': 34.323}, LR: [0.000534, 0.000534], Avg. batch load time: 0.003, Elapsed time: 7389.07
+2024-08-06 20:13:15 - [34m[1mLOGS   [0m - Epoch:  13 [  106720/  200000], loss: {'classification': 33.9377, 'neural_augmentation': 0.386, 'total_loss': 34.3238}, LR: [0.000533, 0.000533], Avg. batch load time: 0.003, Elapsed time: 7511.88
+2024-08-06 20:15:23 - [34m[1mLOGS   [0m - Epoch:  13 [  106783/  200000], loss: {'classification': 33.9375, 'neural_augmentation': 0.3862, 'total_loss': 34.3237}, LR: [0.000533, 0.000533], Avg. batch load time: 0.003, Elapsed time: 7639.84
+2024-08-06 20:17:24 - [34m[1mLOGS   [0m - Epoch:  13 [  106845/  200000], loss: {'classification': 33.9374, 'neural_augmentation': 0.3863, 'total_loss': 34.3237}, LR: [0.000532, 0.000532], Avg. batch load time: 0.003, Elapsed time: 7761.22
+2024-08-06 20:19:26 - [34m[1mLOGS   [0m - Epoch:  13 [  106908/  200000], loss: {'classification': 33.9357, 'neural_augmentation': 0.3865, 'total_loss': 34.3222}, LR: [0.000532, 0.000532], Avg. batch load time: 0.003, Elapsed time: 7882.70
+2024-08-06 20:21:27 - [34m[1mLOGS   [0m - Epoch:  13 [  106970/  200000], loss: {'classification': 33.9332, 'neural_augmentation': 0.3867, 'total_loss': 34.3198}, LR: [0.000531, 0.000531], Avg. batch load time: 0.003, Elapsed time: 8003.86
+2024-08-06 20:23:29 - [34m[1mLOGS   [0m - Epoch:  13 [  107033/  200000], loss: {'classification': 33.9316, 'neural_augmentation': 0.3868, 'total_loss': 34.3184}, LR: [0.000531, 0.000531], Avg. batch load time: 0.003, Elapsed time: 8125.30
+2024-08-06 20:25:30 - [34m[1mLOGS   [0m - Epoch:  13 [  107095/  200000], loss: {'classification': 33.9306, 'neural_augmentation': 0.387, 'total_loss': 34.3176}, LR: [0.00053, 0.00053], Avg. batch load time: 0.003, Elapsed time: 8246.58
+2024-08-06 20:27:31 - [34m[1mLOGS   [0m - Epoch:  13 [  107158/  200000], loss: {'classification': 33.9286, 'neural_augmentation': 0.3872, 'total_loss': 34.3157}, LR: [0.00053, 0.00053], Avg. batch load time: 0.003, Elapsed time: 8368.18
+2024-08-06 20:29:33 - [34m[1mLOGS   [0m - Epoch:  13 [  107220/  200000], loss: {'classification': 33.9279, 'neural_augmentation': 0.3873, 'total_loss': 34.3153}, LR: [0.000529, 0.000529], Avg. batch load time: 0.003, Elapsed time: 8489.58
+2024-08-06 20:31:34 - [34m[1mLOGS   [0m - Epoch:  13 [  107283/  200000], loss: {'classification': 33.9262, 'neural_augmentation': 0.3875, 'total_loss': 34.3137}, LR: [0.000528, 0.000528], Avg. batch load time: 0.003, Elapsed time: 8610.93
+2024-08-06 20:33:36 - [34m[1mLOGS   [0m - Epoch:  13 [  107345/  200000], loss: {'classification': 33.9265, 'neural_augmentation': 0.3876, 'total_loss': 34.3141}, LR: [0.000528, 0.000528], Avg. batch load time: 0.003, Elapsed time: 8732.32
+2024-08-06 20:35:37 - [34m[1mLOGS   [0m - Epoch:  13 [  107408/  200000], loss: {'classification': 33.9274, 'neural_augmentation': 0.3878, 'total_loss': 34.3152}, LR: [0.000527, 0.000527], Avg. batch load time: 0.003, Elapsed time: 8853.66
+2024-08-06 20:37:38 - [34m[1mLOGS   [0m - Epoch:  13 [  107470/  200000], loss: {'classification': 33.9276, 'neural_augmentation': 0.388, 'total_loss': 34.3156}, LR: [0.000527, 0.000527], Avg. batch load time: 0.003, Elapsed time: 8975.13
+2024-08-06 20:39:48 - [34m[1mLOGS   [0m - Epoch:  13 [  107533/  200000], loss: {'classification': 33.9274, 'neural_augmentation': 0.3881, 'total_loss': 34.3155}, LR: [0.000526, 0.000526], Avg. batch load time: 0.003, Elapsed time: 9104.55
+2024-08-06 20:41:49 - [34m[1mLOGS   [0m - Epoch:  13 [  107595/  200000], loss: {'classification': 33.9279, 'neural_augmentation': 0.3883, 'total_loss': 34.3162}, LR: [0.000526, 0.000526], Avg. batch load time: 0.003, Elapsed time: 9226.14
+2024-08-06 20:43:51 - [34m[1mLOGS   [0m - Epoch:  13 [  107658/  200000], loss: {'classification': 33.9259, 'neural_augmentation': 0.3885, 'total_loss': 34.3144}, LR: [0.000525, 0.000525], Avg. batch load time: 0.003, Elapsed time: 9347.45
+2024-08-06 20:45:52 - [34m[1mLOGS   [0m - Epoch:  13 [  107720/  200000], loss: {'classification': 33.9246, 'neural_augmentation': 0.3886, 'total_loss': 34.3132}, LR: [0.000525, 0.000525], Avg. batch load time: 0.003, Elapsed time: 9468.63
+2024-08-06 20:47:53 - [34m[1mLOGS   [0m - Epoch:  13 [  107783/  200000], loss: {'classification': 33.9239, 'neural_augmentation': 0.3888, 'total_loss': 34.3126}, LR: [0.000524, 0.000524], Avg. batch load time: 0.003, Elapsed time: 9590.06
+2024-08-06 20:49:55 - [34m[1mLOGS   [0m - Epoch:  13 [  107845/  200000], loss: {'classification': 33.9222, 'neural_augmentation': 0.3889, 'total_loss': 34.3112}, LR: [0.000524, 0.000524], Avg. batch load time: 0.003, Elapsed time: 9711.58
+2024-08-06 20:51:56 - [34m[1mLOGS   [0m - Epoch:  13 [  107908/  200000], loss: {'classification': 33.9222, 'neural_augmentation': 0.3891, 'total_loss': 34.3113}, LR: [0.000523, 0.000523], Avg. batch load time: 0.003, Elapsed time: 9833.06
+2024-08-06 20:53:58 - [34m[1mLOGS   [0m - Epoch:  13 [  107970/  200000], loss: {'classification': 33.9211, 'neural_augmentation': 0.3893, 'total_loss': 34.3104}, LR: [0.000523, 0.000523], Avg. batch load time: 0.003, Elapsed time: 9954.57
+2024-08-06 20:56:00 - [34m[1mLOGS   [0m - Epoch:  13 [  108033/  200000], loss: {'classification': 33.9192, 'neural_augmentation': 0.3894, 'total_loss': 34.3086}, LR: [0.000522, 0.000522], Avg. batch load time: 0.003, Elapsed time: 10076.28
+2024-08-06 20:58:01 - [34m[1mLOGS   [0m - Epoch:  13 [  108095/  200000], loss: {'classification': 33.918, 'neural_augmentation': 0.3896, 'total_loss': 34.3076}, LR: [0.000521, 0.000521], Avg. batch load time: 0.003, Elapsed time: 10197.72
+2024-08-06 21:00:03 - [34m[1mLOGS   [0m - Epoch:  13 [  108158/  200000], loss: {'classification': 33.9179, 'neural_augmentation': 0.3898, 'total_loss': 34.3076}, LR: [0.000521, 0.000521], Avg. batch load time: 0.003, Elapsed time: 10319.34
+2024-08-06 21:02:04 - [34m[1mLOGS   [0m - Epoch:  13 [  108220/  200000], loss: {'classification': 33.9179, 'neural_augmentation': 0.3899, 'total_loss': 34.3078}, LR: [0.00052, 0.00052], Avg. batch load time: 0.003, Elapsed time: 10441.06
+2024-08-06 21:04:12 - [34m[1mLOGS   [0m - Epoch:  13 [  108283/  200000], loss: {'classification': 33.918, 'neural_augmentation': 0.3901, 'total_loss': 34.3081}, LR: [0.00052, 0.00052], Avg. batch load time: 0.003, Elapsed time: 10569.18
+2024-08-06 21:06:14 - [34m[1mLOGS   [0m - Epoch:  13 [  108345/  200000], loss: {'classification': 33.9191, 'neural_augmentation': 0.3903, 'total_loss': 34.3093}, LR: [0.000519, 0.000519], Avg. batch load time: 0.003, Elapsed time: 10690.66
+2024-08-06 21:08:15 - [34m[1mLOGS   [0m - Epoch:  13 [  108408/  200000], loss: {'classification': 33.9182, 'neural_augmentation': 0.3904, 'total_loss': 34.3086}, LR: [0.000519, 0.000519], Avg. batch load time: 0.003, Elapsed time: 10811.87
+2024-08-06 21:10:17 - [34m[1mLOGS   [0m - Epoch:  13 [  108470/  200000], loss: {'classification': 33.9161, 'neural_augmentation': 0.3906, 'total_loss': 34.3067}, LR: [0.000518, 0.000518], Avg. batch load time: 0.003, Elapsed time: 10933.27
+2024-08-06 21:12:18 - [34m[1mLOGS   [0m - Epoch:  13 [  108533/  200000], loss: {'classification': 33.9161, 'neural_augmentation': 0.3907, 'total_loss': 34.3068}, LR: [0.000518, 0.000518], Avg. batch load time: 0.003, Elapsed time: 11055.10
+2024-08-06 21:14:20 - [34m[1mLOGS   [0m - Epoch:  13 [  108595/  200000], loss: {'classification': 33.9158, 'neural_augmentation': 0.3909, 'total_loss': 34.3067}, LR: [0.000517, 0.000517], Avg. batch load time: 0.003, Elapsed time: 11176.78
+2024-08-06 21:16:22 - [34m[1mLOGS   [0m - Epoch:  13 [  108658/  200000], loss: {'classification': 33.9155, 'neural_augmentation': 0.3911, 'total_loss': 34.3066}, LR: [0.000517, 0.000517], Avg. batch load time: 0.003, Elapsed time: 11298.35
+2024-08-06 21:18:23 - [34m[1mLOGS   [0m - Epoch:  13 [  108720/  200000], loss: {'classification': 33.9135, 'neural_augmentation': 0.3913, 'total_loss': 34.3048}, LR: [0.000516, 0.000516], Avg. batch load time: 0.003, Elapsed time: 11419.76
+2024-08-06 21:20:24 - [34m[1mLOGS   [0m - Epoch:  13 [  108783/  200000], loss: {'classification': 33.9115, 'neural_augmentation': 0.3914, 'total_loss': 34.3029}, LR: [0.000516, 0.000516], Avg. batch load time: 0.002, Elapsed time: 11541.07
+2024-08-06 21:22:26 - [34m[1mLOGS   [0m - Epoch:  13 [  108845/  200000], loss: {'classification': 33.9104, 'neural_augmentation': 0.3916, 'total_loss': 34.302}, LR: [0.000515, 0.000515], Avg. batch load time: 0.002, Elapsed time: 11662.41
+2024-08-06 21:24:27 - [34m[1mLOGS   [0m - Epoch:  13 [  108908/  200000], loss: {'classification': 33.9086, 'neural_augmentation': 0.3917, 'total_loss': 34.3003}, LR: [0.000514, 0.000514], Avg. batch load time: 0.002, Elapsed time: 11783.82
+2024-08-06 21:26:28 - [34m[1mLOGS   [0m - Epoch:  13 [  108970/  200000], loss: {'classification': 33.9082, 'neural_augmentation': 0.3919, 'total_loss': 34.3001}, LR: [0.000514, 0.000514], Avg. batch load time: 0.002, Elapsed time: 11905.15
+2024-08-06 21:28:30 - [34m[1mLOGS   [0m - Epoch:  13 [  109033/  200000], loss: {'classification': 33.9073, 'neural_augmentation': 0.3921, 'total_loss': 34.2994}, LR: [0.000513, 0.000513], Avg. batch load time: 0.002, Elapsed time: 12026.52
+2024-08-06 21:30:38 - [34m[1mLOGS   [0m - Epoch:  13 [  109095/  200000], loss: {'classification': 33.9053, 'neural_augmentation': 0.3922, 'total_loss': 34.2975}, LR: [0.000513, 0.000513], Avg. batch load time: 0.002, Elapsed time: 12154.31
+2024-08-06 21:32:39 - [34m[1mLOGS   [0m - Epoch:  13 [  109158/  200000], loss: {'classification': 33.9051, 'neural_augmentation': 0.3924, 'total_loss': 34.2975}, LR: [0.000512, 0.000512], Avg. batch load time: 0.002, Elapsed time: 12275.76
+2024-08-06 21:34:41 - [34m[1mLOGS   [0m - Epoch:  13 [  109220/  200000], loss: {'classification': 33.9043, 'neural_augmentation': 0.3926, 'total_loss': 34.2969}, LR: [0.000512, 0.000512], Avg. batch load time: 0.002, Elapsed time: 12397.41
+2024-08-06 21:36:42 - [34m[1mLOGS   [0m - Epoch:  13 [  109283/  200000], loss: {'classification': 33.9035, 'neural_augmentation': 0.3927, 'total_loss': 34.2963}, LR: [0.000511, 0.000511], Avg. batch load time: 0.002, Elapsed time: 12519.04
+2024-08-06 21:38:44 - [34m[1mLOGS   [0m - Epoch:  13 [  109345/  200000], loss: {'classification': 33.9025, 'neural_augmentation': 0.3929, 'total_loss': 34.2953}, LR: [0.000511, 0.000511], Avg. batch load time: 0.002, Elapsed time: 12640.62
+2024-08-06 21:40:46 - [34m[1mLOGS   [0m - Epoch:  13 [  109408/  200000], loss: {'classification': 33.9017, 'neural_augmentation': 0.3931, 'total_loss': 34.2947}, LR: [0.00051, 0.00051], Avg. batch load time: 0.002, Elapsed time: 12762.35
+2024-08-06 21:42:47 - [34m[1mLOGS   [0m - Epoch:  13 [  109470/  200000], loss: {'classification': 33.9019, 'neural_augmentation': 0.3932, 'total_loss': 34.2951}, LR: [0.00051, 0.00051], Avg. batch load time: 0.002, Elapsed time: 12883.94
+2024-08-06 21:44:49 - [34m[1mLOGS   [0m - Epoch:  13 [  109533/  200000], loss: {'classification': 33.9003, 'neural_augmentation': 0.3934, 'total_loss': 34.2937}, LR: [0.000509, 0.000509], Avg. batch load time: 0.002, Elapsed time: 13005.45
+2024-08-06 21:46:50 - [34m[1mLOGS   [0m - Epoch:  13 [  109595/  200000], loss: {'classification': 33.8994, 'neural_augmentation': 0.3936, 'total_loss': 34.2929}, LR: [0.000508, 0.000508], Avg. batch load time: 0.002, Elapsed time: 13126.89
+2024-08-06 21:48:52 - [34m[1mLOGS   [0m - Epoch:  13 [  109658/  200000], loss: {'classification': 33.8982, 'neural_augmentation': 0.3937, 'total_loss': 34.2919}, LR: [0.000508, 0.000508], Avg. batch load time: 0.002, Elapsed time: 13248.44
+2024-08-06 21:50:53 - [34m[1mLOGS   [0m - Epoch:  13 [  109720/  200000], loss: {'classification': 33.8982, 'neural_augmentation': 0.3939, 'total_loss': 34.292}, LR: [0.000507, 0.000507], Avg. batch load time: 0.002, Elapsed time: 13370.00
+2024-08-06 21:52:55 - [34m[1mLOGS   [0m - Epoch:  13 [  109783/  200000], loss: {'classification': 33.8974, 'neural_augmentation': 0.394, 'total_loss': 34.2914}, LR: [0.000507, 0.000507], Avg. batch load time: 0.002, Elapsed time: 13491.65
+2024-08-06 21:55:03 - [34m[1mLOGS   [0m - Epoch:  13 [  109845/  200000], loss: {'classification': 33.8963, 'neural_augmentation': 0.3942, 'total_loss': 34.2905}, LR: [0.000506, 0.000506], Avg. batch load time: 0.002, Elapsed time: 13619.40
+2024-08-06 21:57:04 - [34m[1mLOGS   [0m - Epoch:  13 [  109908/  200000], loss: {'classification': 33.8954, 'neural_augmentation': 0.3944, 'total_loss': 34.2897}, LR: [0.000506, 0.000506], Avg. batch load time: 0.002, Elapsed time: 13740.85
+2024-08-06 21:59:06 - [34m[1mLOGS   [0m - Epoch:  13 [  109970/  200000], loss: {'classification': 33.8953, 'neural_augmentation': 0.3945, 'total_loss': 34.2898}, LR: [0.000505, 0.000505], Avg. batch load time: 0.002, Elapsed time: 13862.37
+2024-08-06 22:01:07 - [34m[1mLOGS   [0m - Epoch:  13 [  110033/  200000], loss: {'classification': 33.8948, 'neural_augmentation': 0.3947, 'total_loss': 34.2895}, LR: [0.000505, 0.000505], Avg. batch load time: 0.002, Elapsed time: 13983.88
+2024-08-06 22:03:09 - [34m[1mLOGS   [0m - Epoch:  13 [  110095/  200000], loss: {'classification': 33.8946, 'neural_augmentation': 0.3948, 'total_loss': 34.2894}, LR: [0.000504, 0.000504], Avg. batch load time: 0.002, Elapsed time: 14105.26
+2024-08-06 22:05:10 - [34m[1mLOGS   [0m - Epoch:  13 [  110158/  200000], loss: {'classification': 33.893, 'neural_augmentation': 0.395, 'total_loss': 34.288}, LR: [0.000504, 0.000504], Avg. batch load time: 0.002, Elapsed time: 14226.63
+2024-08-06 22:07:11 - [34m[1mLOGS   [0m - Epoch:  13 [  110220/  200000], loss: {'classification': 33.8915, 'neural_augmentation': 0.3951, 'total_loss': 34.2866}, LR: [0.000503, 0.000503], Avg. batch load time: 0.002, Elapsed time: 14347.98
+2024-08-06 22:09:13 - [34m[1mLOGS   [0m - Epoch:  13 [  110283/  200000], loss: {'classification': 33.8903, 'neural_augmentation': 0.3953, 'total_loss': 34.2856}, LR: [0.000503, 0.000503], Avg. batch load time: 0.002, Elapsed time: 14469.54
+2024-08-06 22:11:14 - [34m[1mLOGS   [0m - Epoch:  13 [  110345/  200000], loss: {'classification': 33.8898, 'neural_augmentation': 0.3955, 'total_loss': 34.2853}, LR: [0.000502, 0.000502], Avg. batch load time: 0.002, Elapsed time: 14590.77
+2024-08-06 22:13:15 - [34m[1mLOGS   [0m - Epoch:  13 [  110408/  200000], loss: {'classification': 33.8894, 'neural_augmentation': 0.3956, 'total_loss': 34.285}, LR: [0.000501, 0.000501], Avg. batch load time: 0.002, Elapsed time: 14711.99
+2024-08-06 22:15:17 - [34m[1mLOGS   [0m - Epoch:  13 [  110470/  200000], loss: {'classification': 33.8897, 'neural_augmentation': 0.3958, 'total_loss': 34.2855}, LR: [0.000501, 0.000501], Avg. batch load time: 0.002, Elapsed time: 14833.48
+2024-08-06 22:17:18 - [34m[1mLOGS   [0m - Epoch:  13 [  110533/  200000], loss: {'classification': 33.8892, 'neural_augmentation': 0.396, 'total_loss': 34.2852}, LR: [0.0005, 0.0005], Avg. batch load time: 0.002, Elapsed time: 14954.98
+2024-08-06 22:19:24 - [34m[1mLOGS   [0m - Epoch:  13 [  110595/  200000], loss: {'classification': 33.888, 'neural_augmentation': 0.3961, 'total_loss': 34.2841}, LR: [0.0005, 0.0005], Avg. batch load time: 0.002, Elapsed time: 15081.14
+2024-08-06 22:21:27 - [34m[1mLOGS   [0m - Epoch:  13 [  110658/  200000], loss: {'classification': 33.8868, 'neural_augmentation': 0.3963, 'total_loss': 34.283}, LR: [0.000499, 0.000499], Avg. batch load time: 0.002, Elapsed time: 15204.21
+2024-08-06 22:23:29 - [34m[1mLOGS   [0m - Epoch:  13 [  110720/  200000], loss: {'classification': 33.8853, 'neural_augmentation': 0.3964, 'total_loss': 34.2817}, LR: [0.000499, 0.000499], Avg. batch load time: 0.002, Elapsed time: 15325.72
+2024-08-06 22:25:30 - [34m[1mLOGS   [0m - Epoch:  13 [  110783/  200000], loss: {'classification': 33.885, 'neural_augmentation': 0.3966, 'total_loss': 34.2816}, LR: [0.000498, 0.000498], Avg. batch load time: 0.002, Elapsed time: 15447.06
+2024-08-06 22:26:31 - [34m[1mLOGS   [0m - *** Training summary for epoch 13
+	 loss={'classification': 33.8845, 'neural_augmentation': 0.3967, 'total_loss': 34.2812}
+2024-08-06 22:26:33 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_best.pt
+2024-08-06 22:26:35 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/training_checkpoint_last.pt
+2024-08-06 22:26:35 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_last.pt
+2024-08-06 22:26:36 - [34m[1mLOGS   [0m - Training checkpoint for epoch 13/iteration 110814 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/training_checkpoint_epoch_13_iter_110814.pt
+2024-08-06 22:26:37 - [34m[1mLOGS   [0m - Model state for epoch 13/iteration 110814 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_epoch_13_iter_110814.pt
+[31m===========================================================================[0m
+2024-08-06 22:26:39 - [32m[1mINFO   [0m - Training epoch 14
+2024-08-06 22:27:48 - [34m[1mLOGS   [0m - Epoch:  14 [  110814/  200000], loss: {'classification': 34.6761, 'neural_augmentation': 0.4086, 'total_loss': 35.0847}, LR: [0.000498, 0.000498], Avg. batch load time: 62.917, Elapsed time: 69.28
+2024-08-06 22:29:54 - [34m[1mLOGS   [0m - Epoch:  14 [  110876/  200000], loss: {'classification': 33.7012, 'neural_augmentation': 0.4169, 'total_loss': 34.1181}, LR: [0.000497, 0.000497], Avg. batch load time: 0.132, Elapsed time: 195.91
+2024-08-06 22:31:56 - [34m[1mLOGS   [0m - Epoch:  14 [  110939/  200000], loss: {'classification': 33.7073, 'neural_augmentation': 0.4173, 'total_loss': 34.1246}, LR: [0.000497, 0.000497], Avg. batch load time: 0.067, Elapsed time: 317.41
+2024-08-06 22:33:57 - [34m[1mLOGS   [0m - Epoch:  14 [  111001/  200000], loss: {'classification': 33.69, 'neural_augmentation': 0.4174, 'total_loss': 34.1074}, LR: [0.000496, 0.000496], Avg. batch load time: 0.045, Elapsed time: 438.69
+2024-08-06 22:35:59 - [34m[1mLOGS   [0m - Epoch:  14 [  111064/  200000], loss: {'classification': 33.718, 'neural_augmentation': 0.4176, 'total_loss': 34.1356}, LR: [0.000496, 0.000496], Avg. batch load time: 0.034, Elapsed time: 559.99
+2024-08-06 22:38:00 - [34m[1mLOGS   [0m - Epoch:  14 [  111126/  200000], loss: {'classification': 33.7361, 'neural_augmentation': 0.4178, 'total_loss': 34.1539}, LR: [0.000495, 0.000495], Avg. batch load time: 0.027, Elapsed time: 681.40
+2024-08-06 22:40:02 - [34m[1mLOGS   [0m - Epoch:  14 [  111189/  200000], loss: {'classification': 33.7279, 'neural_augmentation': 0.418, 'total_loss': 34.1459}, LR: [0.000495, 0.000495], Avg. batch load time: 0.023, Elapsed time: 803.01
+2024-08-06 22:42:03 - [34m[1mLOGS   [0m - Epoch:  14 [  111251/  200000], loss: {'classification': 33.7408, 'neural_augmentation': 0.4181, 'total_loss': 34.1589}, LR: [0.000494, 0.000494], Avg. batch load time: 0.020, Elapsed time: 924.54
+2024-08-06 22:44:04 - [34m[1mLOGS   [0m - Epoch:  14 [  111314/  200000], loss: {'classification': 33.7443, 'neural_augmentation': 0.4182, 'total_loss': 34.1625}, LR: [0.000494, 0.000494], Avg. batch load time: 0.017, Elapsed time: 1045.78
+2024-08-06 22:46:06 - [34m[1mLOGS   [0m - Epoch:  14 [  111376/  200000], loss: {'classification': 33.7395, 'neural_augmentation': 0.4183, 'total_loss': 34.1578}, LR: [0.000493, 0.000493], Avg. batch load time: 0.016, Elapsed time: 1167.16
+2024-08-06 22:48:07 - [34m[1mLOGS   [0m - Epoch:  14 [  111439/  200000], loss: {'classification': 33.7422, 'neural_augmentation': 0.4185, 'total_loss': 34.1607}, LR: [0.000493, 0.000493], Avg. batch load time: 0.014, Elapsed time: 1288.55
+2024-08-06 22:50:09 - [34m[1mLOGS   [0m - Epoch:  14 [  111501/  200000], loss: {'classification': 33.7504, 'neural_augmentation': 0.4187, 'total_loss': 34.1691}, LR: [0.000492, 0.000492], Avg. batch load time: 0.013, Elapsed time: 1410.19
+2024-08-06 22:52:13 - [34m[1mLOGS   [0m - Epoch:  14 [  111564/  200000], loss: {'classification': 33.7553, 'neural_augmentation': 0.4188, 'total_loss': 34.1742}, LR: [0.000491, 0.000491], Avg. batch load time: 0.012, Elapsed time: 1534.76
+2024-08-06 22:54:18 - [34m[1mLOGS   [0m - Epoch:  14 [  111626/  200000], loss: {'classification': 33.7564, 'neural_augmentation': 0.419, 'total_loss': 34.1754}, LR: [0.000491, 0.000491], Avg. batch load time: 0.011, Elapsed time: 1659.30
+2024-08-06 22:56:19 - [34m[1mLOGS   [0m - Epoch:  14 [  111689/  200000], loss: {'classification': 33.7568, 'neural_augmentation': 0.4191, 'total_loss': 34.176}, LR: [0.00049, 0.00049], Avg. batch load time: 0.010, Elapsed time: 1780.55
+2024-08-06 22:58:20 - [34m[1mLOGS   [0m - Epoch:  14 [  111751/  200000], loss: {'classification': 33.7515, 'neural_augmentation': 0.4193, 'total_loss': 34.1708}, LR: [0.00049, 0.00049], Avg. batch load time: 0.010, Elapsed time: 1901.83
+2024-08-06 23:00:22 - [34m[1mLOGS   [0m - Epoch:  14 [  111814/  200000], loss: {'classification': 33.746, 'neural_augmentation': 0.4194, 'total_loss': 34.1655}, LR: [0.000489, 0.000489], Avg. batch load time: 0.009, Elapsed time: 2023.30
+2024-08-06 23:02:23 - [34m[1mLOGS   [0m - Epoch:  14 [  111876/  200000], loss: {'classification': 33.7509, 'neural_augmentation': 0.4196, 'total_loss': 34.1705}, LR: [0.000489, 0.000489], Avg. batch load time: 0.009, Elapsed time: 2144.76
+2024-08-06 23:04:25 - [34m[1mLOGS   [0m - Epoch:  14 [  111939/  200000], loss: {'classification': 33.7534, 'neural_augmentation': 0.4198, 'total_loss': 34.1731}, LR: [0.000488, 0.000488], Avg. batch load time: 0.008, Elapsed time: 2266.29
+2024-08-06 23:06:26 - [34m[1mLOGS   [0m - Epoch:  14 [  112001/  200000], loss: {'classification': 33.751, 'neural_augmentation': 0.4199, 'total_loss': 34.171}, LR: [0.000488, 0.000488], Avg. batch load time: 0.008, Elapsed time: 2387.50
+2024-08-06 23:08:28 - [34m[1mLOGS   [0m - Epoch:  14 [  112064/  200000], loss: {'classification': 33.756, 'neural_augmentation': 0.4201, 'total_loss': 34.1761}, LR: [0.000487, 0.000487], Avg. batch load time: 0.008, Elapsed time: 2509.02
+2024-08-06 23:10:29 - [34m[1mLOGS   [0m - Epoch:  14 [  112126/  200000], loss: {'classification': 33.7567, 'neural_augmentation': 0.4203, 'total_loss': 34.177}, LR: [0.000487, 0.000487], Avg. batch load time: 0.007, Elapsed time: 2630.39
+2024-08-06 23:12:30 - [34m[1mLOGS   [0m - Epoch:  14 [  112189/  200000], loss: {'classification': 33.7528, 'neural_augmentation': 0.4205, 'total_loss': 34.1732}, LR: [0.000486, 0.000486], Avg. batch load time: 0.007, Elapsed time: 2751.78
+2024-08-06 23:14:32 - [34m[1mLOGS   [0m - Epoch:  14 [  112251/  200000], loss: {'classification': 33.754, 'neural_augmentation': 0.4206, 'total_loss': 34.1746}, LR: [0.000486, 0.000486], Avg. batch load time: 0.007, Elapsed time: 2873.25
+2024-08-06 23:16:33 - [34m[1mLOGS   [0m - Epoch:  14 [  112314/  200000], loss: {'classification': 33.7518, 'neural_augmentation': 0.4208, 'total_loss': 34.1726}, LR: [0.000485, 0.000485], Avg. batch load time: 0.006, Elapsed time: 2994.84
+2024-08-06 23:18:43 - [34m[1mLOGS   [0m - Epoch:  14 [  112376/  200000], loss: {'classification': 33.7494, 'neural_augmentation': 0.421, 'total_loss': 34.1703}, LR: [0.000484, 0.000484], Avg. batch load time: 0.006, Elapsed time: 3124.03
+2024-08-06 23:20:44 - [34m[1mLOGS   [0m - Epoch:  14 [  112439/  200000], loss: {'classification': 33.7512, 'neural_augmentation': 0.4211, 'total_loss': 34.1723}, LR: [0.000484, 0.000484], Avg. batch load time: 0.006, Elapsed time: 3245.59
+2024-08-06 23:22:46 - [34m[1mLOGS   [0m - Epoch:  14 [  112501/  200000], loss: {'classification': 33.7499, 'neural_augmentation': 0.4213, 'total_loss': 34.1712}, LR: [0.000483, 0.000483], Avg. batch load time: 0.006, Elapsed time: 3367.04
+2024-08-06 23:24:47 - [34m[1mLOGS   [0m - Epoch:  14 [  112564/  200000], loss: {'classification': 33.754, 'neural_augmentation': 0.4215, 'total_loss': 34.1755}, LR: [0.000483, 0.000483], Avg. batch load time: 0.006, Elapsed time: 3488.43
+2024-08-06 23:26:48 - [34m[1mLOGS   [0m - Epoch:  14 [  112626/  200000], loss: {'classification': 33.7514, 'neural_augmentation': 0.4216, 'total_loss': 34.173}, LR: [0.000482, 0.000482], Avg. batch load time: 0.006, Elapsed time: 3609.94
+2024-08-06 23:28:50 - [34m[1mLOGS   [0m - Epoch:  14 [  112689/  200000], loss: {'classification': 33.7499, 'neural_augmentation': 0.4218, 'total_loss': 34.1718}, LR: [0.000482, 0.000482], Avg. batch load time: 0.005, Elapsed time: 3731.72
+2024-08-06 23:30:52 - [34m[1mLOGS   [0m - Epoch:  14 [  112751/  200000], loss: {'classification': 33.7488, 'neural_augmentation': 0.422, 'total_loss': 34.1708}, LR: [0.000481, 0.000481], Avg. batch load time: 0.005, Elapsed time: 3853.26
+2024-08-06 23:32:53 - [34m[1mLOGS   [0m - Epoch:  14 [  112814/  200000], loss: {'classification': 33.7506, 'neural_augmentation': 0.4221, 'total_loss': 34.1728}, LR: [0.000481, 0.000481], Avg. batch load time: 0.005, Elapsed time: 3974.75
+2024-08-06 23:34:55 - [34m[1mLOGS   [0m - Epoch:  14 [  112876/  200000], loss: {'classification': 33.7486, 'neural_augmentation': 0.4223, 'total_loss': 34.1709}, LR: [0.00048, 0.00048], Avg. batch load time: 0.005, Elapsed time: 4096.08
+2024-08-06 23:36:56 - [34m[1mLOGS   [0m - Epoch:  14 [  112939/  200000], loss: {'classification': 33.7529, 'neural_augmentation': 0.4225, 'total_loss': 34.1754}, LR: [0.00048, 0.00048], Avg. batch load time: 0.005, Elapsed time: 4217.79
+2024-08-06 23:38:58 - [34m[1mLOGS   [0m - Epoch:  14 [  113001/  200000], loss: {'classification': 33.7503, 'neural_augmentation': 0.4226, 'total_loss': 34.173}, LR: [0.000479, 0.000479], Avg. batch load time: 0.005, Elapsed time: 4339.04
+2024-08-06 23:40:59 - [34m[1mLOGS   [0m - Epoch:  14 [  113064/  200000], loss: {'classification': 33.7477, 'neural_augmentation': 0.4228, 'total_loss': 34.1705}, LR: [0.000479, 0.000479], Avg. batch load time: 0.005, Elapsed time: 4460.44
+2024-08-06 23:43:07 - [34m[1mLOGS   [0m - Epoch:  14 [  113126/  200000], loss: {'classification': 33.7467, 'neural_augmentation': 0.4229, 'total_loss': 34.1696}, LR: [0.000478, 0.000478], Avg. batch load time: 0.005, Elapsed time: 4588.33
+2024-08-06 23:45:08 - [34m[1mLOGS   [0m - Epoch:  14 [  113189/  200000], loss: {'classification': 33.7444, 'neural_augmentation': 0.4231, 'total_loss': 34.1675}, LR: [0.000477, 0.000477], Avg. batch load time: 0.004, Elapsed time: 4709.95
+2024-08-06 23:47:10 - [34m[1mLOGS   [0m - Epoch:  14 [  113251/  200000], loss: {'classification': 33.7447, 'neural_augmentation': 0.4232, 'total_loss': 34.168}, LR: [0.000477, 0.000477], Avg. batch load time: 0.004, Elapsed time: 4831.57
+2024-08-06 23:49:12 - [34m[1mLOGS   [0m - Epoch:  14 [  113314/  200000], loss: {'classification': 33.7434, 'neural_augmentation': 0.4234, 'total_loss': 34.1668}, LR: [0.000476, 0.000476], Avg. batch load time: 0.004, Elapsed time: 4953.10
+2024-08-06 23:51:13 - [34m[1mLOGS   [0m - Epoch:  14 [  113376/  200000], loss: {'classification': 33.7446, 'neural_augmentation': 0.4236, 'total_loss': 34.1682}, LR: [0.000476, 0.000476], Avg. batch load time: 0.004, Elapsed time: 5074.39
+2024-08-06 23:53:14 - [34m[1mLOGS   [0m - Epoch:  14 [  113439/  200000], loss: {'classification': 33.7435, 'neural_augmentation': 0.4237, 'total_loss': 34.1672}, LR: [0.000475, 0.000475], Avg. batch load time: 0.004, Elapsed time: 5195.78
+2024-08-06 23:55:16 - [34m[1mLOGS   [0m - Epoch:  14 [  113501/  200000], loss: {'classification': 33.7434, 'neural_augmentation': 0.4239, 'total_loss': 34.1673}, LR: [0.000475, 0.000475], Avg. batch load time: 0.004, Elapsed time: 5317.34
+2024-08-06 23:57:17 - [34m[1mLOGS   [0m - Epoch:  14 [  113564/  200000], loss: {'classification': 33.7429, 'neural_augmentation': 0.4241, 'total_loss': 34.167}, LR: [0.000474, 0.000474], Avg. batch load time: 0.004, Elapsed time: 5438.77
+2024-08-06 23:59:19 - [34m[1mLOGS   [0m - Epoch:  14 [  113626/  200000], loss: {'classification': 33.742, 'neural_augmentation': 0.4242, 'total_loss': 34.1662}, LR: [0.000474, 0.000474], Avg. batch load time: 0.004, Elapsed time: 5559.97
+2024-08-07 00:01:20 - [34m[1mLOGS   [0m - Epoch:  14 [  113689/  200000], loss: {'classification': 33.7414, 'neural_augmentation': 0.4244, 'total_loss': 34.1658}, LR: [0.000473, 0.000473], Avg. batch load time: 0.004, Elapsed time: 5681.09
+2024-08-07 00:03:21 - [34m[1mLOGS   [0m - Epoch:  14 [  113751/  200000], loss: {'classification': 33.741, 'neural_augmentation': 0.4245, 'total_loss': 34.1656}, LR: [0.000473, 0.000473], Avg. batch load time: 0.004, Elapsed time: 5802.22
+2024-08-07 00:05:22 - [34m[1mLOGS   [0m - Epoch:  14 [  113814/  200000], loss: {'classification': 33.7417, 'neural_augmentation': 0.4247, 'total_loss': 34.1664}, LR: [0.000472, 0.000472], Avg. batch load time: 0.004, Elapsed time: 5923.68
+2024-08-07 00:07:27 - [34m[1mLOGS   [0m - Epoch:  14 [  113876/  200000], loss: {'classification': 33.7419, 'neural_augmentation': 0.4249, 'total_loss': 34.1668}, LR: [0.000472, 0.000472], Avg. batch load time: 0.004, Elapsed time: 6048.67
+2024-08-07 00:09:33 - [34m[1mLOGS   [0m - Epoch:  14 [  113939/  200000], loss: {'classification': 33.7406, 'neural_augmentation': 0.4251, 'total_loss': 34.1657}, LR: [0.000471, 0.000471], Avg. batch load time: 0.004, Elapsed time: 6174.38
+2024-08-07 00:11:34 - [34m[1mLOGS   [0m - Epoch:  14 [  114001/  200000], loss: {'classification': 33.7404, 'neural_augmentation': 0.4252, 'total_loss': 34.1656}, LR: [0.00047, 0.00047], Avg. batch load time: 0.004, Elapsed time: 6295.45
+2024-08-07 00:13:35 - [34m[1mLOGS   [0m - Epoch:  14 [  114064/  200000], loss: {'classification': 33.7401, 'neural_augmentation': 0.4254, 'total_loss': 34.1654}, LR: [0.00047, 0.00047], Avg. batch load time: 0.004, Elapsed time: 6416.96
+2024-08-07 00:15:37 - [34m[1mLOGS   [0m - Epoch:  14 [  114126/  200000], loss: {'classification': 33.7366, 'neural_augmentation': 0.4255, 'total_loss': 34.1621}, LR: [0.000469, 0.000469], Avg. batch load time: 0.003, Elapsed time: 6538.41
+2024-08-07 00:17:38 - [34m[1mLOGS   [0m - Epoch:  14 [  114189/  200000], loss: {'classification': 33.7348, 'neural_augmentation': 0.4257, 'total_loss': 34.1605}, LR: [0.000469, 0.000469], Avg. batch load time: 0.003, Elapsed time: 6659.63
+2024-08-07 00:19:40 - [34m[1mLOGS   [0m - Epoch:  14 [  114251/  200000], loss: {'classification': 33.7329, 'neural_augmentation': 0.4259, 'total_loss': 34.1588}, LR: [0.000468, 0.000468], Avg. batch load time: 0.003, Elapsed time: 6781.22
+2024-08-07 00:21:41 - [34m[1mLOGS   [0m - Epoch:  14 [  114314/  200000], loss: {'classification': 33.7316, 'neural_augmentation': 0.426, 'total_loss': 34.1576}, LR: [0.000468, 0.000468], Avg. batch load time: 0.003, Elapsed time: 6902.84
+2024-08-07 00:23:43 - [34m[1mLOGS   [0m - Epoch:  14 [  114376/  200000], loss: {'classification': 33.73, 'neural_augmentation': 0.4262, 'total_loss': 34.1562}, LR: [0.000467, 0.000467], Avg. batch load time: 0.003, Elapsed time: 7024.05
+2024-08-07 00:25:44 - [34m[1mLOGS   [0m - Epoch:  14 [  114439/  200000], loss: {'classification': 33.7304, 'neural_augmentation': 0.4264, 'total_loss': 34.1567}, LR: [0.000467, 0.000467], Avg. batch load time: 0.003, Elapsed time: 7145.66
+2024-08-07 00:27:46 - [34m[1mLOGS   [0m - Epoch:  14 [  114501/  200000], loss: {'classification': 33.7282, 'neural_augmentation': 0.4265, 'total_loss': 34.1547}, LR: [0.000466, 0.000466], Avg. batch load time: 0.003, Elapsed time: 7267.19
+2024-08-07 00:29:47 - [34m[1mLOGS   [0m - Epoch:  14 [  114564/  200000], loss: {'classification': 33.7297, 'neural_augmentation': 0.4267, 'total_loss': 34.1564}, LR: [0.000466, 0.000466], Avg. batch load time: 0.003, Elapsed time: 7388.72
+2024-08-07 00:31:49 - [34m[1mLOGS   [0m - Epoch:  14 [  114626/  200000], loss: {'classification': 33.7284, 'neural_augmentation': 0.4269, 'total_loss': 34.1552}, LR: [0.000465, 0.000465], Avg. batch load time: 0.003, Elapsed time: 7510.20
+2024-08-07 00:33:55 - [34m[1mLOGS   [0m - Epoch:  14 [  114689/  200000], loss: {'classification': 33.7271, 'neural_augmentation': 0.427, 'total_loss': 34.1541}, LR: [0.000465, 0.000465], Avg. batch load time: 0.003, Elapsed time: 7636.41
+2024-08-07 00:35:56 - [34m[1mLOGS   [0m - Epoch:  14 [  114751/  200000], loss: {'classification': 33.7255, 'neural_augmentation': 0.4272, 'total_loss': 34.1527}, LR: [0.000464, 0.000464], Avg. batch load time: 0.003, Elapsed time: 7757.84
+2024-08-07 00:37:58 - [34m[1mLOGS   [0m - Epoch:  14 [  114814/  200000], loss: {'classification': 33.7266, 'neural_augmentation': 0.4273, 'total_loss': 34.154}, LR: [0.000463, 0.000463], Avg. batch load time: 0.003, Elapsed time: 7879.50
+2024-08-07 00:39:59 - [34m[1mLOGS   [0m - Epoch:  14 [  114876/  200000], loss: {'classification': 33.7266, 'neural_augmentation': 0.4275, 'total_loss': 34.1541}, LR: [0.000463, 0.000463], Avg. batch load time: 0.003, Elapsed time: 8000.83
+2024-08-07 00:42:01 - [34m[1mLOGS   [0m - Epoch:  14 [  114939/  200000], loss: {'classification': 33.7238, 'neural_augmentation': 0.4277, 'total_loss': 34.1515}, LR: [0.000462, 0.000462], Avg. batch load time: 0.003, Elapsed time: 8122.24
+2024-08-07 00:44:02 - [34m[1mLOGS   [0m - Epoch:  14 [  115001/  200000], loss: {'classification': 33.7229, 'neural_augmentation': 0.4278, 'total_loss': 34.1507}, LR: [0.000462, 0.000462], Avg. batch load time: 0.003, Elapsed time: 8243.82
+2024-08-07 00:46:04 - [34m[1mLOGS   [0m - Epoch:  14 [  115064/  200000], loss: {'classification': 33.7221, 'neural_augmentation': 0.428, 'total_loss': 34.1501}, LR: [0.000461, 0.000461], Avg. batch load time: 0.003, Elapsed time: 8365.41
+2024-08-07 00:48:05 - [34m[1mLOGS   [0m - Epoch:  14 [  115126/  200000], loss: {'classification': 33.7207, 'neural_augmentation': 0.4282, 'total_loss': 34.1489}, LR: [0.000461, 0.000461], Avg. batch load time: 0.003, Elapsed time: 8486.88
+2024-08-07 00:50:07 - [34m[1mLOGS   [0m - Epoch:  14 [  115189/  200000], loss: {'classification': 33.7199, 'neural_augmentation': 0.4283, 'total_loss': 34.1482}, LR: [0.00046, 0.00046], Avg. batch load time: 0.003, Elapsed time: 8608.19
+2024-08-07 00:52:08 - [34m[1mLOGS   [0m - Epoch:  14 [  115251/  200000], loss: {'classification': 33.7189, 'neural_augmentation': 0.4285, 'total_loss': 34.1473}, LR: [0.00046, 0.00046], Avg. batch load time: 0.003, Elapsed time: 8729.56
+2024-08-07 00:54:10 - [34m[1mLOGS   [0m - Epoch:  14 [  115314/  200000], loss: {'classification': 33.7176, 'neural_augmentation': 0.4286, 'total_loss': 34.1462}, LR: [0.000459, 0.000459], Avg. batch load time: 0.003, Elapsed time: 8851.09
+2024-08-07 00:56:11 - [34m[1mLOGS   [0m - Epoch:  14 [  115376/  200000], loss: {'classification': 33.717, 'neural_augmentation': 0.4288, 'total_loss': 34.1458}, LR: [0.000459, 0.000459], Avg. batch load time: 0.003, Elapsed time: 8972.43
+2024-08-07 00:58:19 - [34m[1mLOGS   [0m - Epoch:  14 [  115439/  200000], loss: {'classification': 33.7163, 'neural_augmentation': 0.429, 'total_loss': 34.1453}, LR: [0.000458, 0.000458], Avg. batch load time: 0.003, Elapsed time: 9100.23
+2024-08-07 01:00:20 - [34m[1mLOGS   [0m - Epoch:  14 [  115501/  200000], loss: {'classification': 33.7155, 'neural_augmentation': 0.4291, 'total_loss': 34.1446}, LR: [0.000458, 0.000458], Avg. batch load time: 0.003, Elapsed time: 9221.80
+2024-08-07 01:02:22 - [34m[1mLOGS   [0m - Epoch:  14 [  115564/  200000], loss: {'classification': 33.7146, 'neural_augmentation': 0.4293, 'total_loss': 34.1439}, LR: [0.000457, 0.000457], Avg. batch load time: 0.003, Elapsed time: 9343.54
+2024-08-07 01:04:23 - [34m[1mLOGS   [0m - Epoch:  14 [  115626/  200000], loss: {'classification': 33.7132, 'neural_augmentation': 0.4294, 'total_loss': 34.1427}, LR: [0.000456, 0.000456], Avg. batch load time: 0.003, Elapsed time: 9464.89
+2024-08-07 01:06:25 - [34m[1mLOGS   [0m - Epoch:  14 [  115689/  200000], loss: {'classification': 33.7111, 'neural_augmentation': 0.4296, 'total_loss': 34.1407}, LR: [0.000456, 0.000456], Avg. batch load time: 0.003, Elapsed time: 9586.44
+2024-08-07 01:08:26 - [34m[1mLOGS   [0m - Epoch:  14 [  115751/  200000], loss: {'classification': 33.7101, 'neural_augmentation': 0.4298, 'total_loss': 34.1398}, LR: [0.000455, 0.000455], Avg. batch load time: 0.003, Elapsed time: 9707.95
+2024-08-07 01:10:28 - [34m[1mLOGS   [0m - Epoch:  14 [  115814/  200000], loss: {'classification': 33.7092, 'neural_augmentation': 0.4299, 'total_loss': 34.1391}, LR: [0.000455, 0.000455], Avg. batch load time: 0.003, Elapsed time: 9829.33
+2024-08-07 01:12:29 - [34m[1mLOGS   [0m - Epoch:  14 [  115876/  200000], loss: {'classification': 33.7089, 'neural_augmentation': 0.4301, 'total_loss': 34.139}, LR: [0.000454, 0.000454], Avg. batch load time: 0.003, Elapsed time: 9950.85
+2024-08-07 01:14:31 - [34m[1mLOGS   [0m - Epoch:  14 [  115939/  200000], loss: {'classification': 33.7078, 'neural_augmentation': 0.4302, 'total_loss': 34.138}, LR: [0.000454, 0.000454], Avg. batch load time: 0.003, Elapsed time: 10072.25
+2024-08-07 01:16:32 - [34m[1mLOGS   [0m - Epoch:  14 [  116001/  200000], loss: {'classification': 33.7076, 'neural_augmentation': 0.4304, 'total_loss': 34.138}, LR: [0.000453, 0.000453], Avg. batch load time: 0.003, Elapsed time: 10193.79
+2024-08-07 01:18:34 - [34m[1mLOGS   [0m - Epoch:  14 [  116064/  200000], loss: {'classification': 33.7077, 'neural_augmentation': 0.4306, 'total_loss': 34.1383}, LR: [0.000453, 0.000453], Avg. batch load time: 0.003, Elapsed time: 10315.12
+2024-08-07 01:20:35 - [34m[1mLOGS   [0m - Epoch:  14 [  116126/  200000], loss: {'classification': 33.7069, 'neural_augmentation': 0.4307, 'total_loss': 34.1376}, LR: [0.000452, 0.000452], Avg. batch load time: 0.003, Elapsed time: 10436.41
+2024-08-07 01:22:44 - [34m[1mLOGS   [0m - Epoch:  14 [  116189/  200000], loss: {'classification': 33.7067, 'neural_augmentation': 0.4309, 'total_loss': 34.1375}, LR: [0.000452, 0.000452], Avg. batch load time: 0.003, Elapsed time: 10565.82
+2024-08-07 01:24:46 - [34m[1mLOGS   [0m - Epoch:  14 [  116251/  200000], loss: {'classification': 33.7058, 'neural_augmentation': 0.431, 'total_loss': 34.1368}, LR: [0.000451, 0.000451], Avg. batch load time: 0.002, Elapsed time: 10687.28
+2024-08-07 01:26:47 - [34m[1mLOGS   [0m - Epoch:  14 [  116314/  200000], loss: {'classification': 33.705, 'neural_augmentation': 0.4312, 'total_loss': 34.1362}, LR: [0.000451, 0.000451], Avg. batch load time: 0.002, Elapsed time: 10808.74
+2024-08-07 01:28:49 - [34m[1mLOGS   [0m - Epoch:  14 [  116376/  200000], loss: {'classification': 33.7038, 'neural_augmentation': 0.4314, 'total_loss': 34.1351}, LR: [0.00045, 0.00045], Avg. batch load time: 0.002, Elapsed time: 10930.17
+2024-08-07 01:30:50 - [34m[1mLOGS   [0m - Epoch:  14 [  116439/  200000], loss: {'classification': 33.7029, 'neural_augmentation': 0.4315, 'total_loss': 34.1344}, LR: [0.000449, 0.000449], Avg. batch load time: 0.002, Elapsed time: 11051.76
+2024-08-07 01:32:52 - [34m[1mLOGS   [0m - Epoch:  14 [  116501/  200000], loss: {'classification': 33.7022, 'neural_augmentation': 0.4317, 'total_loss': 34.1339}, LR: [0.000449, 0.000449], Avg. batch load time: 0.002, Elapsed time: 11173.43
+2024-08-07 01:34:53 - [34m[1mLOGS   [0m - Epoch:  14 [  116564/  200000], loss: {'classification': 33.7016, 'neural_augmentation': 0.4319, 'total_loss': 34.1334}, LR: [0.000448, 0.000448], Avg. batch load time: 0.002, Elapsed time: 11294.68
+2024-08-07 01:36:54 - [34m[1mLOGS   [0m - Epoch:  14 [  116626/  200000], loss: {'classification': 33.7002, 'neural_augmentation': 0.432, 'total_loss': 34.1323}, LR: [0.000448, 0.000448], Avg. batch load time: 0.002, Elapsed time: 11415.91
+2024-08-07 01:38:56 - [34m[1mLOGS   [0m - Epoch:  14 [  116689/  200000], loss: {'classification': 33.6997, 'neural_augmentation': 0.4322, 'total_loss': 34.1318}, LR: [0.000447, 0.000447], Avg. batch load time: 0.002, Elapsed time: 11537.19
+2024-08-07 01:40:57 - [34m[1mLOGS   [0m - Epoch:  14 [  116751/  200000], loss: {'classification': 33.6993, 'neural_augmentation': 0.4323, 'total_loss': 34.1316}, LR: [0.000447, 0.000447], Avg. batch load time: 0.002, Elapsed time: 11658.72
+2024-08-07 01:42:59 - [34m[1mLOGS   [0m - Epoch:  14 [  116814/  200000], loss: {'classification': 33.698, 'neural_augmentation': 0.4325, 'total_loss': 34.1305}, LR: [0.000446, 0.000446], Avg. batch load time: 0.002, Elapsed time: 11780.05
+2024-08-07 01:45:00 - [34m[1mLOGS   [0m - Epoch:  14 [  116876/  200000], loss: {'classification': 33.6976, 'neural_augmentation': 0.4326, 'total_loss': 34.1302}, LR: [0.000446, 0.000446], Avg. batch load time: 0.002, Elapsed time: 11901.47
+2024-08-07 01:47:01 - [34m[1mLOGS   [0m - Epoch:  14 [  116939/  200000], loss: {'classification': 33.6966, 'neural_augmentation': 0.4328, 'total_loss': 34.1294}, LR: [0.000445, 0.000445], Avg. batch load time: 0.002, Elapsed time: 12022.77
+2024-08-07 01:49:12 - [34m[1mLOGS   [0m - Epoch:  14 [  117001/  200000], loss: {'classification': 33.6966, 'neural_augmentation': 0.4329, 'total_loss': 34.1296}, LR: [0.000445, 0.000445], Avg. batch load time: 0.002, Elapsed time: 12153.43
+2024-08-07 01:51:13 - [34m[1mLOGS   [0m - Epoch:  14 [  117064/  200000], loss: {'classification': 33.6954, 'neural_augmentation': 0.4331, 'total_loss': 34.1285}, LR: [0.000444, 0.000444], Avg. batch load time: 0.002, Elapsed time: 12274.63
+2024-08-07 01:53:15 - [34m[1mLOGS   [0m - Epoch:  14 [  117126/  200000], loss: {'classification': 33.6941, 'neural_augmentation': 0.4333, 'total_loss': 34.1274}, LR: [0.000444, 0.000444], Avg. batch load time: 0.002, Elapsed time: 12396.18
+2024-08-07 01:55:16 - [34m[1mLOGS   [0m - Epoch:  14 [  117189/  200000], loss: {'classification': 33.6933, 'neural_augmentation': 0.4334, 'total_loss': 34.1267}, LR: [0.000443, 0.000443], Avg. batch load time: 0.002, Elapsed time: 12517.70
+2024-08-07 01:57:18 - [34m[1mLOGS   [0m - Epoch:  14 [  117251/  200000], loss: {'classification': 33.6934, 'neural_augmentation': 0.4336, 'total_loss': 34.127}, LR: [0.000443, 0.000443], Avg. batch load time: 0.002, Elapsed time: 12639.11
+2024-08-07 01:59:19 - [34m[1mLOGS   [0m - Epoch:  14 [  117314/  200000], loss: {'classification': 33.6925, 'neural_augmentation': 0.4337, 'total_loss': 34.1263}, LR: [0.000442, 0.000442], Avg. batch load time: 0.002, Elapsed time: 12760.73
+2024-08-07 02:01:21 - [34m[1mLOGS   [0m - Epoch:  14 [  117376/  200000], loss: {'classification': 33.6913, 'neural_augmentation': 0.4339, 'total_loss': 34.1252}, LR: [0.000441, 0.000441], Avg. batch load time: 0.002, Elapsed time: 12882.16
+2024-08-07 02:03:22 - [34m[1mLOGS   [0m - Epoch:  14 [  117439/  200000], loss: {'classification': 33.6909, 'neural_augmentation': 0.4341, 'total_loss': 34.1249}, LR: [0.000441, 0.000441], Avg. batch load time: 0.002, Elapsed time: 13003.73
+2024-08-07 02:05:24 - [34m[1mLOGS   [0m - Epoch:  14 [  117501/  200000], loss: {'classification': 33.6898, 'neural_augmentation': 0.4342, 'total_loss': 34.124}, LR: [0.00044, 0.00044], Avg. batch load time: 0.002, Elapsed time: 13125.27
+2024-08-07 02:07:26 - [34m[1mLOGS   [0m - Epoch:  14 [  117564/  200000], loss: {'classification': 33.6898, 'neural_augmentation': 0.4344, 'total_loss': 34.1242}, LR: [0.00044, 0.00044], Avg. batch load time: 0.002, Elapsed time: 13247.00
+2024-08-07 02:09:27 - [34m[1mLOGS   [0m - Epoch:  14 [  117626/  200000], loss: {'classification': 33.6895, 'neural_augmentation': 0.4346, 'total_loss': 34.1241}, LR: [0.000439, 0.000439], Avg. batch load time: 0.002, Elapsed time: 13368.37
+2024-08-07 02:11:28 - [34m[1mLOGS   [0m - Epoch:  14 [  117689/  200000], loss: {'classification': 33.6894, 'neural_augmentation': 0.4347, 'total_loss': 34.1242}, LR: [0.000439, 0.000439], Avg. batch load time: 0.002, Elapsed time: 13489.95
+2024-08-07 02:13:38 - [34m[1mLOGS   [0m - Epoch:  14 [  117751/  200000], loss: {'classification': 33.6893, 'neural_augmentation': 0.4349, 'total_loss': 34.1242}, LR: [0.000438, 0.000438], Avg. batch load time: 0.002, Elapsed time: 13619.69
+2024-08-07 02:15:40 - [34m[1mLOGS   [0m - Epoch:  14 [  117814/  200000], loss: {'classification': 33.6884, 'neural_augmentation': 0.435, 'total_loss': 34.1234}, LR: [0.000438, 0.000438], Avg. batch load time: 0.002, Elapsed time: 13740.98
+2024-08-07 02:17:41 - [34m[1mLOGS   [0m - Epoch:  14 [  117876/  200000], loss: {'classification': 33.688, 'neural_augmentation': 0.4352, 'total_loss': 34.1232}, LR: [0.000437, 0.000437], Avg. batch load time: 0.002, Elapsed time: 13862.52
+2024-08-07 02:19:43 - [34m[1mLOGS   [0m - Epoch:  14 [  117939/  200000], loss: {'classification': 33.6879, 'neural_augmentation': 0.4354, 'total_loss': 34.1233}, LR: [0.000437, 0.000437], Avg. batch load time: 0.002, Elapsed time: 13984.23
+2024-08-07 02:21:44 - [34m[1mLOGS   [0m - Epoch:  14 [  118001/  200000], loss: {'classification': 33.6871, 'neural_augmentation': 0.4355, 'total_loss': 34.1226}, LR: [0.000436, 0.000436], Avg. batch load time: 0.002, Elapsed time: 14105.63
+2024-08-07 02:23:46 - [34m[1mLOGS   [0m - Epoch:  14 [  118064/  200000], loss: {'classification': 33.6859, 'neural_augmentation': 0.4357, 'total_loss': 34.1216}, LR: [0.000436, 0.000436], Avg. batch load time: 0.002, Elapsed time: 14227.07
+2024-08-07 02:25:47 - [34m[1mLOGS   [0m - Epoch:  14 [  118126/  200000], loss: {'classification': 33.6859, 'neural_augmentation': 0.4359, 'total_loss': 34.1218}, LR: [0.000435, 0.000435], Avg. batch load time: 0.002, Elapsed time: 14348.66
+2024-08-07 02:27:49 - [34m[1mLOGS   [0m - Epoch:  14 [  118189/  200000], loss: {'classification': 33.6851, 'neural_augmentation': 0.436, 'total_loss': 34.1211}, LR: [0.000434, 0.000434], Avg. batch load time: 0.002, Elapsed time: 14470.17
+2024-08-07 02:29:51 - [34m[1mLOGS   [0m - Epoch:  14 [  118251/  200000], loss: {'classification': 33.6837, 'neural_augmentation': 0.4362, 'total_loss': 34.1199}, LR: [0.000434, 0.000434], Avg. batch load time: 0.002, Elapsed time: 14591.98
+2024-08-07 02:31:52 - [34m[1mLOGS   [0m - Epoch:  14 [  118314/  200000], loss: {'classification': 33.683, 'neural_augmentation': 0.4363, 'total_loss': 34.1194}, LR: [0.000433, 0.000433], Avg. batch load time: 0.002, Elapsed time: 14713.34
+2024-08-07 02:33:53 - [34m[1mLOGS   [0m - Epoch:  14 [  118376/  200000], loss: {'classification': 33.6818, 'neural_augmentation': 0.4365, 'total_loss': 34.1182}, LR: [0.000433, 0.000433], Avg. batch load time: 0.002, Elapsed time: 14834.79
+2024-08-07 02:35:55 - [34m[1mLOGS   [0m - Epoch:  14 [  118439/  200000], loss: {'classification': 33.6811, 'neural_augmentation': 0.4367, 'total_loss': 34.1177}, LR: [0.000432, 0.000432], Avg. batch load time: 0.002, Elapsed time: 14956.34
+2024-08-07 02:38:04 - [34m[1mLOGS   [0m - Epoch:  14 [  118501/  200000], loss: {'classification': 33.6801, 'neural_augmentation': 0.4368, 'total_loss': 34.1169}, LR: [0.000432, 0.000432], Avg. batch load time: 0.002, Elapsed time: 15085.61
+2024-08-07 02:40:07 - [34m[1mLOGS   [0m - Epoch:  14 [  118564/  200000], loss: {'classification': 33.6795, 'neural_augmentation': 0.437, 'total_loss': 34.1165}, LR: [0.000431, 0.000431], Avg. batch load time: 0.002, Elapsed time: 15208.78
+2024-08-07 02:42:09 - [34m[1mLOGS   [0m - Epoch:  14 [  118626/  200000], loss: {'classification': 33.6794, 'neural_augmentation': 0.4371, 'total_loss': 34.1165}, LR: [0.000431, 0.000431], Avg. batch load time: 0.002, Elapsed time: 15330.23
+2024-08-07 02:44:10 - [34m[1mLOGS   [0m - Epoch:  14 [  118689/  200000], loss: {'classification': 33.6779, 'neural_augmentation': 0.4373, 'total_loss': 34.1152}, LR: [0.00043, 0.00043], Avg. batch load time: 0.002, Elapsed time: 15451.72
+2024-08-07 02:46:12 - [34m[1mLOGS   [0m - Epoch:  14 [  118751/  200000], loss: {'classification': 33.6773, 'neural_augmentation': 0.4375, 'total_loss': 34.1148}, LR: [0.00043, 0.00043], Avg. batch load time: 0.002, Elapsed time: 15573.32
+2024-08-07 02:47:09 - [34m[1mLOGS   [0m - *** Training summary for epoch 14
+	 loss={'classification': 33.6765, 'neural_augmentation': 0.4375, 'total_loss': 34.114}
+2024-08-07 02:47:12 - [34m[1mLOGS   [0m - Best checkpoint with score 0.00 saved at /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_best.pt
+2024-08-07 02:47:13 - [34m[1mLOGS   [0m - Last training checkpoint is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/training_checkpoint_last.pt
+2024-08-07 02:47:13 - [34m[1mLOGS   [0m - Last checkpoint's model state is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_last.pt
+2024-08-07 02:47:15 - [34m[1mLOGS   [0m - Training checkpoint for epoch 14/iteration 118780 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/training_checkpoint_epoch_14_iter_118780.pt
+2024-08-07 02:47:15 - [34m[1mLOGS   [0m - Model state for epoch 14/iteration 118780 is saved at: /ML-A100/team/mm/models/catlip_data/results_base_noc/train/checkpoint_epoch_14_iter_118780.pt
+[31m===========================================================================[0m
+2024-08-07 02:47:17 - [32m[1mINFO   [0m - Training epoch 15
+2024-08-07 02:48:29 - [34m[1mLOGS   [0m - Epoch:  15 [  118780/  200000], loss: {'classification': 33.1322, 'neural_augmentation': 0.4657, 'total_loss': 33.598}, LR: [0.000429, 0.000429], Avg. batch load time: 71.255, Elapsed time: 71.50
+2024-08-07 02:50:31 - [34m[1mLOGS   [0m - Epoch:  15 [  118842/  200000], loss: {'classification': 33.4483, 'neural_augmentation': 0.4578, 'total_loss': 33.9061}, LR: [0.000429, 0.000429], Avg. batch load time: 0.145, Elapsed time: 193.81
+2024-08-07 02:52:32 - [34m[1mLOGS   [0m - Epoch:  15 [  118905/  200000], loss: {'classification': 33.4685, 'neural_augmentation': 0.4582, 'total_loss': 33.9268}, LR: [0.000428, 0.000428], Avg. batch load time: 0.073, Elapsed time: 315.02
+2024-08-07 02:54:34 - [34m[1mLOGS   [0m - Epoch:  15 [  118967/  200000], loss: {'classification': 33.4865, 'neural_augmentation': 0.4584, 'total_loss': 33.9449}, LR: [0.000428, 0.000428], Avg. batch load time: 0.049, Elapsed time: 436.68
+2024-08-07 02:56:35 - [34m[1mLOGS   [0m - Epoch:  15 [  119030/  200000], loss: {'classification': 33.5104, 'neural_augmentation': 0.4586, 'total_loss': 33.969}, LR: [0.000427, 0.000427], Avg. batch load time: 0.037, Elapsed time: 558.17
+2024-08-07 02:58:37 - [34m[1mLOGS   [0m - Epoch:  15 [  119092/  200000], loss: {'classification': 33.5322, 'neural_augmentation': 0.4586, 'total_loss': 33.9909}, LR: [0.000427, 0.000427], Avg. batch load time: 0.030, Elapsed time: 679.78
+2024-08-07 03:00:38 - [34m[1mLOGS   [0m - Epoch:  15 [  119155/  200000], loss: {'classification': 33.5326, 'neural_augmentation': 0.4588, 'total_loss': 33.9914}, LR: [0.000426, 0.000426], Avg. batch load time: 0.025, Elapsed time: 801.47
+2024-08-07 03:02:40 - [34m[1mLOGS   [0m - Epoch:  15 [  119217/  200000], loss: {'classification': 33.5371, 'neural_augmentation': 0.4589, 'total_loss': 33.9961}, LR: [0.000426, 0.000426], Avg. batch load time: 0.022, Elapsed time: 923.01
+2024-08-07 03:04:42 - [34m[1mLOGS   [0m - Epoch:  15 [  119280/  200000], loss: {'classification': 33.5371, 'neural_augmentation': 0.4591, 'total_loss': 33.9962}, LR: [0.000425, 0.000425], Avg. batch load time: 0.019, Elapsed time: 1044.72
+2024-08-07 03:06:43 - [34m[1mLOGS   [0m - Epoch:  15 [  119342/  200000], loss: {'classification': 33.5365, 'neural_augmentation': 0.4593, 'total_loss': 33.9958}, LR: [0.000425, 0.000425], Avg. batch load time: 0.017, Elapsed time: 1166.34
+2024-08-07 03:08:45 - [34m[1mLOGS   [0m - Epoch:  15 [  119405/  200000], loss: {'classification': 33.5364, 'neural_augmentation': 0.4594, 'total_loss': 33.9958}, LR: [0.000424, 0.000424], Avg. batch load time: 0.015, Elapsed time: 1287.65
+2024-08-07 03:10:46 - [34m[1mLOGS   [0m - Epoch:  15 [  119467/  200000], loss: {'classification': 33.5331, 'neural_augmentation': 0.4596, 'total_loss': 33.9927}, LR: [0.000424, 0.000424], Avg. batch load time: 0.014, Elapsed time: 1409.00
+2024-08-07 03:12:50 - [34m[1mLOGS   [0m - Epoch:  15 [  119530/  200000], loss: {'classification': 33.5293, 'neural_augmentation': 0.4597, 'total_loss': 33.989}, LR: [0.000423, 0.000423], Avg. batch load time: 0.013, Elapsed time: 1533.30
+2024-08-07 03:14:55 - [34m[1mLOGS   [0m - Epoch:  15 [  119592/  200000], loss: {'classification': 33.5261, 'neural_augmentation': 0.4598, 'total_loss': 33.986}, LR: [0.000423, 0.000423], Avg. batch load time: 0.012, Elapsed time: 1657.74
+2024-08-07 03:16:56 - [34m[1mLOGS   [0m - Epoch:  15 [  119655/  200000], loss: {'classification': 33.5267, 'neural_augmentation': 0.46, 'total_loss': 33.9867}, LR: [0.000422, 0.000422], Avg. batch load time: 0.011, Elapsed time: 1779.28
+2024-08-07 03:18:58 - [34m[1mLOGS   [0m - Epoch:  15 [  119717/  200000], loss: {'classification': 33.5235, 'neural_augmentation': 0.4602, 'total_loss': 33.9836}, LR: [0.000421, 0.000421], Avg. batch load time: 0.011, Elapsed time: 1900.70
+2024-08-07 03:20:59 - [34m[1mLOGS   [0m - Epoch:  15 [  119780/  200000], loss: {'classification': 33.5226, 'neural_augmentation': 0.4603, 'total_loss': 33.983}, LR: [0.000421, 0.000421], Avg. batch load time: 0.010, Elapsed time: 2021.92
+2024-08-07 03:23:01 - [34m[1mLOGS   [0m - Epoch:  15 [  119842/  200000], loss: {'classification': 33.5249, 'neural_augmentation': 0.4605, 'total_loss': 33.9854}, LR: [0.00042, 0.00042], Avg. batch load time: 0.009, Elapsed time: 2143.55
+2024-08-07 03:25:02 - [34m[1mLOGS   [0m - Epoch:  15 [  119905/  200000], loss: {'classification': 33.525, 'neural_augmentation': 0.4606, 'total_loss': 33.9856}, LR: [0.00042, 0.00042], Avg. batch load time: 0.009, Elapsed time: 2265.02
+2024-08-07 03:27:04 - [34m[1mLOGS   [0m - Epoch:  15 [  119967/  200000], loss: {'classification': 33.5228, 'neural_augmentation': 0.4608, 'total_loss': 33.9836}, LR: [0.000419, 0.000419], Avg. batch load time: 0.009, Elapsed time: 2386.53
+2024-08-07 03:29:05 - [34m[1mLOGS   [0m - Epoch:  15 [  120030/  200000], loss: {'classification': 33.5194, 'neural_augmentation': 0.4609, 'total_loss': 33.9803}, LR: [0.000419, 0.000419], Avg. batch load time: 0.008, Elapsed time: 2507.78
+2024-08-07 03:31:06 - [34m[1mLOGS   [0m - Epoch:  15 [  120092/  200000], loss: {'classification': 33.525, 'neural_augmentation': 0.4611, 'total_loss': 33.9861}, LR: [0.000418, 0.000418], Avg. batch load time: 0.008, Elapsed time: 2629.16
+2024-08-07 03:33:08 - [34m[1mLOGS   [0m - Epoch:  15 [  120155/  200000], loss: {'classification': 33.5289, 'neural_augmentation': 0.4613, 'total_loss': 33.9901}, LR: [0.000418, 0.000418], Avg. batch load time: 0.008, Elapsed time: 2750.62
+2024-08-07 03:35:09 - [34m[1mLOGS   [0m - Epoch:  15 [  120217/  200000], loss: {'classification': 33.5241, 'neural_augmentation': 0.4614, 'total_loss': 33.9856}, LR: [0.000417, 0.000417], Avg. batch load time: 0.007, Elapsed time: 2872.17
+2024-08-07 03:37:12 - [34m[1mLOGS   [0m - Epoch:  15 [  120280/  200000], loss: {'classification': 33.5215, 'neural_augmentation': 0.4616, 'total_loss': 33.9831}, LR: [0.000417, 0.000417], Avg. batch load time: 0.007, Elapsed time: 2995.11
+2024-08-07 03:39:18 - [34m[1mLOGS   [0m - Epoch:  15 [  120342/  200000], loss: {'classification': 33.5237, 'neural_augmentation': 0.4618, 'total_loss': 33.9854}, LR: [0.000416, 0.000416], Avg. batch load time: 0.007, Elapsed time: 3121.41
+2024-08-07 03:41:20 - [34m[1mLOGS   [0m - Epoch:  15 [  120405/  200000], loss: {'classification': 33.5251, 'neural_augmentation': 0.4619, 'total_loss': 33.9871}, LR: [0.000416, 0.000416], Avg. batch load time: 0.007, Elapsed time: 3242.76
+2024-08-07 03:43:21 - [34m[1mLOGS   [0m - Epoch:  15 [  120467/  200000], loss: {'classification': 33.5239, 'neural_augmentation': 0.4621, 'total_loss': 33.9859}, LR: [0.000415, 0.000415], Avg. batch load time: 0.006, Elapsed time: 3364.44
+2024-08-07 03:45:23 - [34m[1mLOGS   [0m - Epoch:  15 [  120530/  200000], loss: {'classification': 33.5216, 'neural_augmentation': 0.4622, 'total_loss': 33.9838}, LR: [0.000415, 0.000415], Avg. batch load time: 0.006, Elapsed time: 3486.06
+2024-08-07 03:47:25 - [34m[1mLOGS   [0m - Epoch:  15 [  120592/  200000], loss: {'classification': 33.5228, 'neural_augmentation': 0.4624, 'total_loss': 33.9852}, LR: [0.000414, 0.000414], Avg. batch load time: 0.006, Elapsed time: 3607.64
+2024-08-07 03:49:26 - [34m[1mLOGS   [0m - Epoch:  15 [  120655/  200000], loss: {'classification': 33.5215, 'neural_augmentation': 0.4626, 'total_loss': 33.9841}, LR: [0.000413, 0.000413], Avg. batch load time: 0.006, Elapsed time: 3729.05
+2024-08-07 03:51:27 - [34m[1mLOGS   [0m - Epoch:  15 [  120717/  200000], loss: {'classification': 33.5211, 'neural_augmentation': 0.4627, 'total_loss': 33.9839}, LR: [0.000413, 0.000413], Avg. batch load time: 0.006, Elapsed time: 3850.22
+2024-08-07 03:53:29 - [34m[1mLOGS   [0m - Epoch:  15 [  120780/  200000], loss: {'classification': 33.5218, 'neural_augmentation': 0.4629, 'total_loss': 33.9847}, LR: [0.000412, 0.000412], Avg. batch load time: 0.006, Elapsed time: 3971.56
+2024-08-07 03:55:30 - [34m[1mLOGS   [0m - Epoch:  15 [  120842/  200000], loss: {'classification': 33.5199, 'neural_augmentation': 0.463, 'total_loss': 33.9829}, LR: [0.000412, 0.000412], Avg. batch load time: 0.005, Elapsed time: 4093.04
+2024-08-07 03:57:32 - [34m[1mLOGS   [0m - Epoch:  15 [  120905/  200000], loss: {'classification': 33.5181, 'neural_augmentation': 0.4632, 'total_loss': 33.9813}, LR: [0.000411, 0.000411], Avg. batch load time: 0.005, Elapsed time: 4214.69
+2024-08-07 03:59:33 - [34m[1mLOGS   [0m - Epoch:  15 [  120967/  200000], loss: {'classification': 33.5161, 'neural_augmentation': 0.4633, 'total_loss': 33.9795}, LR: [0.000411, 0.000411], Avg. batch load time: 0.005, Elapsed time: 4335.96
+2024-08-07 04:01:34 - [34m[1mLOGS   [0m - Epoch:  15 [  121030/  200000], loss: {'classification': 33.5153, 'neural_augmentation': 0.4635, 'total_loss': 33.9788}, LR: [0.00041, 0.00041], Avg. batch load time: 0.005, Elapsed time: 4457.35
+2024-08-07 04:03:42 - [34m[1mLOGS   [0m - Epoch:  15 [  121092/  200000], loss: {'classification': 33.5132, 'neural_augmentation': 0.4636, 'total_loss': 33.9769}, LR: [0.00041, 0.00041], Avg. batch load time: 0.005, Elapsed time: 4585.16
+2024-08-07 04:05:44 - [34m[1mLOGS   [0m - Epoch:  15 [  121155/  200000], loss: {'classification': 33.5123, 'neural_augmentation': 0.4638, 'total_loss': 33.9761}, LR: [0.000409, 0.000409], Avg. batch load time: 0.005, Elapsed time: 4706.72
+2024-08-07 04:07:45 - [34m[1mLOGS   [0m - Epoch:  15 [  121217/  200000], loss: {'classification': 33.5097, 'neural_augmentation': 0.464, 'total_loss': 33.9736}, LR: [0.000409, 0.000409], Avg. batch load time: 0.005, Elapsed time: 4828.23
+2024-08-07 04:09:47 - [34m[1mLOGS   [0m - Epoch:  15 [  121280/  200000], loss: {'classification': 33.5109, 'neural_augmentation': 0.4641, 'total_loss': 33.975}, LR: [0.000408, 0.000408], Avg. batch load time: 0.005, Elapsed time: 4949.51
+2024-08-07 04:11:48 - [34m[1mLOGS   [0m - Epoch:  15 [  121342/  200000], loss: {'classification': 33.51, 'neural_augmentation': 0.4643, 'total_loss': 33.9743}, LR: [0.000408, 0.000408], Avg. batch load time: 0.005, Elapsed time: 5071.19
+2024-08-07 04:13:50 - [34m[1mLOGS   [0m - Epoch:  15 [  121405/  200000], loss: {'classification': 33.5096, 'neural_augmentation': 0.4645, 'total_loss': 33.9741}, LR: [0.000407, 0.000407], Avg. batch load time: 0.004, Elapsed time: 5192.54
+2024-08-07 04:15:51 - [34m[1mLOGS   [0m - Epoch:  15 [  121467/  200000], loss: {'classification': 33.5109, 'neural_augmentation': 0.4646, 'total_loss': 33.9755}, LR: [0.000407, 0.000407], Avg. batch load time: 0.004, Elapsed time: 5314.02
+2024-08-07 04:17:53 - [34m[1mLOGS   [0m - Epoch:  15 [  121530/  200000], loss: {'classification': 33.5105, 'neural_augmentation': 0.4648, 'total_loss': 33.9753}, LR: [0.000406, 0.000406], Avg. batch load time: 0.004, Elapsed time: 5435.58
+2024-08-07 04:19:54 - [34m[1mLOGS   [0m - Epoch:  15 [  121592/  200000], loss: {'classification': 33.508, 'neural_augmentation': 0.465, 'total_loss': 33.973}, LR: [0.000406, 0.000406], Avg. batch load time: 0.004, Elapsed time: 5557.04
+2024-08-07 04:21:55 - [34m[1mLOGS   [0m - Epoch:  15 [  121655/  200000], loss: {'classification': 33.5097, 'neural_augmentation': 0.4651, 'total_loss': 33.9748}, LR: [0.000405, 0.000405], Avg. batch load time: 0.004, Elapsed time: 5678.46
+2024-08-07 04:23:57 - [34m[1mLOGS   [0m - Epoch:  15 [  121717/  200000], loss: {'classification': 33.5079, 'neural_augmentation': 0.4653, 'total_loss': 33.9732}, LR: [0.000404, 0.000404], Avg. batch load time: 0.004, Elapsed time: 5799.90
+2024-08-07 04:25:58 - [34m[1mLOGS   [0m - Epoch:  15 [  121780/  200000], loss: {'classification': 33.5058, 'neural_augmentation': 0.4654, 'total_loss': 33.9713}, LR: [0.000404, 0.000404], Avg. batch load time: 0.004, Elapsed time: 5921.29
+2024-08-07 04:28:03 - [34m[1mLOGS   [0m - Epoch:  15 [  121842/  200000], loss: {'classification': 33.5022, 'neural_augmentation': 0.4656, 'total_loss': 33.9678}, LR: [0.000403, 0.000403], Avg. batch load time: 0.004, Elapsed time: 6045.49
+2024-08-07 04:30:06 - [34m[1mLOGS   [0m - Epoch:  15 [  121905/  200000], loss: {'classification': 33.5014, 'neural_augmentation': 0.4657, 'total_loss': 33.9672}, LR: [0.000403, 0.000403], Avg. batch load time: 0.004, Elapsed time: 6168.96
+2024-08-07 04:32:07 - [34m[1mLOGS   [0m - Epoch:  15 [  121967/  200000], loss: {'classification': 33.5005, 'neural_augmentation': 0.4659, 'total_loss': 33.9663}, LR: [0.000402, 0.000402], Avg. batch load time: 0.004, Elapsed time: 6290.27
+2024-08-07 04:34:09 - [34m[1mLOGS   [0m - Epoch:  15 [  122030/  200000], loss: {'classification': 33.5, 'neural_augmentation': 0.466, 'total_loss': 33.966}, LR: [0.000402, 0.000402], Avg. batch load time: 0.004, Elapsed time: 6411.59
+2024-08-07 04:36:10 - [34m[1mLOGS   [0m - Epoch:  15 [  122092/  200000], loss: {'classification': 33.501, 'neural_augmentation': 0.4662, 'total_loss': 33.9672}, LR: [0.000401, 0.000401], Avg. batch load time: 0.004, Elapsed time: 6533.20
+2024-08-07 04:38:12 - [34m[1mLOGS   [0m - Epoch:  15 [  122155/  200000], loss: {'classification': 33.4992, 'neural_augmentation': 0.4663, 'total_loss': 33.9655}, LR: [0.000401, 0.000401], Avg. batch load time: 0.004, Elapsed time: 6654.62
+2024-08-07 04:40:13 - [34m[1mLOGS   [0m - Epoch:  15 [  122217/  200000], loss: {'classification': 33.4993, 'neural_augmentation': 0.4665, 'total_loss': 33.9658}, LR: [0.0004, 0.0004], Avg. batch load time: 0.004, Elapsed time: 6775.92
+2024-08-07 04:42:14 - [34m[1mLOGS   [0m - Epoch:  15 [  122280/  200000], loss: {'classification': 33.5, 'neural_augmentation': 0.4667, 'total_loss': 33.9667}, LR: [0.0004, 0.0004], Avg. batch load time: 0.004, Elapsed time: 6897.19
+2024-08-07 04:44:16 - [34m[1mLOGS   [0m - Epoch:  15 [  122342/  200000], loss: {'classification': 33.4986, 'neural_augmentation': 0.4668, 'total_loss': 33.9654}, LR: [0.000399, 0.000399], Avg. batch load time: 0.004, Elapsed time: 7018.73
+2024-08-07 04:46:17 - [34m[1mLOGS   [0m - Epoch:  15 [  122405/  200000], loss: {'classification': 33.4985, 'neural_augmentation': 0.467, 'total_loss': 33.9654}, LR: [0.000399, 0.000399], Avg. batch load time: 0.003, Elapsed time: 7140.46
+2024-08-07 04:48:19 - [34m[1mLOGS   [0m - Epoch:  15 [  122467/  200000], loss: {'classification': 33.4971, 'neural_augmentation': 0.4671, 'total_loss': 33.9643}, LR: [0.000398, 0.000398], Avg. batch load time: 0.003, Elapsed time: 7261.89
+2024-08-07 04:50:20 - [34m[1mLOGS   [0m - Epoch:  15 [  122530/  200000], loss: {'classification': 33.4957, 'neural_augmentation': 0.4673, 'total_loss': 33.9629}, LR: [0.000398, 0.000398], Avg. batch load time: 0.003, Elapsed time: 7383.33
+2024-08-07 04:52:21 - [34m[1mLOGS   [0m - Epoch:  15 [  122592/  200000], loss: {'classification': 33.494, 'neural_augmentation': 0.4674, 'total_loss': 33.9615}, LR: [0.000397, 0.000397], Avg. batch load time: 0.003, Elapsed time: 7504.46
+2024-08-07 04:54:28 - [34m[1mLOGS   [0m - Epoch:  15 [  122655/  200000], loss: {'classification': 33.4932, 'neural_augmentation': 0.4676, 'total_loss': 33.9608}, LR: [0.000397, 0.000397], Avg. batch load time: 0.003, Elapsed time: 7631.06
+2024-08-07 04:56:29 - [34m[1mLOGS   [0m - Epoch:  15 [  122717/  200000], loss: {'classification': 33.4933, 'neural_augmentation': 0.4678, 'total_loss': 33.961}, LR: [0.000396, 0.000396], Avg. batch load time: 0.003, Elapsed time: 7752.16
+2024-08-07 04:58:31 - [34m[1mLOGS   [0m - Epoch:  15 [  122780/  200000], loss: {'classification': 33.493, 'neural_augmentation': 0.4679, 'total_loss': 33.961}, LR: [0.000396, 0.000396], Avg. batch load time: 0.003, Elapsed time: 7873.73
+2024-08-07 05:00:32 - [34m[1mLOGS   [0m - Epoch:  15 [  122842/  200000], loss: {'classification': 33.4926, 'neural_augmentation': 0.4681, 'total_loss': 33.9607}, LR: [0.000395, 0.000395], Avg. batch load time: 0.003, Elapsed time: 7995.21
+2024-08-07 05:02:34 - [34m[1mLOGS   [0m - Epoch:  15 [  122905/  200000], loss: {'classification': 33.4919, 'neural_augmentation': 0.4682, 'total_loss': 33.9602}, LR: [0.000394, 0.000394], Avg. batch load time: 0.003, Elapsed time: 8116.60
+2024-08-07 05:04:35 - [34m[1mLOGS   [0m - Epoch:  15 [  122967/  200000], loss: {'classification': 33.4889, 'neural_augmentation': 0.4684, 'total_loss': 33.9573}, LR: [0.000394, 0.000394], Avg. batch load time: 0.003, Elapsed time: 8237.81
+2024-08-07 05:06:36 - [34m[1mLOGS   [0m - Epoch:  15 [  123030/  200000], loss: {'classification': 33.4887, 'neural_augmentation': 0.4685, 'total_loss': 33.9572}, LR: [0.000393, 0.000393], Avg. batch load time: 0.003, Elapsed time: 8359.06
+2024-08-07 05:08:37 - [34m[1mLOGS   [0m - Epoch:  15 [  123092/  200000], loss: {'classification': 33.4886, 'neural_augmentation': 0.4687, 'total_loss': 33.9573}, LR: [0.000393, 0.000393], Avg. batch load time: 0.003, Elapsed time: 8480.42
+2024-08-07 05:10:39 - [34m[1mLOGS   [0m - Epoch:  15 [  123155/  200000], loss: {'classification': 33.4883, 'neural_augmentation': 0.4688, 'total_loss': 33.9571}, LR: [0.000392, 0.000392], Avg. batch load time: 0.003, Elapsed time: 8601.79
+2024-08-07 05:12:40 - [34m[1mLOGS   [0m - Epoch:  15 [  123217/  200000], loss: {'classification': 33.4872, 'neural_augmentation': 0.469, 'total_loss': 33.9562}, LR: [0.000392, 0.000392], Avg. batch load time: 0.003, Elapsed time: 8723.31
+2024-08-07 05:14:42 - [34m[1mLOGS   [0m - Epoch:  15 [  123280/  200000], loss: {'classification': 33.4873, 'neural_augmentation': 0.4692, 'total_loss': 33.9565}, LR: [0.000391, 0.000391], Avg. batch load time: 0.003, Elapsed time: 8844.73
+2024-08-07 05:16:43 - [34m[1mLOGS   [0m - Epoch:  15 [  123342/  200000], loss: {'classification': 33.4876, 'neural_augmentation': 0.4693, 'total_loss': 33.9569}, LR: [0.000391, 0.000391], Avg. batch load time: 0.003, Elapsed time: 8966.10
+2024-08-07 05:18:50 - [34m[1mLOGS   [0m - Epoch:  15 [  123405/  200000], loss: {'classification': 33.487, 'neural_augmentation': 0.4695, 'total_loss': 33.9564}, LR: [0.00039, 0.00039], Avg. batch load time: 0.003, Elapsed time: 9092.58
+2024-08-07 05:20:51 - [34m[1mLOGS   [0m - Epoch:  15 [  123467/  200000], loss: {'classification': 33.4845, 'neural_augmentation': 0.4696, 'total_loss': 33.9542}, LR: [0.00039, 0.00039], Avg. batch load time: 0.003, Elapsed time: 9214.12
+2024-08-07 05:22:53 - [34m[1mLOGS   [0m - Epoch:  15 [  123530/  200000], loss: {'classification': 33.4843, 'neural_augmentation': 0.4698, 'total_loss': 33.9541}, LR: [0.000389, 0.000389], Avg. batch load time: 0.003, Elapsed time: 9335.53
+2024-08-07 05:24:54 - [34m[1mLOGS   [0m - Epoch:  15 [  123592/  200000], loss: {'classification': 33.484, 'neural_augmentation': 0.4699, 'total_loss': 33.9539}, LR: [0.000389, 0.000389], Avg. batch load time: 0.003, Elapsed time: 9456.72
+2024-08-07 05:26:55 - [34m[1mLOGS   [0m - Epoch:  15 [  123655/  200000], loss: {'classification': 33.4842, 'neural_augmentation': 0.4701, 'total_loss': 33.9543}, LR: [0.000388, 0.000388], Avg. batch load time: 0.003, Elapsed time: 9578.30
+2024-08-07 05:28:56 - [34m[1mLOGS   [0m - Epoch:  15 [  123717/  200000], loss: {'classification': 33.4827, 'neural_augmentation': 0.4703, 'total_loss': 33.953}, LR: [0.000388, 0.000388], Avg. batch load time: 0.003, Elapsed time: 9699.42
+2024-08-07 05:30:58 - [34m[1mLOGS   [0m - Epoch:  15 [  123780/  200000], loss: {'classification': 33.4827, 'neural_augmentation': 0.4704, 'total_loss': 33.9531}, LR: [0.000387, 0.000387], Avg. batch load time: 0.003, Elapsed time: 9820.89
+2024-08-07 05:32:59 - [34m[1mLOGS   [0m - Epoch:  15 [  123842/  200000], loss: {'classification': 33.4825, 'neural_augmentation': 0.4706, 'total_loss': 33.9531}, LR: [0.000387, 0.000387], Avg. batch load time: 0.003, Elapsed time: 9942.37
+2024-08-07 05:35:01 - [34m[1mLOGS   [0m - Epoch:  15 [  123905/  200000], loss: {'classification': 33.4821, 'neural_augmentation': 0.4707, 'total_loss': 33.9528}, LR: [0.000386, 0.000386], Avg. batch load time: 0.003, Elapsed time: 10063.68
+2024-08-07 05:37:02 - [34m[1mLOGS   [0m - Epoch:  15 [  123967/  200000], loss: {'classification': 33.4814, 'neural_augmentation': 0.4709, 'total_loss': 33.9523}, LR: [0.000386, 0.000386], Avg. batch load time: 0.003, Elapsed time: 10185.21
+2024-08-07 05:39:04 - [34m[1mLOGS   [0m - Epoch:  15 [  124030/  200000], loss: {'classification': 33.481, 'neural_augmentation': 0.471, 'total_loss': 33.952}, LR: [0.000385, 0.000385], Avg. batch load time: 0.003, Elapsed time: 10306.73
+2024-08-07 05:41:05 - [34m[1mLOGS   [0m - Epoch:  15 [  124092/  200000], loss: {'classification': 33.4797, 'neural_augmentation': 0.4712, 'total_loss': 33.9509}, LR: [0.000384, 0.000384], Avg. batch load time: 0.003, Elapsed time: 10428.22
+2024-08-07 05:43:11 - [34m[1mLOGS   [0m - Epoch:  15 [  124155/  200000], loss: {'classification': 33.4776, 'neural_augmentation': 0.4714, 'total_loss': 33.949}, LR: [0.000384, 0.000384], Avg. batch load time: 0.003, Elapsed time: 10554.19
+2024-08-07 05:45:13 - [34m[1mLOGS   [0m - Epoch:  15 [  124217/  200000], loss: {'classification': 33.4764, 'neural_augmentation': 0.4715, 'total_loss': 33.9479}, LR: [0.000383, 0.000383], Avg. batch load time: 0.003, Elapsed time: 10675.63
+2024-08-07 05:47:14 - [34m[1mLOGS   [0m - Epoch:  15 [  124280/  200000], loss: {'classification': 33.4757, 'neural_augmentation': 0.4717, 'total_loss': 33.9473}, LR: [0.000383, 0.000383], Avg. batch load time: 0.003, Elapsed time: 10797.07
+2024-08-07 05:49:15 - [34m[1mLOGS   [0m - Epoch:  15 [  124342/  200000], loss: {'classification': 33.474, 'neural_augmentation': 0.4718, 'total_loss': 33.9458}, LR: [0.000382, 0.000382], Avg. batch load time: 0.003, Elapsed time: 10918.45
+2024-08-07 05:51:17 - [34m[1mLOGS   [0m - Epoch:  15 [  124405/  200000], loss: {'classification': 33.4724, 'neural_augmentation': 0.472, 'total_loss': 33.9443}, LR: [0.000382, 0.000382], Avg. batch load time: 0.003, Elapsed time: 11039.80
+2024-08-07 05:53:18 - [34m[1mLOGS   [0m - Epoch:  15 [  124467/  200000], loss: {'classification': 33.4731, 'neural_augmentation': 0.4721, 'total_loss': 33.9453}, LR: [0.000381, 0.000381], Avg. batch load time: 0.003, Elapsed time: 11161.43
+2024-08-07 05:55:20 - [34m[1mLOGS   [0m - Epoch:  15 [  124530/  200000], loss: {'classification': 33.4734, 'neural_augmentation': 0.4723, 'total_loss': 33.9457}, LR: [0.000381, 0.000381], Avg. batch load time: 0.003, Elapsed time: 11283.10
+2024-08-07 05:57:22 - [34m[1mLOGS   [0m - Epoch:  15 [  124592/  200000], loss: {'classification': 33.4727, 'neural_augmentation': 0.4724, 'total_loss': 33.9452}, LR: [0.00038, 0.00038], Avg. batch load time: 0.003, Elapsed time: 11404.79
+2024-08-07 05:59:23 - [34m[1mLOGS   [0m - Epoch:  15 [  124655/  200000], loss: {'classification': 33.4718, 'neural_augmentation': 0.4726, 'total_loss': 33.9444}, LR: [0.00038, 0.00038], Avg. batch load time: 0.003, Elapsed time: 11525.97
+2024-08-07 06:01:24 - [34m[1mLOGS   [0m - Epoch:  15 [  124717/  200000], loss: {'classification': 33.4714, 'neural_augmentation': 0.4727, 'total_loss': 33.9442}, LR: [0.000379, 0.000379], Avg. batch load time: 0.002, Elapsed time: 11647.24
+2024-08-07 06:03:26 - [34m[1mLOGS   [0m - Epoch:  15 [  124780/  200000], loss: {'classification': 33.4703, 'neural_augmentation': 0.4729, 'total_loss': 33.9432}, LR: [0.000379, 0.000379], Avg. batch load time: 0.002, Elapsed time: 11768.60
+2024-08-07 06:05:27 - [34m[1mLOGS   [0m - Epoch:  15 [  124842/  200000], loss: {'classification': 33.4703, 'neural_augmentation': 0.473, 'total_loss': 33.9433}, LR: [0.000378, 0.000378], Avg. batch load time: 0.002, Elapsed time: 11890.42
+2024-08-07 06:06:11 - [34m[1mLOGS   [0m - Exception occurred that interrupted the training:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 254328) is killed by signal: Hangup. 
+
+2024-08-07 06:06:11 - [34m[1mLOGS   [0m - Exception occurred that interrupted the training:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 242544) is killed by signal: Hangup. 
+
+2024-08-07 06:06:11 - [34m[1mLOGS   [0m - Exception occurred that interrupted the training:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 258537) is killed by signal: Hangup. 
+
+2024-08-07 06:06:11 - [34m[1mLOGS   [0m - Exception occurred that interrupted the training:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 217604) is killed by signal: Hangup. 
+
+2024-08-07 06:06:11 - [34m[1mLOGS   [0m - Exception occurred that interrupted the training:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 222292) is killed by signal: Hangup. 
+
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/pretrain/../corenet/cli/main_train.py", line 42, in <module>
+    main_worker()
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/pretrain/../corenet/cli/main_train.py", line 37, in main_worker
+    launcher(callback)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/train_eval_pipelines/default_train_eval.py", line 312, in <lambda>
+    return lambda callback: torch.multiprocessing.spawn(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 241, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 197, in start_processes
+    while not context.join():
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 158, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 2 terminated with the following error:
+Traceback (most recent call last):
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 68, in _wrap
+    fn(i, *args)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/train_eval_pipelines/default_train_eval.py", line 433, in _launcher_distributed_spawn_fn
+    callback(train_eval_pipeline)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/cli/main_train.py", line 28, in callback
+    train_eval_pipeline.training_engine.run(train_sampler=train_sampler)  # 分两步，先init了training_engine,然后调用default_trainer.py里面的run
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 630, in run
+    raise e
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 541, in run
+    train_loss, train_ckpt_metric = self.train_epoch(epoch)  # 训练入口
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/engine/default_trainer.py", line 315, in train_epoch
+    loss_dict_or_tensor: Union[Dict, Tensor] = self.criteria(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/composite_loss.py", line 179, in forward
+    loss_val = loss_layer(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 291, in forward
+    loss_na = self._compute_loss(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 238, in _compute_loss
+    loss_na = forward_loss_fn(
+  File "/ML-A800/home/guoshuyue/madehua/code/corenet/corenet/loss_fn/neural_augmentation.py", line 211, in _forward_psnr
+    target=target_mse.expand_as(pred_mse).to(
+  File "/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 217604) is killed by signal: Hangup. 
+
+/ML-A800/home/guoshuyue/anaconda3/envs/corenet/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 600 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
